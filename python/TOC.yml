@@ -1,0 +1,84 @@
+- name: Azure para desenvolvedores de Python
+  href: index.yml
+- name: Visão geral
+  items:
+    - name: Sobre o SDK do Python
+      href: python-sdk-azure-overview.md
+- name: Guia de início rápido
+  items:
+    - name: SDK do Python
+      href: python-sdk-azure-get-started.yml
+    - name: Ferramentas de Desenvolvedor
+      href: python-azure-tools.md
+    - name: Hospedagem de aplicativo
+      items:
+        - name: Serviço de Aplicativo
+          href: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: kubernetes
+          href: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: VMs Linux
+          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Instâncias de contêiner
+          href: /azure/container-instances/container-instances-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Lote
+          href: /azure/batch/quick-run-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - name: Soluções de dados
+      items:
+        - name: Armazenamento de Blobs
+          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Armazenamento de Tabelas
+          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Cosmos DB
+          href: /azure/cosmos-db/sql-api-python-application?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Cache Redis
+          href: /azure/redis-cache/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Banco de dados SQL
+          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: PostgreSQL
+          href: /azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: MySQL
+          href: /azure/mysql/connect-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Data Factory
+          href: /azure/data-factory/quickstart-create-data-factory-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - name: IA e machine learning
+      items:
+        - name: Serviços de Machine Learning
+          href: /azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Lote AI
+          href: /azure/batch-ai/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Visual Computacional
+          href: /azure/cognitive-services/Computer-vision/Quickstarts/python-analyze?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Análise de texto
+          href: /azure/cognitive-services/Text-Analytics/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Azure Notebooks
+          href: 'https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb'
+    - name: Segurança e integração
+      items:
+        - name: Barramento de Serviço
+          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Grade de Eventos
+          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Armazenamento de Filas
+          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+- name: Guias de instruções
+  items:
+    - name: Instalar o SDK
+      href: python-sdk-azure-install.md
+    - name: Authentication
+      href: python-sdk-azure-authenticate.md
+    - name: Configuração de operações
+      href: python-sdk-azure-operation-config.md
+    - name: Desenvolvimento com várias nuvens
+      href: python-sdk-azure-multi-cloud.md
+- name: Exemplos
+  items:
+    - name: Máquinas virtuais
+      href: python-sdk-azure-virtual-machine-samples.md
+    - name: Aplicativos Web
+      href: python-sdk-azure-web-apps-samples.md
+    - name: Banco de dados SQL
+      href: python-sdk-azure-sql-database-samples.md
+    - name: Todos os exemplos de Python
+      href: 'https://azure.microsoft.com/resources/samples/?platform=python'
+- name: Referência
+  href: /python/api/?view=azure-python

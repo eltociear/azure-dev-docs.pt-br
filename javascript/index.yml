@@ -1,0 +1,254 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Azure para desenvolvedores de nuvem do JavaScript e do Node.js
+metadata:
+  title: 'Azure para desenvolvedores de JavaScript e Node.js – tutoriais, ferramentas e referências de SDK'
+  description: 'Introdução ao desenvolvimento de aplicativos com o Azure usando os tutoriais, módulos e ferramentas escritos para desenvolvedores de JavaScript e Node.js.'
+  keywords: 'Azure, JavaScript, Node.js, SDK, API, NPM'
+  author: kraigb
+  ms.author: kraigb
+  manager: douge
+  ms.date: 07/01/2019
+  ms.topic: landing-page
+  featureFlags:
+    - clicktale
+  ms.technology: azure
+  ms.devlang: nodejs
+  ms.service: multiple
+sections:
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: 'https://aka.ms/try-azure-node'
+            html: <p>Implante seu primeiro aplicativo em um ambiente de área restrita gratuito no Serviço de Aplicativo do Azure</p>
+            image:
+              src: /media/common/i_get-started.svg
+            title: Implante seu primeiro aplicativo de exemplo do Node.js
+  - title: Escolha a hospedagem escalonável certa para seu aplicativo
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: 'Aplicativos Web Estáticos, SPAs e Aplicativos Web Progressivo'
+            html: '<p>Implante aplicativos estáticos criados com estruturas como React, Angular e Vue no Armazenamento do Azure</p>'
+            href: 'https://code.visualstudio.com/tutorials/static-website/getting-started'
+            image:
+              src: /media/logos/logo_React.svg
+          - title: APIs e Aplicativos Web baseados em Node.js de pilha completa
+            html: <p>Implante APIs e aplicativos Web do Node.js de pilha completa criados com estruturas como Express no Serviço de Aplicativo do Azure</p>
+            href: 'https://code.visualstudio.com/tutorials/app-service-extension/getting-started'
+            image:
+              src: /media/logos/logo_vs-code.svg
+          - title: Aplicativos em contêineres e microsserviços com o Docker
+            html: <p>Implante aplicativos em contêineres e microsserviços usando contêineres do Docker no Serviço de Aplicativo do Azure</p>
+            href: 'https://code.visualstudio.com/tutorials/docker-extension/getting-started'
+            image:
+              src: /azure/docker/media/docker.png
+          - title: APIs e aplicativos sem servidor
+            href: 'https://code.visualstudio.com/tutorials/functions-extension/getting-started'
+            html: <p>Implante APIs e aplicativos sem servidor escritos em JavaScript no Azure Functions</p>
+            image:
+              src: /azure/media/index/azurefunctions.svg
+  - title: SDK do Azure para Node.js
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /javascript/api/overview/azure/
+            html: <p>Documentos de referência completos para o SDK do Azure</p>
+            image:
+              src: /media/common/i_api-reference.svg
+            title: Referência
+          - href: 'https://azure.microsoft.com/en-us/resources/samples/?sort=0&platform=nodejs'
+            html: <p>Repositórios do GitHub de exemplo para o SDK do Azure</p>
+            image:
+              src: /common/i_code-samples.svg
+            title: Exemplos do SDK
+  - title: Implantação contínua e DevOps
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: Azure DevOps Projects
+            href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Crie e implante aplicativos do seu Projeto do Azure DevOps</p>
+            image:
+              src: /media/logos/logo_vs-team-services.svg
+          - title: GitHub Actions
+            href: 'https://css-tricks.com/introducing-github-actions/'
+            html: <p>Crie e implante aplicativos no Azure com o GitHub Actions</p>
+            image:
+              src: /media/logos/logo_octokitty.svg
+          - title: Integração contínua
+            href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: '<p>Adicione Jenkins, CircleCI ou Travis para gerenciar builds</p>'
+            image:
+              src: /media/common/i_scrum.svg
+  - title: Localize e corrija bugs com ferramentas de depuração e de diagnóstico
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: Depuração remota para o Serviço de Aplicativo do Azure
+            href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
+            html: <p>Anexe um depurador aos seus aplicativos de teste ou produção no Serviço de Aplicativo do Azure</p>
+            image:
+              src: /media/common/i_debug.svg
+          - title: Pontos de log no VS Code para o Serviço de Aplicativo do Azure
+            href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
+            html: <p>Adicione instruções de log para aplicativos de Serviço de Aplicativo do Azure sem reimplantar o VS Code</p>
+            image:
+              src: /media/common/i_tools.svg
+          - title: Depurar aplicativos Node.js locais no VS Code
+            href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
+            html: <p>Anexe o depurador automaticamente aos processos em execução</p>
+            image:
+              src: /media/logos/logo_vs-code.svg
+  - title: Ferramentas e extensões
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: 'https://code.visualstudio.com/docs/azure/extensions'
+            html: <p>Use o Azure diretamente do Visual Studio Code por meio de extensões</p>
+            image:
+              src: /media/logos/logo_vs-code.svg
+            title: Visual Studio Code
+          - href: /cli/azure
+            html: <p>Gerenciar recursos do Azure na linha de comando</p>
+            image:
+              src: /azure/media/index/azure_dev-7.svg
+            title: CLI do Azure 2.0
+  - title: Armazene e gerencie dados em arquivos ou bancos de dados
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - image:
+              src: /azure/media/index/Storage.svg
+            title: Armazenamento de Arquivos
+            html: <p>Armazene arquivos com segurança no armazenamento em nuvem</p>
+            href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            title: MongoDB
+            html: <p>Use o MongoDB e o CosmosDB em seus aplicativos</p>
+            image:
+              src: /azure/media/index/cosmosdb.svg
+          - image:
+              src: /azure/media/index/RedisCache.svg
+            title: Cache Redis
+            html: <p>Leia e grave dados em um armazenamento de dados em memória do Redis</p>
+            href: /azure/redis-cache/cache-nodejs-get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/PostgreSQL.svg
+            title: PostgreSQL
+            html: <p>Crie e gerencie um banco de dados Postgres na nuvem</p>
+            href: /azure/postgresql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/MySQL.SVG
+            title: MySQL
+            html: <p>Crie e gerencie um banco de dados MySQL na nuvem</p>
+            href: /azure/mysql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/SQLDatabase.svg
+            title: Banco de Dados SQL do Azure
+            html: <p>Crie e gerencie um banco de dados SQL na nuvem</p>
+            href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+  - title: Proteja aplicativos e recursos com autenticação e autorização
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Autentique usuários com estratégias de Passport</p>
+            image:
+              src: /azure/media/index/ActiveDirectory.svg
+            title: Active Directory
+          - href: /azure/key-vault/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Armazene com segurança segredos e chaves de API em seus aplicativos</p>
+            image:
+              src: /azure/media/index/KeyVault.svg
+            title: Key Vault
+          - href: /azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: '<p>Use o Passport e o Azure AD para adicionar acesso ao Facebook, Twitter ou GitHub para seu aplicativo Web</p>'
+            image:
+              src: /azure/media/index/ActiveDirectory.svg
+            title: Active Directory B2C
+  - title: Monitore a integridade do recurso e detecte problemas em seus aplicativos
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/application-insights/app-insights-nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Monitore solicitações e identifique erros em seu aplicativo</p>
+            image:
+              src: /azure/media/index/ApplicationInsights.svg
+            title: Application Insights
+          - href: /azure/log-analytics/log-analytics-quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Examine os dados sobre seu ambiente em um único local</p>
+            image:
+              src: /azure/media/index/operationsmanagementsuite.svg
+            title: Log Analytics
+          - href: /azure/monitoring-and-diagnostics?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Obtenha dados de desempenho e utilização detalhados</p>
+            image:
+              src: /azure/media/index/AzureMonitoring.svg
+            title: Azure Monitor
+  - title: Gerencie e conecte dispositivos e aplicativos com o envio mensagens
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/event-grid/custom-event-quickstart?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Use a entrega de evento baseada em HTTP para eliminar a sondagem</p>
+            image:
+              src: /azure/media/index/azure_event_grid.svg
+            title: Grade de Eventos
+          - href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Utilize envio de mensagens altamente confiável entre serviços</p>
+            image:
+              src: /azure/media/index/IOT_edge_50.svg
+            title: Barramento de Serviço
+          - href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Use filas para mensagens altamente escalonáveis</p>
+            image:
+              src: /media/common/i_sharepoint-list.svg
+            title: Armazenamento de filas
+  - title: IoT
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Gerencie milhares de dispositivos com o Hub IoT</p>
+            image:
+              src: /azure/media/index/IOT_edge_50.svg
+            title: Conecte e gerencie dispositivos IoT
+          - href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Use o hub de eventos para coletar bilhões de pontos de dados</p>
+            image:
+              src: /azure/media/index/EventHubs.svg
+            title: Fluxo de Big Data

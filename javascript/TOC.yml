@@ -1,0 +1,114 @@
+- name: Azure para desenvolvedores de JavaScript e Node.js
+  href: index.yml
+  items:
+    - name: Guia de início rápido
+      expanded: true
+      items:
+        - name: Hospedagem de aplicativo
+          items:
+            - name: Sites estáticos
+              href: 'https://code.visualstudio.com/tutorials/static-website/getting-started'
+            - name: APIs e aplicativos Web
+              href: 'https://code.visualstudio.com/tutorials/app-service-extension/getting-started'
+            - name: Sem servidor
+              href: 'https://code.visualstudio.com/tutorials/functions-extension/getting-started'
+            - name: Docker
+              href: 'https://code.visualstudio.com/tutorials/docker-extension/getting-started'
+            - name: kubernetes
+              href: /azure/aks/kubernetes-walkthrough?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: VMs Linux
+              href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: DevOps (CI/CD)
+          items:
+            - name: Azure DevOps
+              href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: GitHub Actions
+              href: 'https://css-tricks.com/introducing-github-actions/'
+            - name: Integração contínua
+              href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Depuração e diagnóstico
+          items:
+            - name: Depuração remota para o Serviço de Aplicativo do Azure
+              href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
+            - name: Pontos de log no VS Code para o Serviço de Aplicativo do Azure
+              href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
+            - name: Depurar aplicativos Node.js locais no VS Code
+              href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
+        - name: Ferramentas e extensões
+          href: node-azure-tools.md
+        - name: Armazenar dados
+          items:
+            - name: Armazenamento de blob
+              href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Banco de dados SQL
+              href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Cosmos DB
+              href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Cache Redis
+              href: /azure/redis-cache/cache-nodejs-get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: MySQL
+              href: /azure/mysql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Segurança e autenticação
+          items:
+            - name: Azure Active Directory
+              href: /azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Azure AD B2C
+              href: /azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Key Vault
+              href: /azure/key-vault/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Monitoramento e registro em log
+          items:
+            - name: Application Insights
+              href: /azure/application-insights/app-insights-nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Log Analytics
+              href: /azure/log-analytics/log-analytics-quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Azure Monitor
+              href: /azure/monitoring-and-diagnostics?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Mensagens e integração
+          items:
+            - name: Grade de Eventos
+              href: /azure/event-grid/custom-event-quickstart?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Barramento de Serviço
+              href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Armazenamento de filas
+              href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: IoT
+          items:
+            - name: Hub IoT
+              href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Fluxo de Big Data
+              href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Serviços Cognitivos
+          items:
+            - name: Análise de texto
+              href: /azure/cognitive-services/text-analytics/quickstarts/nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Visual Computacional
+              href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Reconhecimento de fala
+              href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: Guias de Instruções
+      items:
+        - name: Implantar com o Visual Studio Code
+          href: node-howto-e2e.md
+        - name: Criar uma API REST
+          href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: Exemplos
+      items:
+        - name: Computação
+          href: node-samples-services-compute.md
+        - name: Bancos de dados
+          href: node-samples-services-database.md
+        - name: Armazenamento
+          href: node-samples-services-storage.md
+        - name: Sistema de mensagens + IoT
+          href: node-samples-services-iot.md
+        - name: Web + Celular
+          href: node-samples-services-web-and-mobile.md
+        - name: Segurança + Identidade
+          href: node-samples-services-security-and-identity.md
+        - name: Cobrança
+          href: node-samples-services-billing.md
+    - name: Referência
+      href: /javascript/api/?view=azure-node-latest

@@ -2,12 +2,13 @@
 title: Implantar no Azure por meio do Visual Studio
 description: Este tutorial orientará você durante a criação e implantação de um aplicativo do Microsoft Azure usando o Visual Studio e o .NET.
 ms.date: 06/20/2017
-ms.openlocfilehash: 2744e4836f9967e74d3eadb96af0c52c6292010e
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: quickstart
+ms.openlocfilehash: 60dbdedca91c972b68298ad94b5a8b373a37c561
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280807"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691241"
 ---
 # <a name="deploy-to-azure-from-visual-studio"></a>Implantar no Azure por meio do Visual Studio
 

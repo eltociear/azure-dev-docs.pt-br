@@ -1,19 +1,19 @@
 ---
 title: Aplicativos Web e móveis do Azure com códigos de exemplo Node.js
 description: Exemplos de código de aplicativos Web e móveis do Azure no Node.js
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
 ms.author: karler
-ms.openlocfilehash: 6ddf9959130a943a716027c5d8ca03708821d68c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 588b39aa20ab02efb733bcd88371f9067f581676
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285937"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690815"
 ---
 # <a name="azure-web-and-mobile-apps-with-nodejs-code-samples"></a>Aplicativos Web e móveis do Azure com códigos de exemplo Node.js
 

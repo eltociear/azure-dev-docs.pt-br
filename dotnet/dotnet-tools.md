@@ -3,12 +3,13 @@ title: Ferramentas para desenvolvedores .NET do Azure e .NET Core
 description: Obtenha as ferramentas para começar a usar as bibliotecas .NET do Azure em um ambiente Windows, Linux ou Mac.
 ms.date: 08/11/2018
 ms.custom: azure-dotnet-devcenter, azure-dotnet-devcenter-authored, azure-dotnet-devcenter-conceptual, vs-azure
-ms.openlocfilehash: e9921ae1c8e64426bdefdbcf201708d9195a6a51
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 5f28c6e9cff45db78cfea845ee28180b27028037
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280587"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691354"
 ---
 # <a name="tools-for-net-and-net-core-azure-developers"></a>Ferramentas para desenvolvedores .NET e .NET Core do Azure
 

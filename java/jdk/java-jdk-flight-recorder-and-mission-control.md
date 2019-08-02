@@ -1,5 +1,5 @@
 ---
-title: Java Flight Recorder e Mission Control
+title: Examinar dados com o Java Flight Recorder e o Mission Control
 description: Orientação para usar o Java Flight Recorder e o Mission Control para coletar e examinar os dados de aplicativo.
 author: bmitchell287
 manager: douge
@@ -7,13 +7,14 @@ ms.author: brendm
 ms.date: 04/09/2019
 ms.devlang: java
 ms.topic: conceptual
-ms.service: Azure
-ms.openlocfilehash: 29f144a17a1a45dc535961f97a4b0acdffd43d77
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.custom: seo-java-july2019
+ms.openlocfilehash: 4e0ae7b66d625ea6aeeb5a7e40b9015e9ce59429
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431066"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691766"
 ---
 # <a name="using-java-flight-recorder-jfr-and-mission-control"></a>Usando o JFR (Java Flight Recorder) e o Mission Control
 
@@ -94,7 +95,7 @@ Siga as etapas abaixo para instalar o Zulu Mission Control, conectar-se a uma JV
         * Na segunda linha, escreva o caminho para a instalação do JDK. (Por exemplo, `C:\Program Files\Java\jdk1.8.0_212\bin\javaw.exe`).
 
 7.  Localize a JVM que está executando seu aplicativo
-    1.  No painel superior esquerdo da janela de Zulu Mission Control, clique na guia rotulada **Navegador da JVM**.
+    1.  No painel superior esquerdo da janela do Zulu Mission Control, selecione a guia rotulada **Navegador da JVM**.
     2.  Selecione e expanda o item de lista no canto superior esquerdo para a instância da JVM que está executando seu aplicativo.
 
     > [!div class="mx-imgBorder"]
@@ -102,8 +103,8 @@ Siga as etapas abaixo para instalar o Zulu Mission Control, conectar-se a uma JV
 
 
 8.  Inicie uma Gravação de Voo, se necessário
-    1.  Se o Flight Recorder exibe "Nenhuma Gravação", inicie uma clicando com o botão direito do mouse na linha do Flight Recorder na guia Navegador da JVM e selecionando **Iniciar Gravação de Voo...**
-    2.  Selecione uma gravação de duração fixa ou uma gravação contínua e uma configuração de Criação de Perfil (refinada) ou uma configuração Contínua (sobrecarga mais baixa) e clique em **Concluir**.
+    1.  Se o Flight Recorder exibe "Nenhuma Gravação", inicie uma clicando com o botão direito do mouse na linha do Flight Recorder na guia Navegador da JVM e selecionando **Iniciar Gravação de Voo**.
+    2.  Selecione uma gravação de duração fixa ou uma gravação contínua e uma configuração de Criação de Perfil (refinada) ou uma configuração Contínua (sobrecarga mais baixa) e selecione **Concluir**.
 
     > [!div class="mx-imgBorder"]
     ![Iniciar uma Gravação de Voo](../media/jdk/azul-jfr-3.png)

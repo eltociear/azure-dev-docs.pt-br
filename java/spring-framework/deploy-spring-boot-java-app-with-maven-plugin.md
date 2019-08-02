@@ -1,5 +1,5 @@
 ---
-title: Implantar um aplicativo de arquivo JAR do Spring Boot na nuvem com o Maven e o Azure
+title: Implantar um aplicativo de arquivo JAR do Spring Boot no Azure com o Maven
 description: Saiba como implantar um aplicativo Spring Boot na nuvem usando o plug-in Maven do Aplicativo Web do Azure para Linux.
 services: app-service
 documentationcenter: java
@@ -11,12 +11,13 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 83bc65357f14b17ad60d0eb15adaac328dbc0386
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.custom: seo-java-july2019
+ms.openlocfilehash: e4aec4beb141025d49afbe200a090a40e327a12c
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281457"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691093"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Implantar um aplicativo Web do arquivo JAR do Spring Boot no Serviço de Aplicativo do Azure no Linux
 
@@ -201,6 +202,14 @@ Depois que a Web tiver sido implantada, você conseguirá gerenciá-la por meio 
    ![Como determinar a URL de seu aplicativo Web][AP02]
 
 Verifique se a implantação foi bem-sucedida usando o mesmo comando cURL de antes e com a URL do aplicativo Web do Portal em vez de `localhost`. Você verá a seguinte mensagem exibida: **Saudações do Spring Boot!** 
+
+## <a name="clean-up-resources"></a>Limpar recursos
+Quando os recursos do Azure já não forem necessários, limpe os recursos implantados excluindo o grupo de recursos.
+
+- No portal do Azure, selecione Grupo de recursos no menu à esquerda.
+- Insira **gs-spring-boot-** no campo **Filtrar por nome**, o grupo de recursos criado neste tutorial deve ter esse prefixo.
+- Selecione o grupo de recursos criado neste tutorial.
+- Selecione Excluir grupo de recursos no menu superior.
 
 ## <a name="next-steps"></a>Próximas etapas
 

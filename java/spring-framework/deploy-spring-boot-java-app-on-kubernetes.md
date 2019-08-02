@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: f7bb539e59b8d9d6afcf736560348748d311b49a
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 3363e1a4600328e012b99bd940cf88bb47e2ee57
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430942"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691721"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Implantar um Aplicativo Spring Boot em um Cluster Kubernetes no Serviço de Kubernetes do Azure
 
@@ -226,9 +226,9 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
    ```
    Neste comando:
 
-   * O nome do contêiner `gs-spring-boot-docker` é especificado imediatamente após o comando `expose deployment`
+   * O nome do contêiner `gs-spring-boot-docker` é especificado imediatamente após o comando `expose deployment`.
 
-   * O parâmetro `--type` especifica que o cluster usa o balanceador de carga
+   * O parâmetro `--type` especifica que o cluster usa o balanceador de carga.
 
    * O parâmetro `--port` especifica a porta TCP 80 voltada para o público. Você acessa o aplicativo nessa porta.
 
@@ -253,7 +253,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
 
-1. Quando o site de configuração de Kubernetes abrir no navegador, clique no link para **implantar um aplicativo em contêiner**:
+1. Quando o site de configuração de Kubernetes abrir no navegador, selecione o link para **implantar um aplicativo em contêiner**:
 
    ![Site de configuração do Kubernetes][KB01]
 
@@ -272,7 +272,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
    ![Site de configuração do Kubernetes][KB02]
 
 
-1. Clique em **Implantar** para implantar o contêiner.
+1. Selecione **Implantar** para implantar o contêiner.
 
    ![Implantar Kubernetes][KB05]
 
@@ -280,7 +280,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
 
    ![Serviços Kubernetes][KB06]
 
-1. Se você clicar no link para **Pontos de extremidade externos**, poderá ver o aplicativo Spring Boot em execução no Azure.
+1. Se você selecionar o link para **Pontos de extremidade externos**, poderá ver o aplicativo Spring Boot em execução no Azure.
 
    ![Serviços Kubernetes][KB07]
 

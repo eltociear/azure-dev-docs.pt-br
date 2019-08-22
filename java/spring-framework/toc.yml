@@ -14,6 +14,8 @@
               href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
             - name: Azure App Insights
               href: configure-spring-boot-java-applicationinsights.md
+            - name: Barramento de Serviço do Azure
+              href: configure-spring-boot-starter-java-app-with-azure-service-bus.md
         - name: Spring Data
           items:
             - name: Iniciador do Microsoft Azure Cosmos DB
@@ -52,6 +54,8 @@
               href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
             - name: Funções do Azure
               href: getting-started-with-spring-cloud-function-in-azure.md
+            - name: Barramento de Serviço do Azure
+              href: configure-spring-cloud-stream-binder-java-app-with-service-bus.md
     - name: Tutoriais
       items:
         - name: Implantar o Serviço de Aplicativo com Maven

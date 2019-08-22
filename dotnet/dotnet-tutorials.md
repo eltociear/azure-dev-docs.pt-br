@@ -2,13 +2,15 @@
 title: Tutoriais para aplicativos .NET e .NET Core no Azure
 description: Tutoriais para compilar e adicionar recursos a seus aplicativos móveis e Web usando os serviços do Azure e .NET, .NET Core, ASP.NET e ASP.NET.
 ms.date: 07/17/2018
+author: CamSoper
+ms.author: casoper
 ms.topic: conceptual
-ms.openlocfilehash: 5dffb29792fd38fbf7a6983d885156ca241d0d05
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: e4bca646504836c65323a0ee715329baf50afa3b
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691292"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633042"
 ---
 # <a name="tutorials-for-building-net-and-net-core-apps-in-azure"></a>Tutoriais para compilação de aplicativos .NET e .NET Core no Azure
 

@@ -88,8 +88,22 @@
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: Guias de Instruções
       items:
-        - name: Implantar com o Visual Studio Code
+        - name: Node.js de ponta a ponta com o VS Code
           href: node-howto-e2e.md
+        - name: Implantar um aplicativo Web
+          href: node-howto-deploy-web-app.md
+        - name: Implantar contêineres
+          href: node-howto-deploy-containers.md
+        - name: Implantar por meio de entrega contínua
+          href: /azure/devops/pipelines/languages/javascript?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Integrar a bancos de dados
+          href: node-howto-integrate-databases.md
+        - name: Escrever código sem servidor
+          href: node-howto-write-serverless-code.md
+        - name: Criar um site estático (JAMstack)
+          href: node-howto-create-static-site-jamstack.md
+        - name: Automatizar monitoramento
+          href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
         - name: Criar uma API REST
           href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: Exemplos

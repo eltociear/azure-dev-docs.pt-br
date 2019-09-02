@@ -31,13 +31,11 @@
             - name: Log Analytics com Azure Monitor
               href: /azure/azure-monitor/learn/quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: GitHub Actions
-              href: 'https://css-tricks.com/introducing-github-actions/'
+              href: 'https://azure.microsoft.com/resources/videos/azure-friday-deploy-to-azure-using-github-actions'
         - name: Depuração e diagnóstico
           items:
             - name: Depuração remota para o Serviço de Aplicativo do Azure
               href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
-            - name: Pontos de log no VS Code para o Serviço de Aplicativo do Azure
-              href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
             - name: Depurar aplicativos Node.js locais no VS Code
               href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
         - name: Ferramentas e extensões

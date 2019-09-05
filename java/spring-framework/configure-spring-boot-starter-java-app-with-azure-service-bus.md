@@ -8,12 +8,12 @@ ms.date: 08/21/2019
 ms.devlang: java
 ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: f41486c7063a6b0fa26ca4055d5f10e625676e8a
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 58d8dd00deeb90b1a1b8935bcbbab471255328d4
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892370"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181973"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Como usar o iniciador do Spring Boot para o JMS do Barramento de Serviço do Azure
 
@@ -24,9 +24,6 @@ O Azure fornece uma plataforma de mensagens assíncrona chamada [Barramento de S
 O iniciador do Spring Boot para o JMS do Barramento de Serviço do Azure oferece integração do Spring com o Barramento de Serviço.
 
 Neste artigo, você verá como usar o iniciador do Spring Boot para JMS do Barramento de Serviço do Azure para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
-
-> [!NOTE]
-> No momento, este artigo usa a versão `SNAPSHOT` do iniciador.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -66,28 +63,11 @@ Os pré-requisitos a seguir são obrigatórios neste artigo:
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
-        <version>2.1.7-SNAPSHOT</version>
+        <version>2.1.7</version>
     </dependency>
     ```
 
-    ![Adicione a seção de dependências ao arquivo pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section.png)
-
-1. Adicione a configuração [repositórios do Maven](https://maven.apache.org/settings.html#Repositories) para usar a versão INSTANTÂNEO:
-
-    ```xml
-    <repositories>
-        <repository>
-            <id>nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    ```
-
-    ![Adicione a seção de repositórios ao arquivo pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-repository-section.png)
+    ![Adicione a seção de dependências ao arquivo pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section-new.png)
 
 1. Salve e feche o arquivo *pom.xml*.
 
@@ -121,7 +101,7 @@ Nesta seção, você verá como configurar o aplicativo para usar uma fila ou um
     | `spring.jms.servicebus.connection-string` | Especifique a cadeia de conexão obtida no namespace do Barramento de Serviço no portal do Azure. |
     | `spring.jms.servicebus.idle-timeout`      | Especifique o tempo limite de ociosidade em milissegundos. O valor recomendado para este tutorial é de 1800000.   |
 
-3. Salve e feche o arquivo *application.properties*.
+1. Salve e feche o arquivo *application.properties*.
 
 ### <a name="use-service-bus-topic"></a>Usar um tópico do Barramento de Serviço
 
@@ -353,7 +333,7 @@ Nesta seção, você criará as classes Java necessárias para enviar mensagens 
     mvn clean spring-boot:run
     ```
 
-3. Quando o aplicativo estiver em execução, use *curl* para testá-lo:
+1. Quando o aplicativo estiver em execução, use *curl* para testá-lo:
 
     ```shell
     curl -X POST localhost:8080/messages?message=hello

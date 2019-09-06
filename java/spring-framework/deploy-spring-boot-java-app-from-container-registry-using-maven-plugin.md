@@ -14,15 +14,15 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.custom: seo-java-july2019
-ms.openlocfilehash: c2622da604e31b5cf2a2f1e7b3344b21338aa56d
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-august2019
+ms.openlocfilehash: a281a33958f33b37f205dc9642f1bce714725923
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691130"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70182008"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Como usar o Plug-in do Maven para Aplicativos Web do Azure para implantar um aplicativo Spring Boot no Registro de Contêiner do Azure ao Serviço de Aplicativo do Azure
+# <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Usar o Maven para Aplicativos Web do Azure para implantar um aplicativo Spring Boot no Registro de Contêiner do Azure no Serviço de Aplicativo do Azure
 
 Este artigo demonstra como implantar um exemplo de aplicativo [Spring Boot] no Registro de Contêiner do Azure e, depois, usar o plug-in do Maven para Aplicativos Web do Azure a fim de implantar seu aplicativo nos Serviço de Aplicativo do Azure.
 

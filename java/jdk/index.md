@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.date: 04/09/2019
 ms.author: brendm
 ms.service: azure
-ms.openlocfilehash: 83dbef306087f63670c2567231eca1c4b9e5dd7f
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 6c28a599180301ac19f114f467868b5f0e46cbd1
+ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691801"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094883"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Suporte de longo prazo do Java para o Azure e o Azure Stack
 
-Os desenvolvedores de Java no Azure e Azure Stack podem compilar e executar aplicativos Java de produção usando [Azul Zulu Enterprise para Azure](https://www.azul.com/downloads/azure-only/zulu/) sem incorrer em custos adicionais de suporte. É possível usar qualquer tempo de execução do Java que desejar no Azure, mas quando você usa o Zulu, você recebe atualizações de manutenção gratuitas e pode criar problemas de suporte com a Microsoft.
+Os desenvolvedores de Java no Azure e Azure Stack podem criar e executar aplicativos Java de produção usando os builds do JDK [Azul Zulu para Azure – Edição Enterprise](https://www.azul.com/downloads/azure-only/zulu/) sem incorrer em custos adicionais de suporte. É possível usar qualquer tempo de execução do Java que desejar no Azure, mas quando você usa o Zulu, você recebe atualizações de manutenção gratuitas e pode criar problemas de suporte com a Microsoft.
 
 > [!div class="nextstepaction"]
 > [Baixar e Instalar Java](java-jdk-install.md)
@@ -34,7 +34,7 @@ Os desenvolvedores de Java no Azure e Azure Stack podem compilar e executar apli
 
 ## <a name="what-is-the-zulu-openjdk-for-azure"></a>O que é o Zulu OpenJDK para o Azure?
 
-Builds do Azul Zulu Enterprise do OpenJDK são uma distribuição sem custo, multiplataforma e pronta para produção do OpenJDK para Azure e Azure Stack da Microsoft e da Azul Systems. Essas distribuições são:
+Builds do Azul Zulu para Azure – Edição Enterprise do OpenJDK são uma distribuição sem custo, multiplataforma e pronta para produção do OpenJDK para Azure e Azure Stack da Microsoft e da Azul Systems. Essas distribuições são:
 
 * Builds 100% software livre do OpenJDK empacotados como JDKs (Kits de Desenvolvimento Java), JRE (Java Runtime Environment) e JREs Sem Periféricos. Esses binários são totalmente compatíveis e estão em conformidade com builds comerciais do Java SE (Standard Edition) que podem ser usados com aplicativos Java ou componentes no Azure e no Azure Stack.
 * Fornecidas com suporte de longo prazo, incluindo correções de bug, aprimoramentos de desempenho e patches de segurança.
@@ -52,7 +52,7 @@ Builds do Azul Zulu Enterprise do OpenJDK são uma distribuição sem custo, mul
 
 ## <a name="supported-java-versions-and-update-schedule"></a>Versões com suporte de Java e agendamento de atualização
 
-A Azul Systems fornece [builds da Zulu Enterprise do OpenJDK para o Microsoft Azure](https://www.azul.com/downloads/azure-only/zulu/) com suporte completo para todas as versões com LTS (suporte de longo prazo) do Java, começando com o Java SE 7, 8 e 11. Mais informações podem ser encontradas no [comunicado à imprensa da Azul](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).
+A Azul Systems fornece builds do [Azul Zulu para Azure – Edição Enterprise](https://www.azul.com/downloads/azure-only/zulu/) com suporte completo para todas as versões com LTS (suporte de longo prazo) do Java, começando com o Java SE 7, 8 e 11. Mais informações podem ser encontradas no [comunicado à imprensa da Azul](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).
 
 |Java SE LTS  |Suporte até  |
 |---------|----------|
@@ -67,7 +67,7 @@ A Azul Systems mantém um [roteiro do Java SE](https://www.azul.com/products/azu
 
 ## <a name="benefits-for-developers"></a>Benefícios para os desenvolvedores
 
-As versões do Azul Zulu JDK são:
+As versões do JDK do Azul Zulu para Azure – Edição Enterprise são:
 
 1. Compatíveis com a Microsoft e a Azul Systems
 

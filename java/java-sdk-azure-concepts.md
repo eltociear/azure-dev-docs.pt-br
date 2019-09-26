@@ -10,13 +10,13 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.custom: seo-java-july2019
-ms.openlocfilehash: dc7819f46725203c18c0bc50fe45135d61b4870e
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-september2019
+ms.openlocfilehash: dfa3681cd1e6ac193a48d7e60ce8507af49c4776
+ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691940"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71225276"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Padrões e melhores práticas de desenvolvimento com as bibliotecas do Azure para Java 
 
@@ -35,7 +35,7 @@ StorageAccount storage = azure.storageAccounts().define(storageAccountName)
 
 Conforme você percorre a cadeia do método, o IDE sugere o próximo método a ser chamado na conversa fluente.   
 
-![GIF da conclusão do comando IntelliJ trabalhando através de uma cadeia fluente](media/intelliJFluent.gif)
+![GIF da conclusão do comando IntelliJ trabalhando através de uma cadeia fluente](media/intellij-fluent-method-chain.gif)
 
 Encadeie os métodos sugeridos pelo IDE, contanto que eles façam sentido para o recurso do Azure que está sendo definido. Se estiver faltando um método necessário na cadeia o seu IDE irá realçá-lo com um erro.
 

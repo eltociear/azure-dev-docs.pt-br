@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 37df8bf4a84d13d6fc4e25ea6c91ef14b6f6f502
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 0135761f8294b3fbbb8fe821540b46126c107109
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019484"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186184"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 
@@ -25,7 +25,7 @@ Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos 
 
 - Uma [conta do Azure](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-docker-extension&mktingSource=vscode-tutorial-docker-extension)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- Um contêiner adequado que foi carregado em um registro de contêiner. Por exemplo, detalhes de como criar um contêiner com um aplicativo Web Python e adicioná-lo a um registro podem ser encontrados em [Criar um contêiner](https://code.visualstudio.com/python/tutorial-create-containers).
+- Um contêiner adequado que foi carregado em um registro de contêiner. Por exemplo, detalhes de como criar um contêiner com um aplicativo Web Python e adicioná-lo a um registro podem ser encontrados em [Criar um contêiner](https://code.visualstudio.com/docs/python/tutorial-create-containers).
 - A [extensão do Serviço de Aplicativo do Azure para VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 - A [extensão do Docker para VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
 

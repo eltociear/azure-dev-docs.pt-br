@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 9c0b3b8b4a21975a849531d5c6560a291ed4b7f2
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 6996121fc8ecba4489e2ec920de35574f6d1c5d8
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019884"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186170"
 ---
 # <a name="clean-up-resources"></a>Limpar recursos
 
@@ -29,7 +29,7 @@ Parabéns por concluir este passo a passo da implantação de código Python no 
 
 Conforme observado anteriormente, você pode aprender mais sobre a extensão do Functions visitando seu repositório do GitHub, [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions). Relatos de problemas e contribuições também são bem-vindos.
 
-Leia a [Visão geral do Azure Functions](/azure/azure-functions/functions-overview.md) para explorar os diferentes gatilhos que você pode usar.
+Leia a [Visão geral do Azure Functions](/azure/azure-functions/functions-overview) para explorar os diferentes gatilhos que você pode usar.
 
 Para saber mais sobre os serviços do Azure que você pode usar no Python, incluindo armazenamento de dados com IA e os serviços do Machine Learning, visite o [Centro de Desenvolvedores de Python do Azure](/azure/python/?view=azure-python).
 

@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4427137000e7fca7706b782a73a45db03782872f
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 9af09298c479f7584ffaece422c135e75138f0fc
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019554"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186158"
 ---
 # <a name="create-the-python-function"></a>Criar a função do Python
 
@@ -29,7 +29,7 @@ ms.locfileid: "71019554"
     | --- | --- | --- |
     | Especifique uma pasta para o projeto | Pasta aberta atual | A pasta na qual o projeto será criado. Você pode optar por criar o projeto em uma subpasta. |
     | Selecione uma linguagem de programação para o seu projeto de aplicativo de função. | **Python** | A linguagem empegada na função, que determina o modelo usado para o código. |
-    | Selecione um modelo para a primeira função do projeto | **Gatilho HTTP** | Uma função que usa um gatilho HTTP é executada sempre que há uma solicitação HTTP feita para o ponto de extremidade da função. (Há uma série de outros gatilhos para o Azure Functions. Para saber mais, confira [O que posso fazer com o Functions?](/azure/azure-functions/functions-overview.md#what-can-i-do-with-functions).) |
+    | Selecione um modelo para a primeira função do projeto | **Gatilho HTTP** | Uma função que usa um gatilho HTTP é executada sempre que há uma solicitação HTTP feita para o ponto de extremidade da função. (Há uma série de outros gatilhos para o Azure Functions. Para saber mais, confira [O que posso fazer com o Functions?](/azure/azure-functions/functions-overview#what-can-i-do-with-functions).) |
     | Forneça um nome de função | HttpExample | O nome é usado para uma subpasta que contém o código da função, juntamente com os dados de configuração, além de definir também o nome do ponto de extremidade HTTP. Use "HttpExample" em vez de aceitar o padrão "HTTPTrigger" oferecido, para distinguir a função em si do gatilho. |
     | Nível de autorização | **Anônimo** | A autorização anônima torna a função publicamente acessível a qualquer pessoa. |
     | Selecione como você gostaria de abrir seu projeto | **Abrir na janela atual** | Abre o projeto na janela atual do Visual Studio Code. |

@@ -8,18 +8,18 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 8fdb78024cc6ac1df0ee961fc424878f5f634cf2
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 4595b6a60aa83d3818b41ddd1e4f06a44bb1eec1
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019934"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186127"
 ---
 # <a name="add-a-binding-to-write-messages-to-azure-storage"></a>Adicionar uma associação para gravar mensagens no armazenamento do Azure
 
 [Etapa anterior: implantar uma segunda função](tutorial-vs-code-serverless-python-06.md)
 
-Uma _Associação_ permite conectar o código da sua função a recursos como o armazenamento do Azure, sem gravar nenhum código de acesso a dados. Uma associação é definida no arquivo *function.json* e pode representar tanto entrada quanto saída. Uma função pode usar várias associações de entrada e de saída, mas apenas um gatilho. Para saber mais, confira [Conceitos de gatilhos e de associações do Azure Functions](/azure/azure-functions/functions-triggers-bindings.md).
+Uma _Associação_ permite conectar o código da sua função a recursos como o armazenamento do Azure, sem gravar nenhum código de acesso a dados. Uma associação é definida no arquivo *function.json* e pode representar tanto entrada quanto saída. Uma função pode usar várias associações de entrada e de saída, mas apenas um gatilho. Para saber mais, confira [Conceitos de gatilhos e de associações do Azure Functions](/azure/azure-functions/functions-triggers-bindings).
 
 Nesta seção, você adicionará uma associação de armazenamento à função HttpExample criada anteriormente neste tutorial. A função usa essa associação para gravar mensagens no armazenamento com cada solicitação. O armazenamento em questão usa a mesma conta de armazenamento padrão empregada pelo aplicativo de funções. No entanto, se você planeja fazer uso intenso do armazenamento, considere a possibilidade de criar uma conta separada.
 
@@ -92,9 +92,9 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 
     1. Entre no [portal do Azure](https://portal.azure.com) e navegue até o grupo de recursos que contém o projeto de funções. Dentro desse grupo de recursos, localize e navegue até a conta de armazenamento do projeto e, em seguida, navegue até **Filas**. Nessa página, navegue até "outqueue", que deve exibir todas as mensagens registradas em log.
 
-    1. Navegue e examine a fila com o Gerenciador de Armazenamento do Azure, que se integra ao Visual Studio – conforme descrito em [Conectar o Functions ao Armazenamento do Azure usando o Visual Studio Code](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code.md) – especialmente a seção [Examinar a fila de saída](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code.md#examine-the-output-queue).
+    1. Navegue e examine a fila com o Gerenciador de Armazenamento do Azure, que se integra ao Visual Studio – conforme descrito em [Conectar o Functions ao Armazenamento do Azure usando o Visual Studio Code](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code) – especialmente a seção [Examinar a fila de saída](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code#examine-the-output-queue).
 
-    1. Use a CLI do Azure para consultar a fila de armazenamento, conforme descrito em [Consultar a fila de armazenamento](/azure/azure-functions/functions-add-output-binding-storage-queue-python.md#query-the-storage-queue).
+    1. Use a CLI do Azure para consultar a fila de armazenamento, conforme descrito em [Consultar a fila de armazenamento](/azure/azure-functions/functions-add-output-binding-storage-queue-python#query-the-storage-queue).
 
 1. Para testar na nuvem, reimplante o código usando **Implantar no Aplicativo de Funções**, no gerenciador do **Azure: Functions**. Se solicitado, selecione o Aplicativo de Funções criado anteriormente. Após a conclusão da implantação (demora alguns minutos!), a janela **Saída** mostra novamente os pontos de extremidade públicos com os quais você pode repetir os testes.
 

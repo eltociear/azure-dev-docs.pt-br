@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: a398b5483f9cbe11768752551e11be430a3b3467
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: ab1609d6d0940172d61a61a31f4dbfabc868c023
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019994"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186133"
 ---
 # <a name="prepare-your-app"></a>Preparação do aplicativo
 
@@ -44,7 +44,7 @@ Esta seção descreve o aplicativo Flask mínimo usado neste passo a passo.
     Flask==1.1.1
     ```
 
-1. Siga as instruções em [Tutorial do Flask – Criar um ambiente de projeto para o Flask](/docs/python/tutorial-flask.md#create-a-project-environment-for-flask) para criar um ambiente virtual com o Flask instalado no qual você possa executar o aplicativo localmente.
+1. Siga as instruções em [Tutorial do Flask – Criar um ambiente de projeto para o Flask](https://code.visualstudio.com/docs/python/tutorial-flask#create-a-project-environment-for-flask) para criar um ambiente virtual com o Flask instalado no qual você possa executar o aplicativo localmente.
 
 1. Para executar este aplicativo, use os seguintes comandos (dependendo de seu sistema operacional). A variável de ambiente FLASK_APP informa ao Flask onde encontrar o objeto de aplicativo.
 
@@ -62,11 +62,11 @@ Esta seção descreve o aplicativo Flask mínimo usado neste passo a passo.
 
 ## <a name="vs-code-flask-tutorial-sample"></a>Exemplo de tutorial do Flask para VS Code
 
-Baixe ou clone [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial), que é o resultado se seguir o [Tutorial do Flask](/docs/python/tutorial-flask.md).
+Baixe ou clone [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial), que é o resultado se seguir o [Tutorial do Flask](https://code.visualstudio.com/docs/python/tutorial-flask).
 
 ## <a name="vs-code-django-tutorial-sample"></a>Exemplo de tutorial do Django para VS Code
 
-Baixe ou clone [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial), que é o resultado se seguir o [Tutorial do Django](/docs/python/tutorial-django.md).
+Baixe ou clone [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial), que é o resultado se seguir o [Tutorial do Django](https://code.visualstudio.com/docs/python/tutorial-django).
 
 Se seu aplicativo Django usar um banco de dados SQLite local como este exemplo, você precisará incluir uma cópia inicializada e preenchida previamente do arquivo *db.sqlite3* em seu repositório. Isso é necessário porque, no momento, o Serviço de Aplicativo para Linux não tem um meio de executar o comando `migrate` do Django como parte da implantação, portanto, você precisa implantar um banco de dados pré-criado. Ainda assim, o banco de dados é efetivamente somente leitura; gravar no banco de dados também causa erros.
 

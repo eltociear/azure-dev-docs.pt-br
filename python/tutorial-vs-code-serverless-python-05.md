@@ -8,18 +8,18 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 0bf24a900eb0c501443b8ff353c8b07529f840be
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: da7761f568849537ac3ee06cf6ef2c4cc521b452
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019954"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186155"
 ---
 # <a name="deploy-to-azure-functions"></a>Implantar no Azure Functions
 
 [Etapa anterior: depurar localmente](tutorial-vs-code-serverless-python-04.md)
 
-Nessas etapas, você usa a extensão do Functions para criar um aplicativo de funções no Azure, juntamente com outros recursos obrigatórios do Azure. Um aplicativo de funções permite a você agrupar funções como uma unidade lógica para facilitar o gerenciamento, implantação e compartilhamento de recursos. Também é necessário ter uma conta de armazenamento do Azure para os dados e um [plano de hospedagem](/azure/azure-functions/functions-scale.md#hosting-plan-support). Todos esses recursos são organizados dentro de um único grupo de recursos.
+Nessas etapas, você usa a extensão do Functions para criar um aplicativo de funções no Azure, juntamente com outros recursos obrigatórios do Azure. Um aplicativo de funções permite a você agrupar funções como uma unidade lógica para facilitar o gerenciamento, implantação e compartilhamento de recursos. Também é necessário ter uma conta de armazenamento do Azure para os dados e um [plano de hospedagem](/azure/azure-functions/functions-scale#hosting-plan-support). Todos esses recursos são organizados dentro de um único grupo de recursos.
 
 1. Na área **Azure: Functions**, selecione o comando **Implantar no Aplicativo de Funções** ou abra a Paleta de Comandos (**F1**) e selecione o comando **Azure Functions: Implantar no Aplicativo de Funções**. Novamente, o aplicativo de funções é onde seu projeto do Python é executado no Azure.
 
@@ -30,7 +30,7 @@ Nessas etapas, você usa a extensão do Functions para criar um aplicativo de fu
 1. A extensão executa as seguintes ações, que você pode observar nas mensagens pop-up e na janela **Saída** do Visual Studio Code (o processo leva alguns minutos):
 
     - Crie um grupo de recursos usando o nome que você deu (removendo os hifens).
-    - Nesse grupo de recursos, crie a conta de armazenamento, o plano de hospedagem e o aplicativo de funções. Por padrão, um [Plano de Consumo](/azure/azure-functions/functions-scale.md#consumption-plan) será criado. Para executar suas funções em um plano dedicado, você precisa [habilitar a publicação com opções de criação avançadas](/azure/azure-functions/functions-develop-vs-code.md).
+    - Nesse grupo de recursos, crie a conta de armazenamento, o plano de hospedagem e o aplicativo de funções. Por padrão, um [Plano de Consumo](/azure/azure-functions/functions-scale#consumption-plan) será criado. Para executar suas funções em um plano dedicado, você precisa [habilitar a publicação com opções de criação avançadas](/azure/azure-functions/functions-develop-vs-code).
     - Implante seu código no aplicativo de funções.
 
     O gerenciador do **Azure: Functions** também mostra o progresso:

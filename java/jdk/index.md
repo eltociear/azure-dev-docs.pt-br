@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/09/2019
 ms.author: brendm
 ms.service: azure
-ms.openlocfilehash: 6c28a599180301ac19f114f467868b5f0e46cbd1
-ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
+ms.custom: seo-java-september2019
+ms.openlocfilehash: 51dbbc70239744c0de7a96c0545cef15bfd4013a
+ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71094883"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71225245"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Suporte de longo prazo do Java para o Azure e o Azure Stack
 
@@ -56,10 +57,10 @@ A Azul Systems fornece builds do [Azul Zulu para Azure – Edição Enterprise](
 
 |Java SE LTS  |Suporte até  |
 |---------|----------|
-|[![Java 7](../media/jdk/java-7.png)](https://www.azul.com/downloads/azure-only/zulu/#java7) |Julho de 2023 |
-|[![Java 8](../media/jdk/java-8.png)](https://www.azul.com/downloads/azure-only/zulu/#java8) |Março de 2025|
-|[![Java 11](../media/jdk/java-11.png)](https://www.azul.com/downloads/azure-only/zulu/#java11) |Setembro de 2026|
-|[![Java 12](../media/jdk/java-12.png)]() |**VERSÃO PRÉVIA**|
+|[![Versão compatível do Java – Java 7](../media/jdk/supported-java-versions-java-7.png)](https://www.azul.com/downloads/azure-only/zulu/#java7) |Julho de 2023 |
+|[![Versão compatível do Java – Java 8](../media/jdk/supported-java-versions-java-8.png)](https://www.azul.com/downloads/azure-only/zulu/#java8) |Março de 2025|
+|[![Versão compatível do Java – Java 11](../media/jdk/supported-java-versions-java-11.png)](https://www.azul.com/downloads/azure-only/zulu/#java11) |Setembro de 2026|
+|[![Versão compatível do Java – Java 12](../media/jdk/supported-java-versions-java-12.png)]() |**VERSÃO PRÉVIA**|
 
 Essas versões do JDK têm atualizações de segurança trimestrais, correções de bugs e atualizações e patches não planejados críticos conforme necessário.  Esse suporte inclui a portabilidade de atualizações de segurança e correções de bugs para Java 7 e 8 relatadas nas versões mais recentes do Java, como Java 11, o que garante a estabilidade e a segurança contínuas de versões mais antigas do Java.  Os clientes do Azure podem obter essas atualizações de segurança e correções de bug da plataforma sem incorrer em nenhuma taxa de assinatura não planejada do Java SE.
 

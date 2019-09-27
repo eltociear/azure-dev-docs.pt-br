@@ -12,12 +12,12 @@ ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 9adb83a74c569fd17b9ce1435064ed745487d39b
-ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
+ms.openlocfilehash: 0993634d87dd321f7322cbdbebd57ec880abcbff
+ms.sourcegitcommit: 76d0783395cbcf6ec1784b5aed368cab7058f8b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70904935"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71270016"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Implantar um aplicativo de arquivo JAR do Spring Boot no Serviço de Aplicativo do Azure com o Maven e o Azure no Linux
 
@@ -198,7 +198,7 @@ Depois que a Web tiver sido implantada, você conseguirá gerenciá-la por meio 
 
 * E a URL para seu aplicativo Web será listada na **Visão geral** de seu aplicativo Web:
 
-   ![Como determinar a URL de seu aplicativo Web][AP02]
+   ![Encontre a URL do seu aplicativo Web nos Serviços de Aplicativos do portal do Azure][AP02]
 
 Verifique se a implantação foi bem-sucedida usando o mesmo comando cURL de antes e com a URL do aplicativo Web do Portal em vez de `localhost`. Você verá a seguinte mensagem exibida: **Saudações do Spring Boot!** 
 
@@ -249,5 +249,6 @@ Para saber mais sobre as diversas tecnologias discutidas neste artigo, veja os a
 
 <!-- IMG List -->
 
-[AP01]: ./media/deploy-spring-boot-java-app-with-maven-plugin/AP01.png
-[AP02]: ./media/deploy-spring-boot-java-app-with-maven-plugin/AP02.png
+
+[AP01]: ./media/deploy-spring-boot-java-app-with-maven-plugin/web-app-listed-azure-portal.png
+[AP02]: ./media/deploy-spring-boot-java-app-with-maven-plugin/determine-web-app-url.png

@@ -84,6 +84,78 @@
               href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: Reconhecimento de fala
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: Tutoriais
+      items:
+        - name: Implantar o Azure Functions com o VS Code
+          items:
+            - name: Introdução e pré-requisitos
+              href: tutorial-vscode-serverless-node-01.md
+            - name: Criar o aplicativo do Functions
+              href: tutorial-vscode-serverless-node-02.md
+            - name: Testar a função localmente
+              href: tutorial-vscode-serverless-node-03.md
+            - name: Implantar o aplicativo do Functions
+              href: tutorial-vscode-serverless-node-04.md
+            - name: Limpar recursos
+              href: tutorial-vscode-serverless-node-05.md
+        - name: Implantar no Serviço de Aplicativo com o VS Code
+          items:
+            - name: Introdução e pré-requisitos
+              href: tutorial-vscode-azure-app-service-node-01.md
+            - name: Crie o aplicativo
+              href: tutorial-vscode-azure-app-service-node-02.md
+            - name: Implantar o site
+              href: tutorial-vscode-azure-app-service-node-03.md
+            - name: Transmitir logs
+              href: tutorial-vscode-azure-app-service-node-04.md
+            - name: Limpar recursos
+              href: tutorial-vscode-azure-app-service-node-05.md
+        - name: Implantar contêineres com o VS Code
+          items:
+            - name: Introdução e pré-requisitos
+              href: tutorial-vscode-docker-node-01.md
+            - name: Usar um registro de contêiner
+              href: tutorial-vscode-docker-node-02.md
+            - name: Criar a imagem do aplicativo
+              href: tutorial-vscode-docker-node-03.md
+            - name: Implantar a imagem do aplicativo
+              href: tutorial-vscode-docker-node-04.md
+            - name: Fazer alterações e implantar novamente
+              href: tutorial-vscode-docker-node-05.md
+            - name: Transmitir logs
+              href: tutorial-vscode-docker-node-06.md
+            - name: Limpar recursos
+              href: tutorial-vscode-docker-node-07.md
+        - name: Implantar no Serviço de Aplicativo com o CLI do Azure
+          items:
+            - name: Introdução e pré-requisitos
+              href: tutorial-vscode-azure-cli-node-01.md
+            - name: Crie o aplicativo
+              href: tutorial-vscode-azure-cli-node-02.md
+            - name: Criar o Serviço de Aplicativo
+              href: tutorial-vscode-azure-cli-node-03.md
+            - name: Implantar o aplicativo
+              href: tutorial-vscode-azure-cli-node-04.md
+            - name: Transmitir logs
+              href: tutorial-vscode-azure-cli-node-05.md
+            - name: Fazer alterações e implantar novamente
+              href: tutorial-vscode-azure-cli-node-06.md
+            - name: Limpar recursos
+              href: tutorial-vscode-azure-cli-node-07.md
+        - name: Criar um site estático com o VS Code
+          items:
+            - name: Introdução e pré-requisitos
+              href: tutorial-vscode-static-website-node-01.md
+            - name: Criar o código do aplicativo
+              href: tutorial-vscode-static-website-node-02.md
+            - name: Criar uma conta de Armazenamento
+              href: tutorial-vscode-static-website-node-03.md
+            - name: Implantar no Armazenamento do Azure
+              href: tutorial-vscode-static-website-node-04.md
+            - name: Fazer alterações e implantar novamente
+              href: tutorial-vscode-static-website-node-05.md
+            - name: Limpar recursos
+              href: tutorial-vscode-static-website-node-06.md
     - name: Guias de Instruções
       items:
         - name: Node.js de ponta a ponta com o VS Code

@@ -9,12 +9,12 @@ metadata:
   ms.author: sttramer
   ms.date: 09/15/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 0133931c0d9ac6e1dfc9e3faa1f14933f885e0af
-  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
+  ms.openlocfilehash: 2e6009ffbd8769044780356f412f09b960d3275a
+  ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/18/2019
-  ms.locfileid: "71094816"
+  ms.lasthandoff: 10/01/2019
+  ms.locfileid: "71710240"
 landingContent:
 - title: Introdução ao SDK do Azure para JavaScript
   linkLists:
@@ -37,13 +37,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Implantar aplicativos Web estáticos do Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/static-website/getting-started
-    - text: Implantar aplicativos Node.js de pilha completa do Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
-    - text: Implantar aplicativos em contêineres do Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/docker-extension/getting-started
+      url: tutorial-vscode-static-website-node-01.md
     - text: Implantar aplicativos sem servidor com o Azure Functions do Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+      url: tutorial-vscode-serverless-node-01.md
+    - text: Implantar aplicativos Node.js de pilha completa do Visual Studio Code
+      url: tutorial-vscode-azure-app-service-node-01.md
+    - text: Implantar aplicativos em contêineres do Visual Studio Code
+      url: tutorial-vscode-docker-node-01.md
 - title: Criar, implantar e monitorar aplicativos com o Azure
   linkLists:
   - linkListType: overview

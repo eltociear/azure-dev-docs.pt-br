@@ -1,5 +1,5 @@
 ---
-title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure com o Visual Studio Code
+title: 'Tutorial: Implantar contêineres do Docker no Serviço de Aplicativo do Azure com o Visual Studio Code'
 description: Etapa 1 do tutorial, introdução e pré-requisitos.
 services: app-service
 author: kraigb
@@ -8,16 +8,17 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 0135761f8294b3fbbb8fe821540b46126c107109
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f6cdd345fddf0123cb26549ddbc498f156737799
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186184"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172304"
 ---
-# <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
+# <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Tutorial: Implantar contêineres do Docker no Serviço de Aplicativo do Azure com o Visual Studio Code
 
-Este tutorial orienta você ao longo do processo de usar o Visual Studio Code para implantar uma imagem de contêiner de um registro de contêiner no [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/containers/), tudo isso no Visual Studio Code.
+Este artigo orienta você ao longo do processo de usar o Visual Studio Code para implantar uma imagem de contêiner de um registro de contêiner no [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/containers/), tudo isso no Visual Studio Code.
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o link **Encontrei um problema** no final de cada artigo para enviar comentários.
 

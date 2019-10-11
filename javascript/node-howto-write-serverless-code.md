@@ -8,16 +8,17 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/19/2019
 ms.author: kraigb
-ms.openlocfilehash: a5ed7d5d99009593845966969217f8a5081da4c4
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.custom: seo-javascript-september2019, seo-javascript-october2019
+ms.openlocfilehash: a985578312a2c7cb722307bf8b291eaf02905e2c
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181947"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172160"
 ---
-# <a name="how-to-write-serverless-nodejs-code-on-azure"></a>Como escrever código Node.js sem servidor no Azure
+# <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Usar o Azure Functions para gravar código do Node.js sem servidor no Azure
 
-O código sem servidor permite criar pontos de extremidade responsivos e sob demanda na Internet sem precisar se preocupar com o provisionamento ou o gerenciamento de uma infraestrutura. O código sem servidor é composto por scripts ou outros trechos de código executados em resposta a vários eventos. No Azure, a oferta sem servidor é chamada de Azure Functions.
+No Azure, a oferta sem servidor é chamada de Azure Functions. O código sem servidor permite criar pontos de extremidade responsivos e sob demanda na Internet sem precisar se preocupar com o provisionamento ou o gerenciamento de uma infraestrutura. O código sem servidor é composto por scripts ou outros trechos de código executados em resposta a vários eventos. 
 
 Primeiro, comece com:
 

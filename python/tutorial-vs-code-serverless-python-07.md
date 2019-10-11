@@ -1,5 +1,5 @@
 ---
-title: Adicionar uma associação de armazenamento para o Azure Functions no Python com o Visual Studio Code
+title: 'Tutorial: Adicionar uma associação de armazenamento para o Azure Functions no Python com o Visual Studio Code'
 description: 'Tutorial, etapa 7: adição de uma associação no Python para gravar mensagens no armazenamento do Azure.'
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4595b6a60aa83d3818b41ddd1e4f06a44bb1eec1
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: e9f23e138dc9ddc0022199296320ff5c04e6c3d6
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186127"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172118"
 ---
-# <a name="add-a-binding-to-write-messages-to-azure-storage"></a>Adicionar uma associação para gravar mensagens no armazenamento do Azure
+# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Tutorial: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
 [Etapa anterior: implantar uma segunda função](tutorial-vs-code-serverless-python-06.md)
 

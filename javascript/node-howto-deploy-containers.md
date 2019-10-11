@@ -8,18 +8,19 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
-ms.openlocfilehash: aeef72d2e8b74cb7e6e30b95ed1cd12a1929ac31
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.custom: seo-javascript-september2019
+ms.openlocfilehash: b35ee6c921fa9b5c01b5c89f7fa546a110bb21c2
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892500"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813757"
 ---
-# <a name="how-to-deploy-nodejs-containers-to-azure"></a>Como implantar contêineres do Node.js no Azure
+# <a name="use-azure-to-deploy-scale-and-manage-nodejs-containers"></a>Usar o Azure para implantar, dimensionar e gerenciar contêineres do Node.js
 
 O Azure oferece um serviço de contêiner robusto para que você possa implantar, dimensionar e gerenciar aplicativos do Node.js baseados em contêiner.
 
-Para começar, siga o simples passo a passo [Implantar no Azure usando o Docker e o Visual Studio Code](https://code.visualstudio.com/tutorials/docker-extension/getting-started). Usar o Visual Studio Code facilita o upload de imagens para um registro de contêiner (como o Registro de Contêiner do Azure) e, em seguida, implantar esse contêiner no Serviço de Aplicativo do Azure.
+Para começar, siga o simples passo a passo [Implantar no Azure usando o Docker e o Visual Studio Code](tutorial-vscode-docker-node-01.md). Usar o Visual Studio Code facilita o upload de imagens para um registro de contêiner (como o Registro de Contêiner do Azure) e, em seguida, implantar esse contêiner no Serviço de Aplicativo do Azure.
 
 Também é possível fazer os seguintes módulos do Microsoft Learn:
 

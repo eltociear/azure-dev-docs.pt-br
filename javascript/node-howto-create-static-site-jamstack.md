@@ -9,14 +9,14 @@ ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: dc1d376be0f57d7d79a7a67d43dca49c30163c90
-ms.sourcegitcommit: 52fa18873a6a8dc7f28c063cca0175bae2720b2a
+ms.openlocfilehash: 5fae0fb9e7d76d33e39ec85a27c46c339b4b38f4
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808470"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813704"
 ---
-# <a name="how-to-build-jamstack-static-site-web-apps-with-azure"></a>Como criar aplicativos Web JAMstack (site estático) com o Azure
+# <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Compilar aplicativos Web JAMstack (site estático) no Azure com o Node.js
 
 Ótimos aplicativos Web podem ser criados e mantidos de modo produtivo por meio de uma combinação de front-end do *JavaScript*, *APIs* (APIs personalizadas ou de terceiros criadas como código sem servidor) e *markup* com modelo (HTML e CSS) exibida como páginas estáticas. Com essa combinação, também conhecida como JAMstack, você evita escrever código de back-end complexo para exibir páginas da Web. Em vez disso, o sistema exibe somente páginas estáticas (HTML, CSS e JavaScript), que chamam as APIs para o trabalho no lado do servidor. Como é possível gravar essas APIs com tecnologias sem servidor de dimensionamento automático, você evita completamente as preocupações de custo e segurança de usar servidores Always On normais ou hosts da Web. Para saber mais, acesse [jamstack.org](https://jamstack.org/).
 
@@ -31,7 +31,7 @@ Para implementar um site estático/JAMstack no Azure, você usará uma variedade
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/B19-BRK3021?latestplayer=true]
 
-Confira um tutorial passo a passo em [Implantar um site estático no Azure](https://code.visualstudio.com/tutorials/static-website/getting-started) na documentação do Visual Studio Code.
+Um tutorial passo a passo pode ser encontrado em [Implantar um site estático para o Azure](tutorial-vscode-static-website-node-01.md).
 
 Os artigos a seguir também explicam mais detalhes:
 
@@ -39,7 +39,7 @@ Os artigos a seguir também explicam mais detalhes:
   
 - **APIs sem servidor**:
 
-  - Comece com [Criar sua primeira função usando o Visual Studio Code](/azure/azure-functions/functions-create-first-function-vs-code), que apresenta o Azure Functions no contexto do Visual Studio Code, o que simplifica muitos dos detalhes.
+  - Comece com [Implantar o Azure Functions usando o Visual Studio Code](tutorial-vscode-serverless-node-01.md), que apresenta o Azure Functions no contexto do Visual Studio Code, o que simplifica muitos dos detalhes.
   - Ao concluir o artigo, você tem um projeto (uma pasta) do Azure Functions que contém uma subpasta com o nome da função, que é a mesma do ponto de extremidade HTTP. Essa pasta da função contém um arquivo *index.js* com o código.
   - É possível modificar essa função conforme o necessário. Você também pode adicionar mais funções ao projeto e, em seguida, implantá-las novamente no Azure, onde elas ficam publicamente disponíveis.
   - Para ter mais recursos de desenvolvimento sem servidor, confira [Como escrever código Node.js sem servidor no Azure](node-howto-write-serverless-code.md)

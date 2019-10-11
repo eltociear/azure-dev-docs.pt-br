@@ -1,5 +1,5 @@
 ---
-title: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner dentro do Visual Studio Code
+title: 'Tutorial: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner dentro do Visual Studio Code'
 description: 'Tutorial, parte 4: exibição de logs do Serviço de Aplicativo do Azure para monitorar seu comportamento.'
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: b886eee84e6e8daef772c2ba6e7290a604d18409
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 0f002444d2454b734821e067e65fa513619a68bf
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019504"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172221"
 ---
-# <a name="stream-logs-from-azure-app-service"></a>Transmitir logs do Serviço de Aplicativo do Azure
+# <a name="tutorial-stream-logs-from-azure-app-service-for-a-container"></a>Tutorial: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner
 
 [Etapa anterior: fazer alterações e reimplantar](tutorial-deploy-containers-03.md)
 

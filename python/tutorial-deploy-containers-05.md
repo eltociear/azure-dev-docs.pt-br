@@ -1,5 +1,5 @@
 ---
-title: Limpar recursos do Azure
+title: 'Tutorial: Limpar recursos do Azure'
 description: Etapa 5 do tutorial, limpando os recursos do Azure para evitar incorrer em encargos contínuos.
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 96db5581b2752e29633412776efdfe9d1328abdb
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 351d7853eb3ebbf5a62e7798eb0696657b0ca216
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019514"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172456"
 ---
-# <a name="clean-up-resources"></a>Limpar recursos
+# <a name="tutorial-clean-up-azure-resources"></a>Tutorial: Limpar recursos do Azure
 
 Os vários recursos do Azure criados neste tutorial podem incorrer em custos contínuos. Para limpá-los, é melhor visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
 

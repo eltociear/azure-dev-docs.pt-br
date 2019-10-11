@@ -1,5 +1,5 @@
 ---
-title: Implantar o Azure Functions no Python com o Visual Studio Code
+title: 'Tutorial: Implantar o Azure Functions no Python com o Visual Studio Code'
 description: 'Tutorial, etapa 5: implantação do código de função do Python no Azure e aprendizado sobre como transmitir logs e sincronizar configurações entre um projeto local e o Azure.'
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: da7761f568849537ac3ee06cf6ef2c4cc521b452
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 231aefd696b3f4c91e5da8156dc339f4b355c1c7
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186155"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172185"
 ---
-# <a name="deploy-to-azure-functions"></a>Implantar no Azure Functions
+# <a name="tutorial-deploy-azure-functions-in-python"></a>Tutorial: Implantar o Azure Functions no Python
 
 [Etapa anterior: depurar localmente](tutorial-vs-code-serverless-python-04.md)
 

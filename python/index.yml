@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: Documentação do SDK do Azure para Python
+title: Azure para desenvolvedores de Python
 summary: >
-  Saiba mais sobre o SDK do Azure para Python, como começar a usá-lo e o que ele oferece para desenvolvedores. Introdução aos recursos úteis do Azure, como hospedagem de aplicativos, suporte para bancos de dados open-source, como mySQL e PostgreSQL e trabalho com Big Data para aprendizado de máquina e outros aplicativos.
+  Saiba mais sobre o que o Azure oferece para desenvolvedores de Python. Introdução aos recursos úteis do Azure, como hospedagem de aplicativos, suporte para bancos de dados de software livre, como o mySQL e o PostgreSQL, e trabalho com Big Data para machine learning e outros aplicativos.
 metadata:
   title: Azure para desenvolvedores de Python
-  description: Comece a desenvolver com o SDK do Azure para Python usando os recursos de desenvolvedor abaixo.
-  author: sptramer
-  ms.author: sttramer
-  ms.date: 09/10/2019
+  description: Comece a desenvolver com o Python e o Azure para Python.
+  author: kraigb
+  ms.author: kraigb
+  ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: a753597a65f959e638a4aa72b99327ea1f635aee
-  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
+  ms.openlocfilehash: a6008ed6b2a07db2853521922a29f1bd51a909d3
+  ms.sourcegitcommit: e081f71211e8f33420e92635c9a61eaa2f34c5e6
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/18/2019
-  ms.locfileid: "71094807"
+  ms.lasthandoff: 10/14/2019
+  ms.locfileid: "72306313"
 landingContent:
 - title: Introdução ao SDK do Azure para Python
   linkLists:
@@ -27,36 +27,54 @@ landingContent:
     links:
     - text: Instalar o SDK
       url: python-sdk-azure-install.md
-    - text: Usar o Jupyter Notebooks no Azure Notebooks
-      url: https://notebooks.azure.com/
-    - text: Python no Visual Studio Code
-      url: https://code.visualstudio.com/docs/languages/python
   - linkListType: how-to-guide
     links:
     - text: Autenticar o aplicativo
       url: python-sdk-azure-authenticate.md
-  - linkListType: quickstart
+  - linkListType: reference
     links:
-    - text: Criar um aplicativo Python sem servidor no Azure Functions com o Visual Studio Code
-      url: /azure/azure-functions/tutorial-vs-code-serverless-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Usar ferramentas do Azure Machine Learning em um Jupyter Notebook
-      url: /azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Criar e implantar um aplicativo Python com o Azure Pipelines
-      url: /azure/devops/pipelines/languages/python-webapp?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Referência do SDK do Azure para a API do Python
+      url: /python/api?view=azure-python
 - title: Hospedar aplicativos no Azure
   linkLists:
+  - linkListType: quickstart
+    links:
+    - text: "Criar, implantar e dimensionar aplicativos Web \nPython"
+      url: /azure/app-service/containers/quickstart-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Criar um aplicativo Python sem servidor no Azure Functions com o Visual Studio Code
+      url: tutorial-vs-code-serverless-python-01.md
+    - text: Implantar aplicativos em contêineres no Serviço de Kubernetes do Azure
+      url: /azure/aks/kubernetes-walkthrough?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Criar e implantar um aplicativo Python com o Azure Pipelines
+      url: /azure/devops/pipelines/languages/python-webapp?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Adicionar a opção Entrar com uma conta da Microsoft a um aplicativo Web Python
+      url: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
   - linkListType: overview
     links:
     - text: Introdução ao Serviço de Aplicativo do Azure no Linux
       url: /azure/app-service/containers/app-service-linux-intro?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-  - linkListType: quickstart
+- title: Introdução às ferramentas para desenvolvedores
+  linkLists:
+  - linkListType: overview
     links:
-    - text: Criar, implantar e dimensionar aplicativos Web Python
-      url: /azure/app-service/containers/quickstart-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Implantar aplicativos em contêineres no Serviço de Kubernetes do Azure
-      url: /azure/aks/kubernetes-walkthrough?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Criar e implantar uma função sem servidor no Python
-      url: /azure/azure-functions/functions-create-first-function-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Python no Visual Studio Code
+      url: https://code.visualstudio.com/docs/languages/python
+  - linkListType: tutorial
+    links:
+    - text: Criar um aplicativo Python sem servidor no Azure Functions com o Visual Studio Code
+      url: tutorial-vs-code-serverless-python-01.md
+    - text: Criar e implantar um aplicativo Web ao Azure com o Visual Studio Code
+      url: tutorial-deploy-app-service-on-linux-01.md
+    - text: Criar e implantar contêineres ao Azure com o Visual Studio Code
+      url: tutorial-deploy-containers-01.md
+  - linkListType: download
+    links:
+    - text: Extensões do Azure para Visual Studio Code
+      url: https://code.visualstudio.com/docs/azure/extensions
+    - text: Instalar a CLI do Azure
+      url: /azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Executar nativamente os aplicativos do Linux no Windows 10 usando várias distribuições
+      url: /windows/wsl/install-win10?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
 - title: Serviços para ciência de dados, IA e Machine Learning
   linkLists:
   - linkListType: overview
@@ -67,16 +85,14 @@ landingContent:
       url: /azure/cognitive-services?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
   - linkListType: quickstart
     links:
+    - text: Usar ferramentas do Azure Machine Learning em um Jupyter Notebook
+      url: /azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Usar um cluster gerenciado do Azure HDInsight para processamento de dados
       url: /azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Criar uma máquina virtual do Azure para tarefas de ciência de dados
       url: /azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-- title: Referência do SDK do Azure para Python
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Referência do SDK do Azure para a API do Python
-      url: /python/api?view=azure-python
+    - text: Usar o Jupyter Notebooks no Azure Notebooks
+      url: https://notebooks.azure.com/
 - title: Soluções de armazenamento, mensagens e banco de dados no Azure
   linkLists:
   - linkListType: overview
@@ -91,6 +107,10 @@ landingContent:
     links:
     - text: Gerenciar blobs no Armazenamento do Azure do Python
       url: /azure/storage/blobs/storage-quickstart-blobs-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Criar uma instância do PostgreSQL no Azure e conectar-se a ela usando o Python
+      url: /azure/postgresql/quickstart-create-server-database-portal?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Crie uma instância do MySQL no Azure e conecte-a usando o Python.
+      url: /azure/mysql/quickstart-create-mysql-server-database-using-azure-portal?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Usar consultas SQL em uma conta do Azure CosmosDB do Python
       url: /azure/cosmos-db/create-sql-api-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Configurar um SQL Server gerenciado no Azure

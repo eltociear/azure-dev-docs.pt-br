@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 324a67e5eebfce8fde7a2cf88d40f15864817df5
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: cafa10a4ddc9ccc365f9054d009b58b3c9c615bf
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172445"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278592"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Tutorial: Depurar localmente o código Python do Azure Functions
 
 [Etapa anterior: examinar os arquivos de código](tutorial-vs-code-serverless-python-03.md)
 
+É possível depurar localmente no Visual Studio Code o código do Python do Azure Functions.
+
 1. Quando você cria o projeto do Functions, a extensão do Visual Studio Code também cria uma configuração de inicialização em `.vscode/launch.json` que contém uma única configuração chamada **Anexar ao Functions do Python**. Essa configuração significa que você pode apenas pressionar F5 ou usar o Gerenciador de Depuração para iniciar o projeto:
 
-    ![Gerenciador de depuração mostrando a configuração de inicialização do Functions](media/tutorial-vs-code-serverless-python/launch-configuration.png)
+    ![Configuração para o gerenciador de depuração iniciar um projeto do Python](media/tutorial-vs-code-serverless-python/configuration-to-start-a-python-project-for-debugging.png)
 
 1. Quando você inicia o depurador, um terminal é aberto mostrando a saída do Azure Functions, incluindo um resumo dos pontos de extremidade disponíveis. Sua URL poderá ser diferente se você tiver usado um nome diferente de "HttpExample":
 

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 4ffadce6a6895041efe6737b271d7ab11c830095
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 1eeb8f66040a757809aad9df374f3d6a5f9390d2
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172469"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278906"
 ---
 # <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
 [Etapa anterior: stream de logs](tutorial-deploy-app-service-on-linux-06.md)
 
-O Serviço de Aplicativo que você criou inclui um plano do Serviço de Aplicativo de backup que pode incorrer em custos. Para limpar os recursos, clique com o botão direito do mouse no Serviço de Aplicativo no explorador **Azure: Serviço de Aplicativo** e selecione **Excluir**.
+O Serviço de Aplicativo do Azure criado inclui um Plano de Serviço de Aplicativo que pode incorrer em custos. Para limpar os recursos, clique com o botão direito do mouse no Serviço de Aplicativo no explorador **Azure: Serviço de Aplicativo** e selecione **Excluir**.
 
 Você também pode visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
 
@@ -34,7 +34,7 @@ Para saber mais sobre os serviços do Azure que você pode usar no Python, inclu
 
 Também há outras extensões do Azure para VS Code que podem ser úteis. Basta pesquisar "Azure" no explorador de Extensões:
 
-![Extensões do Azure para VS Code](media/deploy-containers/azure-extensions.png)
+![Extensões do Azure para Visual Studio Code](media/deploy-containers/azure-extensions-for-visual-studio-code.png)
 
 Algumas extensões populares são:
 

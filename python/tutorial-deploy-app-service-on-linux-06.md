@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f4aac132e9c01a0c428e243e06e811357defc2aa
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a60c8fd0202e935960f14a9ab5570f86a78fab6e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172228"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278926"
 ---
 # <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>Tutorial: Transmitir logs do Serviço de Aplicativo do Azure dentro do Visual Studio Code
 
 [Etapa anterior: implantar o aplicativo](tutorial-deploy-app-service-on-linux-05.md)
 
+Use este procedimento para transmitir logs de um Serviço de Aplicativo do Azure para o Visual Studio Code.
+
 1. No Visual Studio Code, abra o explorador **Azure: Serviço de Aplicativo**, clique com o botão direito do mouse no Serviço de Aplicativo e selecione **Iniciar a transmissão de logs**:
 
-   ![Comando Iniciar a transmissão de logs](media/deploy-azure/start-streaming-logs-command.png)
+   ![Iniciar a transmissão de logs do gerenciador do Serviço de Aplicativo](media/deploy-azure/start-streaming-logs-in-visual-studio-code.png)
 
 1. Quando for solicitado que você habilite o registro em log de arquivos e reinicie o aplicativo Web, selecione **Sim**. Enquanto o aplicativo é reiniciado, a janela **Saída** no VS Code mostra o progresso. Habilitar o registro em log é um processo único.
 

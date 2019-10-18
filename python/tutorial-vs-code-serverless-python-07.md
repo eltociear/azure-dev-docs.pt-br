@@ -9,18 +9,20 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e9f23e138dc9ddc0022199296320ff5c04e6c3d6
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: f8cfe602676c64f516f0a95ae73801b58f35076c
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172118"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278537"
 ---
 # <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Tutorial: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
 [Etapa anterior: implantar uma segunda função](tutorial-vs-code-serverless-python-06.md)
 
-Uma _Associação_ permite conectar o código da sua função a recursos como o armazenamento do Azure, sem gravar nenhum código de acesso a dados. Uma associação é definida no arquivo *function.json* e pode representar tanto entrada quanto saída. Uma função pode usar várias associações de entrada e de saída, mas apenas um gatilho. Para saber mais, confira [Conceitos de gatilhos e de associações do Azure Functions](/azure/azure-functions/functions-triggers-bindings).
+É possível adicionar uma associação de armazenamento para o Azure Functions. Uma _associação_ permite conectar aos recursos o código da sua função, como o armazenamento do Azure, sem escrever nenhum código de acesso a dados.
+
+Uma associação é definida no arquivo *function.json* e pode representar tanto entrada quanto saída. Uma função pode usar várias associações de entrada e de saída, mas apenas um gatilho. Para saber mais, confira [Conceitos de gatilhos e de associações do Azure Functions](/azure/azure-functions/functions-triggers-bindings).
 
 Nesta seção, você adicionará uma associação de armazenamento à função HttpExample criada anteriormente neste tutorial. A função usa essa associação para gravar mensagens no armazenamento com cada solicitação. O armazenamento em questão usa a mesma conta de armazenamento padrão empregada pelo aplicativo de funções. No entanto, se você planeja fazer uso intenso do armazenamento, considere a possibilidade de criar uma conta separada.
 
@@ -28,7 +30,7 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 
 1. Na pasta `HttpExample`, clique com o botão direito do mouse em *function.json* e selecione **Adicionar associação**:
 
-    ![Comando Adicionar associação, no gerenciador do Visual Studio Code](media/tutorial-vs-code-serverless-python/add-binding-command.png)
+    ![Comando Adicionar associação, no gerenciador do Visual Studio Code](media/tutorial-vs-code-serverless-python/add-binding-command-to-azure-functions-in-visual-studio-code.png)
 
 1. Nos prompts a seguir, no Visual Studio Code, selecione ou forneça os seguintes valores:
 

@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0f002444d2454b734821e067e65fa513619a68bf
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 12cc4880a7001fc51b0e70f89f177390c5fd0f45
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172221"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278704"
 ---
 # <a name="tutorial-stream-logs-from-azure-app-service-for-a-container"></a>Tutorial: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner
 
 [Etapa anterior: fazer alterações e reimplantar](tutorial-deploy-containers-03.md)
+
+Use este procedimento para transmitir logs de um Serviço de Aplicativo do Azure de um contêiner para o Visual Studio Code.
 
 De dentro do VS Code, você pode exibir (ou "acompanhar") os logs do site em execução no Serviço de Aplicativo do Azure, que captura qualquer saída para o console – como de instruções `print` – e as direciona para o painel **Saída** do VS Code.
 

@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: fdd3248e50020bb90cdde8a3e9c30c2895dccdae
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 7c3c863ed333528c675cda939f52b86f53bc8380
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172199"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278957"
 ---
 # <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>Tutorial: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure
 
-[Etapa anterior: criar o Serviço de Aplicativo](tutorial-deploy-app-service-on-linux-02.md)
+[Etapa anterior: criar o Serviço de Aplicativo](tutorial-deploy-app-service-on-linux-03.md)
+
+Este artigo mostra que você precisa configurar um arquivo de inicialização personalizado para um aplicativo Python em um Serviço de Aplicativo do Azure.
 
 Dependendo de como você estruturou seu aplicativo, talvez seja necessário criar um arquivo de comando de inicialização personalizado para ele, conforme descrito em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python) nos documentos do Azure.
 
@@ -37,11 +39,11 @@ Se precisar de um arquivo de inicialização personalizado, use as seguintes eta
 
 1. Na área **Azure: Serviço de Aplicativo**, no explorador, expanda o Serviço de Aplicativo, clique com o botão direito do mouse em **Configurações do Aplicativo** e selecione **Abrir no Portal**:
 
-    ![Comando Abrir Configurações no Portal no explorador do Serviço de Aplicativo](media/deploy-azure/open-settings-in-portal-command.png)
+    ![Abrir Configurações de Aplicativo no Portal no gerenciador do Serviço de Aplicativo](media/deploy-azure/open-application-settings-in-portal-for-app-service.png)
 
 1. No portal do Azure, entre se necessário; em seguida, na página **Configuração**, selecione **Configurações gerais**, digite o nome do arquivo de inicialização (como *startup.txt*) em **Configurações de pilha** > **Comando de Inicialização** e, em seguida, selecione **Salvar**.
 
-    ![Definindo o nome do arquivo de inicialização no portal do Azure](media/deploy-azure/azure-portal-startup-file.png)
+    ![Configurar o nome do arquivo do comando de inicialização no portal do Azure](media/deploy-azure/enter-startup-file-for-app-service-in-the-azure-portal.png)
 
     > [!NOTE]
     > Em vez de usar um arquivo de comando de inicialização, você também pode colocar o comando de inicialização diretamente no campo **Comando de Inicialização** no portal do Azure. No entanto, normalmente é preferível usar um arquivo, pois isso mantém essa parte da configuração em seu repositório, onde você pode auditar as alterações e reimplantar em uma instância do Serviço de Aplicativo diferente.

@@ -9,22 +9,24 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8a2a719ee578553bb2033469e64c2df34351e36e
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 947a474f9bd6efa7fdb3c0a371f140623252aa25
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172507"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279037"
 ---
 # <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>Tutorial: Criar o Serviço de Aplicativo no Visual Studio Code
 
-[Etapa anterior: preparar seu aplicativo](tutorial-deploy-app-service-on-linux-01.md)
+[Etapa anterior: preparar seu aplicativo](tutorial-deploy-app-service-on-linux-02.md)
 
-Nesta etapa, você cria a instância do Serviço de Aplicativo do Azure na qual implanta seu aplicativo. Você pode realizar essa etapa antes de implantar seu código, para que possa configurar um arquivo de inicialização personalizado, se necessário, na próxima etapa.
+Nesta etapa, crie a instância do Serviço de Aplicativo do Azure na qual você implantará seu aplicativo.
+
+Você pode realizar essa etapa antes de implantar seu código, para que possa configurar um arquivo de inicialização personalizado, se necessário, na próxima etapa.
 
 1. Na área **Azure: Serviço de Aplicativo**, no explorador, selecione o comando **+** para criar o Serviço de Aplicativo ou abra a Paleta de Comandos (**F1**) e selecione **Serviço de Aplicativo do Azure: Criar Aplicativo Web**. (Na terminologia do Serviço de Aplicativo, um "aplicativo Web" é um **host** para o código do aplicativo Web, não o próprio código do aplicativo.)
 
-    ![Botão Criar Serviço de Aplicativo no explorador do Serviço de Aplicativo](media/deploy-azure/app-service-create-new.png)
+    ![Criar Serviço de Aplicativo no gerenciador do Serviço de Aplicativo](media/deploy-azure/create-new-app-service-in-app-service-explorer.png)
 
 1. Nos prompts seguintes:
 
@@ -33,15 +35,15 @@ Nesta etapa, você cria a instância do Serviço de Aplicativo do Azure na qual 
 
 1. Quando aparecer uma mensagem indicando que o novo Serviço de Aplicativo foi criado, selecione **Exibir Saída** para alternar para a janela **Saída** do VS Code. A saída mostra os nomes do grupo de recursos do Azure e do Plano do Serviço de Aplicativo que foram criados, juntamente com a URL do Serviço de Aplicativo.
 
-    ![Mensagem que aparece após a criação do Serviço de Aplicativo](media/deploy-azure/app-service-created.png)
+    ![URL, grupo de recursos e Plano do Serviço de Aplicativo para seu Serviço de Aplicativo](media/deploy-azure/url-for-your-new-app-service-and-resource-group-and-plan.png)
 
 1. Para confirmar se o Serviço de Aplicativo está sendo executado corretamente, expanda sua assinatura no explorador **Azure: Serviço de Aplicativo**, clique com o botão direito do mouse no nome do Serviço de Aplicativo e selecione **Procurar Site**:
 
-    ![Comando Procurar site em um Serviço de Aplicativo no explorador do Serviço de Aplicativo](media/deploy-azure/browse-website-command.png)
+    ![Comando Procurar site em um Serviço de Aplicativo no explorador do Serviço de Aplicativo](media/deploy-azure/select-command-to-browse-website-in-app-service.png)
 
 1. Como você ainda não implantou seu próprio código no Serviço de Aplicativo (isso será feito na próxima etapa), apenas um aplicativo padrão é exibido:
 
-    ![Aplicativo Python padrão no Serviço de Aplicativo no Linux](media/deploy-azure/default-python-app.png)
+    ![Aplicativo Python padrão no Serviço de Aplicativo no Linux](media/deploy-azure/default-python-app-on-app-service-on-linux.png)
 
 ## <a name="optional-upload-an-environment-variable-definitions-file"></a>(Opcional) Carregar um arquivo de definições de variáveis de ambiente
 

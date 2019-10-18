@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 691e64ae9b407ba4277ddde2a62a583623e53484
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: b87ca4bdefafbfa3e23c9538d6c77357dc9ba99b
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172479"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278753"
 ---
 # <a name="tutorial-create-a-python-function-for-azure-functions"></a>Tutorial: Criar uma função do Python para o Azure Functions
 
 [Etapa anterior: pré-requisitos](tutorial-vs-code-serverless-python-01.md)
 
-1. O código do Azure Functions é gerenciado em um _projeto_ do Functions, que deve ser criado primeiro, antes da criação do código. No gerenciador do **Azure: Functions** (aberto usando o ícone do Azure, do lado esquerdo), selecione o ícone de comando **Novo projeto** ou abra a Paleta de Comandos (F1) e selecione **Azure Functions: Criar Novo Projeto**.
+Neste artigo, você criará uma função do Python para o Azure Functions com o Visual Studio Code. O código do Azure Functions é gerenciado em um _projeto_ do Functions, que deve ser criado primeiro, antes da criação do código.
 
-    ![Criar botão do projeto no gerenciador do Functions](media/tutorial-vs-code-serverless-python/project-create-new.png)
+1. No gerenciador do **Azure: Functions** (aberto usando o ícone do Azure, do lado esquerdo), selecione o ícone de comando **Novo projeto** ou abra a Paleta de Comandos (F1) e selecione **Azure Functions: Criar Novo Projeto**.
+
+    ![Criar um projeto no gerenciador do Azure Functions](media/tutorial-vs-code-serverless-python/create-a-new-project-in-azure-functions-explorer.png)
 
 1. Nos prompts seguintes:
 
@@ -37,17 +39,17 @@ ms.locfileid: "72172479"
 
 1. Após um breve período, será exibida uma mensagem indicando que o novo projeto foi criado. No **Gerenciador**, há a subpasta criada para a função e o Visual Studio Code abre o arquivo *\_\_init\_\_.py* que contém o código padrão da função:
 
-    [![Resultado da criação do projeto de funções do Python](media/tutorial-vs-code-serverless-python/project-create-results.png)](media/tutorial-vs-code-serverless-python/project-create-results.png)
+    ![Resultado da criação de um projeto do Python no Azure Functions](media/tutorial-vs-code-serverless-python/display-results-of-new-python-project-in-azure-functions.png)
 
     > [!NOTE]
     > Se o Visual Studio Code informar que você não tem um interpretador do Python selecionado ao abrir o *\_\_init\_\_.py*, abra a Paleta de Comandos (**F1**), selecione o comando **Python: selecione interpretador** e, em seguida, selecione o ambiente virtual na pasta local `.env` (que foi criada como parte do projeto). O ambiente deve ser baseado especificamente no Python 3.6x, conforme observado no artigo anterior, em [Pré-requisitos](tutorial-vs-code-serverless-python-01.md#prerequisites).
     >
-    > ![Seleção do ambiente virtual criado com o projeto](media/tutorial-vs-code-serverless-python/select-venv-interpreter.png)
+    > ![Selecionar o ambiente virtual criado com o projeto do Python](media/tutorial-vs-code-serverless-python/select-virtual-environment-created-with-the-python-project.png)
 
 > [!TIP]
 > Sempre que você quiser criar outra função no mesmo projeto, use o comando **Criar função**, no gerenciador do **Azure: Functions** ou abra a Paleta de Comandos(**F1**) e selecione o comando **Azure Functions: Criar Função**. Ambos os comandos solicitam a você um nome de função (que é o nome do ponto de extremidade) e, em seguida, uma subpasta é criada com os arquivos padrão.
 >
-> ![Comando Nova Função no gerenciador do Azure: Functions](media/tutorial-vs-code-serverless-python/function-create-new.png)
+> ![Criar funções usando Nova Função no gerenciador do Azure Functions](media/tutorial-vs-code-serverless-python/create-new-functions-in-azure-functions-explorer.png)
 
 > [!div class="nextstepaction"]
 > [Criei a função](tutorial-vs-code-serverless-python-03.md)

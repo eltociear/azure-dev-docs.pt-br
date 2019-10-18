@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b284dd6b5a5d1a09f1be48fb2ab7e6a8f95a4708
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 96e3a653567d146e1ce10fe0ae7950d35b9ed9e3
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172364"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279070"
 ---
 # <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>Tutorial: Preparar seu aplicativo para implantação no Serviço de Aplicativo do Azure
 
 [Etapa anterior: pré-requisitos](tutorial-deploy-app-service-on-linux-01.md)
+
+Neste artigo, você preparará um aplicativo para ser implantado no Serviço de Aplicativo do Azure para este tutorial. É possível usar um aplicativo existente, criar ou baixar um aplicativo.
 
 Se já tiver um aplicativo com o qual gostaria de trabalhar, verifique se você tem um arquivo *requirements.txt* que descreve suas dependências, incluindo estruturas como Flask ou Django.
 

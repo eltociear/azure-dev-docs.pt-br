@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c57729fd3ab1f671b2533f3e15056aec99cb6c9
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a8ce5de518ef4eeec2140ec82ef560f3b487783e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172454"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278691"
 ---
 # <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Tutorial: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações
 
 [Etapa anterior: implantar a imagem no Azure](tutorial-deploy-containers-02.md)
+
+Este artigo explica como reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações no Visual Studio Code.
 
 Como inevitavelmente você faz alterações em seu aplicativo, você acaba recompilando e reimplantando o contêiner muitas vezes. Felizmente, o processo é simples:
 

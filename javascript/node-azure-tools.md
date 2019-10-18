@@ -1,6 +1,6 @@
 ---
 title: Ferramentas para desenvolvedores JavaScript no Azure
-description: Instalar as ferramentas individuais para o desenvolvimento em JavaScript no Azure
+description: Instalar as ferramentas individuais para o desenvolvimento em Node.js e JavaScript no Azure
 services: multiple
 author: karlerickson
 manager: douge
@@ -11,12 +11,12 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: karler
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 462dca51a703c33f327a7a3c85a87edbce929e07
-ms.sourcegitcommit: d3349f1a2a8a7eab1ffe2fcb1d05f22cac91dffb
+ms.openlocfilehash: 801e621b361a87223a9d2b948ce2afa8c2b1a138
+ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923108"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348039"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Ferramentas do Azure para desenvolvedores JavaScript
 As ferramentas a seguir são recomendadas para o desenvolvimento de aplicativos JavaScript no Azure.

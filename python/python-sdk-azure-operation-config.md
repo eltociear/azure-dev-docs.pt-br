@@ -8,26 +8,28 @@ ms.date: 03/07/2018
 ms.topic: conceptual
 ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ca69b72789f28445c4654e635e641e2954890a38
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 0730cec8470a3b55421c6c0cafa08f88819cb1d8
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172370"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279081"
 ---
 # <a name="parameters-for-operation-configuration"></a>Parâmetros para configuração da operação
 
-Os métodos em operações têm parâmetros adicionais que podem ser fornecidos no `kwargs`. Isso é chamado de operation_config.
+É possível fornecer parâmetros extras para métodos em operações no SDK do Azure para Python.
+
+Os parâmetros extras são fornecidos no `kwargs`. Essa funcionalidade é denominada *operation_config*.
 
 As opções de configuração da operação são:
 
 |Nome do parâmetro|Type|Função|
 |----------------------|------|---------------|
 | verificar |`bool`|Se deseja verificar o certificado SSL. Padrão: True.|
-|  cert |`str`| Caminho até o certificado local para verificação do lado do cliente.|
+|  cert |`str`| Caminho para o certificado local para verificação do lado do cliente.|
 |  Tempo limite |`int`| Tempo limite para estabelecer uma conexão de servidor em segundos.|
 |  allow_redirects |`bool` | Se deseja permitir redirecionamentos.|
-|  max_redirects  |`int`| O número máximo de redirecionamentos permitidos.|
+|  max_redirects  |`int`| Número máximo de redirecionamentos permitidos.|
 |  proxies  |`dict` |Configurações do servidor de proxy.|
 |  use_env_proxies |`bool` |Se deseja ler as configurações de proxy de variáveis de ambiente local.|
 |  retries  |`int` | O número total de novas tentativas.|

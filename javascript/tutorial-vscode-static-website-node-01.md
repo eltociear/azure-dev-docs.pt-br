@@ -8,16 +8,16 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.author: kraigb
-ms.openlocfilehash: 45dfb1f32d98385b2cb944340b4601de804e133f
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 0e5a7e12d234b56899e3c814cb577002125ea052
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685908"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587137"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Implantar um site estático no Azure usando o Visual Studio Code
 
-Neste tutorial, você vai criar e implantar um site estático no Azure usando o [Armazenamento do Azure](https://docs.microsoft.com/azure/storage). Um site estático é composto por HTML, CSS, JavaScript e outros arquivos estáticos, como imagens ou fontes. Um site estático normalmente é um aplicativo de página única (ou [SPA](https://en.wikipedia.org/wiki/Single-page_application)) escrito com Angular ou React. No entanto, você cria o aplicativo, hospeda e serve esses arquivos diretamente do *armazenamento*, em vez de usando um servidor Web. Hospedar no armazenamento é mais simples e mais barato do que manter um servidor Web.
+Neste tutorial, você vai criar e implantar um site estático no Azure usando o [Armazenamento do Azure](https://docs.microsoft.com/azure/storage). Um site estático é composto por HTML, CSS, JavaScript e outros arquivos estáticos, como imagens ou fontes. Um site estático normalmente é um SPA (ou [aplicativo de página única](https://en.wikipedia.org/wiki/Single-page_application)) escrito com Angular, React ou Vue. No entanto, você cria o aplicativo, hospeda e serve esses arquivos diretamente do _armazenamento_, em vez de usando um servidor Web. Hospedar no armazenamento é mais simples e mais barato do que manter um servidor Web.
 
 > [!NOTE]
 > Se você tiver seu próprio código de servidor, como um aplicativo Node.js/Expresso, siga o [tutorial do Serviço de Aplicativo](tutorial-vscode-azure-app-service-node-01.md), em vez disso.

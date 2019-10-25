@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 24f615f5f456276b1ed78fc431e3cdd929e2d1cd
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 389b1ef07bd997ea6cd7d3d46fcaeffb36f6eaae
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172519"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587122"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
@@ -23,7 +23,7 @@ Este artigo explica passo-a-passo como usar o Visual Studio Code para implantar 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o link **Encontrei um problema** no final de cada artigo para enviar comentários.
 
 > [!TIP]
-> O [Serviço de Aplicativo do Azure no Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro), atualmente em versão prévia para Python, executa o código-fonte em um contêiner predefinido do Docker. Esse contêiner executa aplicativos com o Python 3.7, usando o servidor Web [Gunicorn](https://gunicorn.org). As características desse contêiner são descritas em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). A própria definição de contêiner está no [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).
+> O [Serviço de Aplicativo do Azure no Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) executa o código-fonte em um contêiner predefinido do Docker. Esse contêiner executa aplicativos com o Python 3.7, usando o servidor Web [Gunicorn](https://gunicorn.org). As características desse contêiner são descritas em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). A própria definição de contêiner está no [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

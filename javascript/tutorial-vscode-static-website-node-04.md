@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 705256291709c6715f90f19c220a7e3e127f923f
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 671e600471402dbd6ca71d385a238caeee889497
+ms.sourcegitcommit: 66cc8d1839dbd7cc01b33030f188e15bf5f24dae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587148"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916677"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Implantar o site para o Armazenamento do Azure
 
@@ -26,10 +26,6 @@ Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site e
 1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
 
    ![Nós de Armazenamento do Azure no gerenciador de Armazenamento do Azure](media/static-website/storage-nodes.png)
-
-1. Selecione o gerenciador de **Arquivos**, clique com o botão direito do mouse na pasta _dist/my-static-app_ e escolha **Implantar no Site Estático**:
-
-    ![Comando Implantar para o Site Estático](media/static-website/deploy-build-angular.png)
 
 1. Selecione o gerenciador de **Arquivos**, clique com o botão direito do mouse na pasta _dist/my-static-app_ e escolha **Implantar no Site Estático**:
 
@@ -48,10 +44,6 @@ Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site e
 1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
 
    ![Nós de Armazenamento do Azure no gerenciador de Armazenamento do Azure](media/static-website/storage-nodes.png)
-
-1. Selecione o gerenciador de **Arquivos**, clique com o botão direito do mouse na pasta _compilar_ e escolha **Implantar para o Site Estático**:
-
-    ![Comando Implantar para o Site Estático](media/static-website/deploy-build-react.png)
 
 1. Selecione o gerenciador de **Arquivos**, clique com o botão direito do mouse na pasta _compilar_ e escolha **Implantar para o Site Estático**:
 

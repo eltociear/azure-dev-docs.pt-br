@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 title: Azure para desenvolvedores de Python
 summary: >
-  Saiba mais sobre o que o Azure oferece para desenvolvedores de Python. Introdução aos recursos úteis do Azure, como hospedagem de aplicativos, suporte para bancos de dados de software livre, como o mySQL e o PostgreSQL, e trabalho com Big Data para machine learning e outros aplicativos.
+  O Azure oferece serviços abrangentes para desenvolvedores de Python, incluindo hospedagem de aplicativos, armazenamento, bancos de dados open-source, como mySQL e PostgreSQL, ciência de dados, aprendizado de máquina e IA. O SDK do Azure para Python ajuda os desenvolvedores a serem altamente produtivos ao usar esses serviços.
 metadata:
   title: Azure para desenvolvedores de Python
   description: Comece a desenvolver com o Python e o Azure para Python.
@@ -10,12 +10,12 @@ metadata:
   ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: a6008ed6b2a07db2853521922a29f1bd51a909d3
-  ms.sourcegitcommit: e081f71211e8f33420e92635c9a61eaa2f34c5e6
+  ms.openlocfilehash: b6c33142880eb289cfe1c87b54341341f98ef939
+  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/14/2019
-  ms.locfileid: "72306313"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73568174"
 landingContent:
 - title: Introdução ao SDK do Azure para Python
   linkLists:

@@ -2,21 +2,21 @@
 title: Implantar um aplicativo Node.js em contêineres com o VS Code e o Azure
 description: Tutorial completo ilustrando como criar, colocar em contêineres com o Docker e implantar no Azure, um aplicativo em Node.js
 services: multiple
-author: karlerickson
-manager: douge
+author: kraigb
+manager: barbkess
 ms.service: app-service
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 06/25/2017
-ms.author: karler
+ms.author: kraigb
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: bc8e3a79e3d32cc3d16f496b169f4229d20a6163
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 2d130be2550af5be2206c332f629c9221188ed91
+ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587389"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661319"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Desenvolver e implantar um aplicativo Node.js em contêineres com o Visual Studio Code e o Azure
 
@@ -149,7 +149,7 @@ Além disso, o **Console de Depuração** é anexado ao aplicativo recém-execut
 
 Você conseguiu pressionar **&lt;F5>** para executar o aplicativo porque o arquivo aberto no momento é um arquivo JavaScript (`server.js`). Como resultado, o Visual Studio Code pressupõe que o projeto é um aplicativo em Node.js. Se você fechar todos os arquivos JavaScript no Visual Studio Code e pressionar **&lt;F5>** , o Visual Studio Code consultará você como o ambiente:
 
-![Especificar o ambiente do tempo de execução](./media/node-howto-e2e/visual-studio-code-select-environment.png)
+![Especificar o ambiente do runtime](./media/node-howto-e2e/visual-studio-code-select-environment.png)
 
 Abra um navegador e navegue até `http://localhost:8080` para ver o aplicativo em execução. Digite uma mensagem na caixa de texto e adicione/remova algumas tarefas para ter uma ideia de como o aplicativo funciona.
 

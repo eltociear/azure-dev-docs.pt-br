@@ -141,6 +141,8 @@
           href: spring-framework/deploy-containerized-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Implantar o Serviço de Aplicativo a partir do Registro de Contêiner do Azure
           href: spring-framework/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Funções do Java com o Hub de Eventos e o Cosmos DB
+          href: /azure/azure-functions/functions-event-hub-cosmos-db?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Usar Logz.io com o Java no Azure
           href: java-get-started-with-logzio.md
     - name: Artigos de Instrução

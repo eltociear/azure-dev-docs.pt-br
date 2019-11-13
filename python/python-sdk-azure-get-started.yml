@@ -3,49 +3,42 @@ title: Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure p
 metadata:
   title: Introdução às bibliotecas do Azure para Python
   description: Saiba como criar os recursos de nuvem do Azure, conectá-los e usá-los em seus aplicativos do python.
-  author: sptramer
-  ms.author: sttramer
-  manager: carmonm
+  author: kraigb
+  ms.author: kraigb
+  manager: barbkess
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
   nextTutorialTitle: referência de SDK do python
   displayType: two-column
   interactive: azurecli
-  ms.date: 11/30/2017
-  ms.openlocfilehash: 39dc282c9d0a2cebb0f540a446767e3a60fc1428
-  ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
+  ms.date: 10/18/2019
+  ms.openlocfilehash: 32cfda14e307d0293c9ffec8b24685375cc929d0
+  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/20/2019
-  ms.locfileid: "69635091"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73568204"
 items:
 - durationInMinutes: 1
-  content: "Este guia demonstra o uso de várias bibliotecas do Azure para Python.  \n"
+  content: "Este guia demonstra o uso de várias bibliotecas no SDK do Azure para Python.  \n"
 - title: Pré-requisitos
   durationInMinutes: 5
   content: >
     - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).
 
-    - [Python](https://www.python.org/downloads/)
+    - [O intérprete Python 3.x mais recente](https://www.python.org/downloads/)
 
-    - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
+    - Use a [CLI do Azure 2.0](/azure/install-az-cli2) para trabalhar localmente ou o [Azure Cloud Shell](/azure/cloud-shell/quickstart) para trabalhar exclusivamente na nuvem.
 - title: Configurar a autenticação
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > Isso deve ser usado como a experiência de início rápido do desenvolvedor. Para fins de produção, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.
-
-    > Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.
+    O SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI. Para fins de produção, no entanto, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.
 
 
-    O SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI.
+    Para definir as credenciais ativas, use [az login](/azure/authenticate-azure-cli).
 
-
-    Para definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
-
-    A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).
+    A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](/azure/manage-azure-subscriptions-azure-cli).
 
 
     ```python
@@ -61,9 +54,7 @@ items:
 - title: Criar um ambiente virtual
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > Criar uma ambiente virtual é opcional, mas é altamente recomendável fazer isso.
+    Um ambiente virtual mantém as bibliotecas do SDK em um local isolado para o seu projeto, o que facilita a desinstalação do SDK, conforme necessário, com a exclusão da pasta de ambiente.
 
 
     Criar um ambiente virtual em Bash (Linux ou [Bash para Windows](https://msdn.microsoft.com/commandline/wsl/about)):

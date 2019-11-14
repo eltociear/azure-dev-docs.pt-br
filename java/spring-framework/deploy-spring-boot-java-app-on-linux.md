@@ -8,19 +8,19 @@ manager: douge
 editor: ''
 ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 11/12/2019
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 93c67221748f354f2bf772a5f67903512a241063
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 0d41f71ede412a34b39fb2cd74db3ce7a2190dee
+ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691175"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74040474"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Implantar um aplicativo do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
 
@@ -75,7 +75,7 @@ As etapas a seguir explicarão as etapas necessárias para criar um aplicativo W
 1. Quando o aplicativo Web tiver sido criado, altere o diretório para o diretório `target` em que o arquivo JAR está localizado e inicie o aplicativo Web. Por exemplo:
    ```
    cd target
-   java -jar gs-spring-boot-docker-0.1.0.jar
+   java -jar gs-spring-boot-docker-0.1.0.jar --server.port=80
    ```
 
 1. Teste o aplicativo Web navegando até ele localmente usando um navegador da Web. Por exemplo, se você tiver ondulação disponível e tiver configurado o servidor Tomcat para ser executado na porta 80:
@@ -83,7 +83,7 @@ As etapas a seguir explicarão as etapas necessárias para criar um aplicativo W
    curl http://localhost
    ```
 
-1. Você verá a seguinte mensagem exibida: **Olá, mundo do Docker!**
+1. Você verá a seguinte mensagem exibida: **Olá, mundo do Docker**
 
    ![Procurar aplicativo de exemplo localmente][SB01]
 
@@ -124,7 +124,7 @@ As etapas a seguir orientam você no uso do portal do Azure para criar um Regist
 
    ```xml
    <properties>
-      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
       <username>wingtiptoysregistry</username>

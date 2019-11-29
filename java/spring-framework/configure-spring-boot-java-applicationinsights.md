@@ -4,22 +4,18 @@ description: Configure um aplicativo Spring Boot criado com Spring Initializr pa
 services: Application-Insights
 documentationcenter: java
 author: dhaval24
-manager: alexklim
-editor: ''
-ms.assetid: ''
 ms.author: dhdoshi
-ms.date: 12/19/2018
+ms.date: 11/29/2019
 ms.devlang: java
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 56f54ee2fefcdfb5cfdb694f41426913b4978344
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 25a036e129d6a8853059d61da7ff8565ab0ddd72
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691170"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118270"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Configure um aplicativo Inicializador do Spring Boot para usar o Application Insights
 
@@ -36,6 +32,8 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 ## <a name="create-a-custom-application-using-spring-initializr"></a>Criar um aplicativo personalizado usando Spring Initializr
 
+Crie um aplicativo com o procedimento a seguir.
+
 1. Navegue até [https://start.spring.io/](https://start.spring.io/).
 
 1. Especifique que você deseja gerar um projeto **Maven** com **Java**, insira os nomes de **Grupo** e **Artefato** para seu aplicativo e, em seguida, selecione a dependência da Web na seção de dependências.
@@ -44,45 +42,46 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    > [!NOTE]
    >
-   > O Spring Initializr usará os nomes de **Grupo** e **Artefato** para criar o nome do pacote, por exemplo: *com.example.demo*.
+   > O Spring Initializr usará o **Grupo** e os nomes do **Artefato** para criar o nome do pacote, por exemplo: *com.vged.appinsights*.
    >
 
-1. Clique no botão para **Gerar Projeto**.
+1. Clique no botão **Gerar**.
 
 1. Quando solicitado, baixe o projeto para um caminho no computador local.
 
 1. Depois de ter extraído os arquivos no sistema local, seu aplicativo Spring Boot personalizado estará pronto para edição.
 
-   ![Arquivos de projeto Spring Boot personalizados][SI02]
-
 ## <a name="create-an-application-insights-resource-on-azure"></a>Criar um recurso do Application Insights no Azure
 
-1. Navegue até o Azure em <https://portal.azure.com/> e clique em **+Novo**.
+Crie um recurso do Application Insights usando o procedimento a seguir.
 
-   ![Azure][AZ01]
+1. Navegue até o Azure em <https://portal.azure.com/> e clique em **Criar + um novo recurso**.
 
-1. Clique em **Ferramentas de Gerenciamento** e, em seguida, clique em **Application Insights**.
+1. Clique em **Ferramentas de TI e de Gerenciamento** e, em seguida, clique em **Application Insights**.
 
-   ![Azure][AZ02]
+1. Na página **Novo Recurso do Application Insights**, insira as seguintes informações:
 
-1. Na página **Novo Recurso do Application Insights**, especifique as seguintes informações:
+* Especifique sua **Assinatura** e o seu **Grupo de recursos**.
+* Insira o **Nome** do seu recurso do Application Insights.
+* Selecione a **Região**.
 
-   * Insira o **Nome** do seu recurso do Application Insights.
-   * Escolha o **Tipo de Aplicativo** para Aplicativo Web Java.
-   * Especifique sua **Assinatura**, **Grupo de recursos** e **Local**.
-   * Selecione a opção Fixar no painel se você quiser fixar o recurso no Azure.
-
-   Após especificar essas opções, clique em **Criar** para criar o recurso do Application Insights.
+   Após especificar essas opções, clique em **Revisar e criar**.
 
    ![Azure][AZ03]
- 
-1. Após a criação do recurso, você o verá listado no **Painel** do Azure, bem como nas páginas **Todos os Recursos**. Clique em seu recurso em qualquer um desses locais para abrir a página de visão geral do recurso Application Insights. Nessa página de visão geral, copie a **chave de instrumentação**.
+
+* Verifique as especificações e clique em **Criar**.
+
+Após a criação de seu recurso, ele estará listado no **Painel** do Azure, bem como nas páginas **Todos os Recursos**. Clique em seu recurso em qualquer um desses locais para abrir a página de visão geral do recurso Application Insights.
+
+Na página de visão geral, copie a **chave de instrumentação**.
 
    ![Azure][AZ04]
 
 ## <a name="configure-your-downloaded-spring-boot-application-to-use-application-insights"></a>Configurar seu aplicativo baixado do Spring Boot para usar o Application Insights
 
-1. Localize o arquivo *POM.xml* no diretório raiz do seu aplicativo e adicione a seguinte dependência em sua seção de dependências. 
+Configure o aplicativo usando o procedimento a seguir.
+
+1. Localize o arquivo *POM.xml* no diretório raiz do seu aplicativo e adicione a seguinte dependência em sua seção de dependências.
 
 ```XML
  <dependency>
@@ -93,8 +92,6 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 ```
 
 1. Localize o arquivo *application.properties* no diretório *recursos* do seu aplicativo, ou crie o arquivo se ele ainda não existe.
-
-   ![Localize o arquivo application.properties][RE01]
 
 1. Abra o arquivo *application.properties* em um editor de texto e adicione as seguintes linhas ao arquivo. Depois, substitua os valores de exemplo pelas propriedades adequadas com as credenciais certas:
 
@@ -190,6 +187,8 @@ Clique no bloco **Mapa do Aplicativo** para exibir os componentes de alto nível
 
 ## <a name="configure-springboot-application-to-send-log4j-logs-to-application-insights"></a>Configurar aplicativo Springboot para enviar logs log4j ao Application Insights
 
+Configure o aplicativo para enviar logs usando o procedimento a seguir.
+
 1. Modifique o arquivo POM.xml do projeto e adicione/modifique a seção de dependências com o seguinte. 
 
 ```xml
@@ -257,13 +256,10 @@ Clique no bloco **Mapa do Aplicativo** para exibir os componentes de alto nível
   </Loggers>
 </Configuration>
 ```
-4. Compile e execute novamente o aplicativo Spring Boot, como mostrado acima. 
 
-Em alguns segundos, você verá todos os logs de spring disponíveis no Azure. 
+4. Compile e execute novamente o aplicativo Spring Boot, como mostrado acima.
 
-![Azure][AZ06]
-
-É possível até mesmo examinar as mensagens de log detalhadas e fazer a análise no Portal do Analytics. 
+Em alguns segundos, você verá todos os logs de spring disponíveis no Azure. É possível verificar as mensagens de log detalhadas e fazer a análise no Portal de Análise.
 
 ![Azure][AZ07]
 
@@ -317,7 +313,7 @@ O **[Spring Framework]** é uma solução de software livre que ajuda os desenvo
 [AZ07]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/traces_details.png
 [AZ08]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/AppMap.png
 
-[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/spring_start.png
+[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/spring_start.PNG
 [SI02]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/After_extract.png
 
 [RE01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/applicationproperties_loc.png

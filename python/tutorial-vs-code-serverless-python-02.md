@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b87ca4bdefafbfa3e23c9538d6c77357dc9ba99b
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 4c4fab3227194884e1b9a77439efbe87099a6812
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278753"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118095"
 ---
 # <a name="tutorial-create-a-python-function-for-azure-functions"></a>Tutorial: Criar uma função do Python para o Azure Functions
 
@@ -36,6 +36,9 @@ Neste artigo, você criará uma função do Python para o Azure Functions com o 
     | Forneça um nome de função | HttpExample | O nome é usado para uma subpasta que contém o código da função, juntamente com os dados de configuração, além de definir também o nome do ponto de extremidade HTTP. Use "HttpExample" em vez de aceitar o padrão "HTTPTrigger" oferecido, para distinguir a função em si do gatilho. |
     | Nível de autorização | **Anônimo** | A autorização anônima torna a função publicamente acessível a qualquer pessoa. |
     | Selecione como você gostaria de abrir seu projeto | **Abrir na janela atual** | Abre o projeto na janela atual do Visual Studio Code. |
+
+    > [!NOTE]
+    > Caso tenha o Python 3.6 e o 3.7 instalados, o Visual Studio Code usará o Python 3.6 por padrão para o projeto do Azure Functions. Para usar o Python 3.7 no momento, primeiro crie e ative um ambiente do Python 3.7 e depois use o comando `func init` de um terminal. Em seguida, reinicie o Visual Studio Code dessa pasta usando o comando `code .`.
 
 1. Após um breve período, será exibida uma mensagem indicando que o novo projeto foi criado. No **Gerenciador**, há a subpasta criada para a função e o Visual Studio Code abre o arquivo *\_\_init\_\_.py* que contém o código padrão da função:
 

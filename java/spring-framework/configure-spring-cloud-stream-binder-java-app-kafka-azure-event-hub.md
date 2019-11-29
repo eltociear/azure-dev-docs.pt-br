@@ -4,26 +4,20 @@ description: Saiba como configurar um aplicativo criado com o Spring Boot Initia
 services: event-hubs
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: event-hubs
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 074c7bb28907b3c71c981f261ae69d5477c21028
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5d1f1d40eba0f4b4a6aa2718f09124b765a06a82
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282617"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118288"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Como usar o Inicializador do Spring Boot para Apache Kafka com os Hubs de Eventos do Azure
-
-## <a name="overview"></a>Visão geral
 
 Este artigo demonstra como configurar um Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializer para usar o [Apache Kafka] com os Hubs de Eventos do Azure.
 
@@ -46,18 +40,21 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
-1. Clique em **+Criar um recurso**, **Internet das Coisas** e em **Hubs de Eventos**.
+1. Clique em **Criar + um recurso**, depois em **Internet das Coisas** e, em seguida, procure pelos *Hubs de Eventos**.
+
+1. Clique em **Criar**.
 
    ![Criar Namespace do Hub de Eventos do Azure][IMG01]
 
 1. Na página **Criar Namespace**, insira as seguintes informações:
 
    * Insira um **Nome** exclusivo, que se tornará parte da URI do namespace do hub de eventos. Por exemplo: se você inseriu **wingtiptoys** como o **Nome**, a URI será *wingtiptoys.servicebus.windows.net*.
-   * Escolha um **Tipo de preço** para o namespace do hub de eventos.
+   * Tipo de preço.
    * Especifique **Habilitar Kafka** como o namespace.
    * Escolha a **Assinatura** que você deseja usar para o banco de dados.
    * Especifique se deseja criar um novo **Grupo de recursos** para o namespace ou escolher um grupo de recursos existente.
    * Especifique o **Local** do namespace do hub de eventos.
+   * Também é possível especificar as **Unidades de produtividade** para o namespace.
 
    ![Especificar opções de Namespace do Hub de Eventos do Azure][IMG02]
 
@@ -65,23 +62,17 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 
 ### <a name="create-an-azure-event-hub-in-your-namespace"></a>Criar um Hub de Eventos do Azure no namespace
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/>.
+Após a implantação de seu namespace, será possível criar um hub de eventos nele.
 
-1. Clique em **Todos os recursos** e no namespace criado.
+1. Navegue até o namespace criado na etapa anterior.
 
-   ![Selecionar Namespace do Hub de Eventos do Azure][IMG03]
+1. Clique em **+ Hub de Eventos** na barra de menus superior.
 
-1. Clique em **Hubs de Eventos** e **+Hub de Eventos**.
+1. Nomeie o hub de eventos.
 
-   ![Adicionar novo Hub de Eventos do Azure][IMG04]
+1. Clique em **Criar**.
 
-1. Na página **Criar Hub de Eventos**, insira um **Nome** exclusivo para o Hub de Eventos e clique **Criar**.
-
-   ![Criar Hub de Eventos do Azure][IMG05]
-
-1. Quando o Hub de Eventos tiver sido criado, ele será listado na página **Hubs de Eventos**.
-
-   ![Criar Hub de Eventos do Azure][IMG06]
+   ![Criar Hub de Eventos][IMG05]
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Criar um aplicativo Spring Boot simples com o Spring Initializr
 
@@ -104,8 +95,6 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 1. Quando você tiver especificado as opções listadas acima, clique em **Gerar Projeto**.
 
 1. Quando solicitado, baixe o projeto para um caminho no computador local.
-
-   ![Baixar projeto do Spring][SI02]
 
 1. Depois de ter extraído os arquivos no sistema local, seu aplicativo Spring Boot simple estará pronto para edição.
 
@@ -229,7 +218,7 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    spring.cloud.azure.credential-file-path=my.azureauth
    spring.cloud.azure.resource-group=wingtiptoysresources
    spring.cloud.azure.region=West US
-   spring.cloud.azure.eventhub.namespace=wingtiptoysnamespace
+   spring.cloud.azure.eventhub.namespace=wingtiptoys
 
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default

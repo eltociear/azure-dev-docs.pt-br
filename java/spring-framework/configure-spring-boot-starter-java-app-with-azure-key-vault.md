@@ -4,26 +4,21 @@ description: Descubra como configurar um aplicativo inicializador do Spring Boot
 services: key-vault
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 10/29/2019
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1c04bab67c7fc6a409893416d27de7ed18018cd9
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7841386ba89f2f14e4ef6e5c279d62293940f4af
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283217"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118026"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Como usar o iniciador do Spring Boot para o Azure Key Vault
-
-## <a name="overview"></a>Visão geral
 
 Este artigo demonstra como criar um aplicativo com o **[Spring Initializr]** , o qual usa o iniciador do Spring Boot para o Azure Key Vault para recuperar uma cadeia de conexão armazenada como um segredo em um cofre de chaves.
 
@@ -37,23 +32,25 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 ## <a name="create-an-app-using-spring-initializr"></a>Criar um aplicativo usando o Spring Initialzr
 
+O procedimento a seguir cria o aplicativo usando o Spring Initializr.
+
 1. Navegue até <https://start.spring.io/>.
 
-1. Especifique que você deseja gerar um projeto **Maven** com **Java**, insira os nomes de **Grupo** e **Artefato** para o seu aplicativo e, em seguida, clique no link para **Alternar para a versão completa** do Spring Initializr.
+1. Especifique que você deseja gerar um projeto do **Maven** com o **Java**.  
 
-   ![Especificar os nomes do grupo e do artefato][secrets-01]
+1. Insira o **Grupo** e os nomes do **Artefato** para seu aplicativo.
 
-1. Role para baixo, até a seção **Azure** e marque a caixa do **Azure Key Vault**.
+1. Na seção **Dependências**, insira o **Azure Key Vault**.
 
-   ![Selecionar o iniciador do Azure Key Vault][secrets-02]
+1. Role até a parte inferior da página e clique em **Gerar**.
 
-1. Role até a parte inferior da página e clique no botão **Gerar Projeto**.
-
-   ![Gerar projeto do Spring Boot][secrets-03]
+   ![Gerar projeto do Spring Boot][secrets-01]
 
 1. Quando solicitado, baixe o projeto para um caminho no computador local.
 
 ## <a name="sign-into-azure"></a>Entrar no Azure
+
+O procedimento a seguir autentica o usuário na CLI do Azure.
 
 1. Abra um prompt de comando.
 
@@ -62,13 +59,15 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    ```azurecli
    az login
    ```
-   Siga as instruções na tela para concluir o processo de entrada.
+
+Siga as instruções na tela para concluir o processo de entrada.
 
 1. Liste suas assinaturas:
 
    ```azurecli
    az account list
    ```
+
    O Azure retornará uma lista de suas assinaturas, e será preciso copiar o GUID para a assinatura que deseja usar. Por exemplo:
 
    ```json
@@ -96,10 +95,14 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 ## <a name="create-a-new-azure-key-vault"></a>Crie um novo Azure Key Vault
 
+O procedimento a seguir cria e inicializa o cofre de chaves.
+
 1. Crie um grupo de recursos para os recursos do Azure que serão usados no seu cofre de chaves. Por exemplo:
+
    ```azurecli
-   az group create --name wingtiptoysresources --location westus
+   az group create --name vged-rg2 --location westus
    ```
+
    Em que:
 
    | Parâmetro | Descrição |
@@ -111,10 +114,10 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ```json
    {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/wingtiptoysresources",
+     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/vged-rg2",
      "location": "westus",
      "managedBy": null,
-     "name": "wingtiptoysresources",
+     "name": "vged-rg2",
      "properties": {
        "provisioningState": "Succeeded"
      },
@@ -124,7 +127,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 2. Crie uma entidade de serviço do Azure a partir do registro do seu aplicativo. Por exemplo:
    ```shell
-   az ad sp create-for-rbac --name "wingtiptoysuser"
+   az ad sp create-for-rbac --name "vgeduser"
    ```
    Em que:
 
@@ -132,22 +135,24 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    |---|---|
    | `name` | Especifica o nome para a entidade de serviço do Azure. |
 
-   A CLI do Azure retornará uma mensagem de status do JSON que contém o *appId* e a *senha*, o que será usado posteriormente como a ID e senha do cliente. Por exemplo:
+   A CLI do Azure retornará uma mensagem de status do JSON que contém o *appId* e a *password* que serão usados posteriormente como a ID e a senha do cliente. Por exemplo:
 
    ```json
    {
      "appId": "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii",
-     "displayName": "wingtiptoysuser",
-     "name": "http://wingtiptoysuser",
+     "displayName": "vgeduser",
+     "name": "http://vgeduser",
      "password": "pppppppp-pppp-pppp-pppp-pppppppppppp",
      "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
    }
    ```
 
 3. Crie um novo cofre de chaves no grupo de recursos. Por exemplo:
+
    ```azurecli
-   az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
+   az keyvault create --name vgedkeyvault --resource-group vged-rg2 --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
+
    Em que:
 
    | Parâmetro | Descrição |
@@ -162,14 +167,17 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    A CLI do Azure exibirá o URI do cofre de chaves, que será usado posteriormente. Por exemplo:  
 
-   ```
-   "https://wingtiptoyskeyvault.vault.azure.net"
+   ```azurecli
+   "https://vgedkeyvault.vault.azure.net"
+
    ```
 
 4. Defina a política de acesso da entidade de serviço do Azure criada anteriormente. Por exemplo:
+
    ```azurecli
-   az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
+   az keyvault set-policy --name vgedkeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
+
    Em que:
 
    | Parâmetro | Descrição |
@@ -184,22 +192,24 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
      "location": "westus",
-     "name": "wingtiptoyskeyvault",
+     "name": "vgedkeyvault",
      "properties": {
        ...
        ... (A long list of values will be displayed here.)
        ...
      },
-     "resourceGroup": "wingtiptoysresources",
+     "resourceGroup": "vged-rg2",
      "tags": {},
      "type": "Microsoft.KeyVault/vaults"
    }
    ```
 
 5. Armazenar um segredo no seu novo cofre de chaves. Por exemplo:
+
    ```azurecli
-   az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
+   az keyvault secret set --vault-name "vgedkeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
+
    Em que:
 
    | Parâmetro | Descrição |
@@ -221,28 +231,32 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
        "updated": "2017-12-01T09:00:16+00:00"
      },
      "contentType": null,
-     "id": "https://wingtiptoyskeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
+     "id": "https://vgedkeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
      "kid": null,
      "managed": null,
      "tags": {
        "file-encoding": "utf-8"
      },
-     "value": "jdbc:sqlserver://wingtiptoys.database.windows.net:1433;database=DATABASE;"
+     "value": "jdbc:sqlserver://.database.windows.net:1433;database=DATABASE;"
    }
    ```
 
 ## <a name="configure-and-compile-your-app"></a>Configurar e compilar seu aplicativo
+
+Use o procedimento a seguir para configurar e compilar seu aplicativo.
 
 1. Extraia os arquivos do projeto Spring Boot que você baixou anteriormente em um diretório.
 
 2. Navegue até a pasta *src/main/resources* no seu projeto e abra o arquivo *application.properties* no editor de texto.
 
 3. Adicione os valores do cofre de chaves usando os valores obtidos nas etapas concluídas anteriormente neste tutorial. Por exemplo:
+
    ```yaml
-   azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
+   azure.keyvault.uri=https://vgedkeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
+
    Em que:
 
    |          Parâmetro          |                                 Descrição                                 |
@@ -252,12 +266,12 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    | `azure.keyvault.client-key` | Especifica o GUID da *senha* de quando você criou a entidade de serviço. |
 
 
-4. Navegue até o arquivo de código-fonte principal do projeto. Por exemplo: */src/main/java/com/wingtiptoys/secrets*.
+4. Navegue até o arquivo de código-fonte principal de seu projeto, por exemplo: */src/main/java/com/vged/secrets*.
 
 5. Abra o arquivo principal Java do aplicativo em um arquivo em um editor de texto; por exemplo: *SecretsApplication.java* e adicione as seguintes linhas ao arquivo:
 
    ```java
-   package com.wingtiptoys.secrets;
+   package com.vged.secrets;
 
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -284,6 +298,8 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 6. Salve e feche o arquivo Java.
 
 ## <a name="build-and-test-your-app"></a>Crie e testar seu aplicativo
+
+Use o procedimento a seguir para testar seu aplicativo.
 
 1. Navegue até o diretório no qual o arquivo *pom.xml* do seu aplicativo Spring Boot está localizado:
 

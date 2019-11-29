@@ -4,9 +4,6 @@ description: Saiba como configurar um aplicativo Spring Cloud Stream Binder base
 services: event-hubs
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
@@ -14,16 +11,14 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 48dfa19177c52da4f296b3e19ae26e91b1d44c33
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 56ac71007af04d3294da811a879ebcf37f54ae73
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282697"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118157"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Como criar um aplicativo Spring Cloud Stream Binder com os Hubs de Eventos do Azure
-
-## <a name="overview"></a>Visão geral
 
 Este artigo demonstra como configurar um aplicativo Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializr e os Hubs de Eventos do Azure.
 
@@ -42,67 +37,69 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Criar um Hub de Eventos do Azure usando o portal do Azure
 
+O procedimento a seguir cria um hub de eventos do Azure.
+
 ### <a name="create-an-azure-event-hub-namespace"></a>Criar um Namespace do Hub de Eventos do Azure
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
-1. Clique em **+Criar um recurso**, **Internet das Coisas** e em **Hubs de Eventos**.
+1. Clique em **Criar + um recurso** e procure por *Hubs de Eventos**.
+
+1. Clique em **Criar**.
 
    ![Criar Namespace do Hub de Eventos do Azure][IMG01]
 
 1. Na página **Criar Namespace**, insira as seguintes informações:
 
    * Insira um **Nome** exclusivo, que se tornará parte da URI do namespace do hub de eventos. Por exemplo: se você inseriu **wingtiptoys** como o **Nome**, a URI será *wingtiptoys.servicebus.windows.net*.
-   * Escolha um **Tipo de preço** para o namespace do hub de eventos.
+   * Tipo de preço.
    * Escolha a **Assinatura** que você deseja usar para o namespace.
    * Especifique se deseja criar um novo **Grupo de recursos** para o namespace ou escolher um grupo de recursos existente.
    * Especifique o **Local** do namespace do hub de eventos.
+   * Também é possível especificar as **Unidades de produtividade** para o namespace.
 
    ![Especificar opções de Namespace do Hub de Eventos do Azure][IMG02]
 
 1. Quando você tiver especificado as opções listadas acima, clique em **Criar** para criar o namespace.
 
-### <a name="create-an-azure-event-hub-in-your-namespace"></a>Criar um Hub de Eventos do Azure no namespace
+## <a name="create-an-azure-event-hub-in-your-namespace"></a>Criar um Hub de Eventos do Azure no namespace
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/>.
+Após a implantação de seu namespace, será possível criar um hub de eventos nele.
 
-1. Clique em **Todos os recursos** e no namespace criado.
+1. Navegue até o namespace criado na etapa anterior.
 
-   ![Selecionar Namespace do Hub de Eventos do Azure][IMG03]
+1. Clique em **+ Hub de eventos** na barra de menus superior.
 
-1. Clique em **Hubs de Eventos** e **+Hub de Eventos**.
+1. Nomeie o hub de eventos.
 
-   ![Adicionar novo Hub de Eventos do Azure][IMG04]
+1. Clique em **Criar**.
 
-1. Na página **Criar Hub de Eventos**, insira um **Nome** exclusivo para o Hub de Eventos e clique **Criar**.
-
-   ![Criar Hub de Eventos do Azure][IMG05]
-
-1. Quando o Hub de Eventos tiver sido criado, ele será listado na página **Hubs de Eventos**.
-
-   ![Criar Hub de Eventos do Azure][IMG06]
+   ![Criar Hub de Eventos][IMG05]
 
 ### <a name="create-an-azure-storage-account-for-your-event-hub-checkpoints"></a>Criar uma Conta de Armazenamento do Azure para seus pontos de verificação do Hub de Eventos
 
+O procedimento a seguir cria uma conta de armazenamento para pontos de verificação do hub de eventos.
+
 1. Navegue até o portal do Azure em <https://portal.azure.com/>.
 
-1. Clique em **+Criar um recurso**, **Armazenamento** e **Conta de Armazenamento**.
+1. Clique em **Criar +** , depois em **Armazenamento** e, em seguida, clique em **Conta de Armazenamento**.
 
-   ![Criar uma Conta de Armazenamento do Azure][IMG07]
+1. Na página **Criar conta de armazenamento**, insira as seguintes informações:
 
-1. Na página **Criar Namespace**, insira as seguintes informações:
-
-   * Insira um **Nome** exclusivo, que se tornará parte da URI da conta de armazenamento. Por exemplo: se você inseriu **wingtiptoys** para o **Nome**, a URI será *wingtiptoys.core.windows.net*.
-   * Escolha **Armazenamento de Blobs** para o **Tipo de conta**.
-   * Especifique o **Local** da conta de armazenamento.
    * Escolha a **Assinatura** que você deseja usar para a conta de armazenamento.
    * Especifique se deseja criar um novo **Grupo de recursos** para a conta de armazenamento ou escolher um grupo de recursos existente.
+   * Insira um **Nome** exclusivo para a conta de armazenamento.
+   * Especifique o **Local** da conta de armazenamento.
 
    ![Especificar opções da Conta de Armazenamento do Azure][IMG08]
 
-1. Quando você tiver especificado as opções listadas acima, clique em **Criar** para criar a conta de armazenamento.
+1. Após especificar as opções listadas acima, clique em **Revisar + criar** para criar sua conta de armazenamento.
+
+1. Verifique as especificações e clique em **Criar**.  A implantação levará alguns minutos.
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Criar um aplicativo Spring Boot simples com o Spring Initializr
+
+O procedimento a seguir cria um aplicativo Spring Boot.
 
 1. Navegue até <https://start.spring.io/>.
 
@@ -123,8 +120,6 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 1. Quando você tiver especificado as opções listadas acima, clique em **Gerar Projeto**.
 
 1. Quando solicitado, baixe o projeto para um caminho no computador local.
-
-   ![Baixar projeto do Spring][SI02]
 
 1. Depois de ter extraído os arquivos no sistema local, seu aplicativo Spring Boot simple estará pronto para edição.
 
@@ -245,7 +240,6 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    spring.cloud.azure.eventhub.checkpoint-storage-account=wingtiptoysstorage
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
-   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
    ```
    Em que:
@@ -364,6 +358,8 @@ Nesta seção, você criará as classes Java necessárias para enviar eventos ao
 1. Salve e feche o arquivo *EventhubSink.java*.
 
 ## <a name="build-and-test-your-application"></a>Criar e testar o aplicativo
+
+Use os procedimentos a seguir para criar e testar seu aplicativo.
 
 1. Abra um prompt de comando e altere o diretório para a pasta em que seu arquivo *pom.xml* está localizado, por exemplo:
 

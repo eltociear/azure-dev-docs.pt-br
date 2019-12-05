@@ -3,17 +3,15 @@ title: Como usar o Spring Cloud Stream Binder no Barramento de Serviço do Azure
 description: Neste artigo, você verá como usar o Spring Cloud Stream Binder para enviar e receber mensagens do Barramento de Serviço do Azure.
 author: seanli1988
 manager: kyliel
-ms.author: Sean.Li
+ms.author: seal
 ms.date: 08/21/2019
-ms.devlang: java
-ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: 48bb5ee53c88910528ad2ed7f06c626e0a431275
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 2d888d225a8bcf5c957da11e18ea86d09ec8e897
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892380"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812037"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Como usar o Spring Cloud Stream Binder no Barramento de Serviço do Azure
 
@@ -268,7 +266,7 @@ Nesta seção, você criará as classes Java necessárias para enviar mensagens 
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
-Quando não for mais necessário, use o [portal do Azure](http://ms.portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
+Quando não for mais necessário, use o [portal do Azure](https://portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
 
 ## <a name="next-steps"></a>Próximas etapas
 

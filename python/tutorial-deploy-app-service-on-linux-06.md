@@ -1,20 +1,15 @@
 ---
 title: 'Tutorial: Transmitir logs do Serviço de Aplicativo do Azure para o VS Code'
 description: Etapa 6 do tutorial, transmitindo logs de aplicativo para o Visual Studio Code
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a60c8fd0202e935960f14a9ab5570f86a78fab6e
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 56cbd468771af8d60fce20d88b8c984f95d4b9b9
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278926"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466074"
 ---
 # <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>Tutorial: Transmitir logs do Serviço de Aplicativo do Azure dentro do Visual Studio Code
 

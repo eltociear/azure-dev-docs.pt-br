@@ -1,19 +1,14 @@
 ---
 title: Criar uma conta de Armazenamento do Azure para um site do Node.js estático usando o Visual Studio Code
 description: Parte 3 do tutorial, criar uma conta de Armazenamento do Azure
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.author: kraigb
-ms.openlocfilehash: ad207007e1c5a781f8cc02a2d20e0a68c77892e7
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 42badfc649d7cc43eb1a58ab20c8ff639eff5354
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587640"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466498"
 ---
 # <a name="create-an-azure-storage-account"></a>Criar uma conta de Armazenamento do Azure
 

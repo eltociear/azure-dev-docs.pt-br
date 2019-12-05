@@ -2,27 +2,23 @@
 title: Criar VMs em várias regiões em paralelo | Microsoft Docs
 description: Exemplo de código para criar máquinas virtuais em diferentes regiões do Azure em paralelo usando o SDK do Azure para Java
 author: rloutlaw
-manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
-ms.author: brendm
 ms.reviewer: asirveda
-ms.openlocfilehash: 8aacf198657da96218ef48b4714c26c6199724fc
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 2d4cca2552e4a85ebc231531d7e55ffda6d1909f
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691785"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812276"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Criar máquinas virtuais em várias regiões a partir de seus aplicativos Java
 
 [Este exemplo](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel) cria máquinas virtuais em paralelo em diferentes regiões do Azure usando as [bibliotecas de gerenciamento do Azure para Java](https://github.com/Azure/azure-sdk-for-java).
 
 > [!IMPORTANT]
-> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](http://docs.microsoft.com/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
+> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](/azure/virtual-machines/virtual-machines-windows-sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 

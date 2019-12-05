@@ -2,19 +2,15 @@
 title: Configurar implantações de aplicativo Web usando Java | Microsoft Docs
 description: Exemplo de código de Java para configurar implantações de Git ou FTP do Serviço de Aplicativo do Azure usando o SDK do Azure para Java
 author: rloutlaw
-manager: douge
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: cddc90772dfcaf8a92c278c5ed498f39a9e2cbc8
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 8ed90b7fff9c973481af1603e14fdb5858d5b9e0
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691865"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812345"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Configurar fontes de implantação do Serviço de Aplicativo do Azure a partir dos seus aplicativos Java
 
@@ -123,7 +119,7 @@ WebApp app3 = azure.webApps().define(app3Name)
                 .create();
  ```
 
- O tempo de execução do Serviço de Aplicativo automaticamente cria e implanta o projeto do .NET usando o código mais recente na ramificação `master` do repositório.
+ O runtime do Serviço de Aplicativo automaticamente cria e implanta o projeto do .NET usando o código mais recente na ramificação `master` do repositório.
 
 ## <a name="continuous-deployment-from-a-github-repo"></a>Implantação contínua de um repositório do GitHub
 

@@ -3,20 +3,17 @@ title: Como usar o Iniciador do Spring Data Gremlin com a API SQL do Azure Cosmo
 description: Saiba como configurar um aplicativo criado com o Inicializador do Spring Boot com a API SQL do Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-author: bmitchell287
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: add8fed3dd9a0add38363742f3142eb1d7d11470
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.openlocfilehash: b5e6b3866b9b1e6a326547c053c628a282d9aaf3
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70182018"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812104"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Como usar o Iniciador do Spring Data Gremlin com a API SQL do Azure Cosmos DB
 
@@ -502,7 +499,7 @@ Nesta seção, você cria as classes Java necessárias para armazenar dados em s
    mvn spring-boot:run
    ```
 
-1. Seu aplicativo exibirá várias mensagens de tempo de execução e, se houver erros, você poderá usar o portal do Azure para exibir o conteúdo do Azure Cosmos DB. Para fazer isso, clique em **Data Explorer** na página de propriedades do banco de dados. Em seguida, clique em **Executar consulta de Gremlin** e depois selecione um item da lista de resultados para exibir os dados.
+1. Seu aplicativo exibirá várias mensagens de runtime e, se houver erros, você poderá usar o portal do Azure para exibir o conteúdo do Azure Cosmos DB. Para fazer isso, clique em **Data Explorer** na página de propriedades do banco de dados. Em seguida, clique em **Executar consulta de Gremlin** e depois selecione um item da lista de resultados para exibir os dados.
 
    ![Como usar o Gerenciador de Documentos para exibir seus dados][JV03]
 

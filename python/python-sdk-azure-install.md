@@ -1,20 +1,15 @@
 ---
 title: Instalar o SDK do Azure para Python
 description: Como instalar o SDK do Azure para Python usando pip ou GitHub. O SDK do Azure pode ser instalado como bibliotecas individuais ou como um pacote completo.
-author: kraigb
-ms.author: kraigb
-manager: barbkess
-ms.service: multiple
 ms.date: 10/31/2019
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: c2a8b2da8cdb0d55bad260ed1f1f6e5ee2b8efc5
-ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+ms.openlocfilehash: 39de0959f3d73306412c39b32a4e13766d1500e9
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568190"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466402"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Instalar o SDK do Azure para Python
 

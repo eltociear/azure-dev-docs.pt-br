@@ -3,22 +3,16 @@ title: Como usar o Spring Data JDBC com o Azure PostgreSQL
 description: Saiba como usar o Spring Data JDBC com um banco de dados Azure PostgreSQL.
 services: postgresql
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: edbdb909e6ea5d55421a1734856d97844bd301f1
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: d7f4ddeab5c46f6070145e5aab0b273156ed38a0
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282297"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811996"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Como usar o Spring Data JDBC com o Azure PostgreSQL
 
@@ -39,7 +33,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 ## <a name="create-a-postgresql-database-for-azure"></a>Criar um banco de dados PostgreSQL para o Azure
 
-### <a name="create-a-postgresql-database-server-using-the-azure-portal"></a>Criar um servidor de banco de dados PostgreSQL usando o Portal do Azure
+### <a name="create-a-postgresql-database-server-using-the-azure-portal"></a>Criar um servidor de banco de dados PostgreSQL usando o portal do Azure
 
 > [!NOTE]
 > 
@@ -67,7 +61,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Após inserir todas as informações acima, clique em **Criar**.
 
-### <a name="configure-a-firewall-rule-for-your-postgresql-database-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o servidor de banco de dados PostgreSQL usando o Portal do Azure
+### <a name="configure-a-firewall-rule-for-your-postgresql-database-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o servidor de banco de dados PostgreSQL usando o portal do Azure
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
@@ -79,7 +73,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Configurar a segurança da conexão][POSTGRESQL04]
 
-### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Recuperar a cadeia de conexão para seu Servidor PostgreSQL usando o Portal do Azure
+### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Recuperar a cadeia de conexão para seu Servidor PostgreSQL usando o portal do Azure
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 

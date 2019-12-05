@@ -3,17 +3,15 @@ title: Introdução ao Logz.io para aplicativos Java em execução no Azure
 description: Este tutorial mostra como integrar e configurar o Logz.io para aplicativos Java em execução no Azure.
 author: jdubois
 manager: bborges
-ms.devlang: java
 ms.topic: tutorial
-ms.service: azure
 ms.date: 11/05/2019
 ms.author: judubois
-ms.openlocfilehash: 263a328866d36fd60e2ab7cc9fbe8fa8af45b9d4
-ms.sourcegitcommit: 794f7f72947034944dc4a5d19baa57d905a16ab0
+ms.openlocfilehash: d7f90939701bfbcdcd895b8baf3cabcae4d5efa9
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73957203"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812451"
 ---
 # <a name="tutorial-getting-started-with-monitoring-and-logging-using-logzio-for-java-apps-running-on-azure"></a>Tutorial: Introdução ao monitoramento e registro em log usando o Logz.io para aplicativos Java em execução no Azure
 

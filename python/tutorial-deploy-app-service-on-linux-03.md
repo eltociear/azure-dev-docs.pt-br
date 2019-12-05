@@ -1,20 +1,15 @@
 ---
 title: 'Tutorial: Criar o Serviço de Aplicativo no Visual Studio Code'
 description: Etapa 3 do tutorial, criando o Serviço de Aplicativo na extensão do VS Code.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 947a474f9bd6efa7fdb3c0a371f140623252aa25
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: b64adc1604698de74f4f318b805dd8c289c8fff8
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279037"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466222"
 ---
 # <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>Tutorial: Criar o Serviço de Aplicativo no Visual Studio Code
 
@@ -31,7 +26,7 @@ Você pode realizar essa etapa antes de implantar seu código, para que possa co
 1. Nos prompts seguintes:
 
     - Insira um nome para seu aplicativo, que deve ser globalmente exclusivo no Serviço de Aplicativo. Normalmente, você usa seu nome ou o nome da empresa seguido pelo nome do aplicativo.
-    - Selecione **Python 3.7** como o tempo de execução.
+    - Selecione **Python 3.7** como o runtime.
 
 1. Quando aparecer uma mensagem indicando que o novo Serviço de Aplicativo foi criado, selecione **Exibir Saída** para alternar para a janela **Saída** do VS Code. A saída mostra os nomes do grupo de recursos do Azure e do Plano do Serviço de Aplicativo que foram criados, juntamente com a URL do Serviço de Aplicativo.
 

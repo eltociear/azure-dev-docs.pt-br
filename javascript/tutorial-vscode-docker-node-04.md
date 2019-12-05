@@ -1,25 +1,20 @@
 ---
 title: Implantar uma imagem de contêiner para um aplicativo Node.js usando o Visual Studio Code
 description: Parte 4 do tutorial, implantar a imagem no Serviço de Aplicativo do Azure
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 60eb5be0b3d4049c7955195f3bb6bc85dd2b2498
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: b43f93ba97950c84302db2e18f69b506e44dc84e
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686021"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466546"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Implantar a imagem no Serviço de Aplicativo do Azure
 
 [Etapa anterior: Criar a imagem do aplicativo](tutorial-vscode-docker-node-03.md)
 
-Nesta etapa, você implanta a imagem enviada por push a um Registro para o [Serviço de Aplicativo do Azure](https://azure.microsoft.com/en-us/services/app-service/) diretamente do Visual Studio Code.
+Nesta etapa, você implanta a imagem enviada por push a um Registro para o [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) diretamente do Visual Studio Code.
 
 1. No Gerenciador de **DOCKER**, expanda os nós da imagem em **Registros**, clique com o botão direito do mouse em `:latest` e selecione a imagem **Implantar Imagem para o Serviço de Aplicativo do Azure**.
 

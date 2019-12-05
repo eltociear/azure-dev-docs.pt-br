@@ -2,24 +2,20 @@
 title: Ferramentas do Azure para desenvolvedores Java
 description: Integrações do IDE, emuladores, gerenciadores de recursos e interfaces de linha de comando para desenvolvedores de Java trabalhando no Azure.
 author: rloutlaw
-manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
-ms.devlang: java
 ms.topic: article
-ms.service: azure
 ms.date: 11/13/2018
-ms.author: brendm
 ms.custom: seo-java-july2019
-ms.openlocfilehash: 88e587bf28c33c0499667aae89b6b44cd0fa919e
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: f03d67a545b79b83b5e065f1fa53c89a9481ca0d
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691964"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812456"
 ---
 # <a name="azure-tools-for-java-developers"></a>Ferramentas do Azure para desenvolvedores Java
 
-## <a name="supported-jdk-runtimes"></a>Tempos de execução com suporte do JDK
+## <a name="supported-jdk-runtimes"></a>Runtimes com suporte do JDK
 
 Desenvolvedores de Java no Azure e Azure Stack podem compilar e executar aplicativos de Java 7, 8 e 11 de produção usando [buils de Azul Systems Zulu Enterprise do OpenJDK](https://www.azul.com/downloads/azure-only/zulu/) sem incorrer em custos adicionais de suporte. Se você estiver executando aplicativos Java com outros JDKs, considere a migração para o Zulu no Azure para obter manutenção e suporte gratuitos. 
 

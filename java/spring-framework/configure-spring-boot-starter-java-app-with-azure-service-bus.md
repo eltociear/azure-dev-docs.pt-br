@@ -3,17 +3,15 @@ title: Como usar o iniciador do Spring Boot para o JMS do Barramento de Serviço
 description: Neste artigo, você verá como usar o iniciador de JMS do Spring para enviar e receber mensagens do Barramento de Serviço do Azure.
 author: seanli1988
 manager: kyliel
-ms.author: Sean.Li
+ms.author: seal
 ms.date: 08/21/2019
-ms.devlang: java
-ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: 58d8dd00deeb90b1a1b8935bcbbab471255328d4
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.openlocfilehash: b64095bc2971bf9d9a7308bebdb91617538796c4
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181973"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812116"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Como usar o iniciador do Spring Boot para o JMS do Barramento de Serviço do Azure
 
@@ -348,7 +346,7 @@ Nesta seção, você criará as classes Java necessárias para enviar mensagens 
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
-Quando não for mais necessário, use o [portal do Azure](http://ms.portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
+Quando não for mais necessário, use o [portal do Azure](https://portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
 
 ## <a name="next-steps"></a>Próximas etapas
 

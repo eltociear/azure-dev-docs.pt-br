@@ -1,19 +1,14 @@
 ---
 title: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações no Visual Studio Code
 description: Etapa 5 do tutorial, as etapas simples para recompilar e reimplantar uma imagem de contêiner.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 7b0f95bf0d478a742386060d05ebec20f60b4aeb
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 6ca29318b7dd5f1256d1b4503cf1ae9fc37ab111
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686043"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467112"
 ---
 # <a name="make-changes-and-redeploy"></a>Fazer alterações e implantar novamente
 

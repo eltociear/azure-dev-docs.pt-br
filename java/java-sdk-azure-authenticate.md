@@ -3,30 +3,27 @@ title: Autenticar com as bibliotecas de gerenciamento do Azure para Java
 description: Autenticar com uma entidade de serviço para as bibliotecas de gerenciamento do Azure para Java
 keywords: Azure, Java, SDK, API, Maven, Gradle, autenticação, active directory, entidade de serviço
 author: rloutlaw
-ms.author: brendm
-manager: douge
 ms.date: 04/16/2017
 ms.topic: article
-ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
-ms.openlocfilehash: 373a662f8dc500ca188aba5fdde97437c3eb7d74
-ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
+ms.openlocfilehash: 9be02a678157292772d7c7109bf8625e8c9bb74f
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842213"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812434"
 ---
-# <a name="authenticate-with-the-azure-libraries-for-java"></a>Autenticar com as bibliotecas do Azure para Java 
+# <a name="authenticate-with-the-azure-libraries-for-java"></a>Autenticar com as bibliotecas do Azure para Java
 
 ## <a name="connect-to-services-with-connection-strings"></a>Conectar-se aos serviços com cadeias de conexão
 
 Este artigo mostra como autenticar com as bibliotecas do Azure para Java. A maioria das bibliotecas de serviço do Azure usa uma cadeia de conexão ou a chave segura para autenticação. Por exemplo, o banco de dados SQL inclui informações de nome de usuário e senha na cadeia de conexão JDBC:
 
 ```java
-String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" + 
-        "database=testjavadb;" + 
+String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" +
+        "database=testjavadb;" +
         "user=myazdbuser;" +
         "password=myazdbpass;" +
         "encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
@@ -37,12 +34,12 @@ O Armazenamento do Azure usa uma chave de armazenamento para autorizar o aplicat
 
 ```java
 final String storageConnection = "DefaultEndpointsProtocol=https;"
-        + "AccountName=" + storageName 
+        + "AccountName=" + storageName
         + ";AccountKey=" + storageKey
         + ";EndpointSuffix=core.windows.net";
 ```
 
-As cadeias de conexão de serviço são usadas para autenticar outros serviços do Azure como [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) e [Barramento de Serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Você pode obter as cadeias de conexão usando a CLI ou o portal do Azure.  Você também pode usar as bibliotecas de gerenciamento do Azure para Java para consultar recursos para criar cadeias de conexão no seu código. 
+As cadeias de conexão de serviço são usadas para autenticar outros serviços do Azure como [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) e [Barramento de Serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Você pode obter as cadeias de conexão usando a CLI ou o portal do Azure.  Você também pode usar as bibliotecas de gerenciamento do Azure para Java para consultar recursos para criar cadeias de conexão no seu código.
 
 Por exemplo, esse código usa as bibliotecas de gerenciamento para criar uma cadeia de conexão da conta de armazenamento:
 
@@ -76,11 +73,11 @@ import com.microsoft.azure.AzureEnvironment;
 
 // ...
 
-ApplicationTokenCredentials credentials = new ApplicationTokenCredentials(client, 
+ApplicationTokenCredentials credentials = new ApplicationTokenCredentials(client,
         tenant,
-        key, 
+        key,
         AzureEnvironment.AZURE);
-        
+
 Azure azure = Azure
         .configure()
         .withLogLevel(LogLevel.NONE)
@@ -88,9 +85,9 @@ Azure azure = Azure
         .withDefaultSubscription();
 ```
 
-Os valores `client`, `tenant` e `key` são os mesmos valores de entidade de serviço usados na [autenticação baseada em arquivo](#mgmt-file). O valor `AzureEnvironment.AZURE` cria as credenciais na nuvem pública do Azure. Altere para um valor diferente se você precisar acessar outra nuvem (por exemplo, `AzureEnvironment.AZURE_GERMANY`).  
+Os valores `client`, `tenant` e `key` são os mesmos valores de entidade de serviço usados na [autenticação baseada em arquivo](#mgmt-file). O valor `AzureEnvironment.AZURE` cria as credenciais na nuvem pública do Azure. Altere para um valor diferente se você precisar acessar outra nuvem (por exemplo, `AzureEnvironment.AZURE_GERMANY`).
 
- Leia os valores da entidade de serviço de variáveis de ambiente ou de um repositório de gerenciamento de segredo como o [Cofre de Chaves](/azure/key-vault/key-vault-whatis). Evite definir esses valores como cadeias de caracteres de texto não criptografado em seu código para evitar expor acidentalmente credenciais no seu histórico de controle de versão.   
+ Leia os valores da entidade de serviço de variáveis de ambiente ou de um repositório de gerenciamento de segredo como o [Cofre de Chaves](/azure/key-vault/key-vault-whatis). Evite definir esses valores como cadeias de caracteres de texto não criptografado em seu código para evitar expor acidentalmente credenciais no seu histórico de controle de versão.
 
 <a name="mgmt-file"></a>
 
@@ -112,7 +109,7 @@ graphURL=https\://graph.windows.net/
 
 - assinatura: usar o valor *id* de `az account show` na CLI do Azure 2.0.
 - cliente: usar o valor *appId* da saída obtida de uma entidade de serviço criada para executar o aplicativo. Se você não tiver uma entidade de serviço para o seu aplicativo, [crie uma com a CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
-- chave: usar o valor da *senha* da saída da CLI de criação da entidade de serviço 
+- chave: usar o valor da *senha* da saída da CLI de criação da entidade de serviço
 - locatário: usar o valor de *locatário* da saída da CLI de criação da entidade de serviço
 
 Salve esse arquivo em um local seguro no sistema onde o seu código possa lê-lo. Defina uma variável de ambiente com o caminho completo para o arquivo no shell:
@@ -124,7 +121,7 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 Crie o objeto `Azure` do ponto de entrada para começar a trabalhar com as bibliotecas. Leia o local do arquivo de propriedades por meio da variável de ambiente.
 
 ```java
-// pull in the location of the authentication properties file from the environment 
+// pull in the location of the authentication properties file from the environment
 final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
 
 Azure azure = Azure
@@ -133,6 +130,3 @@ Azure azure = Azure
         .authenticate(credFile)
         .withDefaultSubscription();
 ```
-
-
-

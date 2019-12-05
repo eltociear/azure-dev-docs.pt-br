@@ -4,28 +4,24 @@ description: Saiba como inserir segredos em um serviço da web de MicroProfile c
 services: key-vault
 documentationcenter: java
 author: jonathangiles
-manager: douge
-editor: jonathangiles
-ms.assetid: ''
 ms.author: jogiles
 ms.date: 09/07/2018
-ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d61c1a30b83dc40c0b34e2f706fad8b578872453
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7c09b47ccdc65ab4d6aa0ab0443fd64ef273a205
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283937"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812207"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Configurar MicroProfile com o Azure Key Vault
 
 Este tutorial demonstra como configurar um aplicativo [MicroProfile](http://microprofile.io) para recuperar segredos do [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) usando as [APIS de configuração do MicroProfile](https://microprofile.io/project/eclipse/microprofile-config) para criar uma conexão direta ao Azure Key Vault. Usando as APIs de configuração do MicroProfile, os desenvolvedores se beneficiam de uma API padrão para recuperação e injeção de dados de configuração em seus microsserviços.
 
-Antes de nos aprofundarmos, vamos dar uma olhada no que uma combinação entre o Azure Key Vault e a API de configuração do MicroProfile nos permite escrever em nosso código. Aqui está um snippet de código de um campo em uma classe que foi anotada com `@Inject` e `@ConfigProperty`. A `name` especificada na anotação é o nome da propriedade para pesquisar no Azure Key Vault e `defaultValue` é o que será definido se a chave não for descoberta. O resultado final é que o valor armazenado no Azure Key Vault ou o valor padrão, será injetado automaticamente no campo em tempo de execução, simplificando a vida dos desenvolvedores, pois eles não precisam mais passar valores em torno de métodos constuctors e um setter, deixando isso para o MicroProfile manipular.
+Antes de nos aprofundarmos, vamos dar uma olhada no que uma combinação entre o Azure Key Vault e a API de configuração do MicroProfile nos permite escrever em nosso código. Aqui está um snippet de código de um campo em uma classe que foi anotada com `@Inject` e `@ConfigProperty`. A `name` especificada na anotação é o nome da propriedade para pesquisar no Azure Key Vault e `defaultValue` é o que será definido se a chave não for descoberta. O resultado final é que o valor armazenado no Azure Key Vault ou o valor padrão, será injetado automaticamente no campo em runtime, simplificando a vida dos desenvolvedores, pois eles não precisam mais passar valores em torno de métodos constuctors e um setter, deixando isso para o MicroProfile manipular.
 
 ```java
 @Inject

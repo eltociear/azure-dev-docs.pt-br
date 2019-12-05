@@ -1,19 +1,14 @@
 ---
 title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure usando o Visual Studio Code
 description: Parte 1 do tutorial, introdução e pré-requisitos.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: f37e049ab3c6dd0a01726aa9204746658540110b
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 2d6721060281fb73d31576caa47f316f2d078d29
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686119"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467156"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 
@@ -34,7 +29,7 @@ Neste tutorial, você usa o Visual Studio Code para criar um aplicativo Node.js 
 
 ### <a name="azure-subscription"></a>Assinatura do Azure
 
-Se você ainda não tiver uma assinatura do Azure, [inscreva-se agora](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-docker-extension&mktingSource=vscode-tutorial-docker-extension) para obter uma conta gratuita com US$ 200 em créditos Azure a fim de experimentar qualquer combinação de serviços.
+Se você ainda não tiver uma assinatura do Azure, [inscreva-se agora](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-docker-extension&mktingSource=vscode-tutorial-docker-extension) para obter uma conta gratuita com US$ 200 em créditos Azure a fim de experimentar qualquer combinação de serviços.
 
 ## <a name="sign-in-to-azure"></a>Entrar no Azure
 

@@ -5,23 +5,19 @@ services: app-service
 keywords: java, eclipse, aplicativo Web, serviço de aplicativo do azure, olá, mundo, início rápido
 documentationcenter: java
 author: selvasingh
-manager: douge
-editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
-ms.author: brendm
 ms.reviewer: asirveda
 ms.date: 02/01/2018
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3d673abe4f4efd7330307999c7a945cd5cb37179
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: ae3d983a0b3e64489fa89d0e6a845310878b204c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68691737"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811435"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Criar um aplicativo Web Olá, Mundo para o Serviço de Aplicativo do Azure usando o Eclipse
 
@@ -42,7 +38,7 @@ Usando o plug-in [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/con
 
 1. Arraste o botão a seguir para seu workspace do Eclipse em execução para instalar o plug-in do Azure Toolkit for Eclipse ([outras opções de instalação](azure-toolkit-for-eclipse-installation.md)).
 
-    [![Arraste para seu workspace do Eclipse* em execução. *Requer o Cliente do Eclipse Marketplace](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Arraste para seu workspace do Eclipse* em execução. *Requer o Cliente do Eclipse Marketplace")
+    [![Arraste-o para o workspace do Eclipse* em execução. *Exige o Cliente do Eclipse Marketplace](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Arraste-o para o workspace do Eclipse* em execução. *Exige o Cliente do Eclipse Marketplace")
 
 1. Para entrar em sua conta do Azure, clique em **Ferramentas**, então em **Azure** e em **Entrar**.
    ![Menu do Eclipse para Entrada no Azure][I01]
@@ -113,7 +109,7 @@ Usando o plug-in [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/con
 
       Especifique as informações necessárias para seu aplicativo Web na caixa de diálogo **Criar Serviço de Aplicativo** e clique em **Criar**.
 
-      Aqui você pode configurar o ambiente de tempo de execução, as configurações do aplicativo, o grupo de recursos e o plano de serviço.
+      Aqui você pode configurar o ambiente de runtime, as configurações do aplicativo, o grupo de recursos e o plano de serviço.
 
       ![Criar a caixa de diálogo Serviço de Aplicativo][create-app-service-dialog]
 

@@ -1,19 +1,14 @@
 ---
 title: Criar uma imagem de contêiner para um aplicativo Node.js usando o Visual Studio Code
 description: Parte 3 do tutorial, criar uma imagem de aplicativo Node.js
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 1b79f84bd69853578796b4485ca669be98f41006
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: c3662c7d21359008bdc0cc5c3050fb2fdc7d6241
+ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686095"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540513"
 ---
 # <a name="create-your-nodejs-application-image"></a>Criar a imagem do aplicativo Node.js
 
@@ -27,7 +22,7 @@ Se você ainda não tiver um aplicativo para este passo a passo, use o aplicativ
 
 1. No Visual Studio Code, abra a **Paleta de Comandos** (**F1**), digite `add docker files to workspace` e selecione o comando **Docker: Adicionar arquivos do Docker ao workspace**.
 
-1. Quando solicitado, selecione **Node.js** para o tipo de aplicativo, então selecione a porta na qual seu aplicativo escuta.
+1. Quando solicitado, selecione **Node.js** como o tipo de aplicativo e, em seguida, selecione a porta que o aplicativo escuta.
 
 1. O comando cria um `Dockerfile` junto com alguns arquivos de configuração para o Docker Compose e um `.dockerignore`.
 

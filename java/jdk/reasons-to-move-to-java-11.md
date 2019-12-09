@@ -4,17 +4,15 @@ description: Um documento de nível de resumo destinado a tomadores de decisão 
 author: dsgrieve
 manager: maverberg
 tags: java
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: ed9b4d7e98357486367f7e7eaacac64ff05a0ff8
-ms.sourcegitcommit: 90068e30def5dfcb4289d8530ea5914728182a15
+ms.openlocfilehash: 7daf058c2abebbf2cca85dadc4f9ffe3e8771fa1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250743"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812224"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Motivos para mudar para o Java 11
 
@@ -27,9 +25,9 @@ Desde o Java 8, novos recursos foram adicionados e melhorias foram feitas. Exist
 A transição para o Java 11 pode ser feita de maneira gradual. *Não* é necessário que o código use módulos Java para executar em Java 11. O Java 11 pode ser usado para executar o código desenvolvido e criado com o JDK 8.
 No entanto, existem alguns possíveis problemas, principalmente em relação à API preterida, aos carregadores de classe e à reflexão.
 
-Um guia completo para fazer a transição do Java 8 para o Java 11 estará disponível no Java Platform Group da Microsoft. Enquanto isso, existem vários guias para fazer a transição do Java 8 para o Java 9 que podem ajudar você a começar. Por exemplo, [Guia de Migração da Plataforma Java e do Oracle JDK 9 de Edição Standard](https://docs.oracle.com/javase/9/migrate/toc.htm) e [O Estado do Sistema de Módulo: Compatibilidade e Migração](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration).
+Um guia completo para a transição do Java 8 para o Java 11 estará disponível em breve no Java Engineering Group da Microsoft. Enquanto isso, existem vários guias para fazer a transição do Java 8 para o Java 9 que podem ajudar você a começar. Por exemplo, [Guia de Migração da Plataforma Java e do Oracle JDK 9 de Edição Standard](https://docs.oracle.com/javase/9/migrate/toc.htm) e [O Estado do Sistema de Módulo: Compatibilidade e Migração](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration).
 
-## <a name="high-level-changes-between-java-8-and-11"></a>Alterações de alto nível entre o Java 8 e o Java 11
+## <a name="high-level-changes-between-java-8-and-11"></a>Alterações de alto nível entre o Java 8 e 11
 
 Esta seção não enumera todas as alterações feitas nas versões 9 \[[1](#ref1)\], 10 \[[2](#ref2)\] e 11 \[[3](#ref3)\] do Java. As alterações que afetam o desempenho, o diagnóstico e a produtividade serão destacadas.
 
@@ -57,22 +55,22 @@ O JFR (Java Flight Recorder) coleta dados de diagnóstico e de criação de perf
 O JMC (Java Mission Control) fornece uma exibição gráfica dos dados coletados pelo JFR (Java Flight Recorder), além de ser um software livre em Java
 11. Além das informações gerais sobre o aplicativo em execução, o JMC permite que o usuário faça uma busca detalhada nos dados. O JFR e o JMC podem ser usados para diagnosticar problemas de runtime, como vazamentos de memória, sobrecarga de GC, métodos quentes, gargalos de thread e bloqueio da E/S.
 
-#### <a name="unified-logging-7ref7"></a>\[[7](#ref7)\] – Registro em log Unificado
+#### <a name="unified-logging-7ref7"></a>Log unificado \[[7](#ref7)\]
 
 O Java 11 tem um sistema de registro em log comum para todos os componentes da JVM.
 Esse sistema de log unificado permite que o usuário defina quais componentes registrar em log e em qual nível. Esse log refinado é útil para executar a análise da causa raiz em falhas da JVM e para diagnosticar problemas de desempenho em um ambiente de produção.
 
-#### <a name="low-overhead-heap-profiling-8ref8"></a>\[[8](#ref8)\] – Criação de Perfil de Heap de Baixa Sobrecarga
+#### <a name="low-overhead-heap-profiling-8ref8"></a>Criação de perfil de heap com baixa sobrecarga \[[8](#ref8)\]
 
 Uma nova API foi adicionada à JVMTI (Interface de Ferramenta da Máquina Virtual Java) para amostragem de alocações do heap de Java. A amostragem tem baixa sobrecarga e pode ser habilitada continuamente. Embora a alocação do heap possa ser monitorada com o JFR (Java Flight Recorder), o método de amostragem no JFR funciona somente nas alocações. A implementação do JFR também pode perder alocações. Por outro lado, a amostragem do heap no Java 11 pode fornecer informações sobre objetos dinâmicos e inativos.
 
-Os fornecedores de APM (Monitoramento do Desempenho de Aplicativos) estão começando a usar esse novo recurso e o Java Platform Group está investigando o potencial uso com as ferramentas de monitoramento de desempenho do Azure.
+Os fornecedores de APM (Monitoramento do desempenho de aplicativos) estão começando a utilizar esse novo recurso e o Java Engineering Group está investigando o uso potencial dele com as ferramentas de monitoramento de desempenho do Azure.
 
 #### <a name="stackwalker-9ref9"></a>\[[9](#ref9)\] – StackWalker
 
 Obter um instantâneo da pilha para o thread atual geralmente é usado durante o registro em log. O problema é quanto do rastreamento da pilha deve ser registrado e se deve ser registrado ou não. Por exemplo, talvez você queira ver o rastreamento de pilha somente para uma determinada exceção de um método. A classe StackWalker (adicionada no Java 9) fornece um instantâneo da pilha e de métodos que oferecem ao programador um controle refinado sobre como consumir o rastreamento de pilha.
 
-### <a name="garbage-collection-10ref10"></a>\[[10](#ref10)\] – Coleta de Lixo
+### <a name="garbage-collection-10ref10"></a>Coleta de lixo \[[10](#ref10)\]
 
 Os seguintes coletores de lixo estão disponíveis no Java 11: Serial, Paralelo, Garbage First e Epsilon. O coletor de lixo padrão no Java 11 é o G1GC (Coletor de Lixo Garbage First).
 
@@ -95,7 +93,7 @@ O coletor paralelo é o coletor padrão no Java 8. O GC paralelo é um coletor d
 O coletor de lixo Epsilon controla as alocações, mas não recupera nenhuma memória. Quando o heap for esgotado, a JVM será desligada.
 O Epsilon é útil para serviços de curta duração e para aplicativos conhecidos por não terem lixo.
 
-#### <a name="improvements-for-docker-containers-12ref12"></a>\[[12](#ref12)\] – Melhorias para Contêineres do Docker
+#### <a name="improvements-for-docker-containers-12ref12"></a>Melhorias dos contêineres do Docker \[[12](#ref12)\]
 
 Antes do Java 10, as restrições de memória e CPU definidas em um contêiner não eram reconhecidas pela JVM. No Java 8, por exemplo, a JVM usará como padrão o tamanho máximo do heap para ¼ da memória física do host subjacente. Ao começar com o Java 10, a JVM usa restrições definidas por cgroups (grupos de controle de contêiner) para definir os limites de memória e da CPU (consulte a observação abaixo).
 Por exemplo, o tamanho máximo do heap padrão é ¼ do limite de memória do contêiner (como 500 MB para -m2G).
@@ -107,11 +105,11 @@ Esse suporte é habilitado por padrão e está disponível somente em plataforma
 > [!NOTE]
 > A maior parte do trabalho de habilitação do cgroup foi reportada para o Java 8 com base no jdk8u191. Outras melhorias podem não ser necessariamente reportadas para o 8.
 
-#### <a name="multi-release-jar-files-13ref13"></a>\[[13](#ref13)\] – Arquivos jar de Várias Versões
+#### <a name="multi-release-jar-files-13ref13"></a>Arquivos JAR de várias versões \[[13](#ref13)\]
 
 É possível criar um arquivo jar no Java 11 que contenha várias versões específicas de Java de arquivos de classe. Os arquivos jar de várias versões possibilitam aos desenvolvedores de bibliotecas dar suporte a várias versões do Java sem precisar enviá-las de arquivos jar. Para o consumidor dessas bibliotecas, os arquivos jar de várias versões resolvem o problema de precisar fazer a correspondência de arquivos jar com destinos de runtime específicos.
 
-## <a name="miscellaneous-performance-improvements"></a>Melhorias de Desempenho Diversas
+## <a name="miscellaneous-performance-improvements"></a>Melhorias de desempenho diversas
 
 As seguintes alterações na JVM têm um impacto direto no desempenho.
 

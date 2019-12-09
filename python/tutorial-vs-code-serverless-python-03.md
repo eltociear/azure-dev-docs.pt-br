@@ -1,20 +1,15 @@
 ---
 title: 'Tutorial: Examine os arquivos de código do Python para o Azure Functions no Visual Studio Code'
 description: 'Tutorial, etapa 3: compreensão do código do Python no modelo fornecido pelo Azure Functions.'
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f31cbb3c1ad66a97ab4bb87cdcc58c9bd815c72e
-ms.sourcegitcommit: 38fc0daead4f6ef0cf16d9f4762ad24f4dc4c3e9
+ms.openlocfilehash: 5fa6f0095dec212f935c8c2e106f63eb58784d00
+ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980946"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540508"
 ---
 # <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>Tutorial: Examinar os arquivos de código Python no Visual Studio Code
 
@@ -90,7 +85,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 As partes importantes do código são as seguintes:
 
-- Você deve importar `func` de `azure.functions`; a importação do módulo de registro em log é opcional, mas recomendada.
+- É necessário importar o módulo `azure.functions`; a importação do módulo de log é opcional, mas recomendada.
 - A função do Python `main` obrigatória recebe um objeto `func.HttpRequest` chamado `req` e retorna um valor do tipo `func.HttpResponse`. Você pode saber mais sobre as funcionalidades desses objetos nas referências do [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python) e do [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python).
 - Em seguida, o corpo de `main` processa a solicitação e gera uma resposta. Nesse caso, o código procura um parâmetro `name` na URL. Se isso falhar, ele verificará se o corpo da solicitação contém JSON (usando `func.HttpRequest.get_json`) e se o JSON contém a um valor `name` (usando o método `get` do objeto JSON retornado por `get_json`).
 - Se um nome for encontrado, o código retornará a cadeia de caracteres "Olá" com o nome anexado; caso contrário, retornará uma mensagem de erro.

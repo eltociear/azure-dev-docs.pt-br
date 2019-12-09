@@ -1,25 +1,21 @@
 ---
 title: Conectar-se a todas as regiões – SDK do Azure para Python em várias nuvens
 description: no Azure em todas as regiões
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 02/22/2018
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 03c2a42463332cbeaffdcc7373c04967018af804
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a8425ffbc58fe0173da4b8b75611332d3f97fa04
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172499"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466350"
 ---
 # <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Várias nuvens: Conectar-se a todas as regiões com o SDK do Azure para Python
 
 É possível usar o SDK do Azure para Python para conectar-se a todas as regiões em que o Azure [está disponível](https://azure.microsoft.com/regions/services).
 
-Por padrão, o SDK do Azure para Python está configurado para se conectar ao Azure público.
+Por padrão, o SDK do Azure para Python está configurado para se conectar ao Azure global.
 
 ## <a name="using-predeclared-cloud-definition"></a>Usando definições de nuvem declaradas previamente
 
@@ -43,16 +39,18 @@ client = ResourceManagementClient(
     subscription_id,
     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager
 )
-``` 
+```
   
-As definições de nuvem disponíveis são
-  - AZURE_PUBLIC_CLOUD
-  - AZURE_CHINA_CLOUD
-  - AZURE_US_GOV_CLOUD
-  - AZURE_GERMAN_CLOUD
+As definições de nuvem disponíveis são as seguintes:
+
+- AZURE_PUBLIC_CLOUD
+- AZURE_CHINA_CLOUD
+- AZURE_US_GOV_CLOUD
+- AZURE_GERMAN_CLOUD
 
 ## <a name="using-your-own-cloud-definition-eg-azure-stack"></a>Usando sua própria definição de nuvem (por exemplo, Azure Stack)
-O ARM tem um ponto de extremidade de metadados para ajudá-lo:
+
+O Azure Resource Manager tem um ponto de extremidade de metadados para ajudar você:
 
 ```python
 from msrestazure.azure_cloud import get_cloud_from_metadata_endpoint
@@ -71,6 +69,7 @@ client = ResourceManagementClient(
     base_url=mystack_cloud.endpoints.resource_manager
 )
 ```
+
 ## <a name="using-adal"></a>Usando o ADAL
 
 Para se conectar a outra região, algumas coisas precisam ser consideradas:
@@ -93,7 +92,7 @@ password = 'password'
 # Public Azure - default values
 authentication_endpoint = 'https://login.microsoftonline.com/'
 azure_endpoint = 'https://management.azure.com/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -111,6 +110,7 @@ resource_client = ResourceManagementClient(
 ```
 
 ### <a name="azure-government"></a>Azure Government
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -124,7 +124,7 @@ password = 'password'
 # Government
 authentication_endpoint = 'https://login.microsoftonline.us/'
 azure_endpoint = 'https://management.usgovcloudapi.net/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -142,6 +142,7 @@ resource_client = ResourceManagementClient(
 ```
 
 ### <a name="azure-germany"></a>Azure Alemanha
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -155,7 +156,7 @@ password = 'password'
 # Azure Germany
 authentication_endpoint = 'https://login.microsoftonline.de/'
 azure_endpoint = 'https://management.microsoftazure.de/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -172,7 +173,8 @@ resource_client = ResourceManagementClient(
 )
 ```
 
-### <a name="azure-china"></a>Azure China
+### <a name="azure-china-21vianet"></a>Azure China 21Vianet
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -186,7 +188,7 @@ password = 'password'
 # Azure China
 authentication_endpoint = 'https://login.chinacloudapi.cn/'
 azure_endpoint = 'https://management.chinacloudapi.cn/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,

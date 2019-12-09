@@ -1,25 +1,22 @@
 ---
-title: Implantar um serviço MicroProfile baseado em Java para o Aplicativo Web para Contêineres do Azure
+title: Implantar um serviço MicroProfile em Java
+titleSuffix: Azure Web App for Containers
 description: Saiba como implantar um serviço MicroProfile usando o Docker e o Aplicativo Web para Contêineres do Azure
 services: container-registry;app-service
 documentationcenter: java
 author: jonathangiles
-manager: douge
-editor: jonathangiles
-ms.assetid: ''
 ms.author: jogiles
 ms.date: 09/07/2018
-ms.devlang: java
-ms.service: container-registry;app-service
+ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 4ef47693094489baae85bc7622289d9943acb62b
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 6deaced31e9cbe6ebd1ef1eb20bd0414ab5df471
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284017"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812194"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Implantar um serviço MicroProfile baseado em Java para o Aplicativo Web para Contêineres do Azure
 
@@ -27,7 +24,7 @@ MicroProfile é uma ótima maneira para compilar aplicativos Java extremamente p
 
 > [!NOTE]
 >
-> Este procedimento funciona com qualquer implementação de MicroProfile.io, desde que a imagem de contêiner do Docker seja executada automaticamente (ou seja, inclui o tempo de execução).
+> Este procedimento funciona com qualquer implementação de MicroProfile.io, desde que a imagem de contêiner do Docker seja executada automaticamente (ou seja, inclui o runtime).
 
 Mais concretamente, este exemplo usa [Payara Micro](https://www.payara.fish/payara_micro) e [MicroProfile 1.3](https://microprofile.io/) para criar um arquivo war de Java pequeno (5.085 bytes na máquina de criadores) e, em seguida, empacotá-lo em uma imagem do Docker (que é de aproximadamente 174 megabytes). Essa imagem do Docker contém todo o necessário para uma implantação totalmente contida em contêiner deste aplicativo Web.
 
@@ -37,9 +34,9 @@ Vamos trabalhar neste tutorial em primeiro lugar, criando e executando o código
 
 ## <a name="creating-an-azure-container-registry"></a>Criar um Registro de Contêiner do Azure
 
-Nós usaremos o [Portal do Azure](http://portal.azure.com) para criar o Registro de Contêiner do Azure, mas observe que há opções alternativas, como a CLI do Azure. Siga as etapas abaixo para criar um novo Registro de Contêiner do Azure:
+Usaremos o [portal do Azure](https://portal.azure.com) para criar o Registro de Contêiner do Azure, mas observe que há opções alternativas, como a CLI do Azure. Siga as etapas abaixo para criar um novo Registro de Contêiner do Azure:
 
-1. Faça logon no [Portal do Azure](http://portal.azure.com) e crie um novo recurso de Registro de Contêiner do Azure. Forneça um nome de registro (Observe que esse é o nome que deve ser definido como a propriedade `docker.registry` em `pom.xml`). Altere os padrões conforme desejar e, em seguida, clique em “criar”.
+1. Faça logon no [portal do Azure](https://portal.azure.com) e crie um recurso do Registro de Contêiner do Azure. Forneça um nome de registro (Observe que esse é o nome que deve ser definido como a propriedade `docker.registry` em `pom.xml`). Altere os padrões conforme desejar e, em seguida, clique em “criar”.
 
 1. Depois que o registro de contêiner estiver ativo (que demora aproximadamente 30 segundos depois de clicar em “criar”), clique no registro de contêiner e clique no link “Acessar chaves” na área do menu à esquerda. Aqui, você precisa habilitar a configuração de “usuário administrador”, para que o registro de contêiner possa ser acessado de nossos computadores (para enviar por push os contêineres do Docker), e também para habilitar a instância de Aplicativos Web para Contêineres do Azure que configuraremos em breve.
 
@@ -143,7 +140,7 @@ Neste estágio você tem sua imagem de contêiner do Docker carregada no Registr
 
 ## <a name="creating-an-azure-web-app-for-containers-instance"></a>Criar uma instância de Aplicativo Web para Contêineres do Azure
 
-1. Volte para o [Portal do Azure](http://portal.azure.com) e crie uma nova instância do Aplicativo Web para Contêineres (localizado no título “Web + Móvel” no menu). Algumas dicas:
+1. Retorne ao [portal do Azure](https://portal.azure.com) e crie uma instância do Aplicativo Web para Contêineres (localizado no título 'Web + Celular' no menu). Algumas dicas:
 
    1. O nome que você especificar aqui será a URL pública do aplicativo Web (embora um domínio personalizado possa ser adicionado mais tarde, se desejado). Portanto, é uma boa ideia escolher um nome que você possa se lembrar com facilidade.
 

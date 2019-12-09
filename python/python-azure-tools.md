@@ -1,24 +1,20 @@
 ---
 title: Ferramentas do Azure para desenvolvedores de Python | Microsoft Docs
 description: Integrações do IDE e interfaces de linha de comando para desenvolvedores de Python trabalhando no Azure.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 06/21/2017
-ms.author: sttramer
-ms.openlocfilehash: 19f314347296c2ecaf7e41da2332ff6a018a5a06
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: c1ca9752b63baa783f078d7d26a2576fdee74e6a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285767"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467074"
 ---
 # <a name="azure-tools-for-python-developers"></a>Ferramentas do Azure para desenvolvedores de Python
 
 ## <a name="azure-cli-20"></a>CLI do Azure 2.0
 
-A CLI do Azure 2.0 fornece uma interface de linha de comando para criar e configurar os recursos do Azure em suas assinaturas. A CLI do Azure 2.0 é a plataforma cruzada e tem recursos de filtragem e de consulta, portanto, você pode direcionar a saída diretamente para suas ferramentas favoritas de linha de comando. 
+A CLI do Azure 2.0 fornece uma interface de linha de comando para criar e configurar os recursos do Azure em suas assinaturas. A CLI 2.0 do Azure é multiplataforma e dispõe de recursos de consulta e filtragem, de modo que você possa direcionar a saída diretamente para suas ferramentas de linha de comando favoritas.
 
 [Instalar a CLI 2.0 do Azure](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
@@ -33,6 +29,6 @@ O Visual Studio no Windows fornece suporte de software livre para a linguagem Py
 [Instalar o suporte de Python no Visual Studio](https://docs.microsoft.com/visualstudio/python/installation)
 
 ## <a name="azure-notebooks-preview"></a>Azure Notebooks (Versão prévia)
-Azure Notebooks é um serviço hospedado para Jupyter Notebooks que não exigem nenhuma instalação. Ele permite que você comece a aprender rapidamente sobre a criação de protótipos, ciência de dados, pesquisa acadêmica ou aprendizado para programação Python, R e F#. Você pode combinar código, Markdown, imagens, vídeos, grafos, tudo em um formato.
+Azure Notebooks é um serviço hospedado para Jupyter Notebooks que não exigem nenhuma instalação. Ele possibilita uma introdução rápida à criação de protótipos, à ciência de dados, à pesquisa acadêmica ou ao aprendizado para programação de Python, R e F#. Você pode combinar código, Markdown, imagens, vídeos, grafos, tudo em um formato.
 
 [Introdução ao Azure Notebooks](https://notebooks.azure.com/)

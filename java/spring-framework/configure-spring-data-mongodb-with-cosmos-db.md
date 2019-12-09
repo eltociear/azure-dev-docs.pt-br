@@ -3,22 +3,16 @@ title: Como usar a API do MongoDB do Spring Data com o Azure Cosmos DB
 description: Saiba como usar a API do MongoDB do Spring Data com o Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 77851933366e09a7d5b0d1ae87816c563bf35e6b
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 0284f89f6a37497709947649fba3b1284416a95c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281897"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811931"
 ---
 # <a name="how-to-use-spring-data-mongodb-api-with-azure-cosmos-db"></a>Como usar a API do MongoDB do Spring Data com o Azure Cosmos DB
 
@@ -71,8 +65,6 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **Todos os Recursos** e, em seguida, clique na conta do Azure Cosmos DB que você acabou de criar.
 
-   ![Escolher a conta do Azure Cosmos DB][COSMOSDB04]
-
 1. Clique em **Cadeias conexão** e copie o valor para o campo **Cadeia de conexão primária**; você usará esse valor para configurar seu aplicativo mais tarde.
 
    ![Recuperar a cadeia de conexão do Cosmos DB][COSMOSDB06]
@@ -102,7 +94,9 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Salve e feche o arquivo *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Empacotar e testar o aplicativo de exemplo 
+## <a name="package-and-test-the-sample-application"></a>Empacotar e testar o aplicativo de exemplo
+
+Para compilar o aplicativo, navegue até o diretório */gs-accessing-data-mongodb/complete*, que contém o arquivo pom.xml.
 
 1. Compile o aplicativo de exemplo com o Maven e configure o Maven para ignorar os testes. Por exemplo:
 
@@ -113,7 +107,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 1. Inicie o aplicativo de exemplo. Por exemplo:
 
    ```shell
-   java -jar target/gs-accessing-data-mongodb-0.1.0.jar
+   java -jar target/accessing-data-mongodb-0.0.1-SNAPSHOT.jar
    ```
     
    Seu aplicativo deve retornar valores como os seguintes:

@@ -1,19 +1,15 @@
 ---
 title: Autenticar com as bibliotecas de gerenciamento do Azure para Python
 description: Autenticar com uma entidade de serviço nas bibliotecas de gerenciamento do Azure para Python
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 04/11/2019
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: afeaafb4289544b92324154d5c45d3410cbb3b02
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 93d41e76bc8fb58d70a3590e2ea3658014a8673a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279106"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466444"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Autenticar com as bibliotecas de gerenciamento do Azure para Python
 
@@ -77,7 +73,7 @@ credentials = ServicePrincipalCredentials(
 > )
 > ```
 
-Se você precisar de mais controle, é recomendável usar [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) e o wrapper ADAL do SDK. Consulte o site ADAL para ver todos os exemplos e lista de cenários disponíveis. Para autenticação de entidade de serviço, por exemplo:
+Se você precisar de mais controle, é recomendável usar [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) e o wrapper ADAL do SDK. Consulte o site ADAL para ver todos os exemplos e lista de cenários disponíveis. Por exemplo, para autenticação da entidade de serviço:
 
 ```python
 import adal
@@ -215,9 +211,9 @@ client = get_client_from_cli_profile(ComputeManagementClient)
 
 ## <a name="mgmt-auth-legacy"></a>Autenticar com credenciais do token (herdadas)
 
-Na versão anterior do SDK, ADAL ainda não estava disponível e fornecíamos uma classe `UserPassCredentials`. Ela é considerada obsoleta e não deve ser mais usada.
+Na versão anterior do SDK, ADAL ainda não estava disponível e fornecíamos uma classe `UserPassCredentials`. O uso dessa classe é considerado preterido e não deve ser mais usado.
 
-Este exemplo mostra um cenário de usuário/senha. Ele não oferece suporte a 2FA.
+Esta amostra descreve o cenário de usuário/senha, que não dá suporte a 2FA.
 
 ```python
 from azure.common.credentials import UserPassCredentials

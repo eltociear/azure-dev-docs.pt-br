@@ -1,23 +1,18 @@
 ---
-title: Implantar um aplicativo de arquivo JAR do Spring Boot no Azure com o Maven
-description: Saiba como implantar um aplicativo Spring Boot na nuvem usando o plug-in Maven do Aplicativo Web do Azure para Linux.
+title: Implantar um aplicativo Web Spring Boot do arquivo JAR no Serviço de Aplicativo do Azure no Linux
+description: Saiba como implantar um arquivo JAR do aplicativo Spring Boot no Serviço de Aplicativo no Linux usando o plug-in do Maven para o aplicativo Web do Azure.
 services: app-service
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: brborges
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 274287a6e29bd75721758805d508ebebfcc7586a
-ms.sourcegitcommit: 8be617e100ae3d3e90d56c672b1c7c110b7a588f
+ms.openlocfilehash: c97363fa84421a73d9493b41c66e2d2dc40250cc
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74160722"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811868"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Implantar um aplicativo de arquivo JAR do Spring Boot no Serviço de Aplicativo do Azure com o Maven e o Azure no Linux
 

@@ -1,25 +1,19 @@
 ---
-title: Exibindo o Conteúdo do Javadoc no Eclipse para o Pacote de Bibliotecas do Azure para Java
+title: Exibir o conteúdo do Javadoc no Eclipse
+titleSuffix: Azure Libraries for Java
 description: Como exibir o conteúdo do Javadoc para as Bibliotecas do Azure no Eclipse.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: b25feaeae2a38bbf6cbbbeef94ee40718956b85a
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: ecd491031522fdf2a9e06ff4104f7191f4efc59e
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429374"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811554"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Exibindo o Conteúdo do Javadoc no Eclipse para o Pacote de Bibliotecas do Azure para Java
 
@@ -37,7 +31,7 @@ Este procedimento pressupõe que você já adicionou a Biblioteca do Azure para 
 
 1. Você pode especificar uma **URL Javadoc**, ou um **Javadoc no arquivo**.
 
-   * Se você optar por especificar uma **URL do Javadoc**, use URLs como **http://dl.windowsazure.com/javadoc** ou **http://dl.windowsazure.com/storage/javadoc** .
+   * Se você optar por especificar uma **URL do Javadoc**, use URLs como **https://dl.windowsazure.com/javadoc** ou **https://dl.windowsazure.com/storage/javadoc** .
 
    * Se optar por usar **Javadoc no arquivo**, você pode especificar um arquivo externo ou um arquivo de workspace.
 

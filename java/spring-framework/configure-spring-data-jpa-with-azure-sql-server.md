@@ -3,22 +3,16 @@ title: Como usar o Spring Data JPA com o Banco de Dados SQL do Azure
 description: Saiba como usar o Spring Data JPA com um banco de dados SQL do Azure.
 services: sql-database
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: a344596f93a8fc24c3d8853821b8a829e8904547
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: d5c90992f4b669bf6089d0c0118496dfa33d67f1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281887"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811949"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Como usar o Spring Data JPA com o Banco de Dados SQL do Azure
 
@@ -38,7 +32,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 ## <a name="create-an-azure-sql-database"></a>Criar um Banco de Dados SQL do Azure
 
-### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Criar um servidor do banco de dados SQL usando o Portal do Azure
+### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Criar um servidor do banco de dados SQL usando o portal do Azure
 
 > [!NOTE]
 > 
@@ -66,21 +60,17 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    - **Senha** e **Confirmar senha**: especifique a senha para o administrador do banco de dados.
    - **Localização**: especifique a região geográfica mais próxima do banco de dados.
 
-   ![Especificar o SQL Server][SQL03]
+1. Depois de inserir todas as informações acima, clique em **OK**.
 
-1. Após inserir todas as informações acima, clique em **Selecionar**.
+1. Clique em **Examinar e criar**.
 
-1. No caso deste tutorial, especifique o **Tipo de preço** menos caro e clique em **Criar**.
+### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o SQL Server usando o portal do Azure
 
-   ![Criar o banco de dados SQL][SQL04]
-
-### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o SQL Server usando o Portal do Azure
+Depois que o banco de dados SQL e o servidor forem criados, você poderá definir as configurações de segurança.
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
 1. Clique em **Todos os Recursos** e, em seguida, clique no SQL Server que você acabou de criar.
-
-   ![Escolher o SQL Server][SQL05]
 
 1. Na seção **Visão geral**, clique em **Mostrar configurações de firewall**
 
@@ -90,15 +80,18 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Definir configurações de firewall][SQL07]
 
-### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Recuperar a cadeia de conexão para seu SQL Server usando o Portal do Azure
+### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Recuperar a cadeia de conexão para o SQL Server usando o portal do Azure
 
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
 1. Clique em **Todos os Recursos** e, em seguida, clique no banco de dados SQL que você acabou de criar.
 
+1. Clique em **Cadeias de conexão**.
+
+
    ![Escolher o banco de dados SQL][SQL08]
 
-1. Clique em **Cadeias de conexão**, clique em **JDBC** e copie o valor no campo de texto JDBC.
+1. Em seguida, clique em **JDBC** e copie o valor no campo de texto JDBC.
 
    ![Recuperar sua cadeia de conexão JDBC][SQL09]
 
@@ -140,15 +133,15 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 1. Inicie o aplicativo de exemplo. Por exemplo:
 
    ```shell
-   java -jar target/spring-data-jpa-on-azure-0.1.0-SNAPSHOT.jar
+   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
    ```
 
 1. Crie novos registros usando `curl` em um prompt de comando como nos exemplos a seguir:
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    Seu aplicativo deve retornar valores como os seguintes:

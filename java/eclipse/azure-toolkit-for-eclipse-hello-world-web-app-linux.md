@@ -1,24 +1,19 @@
 ---
-title: Implantar um aplicativo Web Olá, Mundo sendo executado em um contêiner do Linux na nuvem usando o Azure Toolkit for Eclipse
+title: Implantar um aplicativo Olá, Mundo em um contêiner de nuvem do Linux
+titleSuffix: Azure Toolkit for Eclipse
 description: Executar um aplicativo Web Olá, Mundo em um contêiner do Linux e implantá-lo na nuvem usando o Azure Toolkit for Eclipse.
 services: app-service\web
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/20/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 471deaa03b282bb3a901e52592988d9d72712b86
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5ad0949fb415b5bf04e47b8cf6605fe77dbcb0e7
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429706"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811877"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-eclipse"></a>Implantar um aplicativo Web Olá, Mundo em um contêiner do Linux na nuvem usando o Azure Toolkit for Eclipse
 

@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code'
+title: 'Tutorial: Criar e implantar o Azure Functions sem servidor no Python com o VS Code'
 description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e6076bf9760a2f5b5e38622693b9a23561d3c964
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 388c49767e08d4f86ad02439ece58610b7c2cf09
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467008"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992543"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -43,7 +43,9 @@ Instale o seguinte software:
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-Siga as instruções referentes ao seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2). As ferramentas são escritas em .NET Core e o pacote Core Tools é melhor instalado usando o gerenciador de pacotes do Node.js, o npm. Por isso, você precisa instalar o .NET Core e o Node.js, mesmo para código Python. No entanto, você pode ignorar o requisito do .NET Core usando "pacotes de extensão", conforme descrito na documentação mencionada anteriormente. Seja qual for o caso, você precisa instalar esses componentes apenas uma vez. Depois disso, o Visual Studio Code solicita automaticamente que você instale as atualizações.
+Siga as instruções referentes ao seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2).
+
+As ferramentas são escritas em .NET Core e o pacote Core Tools é instalado de forma melhor ao usar o gerenciador de pacotes do Node.js, o npm. Por isso, é necessário instalar o .NET Core e o Node.js, mesmo para trabalhar com o Azure Functions no Python. No entanto, você pode ignorar o requisito do .NET Core usando "pacotes de extensão", conforme descrito na documentação mencionada anteriormente. Seja qual for o caso, você precisa instalar esses componentes apenas uma vez. Depois disso, o Visual Studio Code solicita automaticamente que você instale as atualizações.
 
 ### <a name="sign-in-to-azure"></a>Entrar no Azure
 
@@ -57,7 +59,9 @@ Para verificar se todas as ferramentas do Azure Functions estão instaladas, abr
 
 A saída que começa com o logotipo do Azure Functions (você precisa rolar a saída para cima) indica que o Azure Functions Core Tools está presente.
 
-Se o comando `func` não for reconhecido, verifique se a pasta onde você instalou o Azure Functions Core Tools está incluída na variável de ambiente PATH.
+Se o comando `func` não for reconhecido, execute `npm install -g azure-functions-core-tools` novamente e verifique se a instalação teve êxito. Certifique-se também de usar a opção `-g` com o comando de instalação. Caso contrário, o npm instalará o pacote somente na pasta atual.
+
+O comando `func` funciona por meio do arquivo *func.cmd* que está instalado na pasta global do Node.js. Para ver o local dessa pasta, execute `npm -l` e examine o local no final da saída.
 
 > [!div class="nextstepaction"]
 > [Entrei no Azure](tutorial-vs-code-serverless-python-02.md)

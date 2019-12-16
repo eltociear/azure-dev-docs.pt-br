@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Limpar recursos do Azure – Azure Functions no Python'
+title: 'Tutorial: Limpar os recursos usados com o código Python no Azure Functions'
 description: Etapa 8 do tutorial, limpando os recursos do Azure para evitar incorrer em encargos contínuos.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ddc2ab44d3d8865c89cb6cdf8368461b6e4f666a
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 441e3de83dfc56bc8c5b1b2adbcfb2042fe83355
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465941"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992435"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>Tutorial: Limpar recursos do Azure para o Azure Functions
 

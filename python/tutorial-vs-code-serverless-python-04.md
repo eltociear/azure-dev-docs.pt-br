@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Depurar o código do Python do Azure Functions localmente com Visual Studio Code'
+title: 'Tutorial: Depurar localmente o código Python do Azure Functions com o VS Code'
 description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente para verificar seu código do Python.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b1ea7c60b8d4dca8de829a9c627811a33ea57f01
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 7dafd432289ad96664ca7c8a319b3368368adcbd
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465940"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992454"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Tutorial: Depurar localmente o código Python do Azure Functions
 

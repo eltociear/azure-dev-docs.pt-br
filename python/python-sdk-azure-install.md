@@ -4,12 +4,12 @@ description: Como instalar o SDK do Azure para Python usando pip ou GitHub. O SD
 ms.date: 10/31/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 39de0959f3d73306412c39b32a4e13766d1500e9
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d3d162bc14f27a9b2bc3fb033dab36dcd1dfeb89
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466402"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992491"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Instalar o SDK do Azure para Python
 
@@ -19,7 +19,7 @@ O SDK do Azure para Python é testado e tem suporte para as versões 2.7 e 3.5.3
 
 ## <a name="install-sdk-libraries-using-pip"></a>Instalar bibliotecas do SDK usando pip
 
-O SDK do Azure para Python é composto por várias bibliotecas individuais e cada uma delas provisiona ou funciona com serviços específicos do Azure. É possível instalar cada uma usando `pip install <library>` com os nomes exibidos na [Lista de bibliotecas do SDK](https://github.com/Azure/azure-sdk-for-python/blob/master/packages.md). (Essa lista fornece links para arquivos LEIAME úteis para cada biblioteca.)
+O SDK do Azure para Python é composto por várias bibliotecas individuais e cada uma delas provisiona ou funciona com serviços específicos do Azure. É possível instalar cada uma usando `pip install <library>`. Consulte a [página de versão do SDK](https://azure.github.io/azure-sdk/releases/latest/python.html) para obter instruções e documentação específicas para cada biblioteca.
 
 Por exemplo, caso esteja usando o Armazenamento do Azure, você poderá instalar a biblioteca `azure-storage-file`, `azure-storage-blob` ou `azure-storage-queue`. Caso esteja usando as tabelas do Azure Cosmos DB, instale `azure-cosmosdb-table`. O Azure Functions tem suporte por meio da biblioteca `azure-functions` e assim por diante. As bibliotecas que começam com `azure-mgmt-` fornecem a API para provisionar recursos do Azure.
 

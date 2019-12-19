@@ -4,16 +4,18 @@ description: Autenticar com uma entidade de serviço nas bibliotecas de gerencia
 ms.date: 04/11/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 93d41e76bc8fb58d70a3590e2ea3658014a8673a
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 760b8e7c565cbef3d8e6e7664a53f6e2758bbe8c
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466444"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010544"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Autenticar com as bibliotecas de gerenciamento do Azure para Python
 
 Este artigo mostra como autenticar seu aplicativo ao usar as bibliotecas de gerenciamento do Python. Há várias opções para autenticar seu aplicativo com o Azure.
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
 
 ## <a name="mgmt-auth-token"></a>Autenticar com credenciais do token
 

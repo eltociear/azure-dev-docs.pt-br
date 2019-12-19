@@ -3,12 +3,12 @@ title: Autenticar com os módulos do Gerenciamento do Azure para Node.js
 description: Autenticar com uma entidade de serviço para os módulos de gerenciamento do Azure para Node.js
 ms.topic: article
 ms.date: 06/17/2017
-ms.openlocfilehash: bf368183b63dbe42dd02d8236cf7e7b73cbc1845
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 76233fb6e6d15829783ff98b3af672abc7eba226
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467277"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010504"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Autenticar com os módulos do Azure para Node.js
 
@@ -17,6 +17,8 @@ Todas as APIs de serviço exigem autenticação por meio de um objeto `credentia
 - Autenticação básica
 - Logon interativo
 - Autenticação de entidade de serviço
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
 
 ## <a name="basic-authentication"></a>Autenticação básica
 

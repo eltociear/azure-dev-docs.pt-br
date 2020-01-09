@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: c97363fa84421a73d9493b41c66e2d2dc40250cc
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 1cca7784cd341c65f1a6e4fea37e500e7c102018
+ms.sourcegitcommit: a1f7e0f0cfd5c9d0806a7d44acdf2a54d578d8fe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811868"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319663"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Implantar um aplicativo de arquivo JAR do Spring Boot no Serviço de Aplicativo do Azure com o Maven e o Azure no Linux
 
@@ -20,7 +20,7 @@ Neste início rápido, você usará o [Plug-in do Maven para os Aplicativos Web 
 
 Se você não tiver uma assinatura do Azure, crie uma [conta gratuita](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) antes de começar.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas deste tutorial, você precisa ter o seguinte instalado e configurado:
 
@@ -161,7 +161,7 @@ Nesta seção, será configurado o projeto Spring Boot `pom.xml` para que o Mave
           <appSettings>
              <property>
                    <name>JAVA_OPTS</name>
-                   <value>-D server.port=80</value>
+                   <value>-Dserver.port=80</value>
              </property>
           </appSettings>
           <!-- End of App Settings  -->
@@ -195,7 +195,7 @@ Depois de definir todas as configurações nas seções anteriores deste artigo,
 
 O Maven implantará seu aplicativo Web no Azure. Se o aplicativo Web ou o plano dele ainda não existirem, eles serão criados. Pode levar alguns minutos para que o aplicativo Web fique visível na URL mostrada na saída. Navegue até a URL em um navegador da Web.  Você deverá ver a mensagem exibida: Saudações do Spring Boot!
 
-Depois que a Web tiver sido implantada, você conseguirá gerenciá-la por meio do [portal do Azure].
+Depois que a Web tiver sido implantada, você conseguirá gerenciá-la por meio do [Azure portal].
 
 * Seu aplicativo Web será listado nos **Serviços de Aplicativos**:
 
@@ -207,7 +207,7 @@ Depois que a Web tiver sido implantada, você conseguirá gerenciá-la por meio 
 
 Verifique se a implantação foi bem-sucedida usando o mesmo comando cURL de antes e com a URL do aplicativo Web do Portal em vez de `localhost`. Você verá a seguinte mensagem exibida: **Saudações do Spring Boot!** 
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 Quando os recursos do Azure já não forem necessários, limpe os recursos implantados excluindo o grupo de recursos.
 
 - No portal do Azure, selecione Grupo de recursos no menu à esquerda.
@@ -230,7 +230,7 @@ Para saber mais sobre as diversas tecnologias discutidas neste artigo, veja os a
 
 * [Como usar o plug-in do Maven para Aplicativos Web do Azure para implantar um aplicativo Spring Boot em contêineres no Azure](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
 
-* [Criar uma entidade de serviço do Azure com a CLI do Azure 2.0](/cli/azure/create-an-azure-service-principal-azure-cli)
+* [Criar uma entidade de serviço do Azure com a CLI 2.0 do Azure](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 * [Referência de configurações do Maven](https://maven.apache.org/settings.html)
 
@@ -238,7 +238,7 @@ Para saber mais sobre as diversas tecnologias discutidas neste artigo, veja os a
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure for Java Developers]: /azure/java/
-[Portal do Azure]: https://portal.azure.com/
+[Azure portal]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Working with Azure DevOps and Java]: /azure/devops/

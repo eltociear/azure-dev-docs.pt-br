@@ -3,12 +3,12 @@ title: Usar um Registro de contêiner do Visual Studio Code
 description: Parte 2 do tutorial, usar um Registro de contêiner
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 7d51e8011824ec19e9530f9bc94bcb2ce07f2851
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: c5e9ff3cd803ef4d57408199682c71e4b57f2d77
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466634"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191004"
 ---
 # <a name="use-a-container-registry"></a>Usar um registro de contêiner
 
@@ -20,9 +20,13 @@ Este tutorial usa o ACR [(Registro de Contêiner do Azure)](https://azure.micros
 
 ## <a name="create-an-azure-container-registry"></a>Criar um Registro de Contêiner do Azure
 
-1. Entre no [portal do Azure](https://portal.azure.com), selecione **Criar um recurso** > **Contêineres** > **Registro de Contêiner**.
+1. Entre no [portal do Azure](https://portal.azure.com) e, em seguida, selecione **Criar um recurso**.
 
-    ![Criar um registro de contêiner no portal do Azure](media/deploy-containers/portal-01.png)
+    ![Criar um novo recurso no portal do Azure](media/deploy-containers/portal-01a.png)
+
+1. Na próxima página, selecione **Contêineres** > **Registro de Contêiner**.
+
+    ![Criar um registro de contêiner no portal do Azure](media/deploy-containers/portal-01b.png)
 
 1. No formulário **Criar Registro de contêiner** que aparece, insira os valores apropriados:
 
@@ -51,9 +55,11 @@ Este tutorial usa o ACR [(Registro de Contêiner do Azure)](https://azure.micros
     docker login <registry_name>.azurecr.io -u <username> -p <password>
     ```
 
+    Para maior segurança, use `--password-stdin` em vez de `-p <password>` e, em seguida, cole a senha quando for solicitado.
+
 1. No Visual Studio Code, abra o gerenciador do **Docker** e verifique se o ponto de extremidade do Registro que você acabou de configurar está visível em **Registros**:
 
     ![Verificando se o Registro aparece no gerenciador do Docker](media/deploy-containers/registries.png)
 
 > [!div class="nextstepaction"]
-> [Criei um Registro](tutorial-vscode-docker-node-03.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=create-registry)
+> [Criei um registro](tutorial-vscode-docker-node-03.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=create-registry)

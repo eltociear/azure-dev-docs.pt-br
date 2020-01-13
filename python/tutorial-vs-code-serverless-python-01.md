@@ -4,12 +4,12 @@ description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 388c49767e08d4f86ad02439ece58610b7c2cf09
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: a380a447150f29653a1f94a3fe1f6464dd495a81
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992543"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75190993"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -19,33 +19,36 @@ O Azure Functions executa seu código em um ambiente sem servidor, sem precisar 
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o botão **Encontrei um problema** no final de cada artigo para enviar comentários.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
-- [Visual Studio Code com a extensão Azure Functions](#visual-studio-code-python-and-the-azure-functions-extension).
 - [Azure Functions Core Tools](#azure-functions-core-tools).
+- [Visual Studio Code com a extensão Azure Functions](#visual-studio-code-python-and-the-azure-functions-extension).
 
 ### <a name="azure-subscription"></a>Assinatura do Azure
 
 Se não tiver uma assinatura do Azure, [inscreva-se agora](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension) para obter uma conta gratuita por 30 dias, com US$ 200 em créditos do Azure, para experimentar qualquer combinação de serviços.
 
+### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
+
+Instale o Azure Functions Core Tools seguindo as instruções para seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2). Ignore os comentários no artigo sobre o gerenciador de pacotes do Chocolately, os quais não são necessários para concluir este tutorial.
+
+Ao instalar o Node.js, use as opções padrão e *não* selecione a opção para instalar automaticamente as ferramentas necessárias.  Além disso, certifique-se de usar a opção `-g` com os comandos `npm install` para que o Core Tools esteja disponível para os comandos subsequentes.
+
+    > [!TIP]
+    > The Core Tools are written in .NET Core, and the Core Tools package is best installed using the Node.js package manager, npm, which is why you need to install .NET Core and Node.js at present, even for working with Azure Functions in Python. You can, however bypass the .NET Core requirement using "extension bundles" as described in the aforementioned documentation. Whatever the case, you need install these components only once, after which Visual Studio Code automatically prompts you to install any updates.
+
 ### <a name="visual-studio-code-python-and-the-azure-functions-extension"></a>Visual Studio Code, Python e a extensão Azure Functions
 
 Instale o seguinte software:
 
-- Python 3.7 ou Python 3.6 conforme exigido pelo Azure Functions. O [Python 3.7.5](https://www.python.org/downloads/release/python-375/) e o [Python 3.6.8](https://www.python.org/downloads/release/python-368/) são as versões compatíveis mais recentes.
+- Python 3.7 ou Python 3.6 conforme exigido pelo Azure Functions. O [Python 3.7.5](https://www.python.org/downloads/release/python-375/) e o [Python 3.6.8](https://www.python.org/downloads/release/python-368/) são as versões compatíveis mais recentes. Role para baixo nessas páginas para localizar os instaladores. Ao instalar, selecione **Adicionar o Python 3.x ao PATH** e use as opções padrão selecionando a opção **Instalar agora**. No Windows, selecione também **Desabilitar limite de comprimento do caminho** no final do processo.
 - [Visual Studio Code](https://code.visualstudio.com/).
 - A [extensão do Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), conforme descrito em [Tutorial de Python no Visual Studio Code – Pré-requisitos](https://code.visualstudio.com/docs/python/python-tutorial).
 - A [extensão Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Para obter informações gerais, visite o [repositório do GitHub vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions).
 
-> [!NOTE]
-> A extensão Azure Functions está incluída no [pacote de extensão de Ferramentas do Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
-
-### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
-
-Siga as instruções referentes ao seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2).
-
-As ferramentas são escritas em .NET Core e o pacote Core Tools é instalado de forma melhor ao usar o gerenciador de pacotes do Node.js, o npm. Por isso, é necessário instalar o .NET Core e o Node.js, mesmo para trabalhar com o Azure Functions no Python. No entanto, você pode ignorar o requisito do .NET Core usando "pacotes de extensão", conforme descrito na documentação mencionada anteriormente. Seja qual for o caso, você precisa instalar esses componentes apenas uma vez. Depois disso, o Visual Studio Code solicita automaticamente que você instale as atualizações.
+    > [!NOTE]
+    > A extensão Azure Functions está incluída no [pacote de extensão de Ferramentas do Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
 
 ### <a name="sign-in-to-azure"></a>Entrar no Azure
 

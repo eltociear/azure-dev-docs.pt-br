@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 76fe515c6f315a340d5c306edfef31cdf736ceed
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 028e54c54410caf9e81448fd8df8283532591895
+ms.sourcegitcommit: 7722fc50eeab0f97bd0ea9cb3263da87244af406
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811989"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75492226"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Como usar o Spring Data JDBC com o Banco de dados SQL do Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "74811989"
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações em um [Banco de Dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) usando [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 
@@ -30,7 +30,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 * [Curl](https://curl.haxx.se/) ou utilitário HTTP semelhante para testar a funcionalidade.
 * Um cliente [Git](https://git-scm.com/downloads).
 
-## <a name="create-an-azure-sql-satabase"></a>Criar um Banco de Dados SQL do Azure
+## <a name="create-an-azure-sql-database"></a>Criar um Banco de Dados SQL do Azure
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Criar um servidor do banco de dados SQL usando o portal do Azure
 
@@ -42,7 +42,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **+Criar um recurso**, **Bancos de dados** e clique em **Banco de Dados SQL**.
 
-   ![Criar um banco de dados SQL][SQL01]
+   ![Criar um Banco de Dados SQL][SQL01]
 
 1. Especifique as seguintes informações:
 
@@ -53,20 +53,19 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Especificar as propriedades do banco de dados SQL][SQL02]
    
-1. Clique em **Servidor**, **Criar um novo servidor** e especifique as seguintes informações:
+1. Clique em **Servidor**, **Criar novo** e, em seguida, especifique as seguintes informações:
 
    - **Nome do servidor**: Escolha um nome exclusivo para seu SQL Server. Ele será usado para criar um nome de domínio totalmente qualificado, como *wingtiptoyssql.database.windows.net*.
    - **Logon de administrador do servidor**: especifique o nome do administrador do banco de dados.
    - **Senha** e **Confirmar senha**: especifique a senha para o administrador do banco de dados.
    - **Localização**: especifique a região geográfica mais próxima do banco de dados.
 
-   ![Especificar o SQL Server][SQL03]
 
-1. Após inserir todas as informações acima, clique em **Selecionar**.
+1. Depois de inserir todas as informações acima, clique em **OK**.
 
-1. No caso deste tutorial, especifique o **Tipo de preço** menos caro e clique em **Criar**.
+1. Clique em **Examinar e criar**.
 
-   ![Criar o banco de dados SQL][SQL04]
+1. Revise as configurações e clique em **Criar**.
 
 ### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o SQL Server usando o portal do Azure
 
@@ -74,9 +73,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **Todos os Recursos** e, em seguida, clique no SQL Server que você acabou de criar.
 
-   ![Escolher o SQL Server][SQL05]
-
-1. Na seção **Visão geral**, clique em **Mostrar configurações de firewall**
+1. No painel de navegação esquerdo, clique na seção **Visão geral** e clique em **Definir firewall do servidor**
 
    ![Mostrar configurações de firewall][SQL06]
 
@@ -89,8 +86,6 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
 
 1. Clique em **Todos os Recursos** e, em seguida, clique no banco de dados SQL que você acabou de criar.
-
-   ![Escolher o banco de dados SQL][SQL08]
 
 1. Clique em **Cadeias de conexão**, clique em **JDBC** e copie o valor no campo de texto JDBC.
 

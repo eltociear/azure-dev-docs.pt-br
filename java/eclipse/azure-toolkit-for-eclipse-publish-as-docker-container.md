@@ -7,14 +7,14 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 2d81c2a23a58c2dfdb036988b8831efe0c821392
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: d1e384525ec32141b945f50d1d5be7190e84b239
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811805"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191043"
 ---
-# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Publicar um aplicativo Web como um contêiner do Docker usando o Kit de ferramentas do Azure para Eclipse
+# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse-deprecated"></a>Publicar um aplicativo Web como um contêiner do Docker usando o Azure Toolkit for Eclipse (PRETERIDO)
 
 Contêineres do Docker são um método amplamente usado para implantar aplicativos Web. Com os contêineres do Docker, os desenvolvedores podem consolidar todos os arquivos de projeto e dependências em um único pacote para implantação em um servidor. O Kit de Ferramentas do Azure para Eclipse simplifica o processo para desenvolvedores de Java adicionando recursos de *Publicar como Contêiner do Docker* para implantação no Microsoft Azure. Este artigo explica as etapas necessárias para publicar seus aplicativos no Azure como contêineres do Docker.
 
@@ -46,7 +46,7 @@ Contêineres do Docker são um método amplamente usado para implantar aplicativ
 
    a. Na caixa **Nome da imagem do Docker**, insira um nome exclusivo para o host do Docker. (O assistente cria automaticamente um nome, mas você pode modificá-lo.)
 
-   b. A área **Hosts** exibe quaisquer hosts do Docker que você já criou. Faça uma das opções a seguir:
+   b. A área **Hosts** exibe quaisquer hosts do Docker que você já criou. Execute um destes procedimentos:
 
    * Se você tiver um host do Docker existente, poderá implantar seu aplicativo Web nele.
    * Para criar um novo host do Docker, clique em **Adicionar**.  
@@ -57,7 +57,7 @@ Contêineres do Docker são um método amplamente usado para implantar aplicativ
 
 4. Na janela **Configurar a nova máquina virtual**, especifique as seguintes opções para o host do Docker. (O assistente gera automaticamente a maioria das opções para você, mas você pode modificar qualquer uma delas.)
 
-   a. **Nome**: inserir um nome exclusivo para o host do Docker. (Não é o mesmo que o nome da imagem do Docker que você especificou anteriormente.)
+   a. **Name**: inserir um nome exclusivo para o host do Docker. (Não é o mesmo que o nome da imagem do Docker que você especificou anteriormente.)
 
    b. **Assinatura**: inserir a assinatura do Azure que você usa para o host.
 
@@ -65,7 +65,7 @@ Contêineres do Docker são um método amplamente usado para implantar aplicativ
 
    d. Na guia **Sistema Operacional de Host e Tamanho**: 
    * **SO do host**: inserir o sistema operacional da máquina virtual que contém seu host.
-   * **Tamanho**: inserir o tamanho da máquina virtual de seu host.
+   * **Size**: inserir o tamanho da máquina virtual de seu host.
 
    e. Na guia **Grupo de Recursos**: 
    * **Novo grupo de recursos**: Criar um novo grupo de recursos para seu host.

@@ -6,18 +6,18 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: d2134ae08bdad69af1e347476e96833d375ee966
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5748f3e51132ff003e41d61f9c10dff61b95e364
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811955"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022112"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Como usar o Spring Data JPA com o Azure PostgreSQL
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações em um [Banco de Dados do Azure para PostgreSQL](/azure/postgresql/) usando [JPA (Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 
@@ -69,7 +69,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **Segurança da conexão**.
 
-1. Crie uma regra especificando um nome exclusivo para a ela, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e, em seguida, clique em **Salvar**.
+1. Crie uma regra especificando um nome exclusivo para a ela, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e, em seguida, clique em **Salvar**. (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para **Endereço IP inicial** e **Endereço IP final**.)
 
    ![Escolher o banco de dados PostgreSQL][POSTGRESQL03]
 
@@ -90,7 +90,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `host` | Especifica o nome totalmente qualificado do servidor PostgreSQL neste artigo. |
    | `host` | Especifica a porta do servidor PostgreSQL, que é `5432` por padrão. |
@@ -106,6 +106,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    
    postgres=>
    ```
+   > Observação: Se você receber um erro informando que o servidor não reconhece esse endereço IP, o endereço IP que o cliente está usando será mostrado no erro.  Volte e atribua-o conforme descrito anteriormente: *Configurar uma regra de firewall para o servidor usando o portal do Azure*.
 
 1. Crie um banco de dados denominado *mypgsqldb* inserindo um comando `psql` como o exemplo a seguir:
 
@@ -155,7 +156,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
     ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `spring.datasource.url` | Especifica sua cadeia de JDBC do PostgreSQL neste artigo. |
    | `spring.datasource.username` | Especifica o nome do administrador do PostgreSQL neste artigo com o nome abreviado do servidor anexado a ele. |

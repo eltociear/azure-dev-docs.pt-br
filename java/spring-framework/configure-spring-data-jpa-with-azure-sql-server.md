@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: d5c90992f4b669bf6089d0c0118496dfa33d67f1
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: a57fbc5dc8be0848f0b68fd1a45a1478de52b419
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811949"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022133"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Como usar o Spring Data JPA com o Banco de Dados SQL do Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "74811949"
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações em um [Banco de Dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) usando [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 
@@ -42,7 +42,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **+Criar um recurso**, **Bancos de dados** e clique em **Banco de Dados SQL**.
 
-   ![Criar um banco de dados SQL][SQL01]
+   ![Criar um Banco de Dados SQL][SQL01]
 
 1. Especifique as seguintes informações:
 
@@ -76,7 +76,7 @@ Depois que o banco de dados SQL e o servidor forem criados, você poderá defini
 
    ![Mostrar configurações de firewall][SQL06]
 
-1. Na seção **Firewalls e redes virtuais**, crie uma nova regra especificando um nome exclusivo para a regra, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar**.
+1. Na seção **Firewalls e redes virtuais**, crie uma nova regra especificando um nome exclusivo para a regra, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar**. (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para **Endereço IP inicial** e **Endereço IP final**.)
 
    ![Definir configurações de firewall][SQL07]
 
@@ -114,7 +114,7 @@ Depois que o banco de dados SQL e o servidor forem criados, você poderá defini
     ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `spring.datasource.url` | Especifica a versão editada da cadeia de JDBC do SQL neste artigo. |
    | `spring.datasource.username` | Especifica o nome do administrador do SQL neste artigo com o nome abreviado do servidor anexado a ele. |

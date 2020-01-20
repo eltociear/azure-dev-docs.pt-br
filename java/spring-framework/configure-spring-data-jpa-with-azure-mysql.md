@@ -6,18 +6,18 @@ ms.date: 11/27/2019
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 83883ffd06353854a3c69c9abdc946a035dda6b1
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 927cc72a526651be71a7983a298ca2c6718f4546
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811966"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022091"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Como usar o Spring Data JPA com o Banco de Dados do Azure para MySQL
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações em um [Banco de Dados do Azure para MySQL](/azure/mysql/) usando [JPA (Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 
@@ -47,7 +47,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    - **Assinatura**: especifique a assinatura do Azure para usar.
    - **Grupo de recursos**: especifique se deseja criar um novo grupo de recursos ou escolher um grupo de recursos existente.
    - **Nome do servidor**: Escolha um nome exclusivo para o servidor MySQL. Ele será usado para criar um nome de domínio totalmente qualificado, como *wingtiptoysmysql.mysql.database.azure.com*.
-   - **Selecionar fonte**: no caso deste tutorial, escolha `Blank` para criar um novo banco de dados.
+   - **Selecionar fonte**: No caso deste tutorial, escolha `Blank` para criar um novo banco de dados.
    - **Logon de administrador do servidor**: especifique o nome do administrador do banco de dados.
    - **Senha** e **Confirmar senha**: especifique a senha para o administrador do banco de dados.
    - **Localização**: especifique a região geográfica mais próxima do banco de dados.
@@ -63,7 +63,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **Todos os Recursos** e, em seguida, clique no banco de dados MySQL que acabou de criar.
 
-1. Clique em **Segurança de conexão** e, nas **Regras de firewall** , crie uma nova regra especificando um nome exclusivo para a regra e, em seguida, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar** .
+1. Clique em **Segurança de conexão** e, nas **Regras de firewall** , crie uma nova regra especificando um nome exclusivo para a regra e, em seguida, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar** . (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para o **Endereço IP inicial** e o **Endereço IP final**. Consulte também a observação sob o título *Criar um banco de dados usando o utilitário de linha de comando mysql*.)
 
    ![Configurar a segurança da conexão][MYSQL04]
 
@@ -86,7 +86,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `host` | Especifica o nome totalmente qualificado do servidor MySQL neste artigo. |
    | `user` | Especifica o administrador do MySQL e o nome abreviado do servidor neste artigo. |
@@ -110,6 +110,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    
    mysql>
    ```
+   > Observação: Se você receber um erro informando que o servidor não reconhece esse endereço IP, o endereço IP que o cliente está usando será mostrado no erro.  Volte e atribua-o conforme descrito anteriormente: *Configurar uma regra de firewall para o servidor usando o portal do Azure*.
 
 1. Crie um banco de dados denominado *mysqldb* inserindo um comando `mysql`, como o exemplo a seguir:
 
@@ -165,7 +166,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
     ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `spring.jpa.database-platform` | Especifica a plataforma de banco de dados JPA. |
    | `spring.datasource.url` | Especifica sua cadeia de JDBC do MySQL neste artigo. |

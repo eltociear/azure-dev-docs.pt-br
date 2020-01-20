@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 028e54c54410caf9e81448fd8df8283532591895
-ms.sourcegitcommit: 7722fc50eeab0f97bd0ea9cb3263da87244af406
+ms.openlocfilehash: d5e7ff3a31f8fb66b4231770c86094244752b439
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/26/2019
-ms.locfileid: "75492226"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022120"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Como usar o Spring Data JDBC com o Banco de dados SQL do Azure
 
@@ -77,7 +77,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Mostrar configurações de firewall][SQL06]
 
-1. Na seção **Firewalls e redes virtuais**, crie uma nova regra especificando um nome exclusivo para a regra, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar**.
+1. Na seção **Firewalls e redes virtuais**, crie uma nova regra especificando um nome exclusivo para a regra, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar**. (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para **Endereço IP inicial** e **Endereço IP final**.)
 
    ![Definir configurações de firewall][SQL07]
 
@@ -110,7 +110,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
     ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `spring.datasource.url` | Especifica a versão editada da cadeia de JDBC do SQL neste artigo. |
    | `spring.datasource.username` | Especifica o nome do administrador do SQL neste artigo com o nome abreviado do servidor anexado a ele. |

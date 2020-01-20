@@ -3,18 +3,18 @@ title: SDK do Azure para Python
 description: Visão geral dos recursos e das funcionalidades do SDK do Azure para Python que ajudam os desenvolvedores a serem mais produtivos ao trabalhar com os serviços do Azure.
 ms.date: 10/30/2019
 ms.topic: conceptual
-ms.openlocfilehash: 7a70f6050890bc384bac0d58ba3f0aa2e5e553cb
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.openlocfilehash: 83a9541330f270e51ffa5ed8952a93dee8ff132f
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "75010583"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946698"
 ---
 # <a name="azure-sdk-for-python"></a>SDK do Azure para Python
 
 O SDK do Azure para Python simplifica o uso e o gerenciamento dos recursos do Azure com base no código de aplicativo do Python. O SDK é compatível com Python 2.7 e Python 3.5.3 ou posterior.
 
-Você instala o SDK ao instalar qualquer uma de suas bibliotecas de componentes individuais usando `pip install <library>`. É possível ver a lista de bibliotecas no [índice de pacote do SDK do Azure para Python](https://github.com/Azure/azure-sdk-for-python/blob/master/packages.md)
+Você instala o SDK ao instalar qualquer uma de suas bibliotecas de componentes individuais usando `pip install <library>`. Você pode encontrar os nomes das bibliotecas para serviços diferentes na [documentação do SDK do Azure para Python](https://azure.github.io/azure-sdk-for-python/).
 
 Para obter instruções mais detalhadas sobre como instalar as bibliotecas e importá-las em projetos, consulte [Instalar o SDK](python-sdk-azure-install.md). Em seguida, examine a [Introdução ao SDK](python-sdk-azure-get-started.yml) para configurar a autenticação e executar o código de exemplo em sua própria assinatura do Azure.
 

@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente p
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7dafd432289ad96664ca7c8a319b3368368adcbd
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992454"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946690"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Tutorial: Depurar localmente o código Python do Azure Functions
 
@@ -47,6 +47,10 @@ ms.locfileid: "74992454"
     curl --header "Content-Type: application/json" --request POST \
         --data {"""name""":"""Visual Studio Code"""} http://localhost:7071/api/HttpExample
     ```
+
+    No PowerShell, você também pode usar o [cmdlet Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+
+    ---
 
     Como alternativa, crie um arquivo como *data.json* que contenha `{"name":"Visual Studio Code"}` e use o comando `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample`.
 

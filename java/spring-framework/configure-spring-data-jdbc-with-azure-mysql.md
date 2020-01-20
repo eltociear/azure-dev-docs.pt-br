@@ -6,12 +6,12 @@ ms.date: 01/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: a36484cb6858422f4d9b0e6a5c72a793f3686514
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: 7a6550be633b29d97d55b8db2f50b2c57d0ba30d
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755630"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022078"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Como usar o Spring Data JDBC com o MySQL do Azure
 
@@ -67,7 +67,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Clique em **Todos os Recursos** e, em seguida, clique nos recursos do Banco de Dados do Azure para MySQL que você acabou de criar.
 
-1. Clique em **Segurança de conexão** e, nas **Regras de firewall** , crie uma nova regra especificando um nome exclusivo para a regra e, em seguida, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar** .
+1. Clique em **Segurança de conexão** e, nas **Regras de firewall** , crie uma nova regra especificando um nome exclusivo para a regra e, em seguida, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar** . (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para **Endereço IP inicial** e **Endereço IP final**.)
 
    ![Configurar a segurança da conexão][MYSQL04]
 
@@ -90,7 +90,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `host` | Especifica o nome totalmente qualificado do servidor MySQL neste artigo. |
    | `user` | Especifica o administrador do MySQL e o nome abreviado do servidor neste artigo. |
@@ -113,6 +113,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    
    mysql>
    ```
+   > Observação: Se você receber um erro informando que o servidor não reconhece esse endereço IP, o endereço IP que o cliente está usando será mostrado no erro.  Volte e atribua-o conforme descrito anteriormente: *Configurar uma regra de firewall para o servidor usando o portal do Azure*.
 
 1. Crie um banco de dados denominado *mysqldb* inserindo um comando `mysql`, como o exemplo a seguir:
 
@@ -167,7 +168,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
     ```
    Em que:
 
-   | Parâmetro | DESCRIÇÃO |
+   | Parâmetro | Descrição |
    |---|---|
    | `spring.datasource.url` | Especifica sua cadeia de JDBC do MySQL neste artigo, com o fuso horário incluído. |
    | `spring.datasource.username` | Especifica o nome do administrador do MySQL neste artigo com o nome abreviado do servidor anexado a ele. |
@@ -192,9 +193,9 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 1. Crie novos registros usando `curl` em um prompt de comando como nos exemplos a seguir:
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    Seu aplicativo deve retornar valores como os seguintes:

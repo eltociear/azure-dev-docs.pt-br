@@ -3,7 +3,7 @@
   items:
     - name: Introdução
       href: java-sdk-azure-get-started.md
-    - name: Guia de início rápido
+    - name: Inícios rápidos
       items:
         - name: Implantar Aplicativo Web
           items:
@@ -23,7 +23,7 @@
           href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Bancos de dados
           items:
-            - name: Banco de dados SQL
+            - name: Banco de Dados SQL
               href: /azure/sql-database/sql-database-connect-query-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             - name: MySQL
               href: /azure/mysql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
@@ -152,8 +152,16 @@
       items:
         - name: Adicionar Certificado Raiz
           href: java-sdk-add-certificate-ca-store.md
-        - name: Autenticar
+        - name: Authenticate
           href: java-sdk-azure-authenticate.md
+        - name: Migrar o Java para o Azure
+          items:
+            - name: Visão geral
+              href: migration-overview.md
+            - name: Tomcat para o Serviço de Aplicativo do Azure
+              href: migrate-tomcat-to-tomcat-app-service.md
+            - name: Tomcat para contêineres no AKS
+              href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
     - name: Exemplos de código
       items:
         - name: Service Fabric
@@ -162,7 +170,7 @@
           href: java-sdk-azure-virtual-machine-samples.md
         - name: Aplicativos Web
           href: java-sdk-azure-web-apps-samples.md
-        - name: Banco de dados SQL
+        - name: Banco de Dados SQL
           href: java-sdk-azure-sql-database-samples.md
         - name: Segurança
           href: java-sdk-azure-security-samples.md

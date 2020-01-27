@@ -4,20 +4,20 @@ description: Etapa 5 do tutorial, limpando os recursos do Azure para evitar inco
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c6688dcfb1d3c8adbf4ba2e0eb2603ce85de43c
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: bbafb323c49b9dd6879bf69924d8e8bcf62093a3
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466065"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125230"
 ---
 # <a name="tutorial-clean-up-azure-resources"></a>Tutorial: Limpar recursos do Azure
 
 [Etapa anterior: stream de logs](tutorial-deploy-containers-04.md)
 
-Este artigo mostra como remover os recursos do Azure que você criou ao implantar um aplicativo no Serviço de Aplicativo do Azure com o Visual Studio Code.
+Os vários recursos do Azure criados neste tutorial podem incorrer em custos contínuos. Para evitar esses custos, exclua o grupo de recursos que contém todos esses recursos.
 
-Os vários recursos do Azure criados neste tutorial podem incorrer em custos contínuos. Para limpá-los, é melhor visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -32,7 +32,7 @@ Também há outras extensões do Azure para VS Code que podem ser úteis. Basta 
 Algumas extensões populares são:
 
 - [Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)
-- [Funções do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+- [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 - [Ferramentas da CLI do Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli)
 - [Ferramentas do Azure Resource Manager](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 

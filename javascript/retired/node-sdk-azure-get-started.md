@@ -1,26 +1,20 @@
 ---
 title: Introdução aos módulos do Azure para Node.js
 description: Introdução à autenticação e ao gerenciamento de recursos com módulos do Azure para Node.js
-author: karlerickson
-manager: douge
-ms.author: karler
 ms.date: 06/17/2017
 ms.topic: conceptual
-ms.prod: azure
-ms.devlang: nodejs
-ms.service: azure-nodejs
-ms.openlocfilehash: 3ba92eae7d6d287cec668dbd1bfcac8e52b04017
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 66aface16b4281c541f0f40a3f0f6cbc12be8f89
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690836"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872121"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introdução aos módulos do Azure para Node.js
 
 Este guia demonstra a instalação de módulos Node.js do Azure, a autenticação no Azure com uma entidade de serviço e a execução do código de exemplo que cria recursos na sua assinatura do Azure e se conecta aos serviços de nuvem do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/)
 - [Node.js](https://nodejs.org)
@@ -250,7 +244,7 @@ Execute o comando e então copie e cole a URL da saída no seu navegador da Web 
 node uploadFile.js
 ```
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Exclua o grupo de recursos para remover os recursos criados neste guia.
 

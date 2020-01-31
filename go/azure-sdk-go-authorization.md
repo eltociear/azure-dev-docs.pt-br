@@ -1,18 +1,14 @@
 ---
 title: Autenticação com o SDK do Azure para Go
 description: Saiba mais sobre os métodos de autenticação disponíveis no SDK do Azure para Go e como usá-los.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: 34a3995b4eb5cc9012ca03b11fa8199460b9f9d4
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b4bf09dbb3f59c77c2914ae9c9091dc0af31b093
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68292067"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871966"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Métodos de autenticação no SDK do Azure para Go
 
@@ -54,7 +50,7 @@ Todos os tipos e funções de autenticação estão disponíveis no pacote `gith
 
 ## <a name="use-environment-based-authentication"></a>Usar a autenticação baseada em ambiente
 
-Se você estiver executando seu aplicativo em um ambiente controlado, a autenticação baseada em ambiente é uma opção natural. Com esse método de autenticação, você pode configurar o ambiente do shell antes de executar seu aplicativo. No tempo de execução, o SDK da linguagem Go lê essas variáveis de ambiente para se autenticar no Azure.
+Se você estiver executando seu aplicativo em um ambiente controlado, a autenticação baseada em ambiente é uma opção natural. Com esse método de autenticação, você pode configurar o ambiente do shell antes de executar seu aplicativo. No runtime, o SDK da linguagem Go lê essas variáveis de ambiente para se autenticar no Azure.
 
 A autenticação baseada em ambiente oferece suporte para todos os métodos de autenticação, exceto os tokens de dispositivo, avaliados na seguinte ordem:
 
@@ -68,12 +64,12 @@ Se um tipo de autenticação não tiver valores definidos ou for recusado, o SDK
 A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas para cada tipo de autenticação com suporte da autenticação baseada em ambiente.
 
 
-|  Tipo de autenticação   |     Variável de ambiente     |                                                                                                     DESCRIÇÃO                                                                                                      |
+|  Tipo de autenticação   |     Variável de ambiente     |                                                                                                     Descrição                                                                                                      |
 |------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Credenciais do cliente** |      `AZURE_TENANT_ID`       |                                                                    A ID do locatário do Active Directory à qual pertence a entidade de serviço.                                                                     |
 |                        |      `AZURE_CLIENT_ID`       |                                                                                       O nome ou a ID da entidade de serviço.                                                                                       |
 |                        |    `AZURE_CLIENT_SECRET`     |                                                                                  O segredo associado à entidade de serviço.                                                                                   |
-|    **Certificate**     |      `AZURE_TENANT_ID`       |                                                                   A ID do locatário do Active Directory com qual o certificado está registrado.                                                                    |
+|    **Certificado**     |      `AZURE_TENANT_ID`       |                                                                   A ID do locatário do Active Directory com qual o certificado está registrado.                                                                    |
 |                        |      `AZURE_CLIENT_ID`       |                                                                              A ID de cliente do aplicativo associada ao certificado.                                                                              |
 |                        |   `AZURE_CERTIFICATE_PATH`   |                                                                                       O caminho para o arquivo do certificado do cliente.                                                                                       |
 |                        | `AZURE_CERTIFICATE_PASSWORD` |                                                                                       A senha para o certificado do cliente.                                                                                       |
@@ -85,7 +81,7 @@ A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas p
 
 Para se conectar a um ponto de extremidade de gerenciamento ou de nuvem que não seja o padrão de nuvem pública do Azure, defina as seguintes variáveis de ambiente. Se você usa o Azure Stack, os motivos mais comuns são: uma nuvem em uma região geográfica diferente ou o modelo de implantação clássico.
 
-| Variável de ambiente | DESCRIÇÃO  |
+| Variável de ambiente | Descrição  |
 |----------------------|--------------|
 | `AZURE_ENVIRONMENT` | O nome do ambiente de nuvem ao qual se conectar. |
 | `AZURE_AD_RESOURCE` | A ID de recurso do Active Directory para usar ao conectar-se, como um URI para seu ponto de extremidade de gerenciamento. |
@@ -101,7 +97,7 @@ authorizer, err := auth.NewAuthorizerFromEnvironment()
 
 Para autenticar no Azure Stack, você precisa definir as seguintes variáveis:
 
-| Variável de ambiente | DESCRIÇÃO  |
+| Variável de ambiente | Descrição  |
 |----------------------|--------------|
 | `AZURE_AD_ENDPOINT` | O ponto de extremidade do Active Directory. |
 | `AZURE_AD_RESOURCE` | A ID de recurso do Active Directory. |
@@ -125,7 +121,7 @@ A autenticação baseada em arquivo usa um formato de arquivo gerado pela [CLI d
 az ad sp create-for-rbac --sdk-auth > azure.auth
 ```
 
-Defina a variável de ambiente `AZURE_AUTH_LOCATION` para o local em que se encontra o arquivo de autorização. Essa variável de ambiente é lida pelo aplicativo, e as credenciais dentro dela são analisadas. Caso precise selecionar o arquivo de autorização em tempo de execução, manipule o ambiente do programa usando a função [os.Setenv](https://golang.org/pkg/os/#Setenv).
+Defina a variável de ambiente `AZURE_AUTH_LOCATION` para o local em que se encontra o arquivo de autorização. Essa variável de ambiente é lida pelo aplicativo, e as credenciais dentro dela são analisadas. Caso precise selecionar o arquivo de autorização em runtime, manipule o ambiente do programa usando a função [os.Setenv](https://golang.org/pkg/os/#Setenv).
 
 Para carregar as informações de autenticação, chame a função [NewAuthorizerFromFile](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewAuthorizerFromFile). Ao contrário da autorização baseada em ambiente, a autorização baseada em arquivo exige um ponto de extremidade do recurso.
 

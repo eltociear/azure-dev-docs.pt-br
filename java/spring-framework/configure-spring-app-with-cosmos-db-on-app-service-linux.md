@@ -6,12 +6,12 @@ ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: ab49d2c05477d6f2674cd410cf3b9fbeda357bf8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 53bc7d9ebd03fb122d58dd52145876e698dc751f
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812175"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872161"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Como usar o Spring e o Cosmos DB com o Serviço de Aplicativo no Linux
 
@@ -23,11 +23,11 @@ Ele demonstrará o uso dos seguintes componentes:
 - [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction)
 - [Serviço de Aplicativo Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
-- Para implantar um aplicativo Web Java na nuvem, você precisa de uma assinatura do Azure. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) ou inscrever-se para obter uma [conta gratuita do Azure]((https://azure.microsoft.com/pricing/free-trial/)).
+- Para implantar um aplicativo Web Java na nuvem, você precisa de uma assinatura do Azure. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) ou inscrever-se para obter uma [conta gratuita do Azure](https://azure.microsoft.com/pricing/free-trial/).
 - [CLI 2.0 do Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [JDK Java 8](https://docs.microsoft.com/azure/java/jdk/java-jdk-install)
 - [Maven 3](http://maven.apache.org/)
@@ -315,9 +315,9 @@ Para obter mais informações sobre como usar aplicativos Spring Boot no Azure, 
 
 * [Executando um Aplicativo Spring Boot em um Cluster Kubernetes no Serviço de Contêiner do Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Para obter mais informações sobre como usar o Azure com Java, confira [Azure para Desenvolvedores Java] e [Trabalhando com o Java e Azure DevOps].
+Para obter mais informações sobre como usar o Azure com Java, confira [Azure para Desenvolvedores Java] e [Como trabalhar com o Java e o Azure DevOps].
 
-O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o  **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
+O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
 
 <!-- URL List -->
 
@@ -327,7 +327,7 @@ O **[Spring Framework]** é uma solução de software livre que ajuda os desenvo
 [Spring Data for Azure Cosmos DB SQL API]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Spring Boot Document DB Starter for Azure]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Trabalhando com o Java e Azure DevOps]: https://azure.microsoft.com/services/devops/java/
+[Como trabalhar com o Java e o Azure DevOps]: https://azure.microsoft.com/services/devops/java/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

@@ -1,18 +1,14 @@
 ---
 title: Implantar uma máquina virtual do Azure na linguagem Go
 description: Implante uma máquina virtual usando o SDK do Azure para linguagem Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: quickstart
-ms.devlang: go
-ms.openlocfilehash: 01f6e40e80a4c5f29a6179869a2fd95f6cea0623
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b777d638d0adb1b67351a7ccffb545e05309a53e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291948"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872062"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Início Rápido: Implantar uma máquina virtual do Azure de um modelo com o SDK do Azure para linguagem Go
 

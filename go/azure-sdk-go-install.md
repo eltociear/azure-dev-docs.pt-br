@@ -1,18 +1,14 @@
 ---
 title: Instale o SDK do Azure para linguagem Go
 description: Como instalar, fornecer e configurar o SDK do Azure para linguagem Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 03/14/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: e7a4449ed29239e7cb08902cee299d74102a72bf
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: daf725a59042038e682c852a50080972d33a497e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291931"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871868"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Instale o SDK do Azure para linguagem Go
 
@@ -47,7 +43,7 @@ version = "14.0.0"
 Para usar os serviços do Azure a partir de seu código Go, importe todos os serviços com os quais você interage e os módulos `autorest` necessários.
 Você obterá uma lista completa dos módulos disponíveis do GoDoc para os [serviços disponíveis](https://godoc.org/github.com/Azure/azure-sdk-for-go) e [pacotes AutoRest](https://godoc.org/github.com/Azure/go-autorest). Os pacotes mais comuns do `go-autorest` de que você precisa são:
 
-| Pacote | DESCRIÇÃO |
+| Pacote | Descrição |
 |---------|-------------|
 | [github.com/Azure/go-autorest/autorest][autorest] | Objetos para lidar com a autenticação de cliente de serviço |
 | [github.com/Azure/go-autorest/autorest/azure][autorest/azure] | Constantes para interações com os serviços do Azure |
@@ -91,5 +87,5 @@ Se você quiser começar com outros serviços no SDK Go imediatamente, dê uma o
 * [Implantar novas máquinas virtuais com autenticação SSH](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/compute)
 * [Implantar uma imagem de contêiner nas Instâncias de Contêiner do Azure](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/compute)
 * [Criar um cluster no Serviço Kubernetes do Azure](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute)
-* [Trabalhar com serviços de armazenamento do Azure](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/storage)
+* [Trabalhar com serviços de Armazenamento do Azure](https://github.com/Azure-Samples/azure-sdk-for-go-samples/tree/master/storage)
 * [Todos os exemplos do SDK do Azure para linguagem Go](https://github.com/azure-samples/azure-sdk-for-go-samples)

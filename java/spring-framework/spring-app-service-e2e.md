@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: aa26952b320392beb553f327920fe5bd905a0b85
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811822"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872131"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Implantar um aplicativo Spring no Serviço de Aplicativo com o MySQL
 
@@ -19,7 +19,7 @@ Este tutorial explica o processo de criação, configuração, implantação, so
 
 Este tutorial se baseia no conhecido aplicativo de exemplo Spring PetClinic. Neste tópico, você testará uma versão HSQLDB do aplicativo localmente e, em seguida, o implantará no [Serviço de Aplicativo do Azure](/azure/app-service/containers). Depois disso, você configurará e implantará uma versão que usa o [Banco de Dados do Azure para MySQL](/azure/mysql). Por fim, você aprenderá como acessar os logs de aplicativo e expandir, aumentando o número de funções de trabalho que executam seu aplicativo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [CLI do Azure](https://docs.microsoft.com/cli/azure/overview)
 * [Java 8](http://java.oracle.com/)
@@ -121,7 +121,7 @@ Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implan
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -312,7 +312,7 @@ az appservice plan update --number-of-workers 2 \
 
 Parabéns! Você criou e expandiu um aplicativo Web Java usando o Spring Framework, o JSP, o Spring Data, o Hibernate, o JDBC, o Serviço de Aplicativo do Linux e o Banco de Dados do Azure para MySQL.
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Nas seções anteriores, você criou recursos do Azure em um grupo de recursos. Se você acha que não precisará usar esses recursos no futuro, exclua o grupo de recursos executando o comando a seguir.
 

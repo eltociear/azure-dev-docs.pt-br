@@ -5,24 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: da516609aaf976db929664bf0402a48f378034d3
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288605"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825801"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo Tomcat existente para ser executado em um contêiner do AKS (Serviço de Kubernetes do Azure).
 
 ## <a name="pre-migration-steps"></a>Etapas de pré-migração
-
-* [Recursos externos de inventário](#inventory-external-resources)
-* [Segredos de inventário](#inventory-secrets)
-* [Uso da persistência de inventário](#inventory-persistence-usage)
-* [Casos especiais](#special-cases)
-* [Teste in-loco](#in-place-testing)
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -75,7 +69,7 @@ Se [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/cata
 
 Antes de criar imagens de contêiner, migre seu aplicativo para o JDK e o Tomcat que você pretende usar no AKS. Teste seu aplicativo cuidadosamente para garantir a compatibilidade e o desempenho.
 
-### <a name="parametrize-the-configuration"></a>Parametrizar a configuração
+### <a name="parameterize-the-configuration"></a>Parametrizar a configuração
 
 Na pré-migração, você provavelmente terá identificado segredos e dependências externas, como fontes de dados, nos arquivos *server.xml* e *context.xml*. Para cada item identificado assim, substitua qualquer nome de usuário, senha, cadeia de conexão ou URL por uma variável de ambiente.
 
@@ -107,7 +101,7 @@ Nesse caso, você poderia alterá-lo conforme mostrado no exemplo a seguir:
 
 ## <a name="migration"></a>Migração
 
-Com exceção da primeira etapa ("Provisionar Registro de Contêiner e AKS"), recomendamos que você siga as etapas abaixo individualmente para cada aplicativo (arquivo WAR) que deseje migrar.
+Com exceção da primeira etapa ("Provisionar registro de contêiner e AKS"), recomendamos que você siga as etapas abaixo individualmente para cada aplicativo (arquivo WAR) que deseje migrar.
 
 > [!NOTE]
 > Algumas implantações do Tomcat podem ter vários aplicativos em execução em um único servidor Tomcat. Se esse for o caso em sua implantação, será altamente recomendável executar cada aplicativo em um pod separado. Isso permite que você otimize a utilização de recursos para cada aplicativo, minimizando a complexidade e o acoplamento.
@@ -128,7 +122,7 @@ Clone o [repositório GitHub do início rápido do Tomcat em contêineres](https
 
 #### <a name="open-ports-for-clustering-if-needed"></a>Abrir portas para clustering, se necessário
 
-Se você pretende usar o [clustering de Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) no AKS, verifique se os intervalos de portas necessários estão expostos no Dockerfile. Para especificar o endereço IP do servidor no `server.xml`, é necessário usar um valor de uma variável que é inicializada na inicialização do contêiner para o endereço IP do pod.
+Se você pretende usar o [clustering de Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) no AKS, verifique se os intervalos de portas necessários estão expostos no Dockerfile. Para especificar o endereço IP do servidor em *server.xml*, é necessário usar um valor de uma variável que é inicializada na inicialização do contêiner para o endereço IP do pod.
 
 Como alternativa, o estado de sessão pode ser [persistido em um local alternativo](#identify-session-persistence-mechanism) para estar disponível entre as réplicas.
 
@@ -218,7 +212,7 @@ Inclua [parâmetros externos como variáveis de ambiente](https://kubernetes.io/
 
 Se seu aplicativo exigir armazenamento não volátil, configure um ou mais [Volumes Persistentes](/azure/aks/azure-disks-dynamic-pv).
 
-Talvez você queira [criar um volume persistente usando os Arquivos do Azure](/azure/aks/azure-files-dynamic-pv) montados no diretório de logs do Tomcat ( */tomcat_logs*) para manter os logs centralmente.
+Talvez você queira criar um volume persistente usando os Arquivos do Azure montados no diretório de logs do Tomcat ( */tomcat_logs*) para manter os logs centralmente. Para obter mais informações, confira [Criar e usar dinamicamente um volume persistente com Arquivos do Azure no AKS (Serviço de Kubernetes do Azure)](/azure/aks/azure-files-dynamic-pv).
 
 ### <a name="configure-keyvault-flexvolume"></a>Configurar FlexVolume do KeyVault
 

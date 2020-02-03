@@ -4,14 +4,14 @@ description: Parte 2 do tutorial, criar o aplicativo de exemplo
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: bc930b7c6a3454ca335fec5a955113a45fa2f0f2
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b236f64f04be0c0b8faa74eb67ce22f96ec595aa
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466552"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825840"
 ---
-# <a name="create-the-app"></a>Crie o aplicativo
+# <a name="create-the-app"></a>Criar o aplicativo
 
 [Etapa anterior: Introdução e pré-requisitos](tutorial-vscode-static-website-node-01.md)
 
@@ -42,7 +42,7 @@ Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](h
     npm start
     ```
 
-1. Abra um navegador para [http://localhost:3000](http://localhost:3000) para verificar se o aplicativo está em execução:
+1. Abra um navegador para [http://localhost:4200](http://localhost:4200) para verificar se o aplicativo está em execução:
 
     ![O aplicativo Angular de exemplo em execução](media/static-website/local-app-angular.png)
 

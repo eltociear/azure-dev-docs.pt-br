@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: ce1c54f0f4b28c5c0a2e11f4afc53f1dd59899c5
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288595"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825850"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrar aplicativos Tomcat para o Tomcat no Serviço de Aplicativo do Azure
 
@@ -21,34 +21,15 @@ Este guia descreve as informações das quais você deve estar ciente quando des
 Se você não puder atender a nenhum dos requisitos de pré-migração, consulte os seguintes guias de migração complementares:
 
 * [Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Migrar aplicativos do Tomcat para máquinas virtuais do Azure (em breve)
+* Migrar aplicativos do Tomcat para Máquinas Virtuais do Azure (planejado)
 
 ## <a name="pre-migration-steps"></a>Etapas de pré-migração
 
-* [Alternar para uma plataforma compatível](#switch-to-a-supported-platform)
-* [Recursos externos de inventário](#inventory-external-resources)
-* [Segredos de inventário](#inventory-secrets)
-* [Uso da persistência de inventário](#inventory-persistence-usage)
-* [Casos especiais](#special-cases)
-
 ### <a name="switch-to-a-supported-platform"></a>Alternar para uma plataforma compatível
 
-O Serviço de Aplicativo oferece versões específicas do Tomcat em versões específicas do Java. Para garantir a compatibilidade, migre seu aplicativo para uma das versões compatíveis do Tomcat e do Java em seu ambiente atual antes de prosseguir com qualquer uma das etapas restantes. É necessário testar completamente a configuração resultante. Use o [Red Hat Enterprise Linux 8](https://portal.azure.com/#create/RedHat.RedHatEnterpriseLinux80-ARM) como o sistema operacional em tais testes.
+O Serviço de Aplicativo oferece versões específicas do Tomcat em versões específicas do Java. Para garantir a compatibilidade, migre seu aplicativo para uma das versões compatíveis do Tomcat e do Java em seu ambiente atual antes de prosseguir com as etapas restantes. É necessário testar completamente a configuração resultante. Use a versão estável mais recente da sua distribuição do Linux nesses testes.
 
-#### <a name="java"></a>Java
-
-> [!NOTE]
-> Essa validação é especialmente importante se o servidor atual estiver sendo executado em um JDK não compatível (como Oracle JDK ou IBM OpenJ9).
-
-Para determinar a sua versão atual do Java, entre no servidor de produção e execute o seguinte comando:
-
-```bash
-java -version
-```
-
-Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe [Zulu 8](https://www.azul.com/downloads/zulu-community/?&version=java-8-lts&os=&os=linux&architecture=x86-64-bit&package=jdk) se você pretende usar o runtime 8 do Java ou [Zulu 11](https://www.azul.com/downloads/zulu-community/?&version=java-11-lts&os=&os=linux&architecture=x86-64-bit&package=jdk) se você pretende usar o runtime 11 do Java.
-
-#### <a name="tomcat"></a>Tomcat
+[!INCLUDE [note-obtain-your-current-java-version](includes/migration/note-obtain-your-current-java-version.md)]
 
 Para determinar a sua versão atual do Tomcat, entre no servidor de produção e execute o seguinte comando:
 
@@ -61,6 +42,8 @@ Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe o [
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
 [!INCLUDE [inventory-secrets](includes/migration/inventory-secrets.md)]
+
+[!INCLUDE [inventory-certificates](includes/migration/inventory-certificates.md)]
 
 [!INCLUDE [inventory-persistence-usage](includes/migration/inventory-persistence-usage.md)]
 
@@ -123,7 +106,7 @@ Se você usar [AccessLogValve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/
 
 ## <a name="migration"></a>Migração
 
-### <a name="parametrize-the-configuration"></a>Parametrizar a configuração
+### <a name="parameterize-the-configuration"></a>Parametrizar a configuração
 
 Na pré-migração, você provavelmente terá identificado segredos e dependências externas, como fontes de dados, nos arquivos *server.xml* e *context.xml*. Para cada item identificado assim, substitua qualquer nome de usuário, senha, cadeia de conexão ou URL por uma variável de ambiente.
 
@@ -164,7 +147,7 @@ Em seguida, crie o plano do Serviço de Aplicativo. Para obter mais informaçõe
 
 ### <a name="create-and-deploy-web-apps"></a>Criar e implantar aplicativos Web
 
-Você precisará criar um aplicativo Web no plano do Serviço de Aplicativo para cada arquivo WAR implantado em seu servidor Tomcat.
+Você precisará criar um aplicativo Web no plano do Serviço de Aplicativo (escolhendo uma versão do Tomcat como a pilha de runtime) para cada arquivo WAR implantado em seu servidor Tomcat.
 
 > [!NOTE]
 > Embora seja possível implantar vários arquivos WAR em um único aplicativo Web, isso é altamente indesejável. Implantar vários arquivos WAR em um único aplicativo Web impede que cada aplicativo seja dimensionado de acordo com suas próprias demandas de uso. Ele também adiciona complexidade a pipelines de implantação subsequentes. Se vários aplicativos precisarem estar disponíveis em uma única URL, considere a possibilidade de usar uma solução de roteamento, como o [Gateway de Aplicativo do Azure](/azure/application-gateway/).
@@ -191,17 +174,15 @@ Se o aplicativo exigir opções específicas de runtime, [use o mecanismo mais a
 
 Use as Configurações do Aplicativo para armazenar os segredos específicos no aplicativo. Se você pretende usar os mesmos segredos entre vários aplicativos ou exigir funcionalidades de auditoria e políticas de acesso refinadas, [use o Azure Key Vault](/azure/app-service/containers/configure-language-java#use-keyvault-references) em vez das Configurações do Aplicativo.
 
-### <a name="configure-custom-domain-and-ssl"></a>Configurar domínio personalizado e SSL
+[!INCLUDE [configure-custom-domain-and-ssl](includes/migration/configure-custom-domain-and-ssl.md)]
 
-Se o aplicativo ficar visível em um domínio personalizado, você precisará [mapear seu aplicativo Web para ele](/azure/app-service/app-service-web-tutorial-custom-domain).
-
-Em seguida, você precisará [associar o certificado SSL para esse domínio ao seu aplicativo Web do Serviço de Aplicativo](/azure/app-service/app-service-web-tutorial-custom-ssl).
+[!INCLUDE [import-backend-certificates](includes/migration/import-backend-certificates.md)]
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>Migrar fontes de dados, bibliotecas e recursos de JNDI
 
 Siga [estas etapas para migrar fontes de dados](/azure/app-service/containers/configure-language-java#tomcat).
 
-Migre quaisquer dependências de classpath de nível de servidor adicionais seguindo [as mesmas etapas para arquivos jar de fonte de dados](/azure/app-service/containers/configure-language-java#finalize-configuration).
+Migre as dependências de classpath de nível de servidor adicionais seguindo [as mesmas etapas para arquivos JAR de fonte de dados](/azure/app-service/containers/configure-language-java#finalize-configuration).
 
 Migre quaisquer [recursos JDNI de nível de servidor compartilhados](/azure/app-service/containers/configure-language-java#shared-server-level-resources) adicionais.
 
@@ -214,14 +195,7 @@ Ao concluir a seção anterior, você deve ter sua configuração de servidor pe
 
 Concluir a migração copiando qualquer configuração adicional (como [Realms](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html), [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html))
 
-### <a name="migrate-scheduled-jobs"></a>Migrar os trabalhos agendados
-
-Para executar trabalhos agendados no Azure, considere a possibilidade de usar o [Azure Functions com um gatilho de temporizador](/azure/azure-functions/functions-bindings-timer). Você não precisa migrar o código do trabalho propriamente dito para uma função. A função pode simplesmente invocar uma URL no aplicativo para disparar o trabalho.
-
-Como alternativa, você pode criar um [aplicativo lógico](/azure/logic-apps/logic-apps-overview) com um [gatilho de recorrência](/azure/logic-apps/tutorial-build-schedule-recurring-logic-app-workflow#add-the-recurrence-trigger) para invocar a URL sem gravar nenhum código fora do aplicativo.
-
-> [!NOTE]
-> Para evitar o uso mal-intencionado, você provavelmente precisará garantir que o ponto de extremidade de invocação do trabalho exija credenciais. Nesse caso, a função de gatilho precisará fornecer as credenciais.
+[!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 
 ### <a name="restart-and-smoke-test"></a>Reinicialização e smoke test
 

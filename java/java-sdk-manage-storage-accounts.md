@@ -6,12 +6,12 @@ ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: b1eeaa139e7642220524a76869fd8713044f9df5
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 88298088099ed61c97eb6cb4a900c2ce55f5c3f0
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812320"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002422"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Gerenciar contas de armazenamento do Azure a partir dos seus aplicativos Java
 
@@ -43,7 +43,7 @@ StorageAccount storageAccount = azure.storageAccounts().define(storageAccountNam
                     .create();
 ```
 
-O nome de armazenamento fornecido deve ser exclusivo entre todos os nomes no Azure e conter apenas letras minúsculas e números. O perfil de desempenho e replicação padrão usado para essa conta é [Standard_GRS](https://docs.microsoft.com/azure/storage/storage-redundancy#geo-redundant-storage).
+O nome de armazenamento fornecido deve ser exclusivo entre todos os nomes no Azure e conter apenas letras minúsculas e números. O perfil de desempenho e replicação padrão usado para essa conta é [Standard_GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).
 
 ## <a name="list-keys-in-a-storage-account"></a>Listar chaves em uma conta de armazenamento
 ```java
@@ -75,7 +75,7 @@ for (StorageAccount sa : accounts) {
 }
 ```
 
-[com.microsoft.azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account) fornece um conjunto de métodos úteis para inspecionar a configuração de uma conta de armazenamento.
+[com.microsoft.azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount) fornece um conjunto de métodos úteis para inspecionar a configuração de uma conta de armazenamento.
 
 ## <a name="delete-a-storage-account"></a>Excluir uma conta de armazenamento
 ```java
@@ -100,8 +100,8 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 
 | Classe usada no exemplo | Observações
 |-------|-------|
-| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Representação de uma conta de armazenamento do Azure. Use os métodos na classe para obter informações sobre a conta de armazenamento.
-| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()` retorna as chaves da conta de armazenamento. Use os métodos `regenerateKey` em `StorageAccount` para atualizar as chaves.
+| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount)  | Representação de uma conta de armazenamento do Azure. Use os métodos na classe para obter informações sobre a conta de armazenamento.
+| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccountkey) | `StorageAccount.getKeys()` retorna as chaves da conta de armazenamento. Use os métodos `regenerateKey` em `StorageAccount` para atualizar as chaves.
 
 ## <a name="next-steps"></a>Próximas etapas
 

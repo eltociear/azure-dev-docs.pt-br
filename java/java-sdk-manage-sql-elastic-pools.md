@@ -6,12 +6,12 @@ ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9a30217ccd336b0fa656910c9015615a95dc193a
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 535490109824f0caf9e7d041114ada9a507b41ea
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812335"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002439"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Gerenciar bancos de dados SQL do Azure em pools elásticos a partir dos seus aplicativos Java
 
@@ -48,7 +48,7 @@ SqlServer sqlServer = azure.sqlServers().define(sqlServerName)
                     .create();
 ```
 
-Consulte a [referência da classe ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_editions) para os valores da edição atual. Leia a [documentação de pool elástico de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) para comparar as características de recursos de cada edição. 
+Consulte a [referência da classe ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooleditions) para os valores da edição atual. Leia a [documentação de pool elástico de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) para comparar as características de recursos de cada edição. 
 
 ## <a name="change-database-transaction-unit-dtu-settings-in-an-elastic-pool"></a>Alterar as configurações de Unidade de Transação de Banco de Dados (DTU) em um pool elástico
 
@@ -83,7 +83,7 @@ anotherDatabase = anotherDatabase.update()
                      .apply();
 ```
 
-Consulte a [referência da classe DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._database_editions) para valores a serem passados para `withEdition()`.
+Consulte a [referência da classe DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.databaseeditions) para valores a serem passados para `withEdition()`.
 
 ## <a name="list-current-database-activities-in-an-elastic-pool"></a>Listar as atividades atuais do banco de dados em um pool elástico
 ```java
@@ -106,7 +106,7 @@ for (SqlDatabase databaseInServer : elasticPool.listDatabases()) {
 }
 ```
 
-Analise os métodos em [com.microsoft.azure.management.sql.SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) para consultar os bancos de dados em mais detalhes.
+Analise os métodos em [com.microsoft.azure.management.sql.SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqldatabase) para consultar os bancos de dados em mais detalhes.
 
 ## <a name="delete-an-elastic-pool"></a>Excluir um pool elástico
 ```java
@@ -123,13 +123,13 @@ O exemplo exclui todos os recursos criados antes de sair.
 
 | Classe usada no exemplo | Observações |
 |-------|-------|
-| [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_server) | Banco de Dados do SQL server no Azure criados pela cadeia fluente `azure.sqlServers().define()...create()`. Fornece métodos para criar e trabalhar com bancos de dados e pools elásticos. 
-| [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) | Objeto do lado do cliente que representa um banco de dados SQL. Criado por meio de `sqlServer().define()...create()`. 
-| [DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._database_editions) | Campos estáticos constantes usados para configurar recursos de banco de dados durante a criação de um banco de dados fora de um pool elástico ou ao mover um banco de dados para fora de um pool elástico  
-| [SqlElasticPool](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_elastic_pool) | Criada a partir da seção `withNewElasticPool()` da cadeia fluente que criou o SqlServer no Azure. Fornece métodos para definir os limites de recurso para bancos de dados em execução no pool elástico e para o pool elástico em si. 
-| [ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_editions) | Classe de campos constantes que define os recursos disponíveis para um pool elástico. Consulte [documentação de pool elástico de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) para obter detalhes sobre a camada. 
-| [ElasticPoolDatabaseActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_database_activity) | Recuperados do `SqlElasticPool.listDatabaseActivities()`. Cada objeto desse tipo representa uma atividade executada em um banco de dados no pool elástico.
-| [ElasticPoolActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_activity) | Recuperado em uma Lista de `SqlElasticPool.listActivities()`. Cada objeto na lista representa uma atividade executada no pool elástico (não os bancos de dados no pool elástico).
+| [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqlserver) | Banco de Dados do SQL server no Azure criados pela cadeia fluente `azure.sqlServers().define()...create()`. Fornece métodos para criar e trabalhar com bancos de dados e pools elásticos. 
+| [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqldatabase) | Objeto do lado do cliente que representa um banco de dados SQL. Criado por meio de `sqlServer().define()...create()`. 
+| [DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.databaseeditions) | Campos estáticos constantes usados para configurar recursos de banco de dados durante a criação de um banco de dados fora de um pool elástico ou ao mover um banco de dados para fora de um pool elástico  
+| [SqlElasticPool](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqlelasticpool) | Criada a partir da seção `withNewElasticPool()` da cadeia fluente que criou o SqlServer no Azure. Fornece métodos para definir os limites de recurso para bancos de dados em execução no pool elástico e para o pool elástico em si. 
+| [ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooleditions) | Classe de campos constantes que define os recursos disponíveis para um pool elástico. Consulte [documentação de pool elástico de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) para obter detalhes sobre a camada. 
+| [ElasticPoolDatabaseActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooldatabaseactivity) | Recuperados do `SqlElasticPool.listDatabaseActivities()`. Cada objeto desse tipo representa uma atividade executada em um banco de dados no pool elástico.
+| [ElasticPoolActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpoolactivity) | Recuperado em uma Lista de `SqlElasticPool.listActivities()`. Cada objeto na lista representa uma atividade executada no pool elástico (não os bancos de dados no pool elástico).
 
 ## <a name="next-steps"></a>Próximas etapas
 

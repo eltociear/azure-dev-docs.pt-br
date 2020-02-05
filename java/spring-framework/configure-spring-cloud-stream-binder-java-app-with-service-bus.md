@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: 2d888d225a8bcf5c957da11e18ea86d09ec8e897
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 8c62a68ff2a9912d88361adc6ef3b8dc2ea29c98
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812037"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002280"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Como usar o Spring Cloud Stream Binder no Barramento de Serviço do Azure
 
@@ -21,11 +21,11 @@ O Azure fornece uma plataforma de mensagens assíncrona chamada [Barramento de S
 
 Este artigo mostra como usar o Spring Cloud Stream Binder para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os pré-requisitos a seguir são obrigatórios neste artigo:
 
-1. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) ou inscrever-se para obter uma [conta gratuita](https://azure.microsoft.comfree/).
+1. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) ou inscrever-se para obter uma [conta gratuita](https://azure.microsoft.com/free/).
 
 1. Um JDK (Java Development Kit) compatível, versão 8 ou posterior. Para obter mais informações sobre os JDKs disponíveis para usar durante o desenvolvimento no Azure, confira <https://aka.ms/azure-jdks>.
 
@@ -119,7 +119,7 @@ Os pré-requisitos a seguir são obrigatórios neste artigo:
 
     **<a name="fd">Descrições de campo</a>**
 
-    |                                        Campo                                   |                                                                                   DESCRIÇÃO                                                                                    |
+    |                                        Campo                                   |                                                                                   Descrição                                                                                    |
     |--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |               `spring.cloud.azure.servicebus.connection-string`                |                                        Especifique a cadeia de conexão obtida no namespace do Barramento de Serviço no portal do Azure.                                   |
     |               `spring.cloud.stream.bindings.input.destination`                 |                            Especifique a fila ou o tópico do Barramento de Serviço usado neste tutorial.                         |
@@ -264,7 +264,7 @@ Nesta seção, você criará as classes Java necessárias para enviar mensagens 
     Message 'hello' successfully checkpointed
     ```
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Quando não for mais necessário, use o [portal do Azure](https://portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
 

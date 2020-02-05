@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9f66434c67cabd08304faecb56e51107a2aeb8ee
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 3c537d7d7030ea46bdbc7d6873819ea8e12f03b3
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812296"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002351"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Criar e gerenciar redes virtuais do Azure de seus aplicativos Java
 
@@ -173,9 +173,9 @@ Este exemplo cria uma rede virtual com duas sub-redes e uma máquina virtual em 
 
 | Classe usada no exemplo | Observações
 |-------|-------|
-| [Rede](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | Representação de objeto de local da rede virtual criada a partir de `azure.networks().define()...create()` . Use a cadeia fluente `update()...apply()` para atualizar uma rede virtual existente.
-| [Sub-rede](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | Criar sub-redes na rede virtual ao definir ou atualizar a rede usando `withSubnet()`. Obter representações de objeto de uma sub-rede a partir de `Network.subnets().get()` ou `Network.subnets().entrySet()`. Esses objetos possuem métodos para consultar propriedades de sub-rede.
-| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network_security_group) | Criado usando a cadeia fluente `azure.networkSecurityGroups().define()...create()` e, em seguida, aplicado às sub-redes através da atualização ou criação de sub-redes em uma rede virtual. 
+| [Rede](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.network) | Representação de objeto de local da rede virtual criada a partir de `azure.networks().define()...create()` . Use a cadeia fluente `update()...apply()` para atualizar uma rede virtual existente.
+| [Sub-rede](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.subnet) | Criar sub-redes na rede virtual ao definir ou atualizar a rede usando `withSubnet()`. Obter representações de objeto de uma sub-rede a partir de `Network.subnets().get()` ou `Network.subnets().entrySet()`. Esses objetos possuem métodos para consultar propriedades de sub-rede.
+| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.networksecuritygroup) | Criado usando a cadeia fluente `azure.networkSecurityGroups().define()...create()` e, em seguida, aplicado às sub-redes através da atualização ou criação de sub-redes em uma rede virtual. 
 
 ## <a name="next-steps"></a>Próximas etapas
 

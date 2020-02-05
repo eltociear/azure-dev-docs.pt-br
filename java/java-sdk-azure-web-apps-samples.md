@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
 ms.custom: seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 031136696445178d16b5de0c2868996916a1a9ec
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 30884958dd4c829cf7b268715de7c79f3a786724
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812350"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002473"
 ---
 # <a name="azure-management-libraries-for-java---web-app-samples"></a>Bibliotecas de gerenciamento do Azure para Java – exemplos de aplicativo Web 
 
@@ -32,8 +32,8 @@ A tabela a seguir contém links para código-fonte em Java que você pode usar p
 | [Conectar um aplicativo web a um banco de dados SQL][6] | Criar um aplicativo Web e um Banco de Dados SQL e, em seguida, adicionar a cadeia de conexão do banco de dados às configurações do aplicativo. |
 
 [1]: java-sdk-configure-webapp-sources.md
-[2]: https://azure.microsoft.com/resources/samples/app-service-java-manage-staging-and-production-slots-for-web-apps/
-[3]: https://azure.microsoft.com/resources/samples/app-service-java-manage-web-apps-with-custom-domains/
+[2]: https://github.com/Azure-Samples/app-service-java-manage-staging-and-production-slots-for-web-apps/
+[3]: https://github.com/Azure-Samples/app-service-java-manage-web-apps-with-custom-domains/
 [4]: https://azure.microsoft.com/resources/samples/app-service-java-scale-web-apps-on-linux/
-[5]: https://azure.microsoft.com/resources/samples/app-service-java-manage-storage-connections-for-web-apps/
-[6]: https://azure.microsoft.com/resources/samples/app-service-java-manage-data-connections-for-web-apps/
+[5]: https://github.com/Azure-Samples/app-service-java-manage-storage-connections-for-web-apps/
+[6]: https://github.com/Azure-Samples/app-service-java-manage-data-connections-for-web-apps/

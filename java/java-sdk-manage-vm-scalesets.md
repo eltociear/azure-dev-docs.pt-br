@@ -6,12 +6,12 @@ ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: bd956502c6cd5910f6c22844840aeec6cb1ec8aa
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 092bb328c4d7e68da9c75a43eaa9c31173d79864
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812295"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002527"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Gerenciar conjuntos de dimensionamento das máquinas virtuais do Azure a partir dos seus aplicativos Java
 
@@ -226,11 +226,11 @@ Aumentar o número de máquinas virtuais no conjunto de dimensionamento usando `
    
 | Classe usada no exemplo | Observações
 |-------|-------|
-| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | Consultar, iniciar, parar, atualizar e excluir todas as máquinas virtuais no conjunto de dimensionamento.
-| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | Recuperados de `virtualMachineScaleSet.virtualMachines().get()` ou `list()`, permite consultar, iniciar, parar, configurar e excluir as máquinas virtuais no conjunto de dimensionamento.
-| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | Retornado de `virtualMachineScaleSet.listNetworkInterfaces()`, representação somente leitura de uma interface de rede em uma máquina virtual em um conjunto de dimensionamento.
-| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | Classe de campos estáticos usada para definir a [camada do conjunto de dimensionamento de máquina virtual](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/) usado para definir o quanto os membros do conjunto de dimensionamento de recursos podem consumir.
-| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | Usado para consultar a configuração de IP associada a uma interface de rede em uma máquina de virtual do conjunto de dimensionamento.
+| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescaleset) | Consultar, iniciar, parar, atualizar e excluir todas as máquinas virtuais no conjunto de dimensionamento.
+| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetvm) | Recuperados de `virtualMachineScaleSet.virtualMachines().get()` ou `list()`, permite consultar, iniciar, parar, configurar e excluir as máquinas virtuais no conjunto de dimensionamento.
+| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnetworkinterface) | Retornado de `virtualMachineScaleSet.listNetworkInterfaces()`, representação somente leitura de uma interface de rede em uma máquina virtual em um conjunto de dimensionamento.
+| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetskutypes) | Classe de campos estáticos usada para definir a [camada do conjunto de dimensionamento de máquina virtual](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/) usado para definir o quanto os membros do conjunto de dimensionamento de recursos podem consumir.
+| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnicipconfiguration) | Usado para consultar a configuração de IP associada a uma interface de rede em uma máquina de virtual do conjunto de dimensionamento.
 
 ## <a name="next-steps"></a>Próximas etapas
 

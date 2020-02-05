@@ -5,12 +5,12 @@ author: rloutlaw
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
 ms.topic: article
 ms.date: 03/30/2017
-ms.openlocfilehash: 8ed90b7fff9c973481af1603e14fdb5858d5b9e0
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: e8cda5ca26b57e7c64d577fb5542295c930f5623
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812345"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002456"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Configurar fontes de implantação do Serviço de Aplicativo do Azure a partir dos seus aplicativos Java
 
@@ -153,12 +153,12 @@ O quarto aplicativo implanta o código em sua ramificação mestre toda vez que 
 
 | Classe usada no exemplo | Observações
 |-------|-------|
-| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | Criada a partir da cadeia fluente `azure.webApps().define()....create()`. Cria um aplicativo Web do Serviço de Aplicativo e todos os recursos necessários para o aplicativo. A maioria dos métodos de consulta o objeto para obter detalhes de configuração, mas métodos de verbo como `restart()` alteram o estado do aplicativo Web.
-| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | Classe com campos públicos estáticos usados como parâmetros para `withWebContainer()` ao definir um aplicativo Web executando um contêiner Web de Java. Existem opções para as versões Jetty e Tomcat.
-| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._publishing_profile) | Obtido por meio de um objeto de aplicativo Web usando o método `getPublishingProfile()`. Contém informações de implantação Git e FTP, incluindo o nome de usuário e senha de implantação (que são diferentes das credenciais da entidade de serviço ou da conta do Azure).
-| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_plan) | Retornado por `azure.appServices().appServicePlans().getByResourceGroup()`. Os métodos estão disponíveis para verificar a capacidade, a camada e o número de aplicativos Web em execução no plano.
-| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_pricing_tier) | Classe com campos estáticos públicos, que representa as camadas do Serviço de Aplicativo. Usada para definir uma camada de plano na linha durante a criação do aplicativo com `withPricingTier()` ou diretamente ao definir um plano por meio de `azure.appServices().appServicePlans().define()`
-| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._java_version) | Classe com campos estáticos públicos, que representa as versões Java compatíveis com o Serviço de Aplicativo. Usada com `withJavaVersion()` durante a cadeia `define()...create()` ao criar um novo aplicativo Web.
+| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webapp) | Criada a partir da cadeia fluente `azure.webApps().define()....create()`. Cria um aplicativo Web do Serviço de Aplicativo e todos os recursos necessários para o aplicativo. A maioria dos métodos de consulta o objeto para obter detalhes de configuração, mas métodos de verbo como `restart()` alteram o estado do aplicativo Web.
+| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webcontainer) | Classe com campos públicos estáticos usados como parâmetros para `withWebContainer()` ao definir um aplicativo Web executando um contêiner Web de Java. Existem opções para as versões Jetty e Tomcat.
+| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.publishingprofile) | Obtido por meio de um objeto de aplicativo Web usando o método `getPublishingProfile()`. Contém informações de implantação Git e FTP, incluindo o nome de usuário e senha de implantação (que são diferentes das credenciais da entidade de serviço ou da conta do Azure).
+| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.appserviceplan) | Retornado por `azure.appServices().appServicePlans().getByResourceGroup()`. Os métodos estão disponíveis para verificar a capacidade, a camada e o número de aplicativos Web em execução no plano.
+| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.PricingTier) | Classe com campos estáticos públicos, que representa as camadas do Serviço de Aplicativo. Usada para definir uma camada de plano na linha durante a criação do aplicativo com `withPricingTier()` ou diretamente ao definir um plano por meio de `azure.appServices().appServicePlans().define()`
+| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.javaversion) | Classe com campos estáticos públicos, que representa as versões Java compatíveis com o Serviço de Aplicativo. Usada com `withJavaVersion()` durante a cadeia `define()...create()` ao criar um novo aplicativo Web.
 
 ## <a name="next-steps"></a>Próximas etapas
 

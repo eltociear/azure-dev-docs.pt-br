@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: b64095bc2971bf9d9a7308bebdb91617538796c4
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 17baf4899bd47b15bc60d02b853605c422d3c82b
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812116"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002307"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Como usar o iniciador do Spring Boot para o JMS do Barramento de Serviço do Azure
 
@@ -23,11 +23,11 @@ O iniciador do Spring Boot para o JMS do Barramento de Serviço do Azure oferece
 
 Neste artigo, você verá como usar o iniciador do Spring Boot para JMS do Barramento de Serviço do Azure para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os pré-requisitos a seguir são obrigatórios neste artigo:
 
-1. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) ou inscrever-se para obter uma [conta gratuita](https://azure.microsoft.comfree/).
+1. Se ainda não tiver uma assinatura do Azure, você poderá ativar os [Benefícios do assinante do MSDN](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) ou inscrever-se para obter uma [conta gratuita](https://azure.microsoft.com/free/).
 
 1. Um JDK (Java Development Kit) compatível, versão 8 ou posterior. Para obter mais informações sobre os JDKs disponíveis para usar durante o desenvolvimento no Azure, confira <https://aka.ms/azure-jdks>.
 
@@ -94,7 +94,7 @@ Nesta seção, você verá como configurar o aplicativo para usar uma fila ou um
 
     **Descrições de campo**
 
-    | Campo                                     | DESCRIÇÃO                                                                                     |
+    | Campo                                     | Descrição                                                                                     |
     |-------------------------------------------|-------------------------------------------------------------------------------------------------|
     | `spring.jms.servicebus.connection-string` | Especifique a cadeia de conexão obtida no namespace do Barramento de Serviço no portal do Azure. |
     | `spring.jms.servicebus.idle-timeout`      | Especifique o tempo limite de ociosidade em milissegundos. O valor recomendado para este tutorial é de 1800000.   |
@@ -123,7 +123,7 @@ Nesta seção, você verá como configurar o aplicativo para usar uma fila ou um
 
     **Descrições de campo**
 
-    | Campo                                     | DESCRIÇÃO                                                                                       |
+    | Campo                                     | Descrição                                                                                       |
     |-------------------------------------------|---------------------------------------------------------------------------------------------------|
     | `spring.jms.servicebus.connection-string` | Especifique a cadeia de conexão obtida no namespace do Barramento de Serviço no portal do Azure.   |
     | `spring.jms.servicebus.topic-client-id`   | Especifique a ID do cliente do JMS se você estiver usando um tópico do Barramento de Serviço do Azure com uma assinatura durável. |
@@ -344,7 +344,7 @@ Nesta seção, você criará as classes Java necessárias para enviar mensagens 
     [enerContainer-1] com.wingtiptoys.servicebus.ReceiveController : Received message: hello
     ```
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Quando não for mais necessário, use o [portal do Azure](https://portal.azure.com/) para excluir os recursos criados neste artigo para evitar cobranças inesperadas.
 

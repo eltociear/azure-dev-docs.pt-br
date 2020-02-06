@@ -4,12 +4,12 @@ description: Etapa 2 do tutorial, implantando a imagem real do Docker no Serviç
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0039b2cc9e612d7e03398e772183fe6eb81313f2
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 446653a4de98954ae75caa38c9cb2ae04ec071c4
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467044"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002368"
 ---
 # <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>Tutorial: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure
 
@@ -37,7 +37,7 @@ Com uma imagem de contêiner em um registro, você pode usar a extensão do Dock
 
 1. A criação do serviço de aplicativo leva alguns minutos e você vê o andamento no painel de Saída do VS Code.
 
-1. Após a conclusão, você também **precisa** adicionar uma configuração chamada `WEBSITES_PORT` (observe que é usado "WEBSITES", no plural) ao Serviço de Aplicativo para especificar a porta em que o contêiner está escutando. (Se você estiver usando uma imagem do tutorial [Criar um contêiner de Python no VS Code](https://code.visualstudio.com/docs/python/tutorial-create-container), por exemplo, a porta será 5000 para Flask e 8000 para Django). Para definir `WEBSITES_PORT`, vá para o explorador do **Azure: Serviço de Aplicativo**, expanda o nó do novo Serviço de Aplicativo (atualize se necessário), clique com o botão direito do mouse em **Configurações do Aplicativo** e selecione **Adicionar Nova Configuração**. Nos prompts, insira `WEBSITES_PORT` como a chave e o número da porta para o valor.
+1. Após a conclusão, você também **precisa** adicionar uma configuração chamada `WEBSITES_PORT` (observe que é usado "WEBSITES", no plural) ao Serviço de Aplicativo para especificar a porta em que o contêiner está escutando. (Se você estiver usando uma imagem do tutorial [Criar um contêiner de Python no VS Code](https://code.visualstudio.com/docs/python/tutorial-create-containers), por exemplo, a porta será 5000 para Flask e 8000 para Django). Para definir `WEBSITES_PORT`, vá para o explorador do **Azure: Serviço de Aplicativo**, expanda o nó do novo Serviço de Aplicativo (atualize se necessário), clique com o botão direito do mouse em **Configurações do Aplicativo** e selecione **Adicionar Nova Configuração**. Nos prompts, insira `WEBSITES_PORT` como a chave e o número da porta para o valor.
 
     ![Adicionar Nova Configuração a um Serviço de Aplicativo que especifica uma porta](media/deploy-containers/add-new-setting-in-app-service-settings-explorer.png)
 

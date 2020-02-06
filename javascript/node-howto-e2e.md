@@ -4,12 +4,12 @@ description: Tutorial completo ilustrando como criar, colocar em contêineres co
 ms.topic: article
 ms.date: 06/25/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: 98b154a78702fa5c5a0808170c8227ce7910459b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b8841e5259a49b45db1f526330e0238d1bd0d050
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467385"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002517"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Desenvolver e implantar um aplicativo Node.js em contêineres com o Visual Studio Code e o Azure
 
@@ -17,7 +17,7 @@ Este tutorial ilustra como pegar um aplicativo em Node.js existente, "colocá-lo
 
 O tutorial usa um aplicativo simples de tarefa pendente criado e publicado pela [Scotch.io](https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular). Ele é um aplicativo MEAN de página única e, portanto, usa o MongoDB como seu banco de dados, Node/Express para a API REST/servidor Web e Angular.js 1.x para a interface do usuário de front-end. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para acompanhar a demonstração, você precisará ter estes softwares instalados:
 
@@ -148,7 +148,7 @@ Abra um navegador e navegue até `http://localhost:8080` para ver o aplicativo e
 
 ![Adicionar ou remover tarefas pendentes com o aplicativo](./media/node-howto-e2e/add-remove-todos-app.png)
 
-## <a name="debugging"></a>Depurando
+## <a name="debugging"></a>Depuração
 
 Além de ser capaz de executar o aplicativo e interagir com ele por meio do console integrado, o Visual Studio Code fornece a capacidade de definir pontos de interrupção diretamente em seu código. Por exemplo, pressione **Ctrl**+**P** para exibir o seletor de arquivos. Quando o seletor de arquivos for exibido, digite `route` e selecione o arquivo *route.js*.
 
@@ -354,7 +354,7 @@ Para começar, abra o terminal do Visual Studio. Você usará a nova CLI 2.0 do 
     ```
 
     > [!NOTE]
-    > Se, em vez de usar um contêiner personalizado, você preferir uma implantação do Git, consulte o artigo [Criar um aplicativo Web em Node.js no Azure](/azure/app-service-web/app-service-web-get-started-nodejs#configure-to-use-nodejs).
+    > Se, em vez de usar um contêiner personalizado, você preferir uma implantação do Git, consulte o artigo [Criar um aplicativo Web em Node.js no Azure](/azure/app-service-web/app-service-web-get-started-nodejs).
 
 1. Defina o aplicativo Web como a instância da Web padrão:
 

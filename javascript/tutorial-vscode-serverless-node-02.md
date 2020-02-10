@@ -3,18 +3,18 @@ title: Criar o aplicativo Azure Functions usando o Visual Studio Code
 description: Parte 2 do tutorial, criar o aplicativo Azure Functions
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 5b2e46cde8740020cc2ad7a1b50ac9b4687d17d3
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467118"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967242"
 ---
 # <a name="create-the-local-functions-app"></a>Criar o aplicativo Functions local
 
 [Etapa anterior: Introdução e pré-requisitos](tutorial-vscode-serverless-node-01.md)
 
-Nesta etapa, você cria um aplicativo Azure Functions local contendo uma função que usa um gatilho HTTP. Um aplicativo Azure Functions pode conter muitas Funções com diferentes gatilhos. O gatilho HTTP processa especificamente o tráfego HTTP de entrada.
+Nesta etapa, você cria um aplicativo Azure Functions local com uma função que usa um [gatilho HTTP](https://docs.microsoft.com/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Um aplicativo Azure Functions pode conter muitas Funções com [diferentes gatilhos](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings). O gatilho HTTP processa especificamente o tráfego HTTP de entrada.
 
 1. Em um terminal ou prompt de comando, execute o Visual Studio Code de dentro de uma pasta adequada para o projeto:
 
@@ -45,7 +45,7 @@ Nesta etapa, você cria um aplicativo Azure Functions local contendo uma funçã
 
 1. Após alguns instantes, o VS Code conclui a criação do projeto. Você tem uma pasta nomeada para a função, *HttpExample*, na qual há três arquivos:
 
-    | Nome de arquivo | DESCRIÇÃO |
+    | Nome de arquivo | Descrição |
     | --- | --- |
     | *index.js* |  O código-fonte que responde à solicitação HTTP. |
     | *functions.json* | A [configuração de associação](/azure/azure-functions/functions-triggers-bindings) para o gatilho HTTP. |

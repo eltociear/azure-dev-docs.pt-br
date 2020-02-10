@@ -3,12 +3,12 @@ title: Executar o aplicativo Azure Functions localmente no Visual Studio Code
 description: Parte 3 do tutorial, executar o aplicativo localmente para testá-lo.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 2a7cb5e5c433c90d74cd3b7771ce90529f617fcb
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466574"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967226"
 ---
 # <a name="test-the-function-locally"></a>Testar a função localmente
 
@@ -20,7 +20,7 @@ Quando você criou o aplicativo Functions, a extensão do Azure Functions adicio
 
 1. No Visual Studio Code, pressione **F5** (ou use o comando de menu **Depurar** > **Iniciar Depuração**) para iniciar o depurador e anexá-lo ao host do Azure Functions. (Esse comando usa automaticamente a configuração de depuração única que o Azure Functions criou.)
 
-1. A saída das ferramentas Functions Core aparece no painel do **Terminal** do VS Code. Depois que o host for iniciado, use **Ctrl**+clique na URL local mostrada na saída para abrir o navegador e executar a função:
+1. A saída das ferramentas Functions Core aparece no painel do **Terminal** do VS Code. Depois que o host for iniciado, use **Alt**+clique na URL local mostrada na saída para abrir o navegador e executar a função:
 
     ![Saída mostrada no painel do Terminal do VS Code ao depurar localmente](media/functions-extension/local-test-output.png)
 
@@ -33,4 +33,4 @@ Quando você criou o aplicativo Functions, a extensão do Azure Functions adicio
     ![VS Code parado em um ponto de interrupção](media/functions-extension/debugging-breakpoint.png)
 
 > [!div class="nextstepaction"]
-> [Executei o aplicativo de Funções localmente](tutorial-vscode-serverless-node-04.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)
+> [Executei o aplicativo Functions localmente](tutorial-vscode-serverless-node-04.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

@@ -3,16 +3,16 @@ title: Criar um aplicativo Inicializador Spring Boot – Cache do Azure para Red
 description: Configurar um aplicativo Spring Boot criado com o Inicializador do Spring para usar o Redis na nuvem com o Cache Redis do Azure.
 services: redis-cache
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: e70b5f9b8427bebd9c5ca3761a664464ad3b0909
-ms.sourcegitcommit: 670874dfe49e6ffa5bee88555851878f0da93042
+ms.openlocfilehash: 8287cf923acb5770a5ba5eb88fe60896e6cd3a4d
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034033"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075277"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurar um aplicativo Inicializador do Spring Boot para usar o Redis na nuvem com o Cache Redis do Azure
 
@@ -30,18 +30,17 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 1. Navegue até <https://start.spring.io/>.
 
-1. Especifique que você deseja gerar um projeto **Maven** com **Java**, insira os nomes de **Grupo** e **Artefato** para o seu aplicativo e, em seguida, clique no link para **Alternar para a versão completa** do Spring Initializr.
+1. Especifique que você deseja gerar um projeto **Maven** com **Java** e insira os nomes de **Grupo** e **Artefato** para o seu aplicativo.
+
+1. Adicione dependências para a seção do **Spring Web** e marque a caixa **Web**. Em seguida, role para baixo até a seção **NoSQL** e marque a caixa **Redis Reativo do Spring Data**. 
+1. Role até a parte inferior da página e clique no botão **Gerar Projeto**.
 
    ![Opções básicas do Initializr Basic][SI01]
 
    > [!NOTE]
    >
-   > O Spring Initializr usa os nomes de **Grupo** e **Artefato** para criar o nome do pacote; por exemplo: *com.contoso.myazuredemo*.
+   > O Spring Initializr usará os nomes de **Grupo** e **Artefato** para criar o nome do pacote, por exemplo: *com.contoso.myazuredemo*.
    >
-
-1. Role para baixo até a seção **Web** e marque a caixa **Web**, em seguida, role para baixo até a seção **NoSQL** e marque a caixa **Redis**, em seguida, role até a parte inferior da página e clique no botão para **Gerar Projeto**.
-
-   ![Opções do Spring Initilializr Completo][SI02]
 
 1. Quando solicitado, baixe o projeto para um caminho no computador local.
 
@@ -54,8 +53,6 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 ## <a name="create-a-redis-cache-on-azure"></a>Criar um cache Redis no Azure
 
 1. Navegue até o Portal do Azure em <https://portal.azure.com/> e clique em **+Novo**.
-
-   ![Portal do Azure][AZ01]
 
 1. Clique em **Banco de Dados**e, em seguida, clique em **Cache Redis**.
 
@@ -208,7 +205,7 @@ Para obter mais informações sobre como usar o Azure com Java, confira [Azure p
 
 Para obter mais informações sobre como começar a usar o Cache Redis com Java no Azure, consulte [Como usar o Cache Redis do Azure com Java][Redis Cache with Java].
 
-O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o  **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
+O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
 
 <!-- URL List -->
 

@@ -3,12 +3,12 @@ title: Executar o aplicativo Azure Functions localmente no Visual Studio Code
 description: Parte 3 do tutorial, executar o aplicativo localmente para testá-lo.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fd2255fa3a085f979e5893d6178063ee8686ea08
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967226"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144044"
 ---
 # <a name="test-the-function-locally"></a>Testar a função localmente
 
@@ -31,6 +31,10 @@ Quando você criou o aplicativo Functions, a extensão do Azure Functions adicio
 1. Com sua função em execução localmente, você pode definir pontos de interrupção em diferentes partes do código. (Para saber mais sobre pontos de interrupção e depuração no VS Code, confira [Depuração](https://code.visualstudio.com/docs/editor/debugging).) Abra *index.js* e clique na margem à esquerda da linha 11 na janela do editor. Um pequeno ponto vermelho é exibido para indicar um ponto de interrupção. Agora, remova o argumento `?name=` da URL no navegador. Quando o navegador faz essa solicitação, o VS Code interrompe o código de função naquele ponto de interrupção:
 
     ![VS Code parado em um ponto de interrupção](media/functions-extension/debugging-breakpoint.png)
+
+> [!Note]
+>
+> Caso encontre um erro de política de execução nesse processo, tente desinstalar `azure-functions-core-tools@3` com um npm e reinstale o pacote usando o Chocolatey em um terminal elevado.
 
 > [!div class="nextstepaction"]
 > [Executei o aplicativo Functions localmente](tutorial-vscode-serverless-node-04.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

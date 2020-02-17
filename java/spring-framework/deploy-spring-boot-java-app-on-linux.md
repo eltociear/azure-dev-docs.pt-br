@@ -9,18 +9,18 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a98575021be229ed067ce424cd101721c98f9ea4
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: b6c8e138c9d738b56d237180e618268cb71284e3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755721"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144083"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Implantar um aplicativo do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
 
 Este tutorial descreve como usar o [Docker] para colocar seu aplicativo [Spring Boot] em um contêiner e implantar sua própria imagem do Docker em um host Linux no [Serviço de Aplicativo do Azure](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requisitos:
 
@@ -223,7 +223,7 @@ Quando a implantação estiver concluída, selecione **Ir para o recurso**.  A p
 >
 > 4. Clique em **Configuração** no painel de navegação à esquerda.
 >
-> 5. Na seção **Configurações do aplicativo**, adicione uma nova configuração chamada **PORTA** e insira seu número da porta personalizada para o valor.
+> 5. Na seção **Configurações de aplicativo**, adicione uma nova configuração chamada **WEBSITES_PORT** e insira o número da porta personalizada para o valor.
 >
 > 6. Clique em **OK**. Em seguida, clique em **Salvar**.
 >

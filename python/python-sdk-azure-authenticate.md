@@ -1,175 +1,161 @@
 ---
-title: Autenticar com as bibliotecas de gerenciamento do Azure para Python
-description: Autenticar com uma entidade de serviço nas bibliotecas de gerenciamento do Azure para Python
-ms.date: 04/11/2019
+title: Autenticar aplicativos usando as bibliotecas de gerenciamento do Azure para Python
+description: Autenticar um aplicativo Python com os serviços do Azure usando as bibliotecas do SDK de gerenciamento do Azure
+ms.date: 01/16/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 760b8e7c565cbef3d8e6e7664a53f6e2758bbe8c
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.openlocfilehash: 0c1dc8395710eec86f2bcd2b7e8334b987f15917
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "75010544"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144037"
 ---
-# <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Autenticar com as bibliotecas de gerenciamento do Azure para Python
+# <a name="authenticate-by-using-the-azure-management-libraries-for-python"></a>Autenticar usando as bibliotecas de gerenciamento do Azure para Python
 
-Este artigo mostra como autenticar seu aplicativo ao usar as bibliotecas de gerenciamento do Python. Há várias opções para autenticar seu aplicativo com o Azure.
+Neste artigo, você aprenderá a usar as bibliotecas de gerenciamento do SDK do Python para autenticar um aplicativo com o Azure AD (Azure Active Directory) usando uma entidade de serviço. A entidade de serviço é a identidade de um aplicativo que está registrado no Azure AD e permite que o aplicativo acesse ou modifique recursos de acordo com permissões próprias.
+
+Para registrar os aplicativos, primeiro é necessário criar um Active Directory com um locatário apropriado para sua organização. É possível fazer isso seguindo as instruções em [Criar um novo locatário no Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant). Quando o Active Directory estiver pronto, siga o artigo de [Instruções: Use o portal para criar um aplicativo do Azure AD e uma entidade de serviço que possam acessar recursos](/azure/active-directory/develop/howto-create-service-principal-portal), nos quais seja possível registrar um aplicativo, [recuperar as IDs de locatário e do aplicativo (cliente) para a entidade de serviço](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) e configurar um [segredo de aplicativo](/azure/active-directory/develop/howto-create-service-principal-portal#create-a-new-application-secret), com o qual será possível se autenticar usando um código Python.
+
+Quando você tiver os valores será possível usar essas credenciais para se autenticar de várias maneiras usando as bibliotecas do SDK do Python. O resultado de cada método é o objeto cliente do SDK que você usa ao acessar outros recursos do código.
+
+É altamente recomendável armazenar a ID do locatário, a ID do cliente e o segredo no [Azure KeyVault](/azure/key-vault/) para que esses valores não estejam em nenhum lugar de seus sistemas nem no controle do código-fonte. Você pode recuperar os valores facilmente e sempre que precisar.
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
-## <a name="mgmt-auth-token"></a>Autenticar com credenciais do token
+## <a name="mgmt-auth-file"></a>Autenticar com um arquivo JSON
 
-Armazene as credenciais com segurança em um arquivo de configuração, no registro ou no Azure Key Vault.
+Neste método, você cria um arquivo JSON que contém as credenciais necessárias para a entidade de serviço e depois cria o objeto cliente do SDK usando as informações no arquivo.
 
-O exemplo a seguir usa uma [entidade de serviço](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json) para autenticação.
+1. Crie um arquivo JSON (com o nome que quiser, como *app_credentials. JSON*) com o formato a seguir. Substitua os quatro espaços reservados por sua ID da assinatura do Azure, pela ID de locatário do Azure AD, pela ID do aplicativo (cliente) e pelo segredo:
 
-> [!NOTE]
-> Para criar uma entidade de serviço com a CLI do Azure, use o seguinte comando:
->
-> ```bash
-> az ad sp create-for-rbac --name "MY-PRINCIPAL-NAME" --password "STRONG-SECRET-PASSWORD"
-> ```
->
-> Para saber mais sobre como configurar as entidades de serviço com a CLI, confira [Criar uma entidade de serviço do Azure com a CLI do Azure](/cli/azure/create-an-azure-service-principal-azure-cli)
+    ```json
+    {
+        "subscriptionId": "<azure_aubscription_id>",
+        "tenantId": "<tenant_id>",
+        "clientId": "<application_id>",
+        "clientSecret": "<application_secret>",
+        "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+        "resourceManagerEndpointUrl": "https://management.azure.com/",
+        "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+        "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+        "galleryEndpointUrl": "https://gallery.azure.com/",
+        "managementEndpointUrl": "https://management.core.windows.net/"
+    }
+    ```
+
+    > [!TIP]
+    > É possível recuperar um arquivo de credenciais com sua ID da assinatura existente ao entrar no Azure usando o comando [az login](/cli/azure/group#az-login) e depois o comando [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac):
+    >
+    > ```azurecli
+    > az login
+    > az ad sp create-for-rbac --sdk-auth > credentials.json
+    > ```
+    >
+    > Em seguida será possível substituir os valores `tenantId`, `clientId`, e `clientSecret` para um aplicativo específico em vez de usar os valores de uso geral.
+
+1. Salve esse arquivo em um local seguro, onde seu código possa acessá-lo.
+
+1. Use o método [get_client_from_auth_file](/python/api/azure-common/azure.common.client_factory?view=azure-python#get-client-from-auth-file-client-class--auth-path-none----kwargs-) para criar o objeto cliente, substituindo `<path_to_file>` pelo caminho para o arquivo JSON:
+
+    ```python
+    from azure.common.client_factory import get_client_from_auth_file
+    from azure.mgmt.compute import ComputeManagementClient
+
+    client = get_client_from_auth_file(ComputeManagementClient, auth_path=<path_to_file>)
+    ```
+
+1. Como alternativa é possível armazenar o caminho para o arquivo em uma variável de ambiente chamada `AZURE_AUTH_LOCATION` e omitir o argumento `auth_path`.
+
+## <a name="authenticate-with-a-json-dictionary"></a>Autenticar com um dicionário JSON
+
+Em vez de usar um arquivo, conforme descrito na seção anterior, é possível criar o JSON necessário em uma variável e chamar [get_client_from_json_dict](/python/api/azure-common/azure.common.client_factory?view=azure-python#get-client-from-json-dict-client-class--config-dict----kwargs-). Nesse caso, a ID do locatário, a ID do cliente e o segredo deverão ser sempre armazenados em um local seguro, como o [Azure KeyVault](/azure/key-vault/).
 
 ```python
-from azure.common.credentials import ServicePrincipalCredentials
+   from azure.common.client_factory import get_client_from_auth_file
+   from azure.mgmt.compute import ComputeManagementClient
 
-# Tenant ID for your Azure subscription
-TENANT_ID = '<Your tenant ID>'
+    # Retrieve tenant_id, client_id, and client_secret from Azure KeyVault
 
-# Your service principal App ID
-CLIENT = '<Your service principal ID>'
-
-# Your service principal password
-KEY = '<Your service principal password>'
-
-credentials = ServicePrincipalCredentials(
-    client_id = CLIENT,
-    secret = KEY,
-    tenant = TENANT_ID
-)
+   config_dict = {
+       "subscriptionId": "bfc42d3a-65ca-11e7-95cf-ecb1d756380e",
+        "tenantId": tenant_id,
+       "clientId": client_id,
+       "clientSecret": client_secret,
+       "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+       "resourceManagerEndpointUrl": "https://management.azure.com/",
+       "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+       "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+       "galleryEndpointUrl": "https://gallery.azure.com/",
+       "managementEndpointUrl": "https://management.core.windows.net/"
+   }
+   client = get_client_from_json_dict(ComputeManagementClient, config_dict)
 ```
 
-> [!NOTE]
-> Para conectar uma das nuvens soberanas do Azure, use o parâmetro `cloud_environment`.
->
-> ```python
-> from azure.common.credentials import ServicePrincipalCredentials
-> from msrestazure.azure_cloud import AZURE_CHINA_CLOUD
-> 
-> # Tenant ID for your Azure Subscription
-> TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-> 
-> # Your Service Principal App ID
-> CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
-> 
-> # Your Service Principal Password
-> KEY = 'password'
-> 
-> credentials = ServicePrincipalCredentials(
->     client_id = CLIENT,
->     secret = KEY,
->     tenant = TENANT_ID,
->     cloud_environment = AZURE_CHINA_CLOUD
-> )
-> ```
+## <a name="mgmt-auth-token"></a>Autenticar com credenciais do token
 
-Se você precisar de mais controle, é recomendável usar [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) e o wrapper ADAL do SDK. Consulte o site ADAL para ver todos os exemplos e lista de cenários disponíveis. Por exemplo, para autenticação da entidade de serviço:
+Supondo que você recupere as credenciais de um armazenamento seguro, como o [Azure KeyVault](/azure/key-vault/), primeiro crie um objeto [ServicePrincipalCredentials] e, em seguida, crie uma instância do cliente usando essas credenciais e sua ID da assinatura:
 
 ```python
+from azure.mgmt.compute import ComputeManagementClient
+from azure.common.credentials import ServicePrincipalCredentials
+
+# Retrieve credentials from secure storage. Never hard-code credentials into code.
+
+credentials = ServicePrincipalCredentials(tenant = <tenant_id>,
+    client_id = <client_id>, secret = <secret>)
+
+client = ComputeManagementClient(credentials, <subscription_id>)
+```
+
+Caso precise de mais controle, use o [ADAL (Biblioteca de Autenticação do Active Directory) do Azure para Python](https://github.com/AzureAD/azure-activedirectory-library-for-python) e o wrapper ADAL do SDK:
+
+```python
+from azure.mgmt.compute import ComputeManagementClient
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
 from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
 
-# Tenant ID for your Azure Subscription
-TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-
-# Your Service Principal App ID
-CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
-
-# Your Service Principal Password
-KEY = 'password'
+# Retrieve credentials from secure storage. Never hard-code credentials into code.
 
 LOGIN_ENDPOINT = AZURE_PUBLIC_CLOUD.endpoints.active_directory
 RESOURCE = AZURE_PUBLIC_CLOUD.endpoints.active_directory_resource_id
 
 context = adal.AuthenticationContext(LOGIN_ENDPOINT + '/' + TENANT_ID)
-credentials = AdalAuthentication(
-    context.acquire_token_with_client_credentials,
-    RESOURCE,
-    CLIENT,
-    KEY
-)
-```
 
-Todas as chamadas válidas ADAL podem ser usadas com a classe `AdalAuthentication`.
+credentials = AdalAuthentication(context.acquire_token_with_client_credentials,
+    RESOURCE, <client_id>, <secret>)
 
-Em seguida, crie um objeto de cliente para começar a trabalhar com a API:
-
-```python
-from azure.mgmt.compute import ComputeManagementClient
-
-# Your Azure Subscription ID
-subscription_id = '33333333-3333-3333-3333-333333333333'
-
-client = ComputeManagementClient(credentials, subscription_id)
+client = ComputeManagementClient(credentials, <subscription_id>)
 ```
 
 > [!NOTE]
-> Ao usar uma nuvem soberana do Azure, você também deve especificar a URL base apropriada (por meio de constantes em `msrestazure.azure_cloud`) ao criar o cliente de gerenciamento. Por exemplo, para a nuvem do Azure na China:
+> Ao usar uma nuvem soberana do Azure, especifique a URL base apropriada (usando uma constante em `msrestazure.azure_cloud`) ao criar o cliente de gerenciamento:
+>
 > ```python
 > client = ComputeManagementClient(credentials, subscription_id,
 >     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
 > ```
 
+### <a name="mgmt-auth-legacy"></a>Autenticar com credenciais do token (preterido)
 
-## <a name="mgmt-auth-file"></a>Autenticação baseada em arquivos
-
-A maneira mais simples de autenticar é criar um arquivo JSON que contém as credenciais para uma entidade de serviço do Azure. Você pode usar o seguinte comando da CLI para criar uma nova entidade de serviço e esse arquivo ao mesmo tempo:
-
-```bash
-az ad sp create-for-rbac --sdk-auth > mycredentials.json
-```
-
-Salve esse arquivo em um local seguro no sistema onde o seu código possa lê-lo. Defina uma variável de ambiente com o caminho completo para o arquivo no shell:
-
-```bash
-export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json
-```
-
-Se você deseja criar o arquivo por conta própria, siga este formato:
-
-```json
-{
-    "clientId": "<Service principal ID>",
-    "clientSecret": "<Service principal secret/password>",
-    "subscriptionId": "<Subscription associated with the service principal>",
-    "tenantId": "<The service principal's tenant>",
-    "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-    "resourceManagerEndpointUrl": "https://management.azure.com/",
-    "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-    "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-    "galleryEndpointUrl": "https://gallery.azure.com/",
-    "managementEndpointUrl": "https://management.core.windows.net/"
-}
-```
-
-Você pode então criar qualquer cliente usando a fábrica do cliente:
+Antes do [ADAL (Biblioteca de Autenticação do Active Directory) do Azure para Python](https://github.com/AzureAD/azure-activedirectory-library-for-python) ficar disponível, você usou a classe `UserPassCredentials`. O uso dessa classe foi considerado preterido e deve ser evitado, pois ela não é compatível com a autenticação de dois fatores.
 
 ```python
-from azure.common.client_factory import get_client_from_auth_file
-from azure.mgmt.compute import ComputeManagementClient
+from azure.common.credentials import UserPassCredentials
 
-client = get_client_from_auth_file(ComputeManagementClient)
+# DEPRECATED - legacy purposes only - use ADAL instead
+credentials = UserPassCredentials(
+    'user@domain.com',
+    'my_smart_password'
+)
 ```
 
 ## <a name="mgmt-auth-msi"></a>Autenticar com as Identidades Gerenciadas do Azure
-A Identidade Gerenciada do Azure é uma maneira simples de um recurso no Azure usar o SDK/CLI sem precisar criar credenciais específicas.
 
-> [!IMPORTANT]
->
-> Para usar as identidades gerenciadas, você deve se conectar ao Azure a partir de um recurso dele, como uma Função do Azure ou uma VM em execução no Azure. Para saber como configurar uma identidade gerenciada para um recurso, confira [Configurar identidades gerenciadas para recursos do Azure](/azure/active-directory/managed-identities-azure-resources/qs-configure-cli-windows-vm) e [Como usar identidades gerenciadas para os recursos do Azure](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-sign-in).
+A Identidade Gerenciada do Azure é uma maneira simples de um recurso se autenticar no Azure sem usar credenciais específicas.
+
+Para usar as identidades gerenciadas é necessário se conectar ao Azure de outro recurso do Azure, como uma Função do Azure ou uma máquina virtual. Para saber como configurar uma identidade gerenciada para um recurso, confira [Configurar identidades gerenciadas para recursos do Azure](/azure/active-directory/managed-identities-azure-resources/qs-configure-cli-windows-vm) e [Como usar identidades gerenciadas para os recursos do Azure](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-sign-in).
 
 ```python
 from msrestazure.azure_active_directory import MSIAuthentication
@@ -178,50 +164,28 @@ from azure.mgmt.resource import ResourceManagementClient, SubscriptionClient
 # Create MSI Authentication
 credentials = MSIAuthentication()
 
-
 # Create a Subscription Client
 subscription_client = SubscriptionClient(credentials)
 subscription = next(subscription_client.subscriptions.list())
 subscription_id = subscription.subscription_id
 
 # Create a Resource Management client
-resource_client = ResourceManagementClient(credentials, subscription_id)
-
+client = ResourceManagementClient(credentials, subscription_id)
 
 # List resource groups as an example. The only limit is what role and policy are assigned to this MSI token.
 for resource_group in resource_client.resource_groups.list():
     print(resource_group.name)
 ```
 
-## <a name="mgmt-auth-cli"></a>Autenticação com base em CLI
+## <a name="mgmt-auth-cli"></a>Autenticação baseada na CLI (somente para fins de desenvolvimento)
 
-O SDK é capaz de criar um cliente usando uma assinatura ativa da CLI do Azure.
+O SDK é capaz de criar um cliente usando a assinatura ativa da CLI do Azure após você executar `az login`. O SDK usa a ID da assinatura padrão ou é possível definir a assinatura usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)
 
-> [!IMPORTANT]
-> Isso deve ser usado como a experiência de início rápido do desenvolvedor. Para fins de produção, use [ADAL](#mgmt-auth-legacy) ou o seu próprio sistema de credenciais.
-> Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.
-
-Para definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
-A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)
+Essa opção deverá ser usada somente para fins de desenvolvimento.
 
 ```python
 from azure.common.client_factory import get_client_from_cli_profile
 from azure.mgmt.compute import ComputeManagementClient
 
 client = get_client_from_cli_profile(ComputeManagementClient)
-```
-
-## <a name="mgmt-auth-legacy"></a>Autenticar com credenciais do token (herdadas)
-
-Na versão anterior do SDK, ADAL ainda não estava disponível e fornecíamos uma classe `UserPassCredentials`. O uso dessa classe é considerado preterido e não deve ser mais usado.
-
-Esta amostra descreve o cenário de usuário/senha, que não dá suporte a 2FA.
-
-```python
-from azure.common.credentials import UserPassCredentials
-
-credentials = UserPassCredentials(
-    'user@domain.com',
-    'my_smart_password'
-)
 ```

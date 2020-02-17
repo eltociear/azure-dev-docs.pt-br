@@ -3,12 +3,12 @@ title: Implantar o aplicativo Azure Functions usando o Visual Studio Code
 description: Parte 4 do tutorial, implantar o aplicativo Functions na nuvem.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 690477392fffda4cd94d7271b061c195ccceb42b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: e287f24429fc5939bcd64ba753b36eb0f387d8f3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467105"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144064"
 ---
 # <a name="deploy-the-functions-app"></a>Implantar o aplicativo do Functions
 
@@ -23,6 +23,10 @@ ms.locfileid: "74467105"
 1. No prompt **Selecione o Aplicativo de Funções no Azure**, escolha **Criar novo aplicativo de Funções no Azure**.
 
 1. No próximo prompt, insira um nome globalmente exclusivo para seu Aplicativo de Funções e pressione **Enter**. Os caracteres válidos para um nome de aplicativo de funções são "a-z", "0-9" e "-".
+
+1. Escolha a versão/o runtime do Node.js 
+
+    ![Painel de saída do VS Code mostrando a versão/o runtime do Node.js](media/functions-extension/nodejs-runtime-version.png)
 
 1. No próximo prompt, selecione uma [região](https://azure.microsoft.com/regions/) do Azure perto de você.
 
@@ -44,4 +48,4 @@ ms.locfileid: "74467105"
     > Durante a implantação, todo o aplicativo Functions é implantado para que as alterações a todas as Funções individuais sejam implantadas de uma só vez.
 
 > [!div class="nextstepaction"]
-> [Implantei o aplicativo de Funções](tutorial-vscode-serverless-node-05.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=deploy-app)
+> [Implantei o aplicativo de funções](tutorial-vscode-serverless-node-05.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=deploy-app)

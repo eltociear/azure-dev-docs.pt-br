@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: 8c62a68ff2a9912d88361adc6ef3b8dc2ea29c98
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: e8f9dd93da56b17efca059e00cf1483666f4cf33
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002280"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075260"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Como usar o Spring Cloud Stream Binder no Barramento de Serviço do Azure
 
@@ -21,7 +21,7 @@ O Azure fornece uma plataforma de mensagens assíncrona chamada [Barramento de S
 
 Este artigo mostra como usar o Spring Cloud Stream Binder para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Os pré-requisitos a seguir são obrigatórios neste artigo:
 
@@ -34,7 +34,7 @@ Os pré-requisitos a seguir são obrigatórios neste artigo:
 1. Se você já tiver configurado a fila ou o tópico do Barramento de Serviço, verifique se o namespace dele cumpre os seguintes requisitos:
 
     1. Permitir acesso de todas as redes
-    1. Ser Premium (ou superior)
+    1. É Standard (ou superior)
     1. Ter uma política de acesso com acesso de leitura/gravação para a fila e o tópico
 
 1. Se você não tiver configurado a fila ou o tópico do Barramento de Serviço, use o portal do Azure para [criar uma fila do Barramento de Serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal) ou [criar um tópico do Barramento de Serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). Verifique se o namespace cumpre os requisitos especificados na etapa anterior. Além disso, anote a cadeia de conexão no namespace, porque ela será necessária no aplicativo de teste deste tutorial.

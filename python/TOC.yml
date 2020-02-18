@@ -4,7 +4,7 @@
   items:
     - name: Sobre o SDK do Python
       href: python-sdk-azure-overview.md
-- name: Guia de início rápido
+- name: Inícios rápidos
   items:
     - name: SDK do Python
       href: python-sdk-azure-get-started.yml
@@ -14,7 +14,7 @@
       items:
         - name: Serviço de Aplicativo
           href: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: kubernetes
+        - name: Kubernetes
           href: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: VMs Linux
           href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
@@ -32,7 +32,7 @@
           href: /azure/cosmos-db/sql-api-python-application?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: Cache Redis
           href: /azure/redis-cache/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Banco de dados SQL
+        - name: Banco de Dados SQL
           href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: PostgreSQL
           href: /azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
@@ -64,55 +64,55 @@
   items:
     - name: Implantar no Serviço de Aplicativo com o VS Code
       items:
-        - name: Introdução e pré-requisitos
+        - name: 1. Introdução e pré-requisitos
           href: tutorial-deploy-app-service-on-linux-01.md
-        - name: Preparação do aplicativo
+        - name: 2 Preparar o aplicativo
           href: tutorial-deploy-app-service-on-linux-02.md
-        - name: Criar o Serviço de Aplicativo
+        - name: 3 Criar o Serviço de Aplicativo
           href: tutorial-deploy-app-service-on-linux-03.md
-        - name: Configurar o arquivo de inicialização
+        - name: 4 Configurar o arquivo de inicialização
           href: tutorial-deploy-app-service-on-linux-04.md
-        - name: Implantar o aplicativo
+        - name: 5 Implantar o aplicativo
           href: tutorial-deploy-app-service-on-linux-05.md
-        - name: Transmitir logs
+        - name: 6 Transmitir logs
           href: tutorial-deploy-app-service-on-linux-06.md
-        - name: Limpar recursos
+        - name: 7 Limpar recursos
           href: tutorial-deploy-app-service-on-linux-07.md
     - name: Implantar contêineres com o VS Code
       items:
-        - name: Introdução e pré-requisitos
+        - name: 1. Introdução e pré-requisitos
           href: tutorial-deploy-containers-01.md
-        - name: Implantar a imagem de contêiner
+        - name: 2 Implantar a imagem de contêiner
           href: tutorial-deploy-containers-02.md
-        - name: Fazer alterações e implantar novamente
+        - name: 3 Fazer alterações e reimplantar
           href: tutorial-deploy-containers-03.md
-        - name: Transmitir logs
+        - name: 4 Transmitir logs
           href: tutorial-deploy-containers-04.md
-        - name: Limpar recursos
+        - name: 5 Limpar recursos
           href: tutorial-deploy-containers-05.md
     - name: Implantar o Azure Functions com o VS Code
       items:
-        - name: Introdução e pré-requisitos
+        - name: 1. Introdução e pré-requisitos
           href: tutorial-vs-code-serverless-python-01.md
-        - name: Criar a função do Python
+        - name: 2 Criar a função do Python
           href: tutorial-vs-code-serverless-python-02.md
-        - name: Examinar arquivos de código
+        - name: 3 Examinar arquivos de código
           href: tutorial-vs-code-serverless-python-03.md
-        - name: Depurar Localmente
+        - name: 4 Depurar localmente
           href: tutorial-vs-code-serverless-python-04.md
-        - name: Implantar no Azure
+        - name: 5 Implantar no Azure
           href: tutorial-vs-code-serverless-python-05.md
-        - name: Adicionar uma segunda função
+        - name: 6 Adicionar uma segunda função
           href: tutorial-vs-code-serverless-python-06.md
-        - name: Adicionar uma associação de armazenamento
+        - name: 7 Adicionar uma associação de armazenamento
           href: tutorial-vs-code-serverless-python-07.md
-        - name: Limpar recursos
+        - name: 8 Limpar recursos
           href: tutorial-vs-code-serverless-python-08.md
 - name: Guias de instruções
   items:
     - name: Instalar o SDK
       href: python-sdk-azure-install.md
-    - name: Authentication
+    - name: Autenticação
       href: python-sdk-azure-authenticate.md
     - name: Configuração de operações
       href: python-sdk-azure-operation-config.md

@@ -4,12 +4,12 @@ description: Autenticar um aplicativo Python com os serviços do Azure usando as
 ms.date: 01/16/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c1dc8395710eec86f2bcd2b7e8334b987f15917
-ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
+ms.openlocfilehash: 30979223a5f5f055ee51a82a4cb97f8ae4cf5a38
+ms.sourcegitcommit: b41b4c48a57de223be3424cb9d9d08c1a4001575
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144037"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478021"
 ---
 # <a name="authenticate-by-using-the-azure-management-libraries-for-python"></a>Autenticar usando as bibliotecas de gerenciamento do Azure para Python
 
@@ -45,7 +45,7 @@ Neste método, você cria um arquivo JSON que contém as credenciais necessária
     ```
 
     > [!TIP]
-    > É possível recuperar um arquivo de credenciais com sua ID da assinatura existente ao entrar no Azure usando o comando [az login](/cli/azure/group#az-login) e depois o comando [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac):
+    > É possível recuperar um arquivo de credenciais com sua ID da assinatura existente ao entrar no Azure usando o comando [az login](/cli/azure/reference-index#az-login) e depois o comando [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac):
     >
     > ```azurecli
     > az login

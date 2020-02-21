@@ -4,62 +4,92 @@
   items:
     - name: Sobre o SDK do Python
       href: python-sdk-azure-overview.md
+    - name: Ferramentas de Desenvolvedor
+      href: python-azure-tools.md
 - name: Inícios rápidos
   items:
     - name: SDK do Python
       href: python-sdk-azure-get-started.yml
-    - name: Ferramentas de Desenvolvedor
-      href: python-azure-tools.md
     - name: Hospedagem de aplicativo
       items:
-        - name: Serviço de Aplicativo
+        - name: Implantar funções sem servidor (VS Code)
+          href: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Implantar funções sem servidor (CLI)
+          href: /azure/azure-functions/functions-create-first-function-python?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Implantar no Serviço de Aplicativo
           href: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Kubernetes
+        - name: Implantar um cluster do Kubernetes
           href: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: VMs Linux
-          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Instâncias de contêiner
+        - name: Implantar uma Instância de Contêiner do Azure
           href: /azure/container-instances/container-instances-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Lote
+        - name: Executar um trabalho do Lote do Azure
           href: /azure/batch/quick-run-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Criar uma VM do Linux
+          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: Soluções de dados
       items:
-        - name: Armazenamento de Blobs
-          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Armazenamento de Tabelas
-          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Cosmos DB
-          href: /azure/cosmos-db/sql-api-python-application?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Cache Redis
-          href: /azure/redis-cache/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Banco de Dados SQL
-          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: PostgreSQL
-          href: /azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: MySQL
+        - name: Usar o PostgreSQL com o Django
+          href: /azure/app-service/containers/tutorial-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Usar um banco de dados MySQL
           href: /azure/mysql/connect-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Data Factory
+        - name: Usar um banco de dados SQL
+          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Gerenciar o armazenamento de blobs
+          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Usar o armazenamento de tabela
+          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Usar a API do SQL do Azure Cosmos DB
+          href: /azure/cosmos-db/create-sql-api-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Usar o Cache do Azure para Redis
+          href: /azure/azure-cache-for-redis/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Criar um Azure Data Factory
           href: /azure/data-factory/quickstart-create-data-factory-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-    - name: IA e machine learning
+    - name: Aprendizado de máquina
       items:
-        - name: Serviços de Machine Learning
-          href: /azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Lote AI
-          href: /azure/batch-ai/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Criar um experimento de ML
+          href: /azure/machine-learning/tutorial-1st-experiment-sdk-setup?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Treinar modelos de classificação
+          href: /azure/machine-learning/tutorial-train-models-with-aml?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - name: Serviços Cognitivos do Azure
+      items:
+        - name: SDK dos Serviços Cognitivos para Python
+          href: /python/api/overview/azure/cognitive-services?view=azure-python
         - name: Visual Computacional
           href: /azure/cognitive-services/Computer-vision/Quickstarts/python-analyze?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Custom Vision
+          href: /azure/cognitive-services/custom-vision-service/python-tutorial?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Reconhecimento facial
+          href: /azure/cognitive-services/face/quickstarts/python-sdk?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Reconhecimento Vocal
+          href: /azure/cognitive-services/luis/sdk-authoring?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: Análise de texto
-          href: /azure/cognitive-services/Text-Analytics/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Azure Notebooks
-          href: 'https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb'
+          href: '/azure/cognitive-services/text-analytics/quickstarts/text-analytics-sdk?pivots=programming-language-python#sentiment-analysis&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json'
+        - name: Sugestão automática
+          href: /azure/cognitive-services/bing-autosuggest/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Content Moderator
+          href: /azure/cognitive-services/content-moderator/python-sdk-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Página do hub do Serviço de Fala
+          href: /azure/cognitive-services/speech-service/index
+        - name: Página do hub de pesquisa
+          href: /azure/cognitive-services/bing-web-search/index
+    - name: Mensagens
+      items:
+        - name: Usar o Armazenamento de Filas do Azure
+          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Usar filas do Barramento de Serviço do Azure
+          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Ingerir dados em tempo real com Hubs de Eventos
+          href: /azure/event-hubs/event-hubs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Encaminhar eventos personalizados com a Grade de Eventos
+          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: Segurança e integração
       items:
-        - name: Barramento de Serviço
-          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Grade de Eventos
-          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Armazenamento de Filas
-          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Fazer a autenticação com o Active Directory
+          href: python-sdk-azure-authenticate.md
+        - name: Armazenar segredos com o Key Vault
+          href: /azure/key-vault/quick-create-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Entrar em um aplicativo Web com o Active Directory
+          href: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
 - name: Tutoriais
   items:
     - name: Implantar no Serviço de Aplicativo com o VS Code

@@ -4,12 +4,12 @@ description: Parte 4 do tutorial, implantar os arquivos no Armazenamento do Azur
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 2683de33fd8ddc7148991d85e3d67f1eb93a5f44
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 53578d829167512877c2359d02c3e70d88afe77f
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466654"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440893"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Implantar o site para o Armazenamento do Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "74466654"
 
 Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site estático criados nas etapas anteriores para o Armazenamento do Azure, que hospeda e serve esses arquivos.
 
-# <a name="angulartabangular"></a>[Angular](#tab/angular)
+# <a name="angular"></a>[Angular](#tab/angular)
 
 1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
 
@@ -35,7 +35,7 @@ Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site e
 
     ![Site estático em execução no Azure](media/static-website/azure-app-angular.png)
 
-# <a name="reacttabreact"></a>[React](#tab/react)
+# <a name="react"></a>[React](#tab/react)
 
 1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
 
@@ -53,7 +53,7 @@ Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site e
 
     ![Site estático em execução no Azure](media/static-website/azure-app-react.png)
 
-# <a name="vuetabvue"></a>[Vue](#tab/vue)
+# <a name="vue"></a>[Vue](#tab/vue)
 
 1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
 
@@ -70,6 +70,24 @@ Nesta etapa, você usa o Visual Studio Code para implantar os arquivos do site e
     ![Mensagem de implantação concluída](media/static-website/deployment-complete.png)
 
     ![Site estático em execução no Azure](media/static-website/azure-app-vue.png)
+
+# <a name="svelte"></a>[Svelte](#tab/svelte)
+
+1. No Visual Studio Code, vá para o gerenciador do **Armazenamento do Azure**, expanda sua assinatura, expanda o nó da conta de Armazenamento do Azure criada na etapa anterior e, em seguida, expanda o nó **Contêineres de Blob**. É no contêiner `$web` que você implanta o código do aplicativo.
+
+   ![Nós de Armazenamento do Azure no gerenciador de Armazenamento do Azure](media/static-website/storage-nodes.png)
+
+1. Selecione o gerenciador de **Arquivos**, clique com o botão direito do mouse na pasta _public_ e escolha **Implantar no Site Estático**:
+
+    ![Comando Implantar para o Site Estático](media/static-website/deploy-build-svelte.png)
+
+1. Quando solicitado, escolha a conta de Armazenamento que você criou anteriormente.
+
+1. Quando a implantação for concluída, uma mensagem será exibida com um botão **Navegar para o site**. Selecione esse botão para abrir o ponto de extremidade primário do código do aplicativo implantado.
+
+    ![Mensagem de implantação concluída](media/static-website/deployment-complete-svelte.png)
+
+    ![Site estático em execução no Azure](media/static-website/azure-app-svelte.png)
 
 ---
 

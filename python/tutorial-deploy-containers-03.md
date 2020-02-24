@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações no Visual Studio Code'
+title: 'Etapa 3: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações no Visual Studio Code'
 description: Etapa 3 do tutorial, as etapas simples para recompilar e reimplantar uma imagem de contêiner.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 88c5b608316f7dec601625fbf5962b9b888a4662
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: f0e6eb808e25f3bb48eb2c849310747945e0d7f9
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002297"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422405"
 ---
-# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Tutorial: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações
+# <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações
 
 [Etapa anterior: implantar a imagem no Azure](tutorial-deploy-containers-02.md)
 
@@ -30,6 +30,6 @@ Como inevitavelmente você faz alterações em seu aplicativo, você acaba recom
 1. Após cerca de 15 a 20 segundos, visite a URL do Serviço de Aplicativo novamente para verificar as atualizações.
 
 > [!div class="nextstepaction"]
-> [Fiz alterações e reimplantei](tutorial-deploy-containers-04.md)
+> [Fiz alterações e reimplantei – prossiga para a etapa 4 >>>](tutorial-deploy-containers-04.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=03-make-changes-redeploy)

@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure com o Visual Studio Code'
+title: 'Etapa 2: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure com o Visual Studio Code'
 description: Etapa 2 do tutorial, implantando a imagem real do Docker no Serviço de Aplicativo do Azure de um registro de contêiner.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 446653a4de98954ae75caa38c9cb2ae04ec071c4
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 8005ba428d99051d9b5b86ed4f5222c1cd9ba673
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002368"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422416"
 ---
-# <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>Tutorial: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure
+# <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure
 
 [Etapa anterior: pré-requisitos](tutorial-deploy-containers-01.md)
 
@@ -46,6 +46,6 @@ Com uma imagem de contêiner em um registro, você pode usar a extensão do Dock
 1. Após o serviço ser reiniciado, navegue até o site em `http://<name>.azurewebsites.net`. Você pode usar **Ctrl**+ clique (ou **Cmd** + clique no macOS) na URL no painel de Saída ou clicar com o botão direito do mouse no Serviço de Aplicativo no explorador **Azure: Serviço de Aplicativo** e selecione **Procurar Site**.
 
 > [!div class="nextstepaction"]
-> [Implantei a imagem](tutorial-deploy-containers-03.md)
+> [Implantei a imagem – prossiga para a etapa 3 >>>](tutorial-deploy-containers-03.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=02-deploy-container)

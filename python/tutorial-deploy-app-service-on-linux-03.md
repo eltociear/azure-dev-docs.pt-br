@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Criar o Serviço de Aplicativo no Visual Studio Code'
+title: 'Etapa 3: Criar o Serviço de Aplicativo no Visual Studio Code'
 description: Etapa 3 do tutorial, criando o Serviço de Aplicativo na extensão do VS Code.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b64adc1604698de74f4f318b805dd8c289c8fff8
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: dea4ace359c8d072af8ab9ed33451bc8077249b7
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466222"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422459"
 ---
-# <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>Tutorial: Criar o Serviço de Aplicativo no Visual Studio Code
+# <a name="3-create-the-app-service-from-visual-studio-code"></a>3: Criar o Serviço de Aplicativo no Visual Studio Code
 
 [Etapa anterior: preparar seu aplicativo](tutorial-deploy-app-service-on-linux-02.md)
 
@@ -53,6 +53,6 @@ Se tiver um arquivo de definições de variáveis de ambiente, você poderá us�
 1. Se criar configurações diretamente no portal do Azure, você poderá salvá-las em um arquivo de definições clicando com o botão direito do mouse no nó **Configurações do Aplicativo** e selecionando **Baixar Configurações Remotas**. Esse processo garante que você tenha essas configurações em seu repositório, e não apenas no portal.
 
 > [!div class="nextstepaction"]
-> [Criei o Serviço de Aplicativo](tutorial-deploy-app-service-on-linux-04.md)
+> [Criei o Serviço de Aplicativo – prossiga para a etapa 4 >>>](tutorial-deploy-app-service-on-linux-04.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=03-create-app-service)

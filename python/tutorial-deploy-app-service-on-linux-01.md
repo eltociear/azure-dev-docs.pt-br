@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 1: introdução, pré-requisitos e entrada no Azur
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d5eed3d2b1aeea92b3681ada006b3723e67f70c4
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8995c31203b2cbd096820832beb3d6a7d165f132
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466269"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422490"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
@@ -43,6 +43,6 @@ Instale o seguinte software:
 [!INCLUDE [azure-sign-in](includes/azure-sign-in.md)]
 
 > [!div class="nextstepaction"]
-> [Entrei no Azure](tutorial-deploy-app-service-on-linux-02.md)
+> [Entrei no Azure – prossiga para a etapa 2 >>>](tutorial-deploy-app-service-on-linux-02.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=01-verify-prerequisites)

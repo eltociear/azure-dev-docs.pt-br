@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code'
+title: 'Etapa 7: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code'
 description: Etapa 7 do tutorial, limpando os recursos do Azure
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8145b33ae52427d55c9b3de9fcf6fb20467b7ba9
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 001e5d58311267221c5fafb3de89aff3859f4197
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125259"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422429"
 ---
-# <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
+# <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
 [Etapa anterior: stream de logs](tutorial-deploy-app-service-on-linux-06.md)
 
@@ -39,6 +39,6 @@ Algumas extensões populares são:
 - [Ferramentas do ARM (Azure Resource Manager)](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Terminei](https://docs.microsoft.com/python/azure/?view=azure-python) 
+> [Terminei!](https://docs.microsoft.com/python/azure/?view=azure-python) 
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=07-clean-up-resources)

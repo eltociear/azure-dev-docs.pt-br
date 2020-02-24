@@ -4,12 +4,12 @@ description: Parte 5 do tutorial, fazer alterações e reimplantar
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 0db773cdea2e288dc461479c3753b94c9a286e82
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d0f6be1d57c9d378a4428a5a05da0428314f76c0
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466646"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440949"
 ---
 # <a name="make-changes-and-redeploy"></a>Fazer alterações e implantar novamente
 
@@ -17,7 +17,7 @@ ms.locfileid: "74466646"
 
 Nesta etapa, você faz uma alteração simples ao código-fonte do aplicativo e reimplanta o site para experimentar o fluxo de trabalho de implantação de ponta a ponta.
 
-# <a name="angulartabangular"></a>[Angular](#tab/angular)
+# <a name="angular"></a>[Angular](#tab/angular)
 
 1. No Visual Studio Code, abra o arquivo _src/app/app.component.html_ e altere a linha 305 para corresponder ao seguinte:
 
@@ -33,7 +33,7 @@ Nesta etapa, você faz uma alteração simples ao código-fonte do aplicativo e 
 
     ![Alterações no aplicativo após a reimplantação](media/static-website/updated-azure-app-angular.png)
 
-# <a name="reacttabreact"></a>[React](#tab/react)
+# <a name="react"></a>[React](#tab/react)
 
 1. No Visual Studio Code, abra a linha 11 do arquivo de alteração _src/app.js_ para corresponder ao seguinte:
 
@@ -49,7 +49,7 @@ Nesta etapa, você faz uma alteração simples ao código-fonte do aplicativo e 
 
     ![Alterações no aplicativo após a reimplantação](media/static-website/updated-azure-app-react.png)
 
-# <a name="vuetabvue"></a>[Vue](#tab/vue)
+# <a name="vue"></a>[Vue](#tab/vue)
 
 1. No Visual Studio Code, abra a linha 11 da alteração do arquivo _src/App.vue_ para corresponder ao seguinte:
 
@@ -64,6 +64,37 @@ Nesta etapa, você faz uma alteração simples ao código-fonte do aplicativo e 
 1. Quando a implantação for concluída, atualize o site no navegador para observar as alterações:
 
     ![Alterações no aplicativo após a reimplantação](media/static-website/updated-azure-app-vue.png)
+
+# <a name="svelte"></a>[Svelte](#tab/svelte)
+
+1. No Visual Studio Code, abra a linha 6 do arquivo de alteração _src/main.js_ para corresponder ao seguinte:
+
+    ```js
+    import App from './App.svelte';
+
+    const app = new App({
+        target: document.body,
+        props: {
+            name: 'Welcome to Azure!'
+        }
+    });
+
+    export default app;
+    ```
+
+2. Agora abra o arquivo _src/App.svelte_ e altere a linha 6 para corresponder ao seguinte
+
+    ```html
+    <h1>{name}</h1>
+    ```
+
+1. Em um terminal ou prompt de comando, execute `npm run build`.
+
+1. No VS Code, clique com o botão direito do mouse na pasta _public_ e, novamente, escolha **Implantar no Site Estático**. Escolha sua conta de armazenamento e confirme que você deseja implantar suas alterações. (A extensão do Azure exclui automaticamente os arquivos antigos antes de implantar as alterações para evitar problemas de cache.)
+
+1. Quando a implantação for concluída, atualize o site no navegador para observar as alterações:
+
+    ![Alterações no aplicativo após a reimplantação](media/static-website/updated-azure-app-svelte.png)
 
 ---
 

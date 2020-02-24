@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825790"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440853"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrar aplicativos Java para o Azure
 
@@ -48,7 +48,7 @@ Aplicativos Web são empacotados em arquivos com a extensão *.war* (arquivos WA
 
 ### <a name="java-ee-applications"></a>Aplicativos Java EE
 
-Aplicativos Java EE (também conhecidos como aplicativos J2EE ou, mais recentemente, aplicativos JakartaEE) podem conter alguns, todos ou nenhum dos elementos de aplicativos Web. Eles também podem conter e consumir muitos componentes adicionais, conforme definido pela [especificação Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
+Aplicativos Java EE (também conhecidos como aplicativos J2EE ou, mais recentemente, aplicativos Jakarta EE) podem conter alguns, todos ou nenhum dos elementos de aplicativos Web. Eles também podem conter e consumir muitos componentes adicionais, conforme definido pela [especificação Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
 
 Os aplicativos Java EE podem ser empacotados como arquivos com a extensão *.ear* (arquivos EAR) ou como arquivos com a extensão *.war* (arquivos WAR).
 

@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Examinar os arquivos de código do Python para o Azure Functions no VS Code'
+title: 'Etapa 3: Examinar os arquivos de código do Python para o Azure Functions no VS Code'
 description: 'Tutorial, etapa 3: compreensão do código do Python no modelo fornecido pelo Azure Functions.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 253bc4384f896c9114f2f1113cdf0ee2f290819d
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 77dc4cb44158ded1dd5c6d1e19afb48272177a12
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992500"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422212"
 ---
-# <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>Tutorial: Examinar os arquivos de código Python no Visual Studio Code
+# <a name="3-examine-the-python-code-files-in-visual-studio-code"></a>3: Examinar os arquivos de código Python no Visual Studio Code
 
 [Etapa anterior: criar a função](tutorial-vs-code-serverless-python-02.md)
 
@@ -91,6 +91,6 @@ As partes importantes do código são as seguintes:
 - Se um nome for encontrado, o código retornará a cadeia de caracteres "Olá" com o nome anexado; caso contrário, retornará uma mensagem de erro.
 
 > [!div class="nextstepaction"]
-> [Examinei os arquivos de código](tutorial-vs-code-serverless-python-04.md)
+> [Examinei os arquivos de código – prossiga para a etapa 4 >>>](tutorial-vs-code-serverless-python-04.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=03-examine-code-files)

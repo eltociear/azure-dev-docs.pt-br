@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Implantar o Azure Functions no Python com o VS Code'
+title: 'Etapa 5: Implantar o Azure Functions no Python com o VS Code'
 description: 'Tutorial, etapa 5: implantação do código de função do Python no Azure e aprendizado sobre como transmitir logs e sincronizar configurações entre um projeto local e o Azure.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 07af40c402104f07844c2cbe0d84c38c86f2fca2
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992511"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422209"
 ---
-# <a name="tutorial-deploy-azure-functions-in-python"></a>Tutorial: Implantar o Azure Functions no Python
+# <a name="5-deploy-azure-functions-in-python"></a>5: Implantar o Azure Functions no Python
 
 [Etapa anterior: depurar localmente](tutorial-vs-code-serverless-python-04.md)
 
@@ -41,7 +41,7 @@ Um aplicativo de funções requer uma Conta de Armazenamento do Azure para os da
 
     Para **Transmitir Logs** e **Carregar Configurações**, confira as próximas seções. Para **Exibir a saída**, confira a etapa 5 a seguir.
 
-1. Após a implantação, a janela **Saída** também mostrará o ponto de extremidade público no Azure:
+1. Após implantação, a janela **Saída** também mostra o ponto de extremidade público no Azure (a URL do ponto de extremidade específico corresponderá ao nome especificado no aplicativo de funções):
 
     ```output
     HTTP Trigger Urls:
@@ -70,6 +70,6 @@ O carregamento das configurações atualiza todas as configurações existentes 
 Para aplicar as alterações feitas por meio do portal ou do **Azure Explorer** ao arquivo *local.settings.json*, clique com o botão direito do mouse sobre o nó **Configurações de Aplicativos** e selecione o comando **Baixar Configurações Remotas**. Você também pode usar a Paleta de Comandos para selecionar o comando **Azure Functions: Baixar Configurações Remotas**.
 
 > [!div class="nextstepaction"]
-> [Implantei as funções](tutorial-vs-code-serverless-python-06.md)
+> [Implantei as funções – prossiga para a etapa 6 >>>](tutorial-vs-code-serverless-python-06.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=05-deploy)

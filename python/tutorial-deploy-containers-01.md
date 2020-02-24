@@ -4,12 +4,12 @@ description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 94c6339c57746c84865a370a721fd94dfd30f625
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 60189f960087688c68876935ba3407811bbec7c6
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466087"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422439"
 ---
 # <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Tutorial: Implantar contêineres do Docker no Serviço de Aplicativo do Azure com o Visual Studio Code
 
@@ -30,6 +30,6 @@ Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos 
 [!INCLUDE [azure-sign-in](includes/azure-sign-in.md)]
 
 > [!div class="nextstepaction"]
-> [Entrei no Azure](tutorial-deploy-containers-02.md)
+> [Entrei no Azure – prossiga para a etapa 2 >>>](tutorial-deploy-containers-02.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=01-verify-prerequisites)

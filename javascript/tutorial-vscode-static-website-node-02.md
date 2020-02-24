@@ -4,20 +4,20 @@ description: Parte 2 do tutorial, criar o aplicativo de exemplo
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: b236f64f04be0c0b8faa74eb67ce22f96ec595aa
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 69c0e7d6f43829546e5f23ec63a4ac35b71d7e78
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825840"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422518"
 ---
 # <a name="create-the-app"></a>Criar o aplicativo
 
 [Etapa anterior: Introdução e pré-requisitos](tutorial-vscode-static-website-node-01.md)
 
-Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](https://cli.angular.io/), [React](https://github.com/facebook/create-react-app) ou [Vue](https://cli.vuejs.org/) para criar um aplicativo simples que pode ser implantado no Azure. Como alternativa, você pode usar qualquer outra estrutura JavaScript que produza um conjunto de arquivos estáticos ou qualquer pasta que contenha arquivos HTML, CSS ou JavaScript. Se você já tiver um aplicativo pronto para implantar, poderá pular para [Criar uma conta de armazenamento do Azure](tutorial-vscode-static-website-node-03.md).
+Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](https://cli.angular.io/), [React](https://github.com/facebook/create-react-app), [Vue](https://cli.vuejs.org/) ou [Svelte](https://github.com/sveltejs/template) para criar um aplicativo simples que pode ser implantado no Azure. Como alternativa, você pode usar qualquer outra estrutura JavaScript que produza um conjunto de arquivos estáticos ou qualquer pasta que contenha arquivos HTML, CSS ou JavaScript. Se você já tiver um aplicativo pronto para implantar, poderá pular para [Criar uma conta de armazenamento do Azure](tutorial-vscode-static-website-node-03.md).
 
-# <a name="angulartabangular"></a>[Angular](#tab/angular)
+# <a name="angular"></a>[Angular](#tab/angular)
 
 1. Use a CLI para realizar o scaffold de um novo aplicativo chamado “my-static-app” executando o seguinte comando:
 
@@ -48,7 +48,7 @@ Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](h
 
 1. Pare o servidor pressionando **Ctrl**+**C** no terminal ou no prompt de comando.
 
-# <a name="reacttabreact"></a>[React](#tab/react)
+# <a name="react"></a>[React](#tab/react)
 
 1. Use a CLI para realizar o scaffold de um novo aplicativo chamado “my-static-app” executando o seguinte comando:
 
@@ -77,7 +77,7 @@ Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](h
 
 1. Pare o servidor pressionando **Ctrl**+**C** no terminal ou no prompt de comando.
 
-# <a name="vuetabvue"></a>[Vue](#tab/vue)
+# <a name="vue"></a>[Vue](#tab/vue)
 
 1. Use a CLI para realizar o scaffold de um novo aplicativo chamado “my-static-app” executando o seguinte comando:
 
@@ -105,6 +105,41 @@ Quando a CLI solicitar perguntas de configuração, pressione enter para selecio
 1. Abra um navegador para [http://localhost:8080](http://localhost:8080) para verificar se o aplicativo está em execução:
 
     ![O aplicativo Vue de exemplo em execução](media/static-website/local-app-vue.png)
+
+1. Pare o servidor pressionando **Ctrl**+**C** no terminal ou no prompt de comando.
+
+# <a name="svelte"></a>[Svelte](#tab/svelte)
+
+1. Use a CLI para realizar o scaffold de um novo aplicativo chamado “my-static-app” executando o seguinte comando:
+
+    ```bash
+    npx degit sveltejs/template my-static-app
+    ```
+
+1. Em seguida, acesse a nova pasta e execute o comando `npm install`:
+
+    ```bash
+    cd my-static-app
+    npm install
+    ```
+
+1. Vamos criar o aplicativo que executa o comando `npm run build`:
+
+    ```bash
+    npm run build
+    ```
+
+1. Agora você deve ter uma pasta _build_ dentro da pasta _public_. A pasta _compilar_ contém os arquivos HTML, CSS e JavaScript que você implanta no Armazenamento do Azure.
+
+1. Execute o aplicativo usando o comando a seguir:
+
+     ```bash
+     npm run dev
+     ```
+
+1. Abra um navegador para [http://localhost:5000](http://localhost:5000) para verificar se o aplicativo está em execução:
+
+    ![O aplicativo Vue de exemplo em execução](media/static-website/local-app-svelte.png)
 
 1. Pare o servidor pressionando **Ctrl**+**C** no terminal ou no prompt de comando.
 

@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Criar uma função do Python para o Azure Functions com o VS Code'
+title: 'Etapa 2: Criar uma função do Python para o Azure Functions com o VS Code'
 description: 'Tutorial, etapa 2: demonstração do uso da extensão do Azure Functions para VS Code.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 49ab6b150f14268b6d52ac48524f66e6e520e547
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 3d33213d00c2b20d3a712c5cf9ca6888d25ebb8a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992522"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422165"
 ---
-# <a name="tutorial-create-a-python-function-for-azure-functions"></a>Tutorial: Criar uma função do Python para o Azure Functions
+# <a name="2-create-a-python-function-for-azure-functions"></a>2: Criar uma função do Python para o Azure Functions
 
 [Etapa anterior: pré-requisitos](tutorial-vs-code-serverless-python-01.md)
 
@@ -23,7 +23,7 @@ Neste artigo, você criará uma função do Python para o Azure Functions com o 
 
 1. Nos prompts seguintes:
 
-    | Prompt | Valor | DESCRIÇÃO |
+    | Prompt | Valor | Descrição |
     | --- | --- | --- |
     | Especifique uma pasta para o projeto | Pasta aberta atual | A pasta na qual o projeto será criado. Você pode optar por criar o projeto em uma subpasta. |
     | Selecione uma linguagem de programação para o seu projeto de aplicativo de função. | **Python** | A linguagem empegada na função, que determina o modelo usado para o código. |
@@ -50,6 +50,6 @@ Neste artigo, você criará uma função do Python para o Azure Functions com o 
 > ![Criar funções usando Nova Função no gerenciador do Azure Functions](media/tutorial-vs-code-serverless-python/create-new-functions-in-azure-functions-explorer.png)
 
 > [!div class="nextstepaction"]
-> [Criei a função](tutorial-vs-code-serverless-python-03.md)
+> [Implantei as funções – prossiga para a etapa 3 >>>](tutorial-vs-code-serverless-python-03.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=02-create-function)

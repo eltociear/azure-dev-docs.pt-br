@@ -4,12 +4,12 @@ description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a380a447150f29653a1f94a3fe1f6464dd495a81
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 3056ccaa6d0cc8e5f2e15c6b7511172f59644936
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75190993"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422182"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -19,7 +19,7 @@ O Azure Functions executa seu código em um ambiente sem servidor, sem precisar 
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o botão **Encontrei um problema** no final de cada artigo para enviar comentários.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Azure Functions Core Tools](#azure-functions-core-tools).
@@ -67,6 +67,6 @@ Se o comando `func` não for reconhecido, execute `npm install -g azure-function
 O comando `func` funciona por meio do arquivo *func.cmd* que está instalado na pasta global do Node.js. Para ver o local dessa pasta, execute `npm -l` e examine o local no final da saída.
 
 > [!div class="nextstepaction"]
-> [Entrei no Azure](tutorial-vs-code-serverless-python-02.md)
+> [Entrei no Azure – prossiga para a etapa 2 >>>](tutorial-vs-code-serverless-python-02.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=01-verify-prerequisites)

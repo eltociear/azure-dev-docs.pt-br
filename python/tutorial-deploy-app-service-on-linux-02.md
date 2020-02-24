@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Preparar um aplicativo para implantação no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code'
+title: 'Etapa 2: Preparar um aplicativo para implantação no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code'
 description: Etapa 2 do tutorial, configurar seu aplicativo
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d77da775a112185f7ccb81805272c5c70a2aecb3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 78a8bc92e05d0e13874345ab86907cfa4c29764b
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825770"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422475"
 ---
-# <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>Tutorial: Preparar seu aplicativo para implantação no Serviço de Aplicativo do Azure
+# <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Preparar seu aplicativo para implantação no Serviço de Aplicativo do Azure
 
 [Etapa anterior: pré-requisitos](tutorial-deploy-app-service-on-linux-01.md)
 
@@ -75,6 +75,6 @@ Se seu aplicativo Django usar um banco de dados SQLite local como este exemplo, 
 A melhor opção, em qualquer caso, é usar um banco de dados separado que é implantado e inicializado independentemente do código do aplicativo.
 
 > [!div class="nextstepaction"]
-> [Meu aplicativo está pronto](tutorial-deploy-app-service-on-linux-03.md)
+> [Meu aplicativo está pronto – prossiga para a etapa 3 >>>](tutorial-deploy-app-service-on-linux-03.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=02-prepare-app)

@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Adicionar uma associação de armazenamento para o Azure Functions no Python com o VS Code'
+title: 'Etapa 7: Adicionar uma associação de armazenamento para o Azure Functions no Python com o VS Code'
 description: 'Tutorial, etapa 7: adição de uma associação no Python para gravar mensagens no armazenamento do Azure.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 34ee80b2fac2f66e37e67fd45ca366b97d3f52dd
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 2203104d53387254284e75e322367f2e7142bfad
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002074"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422172"
 ---
-# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Tutorial: Adicionar uma associação de armazenamento para o Azure Functions no Python
+# <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
 [Etapa anterior: implantar uma segunda função](tutorial-vs-code-serverless-python-06.md)
 
@@ -97,6 +97,6 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 1. Para testar na nuvem, reimplante o código usando **Implantar no Aplicativo de Funções**, no gerenciador do **Azure: Functions**. Se solicitado, selecione o Aplicativo de Funções criado anteriormente. Após a conclusão da implantação (demora alguns minutos!), a janela **Saída** mostra novamente os pontos de extremidade públicos com os quais você pode repetir os testes.
 
 > [!div class="nextstepaction"]
-> [Adicionei uma associação de armazenamento](tutorial-vs-code-serverless-python-08.md)
+> [Adicionei uma associação de armazenamento – prossiga para a etapa 8 >>>](tutorial-vs-code-serverless-python-08.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=python-functions-extension&step=07-storage-binding)

@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Depurar localmente o código Python do Azure Functions com o VS Code'
+title: 'Etapa 4: Depurar localmente o código Python do Azure Functions com o VS Code'
 description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente para verificar seu código do Python.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
-ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
+ms.openlocfilehash: ddb6cd0b1c1cac308e7e7e8da5b658cda277586a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946690"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422141"
 ---
-# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Tutorial: Depurar localmente o código Python do Azure Functions
+# <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
 [Etapa anterior: examinar os arquivos de código](tutorial-vs-code-serverless-python-03.md)
 
@@ -59,6 +59,6 @@ ms.locfileid: "75946690"
 1. Quando você estiver satisfeito por ter testado por completo a função localmente, pare o **depurador (com o comando de menu Depurar** > **Parar Depuração** ou com o comando **Desconectar**, na barra de ferramentas de depuração).
 
 > [!div class="nextstepaction"]
-> [Executei o depurador localmente](tutorial-vs-code-serverless-python-05.md)
+> [Executei o depurador localmente – prossiga para a etapa 5>>>](tutorial-vs-code-serverless-python-05.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=04-test-debug)

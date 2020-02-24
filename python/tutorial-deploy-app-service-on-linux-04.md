@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure no Linux'
+title: 'Etapa 4: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure no Linux'
 description: Etapa 4 do tutorial, instruindo o Serviço de Aplicativo a iniciar o aplicativo Web.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e18d58a5caf18103063fabfa3101988399bbb722
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d744b4a270c89b7feb826353366ba021345eac85
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467054"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422486"
 ---
-# <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>Tutorial: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure
+# <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure
 
 [Etapa anterior: criar o Serviço de Aplicativo](tutorial-deploy-app-service-on-linux-03.md)
 
@@ -88,6 +88,6 @@ Por padrão, o contêiner do Serviço de Aplicativo no Linux pressupõe que o ar
     ```
 
 > [!div class="nextstepaction"]
-> [Configurei meu arquivo de inicialização](tutorial-deploy-app-service-on-linux-05.md)
+> [Configurei meu arquivo de inicialização – prossiga para a etapa 5 >>>](tutorial-deploy-app-service-on-linux-05.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=04-startup-command)

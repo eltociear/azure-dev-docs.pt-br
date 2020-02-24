@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Implantar um aplicativo Web do Python no Serviço de Aplicativo do Azure no Linux usando o VS Code'
+title: 'Etapa 5: Implantar um aplicativo Web do Python no Serviço de Aplicativo do Azure no Linux usando o VS Code'
 description: Etapa 5 do tutorial, implantando o código do aplicativo Web
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 02d906611ac5f2a56ba85202d89c7c39058b3bc1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 3f17fe3190857d1cc4faca84c9319e1c514cea4c
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466095"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422452"
 ---
-# <a name="tutorial-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>Tutorial: Implantar o aplicativo Web Python no Serviço de Aplicativo do Azure no Linux
+# <a name="5-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>5: Implantar o aplicativo Web Python no Serviço de Aplicativo do Azure no Linux
 
 [Etapa anterior: configurar um arquivo de inicialização personalizado](tutorial-deploy-app-service-on-linux-04.md)
 
@@ -45,6 +45,6 @@ Use este procedimento para implantar o aplicativo Python em um Serviço de Aplic
     O Serviço de Aplicativo cria um ambiente virtual com suas dependências na pasta *antenv*. Se expandir esse nó, você poderá verificar que os pacotes nomeados em *requirements.txt* estão instalados em *antenv/lib/python3.7/site-packages*.
 
 > [!div class="nextstepaction"]
-> [Implantei meu aplicativo](tutorial-deploy-app-service-on-linux-06.md)
+> [Implantei meu aplicativo – prossiga para a etapa 6 >>>](tutorial-deploy-app-service-on-linux-06.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=05-deploy-app)

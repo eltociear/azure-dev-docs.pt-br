@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Adicionar uma segunda função do Python ao Azure Functions com o VS Code'
+title: 'Etapa 6: Adicionar uma segunda função do Python ao Azure Functions com o VS Code'
 description: Etapa 6 do tutorial, expandindo um projeto do Azure Functions adicionando uma segunda função.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 12cd3625d3eec63a2ba3de4d55dbd957fbf0fb34
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992432"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422157"
 ---
-# <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>Tutorial: Adicionar uma segunda função de Python ao Azure Functions
+# <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Adicionar uma segunda função de Python ao Azure Functions
 
 [Etapa anterior: implantar no Azure](tutorial-vs-code-serverless-python-05.md)
 
@@ -114,11 +114,11 @@ Após sua primeira implantação, você poderá fazer alterações em seu códig
 
 1. Em um navegador, ou na ondulação, faça uma solicitação para `http://localhost:7071/api/DigitsOfPi?digits=125` e observe a saída. (Você poderá observar que o algoritmo do código não é totalmente preciso, mas deixaremos os aprimoramentos para você!) Pare o depurador quando tiver terminado.
 
-1. Reimplante o código usando **Implantar no Aplicativo de Funções** no explorador **Azure: Funções**. Se solicitado, selecione o Aplicativo de Funções criado anteriormente.
+1. Reimplante o código usando **Implantar no Aplicativo de Funções** no explorador **Azure: Functions**. Se solicitado, selecione o Aplicativo de Funções criado anteriormente.
 
 1. Após a conclusão da implantação (demora alguns minutos!), a janela **Saída** mostra os pontos de extremidade públicos com os quais você pode repetir seus testes.
 
 > [!div class="nextstepaction"]
-> [Adicionei uma segunda função](tutorial-vs-code-serverless-python-07.md)
+> [Adicionei uma segunda função – prossiga para a etapa 7 >>>](tutorial-vs-code-serverless-python-07.md)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=06-second-function)

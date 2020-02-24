@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Limpar os recursos usados com o código Python no Azure Functions'
+title: 'Etapa 8: Limpar os recursos usados com o código Python no Azure Functions'
 description: Etapa 8 do tutorial, limpando os recursos do Azure para evitar incorrer em encargos contínuos.
 ms.topic: conceptual
 ms.date: 01/15/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 264c09a8d84c7115bb0a56d0455d576187695db0
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125249"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422193"
 ---
-# <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>Tutorial: Limpar recursos do Azure para o Azure Functions
+# <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Limpar recursos do Azure para o Azure Functions
 
 [Etapa anterior: adicionar uma associação de armazenamento](tutorial-vs-code-serverless-python-07.md)
 
@@ -45,6 +45,6 @@ Algumas extensões populares são:
 - [Ferramentas do Azure Resource Manager](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Terminei](https://docs.microsoft.com/python/azure/?view=azure-python)
+> [Terminei!](https://docs.microsoft.com/python/azure/?view=azure-python)
 
 [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=08-clean-up-resources)

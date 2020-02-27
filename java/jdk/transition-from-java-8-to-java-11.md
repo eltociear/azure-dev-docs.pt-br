@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: a5e36d535cba39728d28c1f2aa64985863103ee6
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441080"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504537"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Transição do Java 8 para o Java 11
 
@@ -26,7 +26,7 @@ Em geral, as abordagens são tentar executar no Java 11 sem recompilação ou co
 
 A mudança para o Java 11 vale o esforço. Novos recursos foram adicionados e aprimoramentos foram feitos desde o Java 8. Esses recursos e aprimoramentos melhoram a inicialização, o desempenho e o uso de memória, além de fornecer melhor integração com contêineres. Também há adições e modificações à API que aprimoram a produtividade do desenvolvedor. 
 
-Esse documento aborda ferramentas para inspecionar o código. Ele também aborda problemas que você pode encontrar e recomendações para resolvê-los. Você também deve consultar outros guias, como o [Guia de Migração do Oracle JDK](https://docs.oracle.com/en/java/javase/11/migrate/index.htm). Como tornar o código existente [modular](http://openjdk.java.net/projects/jigsaw) não é abordado aqui.  
+Esse documento aborda ferramentas para inspecionar o código. Ele também aborda problemas que você pode encontrar e recomendações para resolvê-los. Você também deve consultar outros guias, como o [Guia de Migração do Oracle JDK](https://docs.oracle.com/en/java/javase/11/migrate/index.html). Como tornar o código existente [modular](http://openjdk.java.net/projects/jigsaw) não é abordado aqui.  
 
 
 ## <a name="the-toolbox"></a>A caixa de ferramentas
@@ -125,7 +125,7 @@ Se um problema precisar ser corrigido no código, corrija-o mas continue compila
 ### <a name="check-command-line-options"></a>Verificar as opções de linha de comando
 
 Antes de executar no Java 11, faça uma rápida verificação das opções de linha de comando. 
-As [opções que foram removidas](#unrecognized options) farão a JVM (Máquina Virtual Java) ser encerrada. Essa verificação é especialmente importante se você usa opções de registro em log de GC, pois elas mudaram drasticamente após o Java 8. A ferramenta [JaCoLine](https://jacoline.dev/about) é boa para ser usada para detectar problemas com opções de linha de comando. 
+As [opções que foram removidas](#unrecognized-options) farão a JVM (Máquina Virtual Java) ser encerrada. Essa verificação é especialmente importante se você usa opções de registro em log de GC, pois elas mudaram drasticamente após o Java 8. A ferramenta [JaCoLine](https://jacoline.dev/about) é boa para ser usada para detectar problemas com opções de linha de comando. 
 
 ### <a name="check-third-party-libraries"></a>Verificar bibliotecas de terceiros
 

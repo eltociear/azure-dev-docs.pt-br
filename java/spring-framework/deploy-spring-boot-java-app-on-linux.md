@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 9288f680f5eb92046ada7ce420d64de2e5301fcc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440971"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504438"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Implantar um aplicativo do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
 
@@ -126,7 +126,7 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 
 Especifique a imagem base em `<from>/<image>`, aqui `openjdk:8-jre-alpine`. Especifique o nome da imagem final a ser criada da base em `<to>/<image>`.  
 
-A autenticação `{docker.image.prefix}` é o **Servidor de logon** na página de registro mostrada anteriormente. `{project.artifactId}` é o nome e o número de versão do arquivo JAR da primeira compilação do Maven do projeto.
+A autenticação `{docker.image.prefix}` é o **Servidor de logon** na página de registro mostrada anteriormente. O `{project.artifactId}` é o nome e o número de versão do arquivo JAR do primeiro build do Maven do projeto.
 
 Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<auth>`. Por exemplo:
 

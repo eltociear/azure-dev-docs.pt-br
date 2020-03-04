@@ -6,7 +6,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "68429238"
 ---
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas neste artigo, você precisará instalar o Azure Toolkit for Eclipse, que requer os seguintes componentes de software:
 

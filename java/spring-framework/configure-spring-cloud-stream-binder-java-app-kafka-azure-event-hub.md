@@ -17,7 +17,7 @@ ms.locfileid: "74812060"
 
 Este artigo demonstra como configurar um Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializer para usar o [Apache Kafka] com os Hubs de Eventos do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 

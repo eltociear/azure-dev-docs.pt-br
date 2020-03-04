@@ -18,7 +18,7 @@ ms.locfileid: "77075277"
 
 Este artigo ensina a criar um cache Redis na nuvem usando o portal do Azure, depois usar o **[Spring Initializr]** para criar um aplicativo personalizado e, então, criar um aplicativo Web de Java que armazena e recupera os dados usando o cache Redis.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

@@ -14,7 +14,7 @@ ms.locfileid: "74467156"
 
 Neste tutorial, você usa o Visual Studio Code para criar um aplicativo Node.js em contêiner usando o Docker, enviar por push a imagem de contêiner para um Registro e então implantar a imagem no Serviço de Aplicativo do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

@@ -14,7 +14,7 @@ ms.locfileid: "74466625"
 
 Neste tutorial, você usa Visual Studio Code e a extensão Azure Functions para criar e implantar um aplicativo Azure Functions escrito com JavaScript. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

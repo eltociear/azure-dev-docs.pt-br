@@ -19,7 +19,7 @@ O Azure Functions executa seu código em um ambiente sem servidor, sem precisar 
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o botão **Encontrei um problema** no final de cada artigo para enviar comentários.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Azure Functions Core Tools](#azure-functions-core-tools).

@@ -28,7 +28,7 @@ EXPOSE 8080
 ```
 Comece o processo de transporte em contêineres do Azure Pipelines criando uma imagem do Docker e enviando por push a imagem de contêiner para um ACR (Registro de Contêiner do Azure). Conclua o processo criando um pipeline de lançamento do Azure Pipelines e implantando a imagem de contêiner em um aplicativo Web.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 1. No [portal do Azure](https://portal.azure.com), crie um [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry).
    

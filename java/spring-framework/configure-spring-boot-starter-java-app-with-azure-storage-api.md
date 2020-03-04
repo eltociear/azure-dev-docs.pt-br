@@ -21,7 +21,7 @@ ms.locfileid: "74812114"
 
 Este artigo orienta em relação à criação de um aplicativo personalizado usando o **Spring Initializr** e depois usando esse aplicativo para acessar o Armazenamento do Azure usando a API do Armazenamento do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 

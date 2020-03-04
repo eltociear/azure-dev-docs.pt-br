@@ -20,7 +20,7 @@ ms.locfileid: "77504438"
 
 Este tutorial descreve como usar o [Docker] para colocar seu aplicativo [Spring Boot] em um contêiner e implantar sua própria imagem do Docker em um host Linux no [Serviço de Aplicativo do Azure](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requisitos:
 

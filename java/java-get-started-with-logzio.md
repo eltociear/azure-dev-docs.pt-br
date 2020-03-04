@@ -25,7 +25,7 @@ Neste tutorial, você aprenderá como:
 > * Enviar logs de um aplicativo Java existente para o Logz.io.
 > * Enviar logs de diagnóstico e métricas dos serviços do Azure para o Logz.io.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Java Developer Kit](https://aka.ms/azure-jdks), versão 8 ou superior
 * Uma conta do Logz.io do [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/logz.logzio-elk-as-a-service-pro)

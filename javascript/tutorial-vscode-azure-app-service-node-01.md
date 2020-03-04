@@ -14,7 +14,7 @@ ms.locfileid: "74467215"
 
 Neste tutorial, você implanta um aplicativo Node.js para o Serviço de Aplicativo do Azure no Linux usando a [extensão de Serviço de Aplicativo](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

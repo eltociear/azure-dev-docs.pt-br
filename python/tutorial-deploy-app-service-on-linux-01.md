@@ -20,7 +20,7 @@ Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos 
 > [!TIP]
 > O [Serviço de Aplicativo do Azure no Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) executa o código-fonte em um contêiner predefinido do Docker. Esse contêiner executa aplicativos com o Python 3.7, usando o servidor Web [Gunicorn](https://gunicorn.org). As características desse contêiner são descritas em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). A própria definição de contêiner está no [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code com a extensão do Serviço de Aplicativo do Azure](#visual-studio-code-python-and-the-azure-app-service-extension).

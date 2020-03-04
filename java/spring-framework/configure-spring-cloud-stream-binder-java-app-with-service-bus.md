@@ -21,7 +21,7 @@ O Azure fornece uma plataforma de mensagens assíncrona chamada [Barramento de S
 
 Este artigo mostra como usar o Spring Cloud Stream Binder para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os pré-requisitos a seguir são obrigatórios neste artigo:
 

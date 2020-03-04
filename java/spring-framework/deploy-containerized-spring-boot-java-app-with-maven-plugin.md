@@ -27,7 +27,7 @@ Este artigo demonstra como usar o [plug-in do Maven para Aplicativos Web do Azur
 > O plug-in do Maven para Aplicativos Web do Azure está disponível no momento como uma versão prévia. Por enquanto, há suporte somente para a publicação FTP, embora existam planos para recursos adicionais futuros.
 > 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requisitos:
 

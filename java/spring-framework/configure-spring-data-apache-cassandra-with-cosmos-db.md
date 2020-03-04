@@ -18,7 +18,7 @@ ms.locfileid: "74812034"
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações usando a [API do Cassandra do Azure Cosmos DB](/azure/cosmos-db/cassandra-introduction).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

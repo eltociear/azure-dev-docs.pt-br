@@ -19,7 +19,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: "Este guia demonstra o uso de várias bibliotecas no SDK do Azure para Python.  \n"
-- title: Pré-requisitos
+- title: Prerequisites
   durationInMinutes: 5
   content: >
     - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).

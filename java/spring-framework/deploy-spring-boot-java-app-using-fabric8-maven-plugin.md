@@ -20,7 +20,7 @@ O **[Fabric8]** é uma solução de software livre baseada em **[Kubernetes]** ,
 
 Este tutorial mostra como usar o plug-in Fabric8 do Maven para desenvolver e implantar um aplicativo em um host do Linux no [Serviço de Contêiner do Azure (AKS)].
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requisitos:
 

@@ -19,7 +19,7 @@ ms.locfileid: "74812133"
 
 Este artigo demonstra como criar um aplicativo com o **[Spring Initializr]** , o qual usa o iniciador do Spring Boot para o Azure Key Vault para recuperar uma cadeia de conexão armazenada como um segredo em um cofre de chaves.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

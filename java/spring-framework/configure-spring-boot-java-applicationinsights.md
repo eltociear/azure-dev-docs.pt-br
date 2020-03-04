@@ -20,7 +20,7 @@ ms.locfileid: "74812150"
 
 Este artigo descreve como criar um aplicativo Spring boot usando **[Spring Initializr]** . Ele usa o Spring Boot Starter do Azure Application Insights para fazer o monitoramento de ponta a ponta de aplicativos Java na nuvem.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

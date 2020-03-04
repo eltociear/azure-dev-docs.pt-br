@@ -27,7 +27,7 @@ O Kit de Ferramentas do Azure para IntelliJ fornece modelos e funcionalidade que
 
 Há dois métodos de instalação do Kit de Ferramentas do Azure para IntelliJ: usando a caixa de diálogo **Configurações** e o menu **Configurar** na tela inicial. Ambos os métodos de instalação serão demonstrados nas etapas a seguir.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 O Azure Toolkit for IntelliJ requer os seguintes componentes de software:
 

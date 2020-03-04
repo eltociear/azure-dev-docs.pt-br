@@ -7,7 +7,7 @@ ms.lasthandoff: 12/04/2019
 ms.locfileid: "74811144"
 ---
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas neste artigo, você precisará instalar o Kit de Ferramentas do Azure para IntelliJ, que requer os seguintes componentes de software:
 

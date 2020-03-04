@@ -25,7 +25,7 @@ Este artigo demonstra como empacotar um aplicativo [MicroProfile.io] em um cont�
 >
 > Este procedimento funciona com qualquer implementação de MicroProfile.io, desde que a imagem de contêiner do Docker seja executada automaticamente (ou seja, inclui o runtime).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas neste tutorial, você precisará ter os seguintes pré-requisitos:
 

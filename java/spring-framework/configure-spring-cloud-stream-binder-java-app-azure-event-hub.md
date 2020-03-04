@@ -18,7 +18,7 @@ ms.locfileid: "74812067"
 
 Este artigo demonstra como configurar um aplicativo Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializr e os Hubs de Eventos do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 

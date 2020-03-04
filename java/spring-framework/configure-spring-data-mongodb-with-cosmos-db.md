@@ -20,7 +20,7 @@ ms.locfileid: "74811931"
 
 Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações usando a [API do MongoDB do Azure Cosmos DB](/azure/cosmos-db/mongodb-introduction).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

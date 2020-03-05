@@ -4,12 +4,12 @@ description: Etapa 6 do tutorial, expandindo um projeto do Azure Functions adici
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 0f28ef3b6d57abe75c286839001078875787b849
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422157"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709653"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Adicionar uma segunda função de Python ao Azure Functions
 
@@ -104,13 +104,11 @@ Após sua primeira implantação, você poderá fazer alterações em seu códig
 
 1. Inicie o depurador pressionando F5 ou selecionando o comando de menu **Depurar** > **Iniciar Depuração**. A janela **Saída** agora deve mostrar os dois pontos de extremidade em seu projeto:
 
-    ```output
+    <pre>
     Http Functions:
-
             DigitsOfPi: [GET] http://localhost:7071/api/DigitsOfPi
-
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
-    ```
+    </pre>
 
 1. Em um navegador, ou na ondulação, faça uma solicitação para `http://localhost:7071/api/DigitsOfPi?digits=125` e observe a saída. (Você poderá observar que o algoritmo do código não é totalmente preciso, mas deixaremos os aprimoramentos para você!) Pare o depurador quando tiver terminado.
 

@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente p
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ddb6cd0b1c1cac308e7e7e8da5b658cda277586a
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 15b0eeb6be2d1477b99b3fd2ec3abb48df353873
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422141"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709704"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
@@ -23,11 +23,11 @@ ms.locfileid: "77422141"
 
 1. Quando você inicia o depurador, um terminal é aberto mostrando a saída do Azure Functions, incluindo um resumo dos pontos de extremidade disponíveis. Sua URL poderá ser diferente se você tiver usado um nome diferente de "HttpExample":
 
-    ```output
+    <pre>
     Http Functions:
 
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
-    ```
+    </pre>
 
 1. Use **Ctrl+clique** ou **cmd+clique** sobre a URL na janela **Saída** do Visual Studio Code para abrir um navegador com esse endereço ou inicie um navegador e cole essa URL na barra de navegação. Em ambos os casos, o ponto de extremidade é `api/<function_name>`, nesse caso `api/HttpExample`. No entanto, como essa URL não inclui um parâmetro de nome, a janela do navegador deve mostrar apenas "Passe um nome na cadeia de caracteres de consulta ou no corpo da solicitação", conforme apropriado para esse caminho no código.
 
@@ -35,13 +35,17 @@ ms.locfileid: "77422141"
 
 1. Para passar o valor do nome no corpo da solicitação JSON, você pode usar uma ferramenta como a cURL com o JSON embutido:
 
+    # <a name="bash"></a>[Bash](#tab/bash)
+
     ```bash
     # Mac OS/Linux: modify the URL if you're using a different function name
     curl --header "Content-Type: application/json" --request POST \
         --data '{"name":"Visual Studio Code"}' http://localhost:7071/api/HttpExample
     ```
 
-    ```ps
+    # <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+    ```powershell
     # Windows (escaping on the quotes is necessary; also modify the URL
     # if you're using a different function name)
     curl --header "Content-Type: application/json" --request POST \

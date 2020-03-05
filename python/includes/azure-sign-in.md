@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fcbce1c0f17721c7f3fd90e8d396baba6ae100c4
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 90ac4162e1a6032bcb1f3cfab7f249e4538314f7
+ms.sourcegitcommit: a9ec05f964009409fe6e54b95c9d548f805a518e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278843"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215324"
 ---
 Depois de instalar a extensão do Azure, entre na sua conta do Azure navegando até o gerenciador do **Azure**, selecione **Entrar no Azure** e siga os prompts. (Se você tiver várias extensões do Azure instaladas, selecione uma para a área na qual você está trabalhando, como Serviço de Aplicativo, Functions etc.)
 
@@ -19,11 +19,13 @@ Depois de entrar, verifique se o endereço de email da sua conta do Azure (ou "C
 > [!NOTE]
 > Se você vir o erro **"Não é possível encontrar a assinatura com o nome [ID da assinatura]"** , talvez seja porque você está atrás de um proxy e não consegue acessar a API do Azure. Configure as variáveis de ambiente `HTTP_PROXY` e `HTTPS_PROXY` com as informações de proxy no terminal:
 >
-> ```sh
+> ```bash
 > # macOS/Linux
 > export HTTPS_PROXY=https://username:password@proxy:8080
 > export HTTP_PROXY=http://username:password@proxy:8080
+> ```
 >
+> ```cmd
 > # Windows
 > set HTTPS_PROXY=https://username:password@proxy:8080
 > set HTTP_PROXY=http://username:password@proxy:8080

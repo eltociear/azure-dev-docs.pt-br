@@ -3,18 +3,18 @@ title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure usand
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 2d6721060281fb73d31576caa47f316f2d078d29
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 98ebb6bd857216cb395eb8cc62faa3d6ee30e3eb
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467156"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709824"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 
 Neste tutorial, você usa o Visual Studio Code para criar um aplicativo Node.js em contêiner usando o Docker, enviar por push a imagem de contêiner para um Registro e então implantar a imagem no Serviço de Aplicativo do Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).
@@ -45,9 +45,9 @@ docker --version
 
 A saída deve ser parecida com o seguinte:
 
-```output
+<pre>
 Docker Version 17.12.0-ce, build c97c6d6
-```
+</pre>
 
 > [!div class="nextstepaction"]
 > [Instalei a extensão do Docker](tutorial-vscode-docker-node-02.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=getting-started)

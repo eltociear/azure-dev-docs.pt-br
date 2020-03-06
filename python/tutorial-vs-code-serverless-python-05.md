@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 5: implantação do código de função do Python 
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 425fb745cec74672cfabc6c3c5eab96821a43224
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422209"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709753"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Implantar o Azure Functions no Python
 
@@ -41,12 +41,13 @@ Um aplicativo de funções requer uma Conta de Armazenamento do Azure para os da
 
     Para **Transmitir Logs** e **Carregar Configurações**, confira as próximas seções. Para **Exibir a saída**, confira a etapa 5 a seguir.
 
-1. Após implantação, a janela **Saída** também mostra o ponto de extremidade público no Azure (a URL do ponto de extremidade específico corresponderá ao nome especificado no aplicativo de funções):
+1. Após a implantação, a janela **Saída** também mostra o ponto de extremidade público no Azure (a URL do ponto de extremidade específico corresponderá ao nome especificado no aplicativo de funções):
 
-    ```output
+    <pre>
     HTTP Trigger Urls:
-      HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
-    ```
+
+          HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
+    </pre>
 
     Use esse ponto de extremidade para executar os mesmos testes que fez localmente, usando parâmetros de URL e/ou solicitações com dados JSON no corpo da solicitação. Os resultados do ponto de extremidade público devem corresponder aos resultados do ponto de extremidade local, testado anteriormente na [parte 4](tutorial-vs-code-serverless-python-04.md).
 
@@ -56,7 +57,7 @@ O suporte para streaming de log está atualmente em desenvolvimento, conforme de
 
 No presente, no entanto, esses comandos ainda não estão operacionais. O streaming de logs está disponível em um navegador executando o comando a seguir, substituindo `<app_name>` pelo nome do seu aplicativo do Functions no Azure:
 
-```bash
+```
 # Replace <app_name> with the name of your Functions app on Azure
 func azure functionapp logstream <app_name> --browser
 ```

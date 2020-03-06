@@ -3,20 +3,20 @@ title: Limpar recursos após implantar um aplicativo Node.js no Azure usando a C
 description: Parte 7 do tutorial, limpar recursos
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 7998eb641090b252455613a46ae41e45e5cd1c1d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 183539b8e2f0246bd812e5fa364a885b75626819
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466753"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709853"
 ---
-# <a name="clean-up-resources"></a>Limpar recursos
+# <a name="clean-up-resources"></a>Limpar os recursos
 
 [Etapa anterior: Fazer alterações e reimplantar](tutorial-vscode-docker-node-06.md)
 
 O Serviço de Aplicativo que você criou inclui um plano do Serviço de Aplicativo de backup que pode incorrer em custos. Para limpar os recursos, execute o seguinte comando em um terminal ou prompt de comando:
 
-```bash
+```azurecli
 az group delete --name myResourceGroup
 ```
 

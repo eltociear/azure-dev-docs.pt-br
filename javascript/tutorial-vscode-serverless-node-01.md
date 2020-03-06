@@ -3,18 +3,18 @@ title: Implantar o Azure Functions no Node.js usando o Visual Studio Code
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: a4e60d45f5bddb358e596fc3b9e7db72e7e2f9eb
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8a6dc30c90ba056070e69e40ed1534a176ae21aa
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466625"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709843"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Implantar o Azure Functions usando o Visual Studio Code
 
 Neste tutorial, você usa Visual Studio Code e a extensão Azure Functions para criar e implantar um aplicativo Azure Functions escrito com JavaScript. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).
@@ -41,7 +41,7 @@ Para habilitar a depuração local, você precisa instalar o [Azure Functions Co
 
 1. Para verificar a instalação, selecione o comando de menu **Terminal** > **Novo Terminal** no VS Code e execute o comando `func`. O comando deve mostrar uma saída semelhante à abaixo (juntamente com as informações de uso).
 
-    ```output
+    <pre>
                       %%%%%%
                      %%%%%%
                 @   %%%%%%    @
@@ -56,7 +56,7 @@ Para habilitar a depuração local, você precisa instalar o [Azure Functions Co
 
     Azure Functions Core Tools (2.4.419 Commit hash: c9c1724d002bd90b2e6b41393915ea3a26bcf0ce)
     Function Runtime Version: 2.0.12332.0
-    ```
+    </pre>
 
 > [!div class="nextstepaction"]
 > [Instalei os pré-requisitos](tutorial-vscode-serverless-node-02.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=getting-started)

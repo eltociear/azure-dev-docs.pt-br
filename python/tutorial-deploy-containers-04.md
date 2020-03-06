@@ -4,12 +4,12 @@ description: 'Tutorial, parte 4: exibição de logs do Serviço de Aplicativo do
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 4f448945c0e1d1eda7870eb633d644535da7be0e
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: b6c8d85ca74359863aca5b4e83cf96107e5a8e88
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422221"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709783"
 ---
 # <a name="4-stream-logs-from-azure-app-service-for-a-container"></a>4: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner
 
@@ -23,9 +23,9 @@ De dentro do VS Code, você pode exibir (ou "acompanhar") os logs do site em exe
 
 1. Responda **Sim** quando questionado se deseja habilitar o registro em log e reinicie o aplicativo. Depois que o aplicativo for reiniciado, o painel Saída do VS Code será aberto com uma conexão ao streaming de log.
 
-1. Após alguns segundos, será exibida uma mensagem indicando que você está conectado ao serviço de streaming de log.
+1. Após alguns segundos, você verá uma mensagem na saída indicando que você está conectado ao serviço de streaming de log:
 
-    ```bash
+    <pre>
     Connecting to log stream...
     2018-09-27T20:14:26  Welcome, you are now connected to log-streaming service.
 
@@ -34,7 +34,7 @@ De dentro do VS Code, você pode exibir (ou "acompanhar") os logs do site em exe
     2018-09-27 20:14:59.270 INFO  - docker run -d -p 24138:8000 --name vsdocs-django-sample-container_0 -e WEBSITES_PORT=8000 -e WEBSITE_SITE_NAME=vsdocs-django-sample-container -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_INSTANCE_ID=02c705ae24eaf5f298e553a9c2724b9fe4485707c2d1c36137cd02931091e561 -e HTTP_LOGGING_ENABLED=1 vsdocsregistry.azurecr.io/python-sample-vscode-django-tutorial:latest
 
     2018-09-27 20:15:06.216 INFO  - Container vsdocs-django-sample-container_0 for site vsdocs-django-sample-container initialized successfully.
-    ```
+    </pre>
 
 1. Navegue dentro do aplicativo a fim de ver saídas adicionais para várias solicitações HTTP.
 

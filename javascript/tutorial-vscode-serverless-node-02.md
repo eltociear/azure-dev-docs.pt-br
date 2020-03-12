@@ -3,12 +3,12 @@ title: Criar o aplicativo Azure Functions usando o Visual Studio Code
 description: Parte 2 do tutorial, criar o aplicativo Azure Functions
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fb7b5f3bab0dbde0a04671126ad7aa8e5be16ba0
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967242"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089959"
 ---
 # <a name="create-the-local-functions-app"></a>Criar o aplicativo Functions local
 
@@ -48,7 +48,7 @@ Nesta etapa, você cria um aplicativo Azure Functions local com uma função que
     | Nome de arquivo | Descrição |
     | --- | --- |
     | *index.js* |  O código-fonte que responde à solicitação HTTP. |
-    | *functions.json* | A [configuração de associação](/azure/azure-functions/functions-triggers-bindings) para o gatilho HTTP. |
+    | *function.json* | A [configuração de associação](/azure/azure-functions/functions-triggers-bindings) para o gatilho HTTP. |
     | *sample.dat* | Um arquivo de dados de espaço reservado para demonstrar que você pode ter outros arquivos na pasta. Você pode excluir esse arquivo, se desejar, pois ele não é usado neste tutorial. |
 
     ![Resultado da criação de um aplicativo de funções](media/functions-extension/create-function-app-results.png)

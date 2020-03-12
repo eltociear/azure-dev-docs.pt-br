@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 7: adição de uma associação no Python para gra
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 2203104d53387254284e75e322367f2e7142bfad
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 4ed8fee52e466643ac73a96ef1529bf492418256
+ms.sourcegitcommit: f1e3c72c38376b15f5313d4bfe5fefdbfc022dc9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422172"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022316"
 ---
 # <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
@@ -92,7 +92,7 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 
     1. Navegue e examine a fila com o Gerenciador de Armazenamento do Azure, que se integra ao Visual Studio – conforme descrito em [Conectar o Functions ao Armazenamento do Azure usando o Visual Studio Code](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code) – especialmente a seção [Examinar a fila de saída](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code#examine-the-output-queue).
 
-    1. Use a CLI do Azure para consultar a fila de armazenamento, conforme descrito em [Consultar a fila de armazenamento](/azure/azure-functions/functions-add-output-binding-storage-queue-python).
+    1. Use a CLI do Azure para consultar a fila de armazenamento, conforme descrito em [Consultar a fila de armazenamento](/azure/azure-functions/functions-add-output-binding-storage-queue-cli?pivots=programming-language-python).
 
 1. Para testar na nuvem, reimplante o código usando **Implantar no Aplicativo de Funções**, no gerenciador do **Azure: Functions**. Se solicitado, selecione o Aplicativo de Funções criado anteriormente. Após a conclusão da implantação (demora alguns minutos!), a janela **Saída** mostra novamente os pontos de extremidade públicos com os quais você pode repetir os testes.
 

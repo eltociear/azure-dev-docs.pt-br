@@ -5,18 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825801"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893739"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo Tomcat existente para ser executado em um contêiner do AKS (Serviço de Kubernetes do Azure).
 
-## <a name="pre-migration-steps"></a>Etapas de pré-migração
+## <a name="pre-migration"></a>Pré-migração
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -224,26 +224,26 @@ Você precisará modificar o script de inicialização (*startup.sh* no reposit�
 
 Para executar trabalhos agendados em seu cluster do AKS, defina [Trabalhos do Cron](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/) conforme necessário.
 
-## <a name="post-migration-steps"></a>Etapas pós-migração
+## <a name="post-migration"></a>Após a migração
 
 Agora que você migrou seu aplicativo para o AKS, você deve verificar se ele funciona conforme o esperado. Depois de fazer isso, temos algumas recomendações para você que podem tornar seu aplicativo mais nativo da nuvem.
 
-1. Considere [adicionar um nome DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) ao endereço IP alocado para o controlador de entrada ou o balanceador de carga do aplicativo.
+* Considere [adicionar um nome DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) ao endereço IP alocado para o controlador de entrada ou o balanceador de carga do aplicativo.
 
-1. Considere [adicionar gráficos HELM ao seu aplicativo](https://helm.sh/docs/topics/charts/). Um gráfico do Helm permite que você parametrize a implantação do aplicativo para uso e personalização por um conjunto mais diversificado de clientes.
+* Considere [adicionar gráficos HELM ao seu aplicativo](https://helm.sh/docs/topics/charts/). Um gráfico do Helm permite que você parametrize a implantação do aplicativo para uso e personalização por um conjunto mais diversificado de clientes.
 
-1. Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/aks-template).
+* Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/aks-template).
 
-1. Habilite o [Monitoramento do Azure para o cluster](/azure/azure-monitor/insights/container-insights-enable-existing-clusters) para permitir a coleta de logs de contêiner, a utilização de acompanhamento e assim por diante.
+* Habilite o [Monitoramento do Azure para o cluster](/azure/azure-monitor/insights/container-insights-enable-existing-clusters) para permitir a coleta de logs de contêiner, a utilização de acompanhamento e assim por diante.
 
-1. Considere a possibilidade de expor métricas específicas do aplicativo por meio do Prometheus. O Prometheus é uma estrutura de métricas open-source amplamente adotada na comunidade do Kubernetes. Você pode configurar o [recorte de métricas do Prometheus no Azure Monitor](/azure/azure-monitor/insights/container-insights-prometheus-integration), em vez de hospedar seu próprio servidor do Prometheus para habilitar a agregação de métricas de seus aplicativos e resposta automatizada para condições anormais ou escalonamento dessas condições.
+* Considere a possibilidade de expor métricas específicas do aplicativo por meio do Prometheus. O Prometheus é uma estrutura de métricas open-source amplamente adotada na comunidade do Kubernetes. Você pode configurar o [recorte de métricas do Prometheus no Azure Monitor](/azure/azure-monitor/insights/container-insights-prometheus-integration), em vez de hospedar seu próprio servidor do Prometheus para habilitar a agregação de métricas de seus aplicativos e resposta automatizada para condições anormais ou escalonamento dessas condições.
 
-1. Criar a implementar uma estratégia de continuidade dos negócios e recuperação de desastre. Para aplicativos críticos, considere a possibilidade de [usar uma arquitetura de implantação em várias regiões](/azure/aks/operator-best-practices-multi-region).
+* Criar a implementar uma estratégia de continuidade dos negócios e recuperação de desastre. Para aplicativos críticos, considere a possibilidade de [usar uma arquitetura de implantação em várias regiões](/azure/aks/operator-best-practices-multi-region).
 
-1. Examine a [política de suporte a versão do Kubernetes](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy). É sua responsabilidade continuar [atualizando seu cluster do AKS](/azure/aks/upgrade-cluster) para garantir que você esteja sempre executando uma versão compatível.
+* Examine a [política de suporte a versão do Kubernetes](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy). É sua responsabilidade continuar [atualizando seu cluster do AKS](/azure/aks/upgrade-cluster) para garantir que você esteja sempre executando uma versão compatível.
 
-1. Faça com que todos os membros da equipe responsáveis pela administração de clusters e pelo desenvolvimento de aplicativos [examinem as práticas recomendadas do AKS](/azure/aks/best-practices).
+* Faça com que todos os membros da equipe responsáveis pela administração de clusters e pelo desenvolvimento de aplicativos [examinem as práticas recomendadas do AKS](/azure/aks/best-practices).
 
-1. Avalie os itens no arquivo *logging.properties*. Considere a possibilidade de eliminar ou reduzir parte da saída de log para melhorar o desempenho.
+* Avalie os itens no arquivo *logging.properties*. Considere a possibilidade de eliminar ou reduzir parte da saída de log para melhorar o desempenho.
 
-1. Considere a possibilidade de [monitorar o tamanho do cache de código](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm) e adicione os parâmetros `-XX:InitialCodeCacheSize` e `-XX:ReservedCodeCacheSize` à variável `JAVA_OPTS` no Dockerfile para otimizar ainda mais o desempenho.
+* Considere a possibilidade de [monitorar o tamanho do cache de código](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm) e adicione os parâmetros `-XX:InitialCodeCacheSize` e `-XX:ReservedCodeCacheSize` à variável `JAVA_OPTS` no Dockerfile para otimizar ainda mais o desempenho.

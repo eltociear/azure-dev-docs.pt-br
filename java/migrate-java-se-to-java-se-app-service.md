@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 5a9f6838e516b6168be40c83ea1ff4329676e6e3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830704"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894195"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Migrar aplicativos Web JAR executáveis para Java SE no Serviço de Aplicativo do Azure
 
@@ -23,7 +23,7 @@ Se você não puder atender a nenhum dos requisitos de pré-migração, consulte
 * Migrar aplicativos JAR executáveis para contêineres no Serviço de Kubernetes do Azure (planejado)
 * Migrar aplicativos JAR executáveis para Máquinas Virtuais do Azure (planejado)
 
-## <a name="pre-migration-steps"></a>Etapas de pré-migração
+## <a name="pre-migration"></a>Pré-migração
 
 ### <a name="switch-to-a-supported-platform"></a>Alternar para uma plataforma compatível
 
@@ -209,7 +209,7 @@ Siga [estas etapas para migrar cadeias de conexão e outras configurações](/az
 
 Por fim, você precisará reiniciar seu aplicativo Web para aplicar todas as alterações de configuração. Após a conclusão da reinicialização, verifique se o aplicativo está sendo executado corretamente.
 
-## <a name="post-migration-steps"></a>Etapas pós-migração
+## <a name="post-migration"></a>Após a migração
 
 Agora que você migrou seu aplicativo para o Serviço de Aplicativo do Azure, você deve verificar se ele funciona conforme o esperado. Depois de fazer isso, temos algumas recomendações para você que podem tornar seu aplicativo mais nativo da nuvem.
 

@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825850"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893750"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrar aplicativos Tomcat para o Tomcat no Serviço de Aplicativo do Azure
 
@@ -23,7 +23,7 @@ Se você não puder atender a nenhum dos requisitos de pré-migração, consulte
 * [Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Migrar aplicativos do Tomcat para Máquinas Virtuais do Azure (planejado)
 
-## <a name="pre-migration-steps"></a>Etapas de pré-migração
+## <a name="pre-migration"></a>Pré-migração
 
 ### <a name="switch-to-a-supported-platform"></a>Alternar para uma plataforma compatível
 
@@ -201,18 +201,18 @@ Concluir a migração copiando qualquer configuração adicional (como [Realms](
 
 Por fim, você precisará reiniciar seu aplicativo Web para aplicar todas as alterações de configuração. Após a conclusão da reinicialização, verifique se o aplicativo está sendo executado corretamente.
 
-## <a name="post-migration-steps"></a>Etapas pós-migração
+## <a name="post-migration"></a>Após a migração
 
 Agora que você migrou seu aplicativo para o Serviço de Aplicativo do Azure, você deve verificar se ele funciona conforme o esperado. Depois de fazer isso, temos algumas recomendações para você que podem tornar seu aplicativo mais nativo da nuvem.
 
 ### <a name="recommendations"></a>Recomendações
 
-1. Se você optou por usar o diretório */home* para armazenamento de arquivos, considere [substituí-lo pelo Armazenamento do Azure](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
+* Se você optou por usar o diretório */home* para armazenamento de arquivos, considere [substituí-lo pelo Armazenamento do Azure](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
 
-1. Se você tiver uma configuração no diretório */home* que contenha cadeias de conexão, chaves SSL e outras informações secretas, considere usar uma combinação de [Azure Key Vault](/azure/app-service/app-service-key-vault-references) e/ou [injeção de parâmetro com configurações de aplicativo](/azure/app-service/configure-common#configure-app-settings) sempre que possível.
+* Se você tiver uma configuração no diretório */home* que contenha cadeias de conexão, chaves SSL e outras informações secretas, considere usar uma combinação de [Azure Key Vault](/azure/app-service/app-service-key-vault-references) e/ou [injeção de parâmetro com configurações de aplicativo](/azure/app-service/configure-common#configure-app-settings) sempre que possível.
 
-1. Considere [usar slots de implantação](/azure/app-service/deploy-staging-slots) para implantações confiáveis sem nenhum tempo de inatividade.
+* Considere [usar slots de implantação](/azure/app-service/deploy-staging-slots) para implantações confiáveis sem nenhum tempo de inatividade.
 
-1. Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Se estiver usando slots de implantação, você poderá [automatizar a implantação em um slot](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) e a troca de slots subsequente.
+* Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Se estiver usando slots de implantação, você poderá [automatizar a implantação em um slot](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) e a troca de slots subsequente.
 
-1. Criar a implementar uma estratégia de continuidade dos negócios e recuperação de desastre. Para aplicativos críticos, considere a possibilidade de [usar uma arquitetura de implantação em várias regiões](/azure/architecture/reference-architectures/app-service-web-app/multi-region).
+* Criar a implementar uma estratégia de continuidade dos negócios e recuperação de desastre. Para aplicativos críticos, considere a possibilidade de [usar uma arquitetura de implantação em várias regiões](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

@@ -2,70 +2,83 @@
 title: Implantar aplicativos Node.js para o Serviço de Aplicativo do Azure do Visual Studio Code
 description: Parte 3 do tutorial, implantar o site
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: 937eb54e9885e3b5b9fa7be54f551945a54572cd
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.date: 03/04/2020
+ms.openlocfilehash: 1a8b4a37fa823b631e6b4849cf7cff6ac2ba26f3
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467205"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894258"
 ---
-# <a name="deploy-the-website"></a>Implantar o site
+# <a name="deploy-the-app-to-azure"></a>Implantar o aplicativo no Azure
 
 [Etapa anterior: Criar o aplicativo](tutorial-vscode-azure-app-service-node-02.md)
 
-Nesta etapa, você implanta seu site do Node.js para usar o Visual Studio Code e a extensão do Serviço de Aplicativo do Azure. Este tutorial usa o modelo de implantação mais básico em que seu aplicativo é compactado e implantado em um Serviço de Aplicativo do Azure no Linux.
+Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implantação do git por meio do VS Code e a extensão do Serviço de Aplicativo do Azure. Para atingir essa meta, primeiro inicialize um repositório git local e, em seguida, crie um aplicativo Web no Azure. Depois, configure o VS Code para usar a implantação do git.
 
-1. Antes de implantar o aplicativo, verifique se ele está escutando na porta fornecida pela variável de ambiente `PORT`: `process.env.PORT`.
-
-1. Na pasta do aplicativo (como `myExpressApp` da etapa anterior), inicie o VS Code nessa pasta usando o seguinte comando:
+1. No terminal, verifique se você está na pasta *expressApp1* e inicie o Visual Studio Code com o seguinte comando:
 
     ```bash
     code .
     ```
 
-1. No VS Code, selecione o ícone do Azure para abrir o gerenciador de **Serviço de Aplicativo do Azure** e, em seguida, selecione o ícone de seta azul para cima para implantar o aplicativo no Azure:
+1. No VS Code, selecione o ícone do controle do código-fonte para abrir o **Source Control Explorer** e selecione **+** para inicializar um repositório git:
 
-    ![Implantar no aplicativo Web](media/deploy-azure/deploy.png)
+    ![Inicializar repositório git](media/deploy-azure/git-init.png)
 
-    > [!TIP]
-    > Como alternativa, abra a **Paleta de Comandos** (**F1**), digite "implantar no aplicativo Web" e selecione **Serviço de Aplicativo do Azure: Implantar no comando** do aplicativo Web.
+1. Nos prompts, escolha *expressApp1* como pasta do workspace.
 
-1. Nos prompts, insira as seguintes informações:
+1. Depois que o repositório for inicializado, insira a mensagem "Confirmação inicial" e selecione a marca de seleção para criar a confirmação inicial de seus arquivos de origem.
 
-    a. Selecione sua pasta atual para o aplicativo (`myExpressApp` conforme usado neste tutorial).
+    ![Concluir uma confirmação inicial para o repositório](media/deploy-azure/initial-commit.png)
 
-    a. Selecione **Criar Aplicativo Web**.
+1. Na paleta de comandos (**Ctrl**+**Shift**+**P**), digite "criar Web" e selecione **Serviço de Aplicativo do Azure: Criar Aplicativo Web...Avançado**. Use o comando avançado para ter controle completo sobre a implantação, incluindo o grupo de recursos, o Plano do Serviço de Aplicativo e o sistema operacional em vez de usar padrões do Linux.
 
-    a. Insira um nome globalmente exclusivo para seu aplicativo e pressione **Enter**. Os caracteres válidos para um nome de aplicativo são “a-z”, “0-9” e “-”.
+1. Responda aos prompts da seguinte maneira:
 
-    a. Escolha um local em uma região do Azure (conforme explicado em [Regiões](https://azure.microsoft.com/regions/)) perto de você ou perto de outros serviços que você possa precisar acessar.
+    - Em **Inserir um nome globalmente exclusivo**, insira um nome que seja exclusivo em todo o Azure. Use apenas caracteres alfanuméricos ("A-Z", "a-z" e "0-9") e hifens ("-")
+    - Selecione **Criar grupo de recursos** e forneça um nome como `AppServiceTutorial-rg`.
+    - Selecione um sistema operacional (Windows ou Linux)
+    - Somente Linux: selecione uma versão do Node.js. (Para Windows, você define a versão usando uma configuração de aplicativo mais tarde).
+    - Selecione **Criar um plano do Serviço de Aplicativo**, forneça um nome como `AppServiceTutorial-plan` e selecione o tipo de preço **F1 Gratuito**.
+    - Selecione **Ignorar por enquanto** para o recurso do Application Insights.
+    - Selecione uma localização próxima de você.
 
-    a. Escolha sua **versão do Node.js**; LTS é recomendado.
+1. Após um curto período, o VS Code notificará que a criação foi concluída. Feche a notificação com o botão **X**:
 
-1. Como a extensão cria o aplicativo, o progresso aparece na janela **Saída** no VS Code (talvez seja necessário selecionar a saída **Serviço de Aplicativo do Azure**).
+    ![Notificação sobre a conclusão da criação do aplicativo Web](media/deploy-azure/creation-complete.png)
 
-    ![Janela de saída do Visual Studio Code para o Serviço de Aplicativo do Azure](media/deploy-azure/output-window.png)
+1. Com o aplicativo Web implementado, oriente o VS Code a implantar seu código por meio do repositório git local. Selecione o ícone do Azure para abrir o gerenciador do **Serviço de Aplicativo do Azure**, expanda seu nó de assinatura, clique com o botão direito do mouse no nome do aplicativo Web recém-criado e selecione **Configurar a Fonte da Implantação**.
 
-1. Selecione **Sim** quando solicitado a atualizar sua configuração para ser executar `npm install` no servidor de destino. Seu aplicativo será implantado.
+    ![Configurar um comando de origem de implantação em um aplicativo Web](media/deploy-azure/configure-deployment-source.png)
 
-    ![Implantação configurada](media/deploy-azure/server-build.png)
+1. Quando solicitado, selecione **LocalGit**.
 
-1. Quando a implantação começar, você deverá atualizar o workspace para que todas as implantações subsequentes automaticamente tenham como destino o mesmo Aplicativo Web do Serviço de Aplicativo. Escolha **Sim** para que suas alterações sejam implantadas no aplicativo correto.
+1. Se estiver implantando no Serviço de Aplicativo no Windows, você precisará criar duas configurações antes da implantação:
 
-    ![Implantação configurada](media/deploy-azure/save-configuration.png)
+    1. No VS Code, expanda o nó do novo serviço de aplicativo, clique com o botão direito do mouse em **Configurações do Aplicativo** e selecione **Adicionar Nova Configuração**:
 
-1. Quando a implantação for concluída, selecione **Procurar no Site** no prompt para exibir seu site implantado recentemente.
+        ![Comando Adicionar configuração de aplicativo](media/deploy-azure/add-setting.png)
 
-## <a name="troubleshooting"></a>solução de problemas
+    1. Insira `WEBSITE_NODE_DEFAULT_VERSION` para a chave de configuração e `10.15.2` para o valor da configuração. Essa configuração define a versão do Node.js.
+    1. Repita o processo para criar uma chave para `SCM_DO_BUILD_DURING_DEPLOYMENT` com o valor `1`. Essa configuração força o servidor a executar `npm install` após a implantação.
+    1. Expanda o nó **Configurações de Aplicativo** para verificar se as configurações foram implementadas.
 
-O erro "Você não tem permissão para exibir este diretório ou página" indica que o aplicativo provavelmente falhou em iniciar corretamente. A exibição de logs, conforme descrito na [próxima etapa](tutorial-vscode-azure-app-service-node-04.md) pode ajudar a diagnosticar e a corrigir o problema. Se você não conseguir corrigi-lo, contate-nos clicando no botão **Encontrei um problema** abaixo. Temos o prazer de ajudar!
+1. Selecione o ícone de seta azul para cima para implantar seu código no Azure:
 
-## <a name="updating-the-website"></a>Atualizar o site
+    ![Ícone Implantar no Aplicativo Web](media/deploy-azure/deploy.png)
 
-Você pode implantar alterações nesse aplicativo usando o mesmo processo e escolhendo o aplicativo existente em vez de criar um.
+1. Nos prompts, selecione a pasta *expressApp1* e, em seguida, selecione o nome do aplicativo Web criado anteriormente.
 
-----
+1. Ao implantar no Linux, selecione **Sim** quando solicitado a atualizar sua configuração para executar `npm install` no servidor de destino.
+
+    ![Prompt para atualizar a configuração no servidor Linux de destino](media/deploy-azure/server-build.png)
+
+1. Para Linux e Windows, selecione **Sim** quando solicitado com **Sempre implantar o workspace "nodejs-docs-hello-world" em (nome do aplicativo)"** . Selecionar **Sim** informa o VS Code para direcionar automaticamente o mesmo aplicativo Web do Serviço de Aplicativo com implantações subsequentes.
+
+1. Quando a implantação for concluída, selecione **Procurar no Site** no prompt para exibir seu aplicativo Web implantado recentemente. O navegador deve exibir “Olá, Mundo!”
+
+1. (Opcional): você pode fazer alterações em seus arquivos de código e usar o botão de implantação novamente para atualizar o aplicativo Web.
 
 > [!div class="nextstepaction"]
 > [Meu site está no Azure](tutorial-vscode-azure-app-service-node-04.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azureappservice&step=deploy-app)

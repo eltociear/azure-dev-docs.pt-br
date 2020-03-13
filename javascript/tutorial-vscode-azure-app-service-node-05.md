@@ -1,24 +1,22 @@
 ---
 title: Limpar recursos após implantar no Serviço de Aplicativo do Azure no Visual Studio Code
 description: Parte 5 do tutorial, limpar recursos
-author: kraigb
-manager: barbkess
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: d7ce42ab0807a9331d8c3021ff0d3007381f3bc1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.date: 03/04/2020
+ms.openlocfilehash: 1c3b277270bf6f8f7cb5884b7bb56ce2c9b3368c
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467195"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894207"
 ---
-# <a name="clean-up-resources"></a>Limpar recursos
+# <a name="clean-up-resources"></a>Limpar os recursos
 
 [Etapa anterior: Transmitir logs](tutorial-vscode-azure-app-service-node-04.md)
 
-O Serviço de Aplicativo que você criou inclui um plano do Serviço de Aplicativo de backup que pode incorrer em custos. Para limpar os recursos, clique com o botão direito do mouse no Serviço de Aplicativo no explorador **Azure: Serviço de Aplicativo** e selecione **Excluir**.
+O Serviço de Aplicativo criado inclui um Plano do Serviço de Aplicativo de backup em execução em um tipo de preço gratuito; portanto, você não incorrerá em nenhum custo contínuo.
 
-Você também pode visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
+Quando desejar limpar os recursos, acesse o [portal do Azure](https://portal.azure.com), selecione **Grupos de recursos**, localize e selecione o grupo de recursos criado no processo deste tutorial (como `AppServiceTutorial-rg`) e, em seguida, use o comando **Excluir grupo de recursos**.
 
 ## <a name="next-steps"></a>Próximas etapas
 

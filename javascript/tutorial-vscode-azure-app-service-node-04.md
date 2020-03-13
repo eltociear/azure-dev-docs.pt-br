@@ -2,23 +2,23 @@
 title: Transmitir logs do Serviço de Aplicativo do Azure dentro do Visual Studio Code
 description: Parte 4 do tutorial, exibir ou acompanhar logs.
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: 4048fd1d5d288d88cadf0a865c2c5b0ddd517daf
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.date: 03/04/2020
+ms.openlocfilehash: e6c1f4f87a28b33dac51d6ffc59c0cd9dfdc429d
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77709803"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893514"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Transmitir logs do Serviço de Aplicativo do Azure
 
 [Etapa anterior: Implantar o site](tutorial-vscode-azure-app-service-node-03.md)
 
-Nesta etapa, você aprenderá a exibir ou "acompanhar" qualquer saída que o site em execução gere por meio de chamadas a `console.log`. Essa saída aparece na janela **Saída** no Visual Studio Code.
+Nesta etapa, você aprenderá a exibir ou "acompanhar" qualquer saída que o aplicativo em execução gerar por meio de chamadas a `console.log`. Essa saída aparece na janela **Saída** no Visual Studio Code.
 
 1. No gerenciador do **Serviço de Aplicativo do Azure**, clique com o botão direito do mouse no nó do aplicativo e selecione **Iniciar o Streaming de Logs**.
 
-    ![Exibir logs de streaming](media/deploy-azure/view-logs.png)
+    ![Exibir logs de streaming](media/deploy-azure/start-streaming-logs.png)
 
 1. Quando solicitado, escolha habilitar o registro em log e reinicie o aplicativo.
 
@@ -27,9 +27,9 @@ Nesta etapa, você aprenderá a exibir ou "acompanhar" qualquer saída que o sit
 1. Depois que o aplicativo for reiniciado, a janela **Saída** do VS Code será aberta com uma conexão com o fluxo de log que mostra a saída.
 
     <pre>
-    Connecting to log-streaming service...
-    2019-09-20 17:33:51.428 INFO  - Container msdocs-vscode-node_2 for site msdocs-vscode-node initialized successfully.
-    2019-09-20 17:33:56.500 INFO  - Container logs
+    Connecting to log stream...
+    2020-03-04T19:29:44  Welcome, you are now connected to log-streaming service. The default timeout is 2 hours.
+    Change the timeout with the App Setting SCM_LOGSTREAM_TIMEOUT (in seconds).
     </pre>
 
 1. Atualize a página da Web algumas vezes no navegador para ver saída de log adicional.

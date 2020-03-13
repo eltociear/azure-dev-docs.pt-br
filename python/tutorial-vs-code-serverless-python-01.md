@@ -4,12 +4,12 @@ description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b9aecefc05db95aa121e496c9c993a5bba373ef7
+ms.openlocfilehash: 509e62b5bb8b23365dc30781b6f658a39894d56d
 ms.sourcegitcommit: a9ec05f964009409fe6e54b95c9d548f805a518e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215325"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875803"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -31,7 +31,7 @@ Se não tiver uma assinatura do Azure, [inscreva-se agora](https://azure.microso
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-Instale o Azure Functions Core Tools seguindo as instruções para seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2). Ignore os comentários no artigo sobre o gerenciador de pacotes do Chocolately, os quais não são necessários para concluir este tutorial.
+Instale o Azure Functions Core Tools seguindo as instruções para seu sistema operacional em [Trabalhar com o Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2). Ignore os comentários no artigo sobre o gerenciador de pacotes do Chocolatey, os quais não são necessários para concluir este tutorial.
 
 Ao instalar o Node.js, use as opções padrão e *não* selecione a opção para instalar automaticamente as ferramentas necessárias.  Além disso, certifique-se de usar a opção `-g` com os comandos `npm install` para que o Core Tools esteja disponível para os comandos subsequentes.
 

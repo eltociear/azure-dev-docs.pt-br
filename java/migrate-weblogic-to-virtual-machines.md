@@ -5,12 +5,12 @@ author: edburns
 ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
-ms.openlocfilehash: 4abc2383d0ff2e14cf550d96b87c75bfa6fab72e
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 86d1afd365c0c1f9126792d57fbeda3817500735
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830694"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894137"
 ---
 # <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Migrar seus aplicativos WebLogic para Máquinas Virtuais do Azure
 
@@ -120,7 +120,7 @@ Depois de provisionar a oferta, você pode examinar a configuração de domínio
 
 ### <a name="connect-the-databases"></a>Conectar os bancos de dados
 
-Depois de fazer a migração dos domínios, você pode conectar os bancos de dados seguindo as instruções [na documentação da oferta](https://wls-eng.github.io/arm-oraclelinux-wls/#connecting-a-database-to-a-cluster). Essas instruções ajudarão você a considerar os segredos de banco de dados e cadeias de caracteres de acesso envolvidos.
+Após migrar os domínios, você poderá conectar os bancos de dados seguindo as instruções [na documentação da oferta](https://wls-eng.github.io/arm-oraclelinux-wls/#connecting-a-database-to-a-cluster). Essas instruções ajudarão você a considerar os segredos de banco de dados e cadeias de caracteres de acesso envolvidos.
 
 ### <a name="account-for-keystores"></a>Considerar os repositórios de chaves
 

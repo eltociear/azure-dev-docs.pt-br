@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440853"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089941"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrar aplicativos Java para o Azure
 
@@ -73,16 +73,16 @@ As seções a seguir mostram quais destinos de serviço atendem aos requisitos d
 
 Use a grade a seguir para identificar os destinos que dão suporte aos tipos de aplicativos e recursos necessários.
 
-|   |Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Aplicativo<br>Serviço<br>WildFly|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
+|   |Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|
-| Aplicativos do Spring Boot/JAR                                    |&#x2714;|        |        |        |&#x2714;|&#x2714;|
-| Spring Cloud/microsserviços                                      |        |        |        |&#x2714;|&#x2714;|&#x2714;|
-| Aplicativos Web                                                  |        |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| Aplicativos Java EE                                              |        |        |&#x2714;|        |&#x2714;|&#x2714;|
-| Servidores de aplicativos comerciais<br>(como WebLogic ou WebSphere) |        |        |        |        |&#x2714;|&#x2714;|
-| Persistência de longo prazo no sistema de arquivos local                         |&#x2714;|&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| Clustering no nível do servidor de aplicativos                               |        |        |        |        |&#x2714;|&#x2714;|
-| Trabalhos agendados/em lotes                                            |        |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Aplicativos do Spring Boot/JAR                                    |&#x2714;|        |        |&#x2714;|&#x2714;|
+| Spring Cloud/microsserviços                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Aplicativos Web                                                  |        |&#x2714;|        |&#x2714;|&#x2714;|
+| Aplicativos Java EE                                              |        |        |        |&#x2714;|&#x2714;|
+| Servidores de aplicativos comerciais<br>(como WebLogic ou WebSphere) |        |        |        |&#x2714;|&#x2714;|
+| Persistência de longo prazo no sistema de arquivos local                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
+| Clustering no nível do servidor de aplicativos                               |        |        |        |&#x2714;|&#x2714;|
+| Trabalhos agendados/em lotes                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
 
 ### <a name="ongoing-responsibility-grid"></a>Grade de responsabilidade em andamento
 
@@ -127,22 +127,26 @@ Use as grades a seguir para encontrar diretrizes de migração por tipo de aplic
 
 Use as linhas abaixo para encontrar o tipo do seu aplicativo Java e as colunas para localizar o destino do serviço do Azure que hospedará seu aplicativo.
 
-|Destino&nbsp;→<br><br>Tipo&nbsp;do Aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Aplicativo<br>Serviço<br>WildFly|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
+Se você desejar migrar um aplicativo JBoss EAP para o Tomcat no Serviço de Aplicativo, primeiro converta o aplicativo Java EE em aplicativos Web Java (servlets) em execução no Tomcat e siga as diretrizes indicadas abaixo.
+
+Se você desejar migrar um aplicativo Web no Tomcat para o Azure Spring Cloud, primeiro converta o aplicativo em microsserviços do Spring Cloud e siga as diretrizes indicadas abaixo.
+
+|Destino&nbsp;→<br><br>Tipo&nbsp;do Aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|
-| Spring Boot/<br>Aplicativos JAR | [disponível][5] | planejado        | planejado | planejado | planejado        | planejado |
-| Spring Cloud/<br>microsserviços   | N/D            | N/D            | N/D     | planejado | planejado        | planejado |
-| Aplicativos Web<br>no Tomcat     | N/D            | [disponível][2] | N/D     | N/D     | [disponível][3] | planejado |
+| Spring Boot/<br>Aplicativos JAR | [diretrizes][5] | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado |
+| Spring Cloud/<br>microsserviços   | N/D           | N/D                 | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado |
+| Aplicativos Web<br>no Tomcat     | N/D           | [diretrizes][2]       | N/D                 | [diretrizes][3]       | diretrizes<br>planejado |
 
 **Aplicativos Java EE**
 
 Use as linhas abaixo para localizar o tipo de aplicativo Java EE em execução em um servidor de aplicativo específico. Use as colunas para localizar o destino do serviço do Azure que hospedará seu aplicativo.
 
-|Destino&nbsp;→<br><br>Servidor de aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Aplicativo<br>Serviço<br>WildFly|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
+|Destino&nbsp;→<br><br>Servidor de aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|
-| WildFly/<br>JBoss AS | N/D | N/D | planejado | N/D | planejado | planejado        |
-| WebLogic              | N/D | N/D | planejado | N/D | planejado | [disponível][4] |
-| WebSphere             | N/D | N/D | planejado | N/D | planejado | planejado        |
-| JBoss EAP             | N/D | N/D | planejado | N/D | N/D     | planejado        |
+| WildFly/<br>JBoss AS | N/D | N/D | N/D | diretrizes<br>planejado | diretrizes<br>planejado |
+| WebLogic              | N/D | N/D | N/D | [diretrizes][6]       | [diretrizes][4]       |
+| WebSphere             | N/D | N/D | N/D | [diretrizes][7]       | diretrizes<br>planejado |
+| JBoss EAP             | N/D | N/D | N/D | N/D                 | diretrizes<br>planejado |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -150,3 +154,5 @@ Use as linhas abaixo para localizar o tipo de aplicativo Java EE em execução e
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
 [4]: migrate-weblogic-to-virtual-machines.md
 [5]: migrate-java-se-to-java-se-app-service.md
+[6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+[7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md

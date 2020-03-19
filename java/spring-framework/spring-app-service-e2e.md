@@ -6,20 +6,20 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 4daf41e1cf13d57a42230cd8ed6af4a2258e5e01
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76872131"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139293"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Implantar um aplicativo Spring no Serviço de Aplicativo com o MySQL
 
 Este tutorial explica o processo de criação, configuração, implantação, solução de problemas e dimensionamento de aplicativos Web do Java no Serviço de Aplicativo no Linux.
 
-Este tutorial se baseia no conhecido aplicativo de exemplo Spring PetClinic. Neste tópico, você testará uma versão HSQLDB do aplicativo localmente e, em seguida, o implantará no [Serviço de Aplicativo do Azure](/azure/app-service/containers). Depois disso, você configurará e implantará uma versão que usa o [Banco de Dados do Azure para MySQL](/azure/mysql). Por fim, você aprenderá como acessar os logs de aplicativo e expandir, aumentando o número de funções de trabalho que executam seu aplicativo.
+Este tutorial se baseia no conhecido aplicativo de exemplo Spring PetClinic. Neste tópico, você testará uma versão HSQLDB do aplicativo localmente e, em seguida, o implantará no [Serviço de Aplicativo do Azure](/azure/app-service/containers). Depois disso, você configurará e implantará uma versão que usa o [Banco de Dados do Azure para MySQL](/azure/mysql). Por fim, você aprenderá como acessar os logs de aplicativo e escalonando horizontalmente, aumentando o número de funções de trabalho que executam seu aplicativo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * [CLI do Azure](https://docs.microsoft.com/cli/azure/overview)
 * [Java 8](http://java.oracle.com/)
@@ -115,7 +115,7 @@ export REGION=<region>
 
 O Maven usará esses valores para criar os recursos do Azure com os nomes que você fornecer. Usando variáveis de ambiente, você pode manter os segredos da sua conta fora dos arquivos de projeto.
 
-Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implantação do Azure. Adicione o XML a seguir após o elemento `<plugin>` que você adicionou anteriormente. Se necessário, altere `1.7.0` para a versão atual do [Plug-in do Maven para o Serviço de Aplicativo do Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implantação do Azure. Adicione o XML a seguir após o elemento `<plugin>` que você adicionou anteriormente. Se necessário, altere `1.9.0` para a versão atual do [Plug-in do Maven para o Serviço de Aplicativo do Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
@@ -230,13 +230,13 @@ Em seguida, atualize o arquivo *pom.xml* para tornar o MySQL a configuração at
 </profile>
 ```
 
-Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implantação do Azure e para uso do MySQL. Adicione o XML a seguir após o elemento `<plugin>` que você adicionou anteriormente. Se necessário, altere `1.7.0` para a versão atual do [Plug-in do Maven para o Serviço de Aplicativo do Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implantação do Azure e para uso do MySQL. Adicione o XML a seguir após o elemento `<plugin>` que você adicionou anteriormente. Se necessário, altere `1.9.0` para a versão atual do [Plug-in do Maven para o Serviço de Aplicativo do Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.7.0</version>
+    <version>1.9.0</version>
     <configuration>
 
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -300,9 +300,9 @@ Quando terminar de exibir os logs, selecione CTRL+C para interromper o fluxo.
 
 O fluxo de log também está disponível em `https://<app-name>.scm.azurewebsites.net/api/logstream`.
 
-## <a name="scale-out"></a>Expansão
+## <a name="scale-out"></a>Escalar horizontalmente
 
-Para oferecer suporte a um maior tráfego em seu aplicativo, você pode expandir para várias instâncias usando o comando a seguir.
+Para oferecer suporte a um maior tráfego em seu aplicativo, você pode escalar horizontalmente para várias instâncias usando o comando a seguir.
 
 ```azurecli
 az appservice plan update --number-of-workers 2 \

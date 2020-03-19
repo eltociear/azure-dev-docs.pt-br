@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: c9d46571c22c9bee49352dd4c1f492b2c9ff60a8
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.openlocfilehash: e58e36b140c1512600497bffbbd149334904981f
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77709823"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894294"
 ---
-Depois de instalar a extensão do Azure, entre na sua conta do Azure navegando até o gerenciador do **Azure**, selecione **Entrar no Azure** e siga os prompts. (Se você tiver várias extensões do Azure instaladas, selecione uma para a área na qual você está trabalhando, como Serviço de Aplicativo, Functions etc.)
+Depois de instalar a extensão do Azure no VS Code, entre em sua conta do Azure navegando até o gerenciador do **Azure**, selecione **Entrar no Azure** e siga os prompts. (Se você tiver várias extensões do Azure instaladas, selecione uma para a área na qual você está trabalhando, como Serviço de Aplicativo, Functions etc.)
 
 ![Entrar no Azure por meio do VS Code](../media/deploy-azure/azure-sign-in.png)
 
@@ -19,14 +19,25 @@ Depois de entrar, verifique se o endereço de email da sua conta do Azure (ou "C
 > [!NOTE]
 > Se você vir o erro **"Não é possível encontrar a assinatura com o nome [ID da assinatura]"** , talvez seja porque você está atrás de um proxy e não consegue acessar a API do Azure. Configure as variáveis de ambiente `HTTP_PROXY` e `HTTPS_PROXY` com as informações de proxy no terminal:
 >
+> # <a name="bash"></a>[Bash](#tab/bash)
+>
 > ```bash
-> # MacOS/Linux
 > export HTTPS_PROXY=https://username:password@proxy:8080
 > export HTTP_PROXY=http://username:password@proxy:8080
 > ```
 >
+> # <a name="powershell"></a>[PowerShell](#tab/powershell)
+>
+> ```powershell
+> $env: HTTPS_PROXY = "https://username:password@proxy:8080"
+> $env: HTTP_PROXY = "http://username:password@proxy:8080"
+> ```
+>
+> # <a name="cmd"></a>[Cmd](#tab/cmd)
+>
 > ```cmd
-> # Windows
 > set HTTPS_PROXY=https://username:password@proxy:8080
 > set HTTP_PROXY=http://username:password@proxy:8080
 > ```
+>
+> ---

@@ -3,12 +3,12 @@ title: Implantar aplicativos Node.js para o Serviço de Aplicativo do Azure do V
 description: Parte 3 do tutorial, implantar o site
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 1a8b4a37fa823b631e6b4849cf7cff6ac2ba26f3
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 7e7a6c765b79878ca3ddc86bd16349694cb7ded6
+ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894258"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510594"
 ---
 # <a name="deploy-the-app-to-azure"></a>Implantar o aplicativo no Azure
 
@@ -36,6 +36,7 @@ Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implan
 
 1. Responda aos prompts da seguinte maneira:
 
+    - Selecione sua conta de **Assinatura**.
     - Em **Inserir um nome globalmente exclusivo**, insira um nome que seja exclusivo em todo o Azure. Use apenas caracteres alfanuméricos ("A-Z", "a-z" e "0-9") e hifens ("-")
     - Selecione **Criar grupo de recursos** e forneça um nome como `AppServiceTutorial-rg`.
     - Selecione um sistema operacional (Windows ou Linux)
@@ -68,7 +69,7 @@ Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implan
 
     ![Ícone Implantar no Aplicativo Web](media/deploy-azure/deploy.png)
 
-1. Nos prompts, selecione a pasta *expressApp1* e, em seguida, selecione o nome do aplicativo Web criado anteriormente.
+1. Nos prompts, selecione a pasta *expressApp1* e, em seguida, selecione a conta de **assinatura** novamente e o nome do aplicativo Web criado anteriormente.
 
 1. Ao implantar no Linux, selecione **Sim** quando solicitado a atualizar sua configuração para executar `npm install` no servidor de destino.
 

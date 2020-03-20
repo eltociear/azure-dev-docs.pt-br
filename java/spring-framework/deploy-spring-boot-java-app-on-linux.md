@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
+ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893696"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510604"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Implantar um aplicativo do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
 
@@ -124,11 +124,11 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 
 1. Adicione [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) à coleção `<plugins>` no arquivo *pom.xml*.  Este exemplo usa a versão 1.8.0. 
 
-Especifique a imagem base em `<from>/<image>`, aqui `openjdk:8-jre-alpine`. Especifique o nome da imagem final a ser criada da base em `<to>/<image>`.  
+   Especifique a imagem base em `<from>/<image>`, aqui `mcr.microsoft.com/java/jre:8-zulu-alpine`. Especifique o nome da imagem final a ser criada da base em `<to>/<image>`.  
 
-A autenticação `{docker.image.prefix}` é o **Servidor de logon** na página de registro mostrada anteriormente. O `{project.artifactId}` é o nome e o número de versão do arquivo JAR do primeiro build do Maven do projeto.
+   A autenticação `{docker.image.prefix}` é o **Servidor de logon** na página de registro mostrada anteriormente. O `{project.artifactId}` é o nome e o número de versão do arquivo JAR do primeiro build do Maven do projeto.
 
-Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<auth>`. Por exemplo:
+   Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<auth>`. Por exemplo:
 
    ```xml
    <plugin>
@@ -137,7 +137,7 @@ Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<aut
      <version>1.8.0</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
@@ -165,7 +165,7 @@ Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<aut
 
 1. Navegue até o [Azure portal] e conecte-se.
 
-2. Clique no ícone de menu para **+ Criar um recurso**, clique em **Web** e, em seguida, clique em **Aplicativo Web para Contêineres**.
+2. Clique no ícone de menu para **+ Criar um recurso**, clique em **Computação** e, em seguida, clique em **Aplicativo Web para Contêineres**.
    
    ![Criar um aplicativo Web no portal do Azure][LX01]
 

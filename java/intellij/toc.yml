@@ -7,10 +7,6 @@
       items:
         - name: Implantar o aplicativo Web em um contêiner do Linux
           href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
-        - name: Publicar aplicativo Web como um contêiner do Docker
-          href: azure-toolkit-for-intellij-publish-as-docker-container.md
-        - name: Publicar aplicativo Spring Boot como um contêiner do Docker
-          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
     - name: Instruções
       items:
         - name: Entre na sua conta do Azure

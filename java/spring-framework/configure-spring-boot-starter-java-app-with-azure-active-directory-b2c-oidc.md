@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: b554af8f375d3b054a4391a35c0b457944b4bad1
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139327"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990506"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory B2C.
 
@@ -84,15 +84,15 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Adicionar um novo registro de aplicativo](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
 
-2. Especifique o **Nome** do seu aplicativo, adicione `http://localhost:8080/home` para a **URL de Resposta**, registre a **ID do Aplicativo** como seu `${your-client-id}` e, em seguida, clique em **Salvar**.
+2. Especifique o **Nome** do aplicativo, adicione `http://localhost:8080/home` para o **URI de Redirecionamento**. Clique em **Save** (Salvar).  Em seguida, registre a **ID do Aplicativo** como seu `${your-client-id}`.  
 
-   ![Adicionar URL de Resposta do Aplicativo](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
+   ![Adicionar URI de Redirecionamento do Aplicativo](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-3. Selecione **Chaves** do seu aplicativo, clique em **Gerar chave** para gerar `${your-client-secret}` e, em seguida, **Salvar**.
-
-4. Selecione **Fluxos dos usuários** à esquerda e então **Clique em** **Novo fluxo de usuário**.
+3. Selecione **Certificados e segredos** do seu aplicativo, clique em **Gerar chave** para gerar `${your-client-secret}` e, em seguida, **Salvar**.
 
    ![Criar fluxo de usuário](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
+
+4. Selecione **Fluxos dos usuários** à esquerda e então **Clique em** **Novo fluxo de usuário**.
 
 5. Escolher **Inscrever-se ou entrar**, **Edição de perfil** e **Redefinição de senha** para criar fluxos dos usuários, respectivamente. Especifique o **Nome** e os **Atributos e declarações do usuário** de seu fluxo de usuário e clique em **Criar**.
 
@@ -135,7 +135,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
          tenant: ${your-tenant-name}
          client-id: ${your-client-id}
          client-secret: ${your-client-secret}
-         reply-url: ${your-reply-url-from-aad} # should be absolute url.
+         reply-url: ${your-redirect-uri-from-aad} # should be absolute url.
          logout-success-url: ${you-logout-success-url}
          user-flows:
            sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}
@@ -149,7 +149,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    | `azure.activedirectory.b2c.tenant` | Contém `${your-tenant-name` do AD B2C de antes. |
    | `azure.activedirectory.b2c.client-id` | Contém o `${your-client-id}` de seu aplicativo que você preencheu anteriormente. |
    | `azure.activedirectory.b2c.client-secret` | Contém o `${your-client-secret}` de seu aplicativo que você preencheu anteriormente. |
-   | `azure.activedirectory.b2c.reply-url` | Contém uma das **URL de resposta** do seu aplicativo que você preencheu anteriormente. |
+   | `azure.activedirectory.b2c.reply-url` | Contém um dos **URIs de Redirecionamento** do seu aplicativo que você preencheu anteriormente. |
    | `azure.activedirectory.b2c.logout-success-url` | Especifique a URL ao fazer logoff do aplicativo com êxito. |
    | `azure.activedirectory.b2c.user-flows` | Contém o nome dos fluxos dos usuários que você preencheu anteriormente.
 

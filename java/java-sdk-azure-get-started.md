@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 910401236cb8435624470013878154fc46566941
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.openlocfilehash: 306a56ad4d74a316eefbb4b9f24cc14fbc5b9644
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "75010563"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990431"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Introdução ao desenvolvimento em nuvem usando Java no Azure
 
@@ -21,7 +21,7 @@ Este guia orienta em relação à configuração de um ambiente de desenvolvimen
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
@@ -30,15 +30,14 @@ Este guia orienta em relação à configuração de um ambiente de desenvolvimen
 
 ## <a name="set-up-authentication"></a>Configurar a autenticação
 
-Seu aplicativo Java precisa ler e criar permissões em sua assinatura do Azure para executar o exemplo de código neste tutorial. Criar uma entidade de serviço e configurar seu aplicativo para ser executado com suas credenciais. As entidades de serviço fornecem uma maneira de criar uma conta não interativa associada à sua identidade para a qual você concede apenas os privilégios que seu aplicativo precisa para ser executado.
+Seu aplicativo Java precisa ler e criar permissões em sua assinatura do Azure para executar o exemplo de código neste tutorial. Criar uma entidade de serviço e configurar seu aplicativo para ser executado com suas credenciais. As entidades de serviço fornecem uma maneira de criar uma conta não interativa associada à sua identidade para a qual você concede apenas os privilégios de que seu aplicativo precisa para ser executado.
 
 [Criar uma entidade de serviço usando a CLI do Azure 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) e capturar a saída. Forneça uma [senha segura](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) no argumento de senha, em vez de `MY_SECURE_PASSWORD`. A senha deve ter de 8 a 16 caracteres e satisfazer pelo menos 3 dos 4 critérios a seguir:
 
 * Incluir caracteres minúsculos
 * Incluir caracteres maiúsculos
 * Incluir números
-* Incluir um dos seguintes símbolos: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ‘ , . ? / ` ~ “ ( ) ;
-
+* Incluir um dos seguintes símbolos: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ' , . ? / ` ~ " ( ) ;
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
@@ -205,12 +204,12 @@ public class AzureApp {
 
             // use the properties file with the service principal information to authenticate
             // change the name of the environment variable if you used a different name in the previous step
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));    
+            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
             Azure azure = Azure.configure()
                     .withLogLevel(LogLevel.BASIC)
                     .authenticate(credFile)
                     .withDefaultSubscription();
-           
+
             // create a Ubuntu virtual machine in a new resource group 
             VirtualMachine linuxVM = azure.virtualMachines().define("testLinuxVM")
                     .withRegion(Region.US_EAST)
@@ -223,7 +222,7 @@ public class AzureApp {
                     .withSsh(sshKey)
                     .withUnmanagedDisks()
                     .withSize(VirtualMachineSizeTypes.STANDARD_D3_V2)
-                    .create();   
+                    .create();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -309,7 +308,6 @@ Substitua o método principal atual em `AzureApp.java` pelo código abaixo, defi
 Esse código cria um novo banco de dados do SQL com uma regra de firewall permitindo o acesso remoto e, em seguida, se conecta a ele usando o driver JBDC do Banco de Dados SQL. 
 
 ```java
-
     public static void main(String args[])
     {
         // create the db using the management libraries
@@ -369,6 +367,7 @@ Esse código cria um novo banco de dados do SQL com uma regra de firewall permit
         }
     }
 ```
+
 Execute o exemplo a partir da linha de comando:
 
 ```shell

@@ -1,5 +1,5 @@
 ---
-title: Implantar um Aplicativo Web do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
+title: Implantar um aplicativo Web do Spring Boot no Serviço de Aplicativo do Azure no Linux
 description: Este tutorial orienta você pelas etapas de implantar um aplicativo Spring Boot como um aplicativo Web do Linux no Microsoft Azure.
 services: azure app service
 documentationcenter: java
@@ -9,14 +9,14 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
-ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
+ms.openlocfilehash: fb8e49ce59c363276a0ed615b3da29ca8d02f09e
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79510604"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990485"
 ---
-# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Implantar um aplicativo do Spring Boot no Serviço de Aplicativo do Azure para o Contêiner
+# <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Implantar um aplicativo Spring Boot no Serviço de Aplicativo do Azure no Linux
 
 Este tutorial descreve como usar o [Docker] para colocar seu aplicativo [Spring Boot] em um contêiner e implantar sua própria imagem do Docker em um host Linux no [Serviço de Aplicativo do Azure](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
@@ -34,46 +34,46 @@ Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requ
 > [!NOTE]
 >
 > Devido aos requisitos de virtualização deste tutorial, você não pode seguir as etapas neste artigo em uma máquina virtual. Você deve usar um computador físico com recursos de virtualização habilitados.
->
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Criar o aplicativo Web de Introdução ao Spring Boot no Docker
 
 As etapas a seguir descrevem as etapas necessárias para criar um aplicativo Web Spring Boot simples e testá-lo localmente.
 
 1. Abra um prompt de comando, crie um diretório local para conter o aplicativo e altere para o diretório. Por exemplo:
-   ```
-   md C:\SpringBoot
-   cd C:\SpringBoot
-   ```
-   -- ou --
-   ```
+
+   ```bash
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
 1. Clone o exemplo de projeto [Introdução ao Spring Boot no Docker] para o diretório criado. Por exemplo:
-   ```
+
+   ```bash
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
 1. Altere o diretório para o projeto concluído. Por exemplo:
-   ```
+
+   ```bash
    cd gs-spring-boot-docker/complete
    ```
 
 1. Crie o arquivo JAR usando o Maven. Por exemplo:
-   ```
+
+   ```bash
    mvn package
    ```
 
 1. Quando o aplicativo Web tiver sido criado, altere o diretório para o diretório `target` em que o arquivo JAR está localizado e inicie o aplicativo Web. Por exemplo:
-   ```
+
+   ```bash
    cd target
    java -jar gs-spring-boot-docker-0.1.0.jar --server.port=80
    ```
 
 1. Teste o aplicativo Web navegando até ele localmente usando um navegador da Web. Por exemplo, se você tiver ondulação disponível e tiver configurado o servidor Tomcat para ser executado na porta 80:
-   ```
+
+   ```bash
    curl http://localhost
    ```
 
@@ -88,14 +88,13 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 > [!NOTE]
 >
 > Se você quiser usar a CLI do Azure, em vez do portal do Azure, siga as etapas em [Criar um registro de contêiner do Docker privado usando a CLI do Azure 2.0](/azure/container-registry/container-registry-get-started-azure-cli).
->
 
 1. Navegue até o [Azure portal] e conecte-se.
 
    Depois de entrar em sua conta no portal do Azure, siga as etapas no artigo [Criar um registro de contêiner privado do Docker usando o portal do Azure], que são explicadas nas etapas a seguir para fins de conveniência.
 
 1. Clique no ícone de menu para **+ Novo**, clique em **Contêineres** e, em seguida, clique em **Registro de Contêiner do Azure**.
-   
+
    ![Criar um novo Registro de Contêiner do Azure][AR01]
 
 1. Quando a página **Criar registro de contêiner** for exibida, insira o **Nome do registro**, a **Assinatura**, o **Grupo de recursos** e a **Localização**. Selecione **Habilitar** para o **Usuário administrador**. Em seguida, clique em **Criar**.
@@ -122,7 +121,7 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
    </properties>
    ```
 
-1. Adicione [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) à coleção `<plugins>` no arquivo *pom.xml*.  Este exemplo usa a versão 1.8.0. 
+1. Adicione [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) à coleção `<plugins>` no arquivo *pom.xml*.  Este exemplo usa a versão 1.8.0.
 
    Especifique a imagem base em `<from>/<image>`, aqui `mcr.microsoft.com/java/jre:8-zulu-alpine`. Especifique o nome da imagem final a ser criada da base em `<to>/<image>`.  
 
@@ -152,7 +151,7 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 
 1. Navegue até o diretório de projeto completo para o seu aplicativo Spring Boot e execute o seguinte comando para recompilar o aplicativo e fazer o push do contêiner ao Registro de Contêiner do Azure:
 
-   ```cmd
+   ```bash
    mvn compile jib:build
    ```
 
@@ -198,15 +197,15 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
    * **Imagem**: Selecione a imagem criada anteriormente, por exemplo: "*gs-spring-boot-docker*"
 
    * **Tag**: escolha a marca para a imagem, por exemplo: "*mais recente*"
-   
+
    * **Comando de inicialização**: deixe em branco, pois a imagem já tem o comando de inicialização
-   
+
    Depois de inserir todas as informações acima, clique em **Revisar + criar**.
 
    ![Definir configurações do aplicativo Web][LX02-A]
 
    * Clique em **Revisar + Criar**.
-   
+
 Revise as informações e clique em **Criar**.
 
 Quando a implantação estiver concluída, selecione **Ir para o recurso**.  A página de implantação exibirá a URL para acessar o aplicativo.
@@ -218,17 +217,16 @@ Quando a implantação estiver concluída, selecione **Ir para o recurso**.  A p
 > O Azure mapeará automaticamente as solicitações de Internet para o servidor Tomcat inserido que está em execução na porta -80. No entanto, se você tiver configurado seu servidor Tomcat inserido para ser executado na porta -8080 ou na porta personalizada, precisará adicionar uma variável de ambiente ao seu aplicativo Web que defina a porta do servidor Tomcat inserido. Para fazer isso, execute as seguintes etapas:
 >
 > 1. Navegue até o [Azure portal] e conecte-se.
-> 
+>
 > 2. Clique no ícone dos **Aplicativos Web** e selecione seu aplicativo na página **Serviços de Aplicativos**.
 >
-> 4. Clique em **Configuração** no painel de navegação à esquerda.
+> 3. Clique em **Configuração** no painel de navegação à esquerda.
 >
-> 5. Na seção **Configurações de aplicativo**, adicione uma nova configuração chamada **WEBSITES_PORT** e insira o número da porta personalizada para o valor.
+> 4. Na seção **Configurações de aplicativo**, adicione uma nova configuração chamada **WEBSITES_PORT** e insira o número da porta personalizada para o valor.
 >
-> 6. Clique em **OK**. Em seguida, clique em **Salvar**.
+> 5. Clique em **OK**. Em seguida, clique em **Salvar**.
 >
 > ![Como salvar um número da porta personalizado no portal do Azure][LX03]
->
 
 <!--
 ##  OPTIONAL: Configure the embedded Tomcat server to run on a different port

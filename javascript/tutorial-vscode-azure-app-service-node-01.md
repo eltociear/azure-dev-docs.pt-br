@@ -3,16 +3,22 @@ title: Implantar aplicativos Node.js para o Serviço de Aplicativo do Azure do V
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 12436e88786b26ed3a87dcb7ac7cb4b9e30c3fb2
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 10170b412190b01663529075f683ac5db27215e1
+ms.sourcegitcommit: a87e7a56a5aba9e13171e663ecb948266084c46a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80122970"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Implantar no Serviço de Aplicativo do Azure usando o Visual Studio Code
 
 Neste tutorial, você implantará um aplicativo Node.js no Serviço de Aplicativo do Azure (no Linux ou Windows) usando a [extensão do Serviço de Aplicativo](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
+
+## <a name="walkthrough-video"></a>Vídeo explicativo
+
+Assista a este vídeo para obter uma explicação completa do conteúdo neste artigo.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Quickstart-Create-a-Nodejs-app-in-Azure/player]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -3,12 +3,12 @@ title: Criar uma imagem de contêiner para um aplicativo Node.js usando o Visual
 description: Parte 3 do tutorial, criar uma imagem de aplicativo Node.js
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: ae39d6604f3ffe49915f6b311953cd6829ed9369
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 47e9440852f8a3443147e3d03b5c833d8da0c36b
+ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75191099"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362792"
 ---
 # <a name="create-your-nodejs-application-image"></a>Criar a imagem do aplicativo Node.js
 
@@ -16,7 +16,7 @@ ms.locfileid: "75191099"
 
 Nesta etapa, você usa a extensão do Docker no Visual Studio Code para adicionar os arquivos necessários para criar uma imagem para seu aplicativo, criar a imagem e enviá-la por push a um Registro.
 
-Se você ainda não tiver um aplicativo para este passo a passo, use o aplicativo no [tutorial do Node.js do Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).
+Se você ainda não tiver um aplicativo para este passo a passo, use o aplicativo no [tutorial do Node.js do Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial#_an-express-application).
 
 ## <a name="add-docker-files"></a>Adicionar arquivos do Docker
 

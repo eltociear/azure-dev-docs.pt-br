@@ -1,8 +1,10 @@
 - name: Kit de Ferramentas do Azure para IntelliJ
   href: azure-toolkit-for-intellij.md
   items:
-    - name: Introdução
+    - name: Introdução – Aplicativo Web
       href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+    - name: Introdução – Functions
+      href: azure-toolkit-for-intellij-quickstart-functions.md
     - name: Tutoriais
       items:
         - name: Implantar o aplicativo Web em um contêiner do Linux

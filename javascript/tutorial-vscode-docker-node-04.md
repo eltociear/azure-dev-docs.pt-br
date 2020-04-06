@@ -3,12 +3,12 @@ title: Implantar uma imagem de contêiner para um aplicativo Node.js usando o Vi
 description: Parte 4 do tutorial, implantar a imagem no Serviço de Aplicativo do Azure
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: b43f93ba97950c84302db2e18f69b506e44dc84e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8fe8024adca9edda2142dc6582b6456b77ea4b8f
+ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466546"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362782"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Implantar a imagem no Serviço de Aplicativo do Azure
 
@@ -25,6 +25,8 @@ Nesta etapa, você implanta a imagem enviada por push a um Registro para o [Serv
     - O nome deve ser exclusivo em todo o Azure.
     - Selecione um grupo de recursos ou crie um. (Um **Grupo de Recursos** é, essencialmente, uma coleção nomeada dos recursos de um aplicativo no Azure.)
     - Selecione um Plano de Serviço de Aplicativo ou crie um. (Um **Plano de Serviço de Aplicativo** define os recursos físicos que hospedam o site. Você pode usar uma camada de plano básica ou gratuita para este tutorial.)
+    - Selecione um tipo de preço para o novo plano do Serviço de Aplicativo.
+    - Selecione uma localização para novos recursos (próxima de você).
 
 1. Quando a implantação for concluída, o Visual Studio Code mostrará uma notificação com a URL do site:
 

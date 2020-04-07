@@ -1,7 +1,7 @@
 - name: Azure para desenvolvedores de JavaScript e Node.js
   href: index.yml
   items:
-    - name: Guia de início rápido
+    - name: Inícios rápidos
       expanded: true
       items:
         - name: Hospedagem de aplicativo
@@ -14,7 +14,7 @@
               href: tutorial-vscode-serverless-node-01.md
             - name: Docker
               href: tutorial-vscode-docker-node-01.md
-            - name: kubernetes
+            - name: Kubernetes
               href: /azure/aks/kubernetes-walkthrough?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: VMs Linux
               href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
@@ -44,7 +44,7 @@
           items:
             - name: Armazenamento de blob
               href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            - name: Banco de dados SQL
+            - name: Banco de Dados SQL
               href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: Cosmos DB
               href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
@@ -96,19 +96,19 @@
               href: tutorial-vscode-serverless-node-03.md
             - name: Implantar o aplicativo do Functions
               href: tutorial-vscode-serverless-node-04.md
-            - name: Limpar recursos
+            - name: Limpar os recursos
               href: tutorial-vscode-serverless-node-05.md
         - name: Implantar no Serviço de Aplicativo com o VS Code
           items:
             - name: Introdução e pré-requisitos
               href: tutorial-vscode-azure-app-service-node-01.md
-            - name: Crie o aplicativo
+            - name: Criar o aplicativo
               href: tutorial-vscode-azure-app-service-node-02.md
             - name: Implantar o site
               href: tutorial-vscode-azure-app-service-node-03.md
             - name: Transmitir logs
               href: tutorial-vscode-azure-app-service-node-04.md
-            - name: Limpar recursos
+            - name: Limpar os recursos
               href: tutorial-vscode-azure-app-service-node-05.md
         - name: Implantar contêineres com o VS Code
           items:
@@ -116,21 +116,23 @@
               href: tutorial-vscode-docker-node-01.md
             - name: Usar um registro de contêiner
               href: tutorial-vscode-docker-node-02.md
-            - name: Criar a imagem do aplicativo
+            - name: Criar um aplicativo Node.js local
               href: tutorial-vscode-docker-node-03.md
-            - name: Implantar a imagem do aplicativo
+            - name: Criar a imagem do aplicativo
               href: tutorial-vscode-docker-node-04.md
-            - name: Fazer alterações e implantar novamente
+            - name: Implantar a imagem do aplicativo
               href: tutorial-vscode-docker-node-05.md
-            - name: Transmitir logs
+            - name: Fazer alterações e implantar novamente
               href: tutorial-vscode-docker-node-06.md
-            - name: Limpar recursos
+            - name: Transmitir logs
               href: tutorial-vscode-docker-node-07.md
+            - name: Limpar os recursos
+              href: tutorial-vscode-docker-node-08.md
         - name: Implantar no Serviço de Aplicativo com o CLI do Azure
           items:
             - name: Introdução e pré-requisitos
               href: tutorial-vscode-azure-cli-node-01.md
-            - name: Crie o aplicativo
+            - name: Criar o aplicativo
               href: tutorial-vscode-azure-cli-node-02.md
             - name: Criar o Serviço de Aplicativo
               href: tutorial-vscode-azure-cli-node-03.md
@@ -140,7 +142,7 @@
               href: tutorial-vscode-azure-cli-node-05.md
             - name: Fazer alterações e implantar novamente
               href: tutorial-vscode-azure-cli-node-06.md
-            - name: Limpar recursos
+            - name: Limpar os recursos
               href: tutorial-vscode-azure-cli-node-07.md
         - name: Criar um site estático com o VS Code
           items:
@@ -154,7 +156,7 @@
               href: tutorial-vscode-static-website-node-04.md
             - name: Fazer alterações e implantar novamente
               href: tutorial-vscode-static-website-node-05.md
-            - name: Limpar recursos
+            - name: Limpar os recursos
               href: tutorial-vscode-static-website-node-06.md
     - name: Guias de Instruções
       items:

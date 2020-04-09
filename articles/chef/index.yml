@@ -1,0 +1,51 @@
+### YamlMime:Landing
+title: Chef Software na Documentação do Azure
+summary: Saiba como usar os produtos da Chef Software para implantar e gerenciar recursos do Azure.
+metadata:
+  title: Chef Software na Documentação do Azure
+  description: Saiba como usar os produtos da Chef Software para implantar e gerenciar recursos do Azure.
+  services: azure
+  ms.service: chef
+  ms.topic: landing-page
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.date: 09/17/2019
+  ms.openlocfilehash: a969cf384592ad92bd5a2cf1280db725f723a0f3
+  ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/08/2020
+  ms.locfileid: "80893175"
+landingContent:
+- title: Sobre o Chef Software no Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Sobre o Chef no Azure
+      url: overview.md
+    - text: Sobre o Habitat no Azure
+      url: habitat-overview.md
+    - text: Sobre o InSpec no Azure
+      url: inspec-overview.md
+  - linkListType: architecture
+    links:
+    - text: Extensão do Azure Chef
+      url: https://docs.chef.io/azure_portal.html#azure-chef-extension
+- title: Instalar e configurar os produtos da Chef Software
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Instalar o Chef usando o portal do Azure
+      url: client-install-from-azure-portal.md
+  - linkListType: download
+    links:
+    - text: Extensão do Azure DevOps Services Chef
+      url: https://marketplace.visualstudio.com/items?itemName=chef-software.vsts-chef-tasks
+    - text: Extensão do Azure DevOps Services Habitat
+      url: https://marketplace.visualstudio.com/items?itemName=chef-software.vsts-habitat-tasks
+- title: Gerenciar Máquinas Virtuais
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Criar uma VM do Windows
+      url: windows-vm-configure.md

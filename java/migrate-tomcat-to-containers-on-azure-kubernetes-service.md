@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: a27c009fd656ea925f7709908178738eeea8ac0a
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893739"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809217"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure
 
@@ -33,7 +33,7 @@ Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como a
 
 Para identificar o gerenciador de persistência de sessão em uso, inspecione os arquivos *context.xml* em seu aplicativo e a configuração do Tomcat. Procure o elemento `<Manager>` e observe o valor do atributo `className`.
 
-As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Kubernetes. O AKS pode balancear a carga entre vários pods e reiniciar de forma transparente qualquer Pod a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
+As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Kubernetes. O AKS pode balancear a carga entre vários pods e reiniciar de forma transparente qualquer Pod a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
 
 Se a persistência da sessão for necessária, você precisará usar uma implementação de `PersistentManager` alternativa que será gravada em um armazenamento de dados externo, como o Gerenciador de Sessão Dinâmica com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -162,6 +162,8 @@ Por exemplo:
 </GlobalNamingResources>
 ```
 
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
+
 ### <a name="build-and-push-the-image"></a>Criar imagem e enviá-la por push
 
 A maneira mais simples de criar a imagem e carregá-la no ACR (Registro de Contêiner do Azure) para uso pelo AKS é usar o comando `az acr build`. Este comando não requer que o Docker seja instalado no seu computador. Por exemplo, se você tiver o Dockerfile acima e o pacote de aplicativos *petclinic.war* no diretório atual, poderá criar a imagem de contêiner no ACR com uma etapa:
@@ -228,7 +230,7 @@ Para executar trabalhos agendados em seu cluster do AKS, defina [Trabalhos do Cr
 
 Agora que você migrou seu aplicativo para o AKS, você deve verificar se ele funciona conforme o esperado. Depois de fazer isso, temos algumas recomendações para você que podem tornar seu aplicativo mais nativo da nuvem.
 
-* Considere [adicionar um nome DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) ao endereço IP alocado para o controlador de entrada ou o balanceador de carga do aplicativo.
+* Considere [adicionar um nome DNS](/azure/aks/ingress-static-ip#create-an-ingress-controller) ao endereço IP alocado para o controlador de entrada ou o balanceador de carga do aplicativo.
 
 * Considere [adicionar gráficos HELM ao seu aplicativo](https://helm.sh/docs/topics/charts/). Um gráfico do Helm permite que você parametrize a implantação do aplicativo para uso e personalização por um conjunto mais diversificado de clientes.
 

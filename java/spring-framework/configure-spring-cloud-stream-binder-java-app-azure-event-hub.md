@@ -7,18 +7,18 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: 9eef2c48b076ae0fc84aea16bb3e5b7bba17d744
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5ba844a66be0eb1acaac2cdf5b132ab422c9a954
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812067"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612034"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Como criar um aplicativo Spring Cloud Stream Binder com os Hubs de Eventos do Azure
 
 Este artigo demonstra como configurar um aplicativo Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializr e os Hubs de Eventos do Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -237,10 +237,11 @@ O procedimento a seguir cria um aplicativo Spring Boot.
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
+   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    Em que:
 
-   |                          Campo                           |                                                                                   DESCRIÇÃO                                                                                    |
+   |                          Campo                           |                                                                                   Descrição                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        `spring.cloud.azure.credential-file-path`         |                                                    Especifica o arquivo de credencial do Azure que você criou anteriormente neste tutorial.                                                    |
    |           `spring.cloud.azure.resource-group`            |                                                      Especifica o Grupo de Recursos do Azure que contém seu Hub de Eventos do Azure.                                                      |
@@ -403,7 +404,7 @@ Para obter mais informações sobre o suporte do Azure para o Event Hub Stream B
 
 Para obter mais informações sobre como usar o Azure com Java, confira [Azure para Desenvolvedores Java] e [Como trabalhar com o Java e o Azure DevOps].
 
-O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o  **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
+O **[Spring Framework]** é uma solução de software livre que ajuda os desenvolvedores Java criar aplicativos de nível empresarial. Um dos projetos mais populares que é criado com base nessa plataforma é o [Spring Boot], que fornece uma abordagem simplificada para a criação de aplicativos Java autônomos. Para ajudar os desenvolvedores a começarem a usar o Spring Boot, vários exemplos de pacotes do Spring Boot estão disponíveis em <https://github.com/spring-guides/>. Além de escolher na lista de projetos básicos do Spring Boot, o **[Spring Initializr]** ajuda os desenvolvedores a começarem a criar aplicativos personalizados do Spring Boot.
 
 <!-- URL List -->
 

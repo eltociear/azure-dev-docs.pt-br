@@ -2,16 +2,16 @@
 author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: e76f43988c408bfd1d2400ef3d28363e7827d0f9
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: ab1cd8d8671b12c44a06ae01268364741f7138f6
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78897650"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80813838"
 ---
 ### <a name="recommendations"></a>Recomendações
 
-* Considere adicionar um nome DNS ao endereço IP alocado ao controlador de entrada ou ao balanceador de carga do aplicativo. Para obter mais informações, confira a seção [Configurar um nome DNS](/azure/aks/ingress-static-ip#configure-a-dns-name) de [Criar um controlador de entrada com um endereço IP público estático no AKS](/azure/aks/ingress-static-ip).
+* Considere adicionar um nome DNS ao endereço IP alocado ao controlador de entrada ou ao balanceador de carga do aplicativo. Para obter mais informações, confira a seção [Configurar um nome DNS](/azure/aks/ingress-static-ip#create-an-ingress-controller) de [Criar um controlador de entrada com um endereço IP público estático no AKS](/azure/aks/ingress-static-ip).
 
 * Considere adicionar [gráficos HELM](https://helm.sh/docs/topics/charts/) ao aplicativo. Um gráfico do Helm permite que você parametrize a implantação do aplicativo para uso e personalização por um conjunto mais diversificado de clientes.
 

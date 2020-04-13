@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 91292d50f49bde2b76084f8a09119ae74a20f72f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894195"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612105"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Migrar aplicativos Web JAR executáveis para Java SE no Serviço de Aplicativo do Azure
 
@@ -20,8 +20,8 @@ Este guia descreve as informações das quais você deve estar ciente quando des
 
 Se você não puder atender a nenhum dos requisitos de pré-migração, consulte os seguintes guias de migração complementares:
 
-* Migrar aplicativos JAR executáveis para contêineres no Serviço de Kubernetes do Azure (planejado)
-* Migrar aplicativos JAR executáveis para Máquinas Virtuais do Azure (planejado)
+* Migrar aplicativos JAR executáveis para contêineres no Serviço de Kubernetes do Azure (diretrizes planejadas)
+* Migrar aplicativos JAR executáveis para Máquinas Virtuais do Azure (diretrizes planejadas)
 
 ## <a name="pre-migration"></a>Pré-migração
 
@@ -39,7 +39,7 @@ Identifique recursos externos, como fontes de dados, agentes de mensagens JMS e 
 
 Para qualquer banco de dados SQL, identifique a cadeia de conexão.
 
-Para um aplicativo Spring Boot, as cadeias de conexão normalmente aparecem em arquivos de configuração. 
+Para um aplicativo Spring Boot, as cadeias de conexão normalmente aparecem em arquivos de configuração.
 
 Este é um exemplo de um arquivo *application.properties*:
 
@@ -57,6 +57,8 @@ spring:
     mongodb:
       uri: mongodb://mongouser:deepsecret@mongoserver.contoso.com:27017
 ```
+
+Para obter mais informações, consulte [Repositórios JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories) e [Repositórios JDBC](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#jdbc.repositories) na documentação do Spring.
 
 #### <a name="jms-message-brokers"></a>Agentes de mensagem JMS
 
@@ -143,7 +145,7 @@ O Serviço de Aplicativo dá suporte a apenas um único ponto de extremidade HTT
 
 ### <a name="parameterize-the-configuration"></a>Parametrizar a configuração
 
-Verifique se todas as coordenadas de recursos externos (como cadeias de conexão de banco de dados) e outras configurações personalizáveis podem ser lidas nas variáveis de ambiente. Se você estiver migrando um aplicativo Spring Boot, todas as definições de configuração já deverão ser [externalizáveis](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config).
+Verifique se todas as coordenadas de recursos externos (como cadeias de conexão de banco de dados) e outras configurações personalizáveis podem ser lidas nas variáveis de ambiente. Se você estiver migrando um aplicativo Spring Boot, todas as definições de configuração já deverão ser externalizáveis. Para obter mais informações, consulte [Configuração externalizada](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config) na documentação do Spring Boot.
 
 Este é um exemplo que faz referência a uma variável de ambiente `SERVICEBUS_CONNECTION_STRING` de um arquivo *application.properties*:
 

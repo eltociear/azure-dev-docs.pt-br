@@ -2,12 +2,12 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
-ms.openlocfilehash: affabacec95b8f1c4c7ea654ff9a765056220c76
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 4b5b73eee66c4a5c9eb28b79804e0dc610f639d6
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825802"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612072"
 ---
 ### <a name="inventory-external-resources"></a>Recursos externos de inventário
 
@@ -32,6 +32,8 @@ Fontes de dados são recursos de JNDI com o atributo `type` definido como `javax
 * Qual é o nome da fonte de dados?
 * Qual é a configuração do pool de conexões?
 * Onde posso encontrar o arquivo JAR do driver JDBC?
+
+Para obter mais informações, consulte [Instruções de fonte de dados JNDI](https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html) na documentação do Tomcat.
 
 #### <a name="all-other-external-resources"></a>Todos os outros recursos externos
 

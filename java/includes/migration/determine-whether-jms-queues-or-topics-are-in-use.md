@@ -2,15 +2,15 @@
 author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
-ms.openlocfilehash: b2458a80eccfcae24a3364208334cce3aedea861
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.openlocfilehash: a521396292214fd4e68b4625a0e5f5bcfca8be92
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79129071"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612124"
 ---
-### <a name="determine-whether-jms-queues-or-topics-are-in-use"></a>Determinar se as Filas ou os Tópicos JMS estão em uso
+### <a name="determine-whether-java-message-service-jms-queues-or-topics-are-in-use"></a>Determinar se as Filas ou os Tópicos do JMS (Java Message Service) estão em uso
 
-Se o aplicativo estiver usando Filas ou Tópicos JMS, você precisará migrá-los para um servidor JMS hospedado externamente, como o Barramento de Serviço do Azure; confira [Usar o Barramento de Serviço como agente de mensagens](/azure/service-bus-messaging/message-transfers-locks-settlement).
+Se seu aplicativo estiver usando Filas ou Tópicos do JMS, você precisará migrá-los para um servidor do JMS hospedado externamente. O Barramento de Serviço do Azure e o AMQP (Advanced Message Queuing Protocol) podem ser uma excelente estratégia de migração para pessoas que usam o JMS. Para obter mais informações, consulte [Usar o JMS com o Barramento de Serviço do Azure e o AMQP 1.0](/azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp).
 
 Se os armazenamentos persistentes JMS tiverem sido configurados, você deverá capturar a configuração deles e aplicá-la após a migração.

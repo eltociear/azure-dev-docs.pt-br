@@ -1,26 +1,30 @@
 ---
-title: Limpar recursos depois de implantar um aplicativo Node.js em contêineres do Visual Studio Code
-description: Parte 6 do tutorial, limpar recursos
+title: Transmita logs de um aplicativo Node.js em contêineres usando o Visual Studio Code
+description: Parte 7 do tutorial, transmitir logs para o Visual Studio Code
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c235cff8b5685880fc63d7e50587980502c7e8d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 10ccf13cddfc7bb1ed7f226629072cb9baeea3a1
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467136"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740634"
 ---
-# <a name="clean-up-resources"></a>Limpar recursos
+# <a name="stream-logs-into-visual-studio-code"></a>Transmitir logs para o Visual Studio Code
 
-[Etapa anterior: Transmitir logs](tutorial-vscode-docker-node-05.md)
+[Etapa anterior: Fazer alterações e reimplantar](tutorial-vscode-docker-node-06.md)
 
-O Serviço de Aplicativo que você criou para o contêiner inclui um plano do Serviço de Aplicativo de backup que pode incorrer em custos. Para limpar os recursos, clique com o botão direito do mouse no Serviço de Aplicativo no explorador **Azure: Serviço de Aplicativo** e selecione **Excluir**.
+Nesta etapa, você aprenderá a exibir ou "acompanhar" qualquer saída que o site em execução gere por meio de chamadas a `console.log`. Essa saída aparece na janela **Saída** no Visual Studio Code.
 
-Você também pode visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
+1. No gerenciador do **Serviço de Aplicativo do Azure**, clique com o botão direito do mouse no nó do aplicativo e selecione **Iniciar o Streaming de Logs**.
 
-## <a name="next-steps"></a>Próximas etapas
+    ![Exibir logs de streaming](media/deploy-containers/stream-logs-command.png)
 
-[!INCLUDE [tutorial-next-steps](includes/tutorial-next-steps.md)]
+1. Quando solicitado, escolha habilitar o registro em log e reinicie o aplicativo.
+
+    ![Prompt para habilitar registro em log e reiniciar](media/deploy-azure/enable-restart.png)
+
+1. Depois que o aplicativo for reiniciado, o painel **Saída** no Visual Studio Code será aberto com uma conexão com o fluxo de log, começando com a mensagem `Starting Live Log Stream`.
 
 > [!div class="nextstepaction"]
-> [Terminei](node-howto-deploy-containers.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=clean-up-resources)
+> [Vejo os logs](tutorial-vscode-docker-node-08.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=tailing-logs)

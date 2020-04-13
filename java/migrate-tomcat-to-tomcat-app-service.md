@@ -5,23 +5,23 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 6e14e8a18f87b67eb0ecb5ce08541058a964c988
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893750"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612095"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrar aplicativos Tomcat para o Tomcat no Serviço de Aplicativo do Azure
 
-Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo Tomcat existente para ser executado no Serviço de Aplicativo do Azure usando o Tomcat 8.5 ou 9.0.
+Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo Tomcat existente para ser executado no Serviço de Aplicativo do Azure usando o Tomcat 9.0.
 
 ## <a name="before-you-start"></a>Antes de começar
 
 Se você não puder atender a nenhum dos requisitos de pré-migração, consulte os seguintes guias de migração complementares:
 
 * [Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Migrar aplicativos do Tomcat para Máquinas Virtuais do Azure (planejado)
+* Migrar aplicativos do Tomcat para Máquinas Virtuais do Azure (diretrizes planejadas)
 
 ## <a name="pre-migration"></a>Pré-migração
 
@@ -37,7 +37,7 @@ Para determinar a sua versão atual do Tomcat, entre no servidor de produção e
 ${CATALINA_HOME}/bin/version.sh
 ```
 
-Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe o [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi#8.5.50) ou o [Tomcat 9](https://tomcat.apache.org/download-90.cgi), dependendo de qual versão você planeja usar no Serviço de Aplicativo do Azure.
+Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe o [Tomcat 9](https://tomcat.apache.org/download-90.cgi), dependendo de qual versão você planeja usar no Serviço de Aplicativo do Azure.
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -56,7 +56,7 @@ Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como a
 
 Para identificar o gerenciador de persistência de sessão em uso, inspecione os arquivos *context.xml* em seu aplicativo e a configuração do Tomcat. Procure o elemento `<Manager>` e observe o valor do atributo `className`.
 
-As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Serviço de Aplicativo. Já que o Serviço de Aplicativo pode balancear a carga entre várias instâncias e reiniciar qualquer instância de maneira transparente a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
+As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Serviço de Aplicativo. Já que o Serviço de Aplicativo pode balancear a carga entre várias instâncias e reiniciar qualquer instância de maneira transparente a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
 
 Se a persistência da sessão for necessária, você precisará usar uma implementação de `PersistentManager` alternativa que será gravada em um armazenamento de dados externo, como o Gerenciador de Sessão Dinâmica com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -76,7 +76,7 @@ Se seu aplicativo contiver qualquer código com dependências do sistema operaci
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Determinar se o clustering do Tomcat é ou não usado
 
-O [clustering do Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/cluster-howto.html) não é compatível com o Serviço de Aplicativo do Azure. Em vez disso, você pode configurar e gerenciar o dimensionamento e o balanceamento de carga por meio do Serviço de Aplicativo do Azure sem a funcionalidade específica do Tomcat. Você pode persistir o estado de sessão em um local alternativo para disponibilizá-lo entre réplicas. Para obter mais informações, confira [Identificar o mecanismo de persistência da sessão](#identify-session-persistence-mechanism).
+O [clustering do Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) não é compatível com o Serviço de Aplicativo do Azure. Em vez disso, você pode configurar e gerenciar o dimensionamento e o balanceamento de carga por meio do Serviço de Aplicativo do Azure sem a funcionalidade específica do Tomcat. Você pode persistir o estado de sessão em um local alternativo para disponibilizá-lo entre réplicas. Para obter mais informações, confira [Identificar o mecanismo de persistência da sessão](#identify-session-persistence-mechanism).
 
 Para determinar se seu aplicativo usa clustering, procure o elemento `<Cluster>` dentro dos elementos `<Host>` ou `<Engine>` no arquivo *server.xml*.
 
@@ -92,17 +92,17 @@ Para identificar os conectores HTTP usados pelo seu aplicativo, procure elemento
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>Determinar se MemoryRealm é usado
 
-[MemoryRealm](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/realm/MemoryRealm.html) requer um arquivo XML persistente. No Serviço de Aplicativo do Azure, você precisará carregar esse arquivo no diretório */home* ou em subdiretório dele ou ainda em um armazenamento montado. Você precisará modificar o parâmetro `pathName` de acordo.
+[MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) requer um arquivo XML persistente. No Serviço de Aplicativo do Azure, você precisará carregar esse arquivo no diretório */home* ou em subdiretório dele ou ainda em um armazenamento montado. Você precisará modificar o parâmetro `pathName` de acordo.
 
 Para determinar se `MemoryRealm` está sendo usado no momento, inspecione os arquivos *server.xml* e *context.xml* e pesquise por elementos `<Realm>` em que o atributo `className` está definido como `org.apache.catalina.realm.MemoryRealm`.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>Determinar se o acompanhamento de sessão SSL é usado
 
-O Serviço de Aplicativo executa o descarregamento de sessão fora do runtime do Tomcat. Portanto, você não pode usar o [acompanhamento de sessão SSL](https://tomcat.apache.org/tomcat-8.5-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Em vez disso, use um modo de acompanhamento de sessão diferente (`COOKIE` ou `URL`). Se você precisar de acompanhamento de sessão SSL, não use o Serviço de Aplicativo.
+O Serviço de Aplicativo executa o descarregamento de sessão fora do runtime do Tomcat. Portanto, você não pode usar o [acompanhamento de sessão SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Em vez disso, use um modo de acompanhamento de sessão diferente (`COOKIE` ou `URL`). Se você precisar de acompanhamento de sessão SSL, não use o Serviço de Aplicativo.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>Determine se AccessLogValve é ou não usado
 
-Se você usar [AccessLogValve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/AccessLogValve.html), deverá definir o parâmetro `directory` como `/home/LogFiles` ou como um subdiretório dele.
+Se você usar [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), deverá definir o parâmetro `directory` como `/home/LogFiles` ou como um subdiretório dele.
 
 ## <a name="migration"></a>Migração
 
@@ -180,7 +180,9 @@ Use as Configurações do Aplicativo para armazenar os segredos específicos no 
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>Migrar fontes de dados, bibliotecas e recursos de JNDI
 
-Siga [estas etapas para migrar fontes de dados](/azure/app-service/containers/configure-language-java#tomcat).
+Para obter as etapas de configuração da fonte de dados, consulte a seção [Fontes de dados](/azure/app-service/containers/configure-language-java#data-sources) em [Configurar um aplicativo Java do Linux para o Serviço de Aplicativo do Azure](/azure/app-service/containers/configure-language-java).
+
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
 
 Migre as dependências de classpath de nível de servidor adicionais seguindo [as mesmas etapas para arquivos JAR de fonte de dados](/azure/app-service/containers/configure-language-java#finalize-configuration).
 
@@ -193,7 +195,7 @@ Migre quaisquer [recursos JDNI de nível de servidor compartilhados](/azure/app-
 
 Ao concluir a seção anterior, você deve ter sua configuração de servidor personalizável em */Home/Tomcat/conf*.
 
-Concluir a migração copiando qualquer configuração adicional (como [Realms](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html), [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html))
+Concluir a migração copiando qualquer configuração adicional (como [realms](https://tomcat.apache.org/tomcat-9.0-doc/config/realm.html) e [JASPIC](https://tomcat.apache.org/tomcat-9.0-doc/config/jaspic.html))
 
 [!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 

@@ -1,20 +1,20 @@
 ---
-title: Migrar aplicativos WebSphere para o WildFly no Serviço de Kubernetes do Azure
-description: Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebSphere existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
+title: Migrar aplicativos WildFly para o WildFly no Serviço de Kubernetes do Azure
+description: Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WildFly existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
 author: mriem
 ms.author: manriem
 ms.topic: conceptual
-ms.date: 2/28/2020
-ms.openlocfilehash: a32784542618c3ee3a57d8cc1105837a414883ad
+ms.date: 3/16/2020
+ms.openlocfilehash: 892000065b26a11dd332481abc75f8b73d207890
 ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/02/2020
-ms.locfileid: "80612142"
+ms.locfileid: "80613106"
 ---
-# <a name="migrate-websphere-applications-to-wildfly-on-azure-kubernetes-service"></a>Migrar aplicativos WebSphere para o WildFly no Serviço de Kubernetes do Azure
+# <a name="migrate-wildfly-applications-to-wildfly-on-azure-kubernetes-service"></a>Migrar aplicativos WildFly para o WildFly no Serviço de Kubernetes do Azure
 
-Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebSphere existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
+Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WildFly existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
 
 ## <a name="pre-migration"></a>Pré-migração
 
@@ -22,7 +22,9 @@ Este guia descreve as informações das quais você deve estar ciente quando des
 
 ### <a name="inventory-all-secrets"></a>Inventariar todos os segredos
 
-Verifique todas as propriedades e os arquivos de configuração nos servidores de produção em busca de segredos e senhas. Verifique o *ibm-web-bnd.xml* em seus WARs. Arquivos de configuração que contenham senhas ou credenciais também podem ser encontrados dentro de seu aplicativo.
+Verifique todas as propriedades e os arquivos de configuração nos servidores de produção em busca de segredos e senhas. Não se esqueça de verificar o *jboss-web.xml* em seus WARs. Arquivos de configuração que contenham senhas ou credenciais também podem ser encontrados dentro de seu aplicativo.
+
+Considere armazenar esses segredos no Azure Key Vault. Para saber mais, consulte [Conceitos básicos do Azure Key Vault](/azure/key-vault/basic-concepts).
 
 [!INCLUDE [inventory-all-certificates](includes/migration/inventory-all-certificates.md)]
 
@@ -30,19 +32,25 @@ Verifique todas as propriedades e os arquivos de configuração nos servidores d
 
 O uso do WildFly no Serviço de Kubernetes do Azure requer uma versão específica do Java. Portanto, você precisará validar se seu aplicativo pode ser executado corretamente usando essa versão com suporte. Essa validação será especialmente importante se o servidor atual estiver usando um JDK compatível (como Oracle JDK ou IBM OpenJ9).
 
-Para obter a versão atual, entre no servidor de produção e execute
+Para obter a versão atual, entre no servidor de produção e execute este comando:
 
 ```bash
 java -version
 ```
 
+Consulte [Requisitos](http://docs.wildfly.org/19/Getting_Started_Guide.html#requirements) para obter diretrizes sobre qual versão usar para executar o WildFly.
+
 ### <a name="inventory-jndi-resources"></a>Inventariar recursos de JNDI
 
 Faça um inventário de todos os recursos de JNDI. Alguns, como agentes de mensagens JMS, podem exigir migração ou reconfiguração.
 
+### <a name="determine-whether-session-replication-is-used"></a>Determinar se a replicação de sessão é usada
+
+Se seu aplicativo depender da replicação de sessão, você precisará alterar seu aplicativo para remover essa dependência.
+
 #### <a name="inside-your-application"></a>Dentro de seu aplicativo
 
-Inspecione o arquivo *WEB-INF/ibm-web-bnd.xml* e/ou *WEB-INF/web.xml*.
+Inspecione o arquivo *WEB-INF/jboss-web.xml* e/ou *WEB-INF/web.xml*.
 
 ### <a name="document-datasources"></a>Documentar fontes de dados
 
@@ -52,11 +60,11 @@ Se seu aplicativo usar algum banco de dados, você precisará capturar as inform
 * Qual é a configuração do pool de conexões?
 * Onde posso encontrar o arquivo JAR do driver JDBC?
 
-Para obter mais informações, consulte [Configuração de conectividade de banco de dados](https://www.ibm.com/support/knowledgecenter/SSQP76_8.10.x/com.ibm.odm.distrib.config.was/config_dc_websphere/tpc_was_create_datasrc_cpl.html) na documentação do WebSphere.
+Para obter mais informações, consulte [Configuração de fonte de dados](http://docs.wildfly.org/19/Admin_Guide.html#DataSource) na documentação do WildFly.
 
 ### <a name="determine-whether-and-how-the-file-system-is-used"></a>Determinar se e como o sistema de arquivos é usado
 
-Qualquer uso do sistema de arquivos no servidor de aplicativos exigirá reconfiguração ou, em casos raros, alterações de arquitetura. O sistema de arquivos pode ser usado por módulos do WebSphere ou pelo código do aplicativo. Você pode identificar alguns ou todos os cenários descritos nas seções a seguir.
+Qualquer uso do sistema de arquivos no servidor de aplicativos exigirá reconfiguração ou, em casos raros, alterações de arquitetura. O sistema de arquivos pode ser usado por módulos do WildFly ou pelo código do aplicativo. Você pode identificar alguns ou todos os cenários descritos nas seções a seguir.
 
 #### <a name="read-only-static-content"></a>Conteúdo estático somente leitura
 
@@ -76,10 +84,6 @@ Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como a
 
 [!INCLUDE [determine-whether-jms-queues-or-topics-are-in-use](includes/migration/determine-whether-jms-queues-or-topics-are-in-use.md)]
 
-### <a name="determine-whether-your-application-uses-websphere-specific-apis"></a>Determinar se seu aplicativo usa APIs específicas do WebSphere
-
-Se seu aplicativo usar APIs específicas do WebSphere, você precisará refatorá-lo para remover essas dependências. Por exemplo, se você usou uma classe mencionada no [Servidor de Aplicativos do IBM WebSphere, Especificação da API Versão 9.0](https://www.ibm.com/support/knowledgecenter/en/SSEQTJ_9.0.5/com.ibm.websphere.javadoc.doc/web/apidocs/overview-summary.html?view=embed), você usou uma API específica do WebSphere em seu aplicativo.
-
 [!INCLUDE [determine-whether-your-application-uses-entity-beans](includes/migration/determine-whether-your-application-uses-entity-beans.md)]
 
 [!INCLUDE [determine-whether-the-java-ee-application-client-feature-is-in-use-aks](includes/migration/determine-whether-the-java-ee-application-client-feature-is-in-use-aks.md)]
@@ -90,7 +94,7 @@ Se seu aplicativo usar APIs específicas do WebSphere, você precisará refator�
 
 ### <a name="determine-whether-jca-connectors-are-in-use"></a>Determinar se conectores JCA estão em uso
 
-Se seu aplicativo usar conectores JCA, você precisará validar se o conector JCA pode ser usado no WildFly. Se a implementação do JCA estiver vinculada ao WebSphere, você precisará refatorar seu aplicativo para remover essa dependência. Se puder ser usado, você precisará adicionar os JARs ao classpath do servidor e colocar os arquivos de configuração necessários no local correto nos diretórios do servidor do WildFly para que ele esteja disponível.
+Se seu aplicativo usar conectores JCA, você precisará validar se o conector JCA pode ser usado no WildFly. Se a implementação do JCA estiver vinculada ao WildFly, você precisará refatorar seu aplicativo para remover essa dependência. Se puder ser usado, você precisará adicionar os JARs ao classpath do servidor e colocar os arquivos de configuração necessários no local correto nos diretórios do servidor do WildFly para que ele esteja disponível.
 
 [!INCLUDE [determine-whether-jaas-is-in-use](includes/migration/determine-whether-jaas-is-in-use.md)]
 
@@ -100,7 +104,7 @@ Se seu aplicativo usar conectores JCA, você precisará validar se o conector JC
 
 ### <a name="determine-whether-your-application-is-packaged-as-an-ear"></a>Determinar se seu aplicativo está empacotado como um EAR
 
-Se seu aplicativo estiver empacotado como um arquivo EAR, examine os arquivos *application.xml* e *application-bnd.xml* e capture as configurações deles.
+Se seu aplicativo estiver empacotado como um arquivo EAR, examine o arquivo *application.xml* e capture a configuração.
 
 > [!NOTE]
 > Se você deseja ser capaz de dimensionar cada um dos seus aplicativos Web independentemente para um melhor uso dos recursos do AKS, divida o EAR em aplicativos Web separados.

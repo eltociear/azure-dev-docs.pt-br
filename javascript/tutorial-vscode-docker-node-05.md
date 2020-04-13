@@ -1,29 +1,56 @@
 ---
-title: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações no Visual Studio Code
-description: Etapa 5 do tutorial, as etapas simples para recompilar e reimplantar uma imagem de contêiner.
+title: Implantar uma imagem de contêiner para um aplicativo Node.js usando o Visual Studio Code
+description: Parte 5 do tutorial, implantar a imagem no Serviço de Aplicativo do Azure
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 6ca29318b7dd5f1256d1b4503cf1ae9fc37ab111
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 487110258ed3302e781cfa24a5ae9f518ebb3bda
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467112"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740670"
 ---
-# <a name="make-changes-and-redeploy"></a>Fazer alterações e implantar novamente
+# <a name="deploy-the-image-to-azure-app-service"></a>Implantar a imagem no Serviço de Aplicativo do Azure
 
-[Etapa anterior: Implantar a imagem do aplicativo](tutorial-vscode-docker-node-04.md)
+[Etapa anterior: Criar a imagem do aplicativo](tutorial-vscode-docker-node-04.md)
 
-Como inevitavelmente você faz alterações em seu aplicativo, você acaba recompilando e reimplantando o contêiner muitas vezes. Felizmente, o processo é simples:
+Nesta etapa, você implanta a imagem enviada por push a um Registro para o [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) diretamente do Visual Studio Code.
 
-1. Fazer alterações em seu aplicativo e testar localmente.
+## <a name="enable-admin-access-on-the-registry"></a>Habilitar o Acesso de administrador no registro
 
-1. No Visual Studio Code, abra a **Paleta de Comandos** (**F1**) e execute **Imagens do Docker: Compilar Imagem** para recompilar a imagem. Se você alterar apenas o código do aplicativo, a compilação deverá levar apenas alguns segundos.
+Para implantar a imagem em um aplicativo Web, você precisa habilitar o acesso de "Administrador" no registro no portal do Azure.
 
-1. Para enviar a imagem por push para o registro, abra a **Paleta de Comandos** (**F1**) novamente e execute **Imagens do Docker: Push** escolhendo a imagem que você acabou de criar. Como antes, uma vez que uma alteração a seu código do aplicativo é pequena, somente tal camada precisará ser enviada por push e o processo costuma ser concluído em alguns segundos.
+1. No gerenciador do **Docker**, clique com o botão direito do mouse no nome do registro e selecione "Abrir no portal". 
 
-1. Na área **Azure: Serviço de Aplicativo**, clique com o botão direito do mouse no Serviço de Aplicativo correto e selecione **Reiniciar**. Reiniciar um serviço de aplicativo efetua pull automaticamente da imagem de contêiner mais recente do registro.
+    ![Comando Abrir no portal do VS Code](media/deploy-containers/open-in-portal.png)
 
-1. Após cerca de 15 a 20 segundos, visite a URL do Serviço de Aplicativo novamente para verificar as atualizações.
+    Isso abrirá o registro no portal do Azure.
 
-> [Vejo as alterações](tutorial-vscode-docker-node-06.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=deploy-changes)
+1. Clique em "Chaves de acesso" na barra lateral e, em seguida, alterne a configuração "Usuário administrador" para "Habilitado".  
+    
+    ![Habilitar a configuração de usuário administrador no portal do Azure](media/deploy-containers/access-keys.png)
+
+## <a name="deploy-image"></a>Implantar a imagem
+
+1. No Gerenciador de **DOCKER**, expanda os nós da imagem em **Registros**, clique com o botão direito do mouse em `:latest` e selecione a imagem **Implantar Imagem para o Serviço de Aplicativo do Azure**.
+
+    ![Implantar do Gerenciador](media/deploy-containers/deploy-image-command.png)
+
+1. Quando solicitado, forneça valores para o Serviço de Aplicativo:
+
+    - O nome deve ser exclusivo em todo o Azure.
+    - Selecione um grupo de recursos ou crie um. (Um **Grupo de Recursos** é, essencialmente, uma coleção nomeada dos recursos de um aplicativo no Azure.)
+    - Selecione um Plano de Serviço de Aplicativo ou crie um. (Um **Plano de Serviço de Aplicativo** define os recursos físicos que hospedam o site. Você pode usar uma camada de plano básica ou gratuita para este tutorial.)
+
+1. Quando a implantação for concluída, o Visual Studio Code mostrará uma notificação com a URL do site:
+
+    ![Mensagem de implantação bem-sucedida](media/deploy-containers/deploy-successful.png)
+
+1. Você também pode ver os resultados no painel **Saída** do Visual Studio Code na seção do **Docker**:
+
+    ![Saída de implantação bem-sucedida](media/deploy-containers/deploy-output.png)
+
+1. Para procurar o site implantado, você pode usar **Ctrl**+**Clique** na URL no painel **Saída**. O novo Serviço de Aplicativo também aparece no gerenciador do **AZURE** no Visual Studio Code na seção **SERVIÇO DE APLICATIVO**, em que você pode clicar com o botão direito do mouse no site e selecionar **Navegar no Site**.
+
+> [!div class="nextstepaction"]
+> [Meu site está no Azure](tutorial-vscode-docker-node-06.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=deploy-app)

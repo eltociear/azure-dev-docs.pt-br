@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
-ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+ms.openlocfilehash: 63fa23a946841d284d229561e597ea1d9450e822
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79990506"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740704"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory B2C.
 
@@ -162,12 +162,12 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 8. Crie uma pasta chamada *controlador* na pasta de origem do Java para seu aplicativo.
 
-9. Crie um arquivo Java chamado *HelloController.java* na pasta *controller* e abra-o em um editor de texto.
+9. Crie um arquivo Java chamado *WebController.java* na pasta *controlador* e abra-o em um editor de texto.
 
 10. Insira o código a seguir, depois salve e feche o arquivo:
 
     ```java
-    package sample.aad.controller;
+    package com.example.demo.controller;
     
     import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
     import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -212,12 +212,12 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
 11. Crie uma pasta chamada *segurança* na pasta de origem do Java para seu aplicativo.
 
-12. Crie um novo arquivo Java chamado *WebSecurityConfig.java* na pasta *security* e abra-o em um editor de texto.
+12. Crie um arquivo Java chamado *WebSecurityConfiguration.java* na pasta *segurança* e abra-o em um editor de texto.
 
 13. Insira o código a seguir, depois salve e feche o arquivo:
 
     ```java
-    package sample.aad.security;
+    package com.example.demo.security;
     
     import com.microsoft.azure.spring.autoconfigure.b2c.AADB2COidcLoginConfigurer;
     import org.springframework.security.config.annotation.web.builders.HttpSecurity;

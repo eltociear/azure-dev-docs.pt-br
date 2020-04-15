@@ -1,0 +1,92 @@
+### YamlMime:Hub
+title: Documentação do desenvolvedor do Azure
+summary: Encontre as linguagens e as ferramentas de que você precisa para o desenvolvimento no Azure.
+brand: azure
+metadata:
+  title: Documentação do desenvolvedor do Azure
+  description: Desenvolva no Azure usando suas linguagens e ferramentas favoritas. O Azure dá suporte ao desenvolvimento com o C# e o .NET, o Java, o JavaScript, o Python, o Azure PowerShell e a CLI do Azure.
+  ms.topic: hub-page
+  author: barbkess
+  ms.author: barbkess
+  manager: barbkess
+  ms.date: 04/08/2020
+  ms.openlocfilehash: 52290f4acd28cc40c4dffe8c2c85a1c5786a43c5
+  ms.sourcegitcommit: 295cf6efadb1ba8e443e71e4e6b6ea6897eb697a
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/14/2020
+  ms.locfileid: "81275890"
+tools:
+  title: Languages
+  items:
+  - title: Python
+    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
+    url: https://docs.microsoft.com/azure/developer/python/
+  - title: .NET
+    imageSrc: https://docs.microsoft.com/azure/media/index/net-logo.svg
+    url: https://docs.microsoft.com/dotnet/azure/
+  - title: JavaScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+    url: https://docs.microsoft.com/azure/javascript/
+  - title: Java
+    imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+    url: https://docs.microsoft.com/azure/java/
+  - title: Go
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Go-lightblue.svg
+    url: https://docs.microsoft.com/azure/developer/go/
+additionalContent:
+  sections:
+  - title: Ferramentas de desenvolvimento
+    items:
+    - title: API REST
+      url: https://docs.microsoft.com/rest/api/
+    - title: Extensões do Azure para o Visual Studio Code
+      url: https://code.visualstudio.com/docs/azure/extensions
+    - title: SDK .NET
+      url: https://docs.microsoft.com/dotnet/azure/sdk/
+    - title: SDK do Python
+      url: https://docs.microsoft.com/python/api/?view=azure-python
+    - title: SDK do JavaScript
+      url: https://docs.microsoft.com/javascript/api/
+    - title: Java SDK
+      url: https://docs.microsoft.com/java/api/
+    - title: Spring no Azure
+      url: https://docs.microsoft.com/azure/java/spring-framework/
+  - title: Ferramentas do DevOps
+    items:
+    - title: Azure PowerShell
+      summary: Use os cmdlets do Azure PowerShell para gerenciar os recursos do Azure diretamente por meio da linha de comando do PowerShell.
+      url: https://docs.microsoft.com/powershell/azure/
+    - title: CLI do Azure
+      summary: Use os comandos da CLI do Azure para criar e gerenciar recursos por meio da linha de comando.
+      url: https://docs.microsoft.com/cli/azure/
+    - title: Modelos do ARM
+      summary: Use os modelos do Azure Resource Manager para definir e configurar seu projeto com arquivos JSON.
+      url: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/
+    - title: Azure DevOps
+      summary: Use o Azure DevOps para planejar trabalhos, colaborar com o desenvolvimento de códigos e criar e implantar aplicativos.
+      url: https://docs.microsoft.com/azure/devops/?view=azure-devops
+    - title: GitHub Actions
+      summary: Use o GitHub Actions para automatizar, personalizar e executar seus fluxos de trabalho de desenvolvimento de software de dentro de seu repositório.
+      url: https://help.github.com/en/actions
+    - title: Jenkins
+      summary: Use o Jenkins para automatizar a integração e a entrega contínuas (CI/CD) em seus projetos de software.
+      url: https://docs.microsoft.com/azure/jenkins/
+    - title: Terraform
+      summary: Use o Hashicorp Terraform para provisionar e gerenciar a infraestrutura de nuvem.
+      url: https://docs.microsoft.com/azure/terraform/
+    - title: Ansible
+      summary: Use o Ansible para automatizar o provisionamento de nuvem, o gerenciamento de configuração e as implantações de aplicativo.
+      url: https://docs.microsoft.com/azure/developer/ansible/
+    - title: Chef
+      summary: Use o Chef para transformar sua infraestrutura de máquina virtual no Azure em código.
+      url: https://docs.microsoft.com/azure/developer/chef/
+    - title: Maven
+      summary: Use o Maven para automatizar a maneira como você cria e gerencia projetos Java. Ele também funciona com outras linguagens.
+      url: https://docs.microsoft.com/java/api/overview/azure/maven/README
+    - title: Kit de Ferramentas do Azure para IntelliJ
+      summary: Use o Azure Toolkit for IntelliJ para criar, desenvolver, testar e implantar aplicativos do Azure de dentro do IDE do IntelliJ.
+      url: https://docs.microsoft.com/azure/java/intellij/
+    - title: Kit de ferramentas do Azure para Eclipse
+      summary: Use o Azure Toolkit for Eclipse para criar, desenvolver, testar e implantar aplicativos do Azure de dentro do IDE do Eclipse.
+      url: https://docs.microsoft.com/azure/java/eclipse/

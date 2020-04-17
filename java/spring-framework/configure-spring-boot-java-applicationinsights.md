@@ -1,5 +1,5 @@
 ---
-title: Configure um aplicativo Inicializador do Spring Boot para usar o SpringBoot Starter do Azure Application Insights
+title: Configure o aplicativo inicializador para o Spring Boot Starter – Azure Monitor
 description: Configure um aplicativo Spring Boot criado com Spring Initializr para usar o Application Insights Spring Boot Starter.
 services: Application-Insights
 documentationcenter: java
@@ -9,18 +9,18 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 083abdf87d2298c99b9898db3b17e1c0e5e64bd8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 39993902ba01fd92bf44c6ccb85016ef9e73ac97
+ms.sourcegitcommit: 8aac5c35fbbd3d954bc4963933f96c93e10623d4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812150"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81119546"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Configure um aplicativo Inicializador do Spring Boot para usar o Application Insights
 
 Este artigo descreve como criar um aplicativo Spring boot usando **[Spring Initializr]** . Ele usa o Spring Boot Starter do Azure Application Insights para fazer o monitoramento de ponta a ponta de aplicativos Java na nuvem.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

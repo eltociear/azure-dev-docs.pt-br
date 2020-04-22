@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Documentação do Azure Toolkit for IntelliJ
+summary: O Kit de Ferramentas do Azure para IntelliJ fornece modelos e funcionalidades que podem ser usadas para criar, desenvolver, testar e implantar aplicativos do Azure com facilidade usando o IDE (ambiente de desenvolvimento integrado) do IntelliJ.
+metadata:
+  title: Documentação do Azure Toolkit for IntelliJ
+  description: Conheça o Kit de Ferramentas do Azure para IntelliJ.
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: f816ad75074b92b0b2b8025c5e541b5ef7988b65
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675382"
+landingContent:
+- title: Guias de introdução
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Criar um aplicativo Web Olá, Mundo para o Serviço de Aplicativo do Azure
+      url: create-hello-world-web-app.md
+    - text: Criar uma função de gatilho HTTP para o Azure Functions
+      url: quickstart-functions.md
+- title: Tutoriais passo a passo
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Executar um aplicativo Web Olá, Mundo em um contêiner do Linux
+      url: hello-world-web-app-linux.md
+    - text: Criar aplicativos Spark para o cluster HDInsight Spark Linux
+      url: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin
+- title: Gerenciar recursos do Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Caches Redis
+      url: managing-redis-caches-using-azure-explorer.md
+    - text: Contas de armazenamento
+      url: managing-virtual-machines-using-azure-explorer.md
+    - text: Máquinas virtuais
+      url: managing-storage-accounts-using-azure-explorer.md
+- title: JDKs compatíveis
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Java para Azure e Azure Stack
+      url: /azure/developer/java/fundamentals
+- title: Código-fonte
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Toolkits do Azure para Java
+      url: https://github.com/microsoft/azure-tools-for-java

@@ -1,0 +1,25 @@
+- name: Documentação do Azure Toolkit for Eclipse
+  href: index.yml
+  items:
+    - name: Introdução
+      href: create-hello-world-web-app.md
+    - name: Instruções
+      expanded: true
+      items:
+        - name: Instalar o kit de ferramentas
+          href: installation.md
+        - name: Entre na sua conta do Azure
+          href: sign-in-instructions.md
+        - name: Gerenciar recursos do Azure
+          expanded: true
+          items:
+            - name: Máquinas virtuais
+              href: managing-virtual-machines-using-azure-explorer.md
+            - name: Contas de armazenamento
+              href: managing-storage-accounts-using-azure-explorer.md
+            - name: Cache Redis do Azure
+              href: managing-redis-caches-using-azure-explorer.md
+    - name: Notas de versão
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://marketplace.eclipse.org/content/azure-toolkit-eclipse'

@@ -4,20 +4,20 @@ description: Saiba como usar o Ansible para criar e configurar um Gateway de Apl
 keywords: ansible, azure, devops, bash, guia estratégico, gateway de aplicativo, balanceador de carga, tráfego da Web
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 7fa2a8574bfa3f4848df4cce29887ac2bbc67942
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 3ff9a43513a2ee34964e6e82447e3398469db8f8
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743715"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>Tutorial: Gerenciar o tráfego da Web com o Gateway de Aplicativo do Azure usando o Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 O [Gateway de Aplicativo do Azure](/azure/application-gateway/overview) é um balanceador de carga do tráfego da Web que permite que você gerencie o tráfego para seus aplicativos Web. Com base no endereço IP e na porta de origem, os balanceadores de carga tradicionais roteiam o tráfego para um endereço IP e uma porta de destino. O Gateway de Aplicativo oferece um nível mais refinado de controle em que o tráfego pode ser roteado com base na URL. Por exemplo, você poderia definir que, se `images` for o caminho da URL, o tráfego será roteado para um conjunto específico de servidores (conhecido como pool) configurado para imagens.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -27,8 +27,8 @@ O [Gateway de Aplicativo do Azure](/azure/application-gateway/overview) é um ba
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>Criar um grupo de recursos
 

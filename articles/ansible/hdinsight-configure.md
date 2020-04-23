@@ -4,20 +4,20 @@ description: Saiba como usar o Ansible para configurar, redimensionar e excluir 
 keywords: ansible, azure, devops, bash, guia estratégico, apache hadoop, hdinsight
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 2281c9683583e1def034b79809829a068ef9f3e6
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 78cb70a3346aec86d079d2667349f9bc6e0eb4b2
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741184"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743636"
 ---
 # <a name="tutorial-configure-a-cluster-in-azure-hdinsight-using-ansible"></a>Tutorial: Configurar um cluster no Azure HDInsight usando o Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 O [Azure HDInsight](/azure/hdinsight/) é um serviço de análise com base no Hadoop para processamento de dados. O HDInsight é uma ferramenta ETL (extrair, transformar, carregar) usada para trabalhar com Big Data, sejam estruturados ou não. O HDInsight dá suporte a vários [tipos de clusters](/azure/hdinsight/hadoop/apache-hadoop-introduction), em que cada tipo tem suporte para um conjunto diferente de componentes. 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,8 +28,8 @@ O [Azure HDInsight](/azure/hdinsight/) é um serviço de análise com base no Ha
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
 
 ## <a name="create-a-random-postfix"></a>Criar um sufixo aleatório
 

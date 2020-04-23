@@ -4,12 +4,12 @@ description: Neste Início Rápido, saiba como realizar várias tarefas do Ansib
 keywords: ansible, azure, devops, bash, cloudshell, playbook, bash
 ms.topic: quickstart
 ms.date: 04/30/2019
-ms.openlocfilehash: b5c136d0eb6f3c226625c8a6d6c9200f6c283101
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: e5da7532b3bed43190509168827ac88f5b7b10be
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743725"
 ---
 # <a name="quickstart-run-ansible-playbooks-via-bash-in-azure-cloud-shell"></a>Início Rápido: Executar guias estratégicos do Ansible por meio do Bash no Azure Cloud Shell
 
@@ -17,9 +17,9 @@ O Azure Cloud Shell é um shell interativo e acessível pelo navegador para o ge
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 - **Configurar o Azure Cloud Shell** – se você não estiver familiarizado com o Azure Cloud Shell, confira [Início Rápido do Bash no Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart).
-[!INCLUDE [cloud-shell-try-it.md](../../includes/cloud-shell-try-it.md)]
+[!INCLUDE [cloud-shell-try-it.md](../includes/cloud-shell-try-it.md)]
 
 ## <a name="automatic-credential-configuration"></a>Configuração automática de credencial
 
@@ -42,7 +42,7 @@ export AZURE_SUBSCRIPTION_ID=<your-subscription-id>
 ## <a name="verify-the-configuration"></a>Verificar a configuração
 Para verificar a configuração bem-sucedida, use o Ansible para criar um grupo de recursos do Azure.
 
-[!INCLUDE [create-resource-group-with-ansible.md](../../includes/ansible-snippet-create-resource-group.md)]
+[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

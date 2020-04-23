@@ -4,22 +4,22 @@ description: Saiba como usar o Ansible para configurar o RBAC no cluster do Serv
 keywords: ansible, azure, devops, bash, cloudshell, guia estratégico, aks, contêiner, aks, kubernetes, azure active directory, rbac
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 0ce453c143532e5328a5b32347bdd6d1f2f0edb5
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 9018ca465246163a00e984d013449cfef6ae0be1
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741574"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743807"
 ---
 # <a name="tutorial-configure-role-based-access-control-rbac-roles-in-azure-kubernetes-service-aks-using-ansible"></a>Tutorial: Configurar funções de controle de acesso baseado em função (RBAC) no Serviço de Kubernetes do Azure (AKS) usando o Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 O AKS pode ser configurado para usar o [Azure AD (Active Directory)](/azure/active-directory/) na autenticação do usuário. Uma vez configurado, você usa seu token de autenticação do Azure AD para entrar no cluster do AKS. O RBAC pode ser baseado na identidade de um usuário ou na associação do grupo de diretórios.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,9 +28,9 @@ O AKS pode ser configurado para usar o [Azure AD (Active Directory)](/azure/acti
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 - **Instalar a biblioteca do RedHat OpenShift** - `pip install openshift`
 
 ## <a name="configure-azure-ad-for-aks-authentication"></a>Configurar o Azure AD para autenticação do AKS

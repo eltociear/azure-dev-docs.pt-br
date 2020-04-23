@@ -4,20 +4,20 @@ description: Saiba como usar o Ansible para criar e configurar um servidor do Ba
 keywords: ansible, azure, devops, bash, guia estratégico, mysql, banco de dados
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 9cd574417733518b993bb242c2c168aba338e34a
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: e8aad724edd55bda7284eda5f9630e5ffbe9f74c
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741544"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743420"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>Tutorial: Configurar bancos de dados no Banco de Dados do Azure para MySQL usando o Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 O [Banco de Dados do Azure para MySQL](/azure/mysql/overview) é um serviço de banco de dados relacional baseado no MySQL Community Edition. O Banco de Dados do Azure para MySQL permite gerenciar bancos de dados do MySQL em seus aplicativos Web.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -30,8 +30,8 @@ O [Banco de Dados do Azure para MySQL](/azure/mysql/overview) é um serviço de 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>Criar um grupo de recursos
 

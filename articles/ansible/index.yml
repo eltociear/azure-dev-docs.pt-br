@@ -10,12 +10,12 @@ metadata:
   author: TomArcherMsft
   ms.author: tarcher
   ms.date: 04/03/2020
-  ms.openlocfilehash: d0880d656bede1b8ad9da64694ee2b8bd4a25588
-  ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+  ms.openlocfilehash: 30a37bac54c8b150a78a417a2fcf9f8c39a4cb7b
+  ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/06/2020
-  ms.locfileid: "80741854"
+  ms.lasthandoff: 04/22/2020
+  ms.locfileid: "81743570"
 landingContent:
 - title: Sobre o Ansible no Azure
   linkLists:
@@ -57,6 +57,10 @@ landingContent:
       url: vm-manage.md
     - text: Criar com base na Galeria de Imagens Compartilhadas
       url: vm-configure-from-azure-shared-image-gallery.md
+  - linkListType: tutorial
+    links:
+    - text: Configurar a segurança da VM usando o Azure Key Vault
+      url: key-vault-configure-vm-security.md
 - title: Gerenciar os Conjuntos de Dimensionamento de Máquinas Virtuais
   linkLists:
   - linkListType: tutorial

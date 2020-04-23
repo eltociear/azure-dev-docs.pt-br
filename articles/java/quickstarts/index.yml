@@ -1,0 +1,112 @@
+### YamlMime:Landing
+title: Guias de início rápido do Azure para Java
+metadata:
+  title: Guias de início rápido do Azure para Java
+  description: Use esses guias de início rápido para começar a desenvolver aplicativos Java para a nuvem.
+  ms.topic: landing-page
+  ms.date: 04/08/2020
+  ms.openlocfilehash: 4df3926c2de96a207b0f1f20445d60c4a2f4daac
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675342"
+landingContent:
+- title: Implantar aplicativos Web
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Linux e o Tomcat
+      url: /azure/app-service/containers/quickstart-java
+    - text: Linux e o Java SE
+      url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
+    - text: Implantar no Linux usando o IntelliJ
+      url: /azure/developer/java/toolkit-for-intellij/create-hello-world-web-app
+    - text: Implantar no Linux usando o Visual Studio Code
+      url: https://code.visualstudio.com/docs/java/java-webapp
+- title: Funções sem servidor
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Criar e publicar uma função no Azure
+      url: /azure/azure-functions/functions-create-first-java-maven
+    - text: Implantar usando o IntelliJ
+      url: /azure/developer/java/toolkit-for-intellij/quickstart-functions
+    - text: Implantar usando o Visual Studio Code
+      url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
+- title: Azure Spring Cloud
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Iniciar usando o portal do Azure
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - text: Iniciar usando a CLI do Azure
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-cli
+    - text: Iniciar usando o código-fonte
+      url: /azure/spring-cloud/spring-cloud-launch-from-source
+    - text: Iniciar usando o Maven
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-maven
+- title: Armazenamento
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Blobs de Armazenamento
+      url: /azure/storage/blobs/storage-quickstart-blobs-java
+- title: Bancos de dados
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Banco de Dados SQL
+      url: /azure/sql-database/sql-database-connect-query-java
+    - text: MySQL
+      url: /azure/mysql/connect-java
+    - text: PostgreSQL
+      url: /azure/postgresql/connect-java
+- title: Cosmos DB
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: API do SQL
+      url: /azure/cosmos-db/create-sql-api-java
+    - text: API de Tabela
+      url: /azure/cosmos-db/create-table-java
+    - text: API do Graph
+      url: /azure/cosmos-db/create-graph-java
+    - text: API Cassandra
+      url: /azure/cosmos-db/create-cassandra-java
+    - text: API do MongoDB
+      url: /azure/cosmos-db/create-mongodb-java
+- title: Eventos
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Hubs de Eventos
+      url: /azure/event-hubs/event-hubs-java-get-started-send
+    - text: Hubs de Eventos e Kafka
+      url: /azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs
+- title: Mensagens do Barramento de Serviço
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Usar as filas
+      url: /azure/service-bus-messaging/service-bus-java-how-to-use-queues
+    - text: Usar tópicos e assinaturas
+      url: /azure/service-bus-messaging/service-bus-java-how-to-use-topics-subscriptions
+    - text: JMS e AMQP
+      url: /azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp
+- title: Hub IoT
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Enviar telemetria
+      url: /azure/iot-hub/quickstart-send-telemetry-java
+    - text: Controlar um dispositivo
+      url: /azure/iot-hub/quickstart-control-device-java
+- title: Cache
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Cache de aplicativo usando Jedis
+      url: /azure/azure-cache-for-redis/cache-java-get-started
+    - text: Redis reativos para Spring Data
+      url: /azure/developer/java/spring-framework/configure-spring-boot-initializer-java-app-with-redis-cache

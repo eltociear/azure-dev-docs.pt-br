@@ -1,0 +1,169 @@
+### YamlMime:Hub
+title: Documentação do desenvolvedor do Azure para Java
+summary: Comece a desenvolver aplicativos para a nuvem com esses tutoriais e ferramentas para desenvolvedores Java.
+brand: azure
+metadata:
+  title: Documentação do desenvolvedor do Azure para Java
+  description: Comece a desenvolver aplicativos para a nuvem com esses tutoriais e ferramentas para desenvolvedores Java.
+  ms.topic: hub-page
+  ms.date: 04/08/2020
+  ms.openlocfilehash: c037f46cd3cc03c366ef9a904c4a9178eebc5a0a
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675222"
+conceptualContent:
+  items:
+  - title: Guias de início rápido do Azure para Java
+    links:
+    - text: Implantar um aplicativo Web Java SE no Linux
+      itemType: quickstart
+      url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
+    - text: Criar e publicar uma função sem servidor
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-java-maven
+    - text: Gerenciar blobs de armazenamento
+      itemType: quickstart
+      url: /azure/storage/blobs/storage-quickstart-blobs-java
+    footerLink:
+      text: Ver mais
+      url: quickstarts/index.yml
+  - title: Ferramentas, IDEs e JDKs compatíveis
+    links:
+    - text: Suporte de longo prazo do Java
+      itemType: get-started
+      url: fundamentals/java-jdk-long-term-support.md
+    - text: Instalação do Java JDK
+      itemType: get-started
+      url: fundamentals/java-jdk-install.md
+    - text: Imagens do Docker Java para o Azure
+      itemType: get-started
+      url: fundamentals/java-jdk-docker-images.md
+    footerLink:
+      text: Ver mais
+      url: fundamentals/index.yml
+  - title: Migrar para o Azure
+    links:
+    - text: Spring para o Serviço de Aplicativo do Azure
+      itemType: how-to-guide
+      url: migration/migrate-java-se-to-java-se-app-service.md
+    - text: Tomcat para o Serviço de Aplicativo do Azure
+      itemType: how-to-guide
+      url: migration/migrate-tomcat-to-tomcat-app-service.md
+    - text: WebLogic para as Máquinas Virtuais do Azure
+      itemType: how-to-guide
+      url: migration/migrate-weblogic-to-virtual-machines.md
+    footerLink:
+      text: Ver mais
+      url: migration/index.yml
+  - title: SDK do Azure para Java
+    links:
+    - text: Desenvolvimento do Azure usando Java
+      itemType: get-started
+      url: sdk/java-sdk-azure-get-started.md
+    - text: Padrões e melhores práticas
+      itemType: learn
+      url: sdk/java-sdk-azure-concepts.md
+    - text: Navegador de API Java
+      itemType: reference
+      url: /java/api/?view=azure-java
+    footerLink:
+      text: Ver mais
+      url: sdk/index.yml
+  - title: Serviço de aplicativo do Azure
+    links:
+    - text: Criar um aplicativo Java
+      itemType: quickstart
+      url: /azure/app-service/containers/quickstart-java
+    - text: Configurar o Java
+      itemType: how-to-guide
+      url: /azure/app-service/containers/configure-language-java
+    - text: Implantar um aplicativo Spring com o MySQL
+      itemType: tutorial
+      url: /azure/developer/java/spring-framework/spring-app-service-e2e
+  - title: Azure Spring Cloud
+    links:
+    - text: O que é o Azure Spring Cloud?
+      itemType: overview
+      url: /azure/spring-cloud/spring-cloud-overview
+    - text: Iniciar um aplicativo Spring usando a CLI do Azure
+      itemType: quickstart
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - text: Preparar um aplicativo Spring para implantação
+      itemType: tutorial
+      url: /azure/spring-cloud/spring-cloud-tutorial-prepare-app-deployment
+    footerLink:
+      text: Ver mais
+      url: /azure/spring-cloud
+  - title: Integração do Spring no Azure
+    links:
+    - text: Iniciadores do Spring Boot
+      itemType: get-started
+      url: spring-framework/spring-boot-starters-for-azure.md
+    - text: Azure Cosmos DB para Spring Data
+      itemType: how-to-guide
+      url: spring-framework/how-to-guides-spring-data-cosmosdb.md
+    - text: Implantar um aplicativo Spring Boot
+      itemType: tutorial
+      url: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md
+    footerLink:
+      text: Ver mais
+      url: spring-framework/index.yml
+  - title: Funções do Azure
+    links:
+    - text: Criar uma Função do Azure
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
+    - text: Criar uma função do Spring Cloud
+      itemType: tutorial
+      url: /azure/developer/java/spring-framework/getting-started-with-spring-cloud-function-in-azure
+    - text: Guia do desenvolvedor
+      itemType: reference
+      url: /azure/azure-functions/functions-reference-java
+  - title: Monitoramento de aplicativos Java
+    links:
+    - text: Introdução ao Application Insights
+      itemType: how-to-guide
+      url: /azure/azure-monitor/app/java-in-process-agent
+    - text: Introdução ao ELK
+      itemType: tutorial
+      url: /azure/developer/java/java-get-started-with-logzio
+    - text: Monitorar aplicativos Spring
+      itemType: how-to-guide
+      url: /azure/spring-cloud/diagnostic-services
+  - title: Proteger aplicativos Java
+    links:
+    - text: Habilitar autenticação e autorização do usuário final
+      itemType: quickstart
+      url: /azure/active-directory/develop/quickstart-v2-java-webapp
+    - text: Usar a biblioteca de autenticação da Microsoft
+      itemType: how-to-guide
+      url: /azure/active-directory/develop/migrate-adal-msal-java
+    - text: Gerenciar segredos do aplicativo
+      itemType: quickstart
+      url: /azure/key-vault/quick-create-java
+tools:
+  title: Ferramentas
+  items:
+  - title: Kit de Ferramentas do Azure para IntelliJ
+    imageSrc: https://docs.microsoft.com/media/logos/logo_intellij.svg
+    url: toolkit-for-intellij/index.yml
+  - title: Kit de ferramentas do Azure para Eclipse
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: toolkit-for-eclipse/index.yml
+  - title: Eclipse Microprofile
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: eclipse-microprofile/index.yml
+  - title: Visual Studio Code
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+    url: https://code.visualstudio.com/docs
+  - title: CLI do Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_CLIgeneric.svg
+    url: /cli/azure
+  - title: Maven
+    imageSrc: https://docs.microsoft.com/media/logos/logo_maven.svg
+    url: /java/api/overview/azure/maven/README
+  - title: Jenkins no Azure
+    imageSrc: https://docs.microsoft.com/media/logos/logo_jenkins.svg
+    url: /jenkins

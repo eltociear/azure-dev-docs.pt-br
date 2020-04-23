@@ -1,0 +1,37 @@
+### YamlMime:Landing
+title: SDK do Azure para documentação do Java
+summary: Desenvolvimento em nuvem usando Java no Azure.
+metadata:
+  title: SDK do Azure para documentação do Java
+  description: Desenvolvimento em nuvem usando Java no Azure
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 2380696b801927bc842278b1b8604825feda0984
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675142"
+landingContent:
+- title: Azure para desenvolvedores de nuvem do Java
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Desenvolvimento do Azure usando Java
+      url: java-sdk-azure-get-started.md
+  - linkListType: reference
+    links:
+    - text: Navegador de API Java
+      url: /java/api/?view=azure-java
+  - linkListType: how-to-guide
+    links:
+    - text: Adicionar Certificado Raiz
+      url: java-sdk-add-certificate-ca-store.md
+    - text: Authenticate
+      url: java-sdk-azure-authenticate.md
+    - text: Configurar o registro em log
+      url: java-sdk-azure-log.md
+  - linkListType: learn
+    links:
+    - text: Padrões e melhores práticas
+      url: java-sdk-azure-concepts.md

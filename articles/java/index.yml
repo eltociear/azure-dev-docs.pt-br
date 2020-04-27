@@ -7,12 +7,12 @@ metadata:
   description: Comece a desenvolver aplicativos para a nuvem com esses tutoriais e ferramentas para desenvolvedores Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: c037f46cd3cc03c366ef9a904c4a9178eebc5a0a
-  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.openlocfilehash: d828acd15a58db94370c3f807bd51d8712ef1e2c
+  ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81675222"
+  ms.lasthandoff: 04/22/2020
+  ms.locfileid: "82026179"
 conceptualContent:
   items:
   - title: Guias de início rápido do Azure para Java
@@ -20,7 +20,7 @@ conceptualContent:
     - text: Implantar um aplicativo Web Java SE no Linux
       itemType: quickstart
       url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
-    - text: Criar e publicar uma função sem servidor
+    - text: Criar uma função sem servidor
       itemType: quickstart
       url: /azure/azure-functions/functions-create-first-java-maven
     - text: Gerenciar blobs de armazenamento
@@ -82,6 +82,9 @@ conceptualContent:
     - text: Implantar um aplicativo Spring com o MySQL
       itemType: tutorial
       url: /azure/developer/java/spring-framework/spring-app-service-e2e
+    footerLink:
+      text: Ver a documentação do Serviço de Aplicativo
+      url: /azure/app-service/containers/
   - title: Azure Spring Cloud
     links:
     - text: O que é o Azure Spring Cloud?
@@ -121,6 +124,9 @@ conceptualContent:
     - text: Guia do desenvolvedor
       itemType: reference
       url: /azure/azure-functions/functions-reference-java
+    footerLink:
+      text: Ver a documentação do Azure Functions
+      url: /azure/azure-functions
   - title: Monitoramento de aplicativos Java
     links:
     - text: Introdução ao Application Insights
@@ -132,17 +138,23 @@ conceptualContent:
     - text: Monitorar aplicativos Spring
       itemType: how-to-guide
       url: /azure/spring-cloud/diagnostic-services
+    footerLink:
+      text: Ver a documentação do Azure Monitor
+      url: /azure/azure-monitor
   - title: Proteger aplicativos Java
     links:
-    - text: Habilitar autenticação e autorização do usuário final
+    - text: Habilitar a autenticação do usuário final
       itemType: quickstart
       url: /azure/active-directory/develop/quickstart-v2-java-webapp
-    - text: Usar a biblioteca de autenticação da Microsoft
+    - text: Biblioteca de Autenticação da Microsoft
       itemType: how-to-guide
       url: /azure/active-directory/develop/migrate-adal-msal-java
     - text: Gerenciar segredos do aplicativo
       itemType: quickstart
       url: /azure/key-vault/quick-create-java
+    footerLink:
+      text: Ver a documentação do Azure Active Directory
+      url: /azure/active-directory
 tools:
   title: Ferramentas
   items:

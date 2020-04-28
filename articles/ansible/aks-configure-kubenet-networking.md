@@ -3,19 +3,20 @@ title: Tutorial – Configurar a rede kubenet no AKS (Serviço de Kubernetes do 
 description: Saiba como usar o Ansible para configurar a rede kubenet no cluster do Serviço de Kubernetes do Azure (AKS)
 keywords: ansible, azure, devops, bash, cloudshell, guia estratégico, aks, contêiner, aks, kubernetes
 ms.topic: tutorial
+ms.custom: fasttrack-edit
 ms.date: 10/23/2019
-ms.openlocfilehash: 1f15710de9ab6f2d058b72096f0265541c131d9f
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 7d1dc7b381c02c84b2da89c5c90d822e86a3cd1b
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741684"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82026119"
 ---
 # <a name="tutorial-configure-kubenet-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Tutorial: Configurar a rede kubenet no Serviço de Kubernetes do Azure (AKS) usando o Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 Com o AKS, você pode implantar um cluster que usa os modelos de rede a seguir:
 
@@ -24,7 +25,7 @@ Com o AKS, você pode implantar um cluster que usa os modelos de rede a seguir:
 
 Para saber mais sobre o sistema de rede para seus aplicativos no AKS, confira [Conceitos de rede para aplicativos no AKS](/azure/aks/concepts-network).
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -33,9 +34,9 @@ Para saber mais sobre o sistema de rede para seus aplicativos no AKS, confira [C
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-virtual-network-and-subnet"></a>Criar a rede virtual e a sub-rede
 
@@ -106,9 +107,9 @@ Há algumas observações importantes a serem consideradas ao trabalhar com o gu
 - Use o módulo `azure_rm_aks_version` para encontrar a versão com suporte.
 - O `vnet_subnet_id` é a sub-rede criada na seção anterior.
 - O `network_profile` define as propriedades do plug-in da rede kubenet.
-- O `service_cidr` é usado para atribuir serviços internos a um endereço IP no cluster do AKS. Esse intervalo de endereços IP deve ser um espaço de endereço que não esteja em uso em outro lugar na rede. 
+- O `service_cidr` é usado para atribuir serviços internos a um endereço IP no cluster do AKS. Esse intervalo de endereços IP deve ser um espaço de endereço que não é usado fora dos clusters AKS. No entanto, você pode reutilizar o mesmo CIDR de serviço para vários clusters AKS. 
 - O endereço `dns_service_ip` deve ser o endereço ".10" de seu intervalo de endereço IP do serviço.
-- O `pod_cidr` deve ser um espaço de endereço grande que não esteja em uso em outro lugar no ambiente de rede. Esse intervalo de endereços deve ser grande o suficiente para acomodar o número de nós que você espera ampliar. Não será possível alterar esse intervalo de endereços depois que o cluster for implantado.
+- O `pod_cidr` deve ser um espaço de endereço grande que não esteja em uso em outro lugar no ambiente de rede. Esse intervalo de endereços deve ser grande o suficiente para acomodar o número de nós que você espera ampliar. Não será possível alterar esse intervalo de endereços depois que o cluster for implantado. Assim como com o CIDR do serviço, esse intervalo de IP não deve existir fora do cluster AKS, mas pode ser reutilizado com segurança em clusters.
 - O intervalo de endereços IP do pod é usado para atribuir um espaço de endereço /24 a cada nó no cluster. No exemplo a seguir, o `pod_cidr` de 192.168.0.0/16 atribui o primeiro nó 192.168.0.0/24, o segundo nó 192.168.1.0/24 e o terceiro nó 192.168.2.0/24.
 - À medida que o cluster é dimensionado ou atualizado, o Azure continua atribuindo um intervalo de endereços IP do pod a cada novo nó.
 - O guia estratégico carrega `ssh_key` a partir de `~/.ssh/id_rsa.pub`. Se for modificá-lo, use o formato de linha única, começando com "ssh-rsa" (sem as aspas).

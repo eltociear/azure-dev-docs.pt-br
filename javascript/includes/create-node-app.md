@@ -4,22 +4,22 @@ ms.service: app-service
 ms.topic: include
 ms.date: 03/31/2020
 ms.author: buhollan
-ms.openlocfilehash: 59eea52aab3f2b1941a3accb5848bc4ad92d2992
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 6cb841a9cf9563c3b7b3db86d907eac757c5d31d
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740503"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82072661"
 ---
-1. Em um terminal ou prompt de comando, navegue até um local em que você deseja criar a pasta do aplicativo.
+1. Em um prompt de comando do terminal, vá até o local em que você deseja criar a pasta do aplicativo.
 
-1. Execute o comando a seguir para criar um aplicativo Express denominado *myexpressapp* usando o Gerador do Express. Os parâmetros `--git --view pug` informam ao gerador para criar um arquivo *.gitignore*. e para usar o mecanismo de modelo [pug](https://pugjs.org/api/getting-started.html), anteriormente conhecido como Jade.
+1. Execute o comando a seguir para criar um aplicativo Express denominado `myexpressapp` usando o Gerador Express. Os parâmetros `--git --view pug` instruem o gerador a criar um arquivo .gitignore e usar o mecanismo de modelo [Pug](https://pugjs.org/api/getting-started.html), que antes era conhecido como Jade.
 
     ```bash
     npx express-generator myexpressapp --git --view pug
     ```
 
-1. Navegue até a pasta do aplicativo:
+1. Vá para a pasta do aplicativo:
 
     ```bash
     cd myexpressapp
@@ -37,8 +37,9 @@ ms.locfileid: "80740503"
     npm start
     ```
 
-1. Teste o aplicativo abrindo um navegador para [http://localhost:3000](http://localhost:3000). O site deve aparecer da seguinte maneira:
+1. Teste o aplicativo abrindo um navegador e indo para [http://localhost:3000](http://localhost:3000). O site deve aparecer da seguinte maneira:
 
-    ![Executar aplicativo Express](../media/deploy-azure/express.png)
+    ![Executar o aplicativo Express](../media/deploy-azure/express.png)
 
-1. Selecione **CTRL**+**C** no terminal para interromper o servidor.
+1. Selecione **Ctrl**+**C** no terminal para interromper o servidor.
+ 

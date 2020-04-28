@@ -3,55 +3,56 @@ title: Usar um Registro de contêiner do Visual Studio Code
 description: Parte 2 do tutorial, usar um Registro de contêiner
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: e6dde135a2e6482284488fb83d9f811b02249c4d
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 01e35f12e83a7e53d6d5b78c4fcf156d9a5b53f0
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740564"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82026169"
 ---
 # <a name="use-a-container-registry"></a>Usar um registro de contêiner
 
 [Etapa anterior: Introdução e pré-requisitos](tutorial-vscode-docker-node-01.md)
 
-Nesta etapa, você configura um Registro de contêiner adequado para a imagem do aplicativo. Os serviços de hospedagem compatíveis com contêiner como o Serviço de Aplicativo do Azure então efetuam pull das imagens do Registro.
+Nesta etapa, você configura um Registro de contêiner adequado para a imagem do aplicativo. Os serviços de hospedagem compatíveis com contêiner, como o Serviço de Aplicativo do Azure, efetuam pull das imagens do Registro.
 
-Este tutorial usa o ACR [(Registro de Contêiner do Azure)](https://azure.microsoft.com/services/container-registry/), um registro privado, seguro e hospedado para suas imagens. As ferramentas e os processos mostrados aqui, no entanto, também funcionam com outros Registros, como o [Docker Hub](https://hub.docker.com/).
+Este tutorial usa o [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/), um Registro privado, seguro e hospedado para suas imagens. No entanto, as ferramentas e os processos mostrados aqui também funcionam com outros Registros, como o [Docker Hub](https://hub.docker.com/).
 
-## <a name="create-an-azure-container-registry"></a>Criar um Registro de Contêiner do Azure
+## <a name="create-an-azure-container-registry"></a>Criar um registro de contêiner do Azure
 
-1. No Visual Studio Code, pressione <kbd>F1</kbd> para abrir a **Paleta de Comandos**.
+1. No Visual Studio Code, pressione **F1** para abrir a paleta de comandos.
 
-1. Digite "registro" na caixa de pesquisa e selecione **Registro de Contêiner do Azure: Criar Registro**.
+1. Digite **Registro** na caixa de pesquisa. Nos resultados, selecione **Registro de Contêiner do Azure: Criar Registro**.
 
-   ![O gerenciador do Docker no VS Code](media/deploy-containers/docker-create-registry.jpg)
+   ![O gerenciador do Docker no Visual Studio Code](media/deploy-containers/docker-create-registry.jpg)
 
-1. Forneça os seguintes valores nos prompts...
+1. Digite ou selecione os valores a seguir:
 
-    - O **nome do Registro** deve ser exclusivo em todo o Azure e conter de 5 a 50 caracteres alfanuméricos.
-    - Selecione **Básico** para **SKU**.
-    - O **grupo de recursos** precisa ser exclusivo somente dentro de sua assinatura.
-    - Em local, **Local**, selecionando uma região perto de você.
+    - Em **Nome do Registro**, insira um nome que seja exclusivo no Azure e contenha de 5 a 50 caracteres alfanuméricos.
+    - No **SKU**, selecione **Básico**.
+    - Em **Grupo de recursos**, insira um valor que seja exclusivo em sua assinatura.
+    - Em **Localização**, selecione uma região próxima de você.
 
-    O Visual Studio Code começará o processo de criação do registro no Azure. Ao concluir, você verá uma notificação como a abaixo, confirmando que o registro foi criado com êxito.
+    O Visual Studio Code começará o processo de criação do Registro no Azure. Após a conclusão, você verá uma notificação como a mostrada a seguir. Essa notificação confirma que o Registro foi criado com êxito.
 
-   ![Uma confirmação de que o registro foi criado no Visual Studio Code](media/deploy-containers/registry-created.jpg)
+   ![Uma confirmação de que o Registro foi criado no Visual Studio Code](media/deploy-containers/registry-created.jpg)
 
-1. Abra o gerenciador do **Docker** e verifique se o ponto de extremidade do registro que você acabou de configurar está visível em **Registros**:
+1. Abra o gerenciador do **Docker**. Verifique se o ponto de extremidade do Registro que você acabou de configurar está visível em **Registros**.
 
-   ![Verificando se o Registro aparece no gerenciador do Docker](media/deploy-containers/docker-explorer-registry.jpg)
+   ![Verificação de que o Registro aparece no gerenciador do Docker](media/deploy-containers/docker-explorer-registry.jpg)
 
 ## <a name="sign-in-to-azure-container-registry"></a>Entrar no Registro de Contêiner do Azure
 
-Embora você possa ver seus registros do Azure na extensão do Docker, não será possível enviar imagens por push para eles até que você faça logon no ACR (Registro de Contêiner do Azure).
+Embora você possa ver seus Registros do Azure na extensão do Docker, não será possível enviar imagens por push para eles até que você entre no Registro de Contêiner.
 
-1. Pressione <kbd>CTRL + `</kbd> para abrir o **Terminal Integrado** no VS Code.
+1. No Visual Studio, selecione **CTRL**+ **`** para abrir o terminal integrado.
 
-1. Execute o seguinte comando da CLI do Azure para fazer logon no ACR. Substitua "<your-registry-name>" pelo nome do registro que você acabou de criar.
+1. Execute o comando da CLI do Azure a seguir para entrar no Registro de Contêiner. Substitua `<your-registry-name>` pelo nome do Registro criado.
 
     ```bash
     az acr login --name <your-registry-name>
     ```
 
 > [!div class="nextstepaction"]
-> [Criei um registro](tutorial-vscode-docker-node-03.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=create-registry)
+> [Criei um Registro](tutorial-vscode-docker-node-03.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=create-registry)
+ 

@@ -1,0 +1,76 @@
+- name: Jenkins no Azure
+  href: index.yml
+- name: Visão geral
+  items:
+    - name: Sobre o Jenkins no Azure
+      href: overview.md
+- name: Inícios rápidos
+  expanded: true
+  items:
+    - name: Criar um servidor Jenkins
+      href: configure-on-linux-vm.md
+- name: Tutoriais
+  items:
+    - name: Configurar
+      items:
+        - name: Dimensionar com Instâncias de Contêiner do Azure
+          href: azure-container-instances-as-jenkins-build-agent.md
+          maintainContext: true
+        - name: Dimensionar com agentes de VM do Azure
+          href: scale-deployments-using-vm-agents.md
+    - name: Implementar CI/CD
+      items:
+        - name: Azure Spring Cloud
+          items:
+            - name: Implantar no Azure Spring Cloud usando a CLI do Azure
+              href: deploy-to-azure-spring-cloud-using-azure-cli.md
+        - name: AKS
+          items:
+            - name: CI/CD para Kubernetes
+              href: deploy-from-github-to-aks.md
+              maintainContext: true
+            - name: Implantar no AKS usando o padrão azul/verde
+              href: deploy-to-aks-using-blue-green-deployment-pattern.md
+            - name: CI/CD com o Azure Dev Spaces
+              href: azure-dev-spaces-and-aks.md
+        - name: Serviço de Aplicativo
+          items:
+            - name: Criar recursos do Azure em um trabalho de pipeline
+              href: deploy-to-azure-app-service-using-azure-cli.md
+            - name: Implantar um aplicativo do GitHub para o Serviço de Aplicativo
+              href: deploy-from-github-to-azure-app-service.md
+        - name: Usar Jenkins com Azure DevOps
+          href: deploy-to-linux-vm-using-azure-devops-services.md
+          maintainContext: true
+        - name: Implantar no Azure Functions
+          href: deploy-to-azure-functions.md
+        - name: Publicar no Armazenamento do Azure
+          href: azure-storage-blobs-as-build-artifact-repository.md
+          maintainContext: true
+        - name: CI/CD para VMs Linux
+          href: pipeline-with-github-and-docker.md
+          maintainContext: true
+        - name: CI/CD para Service Fabric
+          href: deploy-to-service-fabric-cluster.md
+          maintainContext: true
+- name: Como fazer
+  items:
+    - name: Usar o plug-in do Serviço de Aplicativo
+      href: deploy-to-azure-app-service-using-plugin.md
+- name: Exemplos
+  items:
+    - name: Trabalhos de exemplo e scripts
+      href: 'https://github.com/azure/jenkins'
+- name: Recursos
+  items:
+    - name: Plug-ins Jenkins para Azure
+      href: plug-ins-for-azure.md
+    - name: Roteiro do Azure
+      href: 'https://azure.microsoft.com/roadmap/'
+    - name: Página inicial do Jenkins
+      href: 'https://jenkins.io/'
+    - name: Jenkins X Página inicial
+      href: 'https://jenkins-x.io'
+    - name: Arquitetura do Jenkins
+      href: /azure/architecture/reference-architectures/jenkins/
+      maintainContext: true

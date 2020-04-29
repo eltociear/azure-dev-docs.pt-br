@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: be83122125d07c0bfb69c7c44a3a0fee0c069fb3
-  ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+  ms.openlocfilehash: 1068b2917cef3052b6753e0c563cbcaf9af3f542
+  ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/22/2020
-  ms.locfileid: "81743557"
+  ms.lasthandoff: 04/28/2020
+  ms.locfileid: "82209789"
 productDirectory:
   items:
   - title: Python
@@ -144,7 +144,7 @@ additionalContent:
       url: https://docs.microsoft.com/java/api/overview/azure/maven/README
     - title: Kit de Ferramentas do Azure para IntelliJ
       summary: Use o Azure Toolkit for IntelliJ para criar, desenvolver, testar e implantar aplicativos do Azure de dentro do IDE do IntelliJ.
-      url: https://docs.microsoft.com/azure/developer/java/intellij/
+      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-intellij/
     - title: Kit de ferramentas do Azure para Eclipse
       summary: Use o Azure Toolkit for Eclipse para criar, desenvolver, testar e implantar aplicativos do Azure de dentro do IDE do Eclipse.
-      url: https://docs.microsoft.com/azure/developer/java/eclipse/
+      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-eclipse/

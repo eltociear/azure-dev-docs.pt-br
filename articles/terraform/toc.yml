@@ -1,0 +1,83 @@
+- name: Terraform na documentação do Azure
+  href: index.yml
+- name: Visão geral
+  items:
+    - name: Sobre o Terraform no Azure
+      href: overview.md
+- name: Inícios rápidos
+  expanded: true
+  items:
+    - name: Instalar e configurar o Terraform
+      href: install-configure.md
+    - name: Criar uma VM do Linux
+      href: create-linux-virtual-machine-with-infrastructure.md
+- name: Tutoriais
+  items:
+    - name: Instalação e configuração
+      items:
+        - name: Armazene o estado Terraform no armazenamento do Azure
+          href: store-state-in-azure-storage.md
+    - name: Serviço de Aplicativo
+      items:
+        - name: Slots de implantação dos provedores Terraform e Azure
+          href: provision-infrastructure-using-azure-deployment-slots.md
+    - name: Contêineres
+      items:
+        - name: Criar um cluster Kubernetes com AKS
+          href: create-k8s-cluster-with-tf-and-aks.md
+        - name: Criar um controlador de entrada do Gateway de Aplicativo no AKS
+          href: create-k8s-cluster-with-aks-applicationgateway-ingress.md
+    - name: Banco de dados
+      items:
+        - name: Implantar um Azure Cosmos DB
+          href: deploy-azure-cosmos-db-to-azure-container-instances.md
+    - name: Infraestrutura
+      items:
+        - name: Criar um cluster de VMs com módulos do Terraform
+          href: create-vm-cluster-module.md
+        - name: Criar um cluster de VMs com Terraform e HCL
+          href: create-vm-cluster-with-infrastructure.md
+        - name: Provisionar conjunto de dimensionamento de VMs com infraestrutura
+          href: create-vm-scaleset-network-disks-hcl.md
+        - name: Provisionar conjunto de dimensionamento de Máquina Virtual de uma imagem personalizada do Packer
+          href: create-vm-scaleset-network-disks-using-packer-hcl.md
+    - name: Redes
+      items:
+        - name: Topologia hub-spoke
+          items:
+            - name: 1. Criar uma topologia hub-spoke
+              href: hub-spoke-introduction.md
+            - name: 2. Criar uma rede virtual local
+              href: hub-spoke-on-prem.md
+            - name: 3. Criar uma rede virtual do hub
+              href: hub-spoke-hub-network.md
+            - name: 4. Criar um dispositivo de rede virtual do hub
+              href: hub-spoke-hub-nva.md
+            - name: 5. Criar uma rede spoke
+              href: hub-spoke-spoke-network.md
+            - name: 6. Validar a conectividade de topologia de rede
+              href: hub-spoke-validation.md
+    - name: Ferramentas
+      items:
+        - name: Instalar a extensão do Visual Studio Code do Terraform
+          href: configure-vs-code-extension-for-terraform.md
+        - name: Criar um modelo de base do Terraform usando o Yeoman
+          href: create-a-base-template-using-yeoman.md
+        - name: Testar módulos do Terraform usando Terratest
+          href: test-modules-using-terratest.md
+- name: Exemplos
+  items:
+    - name: Modelos de configuração
+      href: 'https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples'
+- name: Referência
+  items:
+    - name: Registro do módulo do Azure
+      href: 'https://registry.terraform.io/modules/Azure'
+    - name: Provedor do Terraform do Azure
+      href: 'https://aka.ms/terraform'
+- name: Recursos
+  items:
+    - name: Azure e Terraform
+      href: 'https://azure.microsoft.com/solutions/devops/terraform/'
+    - name: Roteiro do Azure
+      href: 'https://azure.microsoft.com/roadmap/'

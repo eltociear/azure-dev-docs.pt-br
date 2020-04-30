@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9c645a44584eb4a214a3e41a158581d1d2c4ea32
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: a048cded2659c1cee15b2e26a5f3c80df79e895c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674092"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104997"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Criar e gerenciar redes virtuais do Azure de seus aplicativos Java
 
@@ -19,7 +19,7 @@ ms.locfileid: "81674092"
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 
-Criar um [arquivo de autenticação](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
+Criar um [arquivo de autenticação](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
 
 ```
 git clone https://github.com/Azure-Samples/network-java-manage-virtual-network.git

@@ -3,12 +3,12 @@ title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure usand
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 1a14010d362ed3858d319a141fd24e5ea1b0e714
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740573"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138782"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 
@@ -24,14 +24,14 @@ Assista a este vídeo para ter uma explicação completa do conteúdo neste arti
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- A [extensão do Docker](vscode:extension/ms-azuretools.vscode-docker).
-- A [extensão do Serviço de Aplicativo do Azure](vscode:extension/ms-azuretools.vscode-azureappservice).
+- A [extensão do Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
+- A [extensão do Serviço de Aplicativo do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 - [Node.js e npm](https://nodejs.org/en/download), o gerenciador de pacotes do Node.js.
 - [Docker](https://www.docker.com/community-edition).
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-docker">Instalar a extensão do Docker</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Instalar a extensão do Docker</a>
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Instalar a extensão do Serviço de Aplicativo do Azure</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice">Instalar a extensão do Serviço de Aplicativo do Azure</a>
 
 ### <a name="azure-subscription"></a>Assinatura do Azure
 

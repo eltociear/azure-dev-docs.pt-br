@@ -6,12 +6,12 @@ ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
 ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 706fff51a80bc44492b9498456eed98f0c49c0d2
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 7e50a18346eb9bd2bee50bf2ea2d65cd94381292
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671852"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104967"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Criar máquinas virtuais em várias regiões a partir de seus aplicativos Java
 
@@ -22,7 +22,7 @@ ms.locfileid: "81671852"
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 
-Criar um [arquivo de autenticação](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
+Criar um [arquivo de autenticação](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel.git

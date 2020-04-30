@@ -5,12 +5,12 @@ keywords: Azure, Java, API, referência, anotações, atualizações, substituir
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
 ms.topic: reference
 ms.date: 3/06/2016
-ms.openlocfilehash: 2475d31deb25bd446c858484b0b2b9cb2b5816a8
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 69c2c29935f9333dd1d31b26b0941e0446ca5504
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671932"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105197"
 ---
 # <a name="release-notes"></a>Notas de versão 
 
@@ -20,7 +20,6 @@ A versão 1.3.0 é compatível com versões anteriores para serviços e uso de r
 
 As alterações de última hora de versões de visualização para esses serviços são marcadas com a anotação @Beta.
 
-Caso esteja migrando seu código para a versão 1.3.0, você pode usar [estas notas](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md) a fim de preparar seu código existente para a versão 1.3.
 
 ### <a name="generally-available-in-v13"></a>Em disponibilidade geral em V1.3
 

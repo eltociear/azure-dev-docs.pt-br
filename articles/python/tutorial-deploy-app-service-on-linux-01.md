@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 1: introdução, pré-requisitos e entrada no Azur
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8995c31203b2cbd096820832beb3d6a7d165f132
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.openlocfilehash: ed0370e5e4905403ec7917410f68fb4969969a05
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80441961"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138752"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
@@ -36,7 +36,7 @@ Instale o seguinte software:
 
 - [Visual Studio Code](https://code.visualstudio.com/).
 - O Python e a extensão do [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), conforme descrito em [Tutorial de Python no VS Code – Pré-requisitos](https://code.visualstudio.com/docs/python/python-tutorial).
-- A extensão do [Serviço de Aplicativo do Azure](vscode:extension/ms-azuretools.vscode-azureappservice), que fornece interação com o Serviço de Aplicativo do Azure de dentro do VS Code. Para obter informações gerais, explore o [Tutorial da extensão do Serviço de Aplicativo](https://code.visualstudio.com/tutorials/app-service-extension/getting-started) e visite o [repositório do GitHub vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice).
+- A extensão do [Serviço de Aplicativo do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice), que fornece interação com o Serviço de Aplicativo do Azure de dentro do VS Code. Para obter informações gerais, explore o [Tutorial da extensão do Serviço de Aplicativo](https://code.visualstudio.com/tutorials/app-service-extension/getting-started) e visite o [repositório do GitHub vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice).
 
 ## <a name="sign-in-to-azure"></a>Entrar no Azure
 

@@ -3,12 +3,12 @@ title: Implantar um site do Node.js estático no Azure usando o Visual Studio Co
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 4795d3a80be1ffa7516f64fa5563d4960f58a31b
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: c63ff76f3572a7815b385b08b05e223eb681fbbe
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82026159"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138762"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Implantar um site estático no Azure usando o Visual Studio Code
 
@@ -30,7 +30,7 @@ Assista a este vídeo para ter uma explicação completa do conteúdo neste arti
 - A [extensão de Armazenamento do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage).
 - [Node.js e npm](https://nodejs.org/en/download), o gerenciador de pacotes do Node.js. (Esse requisito é usado apenas para gerar um projeto de exemplo. Você não precisará instalar o Node.js se já tiver o código do aplicativo.)
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azurestorage">Instalar a extensão do Armazenamento do Azure</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage">Instalar a extensão do Armazenamento do Azure</a>
 
 ### <a name="azure-subscription"></a>Assinatura do Azure
 

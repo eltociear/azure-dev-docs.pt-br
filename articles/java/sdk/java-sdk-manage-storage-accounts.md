@@ -6,20 +6,20 @@ ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 7004d2e883fa6646cc793d8166645eb70145b57f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 9084360a3cf4fa335bfded302461f4435b8452f7
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674112"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104987"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Gerenciar contas de armazenamento do Azure a partir dos seus aplicativos Java
 
-[Este exemplo](https://github.com/Azure-Samples/storage-java-manage-storage-accounts) cria uma conta de [Armazenamento do Azure](/azure/storage/storage-introduction) e funciona com as chaves de acesso da conta usando as [bibliotecas de gerenciamento de Java](https://github.com/Azure/azure-sdk-for-java). 
+[Este exemplo](https://github.com/Azure-Samples/storage-java-manage-storage-accounts) cria uma conta de [Armazenamento do Azure](/azure/storage/common/storage-introduction) e funciona com as chaves de acesso da conta usando as [bibliotecas de gerenciamento de Java](https://github.com/Azure/azure-sdk-for-java). 
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 
-Criar um [arquivo de autenticação](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
+Criar um [arquivo de autenticação](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
 
 ```
 git clone https://github.com/Azure-Samples/storage-java-manage-storage-accounts.git

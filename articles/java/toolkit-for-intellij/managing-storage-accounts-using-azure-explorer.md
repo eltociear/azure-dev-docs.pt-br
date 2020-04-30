@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 1a223c858874566c2fbfe7b02faec99179cd1e72
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 762ac74b73a274e792ed19ac8ca7c2b68d98e778
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670522"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105067"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gerenciar contas de armazenamento usando o Azure Explorer para IntelliJ
 
@@ -107,7 +107,7 @@ Para saber mais sobre os tamanhos, preços e contas de armazenamento do Azure, v
 <!-- URL List -->
 
 [Instruções de conexão para o Kit de ferramentas do Azure para IntelliJ]: ./sign-in-instructions.md
-[Introdução ao Armazenamento do Microsoft Azure]: /azure/storage/storage-introduction
+[Introdução ao Armazenamento do Microsoft Azure]: /azure/storage/common/storage-introduction
 [Sobre as contas de armazenamento do Azure]: /azure/storage/storage-create-storage-account
 [Replicação do Armazenamento do Azure]: /azure/storage/storage-redundancy
 [Metas de desempenho e escalabilidade do Armazenamento do Azure]: /azure/storage/storage-scalability-targets

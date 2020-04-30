@@ -7,12 +7,12 @@ ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: ca76df9f32980fd37f92a61951ee7270a7e0a9ff
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: ece597db7475d371c54664d61498d6a89f8c76cb
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81669752"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104827"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurar um aplicativo Inicializador do Spring Boot para usar o Redis na nuvem com o Cache Redis do Azure
 
@@ -104,7 +104,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    > [!NOTE] 
    > 
-   > Se você estivesse usando outro cliente Redis, como Jedis, que habilita o SSL, seria necessário especificar que você deseja usar o SSL em seu arquivo *application.properties* e usar a porta 6380. Por exemplo:
+   > Se você estivesse usando outro cliente Redis, como Jedis, que habilita o SSL, seria necessário especificar que você deseja usar o SSL em seu arquivo *application.properties* e usar a porta 6380. Por exemplo: 
    > 
    > ```yaml
    > # Specify the DNS URI of your Redis cache.
@@ -178,7 +178,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    mvn spring-boot:run
    ```
 
-1. Teste o aplicativo Web navegando até http://localhost:8080 com um navegador da Web ou use a sintaxe semelhante ao seguinte exemplo, se você tiver o curl disponível:
+1. Teste o aplicativo Web navegando até `http://localhost:8080` com um navegador da Web ou use a sintaxe semelhante ao seguinte exemplo, se você tiver o curl disponível:
 
    ```shell
    curl http://localhost:8080

@@ -9,12 +9,12 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 4002ca79f2473026582bedea8f2b9a84cf3b15c4
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 85da0b92bbc5780e923fc447c66e5a0d2518e737
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668292"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104817"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Configure um aplicativo Inicializador do Spring Boot para usar o Application Insights
 
@@ -161,14 +161,14 @@ Configure o aplicativo usando o procedimento a seguir.
 
 1. Salve e feche o arquivo *TestController.java*.
 
-1. Compile o aplicativo Spring Boot com Maven e execute-o. Por exemplo:
+1. Compile o aplicativo Spring Boot com Maven e execute-o. Por exemplo: 
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. Teste o aplicativo Web navegando até http://localhost:8080/sample/hello com um navegador da Web ou use a sintaxe semelhante ao seguinte exemplo se você tiver o **curl** disponível:
+1. Teste o aplicativo Web navegando até `http://localhost:8080/sample/hello` com um navegador da Web ou use a sintaxe semelhante ao seguinte exemplo se você tiver o **curl** disponível:
 
    ```shell
    curl http://localhost:8080/sample/hello
@@ -230,7 +230,7 @@ Configure o aplicativo para enviar logs usando o procedimento a seguir.
 
 2. Salve e feche o arquivo *POM.xml*.
 
-3. Na pasta \src\main\resources, crie um novo arquivo *log4j2.xml* e configure-o. Por exemplo:
+3. Na pasta \src\main\resources, crie um novo arquivo *log4j2.xml* e configure-o. Por exemplo: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

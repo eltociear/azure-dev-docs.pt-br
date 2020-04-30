@@ -6,12 +6,12 @@ ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 2f8217a3a97b688a114a7176b642dce90249af4e
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 90bf21232ed5ac8b4f98122951b6cfe4aed2eb4c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674082"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104977"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Gerenciar máquinas virtuais do Azure a partir dos seus aplicativos Java
 
@@ -19,7 +19,7 @@ ms.locfileid: "81674082"
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 
-Criar um [arquivo de autenticação](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
+Criar um [arquivo de autenticação](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-vm.git

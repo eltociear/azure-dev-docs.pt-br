@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 227a997c8b1268444f6165e800279410d0085953
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 131cc95ce3b927ffc26ea7b08367b65dd434c0e4
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81675092"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209759"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gerenciar contas de armazenamento usando o Azure Explorer para Eclipse
 
@@ -25,7 +25,7 @@ O Azure Explorer, que faz parte do Kit de ferramentas do Azure para Eclipse, for
 
 Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
-1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](/azure/developer/java/eclipse/sign-in-instructions).
+1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
 
 1. Na exibição do **Azure Explorer**, expanda o nó **Azure**, clique com o botão direito do mouse em **Contas de Armazenamento** e, em seguida, clique em **Criar Conta de Armazenamento**.
 
@@ -106,7 +106,7 @@ Para saber mais sobre os tamanhos, preços e contas de armazenamento do Azure, v
 
 <!-- URL List -->
 
-[Introdução ao Armazenamento do Microsoft Azure]: /azure/storage/storage-introduction
+[Introdução ao Armazenamento do Microsoft Azure]: /azure/storage/common/storage-introduction
 [Sobre as contas de armazenamento do Azure]: /azure/storage/storage-create-storage-account
 [Replicação do Armazenamento do Azure]: /azure/storage/storage-redundancy
 [Metas de desempenho e escalabilidade do Armazenamento do Azure]: /azure/storage/storage-scalability-targets

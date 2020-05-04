@@ -45,8 +45,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/azure/developer/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "bilingual_type": "hover over",
       "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/azure-dev-docs.de-DE",
+      "feedback_github_repo": "MicrosoftDocs/azure-dev-docs.pt-BR",
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
@@ -93,8 +94,8 @@
         "**/*.md": "barbkess",
         "**/*.yml": "barbkess",
         "java/**/*.md": "brendm",
-	
-	"go/**/*.md": "barbkess",
+  
+  "go/**/*.md": "barbkess",
         "python/**/*.md": "kraigb",
         "ansible/**/*.md": "tarcher",
         "chef/**/*.md": "tarcher",

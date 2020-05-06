@@ -6,12 +6,12 @@ ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: 4c1f415b5d664986e00f6cf8b12d63b214b55088
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 5e5dfdf4aab983678195827d33451fbe626100c0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81673802"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82104917"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Como usar o Spring e o Cosmos DB com o Serviço de Aplicativo no Linux
 
@@ -136,7 +136,7 @@ set REGION=<put-your-REGION-here>
     mvn package spring-boot:run
     ```
 
-4. Depois que o aplicativo for iniciado, você poderá validar a implantação acessando o aplicativo Spring Todo aqui: [http://localhost:8080/](http://localhost:8080/).
+4. Após a inicialização do aplicativo, você pode validar a implantação acessando o aplicativo Spring Todo aqui: `http://localhost:8080/`.
 
  ![Aplicativo Spring em execução local][SCDB01]
 

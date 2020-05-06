@@ -8,17 +8,17 @@ ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
 ms.openlocfilehash: ece597db7475d371c54664d61498d6a89f8c76cb
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104827"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurar um aplicativo Inicializador do Spring Boot para usar o Redis na nuvem com o Cache Redis do Azure
 
 Este artigo ensina a criar um cache Redis na nuvem usando o portal do Azure, depois usar o **[Spring Initializr]** para criar um aplicativo personalizado e, então, criar um aplicativo Web de Java que armazena e recupera os dados usando o cache Redis.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
 

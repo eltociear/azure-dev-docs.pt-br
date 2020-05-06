@@ -5,10 +5,10 @@ ms.topic: article
 ms.date: 06/25/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
 ms.openlocfilehash: b8841e5259a49b45db1f526330e0238d1bd0d050
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77002517"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Desenvolver e implantar um aplicativo Node.js em contêineres com o Visual Studio Code e o Azure
@@ -17,7 +17,7 @@ Este tutorial ilustra como pegar um aplicativo em Node.js existente, "colocá-lo
 
 O tutorial usa um aplicativo simples de tarefa pendente criado e publicado pela [Scotch.io](https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular). Ele é um aplicativo MEAN de página única e, portanto, usa o MongoDB como seu banco de dados, Node/Express para a API REST/servidor Web e Angular.js 1.x para a interface do usuário de front-end. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para acompanhar a demonstração, você precisará ter estes softwares instalados:
 

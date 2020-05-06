@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: d07fe2e807bd6e1fac6d0e9f883bcc8092be46bb
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82030998"
 ---
 # <a name="install-azure-cli-with-zypper"></a>Instalar CLI do Azure com zypper
@@ -56,7 +56,7 @@ Para distribuições Linux com `zypper`, como o openSUSE ou SLES, há um pacote 
 
 Para saber mais sobre os diferentes métodos de autenticação, confira [Entrar com a CLI do Azure](authenticate-azure-cli.md).
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Aqui estão alguns problemas comuns vistos durante a instalação com `zypper`. Se você tiver um problema não abordado aqui, [arquive um problema no github](https://github.com/Azure/azure-cli/issues).
 

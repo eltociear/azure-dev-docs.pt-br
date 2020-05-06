@@ -4,17 +4,17 @@ description: Introdução à autenticação e ao gerenciamento de recursos com m
 ms.date: 06/17/2017
 ms.topic: conceptual
 ms.openlocfilehash: 600c10c052a3aa95eb4dc04de0166a6974ede060
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709893"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introdução aos módulos do Azure para Node.js
 
 Este guia demonstra a instalação de módulos Node.js do Azure, a autenticação no Azure com uma entidade de serviço e a execução do código de exemplo que cria recursos na sua assinatura do Azure e se conecta aos serviços de nuvem do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/)
 - [Node.js](https://nodejs.org)

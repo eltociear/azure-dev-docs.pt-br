@@ -4,10 +4,10 @@ description: Criar, redimensionar e atualizar um disco gerenciado.
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.openlocfilehash: 11e50b86f888079ef44d498dfa59cf999bd0b08a
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441641"
 ---
 # <a name="managed-disks"></a>Managed Disks

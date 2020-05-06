@@ -4,10 +4,10 @@ description: Como instalar, fornecer e configurar o SDK do Azure para linguagem 
 ms.date: 03/14/2018
 ms.topic: conceptual
 ms.openlocfilehash: 55b841101f2307e869a57193ce6d678f298b8e6e
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319793"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Instale o SDK do Azure para linguagem Go
@@ -43,7 +43,7 @@ version = "14.0.0"
 Para usar os serviços do Azure a partir de seu código Go, importe todos os serviços com os quais você interage e os módulos `autorest` necessários.
 Você obterá uma lista completa dos módulos disponíveis do GoDoc para os [serviços disponíveis](https://godoc.org/github.com/Azure/azure-sdk-for-go) e [pacotes AutoRest](https://godoc.org/github.com/Azure/go-autorest). Os pacotes mais comuns do `go-autorest` de que você precisa são:
 
-| Pacote | Descrição |
+| Pacote | DESCRIÇÃO |
 |---------|-------------|
 | [github.com/Azure/go-autorest/autorest][autorest] | Objetos para lidar com a autenticação de cliente de serviço |
 | [github.com/Azure/go-autorest/autorest/azure][autorest/azure] | Constantes para interações com os serviços do Azure |

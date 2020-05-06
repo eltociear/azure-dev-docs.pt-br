@@ -3,12 +3,12 @@ title: Criar o Serviço de Aplicativo do Azure no Visual Studio Code
 description: 'Parte 2 do tutorial: criar o aplicativo Node.js e executá-lo localmente'
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: b2935554fb337d5f5db1a71e016638869f9d1dc4
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 86d3801b31f1a0c5fb988940a7c9f550a991f0d2
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893642"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82105187"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>Criar e executar um aplicativo Node.js local
 
@@ -42,7 +42,7 @@ Nesta etapa, você criará um aplicativo Node.js simples usando o Gerador de apl
     npm start
     ```
 
-1. Teste o aplicativo abrindo um navegador para [http://localhost:3000](http://localhost:3000). O site deve aparecer da seguinte maneira:
+1. Teste o aplicativo abrindo um navegador em `http://localhost:3000`. O site deve aparecer da seguinte maneira:
 
     ![Executar aplicativo Express](media/deploy-azure/express.png)
 

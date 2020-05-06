@@ -9,10 +9,10 @@ ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
 ms.custom: seo-java-july2019, seo-java-september2019
 ms.openlocfilehash: 202b34a6b64d75e814a4fb586a44e471a9a9f118
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673912"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Padrões e melhores práticas de desenvolvimento com as bibliotecas do Azure para Java 
@@ -68,9 +68,9 @@ for (VirtualMachine vm : vms) {
 
 As bibliotecas de gerenciamento retornam tipos de coletas específicos de consultas com base na estrutura dos resultados.
 
-- `List<T>`: dados não ordenados que sejam fáceis de pesquisar e iterar.
-- `Map<T>`: mapas são pares chave/valor com chaves exclusivas, mas valores não necessariamente exclusivos. Um exemplo de um Mapa seria as configurações do aplicativo para um aplicativo Web de um Serviço de Aplicativo.
-- `Set<T>`: conjuntos possuem valores e chaves exclusivos. Um exemplo de um Conjunto seria redes conectadas a uma máquina virtual, que teria um identificador exclusivo (a chave) e uma configuração de rede exclusiva (o valor).
+- `List<T>`: Dados não ordenados que sejam fáceis de pesquisar e iterar.
+- `Map<T>`: Mapas são pares de chaves/valores com chaves exclusivas, mas não necessariamente valores exclusivos. Um exemplo de um Mapa seria as configurações do aplicativo para um aplicativo Web de um Serviço de Aplicativo.
+- `Set<T>`: Conjuntos possuem valores e chaves exclusivos. Um exemplo de um Conjunto seria redes conectadas a uma máquina virtual, que teria um identificador exclusivo (a chave) e uma configuração de rede exclusiva (o valor).
 
 ## <a name="actionable-verbs"></a>Verbos acionáveis
 

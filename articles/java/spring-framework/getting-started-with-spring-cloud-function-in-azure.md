@@ -10,10 +10,10 @@ ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: e91940e22aba03367493a23d4792db38d36f394f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673032"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Introdução ao Spring Cloud Function no Azure
@@ -22,7 +22,7 @@ Este artigo descreve como usar o [Spring Cloud Function](https://spring.io/proje
 
 [!INCLUDE [quickstarts-free-trial-note](includes/quickstarts-free-trial-note.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para desenvolver funções usando Java, você deve ter o seguinte instalado:
 

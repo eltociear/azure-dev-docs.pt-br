@@ -4,23 +4,23 @@ description: Autenticar com uma entidade de serviço para os módulos de gerenci
 ms.topic: article
 ms.date: 06/17/2017
 ms.openlocfilehash: 76233fb6e6d15829783ff98b3af672abc7eba226
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75010504"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Autenticar com os módulos do Azure para Node.js
 
 Todas as APIs de serviço exigem autenticação por meio de um objeto `credentials` durante a instanciação. Há três maneiras de autenticar e criar as credenciais necessárias por meio do SDK do Azure para Node.js: 
 
-- Autenticação básica
+- Autenticação Básica
 - Logon interativo
 - Autenticação de entidade de serviço
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
-## <a name="basic-authentication"></a>Autenticação básica
+## <a name="basic-authentication"></a>Autenticação Básica
 
 Para autenticar programaticamente usando as credenciais da sua conta do Azure, use a função `loginWithUsernamePassword`. O snippet de código JavaScript a seguir ilustra como usar a autenticação básica usando as credenciais armazenadas como variáveis de ambiente. 
 

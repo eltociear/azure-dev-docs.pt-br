@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 4424cdb3f8ee01a10f892d38b84a42c820e95266
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: 229def19340c722949308a021c2e021615ce65ec
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82026099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82105116"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Implantar um aplicativo Spring no Serviço de Aplicativo com o MySQL
 
@@ -144,13 +144,13 @@ ${TOMCAT_HOME}/bin/catalina.sh run
 ```
 ---
 
-Agora você pode acessar [http://localhost:8080](http://localhost:8080) no seu navegador para ver o aplicativo em execução e ter uma ideia de como ele funciona. Ao terminar, selecione CTRL+C no prompt do Bash para interromper o Tomcat.
+Agora você pode acessar no navegador `http://localhost:8080` para ver tanto o aplicativo em execução quanto o funcionamento dele. Ao terminar, selecione CTRL+C no prompt do Bash para interromper o Tomcat.
 
 ## <a name="deploy-to-azure-app-service"></a>Implantar no Serviço de Aplicativo do Azure
 
 Agora que você o viu em execução localmente, implantaremos o aplicativo no Azure.
 
-Primeiro, defina as variáveis de ambiente a seguir. Para `REGION`, use `Central US` ou outras regiões que você pode encontrar [aqui](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=app-service).
+Primeiro, defina as variáveis de ambiente a seguir. Para `REGION`, use `West US 2` ou outras regiões que você pode encontrar [aqui](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=app-service).
 
 # <a name="bash"></a>[Bash](#tab/bash)
 
@@ -468,7 +468,7 @@ mvn cargo:deploy
 ```
 ---
 
-Agora você pode exibir o aplicativo localmente em [http://localhost:8080](http://localhost:8080). O aplicativo terá a mesma aparência e se comportará da mesma forma que antes, mas usando o Banco de Dados do Azure para MySQL em vez do HSQLDB. Ao terminar, selecione CTRL+C no prompt do Bash para interromper o Tomcat.
+Agora você pode ver o aplicativo localmente em `http://localhost:8080`. O aplicativo terá a mesma aparência e se comportará da mesma forma que antes, mas usando o Banco de Dados do Azure para MySQL em vez do HSQLDB. Ao terminar, selecione CTRL+C no prompt do Bash para interromper o Tomcat.
 
 Por fim, implante o aplicativo no Serviço de Aplicativo.
 

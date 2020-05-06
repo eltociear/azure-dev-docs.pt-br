@@ -9,10 +9,10 @@ ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 10dfdc316ba00f8a7019f0724aab231e344c1c6d
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031308"
 ---
 # <a name="azure-cli-release-notes"></a>Notas de versão da CLI do Azure
@@ -1279,7 +1279,7 @@ Esta versão contém um grande número de alterações da falha.
 * [ALTERAÇÃO SIGNIFICATIVA] O parâmetro `--persisted` de `hdinsight script-action list` foi removido
 * O parâmetro `hdinsight create --cluster-configurations` foi alterado para aceitar um caminho para um arquivo JSON local ou uma cadeia de caracteres JSON
 * Adicionado o comando `hdinsight script-action list-execution-history`
-* Alterado `hdinsight monitor enable --workspace` para aceitar uma ID do workspace ou nome do workspace do Log Analytics
+* Alterado `hdinsight monitor enable --workspace` para aceitar uma ID do workspace ou nome do workspace do Log Analytics 
 * O argumento `hdinsight monitor enable --primary-key`, que será necessário caso uma ID do workspace seja fornecida como o parâmetro, foi adicionado
 * Foram adicionados mais exemplos e atualização das descrições das mensagens de erro
 
@@ -4606,7 +4606,7 @@ Versão 2.0.13
 * Atualizado para o Lote SDK 3.1.0 e Gerenciamento de Lote SDK 4.1.0
 * Adicionado um novo comando que mostra as contagens de tarefas de um trabalho
 * Corrigido o bug no processamento de URL de SAS do arquivo de recurso
-* Ponto de extremidade da conta de lote agora dá suporte ao prefixo opcional “https://”
+* Ponto de extremidade da conta de lote agora dá suporte ao prefixo opcional “https://” 
 * Suporte para adicionar listas de mais de 100 tarefas a um trabalho
 * Adicionado log de depuração para carregar o módulo do comando de Extensões
 

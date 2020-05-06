@@ -4,17 +4,17 @@ description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.openlocfilehash: 7abe3bf3d59072acf8b448b66e68908b5d824a8c
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709863"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Implantar no Serviço de Aplicativo do Azure usando a CLI do Azure
 
 Neste tutorial, você implanta um aplicativo Node.js para o Serviço de Aplicativo do Azure usando a [CLI (interface de linha de comando) do Azure](https://docs.microsoft.com/cli/azure/overview?view=azure-cli-latest), que é executada em todos os sistemas operacionais. Com a CLI, você pode criar recursos do Azure, configurar um pipeline de implantação entre um repositório Git e o Azure e exibir a saída `console.log` do aplicativo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Node.js e npm 6.x ou superior](https://nodejs.org/en/download), o gerenciador de pacotes do Node.js.

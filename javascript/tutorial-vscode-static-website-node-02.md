@@ -4,12 +4,12 @@ description: Parte 2 do tutorial, criar o aplicativo de exemplo
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 69c0e7d6f43829546e5f23ec63a4ac35b71d7e78
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 81593d61126b34f002513deb02d9bf634a7e9dd6
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422518"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82105127"
 ---
 # <a name="create-the-app"></a>Criar o aplicativo
 
@@ -42,7 +42,7 @@ Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](h
     npm start
     ```
 
-1. Abra um navegador para [http://localhost:4200](http://localhost:4200) para verificar se o aplicativo está em execução:
+1. Abra um navegador em `http://localhost:4200` para verificar se o aplicativo está em execução:
 
     ![O aplicativo Angular de exemplo em execução](media/static-website/local-app-angular.png)
 
@@ -71,7 +71,7 @@ Nesta etapa, você usará a CLI (Interface de Linha de Comando) para [Angular](h
     npm start
     ```
 
-1. Abra um navegador para [http://localhost:3000](http://localhost:3000) para verificar se o aplicativo está em execução:
+1. Abra um navegador em `http://localhost:3000` para verificar se o aplicativo está em execução:
 
     ![O aplicativo React de exemplo em execução](media/static-website/local-app-react.png)
 
@@ -102,7 +102,7 @@ Quando a CLI solicitar perguntas de configuração, pressione enter para selecio
      npm run serve
      ```
 
-1. Abra um navegador para [http://localhost:8080](http://localhost:8080) para verificar se o aplicativo está em execução:
+1. Abra um navegador em `http://localhost:8080` para verificar se o aplicativo está em execução:
 
     ![O aplicativo Vue de exemplo em execução](media/static-website/local-app-vue.png)
 
@@ -137,7 +137,7 @@ Quando a CLI solicitar perguntas de configuração, pressione enter para selecio
      npm run dev
      ```
 
-1. Abra um navegador para [http://localhost:5000](http://localhost:5000) para verificar se o aplicativo está em execução:
+1. Abra um navegador em `http://localhost:5000` para verificar se o aplicativo está em execução:
 
     ![O aplicativo Vue de exemplo em execução](media/static-website/local-app-svelte.png)
 

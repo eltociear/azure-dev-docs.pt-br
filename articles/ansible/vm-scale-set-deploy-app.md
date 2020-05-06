@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, guia estratégico, máquina virtual, con
 ms.topic: tutorial
 ms.date: 01/13/2020
 ms.openlocfilehash: 40632c5e0cc4f544d1b561548bf54495616e4e12
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743936"
 ---
 # <a name="tutorial-deploy-apps-to-virtual-machine-scale-sets-in-azure-using-ansible"></a>Tutorial: Implantar aplicativos nos conjuntos de dimensionamento de máquinas virtuais no Azure usando o Ansible

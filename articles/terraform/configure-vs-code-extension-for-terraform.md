@@ -4,10 +4,10 @@ description: Saiba como instalar e usar a extensão do Terraform do Azure no Vis
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: c33006fc2be87bfce42f15a6fc123c9c8326aa42
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171252"
 ---
 # <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Tutorial: Configurar a extensão do Visual Studio Code do Azure Terraform

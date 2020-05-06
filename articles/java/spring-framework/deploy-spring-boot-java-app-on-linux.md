@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5e6204d773ee8e140832361ad587e850e36b75f6
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 570b33614f32ef80e11ddf9d2c6774513248416e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668812"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82166668"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Implantar um aplicativo Spring Boot no Serviço de Aplicativo do Azure no Linux
 
@@ -97,53 +97,41 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 
    ![Criar um novo Registro de Contêiner do Azure][AR01]
 
-1. Quando a página **Criar registro de contêiner** for exibida, insira o **Nome do registro**, a **Assinatura**, o **Grupo de recursos** e a **Localização**. Selecione **Habilitar** para o **Usuário administrador**. Em seguida, clique em **Criar**.
+1. Quando a página **Criar registro de contêiner** for exibida, insira o **Nome do registro**, a **Assinatura**, o **Grupo de recursos** e a **Localização**. Em seguida, clique em **Criar**.
 
    ![Definir configurações do registro de contêiner do Azure][AR03]
 
-1. Depois que o registro de contêiner tiver sido criado, navegue até o registro de contêiner no portal do Azure e clique em **Chaves de acesso**. Anote o nome de usuário e a senha para as próximas etapas.
-
-   ![Chaves de acesso do Registro de Contêiner do Azure][AR04]
-
-## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Configurar o Maven para usar as chaves de acesso do Registro de Contêiner do Azure
+## <a name="configure-maven-to-build-image-to-your-azure-container-registry"></a>Configurar o Maven a fim de criar uma imagem para o Registro de Contêiner do Azure
 
 1. Navegue até o diretório de projeto concluído para o seu aplicativo Spring Boot (por exemplo: "*C:\SpringBoot\gs-spring-boot-docker\complete*" ou " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") e abra o arquivo *pom.xml* com um editor de texto.
 
-1. Atualize a coleção `<properties>` no arquivo *pom.xml* com a versão mais recente do [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin), o valor do servidor de logon e as configurações de acesso para o Registro de Contêiner do Azure da seção anterior deste tutorial. Por exemplo:
+1. Atualize a coleção `<properties>` no arquivo *pom.xml* com a versão mais recente do [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin), o valor do servidor de logon e as configurações de acesso para o Registro de Contêiner do Azure da seção anterior deste tutorial. Por exemplo: 
 
    ```xml
    <properties>
-      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
-      <username>wingtiptoysregistry</username>
-      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. Adicione [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) à coleção `<plugins>` no arquivo *pom.xml*.  Este exemplo usa a versão 1.8.0.
+1. Adicione [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) à coleção `<plugins>` no arquivo *pom.xml*.  Esse exemplo usa a versão 2.2.0.
 
    Especifique a imagem base em `<from>/<image>`, aqui `mcr.microsoft.com/java/jre:8-zulu-alpine`. Especifique o nome da imagem final a ser criada da base em `<to>/<image>`.  
 
    A autenticação `{docker.image.prefix}` é o **Servidor de logon** na página de registro mostrada anteriormente. O `{project.artifactId}` é o nome e o número de versão do arquivo JAR do primeiro build do Maven do projeto.
 
-   Especifique o nome de usuário e a senha no painel de registro no nó `<to>/<auth>`. Por exemplo:
-
    ```xml
    <plugin>
      <artifactId>jib-maven-plugin</artifactId>
      <groupId>com.google.cloud.tools</groupId>
-     <version>1.8.0</version>
+     <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
             <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
-            <auth>
-               <username>${username}</username>
-               <password>${password}</password>
-            </auth>
         </to>
      </configuration>
    </plugin>
@@ -152,12 +140,12 @@ As etapas a seguir descrevem como usar o portal do Azure para criar um Registro 
 1. Navegue até o diretório de projeto completo para o seu aplicativo Spring Boot e execute o seguinte comando para recompilar o aplicativo e fazer o push do contêiner ao Registro de Contêiner do Azure:
 
    ```bash
-   mvn compile jib:build
+   az acr login -n wingtiptoysregistry && mvn compile jib:build
    ```
 
 > [!NOTE]
->
-> Quando estiver usando o Jib para enviar sua imagem por push ao Registro de Contêiner do Azure, a imagem não usará o *Dockerfile*. Consulte [este](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) documento para obter detalhes.
+> 1. O comando `az acr login ...` tentará fazer logon no Registro de Contêiner do Azure. Caso contrário, você precisará fornecer `<username>` e `<password>` para jib-maven-plugin. Confira [Métodos de autenticação](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#authentication-methods) no Jib.
+> 2. Quando estiver usando o Jib para enviar sua imagem por push ao Registro de Contêiner do Azure, a imagem não usará o *Dockerfile*. Consulte [este](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) documento para obter detalhes.
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>Criar um aplicativo Web no Linux no Serviço de Aplicativo do Azure usando a imagem de contêiner
@@ -300,7 +288,6 @@ Para obter mais exemplos sobre como usar imagens personalizadas do Docker com o 
 [SB02]: media/deploy-spring-boot-java-app-on-linux/SB02.png
 [AR01]: media/deploy-spring-boot-java-app-on-linux/AR01.png
 [AR03]: media/deploy-spring-boot-java-app-on-linux/AR03.png
-[AR04]: media/deploy-spring-boot-java-app-on-linux/AR04.png
 [LX01]: media/deploy-spring-boot-java-app-on-linux/LX01.png
 [LX02]: media/deploy-spring-boot-java-app-on-linux/LX02.png
 [LX02-A]: media/deploy-spring-boot-java-app-on-linux/LX02-A.png

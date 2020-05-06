@@ -4,10 +4,10 @@ description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.openlocfilehash: c63ff76f3572a7815b385b08b05e223eb681fbbe
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138762"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Implantar um site estático no Azure usando o Visual Studio Code
@@ -23,7 +23,7 @@ Assista a este vídeo para ter uma explicação completa do conteúdo neste arti
 > [!NOTE]
 > Se você tiver seu próprio código de servidor, como um aplicativo Node.js/Expresso, siga o [tutorial do Serviço de Aplicativo](tutorial-vscode-azure-app-service-node-01.md), em vez disso.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

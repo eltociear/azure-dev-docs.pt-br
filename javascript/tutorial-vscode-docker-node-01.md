@@ -4,10 +4,10 @@ description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138782"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
@@ -20,7 +20,7 @@ Assista a este vídeo para ter uma explicação completa do conteúdo neste arti
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-to-Azure-App-Service/player]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma [assinatura do Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

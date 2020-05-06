@@ -8,12 +8,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 5c0dddfc8f6ef4b631c3ee999a3f8742921c1b9a
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 2df574104376ec1900c7dc5cbd4f0a49ef1f4732
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81669852"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82138732"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Como usar o iniciador do Spring Boot para o Azure Key Vault
 
@@ -122,32 +122,16 @@ O procedimento a seguir cria e inicializa o cofre de chaves.
    }
    ```
 
-2. Crie uma entidade de serviço do Azure a partir do registro do seu aplicativo. Por exemplo:
-   ```shell
-   az ad sp create-for-rbac --name "vgeduser"
-   ```
-   Em que:
-
-   | Parâmetro | Descrição |
-   |---|---|
-   | `name` | Especifica o nome para a entidade de serviço do Azure. |
-
-   A CLI do Azure retornará uma mensagem de status do JSON que contém o *appId* e a *password* que serão usados posteriormente como a ID e a senha do cliente. Por exemplo:
-
-   ```json
-   {
-     "appId": "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii",
-     "displayName": "vgeduser",
-     "name": "http://vgeduser",
-     "password": "pppppppp-pppp-pppp-pppp-pppppppppppp",
-     "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
-   }
-   ```
-
-3. Crie um novo cofre de chaves no grupo de recursos. Por exemplo:
+2. Crie um novo cofre de chaves no grupo de recursos. Por exemplo:
 
    ```azurecli
-   az keyvault create --name vgedkeyvault --resource-group vged-rg2 --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
+   az keyvault create --resource-group vged-rg2 \
+       --name vgedkeyvault \
+       --enabled-for-deployment true \
+       --enabled-for-disk-encryption true \
+       --enabled-for-template-deployment true \
+       --sku standard --query properties.vaultUri \
+       --location westus
    ```
 
    Em que:
@@ -155,56 +139,25 @@ O procedimento a seguir cria e inicializa o cofre de chaves.
    | Parâmetro | Descrição |
    |---|---|
    | `name` | Especifica um nome exclusivo para o seu cofre de chaves. |
-   | `location` | Especifica a [região do Azure](https://azure.microsoft.com/regions/) na qual seu grupo de recursos será hospedado. |
    | `enabled-for-deployment` | Especifica a [opção de implantação do cofre de chaves](/cli/azure/keyvault). |
    | `enabled-for-disk-encryption` | Especifica a [opção de criptografia do cofre de chaves](/cli/azure/keyvault). |
    | `enabled-for-template-deployment` | Especifica a [opção de criptografia do cofre de chaves](/cli/azure/keyvault). |
    | `sku` | Especifica a [opção de SKU do cofre de chaves](/cli/azure/keyvault). |
    | `query` | Especifica um valor a ser recuperado da resposta, que é o URI do cofre de chaves que será necessário para concluir este tutorial. |
+   | `location` | Especifica a [região do Azure](https://azure.microsoft.com/regions/) na qual seu grupo de recursos será hospedado. |
 
    A CLI do Azure exibirá o URI do cofre de chaves, que será usado posteriormente. Por exemplo:  
 
-   ```azurecli
+   ```output
    "https://vgedkeyvault.vault.azure.net"
-
    ```
 
-4. Defina a política de acesso da entidade de serviço do Azure criada anteriormente. Por exemplo:
+3. Armazenar um segredo no seu novo cofre de chaves. Por exemplo:
 
    ```azurecli
-   az keyvault set-policy --name vgedkeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
-   ```
-
-   Em que:
-
-   | Parâmetro | Descrição |
-   |---|---|
-   | `name` | Especifica o nome do cofre de chaves de antes. |
-   | `secret-permission` | Especifica as [políticas de segurança](/cli/azure/keyvault) do seu cofre de chaves. |
-   | `spn` | Especifica o GUID do seu registro de aplicativo de antes. |
-
-   A CLI do Azure exibirá os resultados da criação da política de segurança. Por exemplo:  
-
-   ```json
-   {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
-     "location": "westus",
-     "name": "vgedkeyvault",
-     "properties": {
-       ...
-       ... (A long list of values will be displayed here.)
-       ...
-     },
-     "resourceGroup": "vged-rg2",
-     "tags": {},
-     "type": "Microsoft.KeyVault/vaults"
-   }
-   ```
-
-5. Armazenar um segredo no seu novo cofre de chaves. Por exemplo:
-
-   ```azurecli
-   az keyvault secret set --vault-name "vgedkeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
+   az keyvault secret set --vault-name "vgedkeyvault" \
+       --name "connectionString" \
+       --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
 
    Em que:
@@ -250,8 +203,7 @@ Use o procedimento a seguir para configurar e compilar seu aplicativo.
 
    ```yaml
    azure.keyvault.uri=https://vgedkeyvault.vault.azure.net/
-   azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
-   azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
+   azure.keyvault.enabled=true
    ```
 
    Em que:
@@ -259,10 +211,8 @@ Use o procedimento a seguir para configurar e compilar seu aplicativo.
    |          Parâmetro          |                                 Descrição                                 |
    |-----------------------------|-----------------------------------------------------------------------------|
    |    `azure.keyvault.uri`     |           Especifica o URI de quando você criou seu cofre de chaves.           |
-   | `azure.keyvault.client-id`  |  Especifica o GUID da *appId* de quando você criou a entidade de serviço.   |
-   | `azure.keyvault.client-key` | Especifica o GUID da *senha* de quando você criou a entidade de serviço. |
-
-
+    
+    
 4. Navegue até o arquivo de código-fonte principal de seu projeto, por exemplo: */src/main/java/com/vged/secrets*.
 
 5. Abra o arquivo principal Java do aplicativo em um arquivo em um editor de texto; por exemplo: *SecretsApplication.java* e adicione as seguintes linhas ao arquivo:
@@ -274,8 +224,11 @@ Use o procedimento a seguir para configurar e compilar seu aplicativo.
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.boot.CommandLineRunner;
-
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.RestController;
+   
    @SpringBootApplication
+   @RestController
    public class SecretsApplication implements CommandLineRunner {
 
       @Value("${connectionString}")
@@ -284,39 +237,104 @@ Use o procedimento a seguir para configurar e compilar seu aplicativo.
       public static void main(String[] args) {
          SpringApplication.run(SecretsApplication.class, args);
       }
-
+   
+      @GetMapping("get")
+      public String get() {
+         return connectionString;
+      }
+   
       public void run(String... varl) throws Exception {
          System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n",connectionString));
       }
    }
    ```
-   Este exemplo de código recupera a cadeia de conexão do cofre de chaves e a exibe à linha de comando.
+   Esse exemplo de código recupera a cadeia de conexão do cofre de chaves e a exibe na URL `https://{your-appservice-name}.azurewebsites.net/get`.
 
 6. Salve e feche o arquivo Java.
 
-## <a name="build-and-test-your-app"></a>Crie e testar seu aplicativo
+7. Desabilite o teste e crie o arquivo JAR usando o Maven.
+    
+   ```bash
+   mvn clean package -Dmaven.test.skip=true
+   ```
 
-Use o procedimento a seguir para testar seu aplicativo.
+## <a name="configure-maven-plugin-for-azure-app-service"></a>Configurar o plug-in do Maven para o Serviço de Aplicativo do Azure
 
-1. Navegue até o diretório no qual o arquivo *pom.xml* do seu aplicativo Spring Boot está localizado:
+Esta seção ajuda na configuração do projeto Spring Boot para permitir que o aplicativo seja implantado no Serviço de Aplicativo do Azure.
 
-1. Crie seu aplicativo Spring Boot com o Maven. Por exemplo:
+1.  Siga o link para [Configurar o plug-in do Maven para o Serviço de Aplicativo do Azure].
+    
+    Esse link cria um Serviço de Aplicativo do Azure. Se desejar implantar o aplicativo em um existente, você poderá reconfigurar a implantação por meio do comando `mvn azure-webapp:config` e escolher uma parte do aplicativo para a configuração.
+    
+    ```bash
+    [INFO] Scanning for projects...                                                     
+    [INFO]                                                                              
+    [INFO] ----------------------< com.wingtiptoys:secrets >-----------------------     
+    [INFO] Building secrets 0.0.1-SNAPSHOT                                              
+    [INFO] --------------------------------[ jar ]---------------------------------     
+    [INFO]                                                                              
+    [INFO] --- azure-webapp-maven-plugin:1.9.0:config (default-cli) @ secrets ---       
+    Please choose which part to config                                                  
+    1. Application                                                                      
+    2. Runtime                                                                          
+    3. DeploymentSlot                                                                   
+    Enter index to use: 1                                                              
+    Define value for appName(Default: ********):                                      
+    Define value for resourceGroup(Default: ********):                                 
+    Define value for region(Default: ********):                                           
+    Define value for pricingTier(Default: P1v2):                                        
+    1. b1                                                                               
+    2. b2                                                                               
+    3. b3                                                                               
+    4. d1                                                                               
+    5. f1                                                                               
+    6. p1v2 [*]                                                                         
+    7. p2v2                                                                             
+    8. p3v2                                                                             
+    9. s1                                                                               
+    10. s2                                                                              
+    11. s3                                                                              
+    Enter index to use:                                                                 
+    Please confirm webapp properties                                                                                                          
+    ```
+    
+    Você também pode editar diretamente a seção `<configuration>` de `<azure-webapp-maven-plugin>` no *pom.xml*. Altere o `<resourceGroup>`, o `<appName>` e o valor `<region>` para o Serviço de Aplicativo específico.
+
+2. Atribua uma identidade ao Serviço de Aplicativo e desative o `principalId` para a próxima etapa.
+
+   ```bash
+   az webapp identity assign --name your-appservice-name \
+      --resource-group vged-rg2
+   ```
+   
+3. Conceda permissão para o MSI.
+
+   ```bash
+   az keyvault set-policy --name vgedkeyvault \
+       --object-id your-managed-identity-objectId \
+       --secret-permissions get list
+   ```
+
+## <a name="deploy-the-app-to-azure-and-run-app-service"></a>Implantar o aplicativo no Azure e executar o Serviço de Aplicativo
+
+Agora você está pronto para implantar o aplicativo Web no Azure. Para fazer isso, execute as seguintes etapas:
+
+1. Recompile o arquivo JAR usando o Maven se você fez alterações no arquivo *pom.xml*.
 
    ```bash
    mvn clean package
    ```
-
-   O Maven exibirá os resultados de seu build.
-
-   ![Status do build do aplicativo Spring Boot][build-application-01]
-
-1. Execute o aplicativo Spring Boot com o Maven. O aplicativo exibirá a cadeia de conexão do seu cofre de chaves. Por exemplo:
+   
+2. Implante o aplicativo no Azure usando o Maven.
 
    ```bash
-   mvn spring-boot:run
+   mvn azure-webapp:deploy
    ```
+   
+3. Reinicie o Serviço de Aplicativo.
 
-   ![Mensagem do tempo de execução do Spring Boot][build-application-02]
+4. Verifique esta URL no navegador: `https://{your-appservice-name}.azurewebsites.net/get` para obter a `connectionString`.
+   
 
 ## <a name="summary"></a>Resumo
 
@@ -345,6 +363,8 @@ Para obter mais informações sobre como usar aplicativos Spring Boot no Azure, 
 
 Para obter mais informações sobre como usar o Azure com Java, confira [Azure para Desenvolvedores Java] e [Como trabalhar com o Java e o Azure DevOps].
 
+Para obter mais informações sobre como usar identidades gerenciadas para o Serviço de Aplicativo, confira [Usar identidades gerenciadas para o Serviço de Aplicativo].
+
 <!-- URL List -->
 
 [Documentação do Key Vault]: /azure/key-vault/
@@ -356,6 +376,8 @@ Para obter mais informações sobre como usar o Azure com Java, confira [Azure p
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
+[Usar identidades gerenciadas para o Serviço de Aplicativo]: /azure/app-service/overview-managed-identity
+[Configurar o plug-in do Maven para o Serviço de Aplicativo do Azure]: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin#configure-maven-plugin-for-azure-app-service
 
 <!-- IMG List -->
 

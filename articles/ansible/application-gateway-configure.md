@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, guia estratégico, gateway de aplicativo
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: 3ff9a43513a2ee34964e6e82447e3398469db8f8
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743715"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>Tutorial: Gerenciar o tráfego da Web com o Gateway de Aplicativo do Azure usando o Ansible

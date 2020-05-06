@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 7f28a5cc7acd7e5d41e1ab91424a9f360a25b702
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031028"
 ---
 # <a name="output-formats-for-azure-cli-commands"></a>Formatos de saída dos comandos da CLI do Azure
 
 A CLI do Azure usa JSON como formato de saída padrão, mas oferece outros formatos.  Use o parâmetro `--output` (`--out` ou `-o`) para formatar a saída da CLI. Os valores e tipos de argumentos de saída são:
 
---output | Descrição
+--output | DESCRIÇÃO
 ---------|-------------------------------
 `json`   | cadeia de caracteres JSON. Essa configuração é a padrão
 `jsonc`  | JSON colorido

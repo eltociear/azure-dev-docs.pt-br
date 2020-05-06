@@ -5,10 +5,10 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
 ms.openlocfilehash: 690ae9375a8ac8d929d610bde4e306061cd1ff8e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74466833"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Ferramentas do Azure para desenvolvedores JavaScript
@@ -35,7 +35,7 @@ Use as seguintes extensões livres para a interface com os serviços do Azure di
 
 | Ferramenta | DESCRIÇÃO  |
 |:---------:|---------|
-| [Funções do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Ferramentas do Azure Functions](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Criar, gerenciar, exibir, depurar e implantar funções|
+| [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Ferramentas do Azure Functions](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Criar, gerenciar, exibir, depurar e implantar funções|
 | [Serviço de Aplicativo do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Ferramentas do Serviço de Aplicativo](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Procure sites e o portal do Azure, crie novos sites e implante para slots |
 | [Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Ferramentas do Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Criar, navegar e atualizar bancos de dados de vários modelos globalmente distribuídos no Azure |
 | [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Ferramentas do Cosmos DB](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Gerenciar contêineres do Docker e imagens, Hub do Docker e registro de contêiner do Azure |

@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: f8efc740f9641b72e8aaf1af29bf0b2620457fdd
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81674222"
 ---
-|Amostra   |Descrição  |
+|Amostra   |DESCRIÇÃO  |
 |---------|---------|
 | [Conecte-se e consulte dados do Banco de Dados SQL do Azure usando o JDBC][4] | Configure um exemplo de banco de dados, em seguida, selecione, insira, atualize e exclua comandos. |
 | [Criar e gerenciar bancos de dados SQL][1] | Crie bancos de dados SQL, defina níveis de desempenho e configure firewalls.|

@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, guia estratégico, dimensionar, dimensio
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: f50ac83b03d957e0d6649a5803ee90982a532935
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743868"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>Tutorial: Dimensionar automaticamente conjuntos de dimensionamento de máquinas virtuais no Azure usando o Ansible

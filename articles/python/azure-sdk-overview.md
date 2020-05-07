@@ -4,10 +4,10 @@ description: Visão geral dos recursos e das funcionalidades do SDK do Azure par
 ms.date: 03/17/2020
 ms.topic: conceptual
 ms.openlocfilehash: 3d24a512420610f37285a03fe6a39d81e97510ee
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82026109"
 ---
 # <a name="azure-sdk-for-python"></a>SDK do Azure para Python

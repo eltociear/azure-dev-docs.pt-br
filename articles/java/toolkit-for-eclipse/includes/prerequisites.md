@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: dea8cf8da093159c257fc09caea4f4e2992799a7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670912"
 ---
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas neste artigo, você precisará instalar o Azure Toolkit for Eclipse, que requer os seguintes componentes de software:
 

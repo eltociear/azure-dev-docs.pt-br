@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 2a059fa72207e8dde47eda7020ced90bd56b75a4
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670152"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Gerenciar Caches Redis utilizando o Azure Explorer para IntelliJ
@@ -35,19 +35,19 @@ As etapas a seguir guiarão você pelas etapas para criar um Cache Redis utiliza
 
    ![Criar uma caixa de diálogo Novo Cache Redis][CR02]
 
-   a. **Nome DNS**: Especifica o subdomínio DNS para o novo cache redis, que são pré-anexados para ".redis.cache.windows.net", por exemplo: *wingtiptoys.redis.cache.windows.net*.
+   a. **Nome DNS**: especifica o subdomínio DNS para o novo cache redis, que são pré-anexados para ".redis.cache.windows.net"; por exemplo: *wingtiptoys.redis.cache.windows.net*.
 
-   b. **Assinatura**: especifica a assinatura do Azure que será utilizada para o novo Cache Redis.
+   b. **Assinatura**: especifica a assinatura do Azure que deseja utilizar para o novo cache redis.
 
-   c. **Grupo de Recursos**: especifica o grupo de recursos para seu Cache Redis; é necessário escolher uma das seguintes opções: 
-      * **Criar novo**: especifica que você deseja criar um novo grupo de recursos. 
-      * **Usar existente**: especifica que você escolherá entre uma lista dos grupos de recursos associados à sua conta do Azure. 
+   c. **Grupo de Recursos**: especifica o grupo de recursos para seu cache redis; é necessário escolher uma das seguintes opções: 
+      * **Criar Novo**: especifica que você deseja criar um novo grupo de recursos. 
+      * **Usar Existente**: especifica que você escolherá entre uma lista dos grupos de recursos associados à sua conta do Azure. 
 
    d. **Localização**: especifica a localização em que seu cache redis será criado; por exemplo, *Oeste dos EUA*.
 
-   e. **Tipo de preço**: especifica qual tipo de preço seu Cache Redis utiliza; é a configuração que determina o número de conexões do cliente. (Para saber mais, veja [Preço do Cache Redis]).
+   e. **Tipo de Preços**: especifica qual tipo de preço seu cache redis utiliza; essa configuração determina o número de conexões do cliente. (Para saber mais, veja [Preço do Cache Redis]).
 
-   f. **Porta não SSL**: especifica se o Cache Redis permite conexões não SSL; por padrão, apenas conexões SSL são permitidas.
+   f. **Porta não SSL**: especifica se o cache redis permite conexões não SSL; por padrão, apenas as conexões SSL são permitidas.
 
 1. Quando tiver especificado todas as configurações de cache redis, clique em **OK**.
 

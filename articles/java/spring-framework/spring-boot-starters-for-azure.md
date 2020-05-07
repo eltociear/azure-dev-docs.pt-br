@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 48e1381761311a4ed9b5bd6f764af6f19f008fc1
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670012"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Iniciadores do Spring Boot para Azure
@@ -40,7 +40,7 @@ Os iniciadores do Spring Boot estão disponíveis atualmente para o Azure:
 <a name="azure-support"></a>
 ## <a name="azure-support"></a>Suporte do Azure
 
-Esse iniciador do Spring Boot fornece suporte à configuração automática para Serviços do Azure; por exemplo: Barramento de Serviço, Armazenamento, Active Directory, Cosmos DB, Cofre de chaves etc.
+Este iniciador do Spring Boot fornece suporte de configuração automática para Serviços do Azure. Por exemplo: Barramento de Serviço, Armazenamento, Active Directory, Cosmos DB, o Key Vault, etc.
 
 Para obter exemplos de como usar os vários recursos do Azure que são fornecidos por esse iniciador, consulte:
 

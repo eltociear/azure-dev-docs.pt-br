@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: fbd1a9e6ab8f373c68345e4e43dd6d4cddfbfc44
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670902"
 ---
 Para relatar bugs ou solicitar novos recursos, crie problemas no [repositório do GitHub](https://github.com/Microsoft/azure-tools-for-java/issues). Ou faça perguntas sobre o [Stack Overflow com a marca azure-java-tools](https://stackoverflow.com/questions/tagged/azure-java-tools).

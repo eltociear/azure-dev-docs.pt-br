@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: f88ad0bf2103db2bb63a4e230ea730493f4865c7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 783197c2a98ef76d1a30126144cb44ebdf474fdc
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82166688"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Implantar um aplicativo Spring Boot no Serviço de Kubernetes do Azure
 
@@ -118,7 +118,7 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -143,7 +143,7 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
 1. Navegue para o diretório do projeto completo de seu aplicativo Spring Boot, execute o seguinte comando para compilar a imagem e envie por push a imagem para o registro:
 
    ```cmd
-   mvn compile jib:build
+   az acr login && mvn compile jib:build
    ```
 
 > [!NOTE]
@@ -153,38 +153,13 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Criar um Cluster Kubernetes no AKS usando a CLI do Azure
 
-1. Criar um cluster Kubernetes no Serviço de Kubernetes do Azure. O comando a seguir cria um cluster *kubernetes* no grupo de recursos *wingtiptoys-kubernetes*, com *wingtiptoys-akscluster* como o nome do cluster e *wingtiptoys-kubernetes* como o prefixo DNS:
+1. Criar um cluster Kubernetes no Serviço de Kubernetes do Azure. O seguinte comando cria um cluster *kubernetes* no grupo de recursos *wingtiptoys-kubernetes*, com *wingtiptoys-akscluster* como o nome do cluster, com o ACR (Registro de Contêiner do Azure) `wingtiptoysregistry` anexado e com *wingtiptoys-kubernetes* como o prefixo DNS:
    ```azurecli
    az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \ 
+    --attach-acr wingtiptoysregistry \
     --dns-name-prefix=wingtiptoys-kubernetes --generate-ssh-keys
    ```
    Esse comando pode demorar algum tempo para ser concluído.
-
-1. Quando você estiver usando o Registro de Contêiner do Azure (ACR) com o Serviço de Kubernetes do Azure (AKS), precisará conceder acesso de pull do Serviço de Kubernetes do Azure ao Registro de Contêiner do Azure. O Azure cria uma entidade de serviço padrão quando você cria um Serviço de Kubernetes do Azure. Execute os seguintes scripts em bash ou no Powershell para conceder acesso de AKS ao ACR; confira mais detalhes em [Autenticar com o Registro de Contêiner do Azure do Serviço de Kubernetes do Azure (AKS)].
-
-```bash
-   # Get the id of the service principal configured for AKS
-   CLIENT_ID=$(az.cmd aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv)
-   
-   # Get the ACR registry resource id
-   ACR_ID=$(az.cmd acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv)
-   
-   # Create role assignment
-   az.cmd role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
-
-  -- ou --
-
-```PowerShell
-   # Get the id of the service principal configured for AKS
-   $CLIENT_ID = az aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv
-   
-   # Get the ACR registry resource id
-   $ACR_ID = az acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv
-   
-   # Create role assignment
-   az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
 
 1. Instalar `kubectl` usando a CLI do Azure. Os usuários de Linux podem ter que prefixar esse comando com `sudo`, já que ele implanta a CLI do Kubernetes em `/usr/local/bin`.
    ```azurecli
@@ -204,7 +179,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
 
 1. Abra um prompt de comando.
 
-1. Execute seu contêiner no cluster Kubernetes usando o comando `kubectl run`. Forneça um nome de serviço para seu aplicativo no Kubernetes e o nome de imagem completo. Por exemplo:
+1. Execute seu contêiner no cluster Kubernetes usando o comando `kubectl run`. Forneça um nome de serviço para seu aplicativo no Kubernetes e o nome de imagem completo. Por exemplo: 
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -214,7 +189,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
 
    * O parâmetro `--image` especifica a combinação de servidor de logon e nome da imagem como `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`
 
-1. Exponha seu cluster Kubernetes externamente usando o comando `kubectl expose`. Especifique o nome do serviço, a porta TCP voltada para o público usada para acessar o aplicativo e a porta de destino interna na qual seu aplicativo escuta. Por exemplo:
+1. Exponha seu cluster Kubernetes externamente usando o comando `kubectl expose`. Especifique o nome do serviço, a porta TCP voltada para o público usada para acessar o aplicativo e a porta de destino interna na qual seu aplicativo escuta. Por exemplo: 
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```
@@ -246,6 +221,18 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
    ```
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
+   
+
+> [!IMPORTANT]
+> Se o cluster do AKS usa RBAC, um *ClusterRoleBinding* deve ser criado antes de poder acessar o painel corretamente. Por padrão, o painel do Kubernetes é implantado com um mínimo de acesso de leitura e exibe os erros de acesso do RBAC. O painel do Kubernetes não oferece suporte a credenciais fornecidas pelo usuário para determinar o nível de acesso, em vez disso, ele usa as funções concedidas à conta de serviço. Um administrador de cluster pode optar por conceder acesso adicional para o *painel do kubernetes* conta de serviço, no entanto, isso pode ser um vetor para elevação de privilégios. Você também pode integrar a autenticação do Active Directory para fornecer um nível mais granular de acesso.
+> 
+> Para criar uma associação, use o comando [kubectl create clusterrolebinding]. O exemplo a seguir mostra como criar uma associação de exemplo. No entanto, ela não aplica nenhum componente de autenticação adicional e pode levar a um uso inseguro. O painel do Kubernetes está aberto para qualquer pessoa com acesso à URL. Não expor publicamente o painel do Kubernetes.
+>
+> ```console
+> kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+> ```
+> 
+> Para obter mais informações sobre como usar os métodos de autenticação diferentes, confira o wiki do painel do Kubernetes em [autenticação de painel].
 
 1. Quando o site de configuração de Kubernetes abrir no navegador, selecione o link para **implantar um aplicativo em contêiner**:
 
@@ -320,7 +307,8 @@ Para obter mais exemplos sobre como usar imagens personalizadas do Docker com o 
 Para obter mais informações sobre como executar iterativamente e depurar os contêineres direto no Serviço de Kubernetes do Azure (AKS) com o Azure Dev Spaces, confira [Introdução ao Azure Dev Spaces com Java]
 
 <!-- URL List -->
-
+[kubectl-create-clusterrolebinding]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-clusterrolebinding-em-
+[autenticação de painel]: https://github.com/kubernetes/dashboard/wiki/Access-control
 [CLI (interface de linha de comando) do Azure]: /cli/azure/overview
 [AKS (Serviço de Kubernetes do Azure)]: https://azure.microsoft.com/services/kubernetes-service/
 [Azure para desenvolvedores Java]: /azure/developer/java/
@@ -346,7 +334,7 @@ Para obter mais informações sobre como executar iterativamente e depurar os co
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Autenticar com o Registro de Contêiner do Azure do Serviço de Kubernetes do Azure (AKS)]: /azure/container-registry/container-registry-auth-aks/
+[Authenticate with Azure Container Registry from Azure Kubernetes Service]: /azure/container-registry/container-registry-auth-aks/
 [Tutoriais de Java do Visual Studio Code]: https://code.visualstudio.com/docs/java/java-kubernetes/
 [Introdução ao Azure Dev Spaces com Java]: /azure/dev-spaces/get-started-java
 <!-- IMG List -->

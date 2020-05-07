@@ -9,10 +9,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 252ef1e31a71d996cb9e3856b48232ba24b66903
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671182"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Criar um aplicativo Web Olá, Mundo para o Azure usando o kit de ferramentas herdado do Eclipse
@@ -118,9 +118,9 @@ Há várias maneiras pelas quais você pode implantar um aplicativo Web Java no 
    * Na caixa de texto **Nome** , especifique um nome para o novo Grupo de Recursos.
    * No menu suspenso **Região** , selecione a localização do data center do Azure apropriada ao Grupo de Recursos.
    * OPCIONAL: por padrão, uma distribuição recente de Java 8 será implantada pelo Azure automaticamente no contêiner de aplicativo Web como sua JVM. No entanto, você pode especificar uma versão e uma distribuição da JVM diferentes se for necessário para seu aplicativo Web. Para especificar o JDK do seu aplicativo Web, clique na guia **JDK** e selecione uma das seguintes opções:
-     * **Implantar o JDK padrão oferecido pelo serviço de Aplicativos Web do Azure**: esta opção implantará uma distribuição recente do Java.
-     * **Implantar um JDK de terceiros disponível no Azure**: esta opção permite que você escolha na lista de JDKs fornecidos pelo Microsoft Azure.
-     * **Implantar meu próprio JDK deste local de download**: essa opção permite que você especifique sua própria distribuição de JDK, que deve ser empacotada como um arquivo ZIP e carregada em um local de download disponível publicamente ou em uma conta de armazenamento do Azure à qual você tenha acesso.
+     * **Implantar o JDK padrão oferecido pelo Serviço de Aplicativos Web do Azure**: essa opção implantará uma distribuição recente do Java.
+     * **Implantar um JDK de terceiro disponível no Azure**: essa opção permite que você escolha na lista de JDKs que são fornecidos pelo Microsoft Azure.
+     * **Meu próprio JDK deste local de download**: essa opção permite que você especifique sua própria distribuição de JDK, que deve ser empacotada como um arquivo ZIP e carregada em um local de download disponível publicamente ou em uma conta de armazenamento do Azure à qual você tenha acesso.
           
        ![Caixa de diálogo Novo contêiner do aplicativo Web][07b]
 

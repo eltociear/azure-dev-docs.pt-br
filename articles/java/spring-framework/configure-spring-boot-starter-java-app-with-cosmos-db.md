@@ -11,10 +11,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.openlocfilehash: eb13be08f7fc5eb7b907360571fbc1db1abf0d26
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669162"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Como usar o Inicializador do Spring Boot com a API SQL do Azure Cosmos DB
@@ -23,7 +23,7 @@ O Azure Cosmos DB é um serviço de banco de dados distribuído globalmente que 
 
 Este artigo demonstra como criar um Azure Cosmos DB usando o portal do Azure e, em seguida, usar o **[Spring Initializr]** para criar um aplicativo Spring Boot personalizado e adicionar o [Iniciador Spring Boot do Cosmos DB para Azure] ao aplicativo personalizado para armazenar e recuperar dados do Azure Cosmos DB usando o Spring Data e a API SQL do Cosmos DB.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -412,7 +412,7 @@ Para obter mais informações sobre como usar o Azure Cosmos DB e Java, consulte
 
 * [Documentação do Azure Cosmos DB].
 
-* [Banco de dados do Azure Cosmos DB: criar um banco de dados de documentos usando o Java e o portal do Microsoft Azure][Build a SQL API app with Java]
+* [Azure Cosmos DB: criar um banco de dados de documento usando o Java e o Portal do Azure][Build a SQL API app with Java]
 
 * [Spring Data para a API do SQL do Azure Cosmos DB]
 

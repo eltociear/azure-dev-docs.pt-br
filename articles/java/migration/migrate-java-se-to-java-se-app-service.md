@@ -6,10 +6,10 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.openlocfilehash: 9576a3831afb00b10b9bec3531c2dbc1dc60f29f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81672182"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Migrar aplicativos Web JAR executáveis para Java SE no Serviço de Aplicativo do Azure
@@ -195,7 +195,7 @@ Se o aplicativo exigir opções específicas de runtime, [use o mecanismo mais a
 Siga [estas etapas para migrar cadeias de conexão e outras configurações](/azure/app-service/containers/configure-language-java#spring-boot-1).
 
 > [!NOTE]
-> Para todas as configurações do aplicativo Spring Boot parametrizadas com variáveis na seção [Parametrizar a configuração](#parameterize-the-configuration), essas variáveis de ambiente devem ser definidas na configuração de aplicativo. Todas as configurações de aplicativo do Spring Boot não explicitamente parametrizadas com variáveis de ambiente ainda podem ser substituídas por elas por meio da Configuração de aplicativo. Por exemplo:
+> Para todas as configurações do aplicativo Spring Boot parametrizadas com variáveis na seção [Parametrizar a configuração](#parameterize-the-configuration), essas variáveis de ambiente devem ser definidas na configuração de aplicativo. Todas as configurações de aplicativo do Spring Boot não explicitamente parametrizadas com variáveis de ambiente ainda podem ser substituídas por elas por meio da Configuração de aplicativo. Por exemplo: 
 
   ```properties
   spring.jms.servicebus.connection-string=${CUSTOMCONNSTR_SERVICE_BUS}

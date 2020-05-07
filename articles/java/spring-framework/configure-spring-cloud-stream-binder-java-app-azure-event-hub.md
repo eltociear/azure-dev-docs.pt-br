@@ -8,17 +8,17 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.openlocfilehash: 53416d6f97e0b3e21559c39982ce57b265abf4d9
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669572"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Como criar um aplicativo Spring Cloud Stream Binder com os Hubs de Eventos do Azure
 
 Este artigo demonstra como configurar um aplicativo Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializr e os Hubs de Eventos do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -241,7 +241,7 @@ O procedimento a seguir cria um aplicativo Spring Boot.
    ```
    Em que:
 
-   |                          Campo                           |                                                                                   Descrição                                                                                    |
+   |                          Campo                           |                                                                                   DESCRIÇÃO                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        `spring.cloud.azure.credential-file-path`         |                                                    Especifica o arquivo de credencial do Azure que você criou anteriormente neste tutorial.                                                    |
    |           `spring.cloud.azure.resource-group`            |                                                      Especifica o Grupo de Recursos do Azure que contém seu Hub de Eventos do Azure.                                                      |
@@ -378,7 +378,7 @@ Use os procedimentos a seguir para criar e testar seu aplicativo.
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   Você deverá ver "olá" publicado nos logs do aplicativo. Por exemplo:
+   Você deverá ver "olá" publicado nos logs do aplicativo. Por exemplo: 
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'

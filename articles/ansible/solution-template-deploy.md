@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, solution template, virtual machine, managed id
 ms.topic: quickstart
 ms.date: 04/30/2019
 ms.openlocfilehash: 79638c8ae4bd8d1a54448d2cf8aef1a391a91e44
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743917"
 ---
 # <a name="quickstart-deploy-the-ansible-solution-template-for-azure-to-centos"></a>Início Rápido: Implantar o modelo de solução Ansible para Azure para o CentOS

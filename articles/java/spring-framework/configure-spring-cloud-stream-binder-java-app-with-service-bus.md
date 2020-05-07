@@ -7,10 +7,10 @@ ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
 ms.openlocfilehash: 033025b82a493cf701abad7a6a97802611b7e48d
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669062"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Como usar o Spring Cloud Stream Binder no Barramento de Serviço do Azure
@@ -21,7 +21,7 @@ O Azure fornece uma plataforma de mensagens assíncrona chamada [Barramento de S
 
 Este artigo mostra como usar o Spring Cloud Stream Binder para enviar e receber mensagens de `queues` e `topics` do Barramento de Serviço.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os pré-requisitos a seguir são obrigatórios neste artigo:
 
@@ -119,7 +119,7 @@ Os pré-requisitos a seguir são obrigatórios neste artigo:
 
     **<a name="fd">Descrições de campo</a>**
 
-    |                                        Campo                                   |                                                                                   Descrição                                                                                    |
+    |                                        Campo                                   |                                                                                   DESCRIÇÃO                                                                                    |
     |--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |               `spring.cloud.azure.servicebus.connection-string`                |                                        Especifique a cadeia de conexão obtida no namespace do Barramento de Serviço no portal do Azure.                                   |
     |               `spring.cloud.stream.bindings.input.destination`                 |                            Especifique a fila ou o tópico do Barramento de Serviço usado neste tutorial.                         |

@@ -4,13 +4,13 @@ description: Implante uma máquina virtual usando o SDK do Azure para linguagem 
 ms.date: 09/05/2018
 ms.topic: quickstart
 ms.openlocfilehash: d339681fc4eed55046f5a7c8fa45fffc948fa3bc
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319763"
 ---
-# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Início Rápido: Implantar uma máquina virtual do Azure de um modelo com o SDK do Azure para linguagem Go
+# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Início rápido: implantar uma máquina virtual do Azure de um modelo com o SDK do Azure para linguagem Go
 
 Este início rápido mostra como implantar recursos de um modelo do Azure Resource Manager, usando o SDK do Azure para linguagem Go. Os modelos são instantâneos de todos os recursos em um [grupo de recursos do Azure](/azure/azure-resource-manager/resource-group-overview). Ao longo do processo, você vai se familiarizar com a funcionalidade e as convenções do SDK.
 
@@ -135,7 +135,7 @@ func init() {
 }
 ```
 
-Primeiro, [auth.NewAuthorizerFromFile](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewAuthorizerFromFile) é chamado para carregar as informações de autenticação do arquivo localizado em `AZURE_AUTH_LOCATION`. Em seguida, esse arquivo é carregado manualmente pela função `readJSON` (omitida aqui) para efetuar pull dos dois valores necessários para executar o restante do programa: A ID da assinatura do cliente e o segredo da entidade de serviço, que também é usado como senha da VM.
+Primeiro, [auth.NewAuthorizerFromFile](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewAuthorizerFromFile) é chamado para carregar as informações de autenticação do arquivo localizado em `AZURE_AUTH_LOCATION`. Em seguida, esse arquivo é carregado manualmente pela função `readJSON` (omitida aqui) para extrair os dois valores necessários para executar o restante do programa: a ID de assinatura do cliente e o segredo da entidade de serviço, que também é usado para a senha da VM.
 
 > [!WARNING]
 > Para simplificar o início rápido, a senha da entidade de serviço é reutilizada. Na produção, tome cuidado para __nunca__ reutilizar uma senha que forneça acesso aos recursos do Azure.

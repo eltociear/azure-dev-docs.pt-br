@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 762ac74b73a274e792ed19ac8ca7c2b68d98e778
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105067"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gerenciar contas de armazenamento usando o Azure Explorer para IntelliJ
@@ -35,19 +35,19 @@ Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
    ![Caixa de diálogo Criar Nova Conta de Armazenamento][CS02]
 
-   * **Name**: especifica o nome que você deseja usar para a nova conta de armazenamento.
+   * **Nome**: especifica o nome que você deseja usar para a nova conta de armazenamento.
 
-   * **Tipo de conta**: especifica o tipo de conta de armazenamento a ser criada (por exemplo, "Armazenamento de Blobs"). Para saber mais, confira [Sobre as contas de armazenamento do Azure]. 
+   * **Tipo de conta**: especifica o tipo de conta de armazenamento a criar (por exemplo, "Armazenamento de Blobs"). Para saber mais, confira [Sobre as contas de armazenamento do Azure]. 
 
    * **Desempenho**: especifica qual oferta de conta de armazenamento usar do editor selecionado (por exemplo "Premium"). Para saber mais, veja [Metas de desempenho e escalabilidade do Armazenamento do Azure]. 
 
    * **Replicação**: especifica a replicação para a conta de armazenamento (por exemplo "Com Redundância de Zona"). Para saber mais, veja [Replicação do Armazenamento do Azure]. 
 
-   * **Assinatura**: especifica a assinatura do Azure que você deseja usar para a nova conta de armazenamento.
+   * **Assinatura**: especifica a assinatura do Azure que deseja usar para a nova conta de armazenamento.
 
-   * **Localização**: especifica a localização em que sua conta de armazenamento será criada (por exemplo, "Oeste dos EUA").
+   * **Localização**: especifica a localização em que sua conta de armazenamento será criada (por exemplo "Oeste dos EUA").
 
-   * **Grupo de Recursos**: especifica o grupo de recursos para sua máquina virtual. Selecione uma das seguintes opções:
+   * **Grupo de Recursos**: especifica o grupo de recursos para suas máquinas virtuais. Selecione uma das seguintes opções:
       * **Criar novo**: especifica que você deseja criar um novo grupo de recursos.
       * **Usar existente**: especifica que você selecionará em uma lista de grupos de recursos associados à sua conta do Azure.
 

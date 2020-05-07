@@ -9,10 +9,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.openlocfilehash: f46988e75d3230455796b2472010c3d93bff5c57
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669242"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Como usar o Iniciador do Spring Data Gremlin com a API SQL do Azure Cosmos DB
@@ -23,7 +23,7 @@ O Iniciador do Spring Data Gremlin fornece suporte ao Spring Data para a linguag
 
 Este artigo demonstra como criar um Azure Cosmos DB usando o portal do Azure para uso com a API do Gremlin. Depois, como usar o **[Spring Initializr]** para criar um aplicativo Java personalizado e, em seguida, como adicionar a funcionalidade de Iniciador do Spring Data Gremlin ao seu aplicativo personalizado para armazenar e recuperar dados de seu Azure Cosmos DB usando Gremlin.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -133,7 +133,7 @@ Clique em **OK**.
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Configure seu aplicativo Spring Boot para usar seu Azure Cosmos DB
 
-1. Localize o diretório *resources* do seu aplicativo, e crie um novo arquivo chamado *application.yml*. Por exemplo:
+1. Localize o diretório *resources* do seu aplicativo, e crie um novo arquivo chamado *application.yml*. Por exemplo: 
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.yml`
 
@@ -156,7 +156,7 @@ Clique em **OK**.
    
    Em que:
    
-   | Campo | Descrição |
+   | Campo | DESCRIÇÃO |
    |---|---|
    | `endpoint` | Especifica o URI do Gremlin para o seu banco de dados, que é derivado da **ID** exclusiva que você especificou ao criar seu Azure Cosmos DB anteriormente no tutorial. |
    | `port` | Especifica a porta TCP/IP, que deve ser **443** para HTTPS. |
@@ -513,7 +513,7 @@ Confira estes artigos para obter mais informações sobre o suporte do Azure par
 
 * [Suporte do Azure Cosmos DB para grafo do Gremlin](/azure/cosmos-db/gremlin-support)
 
-* [Banco de dados do Azure Cosmos DB: Criar um banco de dados de grafo usando o Java e o portal do Azure](/azure/cosmos-db/create-graph-java)
+* [Azure Cosmos DB: Criar um banco de dados de grafo usando o Java e o portal do Azure](/azure/cosmos-db/create-graph-java)
 
 * [Tutorial: Consultar a API do Graph do Azure Cosmos DB usando Gremlin](/azure/cosmos-db/tutorial-query-graph)
 
@@ -523,7 +523,7 @@ Para obter mais informações sobre como usar o Azure Cosmos DB e Java, consulte
 
 * [Documentação do Azure Cosmos DB].
 
-* [Banco de dados do Azure Cosmos DB: criar um banco de dados de documentos usando o Java e o portal do Microsoft Azure][Build a SQL API app with Java]
+* [Azure Cosmos DB: criar um banco de dados de documento usando o Java e o Portal do Azure][Build a SQL API app with Java]
 
 * [Spring Data para a API do SQL do Azure Cosmos DB]
 

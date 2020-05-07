@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: fd37b633100d92a4126910a3fb9e8ad25b11423c
-ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82209779"
 ---
 # <a name="azure-cli-configuration"></a>Configuração da CLI do Azure
@@ -33,7 +33,7 @@ Esse comando usa um argumento, `--defaults`, que é uma lista separada por espa�
 
 A tabela a seguir contém uma lista de chaves de configuração disponíveis.
 
-| Nome | Descrição |
+| Nome | DESCRIÇÃO |
 |------|-------------|
 | group | O grupo de recursos padrão para usar para todos os comandos. |
 | local | O local padrão para usar para todos os comandos. |
@@ -60,8 +60,8 @@ Os arquivos de configuração são gravados no formato de arquivo INI. Esse form
 
 Os valores boolianos diferenciam maiúsculas de minúsculas e são representados pelos valores a seguir.
 
-* __True__: 1, yes, true, on
-* __False__: 0, no, false, off
+* __Verdadeiro__: 1, yes, true, on
+* __Falso__: 0, no, false, off
 
 Veja um exemplo de um arquivo de configuração da CLI que desabilita prompts de confirmação e define o log para o diretório `/var/log/azure`.
 
@@ -82,7 +82,7 @@ A tabela a seguir contém todas as seções e as opções de nomes que podem ser
 
 Quando você fornece um valor padrão, esse argumento já não é exigido pelos comandos. Em vez disso, o valor padrão é usado.
 
-| Seção | Nome      | Type | Descrição|
+| Seção | Nome      | Type | DESCRIÇÃO|
 |---------|-----------|------|------------|
 | __core__ | output | string | O formato de saída padrão. Pode ser `json`, `jsonc`, `tsv` ou `table`. |
 | | disable\_confirm\_prompt | booleano | Ativa e desativa prompts de confirmação. |

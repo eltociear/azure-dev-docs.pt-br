@@ -4,10 +4,10 @@ description: Parte 4 do tutorial, criar uma imagem de aplicativo Node.js
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.openlocfilehash: a8659edb4d0b3664c7704fd0bedde0c274562f3c
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80740684"
 ---
 # <a name="create-your-nodejs-application-image"></a>Criar a imagem do aplicativo Node.js
@@ -56,7 +56,7 @@ O `Dockerfile` descreve o ambiente para seu aplicativo, incluindo o local dos ar
 
     `msdocsvscodereg.azurecr.io/myexpressapp:latest`
 
-    Se você estiver usando o Docker Hub, use o nome de usuário do Docker Hub. Por exemplo:
+    Se você estiver usando o Docker Hub, use o nome de usuário do Docker Hub. Por exemplo: 
 
     `fiveisprime/myexpressapp:latest`
 

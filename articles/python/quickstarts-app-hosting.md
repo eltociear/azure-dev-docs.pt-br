@@ -4,10 +4,10 @@ description: Lista de materiais de introdução na documentação do Azure para 
 ms.date: 03/17/2020
 ms.topic: conceptual
 ms.openlocfilehash: 5dfd5fa4bc2b903c8ff0fa60738e41c8bf2312fd
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80442111"
 ---
 # <a name="hosting-python-apps-on-azure"></a>Hospedagem de aplicativos Python no Azure

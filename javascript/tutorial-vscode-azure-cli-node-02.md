@@ -3,12 +3,12 @@ title: Criar um aplicativo Node.js para implantar no Azure usando a CLI do Azure
 description: Parte 2 do tutorial, criar o código do aplicativo.
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: dba089c58cf6413263348b7bdeb975852c2e6a2f
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 160b543abee59bdd7504aa356a3b11eb7bde3da8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467184"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82105157"
 ---
 # <a name="create-the-app-code-using-express"></a>Criar o código do aplicativo usando o Expresso
 
@@ -35,11 +35,11 @@ Nesta etapa, você cria um aplicativo Node.js simples com o [Expresso](https://w
     npm start
     ```
 
-1. Abra um navegador para [http://localhost:3000](http://localhost:3000) para ver o aplicativo em execução:
+1. Abra um navegador em `http://localhost:3000` para ver o aplicativo em execução:
 
     ![Como executar o aplicativo expresso localmente](media/azure-cli/local-app.png)
 
 1. Ao você terminar de testar o aplicativo, pare o servidor pressionando **Ctrl**+**C** no terminal em que você executou o `npm start`.
 
 > [!div class="nextstepaction"]
-> [Criei o aplicativo](tutorial-vscode-azure-cli-node-03.md) [Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment&step=express)
+> [Criei o aplicativo](tutorial-vscode-azure-cli-node-03.md) [Tive um problema](https://www.research.net/r/PWZWZ52?tutorial=node-deployment&step=express)

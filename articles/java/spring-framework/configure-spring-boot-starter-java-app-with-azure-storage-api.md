@@ -9,10 +9,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
 ms.openlocfilehash: ef39aa09fb3f10f34d70fb5b0a72cd8a55f0859e
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669122"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Como usar o Inicializador do Spring Boot com a API do Armazenamento do Azure
@@ -21,7 +21,7 @@ ms.locfileid: "81669122"
 
 Este artigo orienta em relação à criação de um aplicativo personalizado usando o **Spring Initializr** e depois usando esse aplicativo para acessar o Armazenamento do Azure usando a API do Armazenamento do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -104,7 +104,7 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    ```
    Em que:
 
-   | Parâmetro | Descrição |
+   | Parâmetro | DESCRIÇÃO |
    |---|---|
    | `name` | Especifica um nome exclusivo para o grupo de recursos. |
    | `location` | Especifica a [região do Azure](https://azure.microsoft.com/regions/) na qual seu grupo de recursos será hospedado. |
@@ -130,7 +130,7 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    ```
    Em que:
 
-   | Parâmetro | Descrição |
+   | Parâmetro | DESCRIÇÃO |
    |---|---|
    | `name` | Especifica um nome exclusivo para sua conta de armazenamento. |
    | `resource-group` | Especifica o nome do grupo de recursos que você criou na etapa anterior. |
@@ -160,7 +160,7 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    ```
    Em que:
 
-   | Parâmetro | Descrição |
+   | Parâmetro | DESCRIÇÃO |
    | ---|---|
    | `name` | Especifica um nome exclusivo da conta de armazenamento que você criou nas etapas anteriores. |
    | `resource-group` | Especifica o nome do grupo de recursos que você criou em etapas anteriores. |

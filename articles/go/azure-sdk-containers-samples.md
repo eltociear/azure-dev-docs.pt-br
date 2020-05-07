@@ -4,10 +4,10 @@ description: Exemplos selecionados para trabalhar com Instâncias de Contêiner 
 ms.date: 09/05/2018
 ms.topic: sample
 ms.openlocfilehash: 58e87d4ae18a2d24f881822d44e003b6f292bcb4
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319713"
 ---
 # <a name="azure-sdk-for-go-samples-for-containers"></a>Exemplos do SDK do Azure para linguagem Go para contêineres
@@ -16,7 +16,7 @@ A seguinte tabela está vinculada a exemplos selecionados que demonstram o geren
 
 Todos os exemplos do SDK do Azure para linguagem Go estão disponíveis no [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
-| Nome | Descrição |
+| Nome | DESCRIÇÃO |
 |------|-------------|
 | [compute/container_instance](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_instance.go) | Trabalhar com grupos de contêineres em Instâncias de Contêiner do Azure. Criar e modificar contêineres em um grupo de ACI. |
 | [compute/container_cluster](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/container_cluster.go) | Criar, excluir e inspecionar os clientes do Serviço de Kubernetes do Azure (AKS). |

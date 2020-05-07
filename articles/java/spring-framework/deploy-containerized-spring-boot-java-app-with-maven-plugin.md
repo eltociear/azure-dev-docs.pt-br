@@ -10,10 +10,10 @@ ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019
 ms.openlocfilehash: b926b0bd1cb401f12f927abfea112e6004988812
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668392"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Usar o Maven para Aplicativos Web do Azure para implantar um aplicativo Spring Boot em contêineres no Azure
@@ -27,7 +27,7 @@ Este artigo demonstra como usar o [plug-in do Maven para Aplicativos Web do Azur
 > O plug-in do Maven para Aplicativos Web do Azure está disponível no momento como uma versão prévia. Por enquanto, há suporte somente para a publicação FTP, embora existam planos para recursos adicionais futuros.
 > 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas deste tutorial, você precisa ter os seguintes pré-requisitos:
 
@@ -83,7 +83,7 @@ Nesta seção, você clonará um aplicativo Spring Boot em contêineres e o test
    curl http://localhost:8080
    ```
 
-1. Você verá a seguinte mensagem exibida: **Olá, mundo do Docker**
+1. Você verá a seguinte mensagem exibida: **Olá, Mundo Docker**
 
 ## <a name="create-an-azure-service-principal"></a>Criar uma entidade de serviço do Azure
 
@@ -103,7 +103,7 @@ Nesta seção, você criará uma entidade de serviço do Azure que será usada p
    ```
    Em que:
 
-   | Parâmetro  |                    Descrição                     |
+   | Parâmetro  |                    DESCRIÇÃO                     |
    |------------|----------------------------------------------------|
    | `uuuuuuuu` | Especifica o nome de usuário para a entidade de serviço. |
    | `pppppppp` | Especifica a senha para a entidade de serviço.  |
@@ -152,7 +152,7 @@ Nesta seção, você usará os valores de sua entidade de serviço do Azure para
    ```
    Em que:
 
-   |     Elemento     |                                                                                   Descrição                                                                                   |
+   |     Elemento     |                                                                                   DESCRIÇÃO                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `<id>`      |                                Especifica um nome exclusivo usado pelo Maven para analisar suas configurações de segurança durante a implantação de seu aplicativo Web no Azure.                                |
    |   `<client>`    |                                                             Contém o valor `appId` de sua entidade de serviço.                                                             |
@@ -191,7 +191,7 @@ Se você tiver uma conta do Docker, poderá compilar sua imagem de contêiner do
       mvn clean package docker:build -DpushImage
       ```
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>OPCIONAL: Personalizar o pom.xml antes de implantar seu contêiner no Azure
+## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>OPCIONAL: Personalizar seu pom.xml antes de implantar seu contêiner no Azure
 
 Abra o arquivo `pom.xml` de seu aplicativo Spring Boot em um editor de texto e localize o elemento `<plugin>` para `azure-webapp-maven-plugin`. Esse elemento deverá se parecer com este exemplo:
 
@@ -222,7 +222,7 @@ Abra o arquivo `pom.xml` de seu aplicativo Spring Boot em um editor de texto e l
 
 Você pode modificar diversos valores do plug-in do Maven, e há uma descrição detalhada de cada um desses elementos disponível na documentação [Plug-in do Maven para aplicativos Web do Azure]. Dito isso, vale a pena destacar diversos valores neste artigo:
 
-| Elemento | Descrição |
+| Elemento | DESCRIÇÃO |
 |---|---|
 | `<version>` | Especifica a versão do [Plug-in do Maven para aplicativos Web do Azure]. Você deve verificar a versão listada no [Repositório Central do Maven](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) para garantir que a versão usada por você atualmente seja a mais recente. |
 | `<authentication>` | Especifica as informações de autenticação do Azure, que, neste exemplo, contêm um elemento `<serverId>` contendo `azure-auth`; o Maven usa esse valor para procurar os valores de entidade de serviço do Azure em seu arquivo *settings.xml* do Maven, que você definiu em uma seção anterior deste artigo. |

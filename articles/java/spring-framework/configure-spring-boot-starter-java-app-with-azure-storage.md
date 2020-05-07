@@ -8,17 +8,17 @@ ms.service: storage
 ms.topic: article
 ms.workload: storage
 ms.openlocfilehash: e9546d2e65d198fe9ab92e5d588df8797fd97e16
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669232"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Como usar o iniciador do Spring Boot para Armazenamento do Azure
 
 Este artigo explica como criar um aplicativo personalizado usando o **Spring Initializr**, como adicionar o iniciador do armazenamento do Azure ao aplicativo e como usá-lo para carregar um blob em sua conta de armazenamento do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -212,7 +212,7 @@ O procedimento a seguir configura o aplicativo Spring boot para usar sua conta d
    ```
    Em que:
 
-   |                   Campo                   |                                            Descrição                                            |
+   |                   Campo                   |                                            DESCRIÇÃO                                            |
    |-------------------------------------------|---------------------------------------------------------------------------------------------------|
    | `spring.cloud.azure.credential-file-path` |            Especifica o arquivo de credencial do Azure que você criou anteriormente neste tutorial.             |
    |    `spring.cloud.azure.resource-group`    |           O nome do grupo de recursos do Azure que contém a conta do Armazenamento do Azure.            |

@@ -11,10 +11,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
 ms.openlocfilehash: cdd704626b51105f93c19378511f4a267cb56649
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670292"
 ---
 # <a name="cicd-for-microprofile-apps-using-azure-pipelines"></a>CI/CD para aplicativos MicroProfile usando o Azure Pipelines
@@ -28,7 +28,7 @@ EXPOSE 8080
 ```
 Comece o processo de transporte em contêineres do Azure Pipelines criando uma imagem do Docker e enviando por push a imagem de contêiner para um ACR (Registro de Contêiner do Azure). Conclua o processo criando um pipeline de lançamento do Azure Pipelines e implantando a imagem de contêiner em um aplicativo Web.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 1. No [portal do Azure](https://portal.azure.com), crie um [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry).
    

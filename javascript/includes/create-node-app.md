@@ -4,12 +4,12 @@ ms.service: app-service
 ms.topic: include
 ms.date: 03/31/2020
 ms.author: buhollan
-ms.openlocfilehash: 6cb841a9cf9563c3b7b3db86d907eac757c5d31d
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: c95177d6b4cb101b764acd8f8dad54f937a495eb
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82072661"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82109849"
 ---
 1. Em um prompt de comando do terminal, vá até o local em que você deseja criar a pasta do aplicativo.
 
@@ -37,7 +37,7 @@ ms.locfileid: "82072661"
     npm start
     ```
 
-1. Teste o aplicativo abrindo um navegador e indo para [http://localhost:3000](http://localhost:3000). O site deve aparecer da seguinte maneira:
+1. Teste o aplicativo abrindo um navegador e acessando `http://localhost:3000`. O site deve aparecer da seguinte maneira:
 
     ![Executar o aplicativo Express](../media/deploy-azure/express.png)
 

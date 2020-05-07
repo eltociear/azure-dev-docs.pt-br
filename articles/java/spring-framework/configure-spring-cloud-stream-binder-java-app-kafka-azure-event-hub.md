@@ -7,17 +7,17 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.topic: article
 ms.openlocfilehash: 1141c54e613003f6fcc9396b11528765eaf3f8ad
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669592"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Como usar o Inicializador do Spring Boot para Apache Kafka com os Hubs de Eventos do Azure
 
 Este artigo demonstra como configurar um Spring Cloud Stream Binder baseado em Java criado com o Spring Boot Initializer para usar o [Apache Kafka] com os Hubs de Eventos do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os seguintes pré-requisitos são obrigatórios para que você siga as etapas neste artigo:
 
@@ -222,7 +222,7 @@ Após a implantação de seu namespace, será possível criar um hub de eventos 
    ```
    Em que:
 
-   |                       Campo                       |                                                                                   Descrição                                                                                    |
+   |                       Campo                       |                                                                                   DESCRIÇÃO                                                                                    |
    |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `spring.cloud.azure.credential-file-path`     |                                                    Especifica o arquivo de credencial do Azure que você criou anteriormente neste tutorial.                                                    |
    |        `spring.cloud.azure.resource-group`        |                                                      Especifica o Grupo de Recursos do Azure que contém seu Hub de Eventos do Azure.                                                      |
@@ -348,7 +348,7 @@ Nesta seção, você criará as classes Java necessárias para enviar eventos ao
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   Você deverá ver "olá" publicado nos logs do aplicativo. Por exemplo:
+   Você deverá ver "olá" publicado nos logs do aplicativo. Por exemplo: 
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2

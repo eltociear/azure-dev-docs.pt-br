@@ -4,10 +4,10 @@ description: Saiba mais sobre os métodos de autenticação disponíveis no SDK 
 ms.date: 09/05/2018
 ms.topic: conceptual
 ms.openlocfilehash: b4bf09dbb3f59c77c2914ae9c9091dc0af31b093
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319673"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Métodos de autenticação no SDK do Azure para Go
@@ -64,7 +64,7 @@ Se um tipo de autenticação não tiver valores definidos ou for recusado, o SDK
 A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas para cada tipo de autenticação com suporte da autenticação baseada em ambiente.
 
 
-|  Tipo de autenticação   |     Variável de ambiente     |                                                                                                     Descrição                                                                                                      |
+|  Tipo de autenticação   |     Variável de ambiente     |                                                                                                     DESCRIÇÃO                                                                                                      |
 |------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Credenciais do cliente** |      `AZURE_TENANT_ID`       |                                                                    A ID do locatário do Active Directory à qual pertence a entidade de serviço.                                                                     |
 |                        |      `AZURE_CLIENT_ID`       |                                                                                       O nome ou a ID da entidade de serviço.                                                                                       |
@@ -81,7 +81,7 @@ A tabela a seguir detalha as variáveis de ambiente que precisam ser definidas p
 
 Para se conectar a um ponto de extremidade de gerenciamento ou de nuvem que não seja o padrão de nuvem pública do Azure, defina as seguintes variáveis de ambiente. Se você usa o Azure Stack, os motivos mais comuns são: uma nuvem em uma região geográfica diferente ou o modelo de implantação clássico.
 
-| Variável de ambiente | Descrição  |
+| Variável de ambiente | DESCRIÇÃO  |
 |----------------------|--------------|
 | `AZURE_ENVIRONMENT` | O nome do ambiente de nuvem ao qual se conectar. |
 | `AZURE_AD_RESOURCE` | A ID de recurso do Active Directory para usar ao conectar-se, como um URI para seu ponto de extremidade de gerenciamento. |
@@ -97,7 +97,7 @@ authorizer, err := auth.NewAuthorizerFromEnvironment()
 
 Para autenticar no Azure Stack, você precisa definir as seguintes variáveis:
 
-| Variável de ambiente | Descrição  |
+| Variável de ambiente | DESCRIÇÃO  |
 |----------------------|--------------|
 | `AZURE_AD_ENDPOINT` | O ponto de extremidade do Active Directory. |
 | `AZURE_AD_RESOURCE` | A ID de recurso do Active Directory. |

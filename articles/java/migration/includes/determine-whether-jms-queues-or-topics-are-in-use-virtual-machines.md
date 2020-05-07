@@ -3,10 +3,10 @@ author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
 ms.openlocfilehash: 69bddfce67388d3392e6908f3ddf1af378b116cf
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673482"
 ---
 ### <a name="determine-whether-java-message-service-jms-queues-or-topics-are-in-use"></a>Determinar se as Filas ou os Tópicos do JMS (Java Message Service) estão em uso

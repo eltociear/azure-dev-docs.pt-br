@@ -4,10 +4,10 @@ description: Lista de materiais de introdução na documentação do Azure para 
 ms.date: 03/17/2020
 ms.topic: conceptual
 ms.openlocfilehash: 8a42fb086cbad0691f874bdaf8b08486af9f70ea
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80442101"
 ---
 # <a name="cognitive-services-for-python-apps-on-azure"></a>Serviços Cognitivos para aplicativos Python no Azure

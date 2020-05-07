@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 89e40ebd28ffc792430ba73b192a1aec1a7c49c3
-ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82209799"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Gerenciar máquinas virtuais usando o Azure Explorer para Eclipse
@@ -39,7 +39,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 4. Na janela **Selecionar uma Imagem de Máquina Virtual**, insira as seguintes informações:
 
-   * **Localização**: especifica a localização onde sua máquina virtual será criada (por exemplo, *oeste dos EUA*).
+   * **Localização**: especifica o local no qual sua máquina virtual será criada (por exemplo, *Oeste dos EUA*).
 
    * **Editor**: especifica o editor que criou a imagem que você usará para criar sua máquina virtual (por exemplo, *Microsoft*).
 
@@ -47,7 +47,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
    * **Sku**: especifica qual SKU (unidade de manutenção de estoque) da oferta selecionada será usada (por exemplo, *JDK_8*).
 
-   * **No. da versão**: especifica qual versão do SKU selecionado será usada.
+   * **No. de Versão**: especifica qual versão do SKU selecionado será usada.
 
    ![A janela Selecionar uma Imagem de Máquina Virtual][CR03]
 
@@ -55,11 +55,11 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 6. Na janela **Configurações Básicas de Máquina Virtual**, insira as seguintes informações:
 
-   * **Nome da máquina virtual**: especifica o nome para sua nova máquina virtual que deve começar com uma letra e conter somente letras, números e hifens.
+   * **Nome da Máquina Virtual**: especifica o nome para sua nova máquina virtual, que deve começar com uma letra e conter somente letras, números e hifens.
 
-   * **Size**: especifica o número de núcleos e a memória para alocar para sua máquina virtual.
+   * **Tamanho**: especifica o número de núcleos e a memória para alocar para sua máquina virtual.
 
-   * **Nome de Usuário**: especifica a conta de administrador a ser criada para gerenciar sua máquina virtual.
+   * **Nome de usuário**: especifica a conta de administrador a criar para gerenciar sua máquina virtual.
 
    * **Senha** e **Confirmar**: especifica a senha para sua conta de administrador.
 
@@ -69,15 +69,15 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 8. Na janela **Criar Nova Conta de Armazenamento**, insira as seguintes informações:
 
-   * **Grupo de Recursos**: especifica o grupo de recursos para sua máquina virtual. Selecione uma das seguintes opções:
+   * **Grupo de Recursos**: especifica o grupo de recursos para suas máquinas virtuais. Selecione uma das seguintes opções:
      * **Criar novo**: especifica que você deseja criar um novo grupo de recursos.
-     * **Usar existente**: especifica que você deseja escolher um grupo de recursos que já está associado à sua conta do Azure.
+     * **Usar existente**: especifica que você quer selecionar um grupo de recursos que já está associado à sua conta do Azure.
 
        ![A caixa de diálogo Criar Nova Conta de Armazenamento][CR05]
 
    * **Conta de armazenamento**: especifica a conta de armazenamento que será usada para armazenar a máquina virtual. Você pode usar uma conta de armazenamento existente ou criar uma nova.
 
-   * **Rede virtual** e **Subrede**: especifica a rede virtual e a sub-rede às quais sua máquina virtual se conectará. Use uma rede e sub-rede existentes ou crie uma nova rede e sub-rede. Se você selecionar **Criar nova**, a caixa de diálogo a seguir será exibida:
+   * **Rede Virtual** e **Sub-rede**: especifica a rede virtual e a sub-rede as quais sua máquina virtual se conectará. Use uma rede e sub-rede existentes ou crie uma nova rede e sub-rede. Se você selecionar **Criar nova**, a caixa de diálogo a seguir será exibida:
 
       ![A caixa de diálogo Criar Nova Rede Virtual][CR06]
 

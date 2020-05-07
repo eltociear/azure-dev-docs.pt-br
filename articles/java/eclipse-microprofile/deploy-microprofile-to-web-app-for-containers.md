@@ -11,12 +11,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d24300d02df1fdd079c7ba3c5f2ef3370db3c5e8
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 6ec30d83352984181caff4984769ff62d07e4164
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670572"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82105107"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Implantar um serviço MicroProfile baseado em Java para o Aplicativo Web para Contêineres do Azure
 
@@ -127,7 +127,7 @@ Agora, abordamos todo o código necessário para criar um microsserviço usando 
 
 1. Executar `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`, por exemplo, `docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest`, se seu `docker.registry` é `jogilescr.azurecr.io` e `docker.name` é `samples/docker-helloworld`.
 
-1. Tentar acessar [http://localhost:8080/microprofile/api/helloworld](http://localhost:8080/microprofile/api/helloworld) e [http://localhost:8080/health](http://localhost:8080/health) no navegador da Web. Se você vir a resposta esperada “Olá, mundo!” (e as informações relacionadas à integridade para o ponto de extremidade [/integridade](http://localhost:8080/health)), você implantou com êxito o aplicativo MicroProfile em seu computador local.
+1. Tente acessar `http://localhost:8080/microprofile/api/helloworld` e `http://localhost:8080/health` no navegador da Web. Se você vir a resposta esperada “Olá, mundo!” (e as informações relacionadas à integridade do ponto de extremidade `/health`), você terá implantado com êxito o aplicativo MicroProfile no computador local.
 
 ## <a name="pushing-to-the-azure-container-registry"></a>Enviar por push o Registro de Contêiner do Azure
 

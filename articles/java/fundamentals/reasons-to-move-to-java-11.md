@@ -9,10 +9,10 @@ ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
 ms.openlocfilehash: c0a2f46f8a3249f6c9580e823e102a86291e15e7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670632"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Motivos para mudar para o Java 11
@@ -83,7 +83,7 @@ O ajuste adequado exige um profundo conhecimento de GC, experiência que o [Java
 
 #### <a name="g1gc"></a>G1GC
 
-O coletor de lixo padrão no Java 11 é o G1GC (coletor de lixo G1). O objetivo do G1GC é manter um equilíbrio entre a latência e a taxa de transferência. O coletor de lixo G1 tenta obter alta taxa de transferência cumprindo as metas de tempo de pausa com alta probabilidade. O G1GC foi projetado para evitar coleções completas, mas quando as coleções simultâneas não podem recuperar a memória com rapidez suficiente, ocorrerá um GC de fallback completo. O GC completo usa o mesmo número de threads de trabalho paralelos de coleções pequenas e mistas.
+O coletor de lixo padrão no Java 11 é o G1GC (coletor de lixo G1). O objetivo do G1GC é manter um equilíbrio entre a latência e a taxa de transferência. O coletor de lixo G1 tenta obter alta taxa de transferência cumprindo as metas de tempo de pausa com alta probabilidade. O G1GC foi projetado para evitar coleções completas, mas quando as coleções simultâneas não podem \'recuperar a memória com rapidez suficiente, ocorrerá um GC de fallback completo. O GC completo usa o mesmo número de threads de trabalho paralelos de coleções pequenas e mistas.
 
 #### <a name="parallel-gc"></a>GC paralelo
 

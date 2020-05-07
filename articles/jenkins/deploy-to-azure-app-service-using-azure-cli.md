@@ -4,12 +4,12 @@ description: Saiba como usar a CLI do Azure para implantar um aplicativo Web do 
 keywords: jenkins, azure, devops, serviço de aplicativo, cli
 ms.topic: tutorial
 ms.date: 04/25/2020
-ms.openlocfilehash: 03eb896717350a242fb2f504a4da9b57ecc8a209
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 242986ca95b36d95393b7ff688ebf60bb95985fa
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169882"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861229"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Tutorial: Implantar o Serviço de Aplicativo do Azure com o Jenkins e a CLI do Azure
 
@@ -183,7 +183,7 @@ Faça o seguinte para verificar se o arquivo WAR foi implantado com êxito no ap
 
 Após usar a CLI do Azure no pipeline do Jenkins, altere o script para a implantação em um aplicativo Web do Azure no Linux. Os aplicativos Web no Linux dão suporte ao Docker. Assim sendo, você fornece um Dockerfile que empacota o aplicativo Web com runtime de serviço em uma imagem do Docker. O plug-in cria a imagem, envia-a por push para um registro do Docker e a implanta no aplicativo Web.
 
-1. [Crie um aplicativo Web do Azure que seja executado no Linux](/azure/app-service/containers/quickstart-nodejs.md).
+1. [Crie um aplicativo Web do Azure que seja executado no Linux](/azure/app-service/containers/quickstart-nodejs).
 
 1. [Instale o Docker no Jenkins](https://docs.docker.com/engine/installation/linux/ubuntu/).
 

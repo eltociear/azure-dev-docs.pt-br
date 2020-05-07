@@ -4,12 +4,12 @@ description: Saiba como usar o plug-in do Azure Dev Spaces em um pipeline de int
 keywords: jenkins, azure, devops, azure dev spaces, aks, azure kubernetes service
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 427b53642b4159a82dba699c631da8948a6b744b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170282"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861249"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Tutorial: Usar o Azure Dev Spaces com o Serviço de Kubernetes do Azure
 
@@ -58,7 +58,7 @@ Nesta seção, você cria recursos do Azure:
     az group create --name MyResourceGroup --location westus2
     ```
 
-2. Criar um cluster do AKS. Crie o cluster do AKS em uma [região compatível com o Dev Spaces](/azure/dev-spaces/about.md#supported-regions-and-configurations).
+2. Criar um cluster do AKS. Crie o cluster do AKS em uma [região compatível com o Dev Spaces](/azure/dev-spaces/about#supported-regions-and-configurations).
 
     ```azurecli
     az aks create --resource-group MyResourceGroup --name MyAKS --location westus2 --kubernetes-version 1.11.9 --enable-addons http_application_routing --generate-ssh-keys --node-count 1 --node-vm-size Standard_D1_v2
@@ -344,7 +344,7 @@ Para concluir a etapa 3 nesta seção, você precisará comentar parte do Jenkin
 
 2. Faça logon no Jenkins, selecione o nome do pipeline e então escolha **Compilar Agora**. 
 
-    Você também pode configurar um *webhook* para disparar automaticamente o pipeline do Jenkins. Quando uma solicitação de pull é inserida, o GitHub emite um POST para o Jenkins, disparando o pipeline. Para obter mais informações sobre como configurar um webhook, confira [Conectar o Jenkins ao GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/jenkins/deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
+    Você também pode configurar um *webhook* para disparar automaticamente o pipeline do Jenkins. Quando uma solicitação de pull é inserida, o GitHub emite um POST para o Jenkins, disparando o pipeline. Para obter mais informações sobre como configurar um webhook, confira [Conectar o Jenkins ao GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
 
 3. Compare as alterações com a versão compartilhada atual:
 

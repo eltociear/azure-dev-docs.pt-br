@@ -4,12 +4,12 @@ description: Saiba como configurar o Jenkins para a CI (integração contínua) 
 keywords: jenkins, azure, devops, aks, azure kubernetes service, github
 ms.topic: article
 ms.date: 01/09/2019
-ms.openlocfilehash: 99c46e62e0d841d9ec6668fd5bcafdfa2cb6ba3a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: cbde97c7796a7f89bfb8ec0cbe530e84bd750e04
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170392"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861179"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Tutorial: Implantação do GitHub para o Serviço de Kubernetes do Azure usando o Jenkins
 
@@ -30,9 +30,9 @@ Para concluir este tutorial, você precisará destes itens:
 
 - Reconhecimento básico de Kubernetes, Git, CI/CD e imagens de contêiner
 
-- Um [cluster do AKS](/azure/aks/kubernetes-walkthrough.md) e `kubectl` configurados com as [credenciais de cluster do AKS](/cli/azure/aks#az-aks-get-credentials).
+- Um [cluster do AKS](/azure/aks/kubernetes-walkthrough) e `kubectl` configurados com as [credenciais de cluster do AKS](/cli/azure/aks#az-aks-get-credentials).
 
-- Um [ACR (Registro de Contêiner do Azure)](/azure/container-registry/container-registry-get-started-azure-cli.md), o nome do servidor de logon do ACR e o cluster do AKS configurado para [autenticar com o registro do ACR](/azure/aks/cluster-container-registry-integration.md).
+- Um [ACR (Registro de Contêiner do Azure)](/azure/container-registry/container-registry-get-started-azure-cli), o nome do servidor de logon do ACR e o cluster do AKS configurado para [autenticar com o registro do ACR](/azure/aks/cluster-container-registry-integration).
 
 - A CLI do Azure versão 2.0.46 ou posterior, instalada e configurada. Execute  `az --version` para encontrar a versão. Se você precisar instalar ou atualizar, confira  [Instalar a CLI do Azure](/cli/azure/install-azure-cli).
 

@@ -4,12 +4,12 @@ description: Saiba como usar a CLI do Azure em um pipeline de implantação e in
 keywords: jenkins, azure, devops, azure sping cloud, azure cli
 ms.topic: tutorial
 ms.date: 01/07/2020
-ms.openlocfilehash: 88a62e42218835e866f1dd9424209d5594a336d0
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c9341ef89e43f14111b6e656daebadcd4790322d
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169762"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861209"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Tutorial: Implantar aplicativos no Azure Spring Cloud usando o Jenkins e a CLI do Azure
 
@@ -142,7 +142,7 @@ Nesta seção, você preparará o servidor do Jenkins para executar um build, qu
 
 ### <a name="add-your-azure-service-principal-credential-in-jenkins-credential-store"></a>Adicionar suas credenciais de entidade de serviço do Azure ao repositório de credenciais do Jenkins
 
-1. Você precisará de uma entidade de serviço do Azure para implantação no Azure. Para obter mais informações, confira a seção [Criar uma entidade de serviço](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal) no tutorial Implantação no Serviço de Aplicativo do Azure. A saída de `az ad sp create-for-rbac` é semelhante a esta:
+1. Você precisará de uma entidade de serviço do Azure para implantação no Azure. Para obter mais informações, confira a seção [Criar uma entidade de serviço](deploy-from-github-to-azure-app-service.md#create-service-principal) no tutorial Implantação no Serviço de Aplicativo do Azure. A saída de `az ad sp create-for-rbac` é semelhante a esta:
 
     ```
     {
@@ -193,33 +193,33 @@ O pipeline de exemplo usa o Maven para build e a CLI do Az para implantação na
 
 2. Atualize o arquivo conforme mostrado a seguir. Substitua os valores de **\<nome do grupo de recursos>** e **\<nome do serviço>** . Substitua **azure_service_principal** pela ID correta se você usar outro valor ao adicionar a credencial no Jenkins. 
 
-```groovy
-    node {
-      stage('init') {
-        checkout scm
-      }
-      stage('build') {
-        sh 'mvn clean package'
-      }
-      stage('deploy') {
-        withCredentials([azureServicePrincipal('azure_service_principal')]) {
-          // login to Azure
-          sh '''
-            az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
-            az account set -s $AZURE_SUBSCRIPTION_ID
-          '''  
-          // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
-          sh 'az configure --defaults group=<resource group name>'
-          sh 'az configure --defaults spring-cloud=<service name>'
-          // Deploy applications
-          sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
-          sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
-          sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
-          sh 'az logout'
-        }
-      }
-    }
-```
+   ```groovy
+       node {
+         stage('init') {
+           checkout scm
+         }
+         stage('build') {
+           sh 'mvn clean package'
+         }
+         stage('deploy') {
+           withCredentials([azureServicePrincipal('azure_service_principal')]) {
+             // login to Azure
+             sh '''
+               az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+               az account set -s $AZURE_SUBSCRIPTION_ID
+             '''  
+             // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
+             sh 'az configure --defaults group=<resource group name>'
+             sh 'az configure --defaults spring-cloud=<service name>'
+             // Deploy applications
+             sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
+             sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
+             sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
+             sh 'az logout'
+           }
+         }
+       }
+   ```
 
 3. Salve e confirme a alteração.
 

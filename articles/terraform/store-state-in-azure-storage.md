@@ -3,12 +3,12 @@ title: Tutorial – Armazenar o estado Terraform no Armazenamento do Azure
 description: Saiba como armazenar o estado do Terraform no Armazenamento do Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: f2180a8e12632c0693dcf491d621121168fa99c8
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: e61787a80905507c16a5ac7f23cfe9ed852f6708
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169692"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861239"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>Tutorial: Armazene o estado Terraform no armazenamento do Azure
 
@@ -73,7 +73,7 @@ Crie uma variável de ambiente denominada `ARM_ACCESS_KEY` com o valor da chave 
 export ARM_ACCESS_KEY=<storage access key>
 ```
 
-Para proteger ainda mais a chave de acesso da conta do Armazenamento do Azure, armazene-a no Cofre de Chaves do Azure. A variável de ambiente pode então ser definida usando um comando semelhante ao seguinte. Para obter mais informações sobre o Azure Key Vault, confira a [documentação do Azure Key Vault](/azure/key-vault/secrets/quick-create-cli.md).
+Para proteger ainda mais a chave de acesso da conta do Armazenamento do Azure, armazene-a no Cofre de Chaves do Azure. A variável de ambiente pode então ser definida usando um comando semelhante ao seguinte. Para obter mais informações sobre o Azure Key Vault, confira a [documentação do Azure Key Vault](/azure/key-vault/secrets/quick-create-cli).
 
 ```bash
 export ARM_ACCESS_KEY=$(az keyvault secret show --name terraform-backend-key --vault-name myKeyVault --query value -o tsv)
@@ -124,7 +124,7 @@ Você pode ver o bloqueio ao examinar o blob por meio do portal do Azure ou em o
 
 Os dados armazenados em um Blob do Azure são criptografados antes de serem persistidos. Quando necessário, o Terraform recupera o estado do back-end e o armazena na memória local. Usando esse padrão, o estado nunca é gravado em seu disco local.
 
-Para obter mais informações sobre a criptografia de Armazenamento do Azure, confira [Criptografia do serviço de Armazenamento do Azure para dados em repouso](/azure/storage/common/storage-service-encryption.md).
+Para obter mais informações sobre a criptografia de Armazenamento do Azure, confira [Criptografia do serviço de Armazenamento do Azure para dados em repouso](/azure/storage/common/storage-service-encryption).
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -4,12 +4,12 @@ description: Saiba como configurar o build e a integração contínuos para o ap
 keywords: jenkins, azure, devops, cicd, linux, service fabric, cluster
 ms.topic: tutorial
 ms.date: 07/31/2018
-ms.openlocfilehash: 0a1efc187b4080c4e0c1a992890203e954f81e06
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: eca6b1b446cda07c35f453f17d688a5e8708b8e7
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171092"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861269"
 ---
 # <a name="tutorial-deploy-to-a-service-fabric-cluster"></a>Tutorial: Implantação em um cluster do Service Fabric
 
@@ -35,9 +35,9 @@ Este tutorial aborda várias maneiras de configurar o ambiente do Jenkins e dife
 
 Se você adicionar o plug-in do Service Fabric a um ambiente do Jenkins existente, precisará seguir estas etapas:
 
-- [CLI do Service Fabric (sfctl)](/azure/service-fabric/service-fabric-cli.md). Instale a CLI no nível do sistema, em vez de no nível do usuário, para que o Jenkins possa executar comandos da CLI. 
-- Para implantar aplicativos Java, instale [o Gradle e o Open JDK 8.0](/azure/service-fabric/service-fabric-get-started-linux.md#set-up-java-development). 
-- Para implantar aplicativos do .NET Core 2.0, instale o [SDK do .NET Core 2.0](/azure/service-fabric/service-fabric-get-started-linux.md#set-up-net-core-20-development). 
+- [CLI do Service Fabric (sfctl)](/azure/service-fabric/service-fabric-cli). Instale a CLI no nível do sistema, em vez de no nível do usuário, para que o Jenkins possa executar comandos da CLI. 
+- Para implantar aplicativos Java, instale [o Gradle e o Open JDK 8.0](/azure/service-fabric/service-fabric-get-started-linux#set-up-java-development). 
+- Para implantar aplicativos do .NET Core 2.0, instale o [SDK do .NET Core 2.0](/azure/service-fabric/service-fabric-get-started-linux#set-up-net-core-20-development). 
 
 Depois de instalar os pré-requisitos necessários para seu ambiente, procure o plug-in do Azure Service Fabric no marketplace do Jenkins e instale-o.
 
@@ -199,13 +199,13 @@ As etapas nesta seção mostram como configurar um trabalho do Jenkins para resp
 1. Na guia **Gerenciamento de Código-Fonte**, selecione **Git**. Especifique a URL do repositório que hospeda o aplicativo Java do Service Fabric que você deseja integrar ao fluxo CI/CD do Jenkins (por exemplo, `https://github.com/{your-github-account}/service-fabric-java-getting-started`). Você também pode especificar qual ramificação criar (por exemplo, `/master`).
 1. Configure o repositório *GitHub* para falar com o Jenkins:
 
-   a. Na página repositório GitHub, vá para **Configurações** > **Integrações e Serviços**.
+   1. Na página repositório GitHub, vá para **Configurações** > **Integrações e Serviços**.
 
-   b. Selecione **Adicionar Serviço**, digite **Jenkins** e selecione o **plug-in Jenkins-Github**.
+   1. Selecione **Adicionar Serviço**, digite **Jenkins** e selecione o **plug-in Jenkins-Github**.
 
-   c. Insira a URL do webhook Jenkins (por padrão, ele deve ser `http://<PublicIPorFQDN>:8081/github-webhook/`). Clique em **adicionar/atualizar serviço**.
+   1. Insira a URL do webhook Jenkins (por padrão, ele deve ser `http://<PublicIPorFQDN>:8081/github-webhook/`). Clique em **adicionar/atualizar serviço**.
 
-   d. Um evento de teste é enviado para a instância do Jenkins. Você verá uma marca de seleção verde ao lado do webhook no GitHub, e o projeto será criado.
+   1. Um evento de teste é enviado para a instância do Jenkins. Você verá uma marca de seleção verde ao lado do webhook no GitHub, e o projeto será criado.
 
 1. Na guia **Build Triggers** do Jenkins, selecione a opção de compilação desejada. Neste exemplo, você deseja disparar uma build sempre que ocorrer um envio por push para o repositório; para isso, selecione **Gatilho de gancho GitHub para sondagem GITScm**. (Anteriormente, essa opção se chamava **Compilar quando uma alteração for enviada ao GitHub**.)
 1. Na guia **Criar**, siga um destes procedimentos, dependendo de estar criando um aplicativo Java ou um aplicativo .NET Core:

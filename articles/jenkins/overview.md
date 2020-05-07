@@ -4,12 +4,12 @@ description: Hospede o servidor de automação de build e implantação do Jenki
 keywords: jenkins, azure, devops, visão geral
 ms.topic: overview
 ms.date: 10/23/2019
-ms.openlocfilehash: f630dd601cc384588ae4d3af1a051b5c706de0b6
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 19bacd6e1b3d4ddee4e6fef27b2183f4a33545d6
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171122"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861299"
 ---
 # <a name="azure-and-jenkins"></a>Azure e Jenkins
 
@@ -34,7 +34,7 @@ Adicione agentes de build à implantação existente do Jenkins para dimensionar
 Depois de configurados com uma [entidade de serviço do Azure](/azure/azure-resource-manager/resource-group-overview), os trabalhos e pipelines do Jenkins podem usar essa credencial para:
 
 - Armazene e arquive com segurança artefatos de build no [Armazenamento do Azure](/azure/storage/common/storage-introduction) usando o [plug-in do Armazenamento do Azure](https://plugins.jenkins.io/windows-azure-storage). Examine as [instruções de armazenamento do Jenkins](azure-storage-blobs-as-build-artifact-repository.md) para saber mais.
-- Gerenciar e configurar os recursos do Azure com a [CLI do Azure](/azure/jenkins/deploy-to-azure-app-service-using-azure-cli).
+- Gerenciar e configurar os recursos do Azure com a [CLI do Azure](deploy-to-azure-app-service-using-azure-cli.md).
 
 ## <a name="deploy-your-code-into-azure-services"></a>Implantar o código nos serviços do Azure
 

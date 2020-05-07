@@ -4,12 +4,12 @@ description: Saiba como usar o serviço Blob do Azure como um repositório para 
 keywords: jenkins, azure, devops, storage, cicd, build artifacts
 ms.topic: article
 ms.date: 08/13/2019
-ms.openlocfilehash: ac2ccc974c13a9dc19e1098d95ec484458377304
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: ceed42326faee6dcfab3790fd3af739b2f48d3da
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170162"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861199"
 ---
 # <a name="tutorial-use-azure-storage-for-build-artifacts"></a>Tutorial: Usar o Armazenamento do Azure para artefatos de compilação
 
@@ -47,7 +47,7 @@ Alguns dos benefícios de usar o serviço Blob para hospedar seus artefatos de c
      
       Embora uma solução Jenkins CI típica seria configurada para ser executada como um serviço, executar o Jenkins.war na linha de comando será suficiente para este tutorial.
 * Uma conta do Azure. Você pode se inscrever para uma conta do Azure em <https://www.azure.com>.
-* Uma conta de armazenamento do Azure. Se você não tiver uma conta de armazenamento, crie uma usando as etapas em [Criar uma Conta de Armazenamento](/azure/storage/common/storage-account-create.md).
+* Uma conta de armazenamento do Azure. Se você não tiver uma conta de armazenamento, crie uma usando as etapas em [Criar uma Conta de Armazenamento](/azure/storage/common/storage-account-create).
 * Estar familiarizado com a solução de CI Jenkins é recomendável, mas não obrigatório, já que o conteúdo a seguir usará um exemplo básico para mostrar as etapas necessárias ao usar o serviço Blob como um repositório para os artefatos de compilação de CI Jenkins.
 
 ## <a name="how-to-use-the-blob-service-with-jenkins-ci"></a>Como usar o serviço Blob com a Jenkins CI
@@ -96,10 +96,10 @@ Para fins de instrução, primeiro você precisa criar um trabalho que criará v
 6. Em **Nome de conta de armazenamento**, selecione a conta de armazenamento a ser usada.
 7. Em **Nome do contêiner**, especifique o nome do contêiner. (O contêiner será criado se ele ainda não existir quando os artefatos de compilação forem carregados.) Você pode usar variáveis de ambiente, assim, neste exemplo, insira `${JOB_NAME}` como o nome do contêiner.
    
-    **Dica**
-   
-    Abaixo da seção **Comando** em que você inseriu um script para **Executar comando em lote do Windows**, existe um link para as variáveis de ambiente reconhecidas pelo Jenkins. Selecione o link para saber os nomes de variáveis de ambiente e as descrições. Variáveis de ambiente que contêm caracteres especiais, como o **BUILD_URL** variável de ambiente não são permitidas como um nome de contêiner ou o caminho virtual comum.
-8. Selecione **Tornar novo contêiner público por padrão** para este exemplo. (Se você quiser usar um contêiner particular, você precisará criar uma assinatura de acesso compartilhado para permitir o acesso, o que está além do escopo deste artigo. Você pode saber mais sobre assinaturas de acesso compartilhado em [Uso de SAS (Assinaturas de Acesso Compartilhado)](/azure//storage/common/storage-sas-overview.md).
+    > [!TIP]
+    > Abaixo da seção **Comando** em que você inseriu um script para **Executar comando em lote do Windows**, existe um link para as variáveis de ambiente reconhecidas pelo Jenkins. Selecione o link para saber os nomes de variáveis de ambiente e as descrições. Variáveis de ambiente que contêm caracteres especiais, como o **BUILD_URL** variável de ambiente não são permitidas como um nome de contêiner ou o caminho virtual comum.
+    
+8. Selecione **Tornar novo contêiner público por padrão** para este exemplo. (Se você quiser usar um contêiner particular, você precisará criar uma assinatura de acesso compartilhado para permitir o acesso, o que está além do escopo deste artigo. Você pode saber mais sobre assinaturas de acesso compartilhado em [Uso de SAS (Assinaturas de Acesso Compartilhado)](/azure/storage/common/storage-sas-overview).
 9. [Opcional] Selecione **Limpar recipiente antes de fazer o upload** se quiser que o contêiner seja limpo do conteúdo antes que os artefatos de construção sejam carregados (deixe-o desmarcado se não quiser limpar o conteúdo do contêiner).
 10. Para **lista de artefatos a serem carregados**, insira `text/*.txt`.
 11. Para **caminho virtual comum para artefatos carregados**, para fins deste tutorial, insira `${BUILD\_ID}/${BUILD\_NUMBER}`.

@@ -1,22 +1,22 @@
 ---
-title: Usar o Spring Data R2DBC com o Banco de Dados do Azure para MySQL
-description: Saiba como usar o Spring Data R2DBC com um Banco de Dados do Azure para MySQL.
+title: Usar o Spring Data R2DBC com o Banco de Dados do Azure para PostgreSQL
+description: Saiba como usar o Spring Data R2DBC com um banco de dados do Banco de Dados do Azure para PostgreSQL.
 documentationcenter: java
 ms.date: 03/18/2020
-ms.service: mysql
+ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 5dd4f1d41f73f177d99068fc0d981270f0134bb8
+ms.openlocfilehash: 1cc74fd296eeef8cf033fcf304ea577e04dddafd
 ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/05/2020
-ms.locfileid: "82801864"
+ms.locfileid: "82801854"
 ---
-# <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Usar o Spring Data R2DBC com o Banco de Dados do Azure para MySQL
+# <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Usar o Spring Data R2DBC com o Banco de Dados do Azure para PostgreSQL
 
-Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc) para armazenar e recuperar informações no [Banco de Dados do Azure para MySQL](https://docs.microsoft.com/azure/mysql/) usando a implementação do R2DBC para MySQL do [repositório do GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
+Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc) para armazenar e recuperar informações no [Banco de Dados do Azure para PostgreSQL](https://docs.microsoft.com/azure/postgresql/) usando a implementação do R2DBC para PostgreSQL do [repositório do GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
 
 O [R2DBC](https://r2dbc.io/) traz APIs reativas para bancos de dados relacionais tradicionais. Você pode usá-lo com o Spring WebFlux para criar aplicativos Spring Boot totalmente reativos que usam APIs sem bloqueio. Ele fornece melhor escalabilidade do que a abordagem clássica "um thread por conexão".
 
@@ -35,16 +35,16 @@ Primeiro, configure algumas variáveis de ambiente usando os seguintes comandos:
 AZ_RESOURCE_GROUP=r2dbc-workshop
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
-AZ_MYSQL_USERNAME=r2dbc
-AZ_MYSQL_PASSWORD=<YOUR_MYSQL_PASSWORD>
+AZ_POSTGRESQL_USERNAME=r2dbc
+AZ_POSTGRESQL_PASSWORD=<YOUR_POSTGRESQL_PASSWORD>
 AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 ```
 
 Substitua os espaços reservados pelos seguintes valores, que são usados em todo este artigo:
 
-- `<YOUR_DATABASE_NAME>`: O nome do servidor MySQL. O nome deve ser exclusivo em todo o Azure.
+- `<YOUR_DATABASE_NAME>`: O nome do servidor PostgreSQL. O nome deve ser exclusivo em todo o Azure.
 - `<YOUR_AZURE_REGION>`: A região do Azure que você usará. Você pode usar `eastus` por padrão, mas é recomendável configurar uma região mais próxima de onde você mora. Você pode ter a lista completa de regiões disponíveis ao digitar `az account list-locations`.
-- `<YOUR_MYSQL_PASSWORD>`: A senha do servidor de banco de dados MySQL. Essa senha deveria ter um mínimo de oito caracteres. Os caracteres deveriam ser de três das seguintes categorias: Letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #, % e assim por diante).
+- `<YOUR_POSTGRESQL_PASSWORD>`: A senha do servidor de banco de dados PostgreSQL. Essa senha deveria ter um mínimo de oito caracteres. Os caracteres deveriam ser de três das seguintes categorias: Letras maiúsculas, letras minúsculas, números (0-9) e caracteres não alfanuméricos (!, $, #, % e assim por diante).
 - `<YOUR_LOCAL_IP_ADDRESS>`: O endereço IP do computador local, do qual você executará o aplicativo Spring Boot. Uma forma conveniente de encontrá-lo é apontar o navegador para [whatismyip.akamai.com](http://whatismyip.akamai.com/).
 
 Em seguida, crie um grupo de recursos:
@@ -60,37 +60,37 @@ az group create \
 > Usamos o utilitário `jq`, que é instalado por padrão no [Azure Cloud Shell](https://shell.azure.com/) para exibir dados JSON e torná-los mais legíveis.
 > Se você não gostar desse utilitário, poderá remover com segurança a parte `| jq` de todos os comandos que usaremos.
 
-## <a name="create-an-azure-database-for-mysql-instance"></a>Criar uma instância do Banco de Dados do Azure para MySQL
+## <a name="create-an-azure-database-for-postgresql-instance"></a>Criar uma instância do Banco de Dados do Azure para PostgreSQL
 
-A primeira coisa que criaremos é um servidor MySQL gerenciado.
+A primeira coisa que criaremos é um servidor PostgreSQL gerenciado.
 
 > [!NOTE]
-> Você pode ler informações mais detalhadas sobre como criar servidores MySQL em [Criar um servidor de Banco de Dados do Azure para MySQL usando o portal do Azure](/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal).
+> Você pode ler informações mais detalhadas sobre como criar servidores PostgreSQL em [Criar um servidor do Banco de Dados do Azure para PostgreSQL usando o portal do Azure](/azure/postgresql/quickstart-create-server-database-portal).
 
 No [Azure Cloud Shell](https://shell.azure.com/), execute o seguinte script:
 
 ```azurecli
-az mysql server create \
+az postgres server create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name $AZ_DATABASE_NAME \
     --location $AZ_LOCATION \
     --sku-name B_Gen5_1 \
     --storage-size 5120 \
-    --admin-user $AZ_MYSQL_USERNAME \
-    --admin-password $AZ_MYSQL_PASSWORD \
+    --admin-user $AZ_POSTGRESQL_USERNAME \
+    --admin-password $AZ_POSTGRESQL_PASSWORD \
     | jq
 ```
 
-Esse comando cria um servidor MySQL pequeno.
+Esse comando cria um servidor PostgreSQL pequeno.
 
-### <a name="configure-a-firewall-rule-for-your-mysql-server"></a>Configurar uma regra de firewall para o servidor MySQL
+### <a name="configure-a-firewall-rule-for-your-postgresql-server"></a>Configurar uma regra de firewall para o servidor PostgreSQL
 
-As instâncias do Banco de Dados do Azure para MySQL são protegidas por padrão. Elas têm um firewall que não permite nenhuma conexão de entrada. Para usar o banco de dados, você precisa adicionar uma regra de firewall que permitirá que o endereço IP local acesse o servidor de banco de dados.
+As instâncias do Banco de Dados do Azure para PostgreSQL são protegidas por padrão. Elas têm um firewall que não permite nenhuma conexão de entrada. Para usar o banco de dados, você precisa adicionar uma regra de firewall que permitirá que o endereço IP local acesse o servidor de banco de dados.
 
 Como você configurou nosso endereço IP local no início deste artigo, você pode abrir o firewall do servidor ao executar:
 
 ```azurecli
-az mysql server firewall-rule create \
+az postgres server firewall-rule create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name $AZ_DATABASE_NAME-database-allow-local-ip \
     --server $AZ_DATABASE_NAME \
@@ -99,12 +99,12 @@ az mysql server firewall-rule create \
     | jq
 ```
 
-### <a name="configure-a-mysql-database"></a>Configurar um banco de dados MySQL
+### <a name="configure-a-postgresql-database"></a>Configurar um banco de dados PostgreSQL
 
-O servidor MySQL que você criou anteriormente está vazio. Ele não tem nenhum banco de dados que você possa usar com o aplicativo Spring Boot. Criar um banco de dados chamado `r2dbc`:
+O servidor PostgreSQL que você criou anteriormente está vazio. Ele não tem nenhum banco de dados que você possa usar com o aplicativo Spring Boot. Criar um banco de dados chamado `r2dbc`:
 
 ```azurecli
-az mysql db create \
+az postgres db create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name r2dbc \
     --server-name $AZ_DATABASE_NAME \
@@ -127,35 +127,38 @@ Gere o aplicativo na linha de comando ao digitar:
 curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M4 -d javaVersion=8 | tar -xzvf -
 ```
 
-### <a name="add-the-reactive-mysql-driver-implementation"></a>Adicionar a implementação do driver MySQL reativo
+### <a name="add-the-reactive-postgresql-driver-implementation"></a>Adicionar a implementação do driver PostgreSQL reativo
 
-Abra o arquivo *pom.xml* do projeto gerado para adicionar o driver MySQL reativo do [repositório no GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
+Abra o arquivo *pom.xml* do projeto gerado para adicionar o driver PostgreSQL reativo do [repositório no GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
 
 Após a dependência `spring-boot-starter-webflux`, adicione o seguinte snippet de código:
 
 ```xml
 <dependency>
-   <groupId>dev.miku</groupId>
-   <artifactId>r2dbc-mysql</artifactId>
-   <version>0.8.1.RELEASE</version>
-   <scope>runtime</scope>
+    <groupId>io.r2dbc</groupId>
+    <artifactId>r2dbc-postgresql</artifactId>
+    <scope>runtime</scope>
 </dependency>
 ```
 
-### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Configurar o Spring Boot para usar o Banco de Dados do Azure para MySQL
+### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Configurar o Spring Boot para usar o Banco de Dados do Azure para PostgreSQL
 
 Abra o arquivo *src/main/resources/application.properties* e adicione:
 
 ```properties
 logging.level.org.springframework.data.r2dbc=DEBUG
 
-spring.r2dbc.url=r2dbc:pool:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
+spring.r2dbc.url=r2dbc:pool:postgres://$AZ_DATABASE_NAME.postgres.database.azure.com:5432/r2dbc
 spring.r2dbc.username=r2dbc@$AZ_DATABASE_NAME
-spring.r2dbc.password=$AZ_MYSQL_PASSWORD
+spring.r2dbc.password=$AZ_POSTGRESQL_PASSWORD
+spring.r2dbc.properties.sslMode=REQUIRE
 ```
 
+> [!WARNING]
+> Por razões de segurança, o Banco de Dados do Azure para PostgreSQL requer o uso de conexões SSL. É por isso que você precisa adicionar a propriedade de configuração `spring.r2dbc.properties.sslMode=REQUIRE`. Caso contrário, o driver PostgreSQL do R2DBC tentará se conectar usando uma conexão não segura, o que falhará.
+
 - Substitua as duas variáveis `$AZ_DATABASE_NAME` pelo valor que você configurou no início deste artigo.
-- Substitua a variável `$AZ_MYSQL_PASSWORD` pelo valor que você configurou no início deste artigo.
+- Substitua a variável `$AZ_POSTGRESQL_PASSWORD` pelo valor que você configurou no início deste artigo.
 
 > [!NOTE]
 > Para obter um melhor desempenho, a propriedade `spring.r2dbc.url` está configurada para usar um pool de conexões usando [r2dbc-pool](https://github.com/r2dbc/r2dbc-pool).
@@ -168,7 +171,7 @@ Agora, você deveria conseguir iniciar o aplicativo usando o wrapper do Maven fo
 
 Aqui está uma captura de tela do aplicativo em execução pela primeira vez:
 
-[![O aplicativo em execução](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-01.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-01.png#lightbox)
+[![O aplicativo em execução](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-01.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-01.png#lightbox)
 
 ### <a name="create-the-database-schema"></a>Criar o esquema de banco de dados
 
@@ -200,11 +203,11 @@ Use o comando a seguir para interromper o aplicativo e executá-lo novamente. O 
 
 Aqui está uma captura de tela da tabela do banco de dados enquanto está sendo criada:
 
-[![Criação da tabela do banco de dados](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-02.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-02.png#lightbox)
+[![Criação da tabela do banco de dados](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-02.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-02.png#lightbox)
 
 ## <a name="code-the-application"></a>Codificar o aplicativo
 
-Em seguida, adicione o código Java que usará o R2DBC para armazenar e recuperar dados do servidor MySQL.
+Em seguida, adicione o código Java que usará o R2DBC para armazenar e recuperar dados do servidor PostgreSQL.
 
 Crie uma classe Java `Todo`, ao lado da classe `DemoApplication`:
 
@@ -354,9 +357,9 @@ Esse comando retornará a lista de itens "todo", incluindo o item que você crio
 
 Aqui está uma captura de tela dessas solicitações cURL:
 
-[![Testar com o cURL](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-03.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-03.png#lightbox)
+[![Testar com o cURL](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-03.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-03.png#lightbox)
 
-Parabéns! Você criou um aplicativo Spring Boot totalmente reativo que usa o R2DBC para armazenar e recuperar dados do Banco de Dados do Azure para MySQL.
+Parabéns! Você criou um aplicativo Spring Boot totalmente reativo que usa o R2DBC para armazenar e recuperar dados do Banco de Dados do Azure para PostgreSQL.
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 

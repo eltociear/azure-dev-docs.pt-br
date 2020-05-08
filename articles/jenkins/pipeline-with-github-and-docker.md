@@ -4,12 +4,12 @@ description: Saiba como criar uma máquina virtual do Jenkins no Azure que efetu
 keywords: jenkins, azure, devops, pipeline, cicd, docker
 ms.topic: tutorial
 ms.date: 03/27/2017
-ms.openlocfilehash: c584d6bbd18c36bde7730180a69194b23cd2c180
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 29c5d8926fe60eeb2e3603f0e3248e1d94763b6c
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169682"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861289"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>Tutorial: Criar um pipeline do Jenkins usando o GitHub e o Docker
 
@@ -28,7 +28,7 @@ Este tutorial usa a CLI dentro do [Azure Cloud Shell](https://docs.microsoft.com
 Se você optar por instalar e usar a CLI localmente, este tutorial exigirá que você execute a CLI do Azure versão 2.0.30 ou posterior. Execute `az --version` para encontrar a versão. Se você precisa instalar ou atualizar, consulte [Instalar a CLI do Azure]( /cli/azure/install-azure-cli).
 
 ## <a name="create-jenkins-instance"></a>Criar instância do Jenkins
-Em um tutorial anterior sobre [Como personalizar uma máquina virtual do Linux na primeira inicialização](/azure/virtual-machines/linux/tutorial-automate-vm-deployment.md), você aprendeu a automatizar a personalização de VM com a inicialização de nuvem. Este tutorial usa um arquivo de inicialização de nuvem para instalar o Jenkins e o Docker em uma VM. Jenkins é um conhecido servidor de automação de código aberto que se integra perfeitamente com o Azure para habilitar a integração contínua (CI) e fornecimento contínuo (CD). Para ver mais tutoriais sobre como usar o Jenkins, consulte [Jenkins no hub do Azure](https://docs.microsoft.com/azure/jenkins/).
+Em um tutorial anterior sobre [Como personalizar uma máquina virtual do Linux na primeira inicialização](/azure/virtual-machines/linux/tutorial-automate-vm-deployment), você aprendeu a automatizar a personalização de VM com a inicialização de nuvem. Este tutorial usa um arquivo de inicialização de nuvem para instalar o Jenkins e o Docker em uma VM. Jenkins é um conhecido servidor de automação de código aberto que se integra perfeitamente com o Azure para habilitar a integração contínua (CI) e fornecimento contínuo (CD). Para ver mais tutoriais sobre como usar o Jenkins, consulte [Jenkins no hub do Azure](https://docs.microsoft.com/azure/jenkins/).
 
 No shell atual, crie um arquivo chamado *cloud-init-jenkins.txt* e cole a configuração a seguir. Por exemplo, crie o arquivo no Cloud Shell e não em seu computador local. Insira `sensible-editor cloud-init-jenkins.txt` para criar o arquivo e ver uma lista de editores disponíveis. Certifique-se de que o arquivo de inicialização de nuvem inteiro seja copiado corretamente, especialmente a primeira linha:
 
@@ -153,8 +153,8 @@ Para o Jenkins responder a um evento no GitHub, tal como confirmação de códig
 No seu site do Jenkins, selecione **Criar novos trabalhos** na página inicial:
 
 - Insira *HelloWorld* como nome do trabalho. Escolha **Projeto Freestyle** e selecione **OK**.
-- Na seção **Geral**, selecione o **projeto do GitHub** e insira a URL do repositório bifurcado, como *https://github.com/cynthn/nodejs-docs-hello-world*
-- Na seção **Gerenciamento de código-fonte**, selecione **Git** e insira a URL *.git* do repositório bifurcado, por exemplo, *https://github.com/cynthn/nodejs-docs-hello-world.git*
+- Na seção **Geral**, selecione o **projeto do GitHub** e insira a URL do repositório bifurcado, como `https://github.com/cynthn/nodejs-docs-hello-world`
+- Na seção **Gerenciamento de código-fonte**, selecione **Git** e insira a URL *.git* do repositório bifurcado, como, por exemplo, `https://github.com/cynthn/nodejs-docs-hello-world.git`
 - Na seção **Gatilhos de Build**, selecione **Gatilho de gancho do GitHub para sondagem de GITscm**.
 - Na seção **Compilar**, clique em **Adicionar etapa de compilação**. Selecione **Executar shell** e, em seguida, digite `echo "Test"` na janela de comando.
 - Selecione **Salvar** na parte inferior da janela de trabalhos.

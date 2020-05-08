@@ -39,6 +39,10 @@
               href: configure-spring-data-jdbc-with-azure-sql-server.md
             - name: R2DBC com o MySQL do Azure
               href: configure-spring-data-r2dbc-with-azure-mysql.md
+            - name: R2DBC com o PostgreSQL do Azure
+              href: configure-spring-data-r2dbc-with-azure-postgresql.md
+            - name: R2DBC com o Banco de Dados SQL do Azure
+              href: configure-spring-data-r2dbc-with-azure-sql-server.md
             - name: JPA com o MySQL do Azure
               href: configure-spring-data-jpa-with-azure-mysql.md
             - name: JPA com o PostgreSQL do Azure

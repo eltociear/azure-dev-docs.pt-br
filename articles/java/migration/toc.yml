@@ -3,8 +3,12 @@
   items:
     - name: Visão geral
       href: migration-overview.md
-    - name: Spring para o Serviço de Aplicativo do Azure
-      href: migrate-java-se-to-java-se-app-service.md
+    - name: Spring Boot para o Serviço de Aplicativo do Azure
+      href: migrate-spring-boot-to-app-service.md
+    - name: Spring Boot para AKS
+      href: migrate-spring-boot-to-azure-kubernetes-service.md
+    - name: Spring Cloud para Azure Spring Cloud
+      href: migrate-spring-cloud-to-azure-spring-cloud.md
     - name: Tomcat para o Serviço de Aplicativo do Azure
       href: migrate-tomcat-to-tomcat-app-service.md
     - name: Tomcat para contêineres no AKS

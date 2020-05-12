@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: 1068b2917cef3052b6753e0c563cbcaf9af3f542
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: 2afe0deb03a1aff2b40c2d739f873bd6a2bbcf0c
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82209789"
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82988711"
 productDirectory:
   items:
   - title: Python
@@ -124,9 +124,9 @@ additionalContent:
     - title: Azure DevOps
       summary: Use o Azure DevOps para planejar trabalhos, colaborar com o desenvolvimento de códigos e criar e implantar aplicativos.
       url: https://docs.microsoft.com/azure/devops/?view=azure-devops
-    - title: GitHub Actions
-      summary: Use o GitHub Actions para automatizar, personalizar e executar seus fluxos de trabalho de desenvolvimento de software de dentro de seu repositório.
-      url: https://help.github.com/en/actions
+    - title: Azure e GitHub trabalhando juntos
+      summary: Use o GitHub e o GitHub Actions para automatizar, personalizar e executar seus fluxos de trabalho de desenvolvimento de software de dentro de seu repositório.
+      url: https://docs.microsoft.com/azure/developer/github
     - title: Jenkins
       summary: Use o Jenkins para automatizar a integração e a entrega contínuas (CI/CD) em seus projetos de software.
       url: https://docs.microsoft.com/azure/jenkins/

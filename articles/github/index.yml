@@ -1,0 +1,48 @@
+### YamlMime:Landing
+title: GitHub e Azure trabalhando juntos
+summary: Saiba como o GitHub e o Azure trabalham juntos para permitir que você crie e implante aplicativos.
+metadata:
+  title: GitHub e Azure trabalhando juntos
+  description: Saiba como o GitHub e o Azure trabalham juntos para permitir que você crie e implante aplicativos.
+  ms.service: azure
+  ms.topic: landing-page
+  author: KathrynEE
+  ms.author: kaelli
+  ms.date: 05/05/2020
+  ms.openlocfilehash: ea8d295dcd5c5a51261cbcbe223a5b89400740ba
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82990358"
+landingContent:
+- title: GitHub Actions para Azure
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Implantar no Azure usando o GitHub Actions
+      url: github-actions.md
+- title: Implantar no Azure
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Implantar aplicativos do GitHub no Azure
+      url: deploy-to-azure.md
+- title: Visual Studio e Visual Studio Code
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Usar o Visual Studio ou o Visual Studio Code para implantar aplicativos do GitHub
+      url: deploy-with-visual-studio.md
+- title: Integração do Azure DevOps e do GitHub
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Trabalhar com o Azure DevOps e o GitHub
+      url: integrate-azure-devops.md
+- title: Conectar do Azure ao GitHub
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Conectar-se ao GitHub do Azure e de outros serviços
+      url: connect-from-azure.md

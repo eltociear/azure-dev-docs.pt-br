@@ -7,12 +7,12 @@ metadata:
   description: Comece a desenvolver aplicativos para a nuvem com esses tutoriais e ferramentas para desenvolvedores Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: 020812c47c46e062b9d5fe10f9b52ae95d020af8
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: 53d335ee809749a2788ba0d9e94c99f3d972f496
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82643675"
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82988955"
 conceptualContent:
   items:
   - title: Guias de início rápido do Azure para Java
@@ -47,7 +47,7 @@ conceptualContent:
     links:
     - text: Spring para o Serviço de Aplicativo do Azure
       itemType: how-to-guide
-      url: migration/migrate-java-se-to-java-se-app-service.md
+      url: migration/migrate-spring-boot-to-app-service.md
     - text: Tomcat para o Serviço de Aplicativo do Azure
       itemType: how-to-guide
       url: migration/migrate-tomcat-to-tomcat-app-service.md

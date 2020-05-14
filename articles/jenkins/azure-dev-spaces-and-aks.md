@@ -4,12 +4,12 @@ description: Saiba como usar o plug-in do Azure Dev Spaces em um pipeline de int
 keywords: jenkins, azure, devops, azure dev spaces, aks, azure kubernetes service
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.openlocfilehash: acc4fba8bc12c631f395bf980ca6ee8b42dc8f49
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861249"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369937"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Tutorial: Usar o Azure Dev Spaces com o Serviço de Kubernetes do Azure
 
@@ -202,7 +202,7 @@ O pipeline de exemplo usa o Helm e o kubectl para implantar no espaço de desenv
 
 ### <a name="add-credentials-to-jenkins"></a>Adicionar credenciais ao Jenkins
 
-1. O Jenkins precisa de uma entidade de serviço do Azure para autenticar e acessar recursos do Azure. Para criar a entidade de serviço, confira a seção [Criar entidade de serviço](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal) no tutorial Implantar no Serviço de Aplicativo do Azure. Salve uma cópia da saída do `create-for-rbac` porque você precisa dessas informações para concluir a próxima etapa. A saída será parecida com esta:
+1. O Jenkins precisa de uma entidade de serviço do Azure para autenticar e acessar recursos do Azure. Para criar a entidade de serviço, confira a seção [Criar entidade de serviço](deploy-from-github-to-azure-app-service.md#create-service-principal) no tutorial Implantar no Serviço de Aplicativo do Azure. Salve uma cópia da saída do `create-for-rbac` porque você precisa dessas informações para concluir a próxima etapa. A saída será parecida com esta:
 
     ```json
     {
@@ -220,7 +220,7 @@ O pipeline de exemplo usa o Helm e o kubectl para implantar no espaço de desenv
 
     ![Adicionar credenciais de entidade de serviço ao Jenkins](media/azure-dev-spaces-and-aks/add-service-principal-credentials.png)
 
-    A **Descrição** é opcional. Para obter instruções mais detalhadas, confira a seção [Adicionar entidade de serviço ao Jenkins](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#add-service-principal-to-jenkins) no tutorial Implantar no Serviço de Aplicativo do Azure. 
+    A **Descrição** é opcional. Para obter instruções mais detalhadas, confira a seção [Adicionar entidade de serviço ao Jenkins](deploy-from-github-to-azure-app-service.md#add-service-principal-to-jenkins) no tutorial Implantar no Serviço de Aplicativo do Azure. 
 
 
 

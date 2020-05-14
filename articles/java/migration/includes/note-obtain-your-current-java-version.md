@@ -2,20 +2,14 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 1/22/2020
-ms.openlocfilehash: 2fc4e3b43a051103e7aea6aa77f66666ca454910
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 52f546b8928631c98e6ad6fa490e008de809df94
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672132"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988770"
 ---
-<!-- Included in "### Switch to a supported platform" sections that have different (required) intro paragraphs. For example:
-
-### Switch to a supported platform
-
-App Service offers specific versions of Java SE. To ensure compatibility, migrate your application to one of the supported versions of in its current environment before you proceed with any of the remaining steps. Be sure to fully test the resulting configuration. Use the latest stable release of your Linux distribution in such tests.
-
--->
+<!-- Included in technology-specific include files such as note-obtain-your-current-java-version-app-service.md. -->
 
 > [!NOTE]
 > Essa validação é especialmente importante se o servidor atual estiver sendo executado em um JDK não compatível (como Oracle JDK ou IBM OpenJ9).
@@ -25,5 +19,3 @@ Para determinar a sua versão atual do Java, entre no servidor de produção e e
 ```bash
 java -version
 ```
-
-Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe [Zulu 8](https://www.azul.com/downloads/azure-only/zulu/?&version=java-8-lts&architecture=x86-64-bit&package=jdk) se você pretende usar o runtime 8 do Java ou [Zulu 11](https://www.azul.com/downloads/azure-only/zulu/?&version=java-11-lts&architecture=x86-64-bit&package=jdk) se você pretende usar o runtime 11 do Java.

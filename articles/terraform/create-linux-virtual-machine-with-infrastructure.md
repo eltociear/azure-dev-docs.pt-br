@@ -3,13 +3,13 @@ title: Guia de início rápido – Criar uma VM do Linux com a infraestrutura no
 description: Saiba como usar o Terraform para criar e gerenciar um ambiente completo de máquina virtual do Linux no Azure.
 keywords: azure devops terraform linux vm máquina virtual
 ms.topic: quickstart
-ms.date: 05/04/2020
-ms.openlocfilehash: d6763118179251c224e0ec3ae6e05a630cae7cde
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 05/11/2020
+ms.openlocfilehash: 3485e899deaf84a63a2cf2d8085ac34b43f6fca9
+ms.sourcegitcommit: aa417af8b5f00cbc056666e481250ef45c661d52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82801884"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83153717"
 ---
 # <a name="quickstart-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Início Rápido: Criar uma VM do Linux com a infraestrutura no Azure usando o Terraform
 
@@ -146,9 +146,9 @@ resource "azurerm_network_interface" "myterraformnic" {
 
     ip_configuration {
         name                          = "myNicConfiguration"
-        subnet_id                     = "azurerm_subnet.myterraformsubnet.id"
+        subnet_id                     = azurerm_subnet.myterraformsubnet.id
         private_ip_address_allocation = "Dynamic"
-        public_ip_address_id          = "azurerm_public_ip.myterraformpublicip.id"
+        public_ip_address_id          = azurerm_public_ip.myterraformpublicip.id
     }
 
     tags = {
@@ -412,6 +412,9 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
 }
 ```
 
+**Observações:**
+
+- Com relação ao bloco `admin_ssh_key`, o agente de VM do Azure requer que as chaves SSH sejam gravadas no seguinte caminho: `/home/{username}/.ssh/authorized_keys`. Para executar esse exemplo no Windows, talvez seja necessário verificar se essa estrutura de diretório existe. Para obter mais informações sobre o bloco `admin_ssh_key`, confira a [Documentação do azurerm_linux_virtual_machine no Terraform.io](https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html).
 
 ## <a name="build-and-deploy-the-infrastructure"></a>Criar e i,Implantar a infraestrutura
 

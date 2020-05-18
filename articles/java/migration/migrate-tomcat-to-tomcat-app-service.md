@@ -5,31 +5,31 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: c6586f0ba2e651445e95fa3606daa35ee566df87
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 6d2d18a6dbf87a97b806876a534a103dbbf88420
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673472"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988766"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrar aplicativos Tomcat para o Tomcat no Serviço de Aplicativo do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo Tomcat existente para ser executado no Serviço de Aplicativo do Azure usando o Tomcat 9.0.
 
-## <a name="before-you-start"></a>Antes de começar
+## <a name="pre-migration"></a>Pré-migração
 
-Se você não puder atender a nenhum dos requisitos de pré-migração, consulte os seguintes guias de migração complementares:
+Antes de tudo, para garantir uma migração bem-sucedida, conclua as etapas de avaliação e de inventário descritas nas seções a seguir.
+
+Se você não puder atender a nenhum desses requisitos de pré-migração, confira os seguintes guias de migração complementares:
 
 * [Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Migrar aplicativos do Tomcat para Máquinas Virtuais do Azure (diretrizes planejadas)
 
-## <a name="pre-migration"></a>Pré-migração
-
 ### <a name="switch-to-a-supported-platform"></a>Alternar para uma plataforma compatível
 
-O Serviço de Aplicativo oferece versões específicas do Tomcat em versões específicas do Java. Para garantir a compatibilidade, migre seu aplicativo para uma das versões compatíveis do Tomcat e do Java em seu ambiente atual antes de prosseguir com as etapas restantes. É necessário testar completamente a configuração resultante. Use a versão estável mais recente da sua distribuição do Linux nesses testes.
+O Serviço de Aplicativo oferece versões específicas do Tomcat em versões específicas do Java. Para garantir a compatibilidade, migre o aplicativo para uma das versões com suporte do Tomcat e do Java no ambiente atual antes de continuar com qualquer uma das etapas restantes. É necessário testar completamente a configuração resultante. Use a versão estável mais recente da sua distribuição do Linux nesses testes.
 
-[!INCLUDE [note-obtain-your-current-java-version](includes/note-obtain-your-current-java-version.md)]
+[!INCLUDE [note-obtain-your-current-java-version-app-service](includes/note-obtain-your-current-java-version-app-service.md)]
 
 Para determinar a sua versão atual do Tomcat, entre no servidor de produção e execute o seguinte comando:
 
@@ -43,9 +43,11 @@ Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe o [
 
 [!INCLUDE [inventory-secrets](includes/inventory-secrets.md)]
 
+### <a name="inventory-certificates"></a>Inventariar os certificados
+
 [!INCLUDE [inventory-certificates](includes/inventory-certificates.md)]
 
-[!INCLUDE [inventory-persistence-usage](includes/inventory-persistence-usage.md)]
+[!INCLUDE [determine-whether-and-how-the-file-system-is-used](includes/determine-whether-and-how-the-file-system-is-used.md)]
 
 <!-- App-Service-specific addendum to inventory-persistence-usage -->
 #### <a name="dynamic-or-internal-content"></a>Conteúdo dinâmico ou interno
@@ -62,17 +64,17 @@ Se a persistência da sessão for necessária, você precisará usar uma impleme
 
 ### <a name="special-cases"></a>Casos especiais
 
-Determinados cenários de produção podem exigir alterações adicionais ou impor limitações adicionais. Embora esses cenários possam ser infrequentes, é importante garantir que eles não se apliquem ao seu aplicativo ou que sejam resolvidos corretamente.
+Determinados cenários de produção podem exigir alterações adicionais ou impor limitações adicionais. Embora esses cenários sejam raros, é importante verificar se eles não se aplicam ao aplicativo ou estão resolvidos corretamente.
 
 #### <a name="determine-whether-application-relies-on-scheduled-jobs"></a>Determinar se o aplicativo depende de trabalhos agendados
 
-Trabalhos agendados, como tarefas do Agendador do Quartz ou trabalhos cron, não podem ser usados com o Serviço de Aplicativo. O Serviço de Aplicativo não impedirá que você implante um aplicativo que contenha tarefas agendadas internamente. No entanto, se o aplicativo for escalado horizontalmente, um mesmo trabalho agendado poderá ser executado mais de uma vez por período agendado. Essa situação pode levar a consequências indesejadas.
+Trabalhos agendados, como tarefas do Agendador do Quartz ou trabalhos cron, não podem ser usados com o Serviço de Aplicativo. O Serviço de Aplicativo não impedirá que você implante um aplicativo que contém tarefas agendadas internamente. No entanto, se o aplicativo for escalado horizontalmente, um mesmo trabalho agendado poderá ser executado mais de uma vez por período agendado. Essa situação pode levar a consequências indesejadas.
 
 Inventarie quaisquer trabalhos agendados, dentro ou fora do servidor de aplicativos.
 
 #### <a name="determine-whether-your-application-contains-os-specific-code"></a>Determinar se o aplicativo contém código específico do sistema operacional
 
-Se seu aplicativo contiver qualquer código com dependências do sistema operacional do host, você precisará refatorá-lo para remover essas dependências. Por exemplo, talvez seja necessário substituir qualquer uso de `/` ou `\` em caminhos do sistema de arquivos com [`File.Separator`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html#separator) ou [`Paths.get`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html#get-java.lang.String-java.lang.String...-).
+[!INCLUDE [determine-whether-your-application-contains-os-specific-code-no-title](includes/determine-whether-your-application-contains-os-specific-code-no-title.md)]
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Determinar se o clustering do Tomcat é ou não usado
 
@@ -82,7 +84,7 @@ Para determinar se seu aplicativo usa clustering, procure o elemento `<Cluster>`
 
 #### <a name="identify-all-outside-processesdaemons-running-on-the-production-servers"></a>Identificar todos os processos/daemons externos em execução nos servidores de produção
 
-Você precisará migrar em outro lugar ou eliminar todos os processos em execução fora do servidor de aplicativos, como o monitoramento de daemons.
+Você precisará migrar para outro lugar ou eliminar os processos em execução fora do servidor de aplicativos, como o monitoramento de daemons.
 
 #### <a name="determine-whether-non-http-connectors-are-used"></a>Determinar se conectores não HTTP são ou não usados
 
@@ -92,23 +94,23 @@ Para identificar os conectores HTTP usados pelo seu aplicativo, procure elemento
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>Determinar se MemoryRealm é usado
 
-[MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) requer um arquivo XML persistente. No Serviço de Aplicativo do Azure, você precisará carregar esse arquivo no diretório */home* ou em subdiretório dele ou ainda em um armazenamento montado. Você precisará modificar o parâmetro `pathName` de acordo.
+[MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) requer um arquivo XML persistente. No Serviço de Aplicativo do Azure, você precisará carregar esse arquivo no diretório */home*, em um dos subdiretórios dele ou em um armazenamento montado. Em seguida, você precisará modificar o parâmetro `pathName` de acordo.
 
 Para determinar se `MemoryRealm` está sendo usado no momento, inspecione os arquivos *server.xml* e *context.xml* e pesquise por elementos `<Realm>` em que o atributo `className` está definido como `org.apache.catalina.realm.MemoryRealm`.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>Determinar se o acompanhamento de sessão SSL é usado
 
-O Serviço de Aplicativo executa o descarregamento de sessão fora do runtime do Tomcat. Portanto, você não pode usar o [acompanhamento de sessão SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Em vez disso, use um modo de acompanhamento de sessão diferente (`COOKIE` ou `URL`). Se você precisar de acompanhamento de sessão SSL, não use o Serviço de Aplicativo.
+O Serviço de Aplicativo realiza o descarregamento de sessão fora do runtime do Tomcat. Portanto, não é possível usar o [acompanhamento de sessão SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Em vez disso, use um modo de acompanhamento de sessão diferente (`COOKIE` ou `URL`). Se você precisar de acompanhamento de sessão SSL, não use o Serviço de Aplicativo.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>Determine se AccessLogValve é ou não usado
 
-Se você usar [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), deverá definir o parâmetro `directory` como `/home/LogFiles` ou como um subdiretório dele.
+Se você usar [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), defina o parâmetro `directory` como `/home/LogFiles` ou um dos subdiretórios dele.
 
 ## <a name="migration"></a>Migração
 
 ### <a name="parameterize-the-configuration"></a>Parametrizar a configuração
 
-Na pré-migração, você provavelmente terá identificado segredos e dependências externas, como fontes de dados, nos arquivos *server.xml* e *context.xml*. Para cada item identificado assim, substitua qualquer nome de usuário, senha, cadeia de conexão ou URL por uma variável de ambiente.
+Nas etapas de pré-migração, é provável que você tenha identificado alguns segredos e algumas dependências externas, como fontes de dados, nos arquivos *server.xml* e *context.xml*. Para cada item identificado, substitua qualquer nome de usuário, senha, cadeia de conexão ou URL por uma variável de ambiente.
 
 Por exemplo, suponha que o arquivo *context.xml* contém o seguinte elemento:
 
@@ -211,10 +213,10 @@ Agora que você migrou seu aplicativo para o Serviço de Aplicativo do Azure, vo
 
 * Se você optou por usar o diretório */home* para armazenamento de arquivos, considere [substituí-lo pelo Armazenamento do Azure](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
 
-* Se você tiver uma configuração no diretório */home* que contenha cadeias de conexão, chaves SSL e outras informações secretas, considere usar uma combinação de [Azure Key Vault](/azure/app-service/app-service-key-vault-references) e/ou [injeção de parâmetro com configurações de aplicativo](/azure/app-service/configure-common#configure-app-settings) sempre que possível.
+* Se você tiver uma configuração no diretório */home* que contém cadeias de conexão, chaves SSL e outras informações de segredo, considere usar uma combinação do [Azure Key Vault](/azure/app-service/app-service-key-vault-references) e/ou uma [injeção de parâmetro com configurações de aplicativo](/azure/app-service/configure-common#configure-app-settings) sempre que possível.
 
 * Considere [usar slots de implantação](/azure/app-service/deploy-staging-slots) para implantações confiáveis sem nenhum tempo de inatividade.
 
-* Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Se estiver usando slots de implantação, você poderá [automatizar a implantação em um slot](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) e a troca de slots subsequente.
+* Crie e implemente uma estratégia de DevOps. Para manter a confiabilidade, aumentando simultaneamente a velocidade de desenvolvimento, considere [automatizar implantações e testar com Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Ao usar slots de implantação, você pode [automatizar a implantação em um slot](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) e depois trocá-lo por outro.
 
 * Criar a implementar uma estratégia de continuidade dos negócios e recuperação de desastre. Para aplicativos críticos, considere a possibilidade de [usar uma arquitetura de implantação em várias regiões](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

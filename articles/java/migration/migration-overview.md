@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: e6215502b54bedf62f40a024f9e7b3acc01cdc1f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 1eeb7d6a17bb21963f3203d484387c0aae6c402f
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670602"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988693"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrar aplicativos Java para o Azure
 
@@ -80,7 +80,7 @@ Use a grade a seguir para identificar os destinos que dão suporte aos tipos de 
 
 |   |Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|
-| Aplicativos do Spring Boot/JAR                                    |&#x2714;|        |        |&#x2714;|&#x2714;|
+| Aplicativos do Spring Boot/JAR                                    |&#x2714;|        |&#x2714;|&#x2714;|&#x2714;|
 | Spring Cloud/microsserviços                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
 | Aplicativos Web                                                  |        |&#x2714;|        |&#x2714;|&#x2714;|
 | Aplicativos Java EE                                              |        |        |        |&#x2714;|&#x2714;|
@@ -88,6 +88,8 @@ Use a grade a seguir para identificar os destinos que dão suporte aos tipos de 
 | Persistência de longo prazo no sistema de arquivos local                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
 | Clustering no nível do servidor de aplicativos                               |        |        |        |&#x2714;|&#x2714;|
 | Trabalhos agendados/em lotes                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Integração VNet/conectividade híbrida                              |Visualização |Visualização |        |&#x2714;|&#x2714;|
+| Disponibilidade de região do Azure                | [Detalhes][10] | [Detalhes][10] | [Detalhes][11] |[Detalhes][12]|[Detalhes][13]|
 
 ### <a name="ongoing-responsibility-grid"></a>Grade de responsabilidade em andamento
 
@@ -98,14 +100,14 @@ A sua equipe é responsável continuamente pelas tarefas indicadas com "&#x1F449
 > [!NOTE]
 > Essa não é uma lista exaustiva de responsabilidades.
 
-|   | Serviço de Aplicativo | Azure Spring Cloud | AKS | Máquinas Virtuais |
+|                                                                       | Serviço de Aplicativo | Azure Spring Cloud | AKS | Máquinas Virtuais |
 |---|---|---|---|---|
 | Atualizando bibliotecas<br>(incluindo a correção de vulnerabilidades)                 | &#x1F449;   | &#x1F449;   | &#x1F449;   | &#x1F449; |
 | Atualizando o servidor de aplicativos<br>(incluindo a correção de vulnerabilidades)    | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |
 | Atualizando o Java Runtime<br>(incluindo a correção de vulnerabilidades)          | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |
-| Disparando atualizações do Kubernetes<br>(executado pelo Azure com um gatilho manual) | N/D         | N/D         | &#x1F449;   | N/D       |
-| Reconciliar alterações de API de Kubernetes não compatíveis com versões anteriores                  | N/D         | N/D         | &#x1F449;   | N/D       |
-| Atualizar imagem base do contêiner<br>(incluindo a correção de vulnerabilidades)      | N/D         | N/D         | &#x1F449;   | N/D       |
+| Disparando atualizações do Kubernetes<br>(executado pelo Azure com um gatilho manual) | N/D         | ![Azure][1] | &#x1F449;   | N/D       |
+| Reconciliar alterações de API de Kubernetes não compatíveis com versões anteriores                  | N/D         | ![Azure][1] | &#x1F449;   | N/D       |
+| Atualizar imagem base do contêiner<br>(incluindo a correção de vulnerabilidades)      | N/D         | ![Azure][1] | &#x1F449;   | N/D       |
 | Atualizar o sistema operacional<br>(incluindo a correção de vulnerabilidades)      | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
 | Detectar e reiniciar instâncias com falha                                   | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
 | Implementar a reinicialização sem interrupção e com descarga para atualizações                       | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
@@ -132,14 +134,14 @@ Use as grades a seguir para encontrar diretrizes de migração por tipo de aplic
 
 Use as linhas abaixo para encontrar o tipo do seu aplicativo Java e as colunas para localizar o destino do serviço do Azure que hospedará seu aplicativo.
 
-Se você desejar migrar um aplicativo JBoss EAP para o Tomcat no Serviço de Aplicativo, primeiro converta o aplicativo Java EE em aplicativos Web Java (servlets) em execução no Tomcat e siga as diretrizes indicadas abaixo.
+Se você desejar migrar um aplicativo JBoss EAP para o Tomcat no Serviço de Aplicativo, primeiro converta o aplicativo Java EE em aplicativos Web Java (servlets) em execução no Tomcat e depois siga as diretrizes indicadas abaixo.
 
-Se você desejar migrar um aplicativo Web no Tomcat para o Azure Spring Cloud, primeiro converta o aplicativo em microsserviços do Spring Cloud e siga as diretrizes indicadas abaixo.
+Se você desejar migrar um aplicativo Web no Tomcat para o Azure Spring Cloud, primeiro converta o aplicativo em microsserviços Spring Cloud e depois siga as diretrizes indicadas abaixo.
 
 |Destino&nbsp;→<br><br>Tipo&nbsp;do Aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|
-| Spring Boot/<br>Aplicativos JAR | [diretrizes][5] | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado |
-| Spring Cloud/<br>microsserviços   | N/D           | N/D                 | diretrizes<br>planejado | diretrizes<br>planejado | diretrizes<br>planejado |
+| Spring Boot/<br>Aplicativos JAR | [diretrizes][5] | diretrizes<br>planejado | diretrizes<br>planejado | [diretrizes][14]      | diretrizes<br>planejado |
+| Spring Cloud/<br>microsserviços   | N/D           | N/D                 | [diretrizes][15]      | diretrizes<br>planejado | diretrizes<br>planejado |
 | Aplicativos Web<br>no Tomcat     | N/D           | [diretrizes][2]       | N/D                 | [diretrizes][3]       | diretrizes<br>planejado |
 
 **Aplicativos Java EE**
@@ -158,8 +160,14 @@ Use as linhas abaixo para localizar o tipo de aplicativo Java EE em execução e
 [2]: migrate-tomcat-to-tomcat-app-service.md
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
 [4]: migrate-weblogic-to-virtual-machines.md
-[5]: migrate-java-se-to-java-se-app-service.md
+[5]: migrate-spring-boot-to-app-service.md
 [6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
 [7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
 [8]: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md
 [9]: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+[10]: https://azure.microsoft.com/global-infrastructure/services/?products=app-service-linux
+[11]: https://azure.microsoft.com/global-infrastructure/services/?products=spring-cloud
+[12]: https://azure.microsoft.com/global-infrastructure/services/?products=kubernetes-service
+[13]: https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines
+[14]: migrate-spring-boot-to-azure-kubernetes-service.md
+[15]: migrate-spring-cloud-to-azure-spring-cloud.md

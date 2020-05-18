@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 1d7348530a163981f5c0a5f6cd6af26d01c55848
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 8a6245f496b3a1371c43f764081f50b7b3f13dbd
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81671592"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988741"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure
 
@@ -18,16 +18,16 @@ Este guia descreve as informações das quais você deve estar ciente quando des
 
 ## <a name="pre-migration"></a>Pré-migração
 
+Antes de tudo, para garantir uma migração bem-sucedida, conclua as etapas de avaliação e de inventário descritas nas seções a seguir.
+
 [!INCLUDE [inventory-external-resources](includes/inventory-external-resources.md)]
 
 [!INCLUDE [inventory-secrets](includes/inventory-secrets.md)]
 
-[!INCLUDE [inventory-persistence-usage](includes/inventory-persistence-usage.md)]
+[!INCLUDE [determine-whether-and-how-the-file-system-is-used](includes/determine-whether-and-how-the-file-system-is-used.md)]
 
 <!-- AKS-specific addendum to inventory-persistence-usage -->
-#### <a name="dynamic-or-internal-content"></a>Conteúdo dinâmico ou interno
-
-Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como arquivos de dados temporários) ou arquivos estáticos que são visíveis somente para o aplicativo, você pode montar compartilhamentos do Armazenamento do Azure como volumes persistentes. Para obter mais informações, confira [Criar e usar dinamicamente um volume persistente com Arquivos do Azure no Serviço de Kubernetes do Azure](/azure/aks/azure-files-dynamic-pv).
+[!INCLUDE [dynamic-or-internal-content-aks](includes/dynamic-or-internal-content-aks.md)]
 
 ### <a name="identify-session-persistence-mechanism"></a>Identificar o mecanismo de persistência da sessão
 
@@ -132,7 +132,7 @@ Para determinar se seu aplicativo usa clustering, procure o elemento `<Cluster>`
 
 Edite *server.xml* para adicionar os recursos que você preparou nas etapas de pré-migração, como fontes de dados.
 
-Por exemplo: 
+Por exemplo:
 
 ```xml
 <!-- Global JNDI resources

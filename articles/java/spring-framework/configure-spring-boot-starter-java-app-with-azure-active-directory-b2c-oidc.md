@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 71bc7e2e7677ce3f53c70bd68e5e73765070bd06
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c06c1205d1ef1f8dc7eec674c846cf53c6a2e5e8
+ms.sourcegitcommit: 996212c5a141d724d26f3899e91d194b08b2dc0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82104857"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82985169"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory B2C.
 
@@ -88,15 +88,16 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 
    ![Adicionar URI de Redirecionamento do Aplicativo](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-3. Selecione **Certificados e segredos** do seu aplicativo, clique em **Gerar chave** para gerar `${your-client-secret}` e, em seguida, **Salvar**.
+3. Selecione **Certificados e segredos** e clique em **Novo segredo do cliente** para gerar a chave.
 
    ![Criar fluxo de usuário](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
 
-4. Selecione **Fluxos dos usuários** à esquerda e então **Clique em** **Novo fluxo de usuário**.
+4. Selecione **Fluxos dos usuários** à esquerda e clique em **Novo fluxo de usuário**.
 
-5. Escolher **Inscrever-se ou entrar**, **Edição de perfil** e **Redefinição de senha** para criar fluxos dos usuários, respectivamente. Especifique o **Nome** e os **Atributos e declarações do usuário** de seu fluxo de usuário e clique em **Criar**.
+5. Escolha **Inscrever-se ou entrar**, **Edição de perfil** e **Redefinição de senha** para criar o fluxo do usuário. Para saber mais, confira [Tutorial: Criar fluxos dos usuários no Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-create-user-flows). O AAD B2C dá suporte a contas locais, bem como a provedores de identidade social. Para obter um exemplo de como criar um provedor de identidade do GitHub, confira [Configurar a inscrição e a entrada com uma conta do GitHub usando o Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
+Certifique-se de selecionar **Nome de Exibição** para que ele seja incluído no token de declaração.
 
-   ![Configurar fluxo de usuário](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c4-n.png)
+   ![Criar fluxo de usuário](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c-create-userflow.png)
 
 ## <a name="configure-and-compile-your-app"></a>Configurar e compilar seu aplicativo
 
@@ -110,7 +111,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    <dependency>
        <groupId>com.microsoft.azure</groupId>
        <artifactId>azure-active-directory-b2c-spring-boot-starter</artifactId>
-       <version>2.1.6.M2</version>
+       <version>2.2.4</version>
    </dependency>
    <dependency>
        <groupId>org.springframework.boot</groupId>
@@ -132,10 +133,10 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    azure:
      activedirectory:
        b2c:
-         tenant: ${your-tenant-name}
+         tenant: ${your-tenant-name} # This is also the first part of your domain name before "onmicrosoft.com".
          client-id: ${your-client-id}
          client-secret: ${your-client-secret}
-         reply-url: ${your-redirect-uri-from-aad} # should be absolute url.
+         reply-url: ${your-redirect-uri-from-aad} # This should be an absolute URL.
          logout-success-url: ${you-logout-success-url}
          user-flows:
            sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}

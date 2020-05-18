@@ -5,24 +5,24 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 2/28/2020
-ms.openlocfilehash: d17551aeb1041415e2c5b6d5fd8a43d3b7b670aa
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: b8df6a28083521bca900e5c1c939c6456546f349
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673382"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988923"
 ---
 # <a name="migrate-weblogic-applications-to-wildfly-on-azure-kubernetes-service"></a>Migrar aplicativos WebLogic para o WildFly no Serviço de Kubernetes do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebLogic existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
 
-## <a name="before-you-start"></a>Antes de começar
+## <a name="pre-migration"></a>Pré-migração
+
+Antes de tudo, para garantir uma migração bem-sucedida, conclua as etapas de avaliação e de inventário descritas nas seções a seguir.
 
 Se você não puder atender a nenhum dos requisitos de pré-migração, confira o guia de migração complementar:
 
 * [Migrar seus aplicativos WebLogic para Máquinas Virtuais do Azure](migrate-weblogic-to-virtual-machines.md)
-
-## <a name="pre-migration"></a>Pré-migração
 
 [!INCLUDE [inventory-server-capacity-aks](includes/inventory-server-capacity-aks.md)]
 
@@ -66,15 +66,7 @@ Se seu aplicativo depender da replicação de sessão, com ou sem o Oracle Coher
 
 [!INCLUDE [identify-all-outside-processes-and-daemons-running-on-the-production-servers](includes/identify-all-outside-processes-and-daemons-running-on-the-production-servers.md)]
 
-### <a name="validate-that-the-supported-java-version-works-correctly"></a>Validar se a versão Java com suporte funciona corretamente
-
-O uso do WildFly no Serviço de Kubernetes do Azure requer uma versão específica do Java. Portanto, você precisará validar se seu aplicativo pode ser executado corretamente usando essa versão com suporte. Essa validação será especialmente importante se o servidor atual estiver usando um JDK compatível (como Oracle JDK ou IBM OpenJ9).
-
-Para determinar a sua versão atual, entre no servidor de produção e execute o seguinte comando:
-
-```bash
-java -version
-```
+[!INCLUDE [validate-that-the-supported-java-version-works-correctly-wildfly](includes/validate-that-the-supported-java-version-works-correctly-wildfly.md)]
 
 [!INCLUDE [determine-whether-your-application-relies-on-scheduled-jobs](includes/determine-whether-your-application-relies-on-scheduled-jobs.md)]
 
@@ -102,21 +94,13 @@ Se seu aplicativo tiver sido implantado usando um plano de implantação, você 
 
 [!INCLUDE [determine-whether-ejb-timers-are-in-use](includes/determine-whether-ejb-timers-are-in-use.md)]
 
-### <a name="validate-whether-and-how-the-file-system-is-used"></a>Validar se e como o sistema de arquivos é usado
+### <a name="determine-whether-and-how-the-file-system-is-used"></a>Determinar se e como o sistema de arquivos é usado
 
 Qualquer uso do sistema de arquivos no servidor de aplicativos exigirá reconfiguração ou, em casos raros, alterações de arquitetura. O sistema de arquivos pode ser usado por módulos compartilhados do WebLogic ou pelo seu código do aplicativo. Você pode identificar alguns ou todos os cenários descritos nas seções a seguir.
 
-#### <a name="read-only-static-content"></a>Conteúdo estático somente leitura
+[!INCLUDE [static-content](includes/static-content.md)]
 
-Se seu aplicativo estiver servindo conteúdo estático no momento, você precisará de um local alternativo para ele. Talvez você queira considerar a movimentação de conteúdo estático para o Armazenamento de Blobs do Azure e a adição da CDN do Azure para downloads extremamente rápidos, globalmente. Para obter mais informações, confira [Hospedagem de site estático no Armazenamento do Microsoft Azure](/azure/storage/blobs/storage-blob-static-website) e [Início rápido: Integrar uma conta de armazenamento do Azure à CDN do Azure](/azure/cdn/cdn-create-a-storage-account-with-cdn).
-
-#### <a name="dynamically-published-static-content"></a>Conteúdo estático publicado dinamicamente
-
-Se o aplicativo permitir conteúdo estático que é carregado/produzido pelo aplicativo, mas não puder ser alterado após sua própria criação, você poderá usar o Armazenamento de Blobs do Azure e a CDN do Azure, conforme descrito acima, com uma função do Azure para lidar com uploads e atualização de CDN. Fornecemos uma implementação de exemplo para seu uso em [Carregar conteúdo estático e fazer o pré-carregamento desse conteúdo pela CDN com o Azure Functions](https://github.com/Azure-Samples/functions-java-push-static-contents-to-cdn).
-
-#### <a name="dynamic-or-internal-content"></a>Conteúdo dinâmico ou interno
-
-Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como arquivos de dados temporários) ou arquivos estáticos que são visíveis somente para o aplicativo, você pode montar compartilhamentos do Armazenamento do Azure como volumes persistentes. Para obter mais informações, confira [Criar e usar dinamicamente um volume persistente com Arquivos do Azure no Serviço de Kubernetes do Azure](/azure/aks/azure-files-dynamic-pv).
+[!INCLUDE [dynamic-or-internal-content-aks](includes/dynamic-or-internal-content-aks.md)]
 
 ### <a name="determine-whether-jca-connectors-are-used"></a>Determinar se conectores JCA são usados
 

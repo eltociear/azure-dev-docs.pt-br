@@ -5,18 +5,20 @@ author: edburns
 ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
-ms.openlocfilehash: 10edb96e4e0781945da85d5a872b14178db3122f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: b9d9a4ea8ef81af5c67b91281e892b4626f42f62
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673512"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988918"
 ---
 # <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Migrar seus aplicativos WebLogic para Máquinas Virtuais do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebLogic existente para ser executado em Máquinas Virtuais do Azure.
 
 ## <a name="pre-migration"></a>Pré-migração
+
+Antes de tudo, para garantir uma migração bem-sucedida, conclua as etapas de avaliação e de inventário descritas nas seções a seguir.
 
 ### <a name="define-what-you-mean-by-migration-complete"></a>Defina o que você quer dizer por "migração concluída"
 
@@ -40,11 +42,11 @@ Sua versão existente do WebLogic deve ser compatível com a versão nas ofertas
 
 [!INCLUDE [inventory-all-certificates](includes/inventory-all-certificates.md)]
 
-[!INCLUDE [validate-that-the-supported-java-version-works-correctly](includes/validate-that-the-supported-java-version-works-correctly.md)]
+[!INCLUDE [validate-that-the-supported-java-version-works-correctly-weblogic](includes/validate-that-the-supported-java-version-works-correctly-weblogic.md)]
 
 [!INCLUDE [inventory-jndi-resources](includes/inventory-jndi-resources.md)]
 
-[!INCLUDE [domain-configuration](includes/domain-configuration.md)]
+[!INCLUDE [inspect-your-domain-configuration](includes/inspect-your-domain-configuration.md)]
 
 [!INCLUDE [determine-whether-session-replication-is-used](includes/determine-whether-session-replication-is-used.md)]
 
@@ -74,7 +76,11 @@ Sua versão existente do WebLogic deve ser compatível com a versão nas ofertas
 
 [!INCLUDE [determine-whether-wlst-is-used](includes/determine-whether-wlst-is-used.md)]
 
-[!INCLUDE [validate-whether-and-how-the-file-system-is-used](includes/validate-whether-and-how-the-file-system-is-used.md)]
+### <a name="determine-whether-and-how-the-file-system-is-used"></a>Determinar se e como o sistema de arquivos é usado
+
+Os sistemas de arquivos de VMs funcionam da mesma forma que os sistemas de arquivos locais em relação à persistência, inicialização e ao desligamento. Mesmo assim, é importante estar ciente das necessidades do seu sistema de arquivos e garantir que as VMs tenham o tamanho e o desempenho de armazenamento adequados.
+
+[!INCLUDE [static-content](includes/static-content.md)]
 
 [!INCLUDE [determine-the-network-topology](includes/determine-the-network-topology.md)]
 

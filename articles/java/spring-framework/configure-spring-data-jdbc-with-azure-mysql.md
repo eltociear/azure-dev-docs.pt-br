@@ -1,252 +1,102 @@
 ---
-title: Como usar o Spring Data JDBC com o Banco de Dados do Azure para MySQL
+title: Usar o Spring Data JDBC com o Banco de Dados do Azure para MySQL
 description: Saiba como usar o Spring Data JDBC com um Banco de Dados do Azure para MySQL.
 documentationcenter: java
-ms.date: 01/07/2020
+ms.date: 04/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
-ms.topic: conceptual
-ms.openlocfilehash: 3fc5a9af588da64a65659935d3d6c3f72e4fa0e3
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.author: judubois
+ms.topic: article
+ms.openlocfilehash: 256a32753c5677f3676e5096c7a1e3223d751c60
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669052"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369955"
 ---
-# <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Como usar o Spring Data JDBC com o MySQL do Azure
+# <a name="use-spring-data-jdbc-with-azure-database-for-mysql"></a>Usar o Spring Data JDBC com o Banco de Dados do Azure para MySQL
 
-## <a name="overview"></a>Visão geral
+Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data JDBC](https://spring.io/projects/spring-data-jdbc) para armazenar e recuperar informações no [Banco de Dados do Azure para MySQL](https://docs.microsoft.com/azure/mysql/).
 
-Este artigo demonstra a criação de um aplicativo de exemplo que usa o [Spring Data] para armazenar e recuperar informações em um [Banco de Dados do Azure para MySQL](/azure/mysql/) usando [JDBC (Java Database Connectivity)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
+O [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) é a API Java padrão para se conectar a bancos de dados relacionais tradicionais.
 
-## <a name="prerequisites"></a>Pré-requisitos
+[!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
-Os seguintes pré-requisitos são obrigatórios para você concluir as etapas neste artigo:
+[!INCLUDE [spring-data-mysql-setup.md](includes/spring-data-mysql-setup.md)]
 
-* Uma assinatura do Azure; se ainda não tiver uma assinatura do Azure, você poderá ativar o [benefício de assinante do MSDN] ou inscrever-se para uma [conta gratuita do Azure].
-* Um JDK (Java Development Kit) com suporte. Para obter mais informações sobre os JDKs disponíveis para usar durante o desenvolvimento no Azure, confira <https://aka.ms/azure-jdks>.
-* [Apache Maven](http://maven.apache.org/) versão 3.0 ou posterior.
-* [Curl](https://curl.haxx.se/) ou utilitário HTTP semelhante para testar a funcionalidade.
-* O utilitário de linha de comando [mysql](https://dev.mysql.com/downloads/).
-* Um cliente [Git](https://git-scm.com/downloads).
+### <a name="generate-the-application-by-using-spring-initializr"></a>Gerar o aplicativo usando o Spring Initializr
 
-## <a name="create-an-azure-database-for-mysql"></a>Criar um Banco de Dados do Azure para MySQL 
+Gere o aplicativo na linha de comando ao digitar:
 
-### <a name="create-a-server-using-the-azure-portal"></a>Criar um servidor usando o portal do Azure
+```bash
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RC1 -d javaVersion=8 | tar -xzvf -
+```
+
+### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Configurar o Spring Boot para usar o Banco de Dados do Azure para MySQL
+
+Abra o arquivo *src/main/resources/application.properties* e adicione:
+
+```properties
+logging.level.org.springframework.jdbc.core=DEBUG
+
+spring.datasource.url=jdbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/demo?serverTimezone=UTC
+spring.datasource.username=spring@$AZ_DATABASE_NAME
+spring.datasource.password=$AZ_MYSQL_PASSWORD
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.datasource.initialization-mode=always
+```
+
+- Substitua as duas variáveis `$AZ_DATABASE_NAME` pelo valor que você configurou no início deste artigo.
+- Substitua a variável `$AZ_MYSQL_PASSWORD` pelo valor que você configurou no início deste artigo.
+
+> [!WARNING]
+> A propriedade de configuração `spring.datasource.initialization-mode=always` significa que o Spring Boot gerará um esquema de banco de dados automaticamente, usando o arquivo `schema.sql` que criaremos mais tarde, sempre que o servidor for iniciado. Isso é ótimo para testes, mas excluirá os dados a cada reinicialização. Portanto, não deve ser usado na produção.
 
 > [!NOTE]
-> 
-> Veja informações mais detalhadas sobre a criação de bancos de dados MySQL em [Criar um servidor de Banco de Dados do Azure para MySQL usando o portal do Azure](/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal).
+> Acrescentamos `?serverTimezone=UTC` à propriedade de configuração `spring.datasource.url` para instruir o driver JDBC a usar o formato de data UTC (Tempo Universal Coordenado) ao conectar-se ao banco de dados. Caso contrário, nosso servidor Java não usaria o mesmo formato de data que o banco de dados, o que resultaria em um erro.
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
+Agora, você deveria conseguir iniciar o aplicativo usando o wrapper do Maven fornecido:
 
-1. Clique em **+Criar um recurso**, **Bancos de dados** e clique em **Banco de Dados do Azure para MySQL**.
+```bash
+./mvnw spring-boot:run
+```
 
-   ![Criar um banco de dados MySQL][MYSQL01]
+Aqui está uma captura de tela do aplicativo em execução pela primeira vez:
 
-1. Insira as seguintes informações:
+[![O aplicativo em execução](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png)](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png#lightbox)
 
-   - **Assinatura**: especifique a assinatura do Azure para usar.
-   - **Grupo de recursos**: especifique se deseja criar um novo grupo de recursos ou escolher um grupo de recursos existente.
-   - **Nome do servidor**: Escolha um nome exclusivo para o servidor MySQL. Ele será usado para criar um nome de domínio totalmente qualificado, como *wingtiptoysmysql.mysql.database.azure.com*.
-   - **Fonte de dados**: No caso deste tutorial, escolha `Blank` para criar um novo banco de dados.
-   - **Nome de usuário do administrador**: especifique o nome do administrador do banco de dados.
-   - **Senha** e **Confirmar senha**: especifique a senha para o administrador do banco de dados.
-   - **Localização**: especifique a região geográfica mais próxima do banco de dados.
-   - **Versão**: especifique a versão mais atualizada do banco de dados.
+### <a name="create-the-database-schema"></a>Criar o esquema de banco de dados
 
-   ![Criar as propriedades do banco de dados MySQL][MYSQL02]
+O Spring Boot executará *src/main/resources/`schema.sql`* automaticamente para criar um esquema de banco de dados. Crie esse arquivo com o seguinte conteúdo:
 
-1. Após inserir todas as informações acima, clique em **Revisar + Criar**.
+```sql
+DROP TABLE IF EXISTS todo;
+CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARCHAR(4096), done BOOLEAN);
+```
 
-1. Revise a especificação e clique em **Criar**.
+Pare o aplicativo em execução e inicie-o novamente. O aplicativo agora usará o banco de dados `demo` que você criou anteriormente e criará uma tabela `todo` dentro dele.
 
-### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Configurar uma regra de firewall para o servidor usando o portal do Azure
+```bash
+./mvnw spring-boot:run
+```
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
+## <a name="code-the-application"></a>Codificar o aplicativo
 
-1. Clique em **Todos os Recursos** e, em seguida, clique nos recursos do Banco de Dados do Azure para MySQL que você acabou de criar.
+Em seguida, adicione o código Java que usará o JDBC para armazenar e recuperar dados do servidor MySQL.
 
-1. Clique em **Segurança de conexão** e, nas **Regras de firewall** , crie uma nova regra especificando um nome exclusivo para a regra e, em seguida, insira o intervalo de endereços IP que precisarão acessar seu banco de dados e clique em **Salvar** . (Para este exercício, o endereço IP é o do seu computador de desenvolvimento, que é o cliente.  Você pode usá-lo para **Endereço IP inicial** e **Endereço IP final**.)
+[!INCLUDE [spring-data-jdbc-create-application.md](includes/spring-data-jdbc-create-application.md)]
 
-   ![Configurar a segurança da conexão][MYSQL04]
+Aqui está uma captura de tela dessas solicitações cURL:
 
-### <a name="retrieve-the-connection-string-for-your-server-using-the-azure-portal"></a>Recuperar a cadeia de conexão para o servidor usando o portal do Azure
+[![Testar com o cURL](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png)](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png#lightbox)
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/> e entre.
+Parabéns! Você criou um aplicativo Spring Boot que usa o JDBC para armazenar e recuperar dados do Banco de Dados do Azure para MySQL.
 
-1. Clique em **Todos os Recursos** e, em seguida, selecione o Banco de Dados do Azure para MySQL que você acabou de criar.
-
-1. Clique em **Cadeias de conexão** e copie o valor no campo de texto **JDBC**.
-
-   ![Recuperar sua cadeia de conexão JDBC][MYSQL05]
-
-### <a name="create-a-database-using-the-mysql-command-line-utility"></a>Criar um banco de dados usando o utilitário de linha de comando `mysql`
-
-1. Abra um shell de comando e conecte-se ao servidor MySQL digitando um comando `mysql` como no exemplo a seguir:
-
-   ```shell
-   mysql --host wingtiptoysmysql.mysql.database.azure.com --user wingtiptoysuser@wingtiptoysmysql -p
-   ```
-   Em que:
-
-   | Parâmetro | Descrição |
-   |---|---|
-   | `host` | Especifica o nome totalmente qualificado do servidor MySQL neste artigo. |
-   | `user` | Especifica o administrador do MySQL e o nome abreviado do servidor neste artigo. |
-   | `p` | Especifica uma espera até que uma senha seja solicitada. |
-
-   O servidor MySQL deve responder com uma exibição como o exemplo a seguir:
-
-   ```shell
-   Welcome to the MySQL monitor.  Commands end with ; or \g.
-   Your MySQL connection id is 64552
-   Server version: 5.6.39.0 MySQL Community Server (GPL)
-   
-   Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
-   
-   Oracle is a registered trademark of Oracle Corporation and/or its
-   affiliates. Other names may be trademarks of their respective
-   owners.
-   
-   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-   
-   mysql>
-   ```
-   > Observação: Se você receber um erro informando que o servidor não reconhece esse endereço IP, o endereço IP que o cliente está usando será mostrado no erro.  Volte e atribua-o conforme descrito anteriormente: *Configurar uma regra de firewall para o servidor usando o portal do Azure*.
-
-1. Crie um banco de dados denominado *mysqldb* inserindo um comando `mysql`, como o exemplo a seguir:
-
-   ```SQL
-   CREATE DATABASE mysqldb;
-   ```
-
-   O servidor MySQL deve responder com uma exibição como o exemplo a seguir:
-
-   ```shell
-   Query OK, 1 row affected (0.30 sec)
-   ```
-
-1. OPCIONAL: verifique se seu banco de dados foi criado inserindo um comando `mysql` como o exemplo a seguir:
-
-   ```SQL
-   SHOW DATABASES;
-   ```
-
-   O servidor MySQL deve responder com uma exibição como o exemplo a seguir:
-
-   ```shell
-   +--------------------+
-   | Database           |
-   +--------------------+
-   | information_schema |
-   | mysql              |
-   | mysqldb            |
-   | performance_schema |
-   | sys                |
-   +--------------------+
-   ```
-
-1. Insira `\q` para sair do utilitário `mysql`.
-
-## <a name="configure-the-sample-application"></a>Configurar o aplicativo de exemplo
-
-1. Abra um shell de comando e clone o projeto de exemplo usando um comando git como no exemplo a seguir:
-
-   ```shell
-   git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
-   ```
-
-1. Localize o arquivo *application.properties* no diretório *recursos* do seu projeto de exemplo ou crie o arquivo se ele ainda não existe.
-
-1. Abra o arquivo *application.properties* em um editor de texto e adicione ou configure as seguintes linhas ao arquivo e substitua os valores de exemplo pelos valores adequados do início do artigo:
-
-   ```yaml
-   spring.datasource.url=jdbc:mysql://wingtiptoysmysql.mysql.database.azure.com:3306/mysqldb?useSSL=true&requireSSL=false&serverTimezone=UTC
-   spring.datasource.username=wingtiptoysuser@wingtiptoysmysql
-   spring.datasource.password=********
-    ```
-   Em que:
-
-   | Parâmetro | Descrição |
-   |---|---|
-   | `spring.datasource.url` | Especifica sua cadeia de JDBC do MySQL neste artigo, com o fuso horário incluído. |
-   | `spring.datasource.username` | Especifica o nome do administrador do MySQL neste artigo com o nome abreviado do servidor anexado a ele. |
-   | `spring.datasource.password` | Especifica sua senha de administrador do MySQL neste artigo. |
-
-1. Salve e feche o arquivo *application.properties*.
-
-## <a name="package-and-test-the-sample-application"></a>Empacotar e testar o aplicativo de exemplo 
-
-1. Crie seu aplicativo de exemplo com o Maven. Por exemplo:
-
-   ```shell
-   mvn clean package -P mysql
-   ```
-
-1. Inicie o aplicativo de exemplo. Por exemplo:
-
-   ```shell
-   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
-   ```
-
-1. Crie novos registros usando `curl` em um prompt de comando como nos exemplos a seguir:
-
-   ```shell
-   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-
-   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-   ```
-
-   Seu aplicativo deve retornar valores como os seguintes:
-
-   ```shell
-   Added Pet(id=1, name=dog, species=canine).
-
-   Added Pet(id=2, name=cat, species=feline).
-   ```
-
-1. Recupere todos os registros existentes usando `curl` em um prompt de comando como nos exemplos a seguir:
-
-   ```shell
-   curl -s http://localhost:8080/pets
-   ```
-    
-   Seu aplicativo deve retornar valores como os seguintes:
-
-   ```json
-   [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
-   ```
-
-## <a name="summary"></a>Resumo
-
-Neste tutorial, você criou um aplicativo Java de exemplo que usa o Spring Data para armazenar e recuperar informações em um Banco de Dados do Azure para MySQL usando o JDBC.
-
-## <a name="next-steps"></a>Próximas etapas
-
-Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
-
-> [!div class="nextstepaction"]
-> [Spring no Azure](/azure/developer/java/spring-framework)
+[!INCLUDE [spring-data-conclusion.md](includes/spring-data-conclusion.md)]
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-Para obter mais informações sobre como usar o Azure com Java, confira [Azure para Desenvolvedores Java] e [Como trabalhar com o Java e o Azure DevOps].
+Para obter mais informações sobre o Spring Data JDBC, confira a [documentação de referência](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#reference) do Spring.
 
-<!-- URL List -->
-
-[Azure para desenvolvedores Java]: /azure/developer/java/
-[conta gratuita do Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Como trabalhar com o Java e o Azure DevOps]: /azure/devops/
-[benefício de assinante do MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Data]: https://spring.io/projects/spring-data
-[Spring Initializr]: https://start.spring.io/
-[Spring Framework]: https://spring.io/
-
-<!-- IMG List -->
-
-[MYSQL01]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png
-[MYSQL02]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png
-[MYSQL04]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-04.png
-[MYSQL05]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-05.png
+Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](/azure/developer/java/) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).

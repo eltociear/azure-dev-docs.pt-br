@@ -5,18 +5,20 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 3/16/2020
-ms.openlocfilehash: a1ebbee2127c283e990021da0b395e9fbb7d883c
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 4ab902e61703d5abc093dc508a370777b69632ff
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672832"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988949"
 ---
 # <a name="migrate-jboss-eap-applications-to-wildfly-on-azure-kubernetes-service"></a>Migrar aplicativos JBoss EAP para o WildFly no Serviço de Kubernetes do Azure
 
 Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo JBoss EAP existente para ser executado no WildFly em um contêiner do Serviço de Kubernetes do Azure.
 
 ## <a name="pre-migration"></a>Pré-migração
+
+Antes de tudo, para garantir uma migração bem-sucedida, conclua as etapas de avaliação e de inventário descritas nas seções a seguir.
 
 [!INCLUDE [inventory-server-capacity-aks](includes/inventory-server-capacity-aks.md)]
 
@@ -28,17 +30,7 @@ Considere armazenar esses segredos no Azure Key Vault. Para saber mais, consulte
 
 [!INCLUDE [inventory-all-certificates](includes/inventory-all-certificates.md)]
 
-### <a name="validate-that-the-supported-java-version-works-correctly"></a>Validar se a versão Java com suporte funciona corretamente
-
-O uso do WildFly no Serviço de Kubernetes do Azure requer uma versão específica do Java. Portanto, você precisará validar se seu aplicativo pode ser executado corretamente usando essa versão com suporte. Essa validação será especialmente importante se o servidor atual estiver usando um JDK compatível (como Oracle JDK ou IBM OpenJ9).
-
-Para obter a versão atual, entre no servidor de produção e execute este comando:
-
-```bash
-java -version
-```
-
-Consulte [Requisitos](http://docs.wildfly.org/19/Getting_Started_Guide.html#requirements) para obter diretrizes sobre qual versão usar para executar o WildFly.
+[!INCLUDE [validate-that-the-supported-java-version-works-correctly-wildfly](includes/validate-that-the-supported-java-version-works-correctly-wildfly.md)]
 
 ### <a name="inventory-jndi-resources"></a>Inventariar recursos de JNDI
 
@@ -50,7 +42,7 @@ Se seu aplicativo depender da replicação de sessão, você precisará alterar 
 
 #### <a name="inside-your-application"></a>Dentro de seu aplicativo
 
-Inspecione o arquivo *WEB-INF/jboss-web.xml* e/ou *WEB-INF/web.xml*.
+Inspecione os arquivos *WEB-INF/jboss-web.xml* e/ou *WEB-INF/web.xml*.
 
 ### <a name="document-datasources"></a>Documentar fontes de dados
 
@@ -66,17 +58,9 @@ Para obter mais informações, consulte [Sobre fontes de dados do JBoss EAP](htt
 
 Qualquer uso do sistema de arquivos no servidor de aplicativos exigirá reconfiguração ou, em casos raros, alterações de arquitetura. O sistema de arquivos pode ser usado por módulos do JBoss EAP ou pelo código do aplicativo. Você pode identificar alguns ou todos os cenários descritos nas seções a seguir.
 
-#### <a name="read-only-static-content"></a>Conteúdo estático somente leitura
+[!INCLUDE [static-content](includes/static-content.md)]
 
-Se seu aplicativo estiver servindo conteúdo estático no momento, você precisará de um local alternativo para ele. Talvez você queira considerar a movimentação de conteúdo estático para o Armazenamento de Blobs do Azure e a adição da CDN do Azure para downloads extremamente rápidos, globalmente. Para obter mais informações, confira [Hospedagem de site estático no Armazenamento do Microsoft Azure](/azure/storage/blobs/storage-blob-static-website) e [Início rápido: Integrar uma conta de armazenamento do Azure à CDN do Azure](/azure/cdn/cdn-create-a-storage-account-with-cdn).
-
-#### <a name="dynamically-published-static-content"></a>Conteúdo estático publicado dinamicamente
-
-Se o aplicativo permitir conteúdo estático que é carregado/produzido pelo aplicativo, mas não puder ser alterado após sua própria criação, você poderá usar o Armazenamento de Blobs do Azure e a CDN do Azure, conforme descrito acima, com uma função do Azure para lidar com uploads e atualização de CDN. Fornecemos uma implementação de exemplo para seu uso em [Carregar conteúdo estático e fazer o pré-carregamento desse conteúdo pela CDN com o Azure Functions](https://github.com/Azure-Samples/functions-java-push-static-contents-to-cdn).
-
-#### <a name="dynamic-or-internal-content"></a>Conteúdo dinâmico ou interno
-
-Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como arquivos de dados temporários) ou arquivos estáticos que são visíveis somente para o aplicativo, você pode montar compartilhamentos do Armazenamento do Azure como volumes persistentes. Para obter mais informações, confira [Criar e usar dinamicamente um volume persistente com Arquivos do Azure no Serviço de Kubernetes do Azure](/azure/aks/azure-files-dynamic-pv).
+[!INCLUDE [dynamic-or-internal-content-aks](includes/dynamic-or-internal-content-aks.md)]
 
 [!INCLUDE [determine-whether-your-application-relies-on-scheduled-jobs](includes/determine-whether-your-application-relies-on-scheduled-jobs.md)]
 
@@ -98,7 +82,7 @@ Se seu aplicativo usar APIs específicas do JBoss EAP, você precisará refator�
 
 ### <a name="determine-whether-jca-connectors-are-in-use"></a>Determinar se conectores JCA estão em uso
 
-Se seu aplicativo usar conectores JCA, você precisará validar se o conector JCA pode ser usado no WildFly. Se a implementação do JCA estiver vinculada ao JBoss EAP, você precisará refatorar seu aplicativo para remover essa dependência. Se puder ser usado, você precisará adicionar os JARs ao classpath do servidor e colocar os arquivos de configuração necessários no local correto nos diretórios do servidor do WildFly para que ele esteja disponível.
+Se o aplicativo usar conectores JCA, valide se você pode usar o conector JCA no WildFly. Se a implementação do JCA estiver vinculada ao JBoss EAP, refatore o aplicativo para remover essa dependência. Se você puder usar o conector JCA no WildFly, adicione os JARs ao classpath do servidor e coloque os arquivos de configuração necessários na localização correta nos diretórios do servidor do WildFly para que o conector esteja disponível.
 
 [!INCLUDE [determine-whether-jaas-is-in-use](includes/determine-whether-jaas-is-in-use.md)]
 

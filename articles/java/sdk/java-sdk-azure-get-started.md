@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: c03e458f9a91d13a3ed1c375e0b6cb0fefe15a3d
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 80e83873150356b53c826d7920df1163e51f2636
+ms.sourcegitcommit: 486b55521d7c27666dbb8035bc46fb60d1cbcf0a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82105207"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550927"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Introdução ao desenvolvimento em nuvem usando Java no Azure
 
@@ -158,7 +158,7 @@ O [Kit de ferramentas do Azure](/azure/developer/java/toolkit-for-eclipse) é ne
 
 - Selecione o menu **Ajuda** e depois **Instalar novo software**.
 
-- No campo **Trabalhar com:** , insira `http://dl.microsoft.com/eclipse` e pressione Enter.
+- No campo **Trabalhar com:** , insira `http://dl.microsoft.com/eclipse/` e pressione Enter.
 
 - Depois marque a caixa de seleção próxima a **Kit de ferramentas do Azure para Java** e desmarque a caixa de seleção para **Contatar todos os sites de atualização durante a instalação para encontrar o software requerido**. Depois selecione Avançar.
 

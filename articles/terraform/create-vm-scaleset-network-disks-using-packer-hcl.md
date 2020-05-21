@@ -3,12 +3,12 @@ title: Tutorial – Criar um conjunto de dimensionamento de máquinas virtuais d
 description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure por meio de uma imagem personalizada gerada pelo Packer (completa com uma rede virtual e com discos anexados gerenciados).
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: 1710614c783ffb60f54da1291f3a0be039c46589
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: dd7356070d9d9449b8f41ca183afec5bcb1ec630
+ms.sourcegitcommit: 2760d3ca0ff0b939181d976a652f2b35ea5b3fb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171872"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426099"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
 
@@ -119,7 +119,7 @@ resource "azurerm_public_ip" "vmss" {
   name                         = "vmss-public-ip"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
-  allocation_method            = "static"
+  allocation_method            = "Static"
   domain_name_label            = azurerm_resource_group.vmss.name
 
   tags {
@@ -350,7 +350,7 @@ resource "azurerm_public_ip" "jumpbox" {
   name                         = "jumpbox-public-ip"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.vmss.name
-  allocation_method            = "static"
+  allocation_method            = "Static"
   domain_name_label            = "${azurerm_resource_group.vmss.name}-ssh"
 
   tags {

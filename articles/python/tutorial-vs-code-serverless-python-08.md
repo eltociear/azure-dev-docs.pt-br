@@ -2,14 +2,14 @@
 title: 'Etapa 8: Limpar os recursos usados com o código Python no Azure Functions'
 description: Etapa 8 do tutorial, limpando os recursos do Azure para evitar incorrer em encargos contínuos.
 ms.topic: conceptual
-ms.date: 01/15/2020
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 151f063e87de6d8db528a20a5e0df958ec9a3afd
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80442141"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708620"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Limpar recursos do Azure para o Azure Functions
 

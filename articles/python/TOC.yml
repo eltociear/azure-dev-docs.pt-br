@@ -12,7 +12,7 @@
   href: configure-local-development-environment.md
 - name: Introdução ao SDK do Azure para Python
   items:
-    - name: Visão geral
+    - name: Visão geral e padrões de uso
       href: azure-sdk-overview.md
     - name: Instalar bibliotecas de SDK
       href: azure-sdk-install.md

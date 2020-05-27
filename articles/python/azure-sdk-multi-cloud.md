@@ -1,15 +1,15 @@
 ---
 title: Conectar-se a todas as regiões – SDK do Azure para Python em várias nuvens
 description: no Azure em todas as regiões
-ms.date: 02/22/2018
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a8425ffbc58fe0173da4b8b75611332d3f97fa04
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: b585cc6853c338ca1d1f97b8e477818368342f8e
+ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441741"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83403681"
 ---
 # <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Várias nuvens: Conectar-se a todas as regiões com o SDK do Azure para Python
 
@@ -17,57 +17,44 @@ ms.locfileid: "80441741"
 
 Por padrão, o SDK do Azure para Python está configurado para se conectar ao Azure global.
 
-## <a name="using-predeclared-cloud-definition"></a>Usando definições de nuvem declaradas previamente
+## <a name="using-pre-declared-cloud-definition"></a>Usar definições de nuvem declaradas previamente
 
-> [!IMPORTANT]
-> O pacote `msrestazure` deve ser superior ou igual a 0.4.11 para esta seção.
-
-Você pode usar o módulo `azure_cloud` do `msrestazure`
+Use o módulo `azure_cloud` do `msrestazure` (0.4.11+):
 
 ```python
 from msrestazure.azure_cloud import AZURE_CHINA_CLOUD
 from msrestazure.azure_active_directory import UserPassCredentials
 from azure.mgmt.resource import ResourceManagementClient
 
-credentials = UserPassCredentials(
-    login,
-    password,
-    cloud_environment=AZURE_CHINA_CLOUD
-)
-client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager
-)
+credentials = UserPassCredentials(login, password,
+    cloud_environment=AZURE_CHINA_CLOUD)
+
+client = ResourceManagementClient(credentials,
+    subscription_id, base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
 ```
   
 As definições de nuvem disponíveis são as seguintes:
 
-- AZURE_PUBLIC_CLOUD
-- AZURE_CHINA_CLOUD
-- AZURE_US_GOV_CLOUD
-- AZURE_GERMAN_CLOUD
+- `AZURE_PUBLIC_CLOUD`
+- `AZURE_CHINA_CLOUD`
+- `AZURE_US_GOV_CLOUD`
+- `AZURE_GERMAN_CLOUD`
 
-## <a name="using-your-own-cloud-definition-eg-azure-stack"></a>Usando sua própria definição de nuvem (por exemplo, Azure Stack)
+## <a name="using-your-own-cloud-definition"></a>Usar sua própria definição de nuvem
 
-O Azure Resource Manager tem um ponto de extremidade de metadados para ajudar você:
+Nesse código, você usa `get_cloud_from_metadata_endpoint` com o ponto de extremidade de Azure Resource Manager para a nuvem privada (como uma desenvolvida a partir de Azure Stack):
 
 ```python
 from msrestazure.azure_cloud import get_cloud_from_metadata_endpoint
 from msrestazure.azure_active_directory import UserPassCredentials
 from azure.mgmt.resource import ResourceManagementClient
 
-mystack_cloud = get_cloud_from_metadata_endpoint("https://myazurestack-arm-endpoint.com")
-credentials = UserPassCredentials(
-    login,
-    password,
-    cloud_environment=mystack_cloud
-)
-client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=mystack_cloud.endpoints.resource_manager
-)
+stack_cloud = get_cloud_from_metadata_endpoint("https://contoso-azurestack-arm-endpoint.com")
+credentials = UserPassCredentials(login, password,
+    cloud_environment=stack_cloud)
+
+client = ResourceManagementClient(credentials, subscription_id,
+    base_url=stack_cloud.endpoints.resource_manager)
 ```
 
 ## <a name="using-adal"></a>Usando o ADAL
@@ -94,19 +81,13 @@ authentication_endpoint = 'https://login.microsoftonline.com/'
 azure_endpoint = 'https://management.azure.com/'
 
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
-credentials = AdalAuthentication(
-    context.acquire_token_with_client_credentials,
-    azure_endpoint,
-    client_id,
-    password
-)
+credentials = AdalAuthentication(context.acquire_token_with_client_credentials,
+    azure_endpoint, client_id, password)
+
 subscription_id = '33333333-3333-3333-3333-333333333333'
 
-resource_client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=azure_endpoint
-)
+resource_client = ResourceManagementClient(credentials,
+    subscription_id, base_url=azure_endpoint)
 ```
 
 ### <a name="azure-government"></a>Azure Government
@@ -126,19 +107,13 @@ authentication_endpoint = 'https://login.microsoftonline.us/'
 azure_endpoint = 'https://management.usgovcloudapi.net/'
 
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
-credentials = AdalAuthentication(
-    context.acquire_token_with_client_credentials,
-    azure_endpoint,
-    client_id,
-    password
-)
+credentials = AdalAuthentication(context.acquire_token_with_client_credentials,
+    azure_endpoint, client_id, password)
+
 subscription_id = '33333333-3333-3333-3333-333333333333'
 
-resource_client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=azure_endpoint
-)
+resource_client = ResourceManagementClient(credentials,
+    subscription_id, base_url=azure_endpoint)
 ```
 
 ### <a name="azure-germany"></a>Azure Alemanha
@@ -158,19 +133,13 @@ authentication_endpoint = 'https://login.microsoftonline.de/'
 azure_endpoint = 'https://management.microsoftazure.de/'
 
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
-credentials = AdalAuthentication(
-    context.acquire_token_with_client_credentials,
-    azure_endpoint,
-    client_id,
-    password
-)
+credentials = AdalAuthentication(context.acquire_token_with_client_credentials,
+    azure_endpoint, client_id, password)
+
 subscription_id = '33333333-3333-3333-3333-333333333333'
 
-resource_client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=azure_endpoint
-)
+resource_client = ResourceManagementClient(credentials,
+    subscription_id, base_url=azure_endpoint)
 ```
 
 ### <a name="azure-china-21vianet"></a>Azure China 21Vianet
@@ -190,17 +159,11 @@ authentication_endpoint = 'https://login.chinacloudapi.cn/'
 azure_endpoint = 'https://management.chinacloudapi.cn/'
 
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
-credentials = AdalAuthentication(
-    context.acquire_token_with_client_credentials,
-    azure_endpoint,
-    client_id,
-    password
-)
+credentials = AdalAuthentication(context.acquire_token_with_client_credentials,
+    azure_endpoint, client_id, password)
+
 subscription_id = '33333333-3333-3333-3333-333333333333'
 
-resource_client = ResourceManagementClient(
-    credentials,
-    subscription_id,
-    base_url=azure_endpoint
-)
+resource_client = ResourceManagementClient(credentials,
+    subscription_id, base_url=azure_endpoint)
 ```

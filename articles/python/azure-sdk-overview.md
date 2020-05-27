@@ -1,111 +1,162 @@
 ---
-title: SDK do Azure para Python
+title: Usar o SDK do Azure para Python
 description: Visão geral dos recursos e das funcionalidades do SDK do Azure para Python que ajudam os desenvolvedores a serem mais produtivos ao provisionar, usar e gerenciar recursos do Azure.
-ms.date: 03/17/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3d24a512420610f37285a03fe6a39d81e97510ee
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 856487b06e7a84b0659126d8959ce45b5309a103
+ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82026109"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631542"
 ---
-# <a name="azure-sdk-for-python"></a>SDK do Azure para Python
+# <a name="use-the-azure-sdk-for-python"></a>Usar o SDK do Azure para Python
 
-O SDK do Azure de software livre para Python simplifica o provisionamento, o uso e o gerenciamento dos recursos do Azure com base no código de aplicativo do Python. O SDK é compatível com Python 2.7 e Python 3.5.3 ou posterior.
+O SDK do Azure de software livre para Python simplifica o provisionamento, o gerenciamento e o uso dos recursos do Azure com base no código de aplicativo do Python.
 
-O SDK é composto por bibliotecas de componentes individuais, cada uma das quais você instala usando `pip install <library>`. Instruções mais detalhadas são encontradas em [Instalar o SDK](azure-sdk-install.md). A [Documentação do SDK do Azure para Python](https://azure.github.io/azure-sdk-for-python/) fornece os nomes das bibliotecas.
+## <a name="the-details-you-really-want-to-know"></a>Os detalhes que você realmente quer saber
 
-Você também pode seguir o passo a passo, [Introdução ao SDK do Azure para Python](azure-sdk-get-started.yml), para experimentar as bibliotecas por conta própria.
+- O SDK é compatível com Python 2.7 e Python 3.5.3 ou posterior e foi testado com o PyPy 5.4+.
 
-> [!TIP]
-> Para obter informações sobre as alterações no SDK, consulte as [notas sobre a versão do SDK](https://azure.github.io/azure-sdk/).
+- O SDK é composto por mais de 180 bibliotecas Python individuais relacionadas a serviços específicos do Azure.
 
-[!INCLUDE [chrome-note](includes/chrome-note.md)]
+- Para instalar as bibliotecas de que precisa com `pip install <library_name>`, use os nomes de biblioteca na [lista de versões](https://azure.github.io/azure-sdk/releases/latest/all/python.html). Para obter mais detalhes, consulte [Instalar bibliotecas do SDK do Azure](azure-sdk-install.md).
 
-## <a name="management-and-client-libraries"></a>Bibliotecas de clientes e de gerenciamento
+- Há bibliotecas de "gerenciamento" e de "cliente" distintas (às vezes chamadas de bibliotecas de "plano de gerenciamento" e de "plano de dados"). Cada conjunto atende a diferentes finalidades e é usado por diferentes tipos de código. Para obter mais informações, consulte as seguintes seções deste artigo:
+  - [Provisionar e gerenciar recursos do Azure com bibliotecas de gerenciamento](#provision-and-manage-azure-resources-with-management-libraries)
+  - [Conectar e usar os recursos do Azure com bibliotecas de clientes](#connect-to-and-use-azure-resources-with-client-libraries)
 
-O SDK do Azure para Python contém dois tipos de bibliotecas:
+- A documentação do SDK é encontrada na [Referência do SDK do Azure para Python](/python/api/overview/azure/?view=azure-python), que é organizada por serviço do Azure ou no [navegador de API do Python](/python/api/?view=azure-python), que é organizado por nome de pacote. No momento, pode ser necessário clicar em várias camadas para obter as classes e os métodos do seu interesse. Queremos nos desculpar por essa experiência insatisfatória. Estamos trabalhando para melhorá-la.
 
-- As bibliotecas de *gerenciamento* ajudam a provisionar e gerenciar os recursos do Azure, como você pode fazer por meio do [portal do Azure](https://portal.azure.com) ou com ferramentas de linha de comando, tais como a [CLI do Azure](https://docs.microsoft.com/cli/azure/install-azure-cli) e o [Azure PowerShell](https://docs.microsoft.com/powershell/azure/). As bibliotecas de gerenciamento são geralmente usadas em scripts de configuração e de implantação. (Na verdade, a CLI do Azure propriamente dita é escrita com as bibliotecas de gerenciamento do Python.)
+- Para experimentar as bibliotecas por conta própria, comece pelo [Exemplo: Criar um grupo de recursos](azure-sdk-example-resource-group.md) e, em seguida, [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md).
 
-- As bibliotecas de *clientes* fornecem os meios para que o código do aplicativo interaja com serviços já provisionados usando expressões idiomáticas do Python naturais. Nos bastidores, as bibliotecas de clientes usam as APIs REST do Azure, mas usando o SDK, você não precisa se preocupar com os detalhes do REST.
+### <a name="non-essential-but-still-interesting-details"></a>Informações não essenciais, mas ainda interessantes
 
-As seções a seguir fornecem mais detalhes e exemplos para cada categoria.
+- Como a CLI do Azure é escrita em Python usando as bibliotecas de gerenciamento do SDK, tudo que é possível fazer com os comandos da CLI do Azure também pode ser feito com um script Python. Dito isso, os comandos da CLI fornecem muitos recursos úteis, como a execução de várias tarefas ao mesmo tempo, o tratamento automático de operações assíncronas, a formatação de saída como cadeias de conexão e assim por diante. Consequentemente, usar a CLI (ou seu equivalente, o Azure PowerShell) para scripts automatizados de provisionamento e gerenciamento pode ser significativamente mais conveniente do que escrever o código Python equivalente, a menos que você queira ter um grau muito maior de controle sobre o processo.
 
-## <a name="manage-azure-resources-with-management-libraries"></a>Gerenciar recursos do Azure com bibliotecas de gerenciamento
+- O SDK do Azure para Python é uma camada do Python sobre a API REST subjacente do Azure, permitindo que você use essas APIs por meio de paradigmas conhecidos do Python. No entanto, você sempre pode usar a API REST diretamente do código Python, se desejar.
 
-As bibliotecas de gerenciamento do SDK do Azure para Python, cada uma das quais é nomeada `azure-mgmt-<service name>`, ajudam você a criar, provisionar e gerenciar os recursos do Azure.
+- Você pode encontrar o código-fonte do DSK em [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python). Como um projeto de software livre, contribuições são bem-vindas!
 
-Por exemplo, suponha que você queira criar uma instância do SQL Server. Primeiro, instale a biblioteca de gerenciamento apropriada:
+- Embora você possa usar o SDK com interpretadores, como IronPython e Jython que nós não testamos, é possível encontrar problemas isolados e incompatibilidades.
 
-```bash
-pip install azure-mgmt-sql
-```
+- O repositório de origem da documentação do SDK é encontrado em [https://github.com/MicrosoftDocs/azure-docs-sdk-python/](https://github.com/MicrosoftDocs/azure-docs-sdk-python/).
 
-No código Python, importe a biblioteca:
+- Atualmente estamos atualizando as bibliotecas do SDK do Azure para Python para compartilhar padrões de nuvem comuns, como protocolos de autenticação, registro em log, rastreamento, protocolos de transporte, respostas em buffer e novas tentativas.
+
+  - Essa funcionalidade compartilhada está presente na biblioteca [azure-core](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/core/azure-core).
+
+  - As bibliotecas que atualmente funcionam com a biblioteca principal estão listadas nas [Versões mais recentes do SDK do Azure para Python](https://azure.github.io/azure-sdk/releases/latest/#python). Essas bibliotecas, principalmente as bibliotecas de cliente, são, às vezes, chamadas de "faixa 2".
+
+  - As bibliotecas de gerenciamento que ainda não foram atualizadas são chamadas, às vezes, de "faixa 1".
+
+- Para obter detalhes sobre as diretrizes que aplicamos ao SDK, consulte as [Diretrizes do Python: Introdução](https://azure.github.io/azure-sdk/python_introduction.html).
+
+## <a name="provision-and-manage-azure-resources-with-management-libraries"></a>Provisionar e gerenciar recursos do Azure com bibliotecas de gerenciamento
+
+As bibliotecas de *gerenciamento* do SDK (ou “plano de gerenciamento”) com nomes que começam com `azure-mgmt-` ajudam a criar, provisionar e de gerenciar recursos do Azure a partir de scripts do Python. Todos os serviços do Azure têm bibliotecas de gerenciamento correspondentes.
+
+Com as bibliotecas de gerenciamento, é possível escrever scripts de configuração e de implantação para executar as mesmas tarefas que podem ser acessadas pelo [portal do Azure](https://portal.azure.com) ou pela [CLI do Azure](/cli/azure/install-azure-cli). (Como observamos anteriormente, a CLI do Azure é escrita em Python e usa as bibliotecas de gerenciamento para implementar seus vários comandos.)
+
+Para obter detalhes sobre como trabalhar com cada biblioteca de gerenciamento, veja o arquivo *README.md* ou *README.rst* localizado na pasta de projeto da biblioteca no [repositório GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) do SDK. Também é possível encontrar trechos de código adicionais na [documentação de referência](/python/api?view=azure-python) e nas [Amostras do Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+
+## <a name="connect-to-and-use-azure-resources-with-client-libraries"></a>Conectar e usar os recursos do Azure com bibliotecas de clientes
+
+As bibliotecas de *cliente* do SDK (ou “plano de dados”) ajudam a escrever código de aplicativos Python para interagir com serviços já provisionados. O SDK oferece bibliotecas de cliente somente para os serviços que dão suporte a uma API de cliente.
+
+Para obter detalhes sobre como trabalhar com cada biblioteca de clientes, veja o arquivo *README.md* ou *README.rst* localizado na pasta de projeto da biblioteca no [repositório GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) do SDK. Também é possível encontrar trechos de código adicionais na [documentação de referência](/python/api?view=azure-python) e nas [Amostras do Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+
+## <a name="inline-json-pattern-for-object-arguments"></a>Padrão JSON embutido para argumentos de objeto
+
+Muitas operações no SDK do Azure dão suporte a um padrão comum que permite expressar argumentos de objeto como objetos discretos ou como JSON embutido.
+
+Por exemplo, suponha que você tenha um objeto [`ResourceManagementClient`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.resourcemanagementclient?view=azure-python) por meio do qual você cria um grupo de recursos com seu método [`create_or_update`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#create-or-update-resource-group-name--parameters--custom-headers-none--raw-false----operation-config-)). O segundo argumento para esse método é do tipo [`ResourceGroup`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.models.resourcegroup?view=azure-python).
+
+Para chamar `create_or_update` você pode criar uma instância discreta do `ResourceGroup` diretamente com seus argumentos necessários (`location` neste caso):
 
 ```python
-from azure.mgmt.sql import SqlManagementClient
+rg_result = resource_client.resource_groups.create_or_update(
+    "PythonSDKExample-rg",
+    ResourceGroup(location="centralus")
+)
 ```
 
-Em seguida, crie o objeto cliente de gerenciamento usando suas credenciais (confira [Autenticar com o SDK](azure-sdk-authenticate.md)) e a ID da assinatura do Azure:
+Como alternativa, você pode passar os mesmos parâmetros como JSON embutido:
 
 ```python
-sql_client = SqlManagementClient(credentials, subscription_id)
-```
-
-Por fim, use esse objeto de cliente de gerenciamento para criar o recurso, usando um nome de grupo de recursos apropriado, o nome do servidor, o local e as credenciais de administrador:
-
-```python
-server = sql_client.servers.create_or_update(
-    'myresourcegroup',
-    'myservername',
+rg_result = resource_client.resource_groups.create_or_update(
+    "PythonSDKExample-rg",
     {
-        'location': 'eastus',
-        'version': '12.0', # Required for create
-        'administrator_login': 'mysecretname', # Required for create
-        'administrator_login_password': 'HusH_Sec4et' # Required for create
+      "location": "centralus"
     }
 )
 ```
 
-Para obter detalhes sobre como trabalhar com cada biblioteca de gerenciamento, veja o arquivo *README.md* ou *README.rst* localizado na pasta de projeto da biblioteca no [repositório GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) do SDK. Também é possível encontrar trechos de código adicionais na [documentação de referência](/python/api?view=azure-python) e nas [Amostras do Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+Ao usar o JSON, o SDK converte automaticamente o JSON embutido para o tipo de objeto apropriado para o argumento em questão.
 
-## <a name="connect-and-use-azure-services-with-client-libraries"></a>Conectar e usar os serviços do Azure com bibliotecas de clientes
+Os objetos também podem ter argumentos de objeto aninhados. Nesse caso, você também pode usar o JSON aninhado.
 
-As *bibliotecas de clientes* do SDK do Azure ajudam você a se conectar a recursos existentes do Azure e usá-los em seus aplicativos, como carregar arquivos, acessar dados de tabela ou trabalhar com vários Serviços Cognitivos do Azure. Com o SDK, você trabalha com esses recursos usando paradigmas de programação do Python conhecidos em vez de usar a API REST genérica do serviço. (Os serviços que não têm uma API REST não são representados por uma biblioteca de clientes.)
+Por exemplo, vamos supor que você tenha uma instância de objeto [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) e chama seu método [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). Nesse caso, o terceiro argumento é do tipo [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), que por sua vez contém um argumento do tipo [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). `VaultProperties`, por sua vez, contém argumentos de objeto do tipo [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) e [`list[AccessPolicyEntry`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). Uma `Sku` contém um objeto [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python) e cada `AccessPolicyEntry` contém um objeto [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
 
-Por exemplo, suponha que você implantou um aplicativo Web para o Serviço de Aplicativo do Azure e deseja adicionar a capacidade de carregar um arquivo em uma conta do Armazenamento do Azure. A primeira etapa é instalar a biblioteca apropriada:
-
-```bash
-pip install azure-storage-blob
-```
-
-Em seguida, importe a biblioteca em seu código:
+Chamar `create_or_update` com objetos inseridos usa um código como o seguinte (supondo que `tenant_id` e `object_id` já estejam definidos):
 
 ```python
-from azure.storage.blob import BlobClient
+operation = keyvault_client.vaults.create_or_update(
+    "PythonSDKExample-rg",
+    "keyvault01",
+    VaultCreateOrUpdateParameters(
+        location="centralus",
+        properties=VaultProperties(
+            tenant_id=tenant_id,
+            sku=Sku(name="standard"),
+            access_policies=[
+                AccessPolicyEntry(
+                    tenant_id=tenant_id,
+                    object_id=object_id,
+                    permissions=Permissions(keys=['all'], secrets=['all'])
+                )
+            ]
+        )
+    )
+)
 ```
 
-Por fim, use a API da biblioteca para se conectar e carregar os dados. Neste exemplo, a cadeia de conexão e o nome do contêiner já estão provisionados em sua conta de armazenamento. O nome do blob é o mesmo que você atribui aos dados carregados:
+A mesma chamada que usa JSON embutido aparece da seguinte maneira:
 
 ```python
-blob = BlobClient.from_connection_string("my_connection_string", container_name="mycontainer", blob_name="my_blob")
-
-with open("./SampleSource.txt", "rb") as data:
-    blob.upload_blob(data)
+operation = keyvault_client.vaults.create_or_update(
+    "PythonSDKExample-rg",
+    "keyvault01",
+    {
+        'location': 'centralus',
+        'properties': {
+            'sku': {
+                'name': 'standard'
+            },
+            'tenant_id': tenant_id,
+            'access_policies': [{
+                'object_id': object_id,
+                'tenant_id': tenant_id,
+                'permissions': {
+                    'keys': ['all'],
+                    'secrets': ['all']
+                }
+            }]
+        }
+    }
+)
 ```
 
-Para obter detalhes sobre como trabalhar com cada biblioteca de gerenciamento, veja o arquivo *README.md* ou *README.rst* localizado na pasta de projeto da biblioteca no [repositório GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) do SDK. Também é possível encontrar trechos de código adicionais na [documentação de referência](/python/api?view=azure-python) e nas [Amostras do Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+Como ambas as formas são totalmente equivalentes, você pode escolher a que preferir e pode até mesmo misturá-las.
 
-### <a name="the-azure-core-library"></a>A biblioteca Principal do Azure
+Se seu JSON não for formado corretamente, você normalmente receberá o erro “DeserializationError: não é possível desserializar para object: type, AttributeError: objeto 'str' não tem atributo 'get'". Uma causa comum desse erro é fornecer uma única cadeia de caracteres para uma propriedade quando o SDK espera um objeto JSON aninhado. Por exemplo, o uso de `"sku": "standard"` no exemplo anterior gera esse erro porque o parâmetro `sku` é um objeto `Sku` que espera o objeto embutido JSON, nesse caso `{ "name": "standard"}`, que é mapeado para o tipo `SkuName` esperado.
 
-Atualmente estamos atualizando as bibliotecas de clientes do SDK do Azure para Python para compartilhar padrões de nuvem comuns, como protocolos de autenticação, registro em log, rastreamento, protocolos de transporte, respostas em buffer e novas tentativas. Essa funcionalidade compartilhada está presente na biblioteca [azure-core](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/core/azure-core). As bibliotecas que atualmente funcionam com a biblioteca principal estão listadas na página [Versões mais recentes do SDK do Azure](https://azure.github.io/azure-sdk/releases/latest/#python-packages).
+## <a name="next-step"></a>Próxima etapa
 
-Para obter detalhes sobre a Biblioteca Principal do Azure e as respectivas diretrizes, veja as [Diretrizes do Python: Introdução](https://azure.github.io/azure-sdk/python_introduction.html).
+> [!div class="nextstepaction"]
+> [Instalar bibliotecas de SDK >>>](azure-sdk-install.md)
 
-## <a name="get-help-and-give-feedback"></a>Obter ajuda e fazer comentários
+## <a name="get-help-and-connect-with-the-sdk-team"></a>Obtenha ajuda e conecte-se com a equipe do SDK
 
 - Visite a [documentação do SDK do Azure para Python](https://aka.ms/python-docs)
 - Poste perguntas para a comunidade no [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python)

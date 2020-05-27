@@ -2,14 +2,14 @@
 title: 'Etapa 4: Depurar localmente o código Python do Azure Functions com o VS Code'
 description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente para verificar seu código do Python.'
 ms.topic: conceptual
-ms.date: 09/02/2019
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 51ef666bd529194670279deaae51ee073633fd3a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 167e1c2be4d379f7457d35f2e6fe4a226092ac08
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441591"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708560"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
@@ -64,6 +64,11 @@ ms.locfileid: "80441591"
 1. Para testar a depuração da função, defina um ponto de interrupção na linha que lê `name = req.params.get('name')` e faça uma solicitação para a URL novamente. O depurador do Visual Studio Code deve parar nessa linha, permitindo que você examine as variáveis e percorra o código. (Para obter uma breve explicação sobre depuração básica, confira [Tutorial do Visual Studio Code tutorial – Configurar e executar o depurador](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
 
 1. Quando você estiver satisfeito por ter testado por completo a função localmente, pare o **depurador (com o comando de menu Depurar** > **Parar Depuração** ou com o comando **Desconectar**, na barra de ferramentas de depuração).
+
+> [!NOTE]
+> Se você encontrar o erro "Falha ao verificar a conexão 'AzureWebJobsStorage' especificada em 'local.settings.json'.", o arquivo *local.settings.json* em seu projeto contém a linha `"AzureWebJobsStorage": "UseDevelopmentStorage=true"`. Essa linha indica que o depurador espera usar o emulador de Armazenamento do Microsoft Azure localmente, mas ele não está instalado. Nesse caso, você pode [instalar o Emulador do Armazenamento do Microsoft Azure](/azure/storage/common/storage-use-emulator#get-the-storage-emulator), [iniciar e inicializar o emulador](/azure/storage/common/storage-use-emulator#start-and-initialize-the-storage-emulator) e reiniciar o depurador.
+>
+> Como alternativa, altere a linha no arquivo JSON para `"AzureWebJobsStorage": ""` e reinicie o depurador.
 
 > [!div class="nextstepaction"]
 > [Executei o depurador localmente – prossiga para a etapa 5>>>](tutorial-vs-code-serverless-python-05.md)

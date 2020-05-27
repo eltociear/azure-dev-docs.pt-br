@@ -2,14 +2,14 @@
 title: 'Tutorial: Criar e implantar o Azure Functions sem servidor no Python com o VS Code'
 description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
-ms.date: 09/02/2019
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 509e62b5bb8b23365dc30781b6f658a39894d56d
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: fcb9a520e10036d5059f060dedf49e8f222af184
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441231"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708580"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -42,7 +42,7 @@ Ao instalar o Node.js, use as opções padrão e *não* selecione a opção para
 
 Instale o seguinte software:
 
-- Python 3.7 ou Python 3.6 conforme exigido pelo Azure Functions. O [Python 3.7.5](https://www.python.org/downloads/release/python-375/) e o [Python 3.6.8](https://www.python.org/downloads/release/python-368/) são as versões compatíveis mais recentes. Role para baixo nessas páginas para localizar os instaladores. Ao instalar, selecione **Adicionar o Python 3.x ao PATH** e use as opções padrão selecionando a opção **Instalar agora**. No Windows, selecione também **Desabilitar limite de comprimento do caminho** no final do processo.
+- Python 3.6, 3.7, ou 3.8 conforme exigido pelo Azure Functions. Instale o Python do site [python.org](https://www.python.org/downloads). Ao instalar, selecione **Adicionar o Python 3.x ao PATH** e use as opções padrão selecionando a opção **Instalar agora**. No Windows, selecione também **Desabilitar limite de comprimento do caminho** no final do processo.
 - [Visual Studio Code](https://code.visualstudio.com/).
 - A [extensão do Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), conforme descrito em [Tutorial de Python no Visual Studio Code – Pré-requisitos](https://code.visualstudio.com/docs/python/python-tutorial).
 - A [extensão Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Para obter informações gerais, visite o [repositório do GitHub vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions).

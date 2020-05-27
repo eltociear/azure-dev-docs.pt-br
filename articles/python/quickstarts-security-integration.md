@@ -1,14 +1,14 @@
 ---
 title: Inícios rápidos para segurança e integração para aplicativos Python no Azure
 description: Lista de materiais de introdução na documentação do Azure para proteção de aplicativos Python.
-ms.date: 03/17/2020
+ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: c5b2a6d2e2a4b6486674711204871216a7fa6416
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 275f723861ebde4ddbd3419eaa88fb51d4669ca4
+ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441971"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83403709"
 ---
 # <a name="security-and-integration-for-python-apps-on-azure"></a>Segurança e integração para aplicativos Python no Azure
 

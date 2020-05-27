@@ -4,12 +4,12 @@ description: Etapa 2 do tutorial, configurar seu aplicativo
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b53b774cb7747b8f6cca10d493f820bef5306fcc
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: bb515e1d785aa0e8a38e4fc1014915db56b89d94
+ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441941"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631722"
 ---
 # <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Preparar seu aplicativo para implantação no Serviço de Aplicativo do Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "80441941"
 
 Neste artigo, você preparará um aplicativo para ser implantado no Serviço de Aplicativo do Azure para este tutorial. É possível usar um aplicativo existente, criar ou baixar um aplicativo.
 
-Se já tiver um aplicativo com o qual gostaria de trabalhar, verifique se você tem um arquivo *requirements.txt* que descreve suas dependências, incluindo estruturas como Flask ou Django.
+Se já tiver um aplicativo com o qual gostaria de trabalhar, verifique se você tem um arquivo *requirements.txt* que descreve suas dependências, incluindo estruturas como Flask ou Django. Você pode usar qualquer estrutura que escolher.
 
 Se ainda não tiver um aplicativo, use uma das opções abaixo. Certifique-se de verificar se o aplicativo é executado localmente.
 
@@ -58,7 +58,7 @@ Esta seção descreve o aplicativo Flask mínimo usado neste passo a passo.
     $env:FLASK_APP = "hello:myapp"
     ```
 
-    # <a name="cmd"></a>[Cmd](#tab/cmd)
+    # <a name="cmd"></a>[cmd](#tab/cmd)
 
     ```bash
     set FLASK_APP=hello:myapp

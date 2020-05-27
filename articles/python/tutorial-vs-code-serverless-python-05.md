@@ -2,14 +2,14 @@
 title: 'Etapa 5: Implantar o Azure Functions no Python com o VS Code'
 description: 'Tutorial, etapa 5: implantação do código de função do Python no Azure e aprendizado sobre como transmitir logs e sincronizar configurações entre um projeto local e o Azure.'
 ms.topic: conceptual
-ms.date: 09/02/2019
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 425fb745cec74672cfabc6c3c5eab96821a43224
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 3e51760f6f779ef244d5788a3df852bc98924946
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441161"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708610"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Implantar o Azure Functions no Python
 
@@ -25,9 +25,11 @@ Um aplicativo de funções requer uma Conta de Armazenamento do Azure para os da
 
 1. Quando solicitado, selecione **Criar Aplicativo de Funções no Azure** e forneça um nome que seja exclusivo em todo o Azure (por exemplo, usando seu nome ou o nome da empresa, juntamente com outros identificadores exclusivos; você pode usar letras, números e hifens). Se você já criou um Aplicativo de Funções anteriormente, o nome dele aparecerá nessa lista de opções.
 
+1. Quando solicitado, selecione uma versão do Python e o local do Azure.
+
 1. A extensão executa as seguintes ações, que você pode observar nas mensagens pop-up e na janela **Saída** do Visual Studio Code (o processo leva alguns minutos):
 
-    - Crie um grupo de recursos usando o nome que você deu (removendo os hifens).
+    - Crie um grupo de recursos usando o nome que você deu (removendo os hifens) e o local que você selecionou.
     - Nesse grupo de recursos, crie a conta de armazenamento, o plano de hospedagem e o aplicativo de funções. Por padrão, um [Plano de Consumo](/azure/azure-functions/functions-scale#consumption-plan) será criado. Para executar suas funções em um plano dedicado, você precisa [habilitar a publicação com opções de criação avançadas](/azure/azure-functions/functions-develop-vs-code).
     - Implante seu código no aplicativo de funções.
 
@@ -39,9 +41,9 @@ Um aplicativo de funções requer uma Conta de Armazenamento do Azure para os da
 
     ![Mensagem indicando uma implantação bem-sucedida com ações adicionais](media/tutorial-vs-code-serverless-python/azure-functions-deployment-success-with-additional-actions.png)
 
-    Para **Transmitir Logs** e **Carregar Configurações**, confira as próximas seções. Para **Exibir a saída**, confira a etapa 5 a seguir.
+    Para **Transmitir Logs** e **Carregar Configurações**, confira as próximas seções.
 
-1. Após a implantação, a janela **Saída** também mostra o ponto de extremidade público no Azure (a URL do ponto de extremidade específico corresponderá ao nome especificado no aplicativo de funções):
+1. Selecione **Exibir saída** para alternar para a janela de **Saída**. A saída mostra o ponto de extremidade público no Azure (a URL do seu ponto de extremidade específico corresponderá ao nome especificado para o aplicativo de funções):
 
     <pre>
     HTTP Trigger Urls:

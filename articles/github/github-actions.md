@@ -1,27 +1,33 @@
 ---
 title: Implantar no Azure usando o GitHub Actions
 description: Crie fluxos de trabalho no repositório para criar, testar, empacotar, lançar e implantar no Azure.
-ms.author: kaelli
-author: KathrynEE
+author: N-Usha
+ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: 16ebc2d8013b2199911c0648f4bb8364c4d6de06
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: 1b3906eeacf48e2561f49dc8480ce83565aeca3a
+ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369920"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631672"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Implantar no Azure usando o GitHub Actions
 
-Use o GitHub Actions para o Azure a fim de automatizar os fluxos de trabalho e implantá-los no Azure. Como introdução, confira estas GitHub Actions: 
+[O GitHub Actions](https://help.github.com/articles/about-github-actions) permite que os desenvolvedores criem fluxos de trabalho automatizados de ciclo de vida de desenvolvimento de software.  
 
-- [Azure/webapps-deploy](https://github.com/Azure/webapps-deploy): implanta nos Aplicativos Web do Azure e no Aplicativo Web para Contêineres do Azure 
-- [Azure/appservice-settings](https://github.com/Azure/appservice-settings): define configurações de aplicativos, cadeias de conexão e outras configurações gerais em massa usando a sintaxe JSON no aplicativo Web do Azure (Windows ou Linux) ou em qualquer um dos slots de implantação.
+Com o GitHub Actions para Azure, você pode criar fluxos de trabalho que podem ser configurados em seu repositório para compilar, testar, empacotar, liberar e **implantar** no Azure. [Saiba mais sobre todas as outras integrações com o Azure](https://aka.ms/GitHubonAzure).
+
+Comece hoje mesmo com uma [conta gratuita do Azure](https://azure.com/free/open-source)!
 
 > [!NOTE]   
 > Os links fornecidos neste artigo estão vinculados a um artigo do GitHub ou a um repositório do GitHub. 
+
+- [Azure/Ação webapps-deploy](https://github.com/Azure/webapps-deploy), para implantar nos Aplicativos Web do Azure e no Aplicativo Web para Contêineres do Azure 
+- [Azure/appservice-settings](https://github.com/Azure/appservice-settings): define configurações de aplicativos, cadeias de conexão e outras configurações gerais em massa usando a sintaxe JSON no aplicativo Web do Azure (Windows ou Linux) ou em qualquer um dos slots de implantação.
+
+
 
 ## <a name="key-concepts"></a>Principais conceitos
 
@@ -39,9 +45,11 @@ O GitHub Actions inclui modelos pré-configurados e ações do Marketplace.
 - [Usar ações do GitHub Marketplace](https://help.github.com/en/actions/getting-started-with-github-actions/using-actions-from-github-marketplace)  
 - [Ações do GitHub Marketplace: implantação no Azure](https://github.com/marketplace?type=actions&query=Azure)  
   
-A fim de obter links para todas as GitHub Actions para o Azure, confira a seguinte página: 
+Para o GitHub Actions para Azure, confira as seguintes páginas: 
    
 - [Ações do Azure](https://github.com/marketplace?query=Azure&type=actions)  
+- [Fluxos de trabalho de ação inicial para implantar no Azure](https://github.com/Azure/actions-workflow-samples)
+
 
 ## <a name="connect-to-azure"></a>Conectar-se ao Azure
 
@@ -51,9 +59,9 @@ Para obter fluxos de trabalho de exemplo para se conectar ao Azure, confira as s
 - [CLI do Azure](https://github.com/Azure/CLI)  
 
 
-## <a name="starter-templates-and-end-to-end-cicd-workflow-samples"></a>Modelos iniciais e exemplos de fluxo de trabalho de CI/CD de ponta a ponta 
+## <a name="sample-apps-with-cicd-workflow-samples"></a>Exemplos de aplicativos com amostras de fluxo de trabalho de CI/CD 
 
-Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para implantar os aplicativos Web no Azure. 
+Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para criar e implantar aplicativos Web de qualquer linguagem e qualquer ecossistema no Azure. 
 
 - [Implantar um aplicativo Web com suporte ao ASP.NET](https://github.com/Azure-Samples/dotnet-sample)  
 - [Implantar um aplicativo ASP.NET Core](https://github.com/Azure-Samples/dotnet_core_sample)  
@@ -67,6 +75,8 @@ Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para implantar
 ## <a name="deploy-a-web-app"></a>Implantar um aplicativo Web
 
 - [Aplicativo Web do Azure](https://github.com/Azure/webapps-deploy)  
+Defina as configurações e as cadeias de conexão do aplicativo usando as ações:
+
 - [Aplicativo Web para Contêineres do Azure](https://github.com/Azure/webapps-container-deploy)  
 - [Configurações do Serviço de Aplicativo do Azure](https://github.com/Azure/appservice-settings)  
 
@@ -78,6 +88,7 @@ Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para implantar
 ## <a name="build-and-deploy-containerized-apps"></a>Criar e implantar aplicativos em contêineres
 
 - [Logon do Docker](https://github.com/Azure/docker-login)  
+- [Implantar em Instâncias de Contêiner do Azure](https://github.com/Azure/aci-deploy)
 
 ## <a name="deploy-to-kubernetes"></a>Implantar para o Kubernetes
 
@@ -100,6 +111,10 @@ Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para implantar
 - [Banco de Dados SQL do Azure](https://github.com/Azure/sql-action)  
 - [Ação do MySQL do Azure](https://github.com/Azure/mysql-action)  
 
+## <a name="deploy-machine-learning-models"></a>Implantar modelos do Azure Machine Learning
+
+- [Implantar o Azure Machine Learning](https://github.com/Azure/aml-deploy)  
+
 ## <a name="trigger-a-run-in-azure-pipelines"></a>Disparar uma execução no Azure Pipelines
 
 - [Azure Pipelines](https://github.com/Azure/pipelines)  
@@ -113,6 +128,6 @@ Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para implantar
 
 Os recursos do GitHub a seguir estão disponíveis para dar suporte ao uso do GitHub para implantar os aplicativos no Azure.  
 
-- [GitHub Actions para o Azure Marketplace](https://github.com/marketplace?query=Azure&type=actions)
+- [Marketplace para o GitHub Actions para Azure](https://github.com/marketplace?query=Azure&type=actions)
 - [Laboratório de aprendizado: entrega contínua com o Azure](https://lab.github.com/githubtraining/github-actions:-continuous-delivery-with-azure)
 - [Fluxos de trabalho de ação inicial para implantar no Azure](https://github.com/Azure/actions-workflow-samples)

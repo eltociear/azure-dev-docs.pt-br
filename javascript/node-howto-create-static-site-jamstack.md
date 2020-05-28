@@ -4,12 +4,12 @@ description: Como usar o Azure para criar um aplicativo JAMstack (JavaScript, AP
 ms.topic: article
 ms.date: 08/20/2019
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 6c804185859611f4534d5fa4e62b8e2585d14aa5
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: abe56482d616a5dfcc3dc25a8ab7949bc5164fe0
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "74467247"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862789"
 ---
 # <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Compilar aplicativos Web JAMstack (site estático) no Azure com o Node.js
 
@@ -22,7 +22,7 @@ Para implementar um site estático/JAMstack no Azure, você usará uma variedade
 - Escolha as bibliotecas desejadas para desenvolvimento de front-end, como a Angular. Em seguida, faça upload desses arquivos de HTML, CSS e JavaScript estático para o Armazenamento de Blobs do Azure, que fornece um servidor Web interno.
 - Crie um proxy reverso de modo que todo o tráfego passe por um domínio de URL.
 
-É possível assistir a uma demonstração do processo com a sessão //build 2019, [Desenvolvimento produtivo de front-end com JavaScript, Visual Studio Code e Azure](https://mybuild.techcommunity.microsoft.com/sessions/77038?source=sessions#top-anchor).
+É possível assistir a uma demonstração do processo com a sessão //build 2019, [Desenvolvimento produtivo de front-end com JavaScript, Visual Studio Code e Azure](https://azure.microsoft.com/resources/videos/build-2019-productive-front-end-development-with-javascript-visual-studio-code-and-azure/).
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/B19-BRK3021?latestplayer=true]
 

@@ -3,12 +3,12 @@ title: Provisionar uma máquina virtual usando o SDK do Azure para Python
 description: Como provisionar uma máquina virtual do Azure usando o Python e as bibliotecas de gerenciamento do SDK do Azure.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 816419d99647ed23173d6c9ff707c256b384968f
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: f21495cc42f3bb228e460f1c591c9aa037dd8123
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404979"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862779"
 ---
 # <a name="example-use-the-azure-sdk-to-provision-a-virtual-machine"></a>Exemplo: Usar o SDK do Azure para provisionar uma máquina virtual
 
@@ -35,7 +35,7 @@ Não se esqueça de criar uma entidade de serviço para o desenvolvimento local 
     azure-mgmt-resource
     azure-mgmt-network
     azure-mgmt-compute
-    azure-core-cli
+    azure-cli-core
     ```
 
 1. Em um terminal ou prompt de comando com o ambiente virtual ativado, instale as bibliotecas de gerenciamento listadas no arquivo *requirements.txt*:

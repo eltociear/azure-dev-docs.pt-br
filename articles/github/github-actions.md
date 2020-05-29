@@ -6,12 +6,12 @@ ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: 1b3906eeacf48e2561f49dc8480ce83565aeca3a
-ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
+ms.openlocfilehash: 3e6f6d447da93873a1278eaa42882a9d08a94d57
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631672"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862799"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Implantar no Azure usando o GitHub Actions
 
@@ -23,11 +23,6 @@ Comece hoje mesmo com uma [conta gratuita do Azure](https://azure.com/free/open-
 
 > [!NOTE]   
 > Os links fornecidos neste artigo estão vinculados a um artigo do GitHub ou a um repositório do GitHub. 
-
-- [Azure/Ação webapps-deploy](https://github.com/Azure/webapps-deploy), para implantar nos Aplicativos Web do Azure e no Aplicativo Web para Contêineres do Azure 
-- [Azure/appservice-settings](https://github.com/Azure/appservice-settings): define configurações de aplicativos, cadeias de conexão e outras configurações gerais em massa usando a sintaxe JSON no aplicativo Web do Azure (Windows ou Linux) ou em qualquer um dos slots de implantação.
-
-
 
 ## <a name="key-concepts"></a>Principais conceitos
 
@@ -53,10 +48,11 @@ Para o GitHub Actions para Azure, confira as seguintes páginas:
 
 ## <a name="connect-to-azure"></a>Conectar-se ao Azure
 
-Para obter fluxos de trabalho de exemplo para se conectar ao Azure, confira as seguintes GitHub Actions:  
+Para que os fluxos de trabalho de exemplo se conectem ao Azure e executem scripts baseados na CLI do Az ou no Az PowerShell, use as seguintes ações do GitHub:  
 
 - [Logon do Azure](https://github.com/Azure/login)  
-- [CLI do Azure](https://github.com/Azure/CLI)  
+- [CLI do Azure](https://github.com/Azure/CLI)
+- [PowerShell do Azure](https://github.com/Azure/powershell)
 
 
 ## <a name="sample-apps-with-cicd-workflow-samples"></a>Exemplos de aplicativos com amostras de fluxo de trabalho de CI/CD 
@@ -69,15 +65,22 @@ Os exemplos a seguir fornecem fluxos de trabalho de ponta a ponta para criar e i
 - [Implantar um aplicativo Web Java](https://github.com/Azure-Samples/java-spring-petclinic)  
 - [Implantar um aplicativo Spring Java](https://github.com/Azure-Samples/Java-application-petstore-ee7)  
 - [Implantar um aplicativo Web Python](https://github.com/Azure-Samples/pythonSample_thecatsaidno)  
-- [Implantação usando o Docker](https://github.com/Azure-Samples/Node_express_container)  
+- [Implantar um aplicativo Web em contêineres usando o Docker](https://github.com/Azure-Samples/Node_express_container)
 
 
 ## <a name="deploy-a-web-app"></a>Implantar um aplicativo Web
 
-- [Aplicativo Web do Azure](https://github.com/Azure/webapps-deploy)  
+Implantar em Aplicativos Web do Azure e no Aplicativo Web para Contêineres do Azure:
+
+- [Azure/webapps-deploy action](https://github.com/Azure/webapps-deploy)
+
+Implantar um aplicativo Web estático:
+- [Azure/static-web-apps-deploy](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=angular)
+
+
 Defina as configurações e as cadeias de conexão do aplicativo usando as ações:
 
-- [Aplicativo Web para Contêineres do Azure](https://github.com/Azure/webapps-container-deploy)  
+- [Azure/appservice-settings](https://github.com/Azure/appservice-settings) 
 - [Configurações do Serviço de Aplicativo do Azure](https://github.com/Azure/appservice-settings)  
 
 ## <a name="deploy-a-serverless-app"></a>Implantar um aplicativo sem servidor

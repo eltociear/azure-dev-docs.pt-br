@@ -3,12 +3,12 @@ title: Provisionar e usar o Armazenamento do Microsoft Azure com o SDK do Azure 
 description: Use o SDK do Azure para bibliotecas do Python para provisionar um contêiner de blob em uma conta de Armazenamento do Microsoft Azure e, em seguida, carregue um arquivo para esse contêiner.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 9b26dd4c5708231c807ea57979bed6bdcd9de25f
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: 904ca66f6e4c065fa0705d2e35b8a7bb46396a0d
+ms.sourcegitcommit: b69db02c3358ce7899cef105508e3d17fafc84b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83405099"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759939"
 ---
 # <a name="example-use-the-azure-sdk-with-azure-storage"></a>Exemplo: Usar o SDK do Azure com o Armazenamento do Microsoft Azure
 
@@ -282,7 +282,7 @@ Por esses motivos, o código de produção deve usar o método de autenticação
         blob_client.upload_blob(data)
     ```
 
-1. Tentar executar o código:
+1. Tentativa de executar o código (que falha intencionalmente):
 
     ```bash
     python use_blob_auth.py
@@ -316,7 +316,7 @@ Por esses motivos, o código de produção deve usar o método de autenticação
 
     O argumento `--scope` neste comando também usa as variáveis de ambiente AZURE_CLIENT_ID e AZURE_SUBSCRIPTION_ID, que você já deve ter definido em seu ambiente local para sua entidade de serviço, seguindo [Configurar seu ambiente de desenvolvimento Python local para Azure](configure-local-development-environment.md).
 
-1. Execute o código novamente para verificar se ele funciona agora. Se você vir o erro de permissões novamente, aguarde um minuto para que as permissões se propaguem e tente o código novamente.
+1. Depois de aguardar um minuto ou dois para as permissões se propagarem, execute o código novamente para verificar se ele funciona agora. Se você vir o erro de permissão novamente, aguarde um pouco mais e tente executar o código outra vez.
 
 Para obter mais informações sobre escopos e atribuições de funções, consulte [Como atribuir permissões de função](how-to-assign-role-permissions.md).
 

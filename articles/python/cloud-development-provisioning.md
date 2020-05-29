@@ -3,12 +3,12 @@ title: Provisionamento, acesso e gerenciamento de recursos no Azure
 description: Uma visão geral dos métodos usados para trabalhar com recursos do Azure, incluindo o portal do Azure, a CLI do Azure e o SDK do Azure.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 585c40523ba2be311af2d65fc3d4cbb679ba6f60
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: a56ea9c3f0165a15933d78ca7a049033b6e75fa9
+ms.sourcegitcommit: b69db02c3358ce7899cef105508e3d17fafc84b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404969"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759919"
 ---
 # <a name="provisioning-accessing-and-managing-resources-on-azure"></a>Provisionamento, acesso e gerenciamento de recursos no Azure
 
@@ -78,7 +78,7 @@ Ao trabalhar com o Azure, você desenvolverá suas próprias preferências para 
 
 ### <a name="regions-and-geographies"></a>Regiões e geografias
 
-Uma característica importante de um grupo de recursos é que ele está sempre associado a uma *região* específica do Azure, que é o local do data center específico. Todos os recursos no mesmo grupo são colocalizados nesse data center e, portanto, podem interagir com muito mais eficiência do que se estivessem em regiões diferentes. Os desenvolvedores geralmente escolhem regiões mais próximas de seus clientes, otimizando, assim, a capacidade de resposta de um aplicativo. O Azure também oferece recursos de replicação geográfica para sincronizar cópias de seu aplicativo e bancos de dados em várias regiões e permitir que você atenda melhor a uma base de clientes global.
+Uma característica importante de um grupo de recursos é que ele está sempre associado a uma *região* específica do Azure, que é o local do data center específico. Todos os recursos no mesmo grupo estão colocalizados nesse data center e, portanto, podem interagir com muito mais eficiência do que se estivessem em regiões diferentes. Os desenvolvedores geralmente escolhem regiões mais próximas de seus clientes, otimizando, assim, a capacidade de resposta de um aplicativo. O Azure também oferece recursos de replicação geográfica para sincronizar cópias de seu aplicativo e bancos de dados em várias regiões e permitir que você atenda melhor a uma base de clientes global.
 
 Devido a leis e regulamentos locais, que são determinados pela *geografia* na qual você cria uma assinatura, você pode ter acesso a apenas determinadas regiões, e essas regiões talvez não permitam todos os serviços do Azure. Para obter detalhes, consulte [Infraestrutura global do Azure](https://azure.microsoft.com/global-infrastructure/).
 

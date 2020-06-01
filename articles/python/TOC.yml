@@ -8,19 +8,19 @@
       href: cloud-development-provisioning.md
     - name: Fluxo de desenvolvimento do Azure
       href: cloud-development-flow.md
-- name: Configurar seu ambiente de desenvolvimento para o Azure
-  href: configure-local-development-environment.md
-- name: Introdução ao SDK do Azure para Python
+- name: Introdução ao Azure com o Python
   items:
-    - name: Visão geral e padrões de uso
+    - name: Visão geral das bibliotecas do Azure
       href: azure-sdk-overview.md
-    - name: Instalar bibliotecas de SDK
-      href: azure-sdk-install.md
-    - name: 'Exemplo: Criar um grupo de recursos'
+    - name: Configurar seu ambiente de desenvolvimento
+      href: configure-local-development-environment.md
+    - name: Padrões de uso das bibliotecas
+      href: azure-sdk-library-usage-patterns.md
+    - name: 'Exemplo: Provisionar um grupo de recursos'
       href: azure-sdk-example-resource-group.md
-    - name: 'Exemplo: Usar armazenamento do Azure'
+    - name: 'Exemplo: Provisionar e usar o armazenamento do Azure'
       href: azure-sdk-example-storage.md
-    - name: 'Exemplo: Provisionar um aplicativo Web com código'
+    - name: 'Exemplo: Provisionar e implantar um aplicativo Web'
       href: azure-sdk-example-web-app.md
     - name: 'Exemplo: Provisionar uma máquina virtual'
       href: azure-sdk-example-virtual-machines.md
@@ -88,6 +88,8 @@
           href: tutorial-vs-code-serverless-python-08.md
 - name: Guias de instruções
   items:
+    - name: Instalar pacotes de biblioteca
+      href: azure-sdk-install.md
     - name: Autenticar aplicativos com o Azure
       href: azure-sdk-authenticate.md
     - name: Gerenciar entidades de serviço
@@ -128,7 +130,5 @@
       href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-search'
     - name: Todos os exemplos
       href: 'https://docs.microsoft.com/samples/browse/?languages=python'
-- name: Referência
-  items:
-    - name: SDK do Azure
-      href: sdk.md
+- name: Referência da API de bibliotecas
+  href: sdk-library-api-reference.md

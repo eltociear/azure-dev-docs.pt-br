@@ -7,18 +7,18 @@ metadata:
   description: Comece a desenvolver com Python e Azure.
   author: kraigb
   ms.author: kraigb
-  ms.date: 05/04/2020
+  ms.date: 05/30/2020
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: python
-  ms.openlocfilehash: 4f128432052206091b1cced8447bd64c4e288133
-  ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
+  ms.openlocfilehash: 89cc9d65d903fdeabd236387a24dd340fd90f9f9
+  ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84146044"
+  ms.lasthandoff: 06/01/2020
+  ms.locfileid: "84256421"
 landingContent:
 - title: Introdução ao Python no Azure
   linkLists:
@@ -34,14 +34,12 @@ landingContent:
     links:
     - text: Conheça as bibliotecas do Azure para Python
       url: azure-sdk-overview.md
-  - linkListType: how-to-guide
-    links:
-    - text: Usar as bibliotecas para Python
-      url: azure-sdk-install.md
   - linkListType: tutorial
     links:
-    - text: Usar as bibliotecas do Azure no código
-      url: azure-sdk-example-resource-group.md
+    - text: Provisione o Armazenamento do Azure com Python
+      url: azure-sdk-example-storage.md
+    - text: Use o Armazenamento do Azure do código Python
+      url: azure-sdk-example-storage-use.md
   - linkListType: reference
     links:
     - text: Referência da API de bibliotecas do Azure para Python

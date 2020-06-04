@@ -3,12 +3,12 @@ title: Tutorial – Criar uma rede spoke no Azure usando o Terraform
 description: Saiba como implementar duas VNets (redes virtuais) spoke conectadas a um hub em uma topologia hub-spoke.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 9c4a04232d91a36bdc4ff408b326330821a87b6b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 935bf66b19eeb73d1fff5d4471d2541f38d7f03a
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170902"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329584"
 ---
 # <a name="tutorial-create-a-spoke-network-in-azure-using-terraform"></a>Tutorial: Criar uma rede spoke no Azure usando o Terraform
 
@@ -80,7 +80,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       resource_group_name = azurerm_resource_group.spoke1-vnet-rg.name
       address_space       = ["10.1.0.0/16"]
 
-      tags {
+      tags = {
         environment = local.prefix-spoke1
       }
     }
@@ -109,7 +109,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       allow_forwarded_traffic = true
       allow_gateway_transit   = false
       use_remote_gateways     = true
-      depends_on = ["azurerm_virtual_network.spoke1-vnet", "azurerm_virtual_network.hub-vnet" , "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke1-vnet, azurerm_virtual_network.hub-vnet , azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
 
     resource "azurerm_network_interface" "spoke1-nic" {
@@ -156,7 +156,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
         disable_password_authentication = false
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke1
       }
     }
@@ -170,7 +170,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       allow_forwarded_traffic   = true
       allow_gateway_transit     = true
       use_remote_gateways       = false
-      depends_on = ["azurerm_virtual_network.spoke1-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke1-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
     ```
 
@@ -202,7 +202,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       resource_group_name = azurerm_resource_group.spoke2-vnet-rg.name
       address_space       = ["10.2.0.0/16"]
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -231,7 +231,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       allow_forwarded_traffic = true
       allow_gateway_transit   = false
       use_remote_gateways     = true
-      depends_on = ["azurerm_virtual_network.spoke2-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke2-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
 
     resource "azurerm_network_interface" "spoke2-nic" {
@@ -246,7 +246,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
         private_ip_address_allocation = "Dynamic"
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -282,7 +282,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
         disable_password_authentication = false
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -296,7 +296,7 @@ Dois scripts de spoke são criados nesta seção. Cada script define uma rede vi
       allow_forwarded_traffic   = true
       allow_gateway_transit     = true
       use_remote_gateways       = false
-      depends_on = ["azurerm_virtual_network.spoke2-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke2-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
     ```
      

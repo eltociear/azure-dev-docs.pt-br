@@ -3,12 +3,12 @@ title: Tutorial - Criar um conjunto de dimensionamento de máquinas virtuais do 
 description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: bb6175c92d0487bd5707b721ebc39ce4b727fed6
-ms.sourcegitcommit: aa417af8b5f00cbc056666e481250ef45c661d52
+ms.openlocfilehash: 23b57d5b7161c318a154bfa2afcf133aa545a233
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83153721"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329574"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
 
@@ -32,7 +32,7 @@ Neste tutorial, você aprenderá como:
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-- **Instalar o Terraform**: Siga as instruções no artigo [Terraform e configurar o acesso ao Azure](install-configure.md)
+- **Instalar o Terraform**: Siga as instruções no artigo [Terraform e configurar o acesso ao Azure](getting-started-cloud-shell.md)
 
 - **Crie um par de chaves SSH**: Para obter mais informações, consulte [Como criar e usar um par de chaves SSH pública e privada para VMs Linux no Azure](/azure/virtual-machines/linux/mac-create-ssh-keys).
 
@@ -80,9 +80,9 @@ No Azure Cloud Shell, execute as seguintes etapas:
     description = "The location where resources will be created"
    }
 
-   variable "tags" {
+   variable "tags" = {
     description = "A map of the tags to use for the resources that are deployed"
-    type        = map
+    type        = map(string)
 
     default = {
       environment = "codelab"

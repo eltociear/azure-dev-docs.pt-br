@@ -3,12 +3,12 @@ title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure usand
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 816228d73ac6b21c2c3e144c3f7783de0377e73e
+ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82138782"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202865"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 
@@ -18,7 +18,7 @@ Neste tutorial, você usa o Visual Studio Code para criar um aplicativo Node.js 
 
 Assista a este vídeo para ter uma explicação completa do conteúdo neste artigo.
 
-> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-to-Azure-App-Service/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-Azure-App-Service/player]
 
 ## <a name="prerequisites"></a>Prerequisites
 

@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente p
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 167e1c2be4d379f7457d35f2e6fe4a226092ac08
-ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
+ms.openlocfilehash: 8d6b27b9390f347a464b9daded05b9c3b9a3352c
+ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83708560"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256401"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
@@ -38,14 +38,6 @@ ms.locfileid: "83708560"
 
 1. Para passar o valor do nome no corpo da solicitação JSON, você pode usar uma ferramenta como a cURL com o JSON embutido:
 
-    # <a name="bash"></a>[Bash](#tab/bash)
-
-    ```bash
-    # Mac OS/Linux: modify the URL if you're using a different function name
-    curl --header "Content-Type: application/json" --request POST \
-        --data '{"name":"Visual Studio Code"}' http://localhost:7071/api/HttpExample
-    ```
-
     # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
     ```powershell
@@ -56,6 +48,14 @@ ms.locfileid: "83708560"
     ```
 
     No PowerShell, você também pode usar o [cmdlet Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+
+    # <a name="bash"></a>[Bash](#tab/bash)
+
+    ```bash
+    # Mac OS/Linux: modify the URL if you're using a different function name
+    curl --header "Content-Type: application/json" --request POST \
+        --data '{"name":"Visual Studio Code"}' http://localhost:7071/api/HttpExample
+    ```
 
     ---
 

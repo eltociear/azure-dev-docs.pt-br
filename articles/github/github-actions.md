@@ -6,12 +6,12 @@ ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: 3e6f6d447da93873a1278eaa42882a9d08a94d57
-ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
+ms.openlocfilehash: a7bcf09da47e9af41f404bfdd2454b25f94eb7b4
+ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83862799"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202845"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Implantar no Azure usando o GitHub Actions
 
@@ -113,10 +113,6 @@ Defina as configurações e as cadeias de conexão do aplicativo usando as açõ
 
 - [Banco de Dados SQL do Azure](https://github.com/Azure/sql-action)  
 - [Ação do MySQL do Azure](https://github.com/Azure/mysql-action)  
-
-## <a name="deploy-machine-learning-models"></a>Implantar modelos do Azure Machine Learning
-
-- [Implantar o Azure Machine Learning](https://github.com/Azure/aml-deploy)  
 
 ## <a name="trigger-a-run-in-azure-pipelines"></a>Disparar uma execução no Azure Pipelines
 

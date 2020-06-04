@@ -18,8 +18,10 @@
       href: azure-sdk-library-usage-patterns.md
     - name: 'Exemplo: Provisionar um grupo de recursos'
       href: azure-sdk-example-resource-group.md
-    - name: 'Exemplo: Provisionar e usar o armazenamento do Azure'
+    - name: 'Exemplo: Provisionar o Armazenamento do Azure'
       href: azure-sdk-example-storage.md
+    - name: 'Exemplo: Usar armazenamento do Azure'
+      href: azure-sdk-example-storage-use.md
     - name: 'Exemplo: Provisionar e implantar um aplicativo Web'
       href: azure-sdk-example-web-app.md
     - name: 'Exemplo: Provisionar uma máquina virtual'

@@ -7,10 +7,8 @@
 - name: Inícios rápidos
   expanded: true
   items:
-    - name: Instalar e configurar o Terraform
-      href: install-configure.md
-    - name: Criar uma VM do Linux
-      href: create-linux-virtual-machine-with-infrastructure.md
+    - name: Introdução – Cloud Shell
+      href: getting-started-cloud-shell.md
 - name: Tutoriais
   items:
     - name: Instalação e configuração
@@ -31,16 +29,6 @@
       items:
         - name: Implantar um Azure Cosmos DB
           href: deploy-azure-cosmos-db-to-azure-container-instances.md
-    - name: Infraestrutura
-      items:
-        - name: Criar um cluster de VMs com módulos do Terraform
-          href: create-vm-cluster-module.md
-        - name: Criar um cluster de VMs com Terraform e HCL
-          href: create-vm-cluster-with-infrastructure.md
-        - name: Provisionar conjunto de dimensionamento de VMs com infraestrutura
-          href: create-vm-scaleset-network-disks-hcl.md
-        - name: Provisionar conjunto de dimensionamento de Máquina Virtual de uma imagem personalizada do Packer
-          href: create-vm-scaleset-network-disks-using-packer-hcl.md
     - name: Redes
       items:
         - name: Topologia hub-spoke
@@ -62,9 +50,21 @@
         - name: Instalar a extensão do Visual Studio Code do Terraform
           href: configure-vs-code-extension-for-terraform.md
         - name: Criar um modelo de base do Terraform usando o Yeoman
-          href: create-a-base-template-using-yeoman.md
+          href: create-base-template-using-yeoman.md
         - name: Testar módulos do Terraform usando Terratest
           href: test-modules-using-terratest.md
+    - name: Máquinas virtuais
+      items:
+        - name: Máquina virtual com infraestrutura
+          href: create-linux-virtual-machine-with-infrastructure.md
+        - name: Cluster de máquina virtual com módulos do Terraform
+          href: create-vm-cluster-module.md
+        - name: Cluster de máquina virtual com Terraform e HCL
+          href: create-vm-cluster-with-infrastructure.md
+        - name: Conjunto de dimensionamento de máquinas virtuais com infraestrutura
+          href: create-vm-scaleset-network-disks-hcl.md
+        - name: Conjunto de dimensionamento de máquinas virtuais da imagem do Packer
+          href: create-vm-scaleset-network-disks-using-packer-hcl.md
 - name: Exemplos
   items:
     - name: Modelos de configuração

@@ -16,16 +16,20 @@
       href: configure-local-development-environment.md
     - name: Padrões de uso das bibliotecas
       href: azure-sdk-library-usage-patterns.md
-    - name: 'Exemplo: Provisionar um grupo de recursos'
-      href: azure-sdk-example-resource-group.md
-    - name: 'Exemplo: Provisionar o Armazenamento do Azure'
-      href: azure-sdk-example-storage.md
-    - name: 'Exemplo: Usar armazenamento do Azure'
-      href: azure-sdk-example-storage-use.md
-    - name: 'Exemplo: Provisionar e implantar um aplicativo Web'
-      href: azure-sdk-example-web-app.md
-    - name: 'Exemplo: Provisionar uma máquina virtual'
-      href: azure-sdk-example-virtual-machines.md
+    - name: Exemplos
+      items:
+        - name: Provisionar um grupo de recursos
+          href: azure-sdk-example-resource-group.md
+        - name: Provisionar o Armazenamento do Azure
+          href: azure-sdk-example-storage.md
+        - name: Usar armazenamento do Azure
+          href: azure-sdk-example-storage-use.md
+        - name: Provisionar e implantar um aplicativo Web
+          href: azure-sdk-example-web-app.md
+        - name: Provisionar e consultar um banco de dados
+          href: azure-sdk-example-database.md
+        - name: Provisionar uma máquina virtual
+          href: azure-sdk-example-virtual-machines.md
 - name: Explore os serviços específicos do Azure
   items:
     - name: Hospedagem de aplicativo
@@ -100,6 +104,8 @@
       href: how-to-manage-service-principals.md
     - name: Atribuir permissões de função a entidades de segurança
       href: how-to-assign-role-permissions.md
+    - name: Configurar o registro em log
+      href: azure-sdk-logging.md
     - name: Configurar argumentos da API REST
       href: azure-sdk-operation-config.md
     - name: Desenvolvimento com várias nuvens

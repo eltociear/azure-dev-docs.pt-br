@@ -1,21 +1,21 @@
 ---
-title: Conectar-se a todas as regiões – SDK do Azure para Python em várias nuvens
-description: no Azure em todas as regiões
-ms.date: 05/04/2020
+title: Conectar-se a todas as regiões usando as bibliotecas do Azure para Python em várias nuvens
+description: Como usar o módulo azure_cloud de msrestazure para se conectar ao Azure em diferentes regiões soberanas
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b585cc6853c338ca1d1f97b8e477818368342f8e
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: f24e2261c8002f3f34d28ee02e0f409e8632f825
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83403681"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84146174"
 ---
-# <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Várias nuvens: Conectar-se a todas as regiões com o SDK do Azure para Python
+# <a name="multi-cloud-connect-to-all-regions-with-the-azure-libraries-for-python"></a>Várias nuvens: Conectar-se a todas as regiões com as bibliotecas do Azure para Python
 
-É possível usar o SDK do Azure para Python para conectar-se a todas as regiões em que o Azure [está disponível](https://azure.microsoft.com/regions/services).
+É possível usar as bibliotecas do Azure para Python para conectar-se a todas as regiões em que o Azure está [disponível](https://azure.microsoft.com/regions/services).
 
-Por padrão, o SDK do Azure para Python está configurado para se conectar ao Azure global.
+Por padrão, as bibliotecas do Azure estão configuradas para se conectar ao Azure global.
 
 ## <a name="using-pre-declared-cloud-definition"></a>Usar definições de nuvem declaradas previamente
 

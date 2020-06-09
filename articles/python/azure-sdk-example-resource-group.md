@@ -1,18 +1,18 @@
 ---
-title: Provisionar um grupo de recursos usando o SDK do Azure para Python
+title: Provisionar um grupo de recursos usando as bibliotecas do Azure para Python
 description: Use a biblioteca de gerenciamento de recursos no SDK do Azure para Python para criar um grupo de recursos a partir do código Python.
-ms.date: 05/12/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 99b2f721cf2c215d2ba9ea97cf78250fc65f165a
-ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
+ms.openlocfilehash: 0d0ff5bf8a2417e38f9fd066b226ed26da87322b
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631569"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329674"
 ---
-# <a name="example-use-the-azure-sdk-to-provision-a-resource-group"></a>Exemplo: Usar o SDK do Azure para provisionar um grupo de recursos
+# <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Exemplo: Usar as bibliotecas do Azure para provisionar um grupo de recursos
 
-Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um grupo de recursos.
+Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um grupo de recursos. (O [comando de CLI do Azure equivalente](#for-reference-equivalent-azure-cli-commands) é apresentado posteriormente neste artigo.)
 
 Todos os comandos neste artigo funcionam da mesma forma no bash do Linux/Mac OS e nos shells de comando do Windows, a menos que haja uma observação.
 
@@ -22,7 +22,7 @@ Se ele ainda não foi configurado, siga todas as instruções em [Configurar o a
 
 Não se esqueça de criar uma entidade de serviço para o desenvolvimento local e de criar e ativar um ambiente virtual para este projeto.
 
-## <a name="2-install-the-resource-management-library"></a>2: Instalar a biblioteca de gerenciamento de recursos
+## <a name="2-install-the-azure-library-packages"></a>2: Instalar os pacotes de biblioteca do Azure
 
 Crie um arquivo chamado *requirements.txt* com o conteúdo abaixo:
 
@@ -33,7 +33,7 @@ azure-cli-core
 
 Em um terminal ou prompt de comando com o ambiente virtual ativado, instale os requisitos:
 
-```bash
+```cmd
 pip install -r requirements.txt
 ```
 
@@ -52,7 +52,7 @@ resource_client = get_client_from_cli_profile(ResourceManagementClient)
 
 # Provision the resource group.
 rg_result = resource_client.resource_groups.create_or_update(
-    "PythonSDKExample-ResourceGroup-rg",
+    "PythonAzureExample-ResourceGroup-rg",
     {
         "location": "centralus"
     }
@@ -75,16 +75,20 @@ print(f"Provisioned resource group {rg_result.name} in the {rg_result.location} 
 # provisioned by the time the call returns.
 
 # Optional line to delete the resource group
-#resource_client.resource_groups.delete("PythonSDKExample-ResourceGroup-rg")
+#resource_client.resource_groups.delete("PythonAzureExample-ResourceGroup-rg")
 ```
 
 Esse código usa os métodos de autenticação baseados em CLI (`get_client_from_cli_profile`), pois demonstra ações que você pode efetuar diretamente com a CLI do Azure. Em ambos os casos, você usará a mesma identidade para autenticação.
 
 Para colocar esse código em um script de produção, você deve usar `DefaultAzureCredential` (recomendado) ou um método baseado na entidade de serviço, como descrito em [Como autenticar aplicativos Python com os serviços do Azure](azure-sdk-authenticate.md).
 
+### <a name="reference-links-for-classes-used-in-the-code"></a>Links de referência para classes usadas no código
+
+- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient?view=azure-python)
+
 ## <a name="4-run-the-script"></a>4: Executar o script
 
-```bash
+```cmd
 python provision_rg.py
 ```
 
@@ -97,13 +101,13 @@ Você pode verificar se o grupo existe pelo portal do Azure ou da CLI do Azure.
 - CLI do Azure: execute o comando a seguir:
 
     ```azurecli
-    az group show -n PythonSDKExample-ResourceGroup-rg
+    az group show -n PythonAzureExample-ResourceGroup-rg
     ```
 
 ## <a name="6-clean-up-resources"></a>6: Limpar os recursos
 
 ```azurecli
-az group delete -n PythonSDKExample-ResourceGroup-rg
+az group delete -n PythonAzureExample-ResourceGroup-rg
 ```
 
 Execute esse comando se você não precisar manter o grupo de recursos provisionado neste exemplo. Os grupos de recursos não incorrem em encargos contínuos na sua assinatura, mas recomendamos limpar os grupos que você não esteja usando ativamente.
@@ -115,10 +119,13 @@ Você também pode usar o método [`ResourceManagementClient.resource_groups.del
 Os comandos a seguir da CLI do Azure executam as mesmas etapas de provisionamento do script Python:
 
 ```azurecli
-az group create -n PythonSDKExample-ResourceGroup-rg -l centralus
+az group create -n PythonAzureExample-ResourceGroup-rg -l centralus
 ```
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Exemplo: Usar Armazenamento do Microsoft Azure >>>](azure-sdk-example-storage.md)
+- [Exemplo: Provisionar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md)
+- [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md)
+- [Exemplo: Provisionar um aplicativo Web e implantar o código](azure-sdk-example-web-app.md)
+- [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md)
+- [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)

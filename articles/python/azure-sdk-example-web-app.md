@@ -1,18 +1,18 @@
 ---
-title: Provisionar e implantar um aplicativo Web usando o SDK do Azure
-description: Use as bibliotecas de gerenciamento no SDK do Azure para Python para provisionar um aplicativo Web e, em seguida, implantar o código do aplicativo de um repositório do GitHub.
-ms.date: 05/12/2020
+title: Provisionar e implantar um aplicativo Web usando as bibliotecas do SDK do Azure
+description: Use as bibliotecas de gerenciamento nas bibliotecas do SDK do Azure para Python para provisionar um aplicativo Web e, em seguida, implantar o código do aplicativo de um repositório do GitHub.
+ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8387039792c330829c1483ea16e7b98444d93284
-ms.sourcegitcommit: 486b55521d7c27666dbb8035bc46fb60d1cbcf0a
+ms.openlocfilehash: 8196e86b4a4311b48b47975fd47bb04f11a1fe23
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550937"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329634"
 ---
-# <a name="example-use-the-azure-sdk-to-provision-and-deploy-a-web-app"></a>Exemplo: Usar o SDK do Azure para provisionar e implantar um aplicativo Web
+# <a name="example-use-the-azure-libraries-to-provision-and-deploy-a-web-app"></a>Exemplo: Usar as bibliotecas do Azure para provisionar e implantar um aplicativo Web
 
-Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um aplicativo Web no Serviço de Aplicativo do Azure e implantar o código do aplicativo de um repositório do GitHub
+Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um aplicativo Web no Serviço de Aplicativo do Azure e implantar o código do aplicativo de um repositório do GitHub. ([Comandos de CLI do Azure equivalentes](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo.)
 
 Todos os comandos neste artigo funcionam da mesma forma no bash do Linux/Mac OS e nos shells de comando do Windows, a menos que haja uma observação.
 
@@ -22,7 +22,7 @@ Se ele ainda não foi configurado, siga todas as instruções em [Configurar o a
 
 Não se esqueça de criar uma entidade de serviço para o desenvolvimento local e de criar e ativar um ambiente virtual para este projeto.
 
-## <a name="2-install-the-needed-management-libraries"></a>2: Instalar as bibliotecas de gerenciamento necessárias
+## <a name="2-install-the-needed-azure-library-packages"></a>2: Instalar os pacotes de biblioteca do Azure necessários
 
 Crie um arquivo chamado *requirements.txt* com o conteúdo abaixo:
 
@@ -34,7 +34,7 @@ azure-cli-core
 
 Em um terminal ou prompt de comando com o ambiente virtual ativado, instale os requisitos:
 
-```bash
+```cmd
 pip install -r requirements.txt
 ```
 
@@ -44,18 +44,18 @@ Acesse [https://github.com/Azure-Samples/python-docs-hello-world](https://github
 
 ![Bifurcação de amostra de repositório no GitHub](media/azure-sdk-example-web-app/fork-github-repository.png)
 
-Em seguida, crie uma variável de ambiente com nome `REPO_URL` na URL da sua bifurcação. O código na próxima seção depende dessa variável de ambiente:
-
-# <a name="bash"></a>[Bash](#tab/bash)
-
-```bash
-REPO_URL=<url_of_your_fork>
-```
+Em seguida, crie uma variável de ambiente com nome `REPO_URL` na URL da sua bifurcação. O código de exemplo na próxima seção depende desta variável de ambiente:
 
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```cmd
 set REPO_URL=<url_of_your_fork>
+```
+
+# <a name="bash"></a>[Bash](#tab/bash)
+
+```bash
+REPO_URL=<url_of_your_fork>
 ```
 
 ---
@@ -75,7 +75,7 @@ subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
 
 # Constants we need in multiple places: the resource group name and the region
 # in which we provision resources. You can change these values however you want.
-RESOURCE_GROUP_NAME = 'PythonSDKExample-WebApp-rg'
+RESOURCE_GROUP_NAME = 'PythonAzureExample-WebApp-rg'
 LOCATION = "centralus"
 
 # Step 1: Provision the resource group.
@@ -96,8 +96,8 @@ print(f"Provisioned resource group {rg_result.name}")
 # latter to create a reasonably unique name. If you've already provisioned a
 # web app and need to re-run the script, set the WEB_APP_NAME environment 
 # variable to that name instead.
-SERVICE_PLAN_NAME = 'PythonSDKExample-WebApp-plan'
-WEB_APP_NAME = os.environ.get("WEB_APP_NAME", f"PythonSDKExample-WebApp-{random.randint(1,100000):05}")
+SERVICE_PLAN_NAME = 'PythonAzureExample-WebApp-plan'
+WEB_APP_NAME = os.environ.get("WEB_APP_NAME", f"PythonAzureExample-WebApp-{random.randint(1,100000):05}")
 
 # Obtain the client object
 app_service_client = get_client_from_cli_profile(WebSiteManagementClient)
@@ -149,8 +149,8 @@ print(f"Provisioned web app {web_app_result.name} at {web_app_result.default_hos
 REPO_URL = 'https://github.com/kraigb/python-docs-hello-world'
 
 poller = app_service_client.web_apps.create_or_update_source_control(RESOURCE_GROUP_NAME,
-    WEB_APP_NAME, 
-    { 
+    WEB_APP_NAME,
+    {
         "location": "GitHub",
         "repo_url": REPO_URL,
         "branch": "master"
@@ -166,9 +166,14 @@ Esse código usa os métodos de autenticação baseados em CLI (`get_client_from
 
 Para colocar esse código em um script de produção, você deve usar `DefaultAzureCredential` (recomendado) ou um método baseado na entidade de serviço, como descrito em [Como autenticar aplicativos Python com os serviços do Azure](azure-sdk-authenticate.md).
 
+### <a name="reference-links-for-classes-used-in-the-code"></a>Links de referência para classes usadas no código
+
+- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient?view=azure-python)
+- [WebSiteManagementClient (azure.mgmt.web import)](/python/api/azure-mgmt-web/azure.mgmt.web.websitemanagementclient?view=azure-python)
+
 ## <a name="5-run-the-script"></a>5: Executar o script
 
-```bash
+```cmd
 python provision_deploy_web_app.py
 ```
 
@@ -177,7 +182,7 @@ python provision_deploy_web_app.py
 1. Para acessar o site da Web implantado, execute o seguinte comando:
 
     ```azurecli
-    az webapp browse -n PythonSDKExample-WebApp-12345
+    az webapp browse -n PythonAzureExample-WebApp-12345
     ```
 
     Substitua "PythonSDKExample-WebApp-12345" pelo nome específico do seu aplicativo Web.
@@ -189,7 +194,7 @@ python provision_deploy_web_app.py
 ## <a name="7-clean-up-resources"></a>7: Limpar os recursos
 
 ```azurecli
-az group delete -n PythonSDKExample-WebApp-rg
+az group delete -n PythonAzureExample-WebApp-rg
 ```
 
 Execute esse comando se você não precisar manter os recursos provisionados neste exemplo e quiser evitar encargos contínuos na sua assinatura.
@@ -200,39 +205,39 @@ Você também pode usar o método [`ResourceManagementClient.resource_groups.del
 
 Os comandos a seguir da CLI do Azure executam as mesmas etapas de provisionamento do script Python:
 
-# <a name="bash"></a>[Bash](#tab/bash)
+# <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
-az group create -l centralus -n PythonSDKExample-WebApp-rg
+az group create -l centralus -n PythonAzureExample-WebApp-rg
 
-az appservice plan create -n PythonSDKExample-WebApp-plan --is-linux --sku F1
+az appservice plan create -n PythonAzureExample-WebApp-plan --is-linux --sku F1
 
-az webapp create -g PythonSDKExample-WebApp-rg -n PythonSDKExample-WebApp-12345 \
-    --plan PythonSDKExample-WebApp-plan --runtime "python|3.8"
+az webapp create -g PythonAzureExample-WebApp-rg -n PythonAzureExample-WebApp-12345 ^
+    --plan PythonAzureExample-WebApp-plan --runtime "python|3.8"
 
 # You can use --deployment-source-url with the first create command. It's shown here
 # to match the sequence of the Python code.
 
-az webapp create -n PythonSDKExample-WebApp-12345 --plan PythonSDKExample-WebApp-plan \
+az webapp create -n PythonAzureExample-WebApp-12345 --plan PythonAzureExample-WebApp-plan ^
     --deployment-source-url https://github.com/<your_fork>/python-docs-hello-world
 
 # Replace <your_fork> with the specific URL of your forked repository.
 ```
 
-# <a name="cmd"></a>[cmd](#tab/cmd)
+# <a name="bash"></a>[Bash](#tab/bash)
 
 ```azurecli
-az group create -l centralus -n PythonSDKExample-WebApp-rg
+az group create -l centralus -n PythonAzureExample-WebApp-rg
 
-az appservice plan create -n PythonSDKExample-WebApp-plan --is-linux --sku F1
+az appservice plan create -n PythonAzureExample-WebApp-plan --is-linux --sku F1
 
-az webapp create -g PythonSDKExample-WebApp-rg -n PythonSDKExample-WebApp-12345 ^
-    --plan PythonSDKExample-WebApp-plan --runtime "python|3.8"
+az webapp create -g PythonAzureExample-WebApp-rg -n PythonAzureExample-WebApp-12345 \
+    --plan PythonAzureExample-WebApp-plan --runtime "python|3.8"
 
 # You can use --deployment-source-url with the first create command. It's shown here
 # to match the sequence of the Python code.
 
-az webapp create -n PythonSDKExample-WebApp-12345 --plan PythonSDKExample-WebApp-plan ^
+az webapp create -n PythonAzureExample-WebApp-12345 --plan PythonAzureExample-WebApp-plan \
     --deployment-source-url https://github.com/<your_fork>/python-docs-hello-world
 
 # Replace <your_fork> with the specific URL of your forked repository.
@@ -240,7 +245,10 @@ az webapp create -n PythonSDKExample-WebApp-12345 --plan PythonSDKExample-WebApp
 
 ---
 
-## <a name="next-step"></a>Próxima etapa
+## <a name="see-also"></a>Confira também
 
-> [!div class="nextstepaction"]
-> [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)
+- [Exemplo: Provisionar um grupo de recursos](azure-sdk-example-resource-group.md)
+- [Exemplo: Provisionar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md)
+- [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md)
+- [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md)
+- [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)

@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 1eeb7d6a17bb21963f3203d484387c0aae6c402f
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.openlocfilehash: bbc7dd44e975fd47b52df41baa1ec526ac1908f8
+ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82988693"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202825"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrar aplicativos Java para o Azure
 
@@ -74,9 +74,9 @@ Esses aplicativos são empacotados em arquivos com a extensão *.jar* (arquivos 
 
 As seções a seguir mostram quais destinos de serviço atendem aos requisitos do aplicativo e quais responsabilidades eles envolvem.
 
-### <a name="feature-grid"></a>Grade de recursos
+### <a name="hosting-options-grid"></a>Grade de opções de hospedagem
 
-Use a grade a seguir para identificar os destinos que dão suporte aos tipos de aplicativos e recursos necessários.
+Use a grade a seguir para identificar possíveis destinos para seu tipo de aplicativo. Como você pode ver, as Máquinas Virtuais e o AKS dão suporte a todos os tipos de aplicativos, mas exigem que sua equipe assuma mais responsabilidades, conforme será mostrado na próxima seção.
 
 |   |Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas Virtuais|
 |---|---|---|---|---|---|---|

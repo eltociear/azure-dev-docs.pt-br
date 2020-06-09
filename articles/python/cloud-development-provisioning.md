@@ -1,14 +1,14 @@
 ---
 title: Provisionamento, acesso e gerenciamento de recursos no Azure
-description: Uma visão geral dos métodos usados para trabalhar com recursos do Azure, incluindo o portal do Azure, a CLI do Azure e o SDK do Azure.
-ms.date: 05/12/2020
+description: Uma visão geral dos métodos usados para trabalhar com recursos do Azure, incluindo o portal do Microsoft Azure, a CLI do Azure e as bibliotecas do Azure (SDK).
+ms.date: 05/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: a56ea9c3f0165a15933d78ca7a049033b6e75fa9
-ms.sourcegitcommit: b69db02c3358ce7899cef105508e3d17fafc84b2
+ms.openlocfilehash: 7482b3ae29210c02382ddd20ee2f29b874e18ab5
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759919"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84146194"
 ---
 # <a name="provisioning-accessing-and-managing-resources-on-azure"></a>Provisionamento, acesso e gerenciamento de recursos no Azure
 
@@ -26,7 +26,10 @@ A resposta é simples. Assim como na maioria dos sistemas operacionais, você po
 
 Você pode usar qualquer um ou todos esses métodos complementares para criar, configurar e gerenciar quaisquer recursos do Azure necessários. Na verdade, normalmente você usa todos os três no decorrer de um projeto de desenvolvimento, e vale a pena se familiarizar com cada um deles.
 
-Neste centro de desenvolvedores, mostramos principalmente o uso da CLI e do código Python que usa o SDK do Azure, pois o uso do portal é bem abordado na documentação de cada serviço individual.
+Neste centro do desenvolvedor, mostramos principalmente o uso da CLI e do código Python que usam as bibliotecas do Azure, pois o uso do portal é bem abordado na documentação de cada serviço individual.
+
+> [!NOTE]
+> As bibliotecas do Azure para Python são, às vezes, chamadas de SDK do Azure para Python. No entanto, não há nenhum componente do SDK além das bibliotecas, que você adquire por meio do Gerenciador de pacotes do Python, pip.
 
 ## <a name="azure-portal"></a>Portal do Azure
 
@@ -48,11 +51,11 @@ Você também pode usar o [Azure PowerShell](/powershell/) no lugar da CLI do Az
 
 No lugar da CLI local ou do PowerShell, você pode usar o Azure Cloud Shell diretamente por meio de [https://shell.azure.com/](https://shell.azure.com/). No entanto, como Cloud Shell não é um ambiente local, ele é mais adequado para operações únicas do que para automação.
 
-## <a name="azure-rest-api-and-azure-sdk"></a>API REST do Azure e SDK do Azure
+## <a name="azure-rest-api-and-azure-libraries"></a>API REST do Azure e bibliotecas do Azure
 
 A [API REST do Azure](/rest/api/?view=Azure) é a interface programática do Azure, fornecida por meio do REST seguro por HTTP, porque os data centers do Azure estão todos conectados à Internet. Cada recurso recebe uma URL exclusiva que permite uma API específica do recurso, sujeita a rigorosos protocolos de autenticação e políticas de acesso. (O portal do Azure e a CLI do Azure, na verdade, fazem seu trabalho por meio da API REST.)
 
-Para os desenvolvedores, o [SDK do Azure](https://azure.microsoft.com/downloads/) fornece bibliotecas específicas de uma linguagem que convertem os recursos da API REST em paradigmas de programação muito mais convenientes, como classes e objetos. Para Python, instale sempre as bibliotecas SDK individuais com `pip install` em vez de instalar o SDK como um todo.
+Para os desenvolvedores, as bibliotecas do Azure fornecem bibliotecas específicas a um idioma que movem as funcionalidades da API REST em paradigmas de programação muito mais convenientes, como classes e objetos. Para Python, instale sempre as bibliotecas individuais com `pip install` em vez de instalar um SDK independente como um todo. (Para outros idiomas, consulte [downloads do SDK do Azure](https://azure.microsoft.com/downloads/).)
 
 **Prós**: Controle preciso sobre todas as operações, incluindo um meio muito mais direto de usar a saída de uma operação como entrada para outra. Para desenvolvedores de Python, isso permite trabalhar em paradigmas de linguagem familiares em vez de usar a CLI. Também pode ser usado com o código do aplicativo para automatizar cenários de gerenciamento.
   

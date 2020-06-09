@@ -3,12 +3,12 @@ title: Gerenciar entidades de serviço locais para o desenvolvimento do Azure
 description: Como gerenciar entidades de serviço criadas para o desenvolvimento local usando o portal do Azure ou a CLI do Azure.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: b2e0c913b08c98994226d7a9de39ae83ae50ec21
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: ffb526a0073667f5ea53631925f2565215f60787
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404879"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84146184"
 ---
 # <a name="how-to-manage-service-principals"></a>Como gerenciar entidades de serviço
 
@@ -18,7 +18,7 @@ Ao longo do tempo, provavelmente será necessário excluir, renomear ou gerencia
 
 ## <a name="basics-of-azure-authorization"></a>Noções básicas da autorização do Azure
 
-Sempre que seu código tenta executar alguma operação nos recursos do Azure (que você faz por meio de classes no SDK do Azure), o Azure garante que o aplicativo esteja autorizado a executar essa ação. Você usa o [portal do Azure](https://portal.azure.com) ou a CLI do Azure para conceder permissões específicas com base em função ou recursos à identidade do aplicativo. (Esse procedimento evita a concessão de permissões excessivas ao aplicativo que poderiam ser exploradas se a segurança do seu aplicativo for comprometida.)
+Sempre que seu código tenta executar alguma operação nos recursos do Azure (que você faz por meio de classes nas bibliotecas do Azure), o Azure garante que o aplicativo esteja autorizado a executar essa ação. Você usa o [portal do Azure](https://portal.azure.com) ou a CLI do Azure para conceder permissões específicas com base em função ou recursos à identidade do aplicativo. (Esse procedimento evita a concessão de permissões excessivas ao aplicativo que poderiam ser exploradas se a segurança do seu aplicativo for comprometida.)
 
 Quando implantado no Azure, a identidade do aplicativo normalmente é igual ao nome que você dá ao aplicativo no serviço que o hospeda (como Serviço de Aplicativo do Azure, Azure Functions, uma máquina virtual, etc., quando a identidade gerenciada está habilitada). Porém, quando o código é executado localmente, esse serviço de hospedagem não é envolvido, portanto, você precisa apresentar um substituto adequado ao Azure.
 
@@ -51,4 +51,4 @@ Com a CLI do Azure, você pode executar muitas das operações em entidades de s
 
 Consulte também:
 
-- [Autenticar com o Azure usando o SDK do Azure](azure-sdk-authenticate.md)
+- [Autenticar com o Azure usando as bibliotecas do Azure](azure-sdk-authenticate.md)

@@ -4,12 +4,12 @@ description: Saiba como usar o Ansible para configurar a segurança da VM usando
 keywords: ansible, azure, devops, cofre de chaves, segurança, credenciais, segredos, chaves, certificados, módulos do ansible para azure, grupo de recursos, azure_rm_resourcegroup,
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ce9adb7ea121425d410665e1f4cc225cfdb82bd8
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 84ed514e742c8a8fa3a9acc9328fc71743dfc5cb
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81755229"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84145964"
 ---
 # <a name="tutorial-use-azure-key-vault-with-a-linux-virtual-machine-in-ansible"></a>Tutorial: Usar o Azure Key Vault com uma máquina virtual do Linux no Ansible
 
@@ -216,7 +216,7 @@ O seguinte snippet do guia estratégico do Ansible mostra como criar um segredo 
 **Observações:**
 
 - o [módulo azure_rm_keyvaultsecret](https://docs.ansible.com/ansible/latest/modules/azure_rm_keyvaultsecret_module.html) é usado para criar o segredo do cofre de chaves.
-- Para simplificar, a demonstração inclui `secret_name` e `secret_value`. No entanto, os guias estratégicos são arquivos AiC (infraestrutura como código), assim como qualquer código-fonte para seu projeto. Assim, valores como esses não devem ser armazenados em arquivos de texto não criptografados quando usados em ambientes de produção.
+- Para simplificar, a demonstração inclui `secret_name` e `secret_value`. No entanto, os guias estratégicos são arquivos IaC (infraestrutura como código), assim como qualquer código-fonte para seu projeto. Assim, valores como esses não devem ser armazenados em arquivos de texto não criptografados quando usados em ambientes de produção.
 - Depois de executar esse código, a guia **Segredos** do cofre de chaves listará o segredo recém-adicionado denominado `testsecret`. Para exibi-lo, selecione o segredo, a versão atual e **Mostrar Valor do Segredo**.
 
 ## <a name="get-a-key-vault-secret"></a>Obter um segredo do cofre de chaves
@@ -242,7 +242,7 @@ tasks:
 
 - o **módulo azure_rm_keyvaultsecret_info** é usado para obter o segredo do cofre de chaves. Esse módulo só estará disponível se você estiver usando a coleção do Ansible para módulos do Azure. 
 - Se você receber um erro ao executar este snippet, verifique se você seguiu todas as instruções na [seção Pré-requisitos](#prerequisites).
-- Para simplificar, a demonstração inclui `secret_name` e `secret_value`. No entanto, os guias estratégicos são arquivos AiC (infraestrutura como código), assim como qualquer código-fonte para seu projeto. Assim, valores como esses não devem ser armazenados em arquivos de texto não criptografados quando usados em ambientes de produção.
+- Para simplificar, a demonstração inclui `secret_name` e `secret_value`. No entanto, os guias estratégicos são arquivos IaC (infraestrutura como código), assim como qualquer código-fonte para seu projeto. Assim, valores como esses não devem ser armazenados em arquivos de texto não criptografados quando usados em ambientes de produção.
 
 ## <a name="run-the-complete-playbook"></a>Executar o guia estratégico completo
 

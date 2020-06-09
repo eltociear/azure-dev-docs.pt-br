@@ -3,12 +3,12 @@ title: Fluxo de desenvolvimento do Azure
 description: Uma visão geral do ciclo de desenvolvimento em nuvem no Azure, que envolve provisionamento, codificação, teste, implantação e gerenciamento.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 577b813e2b4ccd8d2cae3d7999d9bb959f88adc2
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: d958659074a965b28d9898783f7810572e12248f
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404959"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84146164"
 ---
 # <a name="the-azure-development-flow-provision-code-test-deploy-and-manage"></a>O fluxo de desenvolvimento do Azure: provisionar, codificar, testar, implantar e gerenciar
 
@@ -20,11 +20,11 @@ Agora que você compreende o modelo de serviços e recursos do Azure, é possív
 
 Conforme descrito no [artigo anterior desta série](cloud-development-provisioning.md), a primeira etapa no desenvolvimento de qualquer aplicativo é provisionar e configurar os recursos que compõem o ambiente de destino do seu aplicativo.
 
-O provisionamento começa com a criação de um grupo de recursos em uma região adequada do Azure. Você pode criar um grupo de recursos por meio do portal do Azure, por meio da CLI do Azure, ou com um script personalizado que usa o SDK do Azure (ou a API REST).
+O provisionamento começa com a criação de um grupo de recursos em uma região adequada do Azure. Você pode criar um grupo de recursos por meio do portal do Azure, por meio da CLI do Azure ou com um script personalizado que usa as bibliotecas do Azure (ou a API REST).
 
-Nesse grupo de recursos, você provisiona e configura os recursos individuais necessários, usando novamente o portal, a CLI ou o SDK do Azure. A configuração inclui a definição de políticas de acesso que controlam quais identidades (entidades de serviço e/ou IDs de aplicativo) podem acessar esses recursos.
+Nesse grupo de recursos, você provisiona e configura os recursos individuais necessários, usando novamente o portal, a CLI ou as bibliotecas do Azure. A configuração inclui a definição de políticas de acesso que controlam quais identidades (entidades de serviço e/ou IDs de aplicativo) podem acessar esses recursos.
 
-Para a maioria dos cenários de desenvolvimento, você provavelmente criará scripts de provisionamento com o código CLI do Azure e/ou Python usando o SDK do Azure. Esses scripts descrevem todas as necessidades de recursos do seu aplicativo e permitem recriá-los facilmente em ambientes diferentes de desenvolvimento, teste e produção (em oposição à execução manual de muitas etapas repetidas no portal do Azure). Esses scripts ASO facilitam o provisionamento de um ambiente em uma região diferente ou a utilização de grupos de recursos diferentes. Você também pode manter esses scripts em repositórios de controle do código-fonte para que tenha total histórico de alterações e auditoria.
+Para a maioria dos cenários de desenvolvimento, você provavelmente criará scripts de provisionamento com o código da CLI do Azure e/ou do Python usando as bibliotecas do Azure. Esses scripts descrevem todas as necessidades de recursos do seu aplicativo e permitem recriá-los facilmente em ambientes diferentes de desenvolvimento, teste e produção (em oposição à execução manual de muitas etapas repetidas no portal do Azure). Esses scripts ASO facilitam o provisionamento de um ambiente em uma região diferente ou a utilização de grupos de recursos diferentes. Você também pode manter esses scripts em repositórios de controle do código-fonte para que tenha total histórico de alterações e auditoria.
 
 ## <a name="step-2-write-your-app-code-to-use-resources"></a>Etapa 2: Escreva o código do aplicativo para usar recursos
 
@@ -32,9 +32,9 @@ Depois de provisionar os recursos necessários para seu aplicativo, escreva o c�
 
 Por exemplo, na etapa de provisionamento, você pode ter criado uma conta de armazenamento do Azure e um contêiner de blob dentro dessa conta, além de ter definido políticas de acesso para o aplicativo nesse contêiner. No seu código, agora, você pode autenticar com essa conta de armazenamento e, em seguida, criar, atualizar ou excluir blobs dentro desse contêiner. (Esse processo é demonstrado no [Exemplo - Usar o armazenamento do Azure](azure-sdk-example-storage.md)) Da mesma forma, você pode ter provisionado um banco de dados com um esquema e permissões apropriadas, para que o código do aplicativo possa se conectar ao banco de dados e executar as operações usuais de criar-ler-atualizar-excluir.
 
-Como desenvolvedor de Python, você normalmente vai escrever o código do aplicativo em Python usando o SDK do Azure para Python. Dito isso, qualquer parte independente de um aplicativo em nuvem pode ser escrita em qualquer idioma com suporte. Se você estiver trabalhando em uma equipe com uma variedade de conhecimentos em linguagens, por exemplo, é totalmente possível que algumas partes do aplicativo sejam escritas em Python, algumas em JavaScript, algumas em Java e outras em C#.
+Como desenvolvedor de Python, você normalmente vai escrever o código do aplicativo em Python usando as bibliotecas do Azure para Python. Dito isso, qualquer parte independente de um aplicativo em nuvem pode ser escrita em qualquer idioma com suporte. Se você estiver trabalhando em uma equipe com uma variedade de conhecimentos em linguagens, por exemplo, é totalmente possível que algumas partes do aplicativo sejam escritas em Python, algumas em JavaScript, algumas em Java e outras em C#.
 
-Observe que o código do aplicativo pode usar o SDK do Azure para executar operações de provisionamento e gerenciamento, conforme necessário. O provisionamento de scripts, da mesma forma, pode usar o SDK para inicializar recursos com dados específicos ou executar tarefas de manutenção em recursos de nuvem, mesmo quando esses scripts são executados localmente.
+Observe que o código do aplicativo pode usar as bibliotecas do Azure para executar operações de provisionamento e gerenciamento, conforme necessário. O provisionamento de scripts, da mesma forma, pode usar as bibliotecas para inicializar recursos com os dados específicos ou para executar tarefas de manutenção em recursos de nuvem, mesmo quando esses scripts são executados localmente.
 
 ## <a name="step-3-test-and-debug-your-app-code-locally"></a>Etapa 3: Testar e depurar o código do aplicativo localmente
 
@@ -54,7 +54,7 @@ No entanto, quando o código é implantado na nuvem, ele realmente se torna um a
 
 ## <a name="step-5-manage-monitor-and-revise"></a>Etapa 5: Gerenciar, monitorar e revisar
 
-Após a implantação, você deseja ter certeza de que o aplicativo está sendo executado como deveria, respondendo às solicitações de clientes e usando recursos com eficiência (e com o menor custo). Você pode gerenciar como o Azure dimensiona automaticamente sua implantação conforme necessário e pode coletar e monitorar dados de desempenho por meio do portal do Azure, da CLI do Azure ou de scripts personalizados escritos com o SDK do Azure. Em seguida, você pode fazer ajustes em tempo real aos recursos provisionados para otimizar o desempenho, usando novamente qualquer uma das mesmas ferramentas.
+Após a implantação, você deseja ter certeza de que o aplicativo está sendo executado como deveria, respondendo às solicitações de clientes e usando recursos com eficiência (e com o menor custo). Você pode gerenciar como o Azure dimensiona automaticamente sua implantação conforme necessário e pode coletar e monitorar dados de desempenho por meio do portal do Azure, da CLI do Azure ou de scripts personalizados escritos com as bibliotecas do Azure. Em seguida, você pode fazer ajustes em tempo real aos recursos provisionados para otimizar o desempenho, usando novamente qualquer uma das mesmas ferramentas.
 
 O monitoramento fornece informações sobre como você pode reestruturar seu aplicativo de nuvem. Por exemplo, você pode descobrir que determinadas partes de um aplicativo Web (como um grupo de pontos de extremidade de API) são usadas apenas ocasionalmente em comparação com as partes principais. Em seguida, você pode optar por implantar essas APIs separadamente como Azure Functions sem servidor, onde elas têm seus próprios recursos de computação de backup que não competem com o aplicativo principal, mas que custam apenas alguns centavos por mês. Seu aplicativo principal torna-se mais responsivo para mais clientes, sem precisar escalar verticalmente para uma camada de custo mais alto.
 
@@ -62,7 +62,7 @@ O monitoramento fornece informações sobre como você pode reestruturar seu apl
 
 Agora você está familiarizado com a estrutura básica do Azure e o fluxo de desenvolvimento geral: provisionar recursos, escrever e testar código, implantar o código no Azure e, em seguida, monitorar e gerenciar esses recursos.
 
-A próxima etapa é colocar a estação de trabalho totalmente configurada para funcionar com esse fluxo, em seguida, você está pronto para utilizar o SDK do Azure!
+A próxima etapa é fazer sua estação de trabalho ficar totalmente configurada para funcionar com esse fluxo, em seguida, você está pronto para utilizar as bibliotecas do Azure!
 
 > [!div class="nextstepaction"]
 > [Configurar seu ambiente de desenvolvimento local >>>](configure-local-development-environment.md)

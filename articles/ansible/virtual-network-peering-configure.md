@@ -4,12 +4,12 @@ description: Saiba como usar o Ansible para conectar redes virtuais com o empare
 keywords: ansible, azure, devops, bash, guia estratégico, rede, emparelhamento
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 2b5af7546900c45dde7eea0e1d57370d2ffc3991
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 4dfda10693ad86131ec529d7ac06070098a40a5e
+ms.sourcegitcommit: 499f7275446f006fa43c4eff3b1f0d001e9a98d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743888"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84453687"
 ---
 # <a name="tutorial-configure-azure-virtual-network-peering-using-ansible"></a>Tutorial: Configurar o emparelhamento de rede virtual do Azure usando o Ansible
 
@@ -80,7 +80,7 @@ O código do guia estratégico de exemplo nesta seção é usado para:
 - Criar uma sub-rede dentro da rede virtual
 
 ```yml
-  - name: Ceate second virtual network
+  - name: Create second virtual network
     azure_rm_virtualnetwork:
       resource_group: "{{ resource_group_secondary }}"
       name: "{{ vnet_name2 }}"
@@ -184,7 +184,7 @@ Há duas maneiras de obter o guia estratégico de exemplo completo:
       name: "{{ vnet_name1 }}"
       address_prefix: "10.0.0.0/24"
       virtual_network: "{{ vnet_name1 }}"
-  - name: Ceate second virtual network
+  - name: Create second virtual network
     azure_rm_virtualnetwork:
       resource_group: "{{ resource_group_secondary }}"
       name: "{{ vnet_name2 }}"
@@ -267,7 +267,7 @@ changed: [localhost]
 TASK [Add subnet] 
 changed: [localhost]
 
-TASK [Ceate second virtual network] 
+TASK [Create second virtual network] 
 changed: [localhost]
 
 TASK [Add subnet] 

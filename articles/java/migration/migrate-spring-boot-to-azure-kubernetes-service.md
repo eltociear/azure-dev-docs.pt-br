@@ -5,12 +5,12 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 4/10/2020
-ms.openlocfilehash: 6c2781914e65d28a57f2f80ed287921eab3b76ae
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: bb355fdd8436d6483ebd1ffeead4c522c9895e16
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369983"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507673"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-kubernetes-service"></a>Migrar aplicativos Spring Boot para o Serviço de Kubernetes do Azure
 
@@ -64,7 +64,7 @@ Determine se o aplicativo tem dependências explícitas no Zipkin. Procure depen
 
 ### <a name="inventory-external-resources"></a>Recursos externos de inventário
 
-Identifique recursos externos, como fontes de dados, agentes de mensagens JMS e URLs de outros serviços. Em aplicativos Spring Boot, normalmente é possível encontrar a configuração desses recursos na pasta *src/main/directory*, em um arquivo geralmente chamado de *application.properties* ou de *application.yml*.
+Identifique recursos externos, como fontes de dados, agentes de mensagens JMS e URLs de outros serviços. Em aplicativos Spring Boot, normalmente é possível encontrar a configuração desses recursos na pasta *src/main/directory*, em um arquivo geralmente chamado de *application.properties* ou de *application.yml*. Além disso, verifique as variáveis de ambiente da implantação de produção para ver as definições de configuração pertinentes.
 
 [!INCLUDE [inventory-databases-spring-boot](includes/inventory-databases-spring-boot.md)]
 

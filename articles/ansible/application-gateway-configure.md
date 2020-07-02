@@ -3,13 +3,13 @@ title: Tutorial – Gerenciar o tráfego da Web com o Gateway de Aplicativo do A
 description: Saiba como usar o Ansible para criar e configurar um Gateway de Aplicativo do Azure para gerenciar o tráfego da Web
 keywords: ansible, azure, devops, bash, guia estratégico, gateway de aplicativo, balanceador de carga, tráfego da Web
 ms.topic: tutorial
-ms.date: 04/30/2019
-ms.openlocfilehash: 3ff9a43513a2ee34964e6e82447e3398469db8f8
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 06/19/2020
+ms.openlocfilehash: 935468f70f47672048284d7a93787be2e1906212
+ms.sourcegitcommit: 3b069f1f89492f7e7bc5952a14dbfdde71d1e576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743715"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107616"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>Tutorial: Gerenciar o tráfego da Web com o Gateway de Aplicativo do Azure usando o Ansible
 
@@ -196,7 +196,7 @@ Salve o guia estratégico a seguir como `appgw_create.yml`:
             name: "{{ subnet_name }}"
       register: subnet
 
-    - name: Get info of backend server 2
+    - name: Get info of backend server 1
       azure_rm_resource_facts:
         api_version: '2018-04-01'
         resource_group: "{{ resource_group }}"

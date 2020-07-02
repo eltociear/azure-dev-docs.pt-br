@@ -1,7 +1,6 @@
 - name: Documentação do Azure para desenvolvedores móveis
   href: index.yml
 - name: Visão geral
-  expanded: true
   items:
     - name: Escolher uma estrutura de desenvolvimento móvel
       href: choose-mobile-framework.md

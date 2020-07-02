@@ -4,12 +4,12 @@ description: Saiba como usar o Ansible para gerenciar seus inventários dinâmic
 keywords: ansible, azure, devops, bash, cloudshell, inventário dinâmico
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: c777ee18663507b6e8d658a7ba027d99f9645cc9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 8ad48c49094c19087318434cd02c38dcb1857a76
+ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82104687"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133619"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Tutorial: Configurar inventários dinâmicos de seus recursos do Azure usando o Ansible
 
@@ -87,12 +87,12 @@ Assim que as máquinas virtuais estiverem definidas (e marcadas), é hora de ger
 
 ### <a name="using-ansible-version--28"></a>Usar o Ansible versão < 2.8
 
-O Ansible fornece um script Python chamado [azure_rm.py](https://github.com/ansible/ansible/blob/stable-2.9/contrib/inventory/azure_rm.py) que gera um inventário dinâmico de recursos do Azure. As etapas a seguir o orientam a usar o script `azure_rm.py` para conectar-se às suas duas máquinas virtuais do Azure de teste:
+O Ansible fornece um script Python chamado [azure_rm.py](https://github.com/ansible-collections/community.general/blob/master/scripts/inventory/azure_rm.py) que gera um inventário dinâmico de recursos do Azure. As etapas a seguir o orientam a usar o script `azure_rm.py` para conectar-se às suas duas máquinas virtuais do Azure de teste:
 
 1. Use o comando `wget` do GNU para recuperar o script `azure_rm.py`:
 
     ```python
-    wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py
+    wget https://raw.githubusercontent.com/ansible-collections/community.general/master/scripts/inventory/azure_rm.py
     ```
 
 1. Use o comando `chmod` para alterar as permissões de acesso para o script `azure_rm.py`. O comando a seguir usa o parâmetro `+x` para permitir a execução do arquivo especificado (`azure_rm.py`):

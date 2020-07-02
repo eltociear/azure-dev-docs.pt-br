@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente p
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8d6b27b9390f347a464b9daded05b9c3b9a3352c
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.openlocfilehash: 761ffab12712f5c90127665addb65201016be2c8
+ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256401"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85370687"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
@@ -34,7 +34,7 @@ ms.locfileid: "84256401"
     > [!TIP]
     > Se você não conseguir acessar a URL e estiver em execução por trás de um proxy corporativo (e, provavelmente, tiver as variáveis de ambiente `HTTP_PROXY` e `HTTPS_PROXY` definidas), defina uma variável de ambiente chamada `NO_PROXY` como `localhost,127.0.0.1` e tente novamente.
 
-1. Agora, tente adicionar um parâmetro de nome – como `http://localhost:7071/api/HttpExample?name=VS%20Code`, por exemplo – e a janela do navegador deverá exibir a mensagem "Olá Visual Studio Code!", demonstrando que você executou esse caminho de código.
+1. Agora, tente adicionar um parâmetro de nome – como `http://localhost:7071/api/HttpExample?name=Visual%20Studio%20Code`, por exemplo – e a janela do navegador deverá exibir a mensagem "Olá Visual Studio Code!", demonstrando que você executou esse caminho de código.
 
 1. Para passar o valor do nome no corpo da solicitação JSON, você pode usar uma ferramenta como a cURL com o JSON embutido:
 

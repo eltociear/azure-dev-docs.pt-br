@@ -8,12 +8,12 @@ tags: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: c0a2f46f8a3249f6c9580e823e102a86291e15e7
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 8f35aea0447f8681fb4f456dbafe500a608f6420
+ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790776"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Motivos para mudar para o Java 11
 
@@ -168,7 +168,7 @@ Disponível: http://openjdk.java.net/jeps/259. (Acessado em 13 de novembro de 20
 (online). Disponível: http://openjdk.java.net/jeps/318. (Acessado em 13 de novembro de 2019).
 
 <a id="ref12">\[12\]</a> Oracle Corporation, \"JDK-8146115: Como melhorar o uso de detecção de contêineres e de configuração de recursos do Docker,\" 16 de setembro de 2019.
-(online). Disponível: https://bugs.java.com/bugdatabase/view\_bug.do?bug\_id=JDK-8146115.
+(online). Disponível: https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8146115.
 (Acessado em 13 de novembro de 2019).
 
 <a id="ref13">\[13\]</a> Oracle Corporation, \"JEP 238: Arquivos JAR de Várias Versões,\" 22 de junho de 2017. (online). Disponível: http://openjdk.java.net/jeps/238. (Acessado em 13 de novembro de 2019).
@@ -184,7 +184,7 @@ Disponível: http://openjdk.java.net/jeps/197. (Acessado em 13 de novembro de 20
 <a id="ref17">\[17\]</a> Oracle Corporation, \"JEP 312: Handshakes Locais de Thread,\" 21 de agosto de 2019.
 (online). Disponível: https://openjdk.java.net/jeps/312. (Acessado em 13 de novembro de 2019).
 
-<a id="ref18">\[18\]</a> Oracle Corporation, \"JDK-8198756: Alocação Lenta de Threads de Compilador,\" 29 de outubro de 2018. (online). Disponível: https://bugs.java.com/bugdatabase/view\_bug.do?bug\_id=8198756.
+<a id="ref18">\[18\]</a> Oracle Corporation, \"JDK-8198756: Alocação Lenta de Threads de Compilador,\" 29 de outubro de 2018. (online). Disponível: https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8198756.
 (Acessado em 13 de novembro de 2019).
 
 <a id="ref19">\[19\]</a> Oracle Corporation, \"JEP 193: Identificadores Variáveis,\" 17 de agosto de 2017. (online). Disponível: https://openjdk.java.net/jeps/193. (Acessado em 13 de novembro de 2019).

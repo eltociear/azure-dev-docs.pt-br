@@ -16,6 +16,8 @@
       href: configure-local-development-environment.md
     - name: Padrões de uso das bibliotecas
       href: azure-sdk-library-usage-patterns.md
+    - name: Índice de pacotes das bibliotecas
+      href: azure-sdk-library-package-index.md
     - name: Exemplos
       items:
         - name: Provisionar um grupo de recursos
@@ -106,10 +108,10 @@
       href: how-to-assign-role-permissions.md
     - name: Configurar o registro em log
       href: azure-sdk-logging.md
-    - name: Configurar argumentos da API REST
-      href: azure-sdk-operation-config.md
-    - name: Desenvolvimento com várias nuvens
-      href: azure-sdk-multi-cloud.md
+    - name: Configurar proxies
+      href: azure-sdk-configure-proxy.md
+    - name: Usar domínios soberanos
+      href: azure-sdk-sovereign-domain.md
 - name: Exemplos
   items:
     - name: Aplicativos Web e sem servidor

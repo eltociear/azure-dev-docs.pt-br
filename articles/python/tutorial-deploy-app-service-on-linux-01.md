@@ -4,18 +4,19 @@ description: 'Tutorial, etapa 1: introdução, pré-requisitos e entrada no Azur
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ed0370e5e4905403ec7917410f68fb4969969a05
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
-ms.translationtype: HT
+ms.openlocfilehash: 444dd9737d52de58f71ef9a01aeca6a203e97a92
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82138752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069385"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
 Este artigo explica passo-a-passo como usar o Visual Studio Code para implantar um aplicativo Python no Serviço de Aplicativo do Azure no Linux usando a extensão do [Serviço de Aplicativo do Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o link **Encontrei um problema** no final de cada artigo para enviar comentários.
+
+Para assistir a um vídeo de demonstração, confira <a href="https://www.youtube.com/watch?v=dNVvFttc-sA&feature=youtu.be&ocid=AID3006292" target="_blank">Criar WebApps com o VS Code e o Serviço de Aplicativo do Azure</a> (youtube.com) do PyCon 2020 virtual.
 
 > [!TIP]
 > O [Serviço de Aplicativo do Azure no Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) executa o código-fonte em um contêiner predefinido do Docker. Esse contêiner executa aplicativos com o Python 3.7, usando o servidor Web [Gunicorn](https://gunicorn.org). As características desse contêiner são descritas em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). A própria definição de contêiner está no [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).

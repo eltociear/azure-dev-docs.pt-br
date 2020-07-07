@@ -3,15 +3,14 @@ title: Tutorial – Criar uma VM do Linux com a infraestrutura no Azure usando o
 description: Saiba como usar o Terraform para criar e gerenciar um ambiente completo de máquina virtual do Linux no Azure.
 keywords: azure devops terraform linux vm máquina virtual
 ms.topic: tutorial
-ms.date: 05/31/2020
-ms.openlocfilehash: 40dfe97d2311e251e23468b5d7a6eede778d7b8e
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.date: 06/14/2020
+ms.openlocfilehash: 97b4381c45e67458e01093d735f9b32e97584149
+ms.sourcegitcommit: 2d6c9687b39e33a6b5e980d9a375c9f8f1f2cab7
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329434"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779648"
 ---
-# <a name="tutorial--create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Tutorial: Criar uma VM do Linux com a infraestrutura no Azure usando o Terraform
+# <a name="tutorial-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Tutorial: Criar uma VM do Linux com a infraestrutura no Azure usando o Terraform
 
 O Terraform permite definir e criar implantações de infraestrutura completa no Azure. Você cria modelos do Terraform em um formato legível que criar e configurar os recursos do Azure de maneira consistente e reproduzível. Este artigo mostra como criar um ambiente Linux completo e os recursos de apoio com o Terraform. Você também pode aprender a [instalar e configurar o Terraform](getting-started-cloud-shell.md).
 
@@ -463,10 +462,10 @@ Se tudo estiver correto, e você estiver pronto para criar a infraestrutura no A
 terraform apply
 ```
 
-Após a conclusão do Terraform, sua infraestrutura de VM estará pronta. Obtenha o endereço IP público da sua VM com [az vm show](/cli/azure/vm):
+Após a conclusão do Terraform, sua infraestrutura de VM estará pronta. Obtenha o endereço IP público da sua VM com [az vm show](/cli/azure/vm#az-vm-show):
 
 ```azurecli-interactive
-az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] --o tsv
+az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] -o tsv
 ```
 
 Então você poderá enviar por SSH para sua VM:

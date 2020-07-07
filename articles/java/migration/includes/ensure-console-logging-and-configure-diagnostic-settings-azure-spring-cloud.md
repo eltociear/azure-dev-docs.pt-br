@@ -2,16 +2,15 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 4/15/2020
-ms.openlocfilehash: b53308d4a9db52a25665d0daa74be678e726c499
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
-ms.translationtype: HT
+ms.openlocfilehash: 3ff76d977c231b4b238f9dbec7f3bfaddfe5e484
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82990178"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507588"
 ---
 ### <a name="ensure-console-logging-and-configure-diagnostic-settings"></a>Verificar o registro em log de console e definir as configurações de diagnóstico
 
-Configure o registro em log para que todos os aplicativos no Azure Spring Cloud registrem no console e não em arquivos.
+Configure o log para que toda a saída seja roteada para o console e não para arquivos.
 
 Depois da implantação de um aplicativo no Azure Spring Cloud, [adicione uma configuração de diagnóstico](/azure/spring-cloud/diagnostic-services) para disponibilizar os eventos registrados para o consumo, por exemplo, por meio do Log Analytics do Azure Monitor.
 

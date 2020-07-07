@@ -2,14 +2,13 @@
 author: judubois
 ms.date: 05/06/2020
 ms.author: judubois
-ms.openlocfilehash: d4b9becdce2b78e928b97b7d980024eac5871df2
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
-ms.translationtype: HT
+ms.openlocfilehash: e1bd45413368abe253ff4ac7733bbdcd3d0a4cc3
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369806"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507476"
 ---
-Crie uma classe Java `Todo`, ao lado da classe `DemoApplication`:
+Crie uma classe Java `Todo` ao lado da classe `DemoApplication` usando o seguinte código:
 
 ```java
 package com.example.demo;
@@ -72,7 +71,7 @@ public class Todo {
 
 Essa classe é um modelo de domínio mapeado na tabela de `todo` que você criou anteriormente.
 
-Para gerenciar essa classe, você precisará de um repositório. Defina uma nova interface `TodoRepository` no mesmo pacote:
+Para gerenciar essa classe, você precisará de um repositório. Defina uma nova interface `TodoRepository` no mesmo pacote usando o seguinte código:
 
 ```java
 package com.example.demo;
@@ -118,7 +117,7 @@ public class TodoController {
 }
 ```
 
-Por fim, pare o aplicativo e inicie-o novamente:
+Por fim, pare o aplicativo e inicie-o novamente usando o seguinte comando:
 
 ```bash
 ./mvnw spring-boot:run
@@ -128,28 +127,28 @@ Por fim, pare o aplicativo e inicie-o novamente:
 
 Para testar o aplicativo, você pode usar cURL.
 
-Primeiro, crie um item "todo" no banco de dados:
+Primeiro, crie um item "todo" no banco de dados usando o seguinte comando:
 
 ```bash
-curl  --header "Content-Type: application/json" \
-          --request POST \
-          --data '{"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done": "true"}' \
-          http://127.0.0.1:8080
+curl --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done": "true"}' \
+    http://127.0.0.1:8080
 ```
 
-Este comando deve retornar o item criado:
+Este comando deverá retornar o item criado, conforme mostrado aqui:
 
 ```json
 {"id":1,"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done":true}
 ```
 
-Em seguida, recupere os dados usando uma nova solicitação cURL:
+Em seguida, recupere os dados usando uma nova solicitação do cURL com o seguinte comando:
 
 ```bash
 curl http://127.0.0.1:8080
 ```
 
-Esse comando retornará a lista de itens "todo", incluindo o item que você criou:
+Esse comando retornará a lista de itens "todo", incluindo o item que você criou, conforme mostrado aqui:
 
 ```json
 [{"id":1,"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done":true}]

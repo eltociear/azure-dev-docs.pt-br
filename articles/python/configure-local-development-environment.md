@@ -3,12 +3,11 @@ title: Configurar o ambiente do Python local para o Azure
 description: Como configurar um ambiente de desenvolvimento Python local para trabalhar com o Azure, incluindo Visual Studio Code, as bibliotecas do SDK do Azure e as credenciais necessárias para a autenticação de biblioteca.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: e3eb03182a45f3ceacc8b3ea09abca47d8fa2e81
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
-ms.translationtype: HT
+ms.openlocfilehash: cf87c90bd36594ffa4e1f3837133238f89a77836
+ms.sourcegitcommit: 43e4b50f6f6f5806b2f162ca39367face0779ff6
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256451"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421492"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Configurar o ambiente de desenvolvimento do Python local para o Azure
 
@@ -21,6 +20,8 @@ Este artigo fornece as instruções de configuração única para criar e valida
 - Examine o processo de [uso de ambientes virtuais Python](#use-python-virtual-environments) para cada um de seus projetos.
 
 Depois de configurar sua estação de trabalho, você precisará apenas da configuração mínima adicionada para concluir vários guias de início rápido e tutoriais em outro lugar neste centro de desenvolvedores e na documentação do Azure.
+
+Essa configuração para o desenvolvimento local é uma questão separada dos [recursos de provisionamento](cloud-development-flow.md) que compõem o *ambiente de nuvem* do seu aplicativo no Azure. No seu processo de desenvolvimento, você executa o código no ambiente de desenvolvimento local que pode acessar esses recursos de nuvem, mas o código ainda não foi implantado em um [serviço de hospedagem adequado](quickstarts-app-hosting.md) na nuvem. Essa etapa de implantação vem depois, conforme descrito no artigo [Fluxo de desenvolvimento do Azure](cloud-development-flow.md).
 
 ## <a name="install-components"></a>Instalar componentes
 
@@ -71,7 +72,7 @@ az login
 
 O comando `az` é o comando raiz da CLI do Azure. Após `az`, está um ou mais comandos específicos, como `login`. Consulte a referência do comando [az login](/cli/azure/authenticate-azure-cli).
 
-A CLI do Azure normalmente mantém suas credenciais entre as sessões, mas é uma boa prática executar `az login` sempre que você abrir um novo terminal ou prompt de comando.
+A CLI do Azure normalmente mantém suas credenciais entre as sessões, mas é uma boa prática executar `az login` sempre que você abrir um novo terminal ou um prompt de comando.
 
 ## <a name="configure-authentication"></a>Configurar autenticação
 

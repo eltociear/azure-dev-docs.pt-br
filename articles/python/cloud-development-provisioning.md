@@ -3,12 +3,11 @@ title: Provisionamento, acesso e gerenciamento de recursos no Azure
 description: Uma visão geral dos métodos usados para trabalhar com recursos do Azure, incluindo o portal do Microsoft Azure, a CLI do Azure e as bibliotecas do Azure (SDK).
 ms.date: 05/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 7482b3ae29210c02382ddd20ee2f29b874e18ab5
-ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
-ms.translationtype: HT
+ms.openlocfilehash: bc2fb2138c5ea5cf5438f2d892483b094e78eb8d
+ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84146194"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942415"
 ---
 # <a name="provisioning-accessing-and-managing-resources-on-azure"></a>Provisionamento, acesso e gerenciamento de recursos no Azure
 
@@ -35,7 +34,7 @@ Neste centro do desenvolvedor, mostramos principalmente o uso da CLI e do códig
 
 O [portal do Azure](https://portal.azure.com) é a interface do usuário totalmente personalizável e baseada em navegador do Azure por meio da qual você pode provisionar e gerenciar recursos com todos os serviços do Azure. Para acessar o portal, primeiro você deve entrar usando uma conta da Microsoft e, em seguida, criar uma conta gratuita do Azure com uma assinatura. (Depois de conectado, você pode selecionar o ícone **?** e selecionar **Iniciar o tour guiado** para obter uma explicação simples dos recursos do portal principal.)
 
-**Prós**: A interface do usuário facilita a exploração de serviços e de todas as suas várias opções de configuração. A configuração de valores de configuração é segura porque nenhuma informação é armazenada na estação de trabalho local.
+**Prós**: a interface do usuário facilita a exploração de serviços e de todas as várias opções de configuração. A configuração de valores de configuração é segura porque nenhuma informação é armazenada na estação de trabalho local.
 
 **Contras**: Trabalhar com o portal é um processo manual e não pode ser automatizado. Lembrar o que você fez para alterar uma configuração, por exemplo, significa registrar suas etapas em um documento separado.
 
@@ -49,7 +48,7 @@ A [CLI do Azure](/cli/azure/?view=azure-cli-latest) é a interface de linha de c
 
 Você também pode usar o [Azure PowerShell](/powershell/) no lugar da CLI do Azure, embora os comandos do estilo Linux da CLI do Azure sejam geralmente mais conhecidos para desenvolvedores do Python.
 
-No lugar da CLI local ou do PowerShell, você pode usar o Azure Cloud Shell diretamente por meio de [https://shell.azure.com/](https://shell.azure.com/). No entanto, como Cloud Shell não é um ambiente local, ele é mais adequado para operações únicas do que para automação.
+No lugar da CLI local ou do PowerShell, você pode usar o Azure Cloud Shell diretamente por meio de [https://shell.azure.com/](https://shell.azure.com/). O Cloud Shell é conveniente porque é autenticado automaticamente com o Azure quando ele é aberto e tem as mesmas funcionalidades que você faria por meio do portal do Azure. No entanto, como o Cloud Shell não é um ambiente local, ele é mais adequado para operações singulares como você faria por meio do portal em vez da automação com script.
 
 ## <a name="azure-rest-api-and-azure-libraries"></a>API REST do Azure e bibliotecas do Azure
 
@@ -71,13 +70,13 @@ Para obter mais informações sobre o [dimensionamento automático](/azure/archi
 
 No modelo de recursos do Azure, você pode imaginar que, ao longo do tempo, estará provisionando muitos recursos diferentes em vários serviços do Azure para diferentes aplicativos. Há três níveis de hierarquia que você pode usar para organizar esses recursos:
 
-1. **Assinaturas**: cada assinatura do Azure tem sua própria conta de cobrança e muitas vezes representa uma equipe ou um departamento distinto dentro de uma organização. Em geral, você provisiona todos os recursos necessários para qualquer aplicativo dentro da mesma assinatura, para que eles possam se beneficiar de recursos como autenticação compartilhada. No entanto, como todos os recursos podem ser acessados por meio de URLs públicas e dos tokens de autorização necessários, é certamente possível distribuir recursos entre várias assinaturas.
+1. **Assinaturas**: cada assinatura do Azure tem a própria conta de cobrança e muitas vezes representa uma equipe ou um departamento distinto dentro de uma organização. Em geral, você provisiona todos os recursos necessários para qualquer aplicativo dentro da mesma assinatura, para que eles possam se beneficiar de recursos como autenticação compartilhada. No entanto, como todos os recursos podem ser acessados por meio de URLs públicas e dos tokens de autorização necessários, é certamente possível distribuir recursos entre várias assinaturas.
 
-1. **Grupos de recursos**: dentro de uma assinatura, os grupos de recursos são contêineres para outros recursos, que você pode gerenciar *como* um grupo. (Por esse motivo, um grupo de recursos normalmente está relacionado a um projeto específico.) Sempre que você provisiona um recurso, na verdade, deve especificar o grupo ao qual o pertence. Sua primeira etapa com um novo projeto costuma criar um grupo de recursos apropriado. Ao excluir o grupo de recursos, você desaloca todos os recursos contidos, em vez de ter que excluir cada recurso individualmente. Confie em nós quando afirmamos que negligenciar a organização dos seus grupos de recursos pode levar a muitas dores de cabeça posteriormente, quando você não se lembra de qual recurso pertence a qual projeto!
+1. **Grupos de recursos**: dentro de uma assinatura, os grupos de recursos são contêineres para outros recursos, que você pode gerenciar como um grupo. (Por esse motivo, um grupo de recursos normalmente está relacionado a um projeto específico.) Sempre que você provisiona um recurso, na verdade, deve especificar o grupo ao qual ele pertence. Sua primeira etapa com um novo projeto costuma criar um grupo de recursos apropriado. Ao excluir o grupo de recursos, você desaloca todos os recursos contidos, em vez de ter que excluir cada recurso individualmente. Confie em nós quando afirmamos que negligenciar a organização dos seus grupos de recursos pode levar a muitas dores de cabeça posteriormente, quando você não se lembra de qual recurso pertence a qual projeto!
 
 1. **Nomenclatura de recursos**: em um grupo de recursos, você pode usar quaisquer estratégias de nomenclatura que desejar para expressar semelhanças ou relações entre os recursos. Como o nome é geralmente usado na URL do recurso, pode haver limitações nos caracteres. (Alguns nomes, por exemplo, permitem apenas letras e números, enquanto outros permitem hifens e sublinhados.)
 
-Ao trabalhar com o Azure, você desenvolverá suas próprias preferências para organizar seus recursos e suas próprias convenções de nomenclatura de assinaturas, grupos de recursos e grupos de recursos individuais.
+Ao trabalhar com o Azure, você desenvolverá suas preferências para organizar seus recursos e suas convenções de nomenclatura de assinaturas, grupos de recursos e recursos individuais.
 
 ### <a name="regions-and-geographies"></a>Regiões e geografias
 

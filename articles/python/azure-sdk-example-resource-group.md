@@ -3,12 +3,11 @@ title: Provisionar um grupo de recursos usando as bibliotecas do Azure para Pyth
 description: Use a biblioteca de gerenciamento de recursos no SDK do Azure para Python para criar um grupo de recursos a partir do código Python.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 0d0ff5bf8a2417e38f9fd066b226ed26da87322b
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.openlocfilehash: 38c2f87511c040a04040844fb512fd436d566c15
+ms.sourcegitcommit: 499f7275446f006fa43c4eff3b1f0d001e9a98d9
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329674"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84453697"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Exemplo: Usar as bibliotecas do Azure para provisionar um grupo de recursos
 
@@ -127,5 +126,5 @@ az group create -n PythonAzureExample-ResourceGroup-rg -l centralus
 - [Exemplo: Provisionar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md)
 - [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md)
 - [Exemplo: Provisionar um aplicativo Web e implantar o código](azure-sdk-example-web-app.md)
-- [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md)
+- [Exemplo: Provisionar e consultar um banco de dados](azure-sdk-example-database.md)
 - [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)

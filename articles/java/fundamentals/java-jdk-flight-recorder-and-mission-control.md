@@ -1,19 +1,18 @@
 ---
-title: Examinar dados com o Java Flight Recorder e o Mission Control
-description: Orientação para usar o Java Flight Recorder e o Mission Control para coletar e examinar os dados de aplicativo.
+title: Examinar dados com o Zulu Flight Recorder e o Mission Control
+description: Diretrizes para usar o Zulu Flight Recorder e o Mission Control para coletar e examinar os dados de aplicativo.
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 23effea162bb4f39ca7ff9477695e21e6faeafdb
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
-ms.translationtype: HT
+ms.openlocfilehash: afd95e7f39fb9abdfe2261c8ef0f5ac961347ffb
+ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670862"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418194"
 ---
-# <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>Monitorar e gerenciar cargas de trabalho do Java com o JFR (Java Flight Recorder) e o Zulu Mission Control
+# <a name="monitor-and-manage-java-workloads-with-zulu-flight-recorder-and-zulu-mission-control"></a>Monitorar e gerenciar cargas de trabalho Java com o Zulu Flight Recorder e o Zulu Mission Control
 
-Este artigo mostra como monitorar e gerenciar cargas de trabalho Java com o JFR (Java Flight Recorder) e o Zulu Mission Control.
+Este artigo mostra como monitorar e gerenciar cargas de trabalho Java com o Zulu Flight Recorder e o Zulu Mission Control.
 
 O Zulu Mission Control é um build totalmente testado do JDK Mission Control. Em 2018, a Oracle transformou o Mission Control em software livre. Ele é gerenciado como um projeto sob o guarda-chuva do OpenJDK. Junto com o Flight Recorder, o Mission Control oferece funcionalidades de gerenciamento e de monitoramento interativos de baixa sobrecarga para cargas de trabalho Java.
 
@@ -52,7 +51,7 @@ Siga as etapas abaixo para instalar o Zulu Mission Control, conectar-se a uma JV
     tar -xzvf zmc7.0.0-EA-macosx_x64.tar.gz
     ```
 
-4. Inicie seu aplicativo Java usando um dos JDKs compatíveis. Por exemplo: 
+4. Inicie seu aplicativo Java usando um dos JDKs compatíveis. Por exemplo:
 
     ```cli
     $JAVA_HOME/bin/java -jar MyApplication.jar

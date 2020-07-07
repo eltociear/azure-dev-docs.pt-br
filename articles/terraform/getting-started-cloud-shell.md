@@ -1,29 +1,28 @@
 ---
-title: Início Rápido – Introdução ao Terraform – Azure Cloud Shell
+title: Guia de Início Rápido – Introdução ao Terraform por meio do Azure Cloud Shell
 description: Nesse início rápido, você aprende a como instalar e configurar o Terraform para criar recursos do Azure.
 keywords: azure devops terraform install configure cloud shell init plan apply execution portal login rbac service principal automated script
 ms.topic: quickstart
-ms.date: 06/01/2020
-ms.openlocfilehash: 184d2720e3e2259a6c909d0775ffee20c0f30419
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.date: 06/11/2020
+ms.openlocfilehash: 4b0f6802673d886cecdc9523d99886c19fbad94a
+ms.sourcegitcommit: 2d6c9687b39e33a6b5e980d9a375c9f8f1f2cab7
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329904"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779658"
 ---
-# <a name="quickstart-getting-started-with-terraform---azure-cloud-shell"></a>Início Rápido: Introdução ao Terraform – Azure Cloud Shell
+# <a name="quickstart-getting-started-with-terraform-using-azure-cloud-shell"></a>Início Rápido: Introdução ao Terraform por meio do Azure Cloud Shell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
-Este artigo descreve a introdução ao Terraform do ambiente do [Azure Cloud Shell](/azure/cloud-shell/overview).
+Este artigo descreve a introdução ao [Terraform no Azure](https://www.terraform.io/docs/providers/azurerm/index.html) no ambiente [Azure Cloud Shell](/azure/cloud-shell/overview).
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
-## <a name="configure-your-environment"></a>Configurar seu ambiente
+## <a name="prerequisites"></a>Pré-requisitos
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-## <a name="open-cloud-shell"></a>Abrir Cloud Shell
+## <a name="configure-azure-cloud-shell"></a>Configurar o Azure Cloud Shell
 
 1. Navegue até o [Portal do Azure](https://portal.azure.com).
 
@@ -35,43 +34,54 @@ Este artigo descreve a introdução ao Terraform do ambiente do [Azure Cloud She
 
 1. Se você ainda não usou o Cloud Shell, defina as configurações de ambiente e armazenamento. Este artigo usa o ambiente de Bash.
 
-## <a name="log-into-your-microsoft-account"></a>Entre em sua conta Microsoft
+## <a name="log-into-azure"></a>Fazer logon no Azure
 
-O Cloud Shell é automaticamente autenticado sob a conta da Microsoft com a qual você entrou no portal do Azure. Entretanto, se você tiver várias contas Microsoft com assinaturas do Azure, você poderá entrar em uma dessas contas usando [az login](/cli/azure/reference-index?view=azure-cli-latest#az-login). Aqui estão dois exemplos de como usar o `az login` comando:
+O Cloud Shell é automaticamente autenticado sob a conta da Microsoft com a qual você entrou no portal do Azure.
 
-De acordo com o seu cenário, selecione um dos seguintes caminhos:
+Além disso, depois de conectado à sua conta Microsoft, você será automaticamente conectado à assinatura padrão do Azure dessa conta. Se a conta Microsoft atual estiver correta e você quiser alternar entre assinaturas, confira a seção [Especificar a assinatura atual do Azure](#specify-the-current-azure-subscription).
+
+Se você tiver várias contas Microsoft com assinaturas do Azure, faça logon em uma dessas contas usando uma das seguintes opções:
+
+- [Fazer logon na sua conta Microsoft](#log-into-your-microsoft-account)
+- [Fazer logon usando uma entidade de serviço do Azure](#log-into-azure-using-an-azure-service-principal)
+
+### <a name="log-into-your-microsoft-account"></a>Entre em sua conta Microsoft
+
+A chamada a `az login` sem nenhum parâmetro exibe uma URL e um código. Navegue até a URL, insira o código e siga as instruções para entrar no Azure usando sua conta Microsoft. Quando você estiver conectado, volte ao portal.
+
+```azurecli
+az login
+```
+
+Observações:
+- Após o logon bem-sucedido, `az login` exibe uma lista das assinaturas do Azure associadas à conta Microsoft conectada.
+- Uma lista de propriedades é exibida para cada assinatura do Azure disponível. A propriedade `isDefault` identifica qual assinatura do Azure você está usando. Para saber como alternar para outra assinatura do Azure, consulte a seção [Especificar a assinatura do Azure atual](#specify-the-current-azure-subscription).
+
+### <a name="log-into-azure-using-an-azure-service-principal"></a>Fazer logon no Azure usando uma entidade de serviço do Azure
+
+**Crie uma entidade de serviço do Azure**: para fazer logon em uma assinatura do Azure usando uma entidade de serviço, primeiro você precisará ter acesso a uma entidade de serviço. Se você já tiver uma entidade de serviço, ignore esta parte da seção.
+
+Ferramentas automatizadas que implantam ou usam os serviços do Azure, como o Terraform, sempre têm permissões restritas. Em vez de os aplicativos entrarem como um usuário com privilégio total, o Azure oferece as entidades de serviço. Mas e se você não tiver uma entidade de serviço com a qual entrar? Nesse cenário, você pode entrar usando suas credenciais de usuário e, em seguida, criar uma entidade de serviço. Depois que a entidade de serviço for criada, você poderá usar suas informações para futuras tentativas de logon.
+
+Há muitas opções ao [criar uma entidade de serviço com a CLI do Azure](/cli/azure/create-an-azure-service-principal-azure-cli?). Para este artigo, usaremos [az ad sp create-for-rbac](/cli/azure/ad/sp?#az-ad-sp-create-for-rbac) para criar uma entidade de serviço com uma função de **Colaborador**. A função de **Colaborador** (a padrão) tem permissões completas de leitura e gravação em uma conta do Azure. Para obter mais informações sobre o Controle de Acesso Baseado em Função (RBAC) e funções, confira [RBAC: funções internas](/azure/active-directory/role-based-access-built-in-roles).
+
+Insira o comando a seguir, substituindo `<subscription_id>` pela ID da conta de assinatura que deseja usar.
     
-- **Você quer entrar como um usuário**: Executar o comando `az login` sem quaisquer parâmetros exibe uma URL e um código. Navegue até a URL, insira o código e siga as instruções para entrar no Azure usando sua conta Microsoft. Depois que o comando te fizer entrar, retorne ao portal.
+```azurecli
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
+```
 
-    ```azurecli-interactive
-    az login
-    ```
-
-    **Observações**:
-    - Após entrar com sucesso, o comando `az login` exibe uma lista das assinaturas do Azure associadas à conta Microsoft conectada.
-    - Uma lista de propriedades é exibida para cada assinatura do Azure disponível. A propriedade `isDefault` identifica qual assinatura do Azure você está usando. Para saber como alternar para outra assinatura do Azure, consulte a seção [Especificar a assinatura do Azure atual](#specify-the-current-azure-subscription).
-
-- **Você deseja usar uma entidade de serviço, mas ainda não tem uma**: Ferramentas automatizadas que implantam ou usam os serviços do Azure, como o Terraform, sempre têm permissões restritas. Em vez de os aplicativos entrarem como um usuário com privilégio total, o Azure oferece as entidades de serviço. Mas e se você não tiver uma entidade de serviço com a qual entrar? Nesse cenário, você pode entrar usando suas credenciais de usuário e, em seguida, criar uma entidade de serviço. Depois que a entidade de serviço for criada, você poderá usar suas informações para futuras tentativas de logon.
-
-    Há muitas opções ao [criar uma entidade de serviço](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Para este artigo, criaremos uma entidade de serviço com uma função de **Colaborador** (a função padrão). A função de **Colaborador** tem permissões completas para ler e gravar em uma conta do Azure. Para obter mais informações sobre o Controle de Acesso Baseado em Função (RBAC) e funções, confira [RBAC: funções internas](/azure/active-directory/role-based-access-built-in-roles). 
+Observações:
+- Após a conclusão bem-sucedida, `az ad sp create-for-rbac` exibe vários valores, incluindo a senha gerada automaticamente. Se for perdida, a senha não poderá ser recuperada. Por isso, você deve armazenar sua senha em um local seguro. Se você esquecer a senha, você precisará [redefinir as credenciais da entidade de serviço](/cli/azure/create-an-azure-service-principal-azure-cli#reset-credentials).
     
-    Usando o comando [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac), substitua `<subscription_id>` pela ID da conta de assinatura que você deseja usar.
-    
-    ```azurecli-interactive
-    az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
-    ```
+**Entre usando uma entidade de serviço Azure**: Na chamada a seguir a `az login`, substitua os espaços reservados por informações da entidade de serviço.
 
-    **Observações**:
-    - Após a conclusão bem-sucedida, o comando `az ad sp create-for-rbac` exibe vários valores, incluindo a senha gerada automaticamente. Se for perdida, a senha não poderá ser recuperada. Por isso, você deve armazenar sua senha em um local seguro. Se você esquecer a senha, você precisará [redefinir as credenciais da entidade de serviço](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest#reset-credentials).
-    
-- **Entre usando uma entidade de serviço Azure**: Substitua os espaços reservados no seguinte `az login` comando por informações de sua entidade de serviço.
+```azurecli
+az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"
+```
 
-    ```azurecli-interactive
-    az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"
-    ```
-
-    **Observações**:
-    - Após entrar com sucesso, o comando `az login` exibe várias propriedades para a assinatura do Azure, como `id` e `name`.
+Observações:
+- Após o logon bem-sucedido, `az login` exibe várias propriedades para a assinatura do Azure, como `id` e `name`.
 
 ## <a name="specify-the-current-azure-subscription"></a>Especifique a assinatura do Azure atual
 
@@ -82,34 +92,38 @@ Conforme explicado na seção anterior, duas das maneiras de entrar no Azure sã
 
 As etapas a seguir abordam o primeiro cenário em que você realiza as seguintes tarefas:
 
-- Verificar a assinatura do Azure atual
+- Exibir a assinatura atual do Azure
 - Listar todas as assinaturas do Azure disponíveis para o conta Microsoft atual
 - Alternar para outra assinatura do Azure
 
-1. Para verificar a assinatura atual do Azure, use o comando [az account show](/cli/azure/account#az-account-show).
+1. Para ver a assinatura atual do Azure, use [az account show](/cli/azure/account#az-account-show).
 
-    ```azurecli-interactive
+    ```azurecli
     az account show
     ```
     
 1. Se você tiver acesso a várias assinaturas do Azure disponíveis, use [az account list](/cli/azure/account#az-account-list) para exibir uma lista de valores de ID de nome de assinatura:
 
-    ```azurecli-interactive
+    ```azurecli
     az account list --query "[].{name:name, subscriptionId:id}"
     ```
 
-1. Para usar uma assinatura específica do Azure para a sessão de Cloud Shell atual, use o comando [az account set](/cli/azure/account#az-account-set). Substitua o espaço reservado `<subscription_id>` com a ID (ou nome) da assinatura que deseja usar:
+1. Para usar uma assinatura específica do Azure para a sessão atual do Cloud Shell, use [az account set](/cli/azure/account#az-account-set). Substitua o espaço reservado `<subscription_id>` com a ID (ou nome) da assinatura que deseja usar:
 
-    ```azurecli-interactive
+    ```azurecli
     az account set --subscription="<subscription_id>"
     ```
 
-    **Observações**:
-    - O comando `az account set` não exibe os resultados de mudança para a assinatura do Azure especificada. No entanto, você pode usar o comando `az account show` para confirmar que a assinatura atual do Azure foi alterada.
+    Observações:
+    - A chamada a `az account set` não exibe os resultados da alternância para a assinatura especificada do Azure. No entanto, você pode usar `az account show` para confirmar se a assinatura atual do Azure foi alterada.
+
+## <a name="configure-terraform"></a>Configurar o Terraform
+
+O Cloud Shell tem automaticamente a versão mais recente do Terraform instalada. Além disso, o Terraform usa automaticamente as informações da assinatura atual do Azure. Como resultado, não há nenhuma instalação ou configuração necessária.
 
 ## <a name="create-a-terraform-configuration-file"></a>Criar um arquivo de configuração Terraform
 
-Nesta seção, você usa o [editor de Code Shell](/azure/cloud-shell/using-cloud-shell-editor) para definir um arquivo de configuração do Terraform.
+Nesta seção, você aprenderá a criar um arquivo de configuração do Terraform que cria um grupo de recursos do Azure.
 
 1. Altere os diretórios para o compartilhamento de arquivos montado em que seu trabalho no Cloud Shell é mantido. Para obter mais informações sobre como o Cloud Shell mantém seus arquivos, consulte [Conectar seu armazenamento de Arquivos do Microsoft Azure](/azure/cloud-shell/overview#connect-your-microsoft-azure-files-storage)
     
@@ -129,7 +143,7 @@ Nesta seção, você usa o [editor de Code Shell](/azure/cloud-shell/using-cloud
     cd QuickstartTerraformTest
     ```
 
-1. Usando seu editor favorito, crie um arquivo de configuração do Terraform. Este artigo usa o editor de Cloud Shell interno.
+1. Usando seu editor favorito, crie um arquivo de configuração do Terraform. Este artigo usa o [editor interno do Cloud Shell](/azure/cloud-shell/using-cloud-shell-editor).
 
     ```bash
     code QuickstartTerraformTest.tf
@@ -150,7 +164,7 @@ Nesta seção, você usa o [editor de Code Shell](/azure/cloud-shell/using-cloud
     }
     ```
 
-    **Observações**:
+    Observações:
     - O bloco `provider` especifica que o [provedor do Azure (`azurerm`)](https://www.terraform.io/docs/providers/azurerm/index.html) é usado.
     - No bloco do provedor `azurerm`, os atributos `version` e `features` são definidos. Como o comentário diz, seu uso é específico da versão. Para obter mais informações sobre como definir esses atributos para seu ambiente, consulte [v 2.0 do provedor AzureRM](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
     - A única [declaração de recurso](https://www.terraform.io/docs/configuration/resources.html) é para um tipo de recurso de [azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html). Os dois argumentos necessários para `azure_resource_group` são `name` e `location`.
@@ -161,14 +175,14 @@ Nesta seção, você usa o [editor de Code Shell](/azure/cloud-shell/using-cloud
 
 ## <a name="create-and-apply-a-terraform-execution-plan"></a>Criar e aplicar um plano de execução Terraform
 
-O Cloud Shell tem automaticamente a versão mais recente do Terraform instalada. Além disso, o Terraform usa automaticamente as informações da assinatura atual do Azure. Como resultado, não há nenhuma instalação ou configuração necessária. Depois de criar seus arquivos de configuração, você precisa executar apenas alguns comandos Terraform para criar um plano de execução. Depois de criar o plano de execução, você pode verificá-lo e implantá-lo.
+Depois que você criar os arquivos de configuração, esta seção explicará como criar um *plano de execução* e aplicá-lo à sua infraestrutura de nuvem.
 
 1. Inicialize a implantação do Terraform com [terraform init](https://www.terraform.io/docs/commands/init.html). Esta etapa faz o download dos módulos do Azure necessários para criar um grupo de recursos do Azure.
 
     ```bash
     terraform init
     ```
-    
+
 1. O Terraform permite que você visualize as ações a serem concluídas com [terraform plan](https://www.terraform.io/docs/commands/plan.html).
 
     ```bash
@@ -185,16 +199,16 @@ O Cloud Shell tem automaticamente a versão mais recente do Terraform instalada.
     ```bash
     terraform apply
     ```
-    
+
 1. O Terraform mostra o que acontecerá se você aplicar o plano de execução e exige que você confirme executá-lo. Confirme o comando inserindo `yes` e pressionando a tecla **Enter**.
 
-1. Depois de confirmar a execução da reprodução, teste se o grupo de recursos foi criado com êxito usando [az group show](/cli/azure/group?view=azure-cli-latest#az-group-show).
+1. Depois de confirmar a execução da reprodução, teste se o grupo de recursos foi criado com êxito usando [az group show](/cli/azure/group?#az-group-show).
 
-    ```azurecli-interactive
+    ```azurecli
     az group show -n "QuickstartTerraformTest-rg"
     ```
 
-    Se for bem-sucedido, o comando exibirá várias propriedades do grupo de recursos recém-criado.
+    Se ele for bem-sucedido, `az group show` exibirá várias propriedades do grupo de recursos recém-criado.
 
 ## <a name="persist-an-execution-plan-for-later-deployment"></a>Manter um plano de execução para implantação posterior
 
@@ -224,7 +238,7 @@ As etapas a seguir ilustram o padrão básico para usar esse recurso:
     terraform apply QuickstartTerraformTest.tfplan
     ```
 
-**Observações**:
+Observações:
 - Para habilitar o uso com automação, a execução de `terraform apply <filename>` não exige confirmação.
 - Se você decidir usar esse recurso, leia a [seção do aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
 
@@ -238,16 +252,16 @@ Quando não forem mais necessários, exclua os recursos criados neste artigo.
     terraform destroy
     ```
 
-1. O Terraform mostra o que acontecerá se você reverter o plano de execução e exige que você confirme. Confirme o comando inserindo `yes` e pressionando a tecla **Enter**.
+1. O Terraform mostra o que acontecerá se você reverter o plano de execução e exige que você confirme. Confirme sua escolha inserindo `yes` e selecionando a tecla **ENTER**.
 
-1. Depois de confirmar a execução da reprodução, a saída é semelhante ao exemplo a seguir, verifique se o grupo de recursos foi excluído usando [az group show](/cli/azure/group?view=azure-cli-latest#az-group-show).
+1. Depois de confirmar a execução da reprodução, a saída é semelhante ao exemplo a seguir, verifique se o grupo de recursos foi excluído usando [az group show](/cli/azure/group?#az-group-show).
 
-    ```azurecli-interactive
+    ```azurecli
     az group show -n "QuickstartTerraformTest-rg"
     ```
 
-    **Observações**:
-    - Se for bem-sucedido, o comando `az group show` exibirá o fato de que o grupo de recursos não existe.
+    Observações:
+    - Se ele for bem-sucedido, `az group show` exibirá uma mensagem informando que o grupo de recursos não existe.
 
 1. Altere os diretórios para o diretório pai e remova o diretório de demonstração. O parâmetro `-r` remove o conteúdo do diretório antes de remover o diretório. O conteúdo do diretório inclui o arquivo de configuração que você criou anteriormente e os arquivos de estado do Terraform.
 

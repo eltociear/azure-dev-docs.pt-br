@@ -4,18 +4,19 @@ description: Etapa 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b01c45d1f61e021bb025dec4980a7a10eae6185b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
-ms.translationtype: HT
+ms.openlocfilehash: 1e86b06b87ed2a0471f38102d1ad5bca8d0dfcb1
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069403"
 ---
 # <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Tutorial: Implantar contêineres do Docker no Serviço de Aplicativo do Azure com o Visual Studio Code
 
 Este artigo orienta você ao longo do processo de usar o Visual Studio Code para implantar uma imagem de contêiner de um registro de contêiner no [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/containers/), tudo isso no Visual Studio Code.
 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o link **Encontrei um problema** no final de cada artigo para enviar comentários.
+
+Para assistir a um vídeo de demonstração relacionado, confira <a href="https://www.youtube.com/watch?v=t79HDLC5kQA&feature=youtu.be&ocid=AID3006292" target="_blank">Aplicativos Django em contêineres de desenvolvimento do VS Code</a> (youtube.com) do PyCon 2020 virtual.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

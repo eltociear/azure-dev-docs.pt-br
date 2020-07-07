@@ -7,12 +7,11 @@ ms.service: multiple
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 11/13/2018
-ms.openlocfilehash: 5377aed7ee541f1954a95f992ffee03a7cb569a7
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
-ms.translationtype: HT
+ms.openlocfilehash: 0dc5459ab4898deecebbc199e62f5dccc8ee6f7d
+ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790736"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>Adicionar um certificado raiz ao repositório de certificados CA de Java
 
@@ -44,7 +43,7 @@ O certificado Baltimore já pode estar instalado em seu repositório cacerts, po
 
 ## <a name="to-add-a-root-certificate-to-the-cacerts-store"></a>Para adicionar um certificado raiz ao repositório cacerts
 
-1. Baixe o certificado raiz Baltimore CyberTrust em <https://cacert.omniroot.com/bc2025.crt> e salve em um arquivo local com a extensão *.cer* em sua pasta *jdk\jre\lib\security*. Para este exemplo, vamos supor que você baixou o arquivo do certificado raiz do Baltimore CyberTrust como *bc2025.cer*.
+1. Baixe o certificado raiz Baltimore CyberTrust em <https://cacert.omniroot.com/bc2025.crt> e salve em um arquivo local com a extensão *.crt* em sua pasta *jdk\jre\lib\security*. Para este exemplo, vamos supor que você baixou o arquivo do certificado raiz do Baltimore CyberTrust como *bc2025.crt*.
 
    > [!NOTE]
    > O certificado raiz Baltimore CyberTrust tem um número de série `02:00:00:b9` e uma impressão digital SHA1 de `d4:de:20:d0:5e:66:fc:53:fe:1a:50:88:2c:78:db:28:52:ca:e4:74`.
@@ -52,7 +51,7 @@ O certificado Baltimore já pode estar instalado em seu repositório cacerts, po
 2. Importe o certificado para o repositório cacerts usando o seguinte comando:
 
    ```shell
-   keytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cer
+   keytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.crt
    ```
 
    Em que:

@@ -1,14 +1,13 @@
 ---
-title: Provisionar e usar o Armazenamento do Microsoft Azure com o SDK do Azure para Python
+title: Usar o Armazenamento do Microsoft Azure com o SDK do Azure para Python
 description: Use o SDK do Azure para bibliotecas do Python para acessar um contêiner de blob pré-provisionado em uma conta de Armazenamento do Microsoft Azure e, em seguida, carregue um arquivo para esse contêiner.
-ms.date: 05/29/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
-ms.openlocfilehash: 50d9b781e0ec3a1a9f752a9ec193720d99b88f4d
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.openlocfilehash: 9015017b1e0b2839e4a3986950625fb8a498717e
+ms.sourcegitcommit: 74ff4dec3b0556201c243e8c2302555b08dd79e9
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329654"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84812674"
 ---
 # <a name="example-use-the-azure-libraries-with-azure-storage"></a>Exemplo: Usar as bibliotecas do Azure com o Armazenamento do Microsoft Azure
 
@@ -47,11 +46,11 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
 ## <a name="4-use-blob-storage-from-app-code"></a>4: Usar o armazenamento de blobs do código do aplicativo
 
-As seções a seguir (numeradas 4a e 4b) demonstram dois meios para acessar o contêiner de blob.
+As seguintes seções (4a e 4b) demonstram dois meios para acessar o contêiner de blob provisionado por meio do [Exemplo: Provisione o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md).
 
-O [primeiro método (4a)](#4a-use-blob-storage-with-authentication) autentica o aplicativo com `DefaultAzureCredential` conforme descrito em [Como autenticar aplicativos Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential). Com esse método, você precisa primeiro atribuir as permissões apropriadas para a identidade do aplicativo, que é a prática recomendada.
+O [primeiro método (seção 4a abaixo)](#4a-use-blob-storage-with-authentication) autentica o aplicativo com `DefaultAzureCredential` conforme descrito em [Como autenticar aplicativos Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential). Com esse método, você precisa primeiro atribuir as permissões apropriadas para a identidade do aplicativo, que é a prática recomendada.
 
-O [segundo método (4b)](#4b-use-blob-storage-with-a-connection-string) usa uma cadeia de conexão para acessar a conta de armazenamento diretamente. Embora esse método pareça mais simples, ele tem duas desvantagens significativas:
+O [segundo método (seção 4b abaixo)](#4b-use-blob-storage-with-a-connection-string) usa uma cadeia de conexão para acessar a conta de armazenamento diretamente. Embora esse método pareça mais simples, ele tem duas desvantagens significativas:
 
 - Uma cadeia de conexão autentica inerentemente o agente de conexão com a *conta* de armazenamento em vez de conectar com os recursos individuais dentro dessa conta. Como resultado, uma cadeia de conexão concede uma autorização mais ampla do que pode ser necessária.
 
@@ -116,7 +115,7 @@ Por esses motivos, recomendamos usar o método de autenticação no código de p
 
     Como a entidade de serviço local que está sendo usada não tem permissão para acessar o contêiner de blob, você verá o erro: "Esta solicitação não está autorizada a executar esta operação usando essa permissão".
 
-1. Para conceder permissões para o contêiner à entidade de serviço, use o comando da CLI do Azure [az role assignment create](/cli/azure/role/assignment?view=azure-cli-latest#az-role-assignment-create) (é longo!):
+1. Conceder permissões de contêiner à entidade de serviço usando o comando da CLI do Azure [az role assignment create](/cli/azure/role/assignment?view=azure-cli-latest#az-role-assignment-create) (é longo!):
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -199,5 +198,5 @@ Você também pode usar o método [`ResourceManagementClient.resource_groups.del
 - [Exemplo: Provisionar um grupo de recursos](azure-sdk-example-resource-group.md)
 - [Exemplo: Provisionar um aplicativo Web e implantar o código](azure-sdk-example-web-app.md)
 - [Exemplo: Provisionar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md)
-- [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md)
+- [Exemplo: Provisionar e consultar um banco de dados](azure-sdk-example-database.md)
 - [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)

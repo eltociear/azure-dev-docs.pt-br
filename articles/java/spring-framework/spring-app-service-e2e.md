@@ -6,12 +6,11 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 7e90cd39bb50f5e83ee9bc3551252fe12086e750
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
-ms.translationtype: HT
+ms.openlocfilehash: 19eb7a5633f51400e139ba8dd7ad0a1f5999a213
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507442"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Implantar um aplicativo Spring no Serviço de Aplicativo com o MySQL
 
@@ -86,7 +85,7 @@ set TOMCAT_HOME=<Tomcat install directory>
 ```
 ---
 
-Em seguida, atualize o arquivo *pom.xml* para configurar o Maven para uma implantação de arquivo WAR do Tomcat. Adicione o XML a seguir como filho do elemento `<plugins>`. Se necessário, altere `1.7.11` para a versão atual do [Plug-in Cargo Maven 2](https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-maven2-plugin).
+Em seguida, atualize o arquivo *pom.xml* para implantar o arquivo WAR. Adicione o XML a seguir como filho do elemento `<plugins>`. Se necessário, altere `1.7.11` para a versão atual do [Plug-in Cargo Maven 2](https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-maven2-plugin).
 
 ```xml
 <plugin>

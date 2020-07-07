@@ -3,12 +3,11 @@ title: Provisionar o Armazenamento do Microsoft Azure com as bibliotecas do Azur
 description: Use o SDK do Azure para bibliotecas do Python para provisionar um contêiner de blob em uma conta de Armazenamento do Microsoft Azure e, em seguida, carregue um arquivo para esse contêiner.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: ffc65746be0a7e002263010df4fe3048e0c321d1
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.openlocfilehash: 74f6e21b80505cd0b63061a76f4811b0c687d1a9
+ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329664"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716094"
 ---
 # <a name="example-use-the-azure-libraries-with-azure-storage"></a>Exemplo: Usar as bibliotecas do Azure com o Armazenamento do Microsoft Azure
 
@@ -165,22 +164,22 @@ Os comandos a seguir da CLI do Azure executam as mesmas etapas de provisionament
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
-# Provision the resource group
+rem Provision the resource group
 
 az group create -n PythonAzureExample-Storage-rg -l centralus
 
-# Provision the storage account
+rem Provision the storage account
 
 az storage account create -g PythonAzureExample-Storage-rg -l centralus ^
     -n pythonazurestorage12345 --kind StorageV2 --sku Standard_LRS
 
-# Retrieve the connection string
+rem Retrieve the connection string
 
 az storage account show-connection-string -g PythonAzureExample-Storage-rg ^
     -n pythonazurestorage12345
 
-# Provision the blob container; NOTE: this command assumes you have an environment variable
-# named AZURE_STORAGE_CONNECTION_STRING with the connection string for the storage account.
+rem Provision the blob container; NOTE: this command assumes you have an environment variable
+rem named AZURE_STORAGE_CONNECTION_STRING with the connection string for the storage account.
 
 set AZURE_STORAGE_CONNECTION_STRING=<connection_string>
 az storage container create --account-name pythonazurestorage12345 -n blob-container-01
@@ -229,5 +228,5 @@ Você também pode usar o método [`ResourceManagementClient.resource_groups.del
 - [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md)
 - [Exemplo: Provisionar um grupo de recursos](azure-sdk-example-resource-group.md)
 - [Exemplo: Provisionar um aplicativo Web e implantar o código](azure-sdk-example-web-app.md)
-- [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md)
+- [Exemplo: Provisionar e consultar um banco de dados](azure-sdk-example-database.md)
 - [Exemplo: Provisionar uma máquina virtual >>>](azure-sdk-example-virtual-machines.md)

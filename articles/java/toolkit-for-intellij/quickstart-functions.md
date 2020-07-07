@@ -3,12 +3,11 @@ title: Criar sua primeira função no Azure usando o IntelliJ IDEA
 description: Crie e publique uma função disparada por HTTP simples no Azure usando o Azure Toolkit for IntelliJ.
 ms.topic: quickstart
 ms.date: 03/26/2020
-ms.openlocfilehash: ff0733e275f89ffa349f8455455df93587ff4fdf
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
-ms.translationtype: HT
+ms.openlocfilehash: b8d8ae4093c03e3fb0e910a0b5dd21002b0e52ab
+ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81674812"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133709"
 ---
 # <a name="quickstart-create-an-azure-functions-project-using-intellij-idea"></a>Início Rápido: Criar um projeto do Azure Functions usando o IntelliJ IDEA
 
@@ -133,6 +132,13 @@ Nesta seção, você usará o Azure Toolkit for IntelliJ para criar um projeto l
     ![Adicionar funções ao projeto – selecionar gatilho](media/quickstart-functions/add-functions-trigger.png)
     
     ![Adicionar funções à saída do projeto](media/quickstart-functions/add-functions-output.png)
+
+## <a name="cleaning-up-functions"></a>Limpar funções
+
+1. Excluir o Azure Functions no Azure Explorer
+      
+      ![Adicionar funções ao projeto – selecionar gatilho](media/quickstart-functions/delete-function.png)
+      
 
 ## <a name="next-steps"></a>Próximas etapas
 

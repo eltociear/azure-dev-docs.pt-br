@@ -2,14 +2,13 @@
 author: judubois
 ms.date: 05/06/2020
 ms.author: judubois
-ms.openlocfilehash: a1ba753cb0c5c3b9c07f9597df71bc7e53394eae
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
-ms.translationtype: HT
+ms.openlocfilehash: 012043df3cf07de098d1a7f3a6715374814d1d9b
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369952"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507683"
 ---
-Crie uma classe Java `Todo`, ao lado da classe `DemoApplication`:
+Crie uma classe Java `Todo`, ao lado da classe `DemoApplication` e adicione o seguinte código:
 
 ```java
 package com.example.demo;
@@ -116,7 +115,7 @@ public class TodoController {
 }
 ```
 
-Por fim, pare o aplicativo e inicie-o novamente:
+Por fim, pare o aplicativo e inicie-o novamente usando o seguinte comando:
 
 ```bash
 ./mvnw spring-boot:run
@@ -126,28 +125,28 @@ Por fim, pare o aplicativo e inicie-o novamente:
 
 Para testar o aplicativo, você pode usar cURL.
 
-Primeiro, crie um item "todo" no banco de dados:
+Primeiro, crie um item "todo" no banco de dados usando o seguinte comando:
 
 ```bash
-curl  --header "Content-Type: application/json" \
-          --request POST \
-          --data '{"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done": "true"}' \
-          http://127.0.0.1:8080
+curl --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done": "true"}' \
+    http://127.0.0.1:8080
 ```
 
-Este comando deve retornar o item criado:
+Esse comando deverá retornar o item criado da seguinte maneira:
 
 ```json
 {"id":1,"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done":true}
 ```
 
-Em seguida, recupere os dados usando uma nova solicitação cURL:
+Depois, recupere os dados usando uma nova solicitação cURL da seguinte maneira:
 
 ```bash
 curl http://127.0.0.1:8080
 ```
 
-Esse comando retornará a lista de itens "todo", incluindo o item que você criou:
+Esse comando retornará a lista de itens "todo", incluindo o item que você criou, da seguinte maneira:
 
 ```json
 [{"id":1,"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done":true}]

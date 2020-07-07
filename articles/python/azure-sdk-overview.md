@@ -3,12 +3,11 @@ title: Obtenha as bibliotecas do Azure (SDK) para Python
 description: Visão geral dos recursos e das funcionalidades das bibliotecas do Azure para Python que ajudam os desenvolvedores a serem mais produtivos ao provisionar, usar e gerenciar recursos do Azure.
 ms.date: 05/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: 056c290883984c4abfacb3b7cef9e67f09e800c7
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
-ms.translationtype: HT
+ms.openlocfilehash: ffa626db0518967e2659eeb5b89ece4bc15c1ce2
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069389"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Obtenha as bibliotecas do Azure (SDK) para Python
 
@@ -16,11 +15,15 @@ As bibliotecas de software livre do Azure para Python simplificam o provisioname
 
 ## <a name="the-details-you-really-want-to-know"></a>Os detalhes que você realmente quer saber
 
-- As bibliotecas são compatíveis com Python 2.7 e Python 3.5.3 ou posterior, e foram testadas também com PyPy 5.4+.
+- As bibliotecas do Azure são como você se comunica com os serviços do Azure *do* código Python executado localmente ou na nuvem. (A possibilidade de executar o código Python dentro do escopo de um serviço específico depende se esse serviço atualmente dá suporte a Python.)
+
+- As bibliotecas são compatíveis com Python 2.7 e Python 3.5.3 ou posterior e foram testadas também com PyPy 5.4+.
 
 - O SDK do Azure é composto por mais de 180 bibliotecas Python individuais relacionadas a serviços específicos do Azure. Não há outras ferramentas no "SDK".
 
-- Para instalar os pacotes de biblioteca de que precisa com `pip install <library_name>`, use os nomes de biblioteca na [lista de versões](https://azure.github.io/azure-sdk/releases/latest/all/python.html). Para obter mais detalhes, consulte [Instalar bibliotecas do Azure](azure-sdk-install.md).
+- Ao executar o código localmente, a autenticação com o Azure depende de variáveis de ambiente, conforme descrito em [Configurar seu ambiente de desenvolvimento local](configure-local-development-environment.md). 
+
+- Para instalar os pacotes de biblioteca de que precisa com `pip install <library_name>`, use os nomes de biblioteca no [índice de pacotes do SDK do Python](azure-sdk-library-package-index.md). Para obter mais detalhes, consulte [Instalar bibliotecas do Azure](azure-sdk-install.md).
 
 - Há bibliotecas de "gerenciamento" e de "cliente" distintas (às vezes chamadas de bibliotecas de "plano de gerenciamento" e de "plano de dados"). Cada conjunto atende a diferentes finalidades e é usado por diferentes tipos de código. Para obter mais informações, consulte as seguintes seções deste artigo:
   - [Provisionar e gerenciar recursos do Azure com bibliotecas de gerenciamento](#provision-and-manage-azure-resources-with-management-libraries)
@@ -29,6 +32,8 @@ As bibliotecas de software livre do Azure para Python simplificam o provisioname
 - A documentação das bibliotecas é encontrada na [Referência do Azure para Python](/python/api/overview/azure/?view=azure-python), que é organizada por Serviço do Azure ou no [navegador de API do Python](/python/api/?view=azure-python), que é organizado por nome de pacote. No momento, pode ser necessário clicar em várias camadas para obter as classes e os métodos do seu interesse. Queremos nos desculpar por essa experiência insatisfatória. Estamos trabalhando para melhorá-la.
 
 - Para experimentar as bibliotecas por conta própria, recomendamos primeiro [configurar seu ambiente de desenvolvimento local](configure-local-development-environment.md). Em seguida, você pode experimentar qualquer um dos seguintes exemplos independentes (em qualquer ordem): [Exemplo: Provisionar um grupo de recursos](azure-sdk-example-resource-group.md), [Exemplo: Provisionar e usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md), [Exemplo: Provisionar um aplicativo Web e implantar o código](azure-sdk-example-web-app.md), [Exemplo: Provisionar e usar um banco de dados MySQL](azure-sdk-example-database.md) e [Exemplo: Provisionar uma máquina virtual](azure-sdk-example-virtual-machines.md).
+
+- Para assistir a um vídeo de demonstração, confira <a href="https://www.youtube.com/watch?v=M1pVxItg2Mg&feature=youtu.be&ocid=AID3006292" target="_blank">Usar SDKs do Azure para interagir com o recurso do Azure</a> (youtube.com) do PyCon 2020 virtual.
 
 ### <a name="non-essential-but-still-interesting-details"></a>Informações não essenciais, mas ainda interessantes
 
@@ -46,7 +51,7 @@ As bibliotecas de software livre do Azure para Python simplificam o provisioname
 
   - Essa funcionalidade compartilhada está presente na biblioteca [azure-core](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/core/azure-core).
 
-  - As bibliotecas que atualmente funcionam com a biblioteca principal estão listadas nas [Versões mais recentes do SDK do Azure para Python](https://azure.github.io/azure-sdk/releases/latest/#python). Essas bibliotecas, principalmente as bibliotecas de cliente, são, às vezes, chamadas de "faixa 2".
+  - As bibliotecas que atualmente funcionam com a biblioteca principal estão listadas nas [Versões mais recentes do SDK do Azure para Python](azure-sdk-library-package-index.md#libraries-using-azurecore). Essas bibliotecas, principalmente as bibliotecas de cliente, são, às vezes, chamadas de "faixa 2".
 
   - As bibliotecas de gerenciamento e quaisquer outras que ainda não foram atualizadas são chamadas, às vezes, de "faixa 1".
 

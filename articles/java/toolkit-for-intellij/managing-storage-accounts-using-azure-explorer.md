@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 762ac74b73a274e792ed19ac8ca7c2b68d98e778
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 051704a83e0535a6754c3c4dbd82eb8dfcf8e3c4
+ms.sourcegitcommit: 7be67fb768fb5e19f7de573068cc1376b3d90d1f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82105067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906432"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gerenciar contas de armazenamento usando o Azure Explorer para IntelliJ
 
@@ -35,47 +35,23 @@ Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
    ![Caixa de diálogo Criar Nova Conta de Armazenamento][CS02]
 
-   * **Nome**: especifica o nome que você deseja usar para a nova conta de armazenamento.
+   * **Name**: especifica o nome que você deseja usar para a nova conta de armazenamento.
 
-   * **Tipo de conta**: especifica o tipo de conta de armazenamento a criar (por exemplo, "Armazenamento de Blobs"). Para saber mais, confira [Sobre as contas de armazenamento do Azure]. 
+   * **Tipo de conta**: especifica o tipo de conta de armazenamento a ser criada (por exemplo, "Armazenamento de Blobs"). Para saber mais, confira [Sobre as contas de armazenamento do Azure]. 
 
    * **Desempenho**: especifica qual oferta de conta de armazenamento usar do editor selecionado (por exemplo "Premium"). Para saber mais, veja [Metas de desempenho e escalabilidade do Armazenamento do Azure]. 
 
    * **Replicação**: especifica a replicação para a conta de armazenamento (por exemplo "Com Redundância de Zona"). Para saber mais, veja [Replicação do Armazenamento do Azure]. 
 
-   * **Assinatura**: especifica a assinatura do Azure que deseja usar para a nova conta de armazenamento.
+   * **Assinatura**: especifica a assinatura do Azure que você deseja usar para a nova conta de armazenamento.
 
-   * **Localização**: especifica a localização em que sua conta de armazenamento será criada (por exemplo "Oeste dos EUA").
+   * **Localização**: especifica a localização em que sua conta de armazenamento será criada (por exemplo, "Oeste dos EUA").
 
-   * **Grupo de Recursos**: especifica o grupo de recursos para suas máquinas virtuais. Selecione uma das seguintes opções:
+   * **Grupo de Recursos**: especifica o grupo de recursos para sua máquina virtual. Selecione uma das seguintes opções:
       * **Criar novo**: especifica que você deseja criar um novo grupo de recursos.
       * **Usar existente**: especifica que você selecionará em uma lista de grupos de recursos associados à sua conta do Azure.
 
 4. Quando você tiver especificado todas as opções anteriores, clique em **OK**.
-
-## <a name="create-a-storage-container-in-intellij"></a>Criar um contêiner de armazenamento no IntelliJ
-
-Para criar um contêiner de armazenamento usando o Azure Explorer, faça o seguinte:
-
-1. Na exibição do Azure Explorer, clique com o botão direito do mouse na conta de armazenamento em que deseja criar um contêiner e, em seguida, clique em **Criar contêiner de blob**.
-
-   ![Comando Criar contêiner de blob][CC01]
-
-2. Na caixa de diálogo **Criar Contêiner de Blob**, especifique o nome do seu contêiner e, em seguida, clique em **OK**. Para saber mais sobre como nomear contêineres de armazenamento, veja [Nomenclatura e referência de contêineres, blobs e metadados].
-
-   ![Caixa de Diálogo Criar Contêiner de Armazenamento][CC02]
-
-## <a name="delete-a-storage-container-in-intellij"></a>Excluir um contêiner de armazenamento no IntelliJ
-
-Para excluir um contêiner de armazenamento usando o Azure Explorer, faça o seguinte:
-
-1. Na exibição Azure Explorer, clique com o botão direito do mouse no contêiner de armazenamento e, em seguida, clique em **Excluir**.
-
-   ![Comando Excluir contêiner de armazenamento][DC01]
-
-2. Na janela de confirmação, clique em **Sim**.
-
-   ![Janela de confirmação de Excluir contêiner de armazenamento][DC02]
 
 ## <a name="delete-a-storage-account-in-intellij"></a>Excluir uma conta de armazenamento no IntelliJ
 
@@ -111,7 +87,7 @@ Para saber mais sobre os tamanhos, preços e contas de armazenamento do Azure, v
 [Sobre as contas de armazenamento do Azure]: /azure/storage/storage-create-storage-account
 [Replicação do Armazenamento do Azure]: /azure/storage/storage-redundancy
 [Metas de desempenho e escalabilidade do Armazenamento do Azure]: /azure/storage/storage-scalability-targets
-[Nomenclatura e referência de contêineres, blobs e metadados]: https://go.microsoft.com/fwlink/?LinkId=255555
+[Naming and referencing containers, blobs, and metadata]: https://go.microsoft.com/fwlink/?LinkId=255555
 
 [Tamanhos das contas de armazenamento do Windows no Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Tamanhos das contas de armazenamento do Linux no Azure]: /azure/virtual-machines/virtual-machines-linux-sizes

@@ -11,11 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 4a6463df852511ab37af772598f9ae525d8a02e9
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.openlocfilehash: dfd5dc1e81a5d25f1bb08f373bafae7e3c2fe61e
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069425"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018630"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory B2C.
 
@@ -230,7 +231,7 @@ Agora que você criou a instância do AAD B2C e alguns fluxos dos usuários, voc
     >         password-reset: # optional
     > ```
     >
-    > O arquivo *application.yml* está disponível em [Exemplo de Spring Boot do Azure Active Directory B2C](https://github.com/microsoft/azure-spring-boot/blob/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/application.yml) no GitHub.
+    > O arquivo *application.yml* está disponível em [Exemplo de Spring Boot do Azure Active Directory B2C](https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-b2c-oidc/src/main/resources/application.yml) no GitHub.
 
 7. Salve e feche o arquivo *application.yml*.
 
@@ -322,7 +323,7 @@ Agora que você criou a instância do AAD B2C e alguns fluxos dos usuários, voc
     }
     ```
 
-14. Copie os arquivos *greeting.html* e *home.html* do [Exemplo de Spring Boot do Azure AD B2C](https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/templates) para *src/main/resources/templates* e substitua `${your-profile-edit-user-flow}` e `${your-password-reset-user-flow}` pelos nomes dos fluxos dos usuários criados anteriormente.
+14. Copie os arquivos *greeting.html* e *home.html* do [Exemplo de Spring Boot do Azure AD B2C](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-b2c-oidc/src/main/resources/templates) para *src/main/resources/templates* e substitua `${your-profile-edit-user-flow}` e `${your-password-reset-user-flow}` pelos nomes dos fluxos dos usuários criados anteriormente.
 
 ## <a name="build-and-test-your-app"></a>Crie e testar seu aplicativo
 

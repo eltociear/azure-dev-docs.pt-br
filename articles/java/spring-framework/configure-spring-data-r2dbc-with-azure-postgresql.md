@@ -7,11 +7,12 @@ ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: bd3208cc68b863afe2ce39e83d62d358a4baea96
-ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
+ms.openlocfilehash: 6bc835ef46a85ec3988c2d7e750447054be9e9bc
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85370727"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018664"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Usar o Spring Data R2DBC com o Banco de Dados do Azure para PostgreSQL
 
@@ -20,6 +21,10 @@ Este tópico demonstra como criar um aplicativo de exemplo que usa o [Spring Dat
 O [R2DBC](https://r2dbc.io/) traz APIs reativas para bancos de dados relacionais tradicionais. Você pode usá-lo com o Spring WebFlux para criar aplicativos Spring Boot totalmente reativos que usam APIs sem bloqueio. Ele fornece melhor escalabilidade do que a abordagem clássica "um thread por conexão".
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
+
+## <a name="sample-application"></a>Aplicativo de exemplo
+
+Neste artigo, escreveremos o código de um aplicativo de exemplo. Caso você queira adiantar o processo, esse aplicativo já está codificado e disponível em [https://github.com/Azure-Samples/quickstart-spring-data-r2dbc-postgresql](https://github.com/Azure-Samples/quickstart-spring-data-r2dbc-postgresql).
 
 [!INCLUDE [spring-data-postgresql-setup.md](includes/spring-data-postgresql-setup.md)]
 
@@ -30,7 +35,7 @@ O [R2DBC](https://r2dbc.io/) traz APIs reativas para bancos de dados relacionais
 Gere o aplicativo na linha de comando usando o seguinte comando:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="add-the-reactive-postgresql-driver-implementation"></a>Adicionar a implementação do driver PostgreSQL reativo

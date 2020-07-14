@@ -114,7 +114,7 @@ Para facilitar a criação da entidade de serviço, use as etapas a seguir e o s
 
     Nas etapas restantes deste procedimento, em cada linha do arquivo que **não** começar com `#`, coloque o cursor do VSCode na linha e **clique com o botão direito do mouse** para selecionar **Executar Linha no Editor**.
 
-    :::image type="content" source="media/development-setup/vscode-rightclick-run-line-in-editor.png" alt-text="Nas etapas restantes deste procedimento, em cada linha do arquivo que não começar com "#", coloque o cursor do VSCode na linha e clique com o botão direito do mouse para selecionar "Executar Linha no Editor".":::
+    :::image type="content" source="media/development-setup/vscode-rightclick-run-line-in-editor.png" alt-text="Nas etapas restantes deste procedimento, em cada linha do arquivo que não começar com `#`, coloque o cursor do VSCode na linha e clique com o botão direito do mouse para selecionar Executar Linha no Editor.":::
 
 1. Clique com o botão direito do mouse/Executar Linha no Editor na linha a seguir para se autenticar no Azure com sua própria conta de usuário usando a CLI do Azure. Esse comando abre um navegador da Internet. Selecione sua conta do Azure. Depois que sua conta for autenticada, feche a janela do navegador; você não precisará dela nas tarefas restantes.
 

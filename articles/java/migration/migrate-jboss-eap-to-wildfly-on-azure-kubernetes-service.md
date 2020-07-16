@@ -5,12 +5,13 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 3/16/2020
-ms.openlocfilehash: 4ab902e61703d5abc093dc508a370777b69632ff
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.custom: devx-track-java
+ms.openlocfilehash: 89cddf7e33bf64baa48aef8052a53870bb6bfa3d
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82988949"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379790"
 ---
 # <a name="migrate-jboss-eap-applications-to-wildfly-on-azure-kubernetes-service"></a>Migrar aplicativos JBoss EAP para o WildFly no Serviço de Kubernetes do Azure
 

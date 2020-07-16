@@ -3,15 +3,16 @@ title: Módulos do Azure para JavaScript
 description: Visão geral dos módulos de serviço e gerenciamento do Azure para JavaScript
 ms.date: 06/17/2017
 ms.topic: article
-ms.openlocfilehash: 193e2d3c92a9c2b8e3970e7a130246947a7cc4da
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.openlocfilehash: 2d01dcc2095bc91fb9695c0299b603b86c4719f0
+ms.sourcegitcommit: a7f2019727a954836b803493807664d4e4574ee3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791164"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86286443"
 ---
 # <a name="azure-modules-for-javascript"></a>Módulos do Azure para JavaScript
 
-Gerencie recursos do Azure e conecte-se aos serviços de aplicativos JavaScript com os módulos do Azure para JavaScript. O código está disponível como módulos npm](/api/?view=azure-node-latest.md) para uso em seus projetos.
+Gerencie recursos do Azure e conecte-se aos serviços de aplicativos JavaScript com os módulos do Azure para JavaScript. O código está disponível como [módulos npm](https://docs.microsoft.com/javascript/api/overview/azure/sql?view=azure-node-latest) para uso em seus projetos.
 
 ## <a name="manage-azure-resources"></a>Gerenciar recursos do Azure
 
@@ -74,7 +75,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 });
 ```
 
-Examine as [instruções de instalação](/api/?view=azure-node-latest) para obter uma lista completa dos módulos e o [artigo de introdução](../index.yml) para configurar a autenticação e executar o código de exemplo para criar e atualizar recursos em sua própria assinatura do Azure .
+Examine as [instruções de instalação](https://docs.microsoft.com/javascript/api/overview/azure/sql?view=azure-node-latest) para obter uma lista completa dos módulos e o [artigo de introdução](../index.yml) para configurar a autenticação e executar o código de exemplo para criar e atualizar recursos em sua própria assinatura do Azure .
 
 ## <a name="connect-to-azure-services"></a>Conectar-se aos serviços do Azure
 

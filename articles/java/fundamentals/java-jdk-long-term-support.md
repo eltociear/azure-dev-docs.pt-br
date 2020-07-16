@@ -3,12 +3,13 @@ title: JDKs do Java e suporte de médio e longo prazo para desenvolvimento do Az
 description: Este artigo fornece downloads e uma declaração do Suporte do Azure para desenvolvimento e execução de aplicativos Java.
 ms.date: 04/09/2019
 ms.topic: conceptual
-ms.custom: seo-java-september2019
-ms.openlocfilehash: 86d4d94e27b7cc088ec7d818695b1b97565f2ff0
-ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
+ms.custom: seo-java-september2019, devx-track-java
+ms.openlocfilehash: 5bffb4e4d2f68ef61ea96ededdf51ea98bb72d2a
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418204"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379830"
 ---
 # <a name="java-long-term-support-and-medium-term-support-on-azure-and-azure-stack"></a>Suporte Java a longo prazo e a médio prazo no Azure e no Azure Stack
 

@@ -1,13 +1,14 @@
 ---
-ms.openlocfilehash: 5d005f5a4906e5e2a55189d073383ab77f6c1860
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: a6e51b3fca9e2ae633a69b6372d7f622d2697812
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81674182"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405747"
 ---
-| **Criar máquinas virtuais** || 
+| Amostra  | Descrição |
 |---|---|
+| **Criar máquinas virtuais** ||
 | [Gerenciar máquinas virtuais][1] | Criar, modificar, iniciar, parar e excluir máquinas virtuais. |
 | [Criar uma máquina virtual com base em uma imagem personalizada][2] | Criar uma imagem da máquina virtual e usá-la para criar novas máquinas virtuais. | 
 | [Criar uma máquina virtual usando a VHD específica a partir de um instantâneo][3] | Crie um instantâneo a partir dos discos de dados e do sistema operacional da máquina virtual, crie discos gerenciados a partir de instantâneos e, em seguida, crie uma máquina virtual anexando os discos gerenciados. |  

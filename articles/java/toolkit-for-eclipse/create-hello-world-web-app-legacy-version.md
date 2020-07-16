@@ -8,12 +8,13 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 252ef1e31a71d996cb9e3856b48232ba24b66903
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 55f980785ea8cf4988c6a82dfa700beef18e2dfc
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81671182"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405757"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Criar um aplicativo Web Olá, Mundo para o Azure usando o kit de ferramentas herdado do Eclipse
 
@@ -118,9 +119,9 @@ Há várias maneiras pelas quais você pode implantar um aplicativo Web Java no 
    * Na caixa de texto **Nome** , especifique um nome para o novo Grupo de Recursos.
    * No menu suspenso **Região** , selecione a localização do data center do Azure apropriada ao Grupo de Recursos.
    * OPCIONAL: por padrão, uma distribuição recente de Java 8 será implantada pelo Azure automaticamente no contêiner de aplicativo Web como sua JVM. No entanto, você pode especificar uma versão e uma distribuição da JVM diferentes se for necessário para seu aplicativo Web. Para especificar o JDK do seu aplicativo Web, clique na guia **JDK** e selecione uma das seguintes opções:
-     * **Implantar o JDK padrão oferecido pelo Serviço de Aplicativos Web do Azure**: essa opção implantará uma distribuição recente do Java.
-     * **Implantar um JDK de terceiro disponível no Azure**: essa opção permite que você escolha na lista de JDKs que são fornecidos pelo Microsoft Azure.
-     * **Meu próprio JDK deste local de download**: essa opção permite que você especifique sua própria distribuição de JDK, que deve ser empacotada como um arquivo ZIP e carregada em um local de download disponível publicamente ou em uma conta de armazenamento do Azure à qual você tenha acesso.
+     * **Implantar o JDK padrão oferecido pelo serviço de Aplicativos Web do Azure**: esta opção implantará uma distribuição recente do Java.
+     * **Implantar um JDK de terceiros disponível no Azure**: esta opção permite que você escolha na lista de JDKs fornecidos pelo Microsoft Azure.
+     * **Implantar meu próprio JDK deste local de download**: essa opção permite que você especifique sua própria distribuição de JDK, que deve ser empacotada como um arquivo ZIP e carregada em um local de download disponível publicamente ou em uma conta de armazenamento do Azure à qual você tenha acesso.
           
        ![Caixa de diálogo Novo contêiner do aplicativo Web][07b]
 
@@ -128,7 +129,7 @@ Há várias maneiras pelas quais você pode implantar um aplicativo Web Java no 
 
    h. O menu suspenso **Plano do Serviço de Aplicativo** lista os planos do serviço de aplicativo associados ao Grupo de Recursos selecionado. (Os Planos do Serviço de Aplicativo especificam informações como o local de seu Aplicativo Web, o tipo de preço e o tamanho da instância de computação. Um único Plano do Serviço de Aplicativo pode ser usado para vários Aplicativos Web, por isso, ele é mantido separadamente de uma implantação de Aplicativo Web específica.)
       
-       You can select an existing App Service Plan (if you have any) and skip to step h below, or use the following these steps to create a new App Service Plan:
+      Você pode selecionar um Plano do Serviço de Aplicativo existente (se houver) e ignorar a etapa h abaixo ou usar as seguintes etapas para criar um novo Plano do Serviço de Aplicativo:
       
       * Clique em **Novo...**
       * A caixa de diálogo **Novo Plano do Serviço de Aplicativo** será exibida:

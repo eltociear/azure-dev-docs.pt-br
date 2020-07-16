@@ -10,12 +10,13 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: 528b111e945bb68bd18c849847522a070259c0f3
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 6aa930bb4ee5c6a5019e33b3d8075765b92f0bfc
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670612"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379780"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Transição do Java 8 para o Java 11
 

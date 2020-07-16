@@ -3,12 +3,13 @@ title: Inícios rápidos para serviços de computação para aplicativos Java no
 description: Lista de materiais de introdução na documentação do Azure para os serviços de computação para aplicativos Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6ae76c14fb420924a786972609f4a0bc902b2475
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 37dee8493855f0a17c5b18e2c1ed2c85138687e7
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743542"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379640"
 ---
 # <a name="compute-services-for-java-apps-on-azure"></a>Serviços de computação para aplicativos Java no Azure
 

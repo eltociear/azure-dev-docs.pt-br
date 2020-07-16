@@ -6,12 +6,13 @@ ms.date: 11/13/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: aea65c8a7edd8afc32cc87eb3ce1a5899e7d7487
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: d05e5f5c6680e4a33bfd66289437d6967fe34e88
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669922"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86378060"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gerenciar máquinas virtuais usando o Azure Explorer para IntelliJ
 
@@ -38,9 +39,9 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 4. Na janela **Selecionar uma Imagem de Máquina Virtual**, insira as seguintes informações:
 
-   * **Localização**: especifica o local no qual sua máquina virtual será criada (por exemplo, *Oeste dos EUA*). 
+   * **Localização**: especifica a localização onde sua máquina virtual será criada (por exemplo, *oeste dos EUA*). 
 
-   * **Imagem recomendada**: especifica que você escolherá uma imagem de uma lista abreviada de imagens usadas com frequência.
+   * **Imagem recomendada**: especifica que você escolherá uma imagem em uma lista abreviada de imagens usadas com frequência.
 
    * **Imagem personalizada**: especifica que você escolherá uma imagem personalizada fornecendo as seguintes informações:
 
@@ -50,7 +51,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
       * **Sku**: especifica qual SKU (unidade de manutenção de estoque) da oferta selecionada será usada (por exemplo, *JDK_8*).
 
-      * **No. de Versão**: especifica qual versão do SKU selecionado será usada.
+      * **No. da versão**: especifica qual versão do SKU selecionado será usada.
 
    ![A janela Selecionar uma Imagem de Máquina Virtual][CR03]
 
@@ -58,11 +59,11 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 6. Na janela **Configurações Básicas de Máquina Virtual**, insira as seguintes informações:
 
-   * **Nome da máquina virtual**: especifica o nome para sua nova máquina virtual, que deve começar com uma letra e conter somente letras, números e hifens.
+   * **Nome da máquina virtual**: especifica o nome para sua nova máquina virtual que deve começar com uma letra e conter somente letras, números e hifens.
 
-   * **Tamanho**: especifica o número de núcleos e a memória para alocar para sua máquina virtual.
+   * **Size**: especifica o número de núcleos e a memória para alocar para sua máquina virtual.
 
-   * **Nome de usuário**: especifica a conta de administrador a criar para gerenciar sua máquina virtual.
+   * **Nome de Usuário**: especifica a conta de administrador a ser criada para gerenciar sua máquina virtual.
 
    * **Senha** e **Confirmar**: especifica a senha para sua conta de administrador.
 
@@ -72,7 +73,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
 8. Na janela **Recursos Associados**, insira as informações a seguir:
 
-   * **Grupo de recursos**: especifica o grupo de recursos para suas máquinas virtuais. Selecione uma das seguintes opções:
+   * **Grupo de recursos**: especifica o grupo de recursos para sua máquina virtual. Selecione uma das seguintes opções:
       * **Criar novo**: especifica que você deseja criar um novo grupo de recursos.
       * **Usar existente**: especifica que você quer selecionar em uma lista de grupos de recursos associados à sua conta do Azure.
 
@@ -82,7 +83,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
       ![A caixa de diálogo Criar Conta de Armazenamento][CR05]
 
-   * **Rede Virtual** e **Sub-rede**: especifica a rede virtual e a sub-rede as quais sua máquina virtual se conectará. Use uma rede e sub-rede existentes ou crie uma nova rede e sub-rede. Se você selecionar **Criar novo**, a caixa de diálogo a seguir será exibida:
+   * **Rede virtual** e **Subrede**: especifica a rede virtual e a sub-rede às quais sua máquina virtual se conectará. Use uma rede e sub-rede existentes ou crie uma nova rede e sub-rede. Se você selecionar **Criar novo**, a caixa de diálogo a seguir será exibida:
 
       ![A caixa de diálogo Criar Rede Virtual][CR06]
 

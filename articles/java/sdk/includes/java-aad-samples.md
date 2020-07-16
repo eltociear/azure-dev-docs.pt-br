@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 7efca5bce2ffeaaa9930bb91d0787b8643391f4a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: d19bb343e8db9e80f3919264944b9d526e698f0f
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81671892"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86407988"
 ---
-|  |  |
+| Amostra  | Descrição |
 |---------|---------|
 | [Integrando o Azure AD em um aplicativo Web Java][1] | Configure a autenticação de OAuth2 em um aplicativo Web de Java.
 | [Chamando a API do Graph do Azure AD em um aplicativo Web][2] | Leia dados do diretório e execute consultas da API do Graph do Azure AD |

@@ -3,13 +3,14 @@ title: Provisionar o Armazenamento do Microsoft Azure com as bibliotecas do Azur
 description: Use o SDK do Azure para bibliotecas do Python para provisionar um contêiner de blob em uma conta de Armazenamento do Microsoft Azure e, em seguida, carregue um arquivo para esse contêiner.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 74f6e21b80505cd0b63061a76f4811b0c687d1a9
-ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
+ms.openlocfilehash: 648abeb105f1c575d5454af09cd2279c059d7b98
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716094"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405717"
 ---
-# <a name="example-use-the-azure-libraries-with-azure-storage"></a>Exemplo: Usar as bibliotecas do Azure com o Armazenamento do Microsoft Azure
+# <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Provisionar o Armazenamento do Azure usando as bibliotecas do Azure para Python
 
 Neste artigo, você aprenderá a usar as bibliotecas de gerenciamento do Azure em um script do Python para provisionar um grupo de recursos que contém a conta de Armazenamento do Microsoft Azure e um contêiner de armazenamento de Blobs. ([Comandos de CLI do Azure equivalentes](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo.)
 

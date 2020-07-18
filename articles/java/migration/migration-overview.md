@@ -5,11 +5,13 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 51babfacd133ed0ba0d9b5bc728c4373e137022c
-ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
+ms.custom: devx-track-java
+ms.openlocfilehash: 3487cc326222a013c7f0acec396ed343c8bd9621
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507462"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405707"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Migrar aplicativos Java para o Azure
 
@@ -77,7 +79,7 @@ As seções a seguir mostram quais destinos de serviço atendem aos requisitos d
 
 Use a grade a seguir para identificar possíveis destinos para seu tipo de aplicativo. Como você pode ver, as Máquinas Virtuais e o AKS dão suporte a todos os tipos de aplicativos, mas exigem que sua equipe assuma mais responsabilidades, conforme será mostrado na próxima seção.
 
-|   |Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas<br>Virtuais|
+|Destino&nbsp;→<br><br>Tipo&nbsp;do Aplicativo&nbsp;↓|Aplicativo<br>Serviço<br>Java SE|Aplicativo<br>Serviço<br>Tomcat|Azure<br>Spring<br>Nuvem|AKS|Máquinas<br>Virtuais|
 |---|---|---|---|---|---|---|
 | Aplicativos do Spring Boot/JAR                                    |&#x2714;|        |&#x2714;|&#x2714;|&#x2714;|
 | Spring Cloud/microsserviços                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
@@ -94,12 +96,12 @@ Use a grade a seguir para identificar possíveis destinos para seu tipo de aplic
 
 Use a grade a seguir para entender a responsabilidade que cada destino coloca sobre a sua equipe após a migração.
 
-A sua equipe é responsável continuamente pelas tarefas indicadas com "&#x1F449;". É recomendável implementar um processo robusto e altamente automatizado para atender a todas essas responsabilidades. 
+A sua equipe é responsável continuamente pelas tarefas indicadas com "&#x1F449;". É recomendável implementar um processo robusto e altamente automatizado para atender a todas essas responsabilidades.
 
 > [!NOTE]
 > Essa não é uma lista exaustiva de responsabilidades.
 
-|                                                                       | Aplicativo<br>Serviço | Azure<br>Spring<br>Nuvem | AKS | Máquinas<br>Virtuais |
+|Destino&nbsp;→<br><br>Tarefa&nbsp;↓                            | Aplicativo<br>Serviço | Azure<br>Spring<br>Nuvem | AKS | Máquinas<br>Virtuais |
 |---|---|---|---|---|
 | Atualizando bibliotecas<br>(incluindo a correção de vulnerabilidades)                 | &#x1F449;   | &#x1F449;   | &#x1F449;   | &#x1F449; |
 | Atualizando o servidor de aplicativos<br>(incluindo a correção de vulnerabilidades)    | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |

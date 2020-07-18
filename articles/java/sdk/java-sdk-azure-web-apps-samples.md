@@ -7,27 +7,28 @@ ms.date: 04/16/2017
 ms.topic: article
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.custom: seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 30884958dd4c829cf7b268715de7c79f3a786724
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: seo-java-august2019, seo-java-september2019, devx-track-java
+ms.openlocfilehash: 585cb33b6eabc5e353ddda37f687bcf0bacc6901
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81674172"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405697"
 ---
 # <a name="azure-management-libraries-for-java---web-app-samples"></a>Bibliotecas de gerenciamento do Azure para Java – exemplos de aplicativo Web 
 
 A tabela a seguir contém links para código-fonte em Java que você pode usar para criar e configurar aplicativos Web.
 
-| **Criar um aplicativo** ||
+| Amostra | Descrição |
 |---|---|
+| **Criar um aplicativo** ||
 | [Criar um aplicativo Web e implantar do FTP ou GitHub][1] | Implantar aplicativos Web do Git local, FTP e integração contínua do GitHub. |
 | [Criar um aplicativo Web e gerenciar slots de implantação][2] | Criar um aplicativo Web e implantar para slots de preparo e, em seguida, alternar as implantações entre os slots. |
-| **Como configurar o aplicativo** ||
+| **Configurar um aplicativo** ||
 | [Criar um aplicativo Web e configurar um domínio personalizado][3] | Criar um aplicativo Web com um domínio personalizado e o certificado SSL autoassinado. |
-| **Dimensionar aplicativos** ||
+| **Dimensionar um aplicativo** ||
 | [Dimensionar um aplicativo Web com alta disponibilidade em várias regiões][4] | Criar um aplicativo Web em três regiões geográficas diferentes e os disponibilizar por meio de um único ponto de extremidade usando o Gerenciador de Tráfego do Azure. | 
-| **Como conectar o aplicativo aos recursos** ||
+| **Conectar um aplicativo aos recursos** ||
 | [Como conectar um aplicativo Web a uma conta de armazenamento][5] | Criar uma conta de armazenamento do Azure e adicionar a cadeia de conexão de armazenamento às configurações do aplicativo. |
 | [Conectar um aplicativo web a um banco de dados SQL][6] | Criar um aplicativo Web e um Banco de Dados SQL e, em seguida, adicionar a cadeia de conexão do banco de dados às configurações do aplicativo. |
 

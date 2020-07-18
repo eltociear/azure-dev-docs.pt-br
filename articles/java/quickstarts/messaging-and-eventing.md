@@ -3,14 +3,15 @@ title: Inícios rápidos para mensagens e eventos para aplicativos Java no Azure
 description: Lista de materiais de introdução na documentação do Azure para mensagens e eventos para aplicativos Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: fc45140d68493bd80093f361b478e485cc2ed42f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: d5455c05872c67853b526fd30ecb4aee3c75954c
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673642"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405637"
 ---
-# <a name="caching-for-java-apps-on-azure"></a>Cache para aplicativos Java no Azure
+# <a name="messaging-and-eventing-for-java-apps-on-azure"></a>Mensagens e eventos para aplicativos Java no Azure
 
 Os seguintes artigos ajudam você a começar a usar várias opções de mensagens e eventos no Azure:
 

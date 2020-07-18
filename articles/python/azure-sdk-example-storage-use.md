@@ -3,13 +3,14 @@ title: Usar o Armazenamento do Microsoft Azure com o SDK do Azure para Python
 description: Use o SDK do Azure para bibliotecas do Python para acessar um contêiner de blob pré-provisionado em uma conta de Armazenamento do Microsoft Azure e, em seguida, carregue um arquivo para esse contêiner.
 ms.date: 06/15/2020
 ms.topic: conceptual
-ms.openlocfilehash: 9015017b1e0b2839e4a3986950625fb8a498717e
-ms.sourcegitcommit: 74ff4dec3b0556201c243e8c2302555b08dd79e9
+ms.openlocfilehash: 41c2c586678084e30f9f5b2bff3c773b46f5463d
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84812674"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405727"
 ---
-# <a name="example-use-the-azure-libraries-with-azure-storage"></a>Exemplo: Usar as bibliotecas do Azure com o Armazenamento do Microsoft Azure
+# <a name="example-access-azure-storage-using-the-azure-libraries-for-pyhon"></a>Exemplo: Acesse o Armazenamento do Azure com as bibliotecas do Azure para Python
 
 Esse exemplo demonstrou como usar as bibliotecas de cliente do Azure no código do aplicativo Python para carregar um arquivo nesse contêiner de armazenamento de Blobs. O exemplo supõe que você tenha provisionado os recursos mostrados no [Exemplo: Provisione o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md).
 

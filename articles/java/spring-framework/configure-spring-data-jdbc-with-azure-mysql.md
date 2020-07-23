@@ -8,18 +8,18 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: a30f06798591b0c76b84ab523961e9b4847f1132
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 481b3fce5d7d5f62cf4639d53d86c092e364a74f
+ms.sourcegitcommit: 04ee2325e3efd9b7797102b4cd9d5db009c38a42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378950"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86945804"
 ---
 # <a name="use-spring-data-jdbc-with-azure-database-for-mysql"></a>Usar o Spring Data JDBC com o Banco de Dados do Azure para MySQL
 
 Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data JDBC](https://spring.io/projects/spring-data-jdbc) para armazenar e recuperar informações no [Banco de Dados do Azure para MySQL](https://docs.microsoft.com/azure/mysql/).
 
-O [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) é a API Java padrão para se conectar a bancos de dados relacionais tradicionais.
+O [JDBC](https://jcp.org/en/jsr/detail?id=221) é a API Java padrão para se conectar a bancos de dados relacionais tradicionais.
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 

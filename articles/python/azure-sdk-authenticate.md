@@ -3,12 +3,12 @@ title: Como autenticar aplicativos Python com os serviços do Azure
 description: Como adquirir os objetos de credencial necessários para autenticar um aplicativo Python com os serviços do Azure usando as bibliotecas do Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 337c520ba163c4029c4352c10d6ca865caf34755
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 1694f85b2ad41a12865bb3d367b1b8498ab474bb
+ms.sourcegitcommit: 04ee2325e3efd9b7797102b4cd9d5db009c38a42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86377990"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86945814"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Como autenticar aplicativos Python com os serviços do Azure
 
@@ -69,7 +69,7 @@ Nos dois casos, a identidade envolvida deve receber permissões para o recurso a
 ### <a name="using-defaultazurecredential-with-sdk-management-libraries"></a>Usando o DefaultAzureCredential com bibliotecas de gerenciamento do SDK
 
 ```python
-# WARNING: this code presently fails!
+# WARNING: this code presently fails with current release libraries!
 
 from azure.identity import DefaultAzureCredential
 
@@ -86,7 +86,7 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-No momento, o `DefaultAzureCredential` funciona apenas com bibliotecas do cliente do SDK do Azure ("plano de dados") e versões prévias das bibliotecas de gerenciamento do SDK do Azure (cujos nomes começam com `azure-mgmt`), como mostrado neste exemplo de código. Ou seja, com as bibliotecas de versão atuais, a chamada para `subscription_client.subscriptions.list()` falha com o erro vago de "O objeto 'DefaultAzureCredential' não tem o atributo 'signed_session'". Esse erro ocorre porque as bibliotecas de gerenciamento do SDK atuais pressupõem que o objeto de credencial contém uma propriedade `signed_session`, ausente em `DefaultAzureCredential`.
+No momento, o `DefaultAzureCredential` funciona apenas com bibliotecas do cliente do SDK do Azure ("plano de dados") e versões prévias das bibliotecas de gerenciamento do SDK do Azure (ou seja, a versão prévia mais recente de bibliotecas cujos nomes começam com `azure-mgmt`), como mostrado neste exemplo de código. Ou seja, com as bibliotecas de versão atuais, a chamada para `subscription_client.subscriptions.list()` falha com o erro vago de "O objeto 'DefaultAzureCredential' não tem o atributo 'signed_session'". Esse erro ocorre porque as bibliotecas de gerenciamento do SDK atuais pressupõem que o objeto de credencial contém uma propriedade `signed_session`, ausente em `DefaultAzureCredential`.
 
 Você pode contornar o erro usando bibliotecas de gerenciamento de versão prévia, conforme descrito na postagem no blog, [Apresentando novas versões prévias para as bibliotecas de gerenciamento do Azure](https://devblogs.microsoft.com/azure-sdk/introducing-new-previews-for-azure-management-libraries/).
 

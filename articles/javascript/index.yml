@@ -1,64 +1,94 @@
 ### YamlMime:Landing
-title: Documentação do SDK do Azure para JavaScript
+title: Azure para desenvolvedores JavaScript
 summary: >
   Conheça o SDK do Azure para JavaScript e Node.js, como começar a usá-lo e o que ele oferece para desenvolvedores. Comece a usar recursos úteis do Azure, como hospedagem de aplicativos, tarefas do DevOps, armazenamento e bancos de dados persistentes e trabalho com dispositivos da Internet das Coisas.
 metadata:
   title: Azure para desenvolvedores JavaScript e Node.js
   description: Comece a desenvolver aplicativos com o SDK do Azure para JavaScript no navegador ou para Node.js por meio de tutoriais e ferramentas e por meio da referência do SDK.
-  author: sptramer
-  ms.author: sttramer
-  ms.date: 09/15/2019
+  author: diberry
+  ms.author: diberry
+  ms.date: 07/23/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 3ce57713de241e8741c8dd947b1ced5160376119
-  ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.devlang: javascript
+  ms.openlocfilehash: 946afb0fff0d5a32647b94c8e4bee5fc6f328586
+  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85793076"
+  ms.lasthandoff: 07/28/2020
+  ms.locfileid: "87260373"
 landingContent:
-- title: Introdução ao SDK do Azure para JavaScript
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Implante rapidamente um exemplo do Node.js no Serviço de Aplicativo do Azure
-      url: https://aka.ms/try-azure-node
-    - text: Procurar todos os exemplos disponíveis de SDK do Azure para JavaScript
-      url: /samples/browse/?languages=javascript,nodejs
-- title: Hospedar aplicativos no Azure
+- title: Introdução ao Azure
   linkLists:
   - linkListType: overview
     links:
-    - text: Sobre o Serviço de Aplicativo do Azure
+    - text: Configurar seu ambiente de desenvolvimento local
+      url: configure-local-development-environment.md
+  - linkListType: quickstart
+    links:
+    - text: Fazer uma implantação rápida no Serviço de Aplicativo do Azure
+      url: https://aka.ms/try-azure-node
+    - text: Procurar exemplos
+      url: /samples/browse/?languages=javascript,nodejs
+  - linkListType: learn
+    links:
+    - text: Criar aplicativos Node.js
+      url: /learn/paths/build-javascript-applications-nodejs/
+  - linkListType: reference
+    links:
+    - text: Documentos de referência da API
+      url: /javascript/api/overview/azure/?view=azure-node-latest
+    - text: Últimos SDKs
+      url: https://azure.github.io/azure-sdk/releases/latest/index.html#javascript
+- title: Implantar com o Visual Studio Code
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Aplicativos Web estáticos
+      url: tutorial-vscode-static-website-node-01.md
+    - text: Aplicativos sem servidor
+      url: tutorial-vscode-serverless-node-01.md
+    - text: Aplicativos de pilha completa
+      url: tutorial-vscode-azure-app-service-node-01.md
+    - text: Aplicativos em contêineres
+      url: tutorial-vscode-docker-node-01.md
+- title: Implantar com a CLI do Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Aplicativos do Deno
+      url: tutorial-visual-studio-code-azure-app-service-deno-01.md
+- title: Host
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Serviço de aplicativo do Azure
       url: /azure/app-service/overview
   - linkListType: architecture
     links:
-    - text: Encontrar a opção de hospedagem correta para você
+    - text: Localizar a opção de hospedagem correta
       url: /azure/architecture/guide/technology-choices/compute-decision-tree
+- title: DevOps
+  linkLists:
   - linkListType: quickstart
     links:
-    - text: Implantar aplicativos Web estáticos do Visual Studio Code
-      url: tutorial-vscode-static-website-node-01.md
-    - text: Implantar aplicativos sem servidor com o Azure Functions do Visual Studio Code
-      url: tutorial-vscode-serverless-node-01.md
-    - text: Implantar aplicativos Node.js de pilha completa do Visual Studio Code
-      url: tutorial-vscode-azure-app-service-node-01.md
-    - text: Implantar aplicativos do Deno no Serviço de Aplicativo com a CLI do Azure
-      url: tutorial-visual-studio-code-azure-app-service-deno-01.md
-    - text: Implantar aplicativos em contêineres do Visual Studio Code
-      url: tutorial-vscode-docker-node-01.md
-- title: Criar, implantar e monitorar aplicativos com o Azure
+    - text: Configurar CI/CD no Azure Pipelines
+      url: /azure/devops-project/azure-devops-project-nodejs?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
+- title: Monitoramento
   linkLists:
   - linkListType: overview
     links:
-    - text: O que é o Azure Monitor?
+    - text: Azure Monitor
       url: /azure/azure-monitor/overview?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
   - linkListType: quickstart
     links:
-    - text: Configurar CI/CD para aplicativos Node.js no Azure Pipelines
+    - text: CI/CD no Azure Pipelines
       url: /azure/devops-project/azure-devops-project-nodejs?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
-    - text: Monitorar aplicativos implantados com o Azure Monitor
+    - text: Monitorar os aplicativos implantados
       url: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Conectar aplicativos e dispositivos a serviços de mensagens
+- title: Serviços de mensagens
   linkLists:
   - linkListType: quickstart
     links:
@@ -66,25 +96,19 @@ landingContent:
       url: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
     - text: Passar mensagens com as filas do Armazenamento do Azure
       url: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Soluções de armazenamento e banco de dados no Azure
+- title: Armazenamento e banco de dados
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Trabalhar com blobs no Armazenamento do Azure
-      url: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-    - text: Migrar aplicativos MongoDB para usar o Azure CosmosDB
+    - text: Migrar do MongoDB para o Azure Cosmos DB
       url: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Trabalhar com dispositivos da Internet das Coisas
+    - text: Trabalhar com blobs
+      url: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+- title: Dispositivos da IoT (Internet das Coisas)
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Gerenciar dispositivos com o Hub IoT do Azure
+    - text: Gerenciar dispositivos
       url: /azure/iot-hub/quickstart-control-device-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-    - text: Processar dados de dispositivos com o Hub de Eventos do Azure
+    - text: Processar dados
       url: /azure/iot-hub/quickstart-send-telemetry-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Referência do SDK do Azure para JavaScript
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Referência de API do SDK do Azure para JavaScript
-      url: /javascript/api/overview/azure/

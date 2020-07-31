@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: 408483ef614ca546e8f0af2331d126ff35148ed0
-  ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+  ms.openlocfilehash: 60455122c0ab21dc646938661c4f9489c969bd0d
+  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85790606"
+  ms.lasthandoff: 07/28/2020
+  ms.locfileid: "87260383"
 productDirectory:
   items:
   - title: Python
@@ -37,17 +37,17 @@ productDirectory:
     imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
     links:
     - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-static-website-node-01?tabs=bash
-      text: Criar e implantar um site estático
+      text: Desenvolver um site estático
     - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-azure-app-service-node-01?tabs=bash
-      text: Implantar um aplicativo Node.js no Serviço de Aplicativo do Azure
+      text: Implantar no Serviço de Aplicativo do Azure
     - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-serverless-node-01?tabs=bash
-      text: Implantar um aplicativo do Azure Functions
+      text: Implantar um aplicativo sem servidor
     - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-docker-node-01?tabs=bash
-      text: Implantar um aplicativo Node.js usando contêineres do Docker
+      text: Implantar contêineres do Docker
     - url: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-      text: Migrar um aplicativo Web do MongoDB para o Azure Cosmos DB
+      text: Migrar um aplicativo do MongoDB para o Azure Cosmos DB
     - url: https://docs.microsoft.com/azure/developer/javascript/
-      text: Veja mais na central de desenvolvedores do JavaScript
+      text: Confira mais no centro de desenvolvimento
   - title: Java
     imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
     links:

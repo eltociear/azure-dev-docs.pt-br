@@ -3,12 +3,12 @@ title: Tutorial – Configurar a extensão Visual Studio Code do Azure Terraform
 description: Saiba como instalar e usar a extensão do Terraform do Azure no Visual Studio Code.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 9fd6d6b93537795109117198aa20063b556b8368
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 7bbddd2d455e53354829557b99c19a8fb3e3dbf7
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334481"
 ---
 # <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Tutorial: Configurar a extensão do Visual Studio Code do Azure Terraform
 
@@ -25,7 +25,7 @@ Neste artigo, você aprenderá como:
 ## <a name="prerequisites"></a>Pré-requisitos
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Terraform**: [instale e configure o Terraform](getting-started-cloud-shell.md).
+- **Terraform**: [instale e configure o Terraform](get-started-cloud-shell.md).
 - **Visual Studio Code**: instale a versão do [Visual Studio Code](https://code.visualstudio.com/download) apropriado para seu ambiente.
 
 ## <a name="prepare-your-dev-environment"></a>Preparar o ambiente de desenvolvimento
@@ -137,7 +137,7 @@ Neste exercício, você cria e executa um arquivo de configuração básico do T
 
 1. Quando a confirmação for exibida, selecione **OK**.
 
-    ![Você deseja abrir o Cloud Shell?](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloud-shell.png)
+    ![Caixa de diálogo de confirmação para abrir o Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloud-shell.png)
 
 1. Na primeira vez que iniciar o Cloud Shell em uma nova pasta, você deverá criar o aplicativo Web. Selecione **Abrir**.
 
@@ -273,7 +273,7 @@ Antes de começar a usar os comandos do Terraform de dentro do Visual Studio Cod
 
 1. Quando a confirmação for exibida, selecione **OK**e siga as instruções na tela.
 
-    ![Você deseja abrir o Cloud Shell?](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
+    ![Caixa de diálogo de confirmação para abrir o Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >Quando você executa qualquer o teste **lint** ou **ponta a ponta**, o Azure usa um serviço de contêiner para provisionar uma máquina de teste para executar o teste real. Por esse motivo, os resultados do teste normalmente podem levar vários minutos para serem retornados.
@@ -292,7 +292,7 @@ Após alguns instantes, você deve ver uma listagem no painel do Terminal semelh
 
 1. Quando a confirmação for exibida, selecione **OK**e siga as instruções na tela.
 
-    ![Você deseja abrir o Cloud Shell?](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
+    ![Caixa de diálogo de confirmação para abrir o Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >Quando você executa qualquer o teste **lint** ou **ponta a ponta**, o Azure usa um serviço de contêiner para provisionar uma máquina de teste para executar o teste real. Por esse motivo, os resultados do teste normalmente podem levar vários minutos para serem retornados.

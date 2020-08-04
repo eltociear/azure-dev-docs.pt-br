@@ -3,12 +3,12 @@ title: Tutorial - Criar um conjunto de dimensionamento de máquinas virtuais do 
 description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: ce6922fe8bb5671afece009cd0228e8a3ff191da
-ms.sourcegitcommit: fb0564696f8067e6dfa8b9eaf819fadf321c2884
+ms.openlocfilehash: 057fbec811c842b27823395735186120612bc6c5
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85327203"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334401"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
 
@@ -32,7 +32,7 @@ Neste tutorial, você aprenderá como:
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-- **Instalar o Terraform**: Siga as instruções no artigo [Terraform e configurar o acesso ao Azure](getting-started-cloud-shell.md)
+- **Instalar o Terraform**: Siga as instruções no artigo [Terraform e configurar o acesso ao Azure](get-started-cloud-shell.md)
 
 - **Crie um par de chaves SSH**: Para obter mais informações, consulte [Como criar e usar um par de chaves SSH pública e privada para VMs Linux no Azure](/azure/virtual-machines/linux/mac-create-ssh-keys).
 
@@ -378,7 +378,7 @@ No Cloud Shell, execute as seguintes etapas:
 
 1. Salve o arquivo ( **&lt;Ctrl>S**) e saia do editor ( **&lt;Ctrl>Q**).
 
-1. Crie um plano do Terraform para visualizar a implantação do conjunto de dimensionamento de máquinas virtuais. (Você precisa especificar uma senha de sua escolha, bem como a localização dos recursos.)
+1. Crie um plano do Terraform para visualizar a implantação do conjunto de dimensionamento de máquinas virtuais. (Você precisa especificar uma senha e a localização dos recursos.)
 
     ```bash
     terraform plan

@@ -1,14 +1,14 @@
 ---
 title: Tutorial – Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
-description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure por meio de uma imagem personalizada gerada pelo Packer (completa com uma rede virtual e com discos anexados gerenciados).
+description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure de uma imagem personalizada gerada pelo Packer
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: d9db8f47cdb4c295ef5625450980938ff348b5fb
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.openlocfilehash: f72d8ab828259e4408ceb78528ce310a214e05ad
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334391"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
 
@@ -29,7 +29,7 @@ Neste tutorial, você aprenderá como:
 ## <a name="prerequisites"></a>Pré-requisitos
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Terraform**: [Instalar o Terraform e configurar o acesso ao Azure](getting-started-cloud-shell.md).
+- **Terraform**: [Instalar o Terraform e configurar o acesso ao Azure](get-started-cloud-shell.md).
 - **Par de chaves SSH**: [Criar um par de chaves SSH](/azure/virtual-machines/linux/mac-create-ssh-keys).
 - **Packer**:  [Instalar o Packer](https://learn.hashicorp.com/packer/getting-started/install).
 

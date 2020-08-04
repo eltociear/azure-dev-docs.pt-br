@@ -1,14 +1,14 @@
 ---
 title: Tutorial – Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
-description: Saiba como criar uma configuração simples do Terraform ao implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure.
+description: Saiba como usar o Terraform para implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 ms.topic: tutorial
 ms.date: 04/26/2020
-ms.openlocfilehash: 5b66d89f7a9a5c690d3a62e6b96a0b056cad9e0e
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: d0a175d3b465de640c151bd2b8ce339f0b5ade5b
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334361"
 ---
 # <a name="tutorial-deploy-an-azure-cosmos-db-to-azure-container-instances"></a>Tutorial: Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 
@@ -179,4 +179,4 @@ terraform destroy -auto-approve
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Instalar e configurar o Terraform para provisionar recursos do Azure](getting-started-cloud-shell.md).
+> [Instalar e configurar o Terraform para provisionar recursos do Azure](get-started-cloud-shell.md).

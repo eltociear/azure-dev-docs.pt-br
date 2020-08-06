@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: 624de3b00000bf553cb2e36b46c6497690d5638e
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: b9c5f45dfa95af43ec3b56ca9c86957fcd1b7b88
+ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401307"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87810649"
 ---
 # <a name="tutorial-send-push-notifications-to-flutter-apps-using-azure-notification-hubs-via-a-backend-service"></a>Tutorial: Enviar notificações por push para aplicativos Flutter usando os Hubs de Notificação do Azure por meio de um serviço de back-end  
 
@@ -66,7 +66,7 @@ As etapas neste exemplo de princípios essenciais não requerem experiência pr�
 * [Portal do Desenvolvedor Apple](https://developer.apple.com).
 * [ASP.NET Core](https://docs.microsoft.com/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1).
 * [Console do Google Firebase](https://console.firebase.google.com/u/0/).
-* [Microsoft Azure](https://portal.azure.com) e [Enviar notificações por push para aplicativos iOS usando os Hubs de Notificação do Azure](/azure/notification-hubs/ios-sdk-get-started.md).
+* [Microsoft Azure](https://portal.azure.com) e [Enviar notificações por push para aplicativos iOS usando os Hubs de Notificação do Azure](https://docs.microsoft.com/azure/notification-hubs/ios-sdk-get-started).
 * [Flutter](https://flutter.dev) e [Dart](https://dart.dev) para desenvolvimento multiplataforma.
 * [Kotlin](https://kotlinlang.org) e [Swift](https://developer.apple.com/swift) para desenvolvimento nativo para Android e iOS.
 
@@ -120,15 +120,15 @@ Agora é possível testar o envio de notificações por meio do serviço de back
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Visão geral dos Hubs de Notificação do Azure](/azure/notification-hubs/notification-hubs-push-notification-overview.md)
+* [Visão geral dos Hubs de Notificação do Azure](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)
 * [Como instalar o Flutter no macOS](https://flutter.dev/docs/get-started/install/macos)
 * [Como instalar o Flutter no Windows](https://flutter.dev/docs/get-started/install/windows)
 * [SDK dos Hubs de Notificação para operações de back-end](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
 * [SDKs dos Hubs de Notificação do GitHub](https://github.com/Azure/azure-notificationhubs)
-* [Registrar com o back-end de aplicativo](/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification.md)
-* [Gerenciamento de registros](/azure/notification-hubs/notification-hubs-push-notification-registration-management.md)
-* [Como trabalhar com marcas](/azure/notification-hubs/notification-hubs-tags-segment-push-message.md)
-* [Como trabalhar com modelos personalizados](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages.md)
+* [Registrar com o back-end de aplicativo](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification)
+* [Gerenciamento de registros](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management)
+* [Como trabalhar com marcas](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message)
+* [Como trabalhar com modelos personalizados](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages)
 
 ## <a name="next-steps"></a>Próximas etapas
 

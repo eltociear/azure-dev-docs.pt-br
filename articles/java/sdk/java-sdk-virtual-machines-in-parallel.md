@@ -7,19 +7,19 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
 ms.custom: devx-track-java
-ms.openlocfilehash: 78f50ce1c0110a9329d259d951e665a65bcbafeb
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: a0e93cd355560c62c91cee61df843564e738dd25
+ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379400"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438358"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Criar máquinas virtuais em várias regiões a partir de seus aplicativos Java
 
 [Este exemplo](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel) cria máquinas virtuais em paralelo em diferentes regiões do Azure usando as [bibliotecas de gerenciamento do Azure para Java](https://github.com/Azure/azure-sdk-for-java).
 
 > [!IMPORTANT]
-> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](/azure/virtual-machines/virtual-machines-windows-sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
+> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](https://docs.microsoft.com/azure/virtual-machines/sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 

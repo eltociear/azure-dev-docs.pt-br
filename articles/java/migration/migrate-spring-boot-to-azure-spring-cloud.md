@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 5/26/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: c779a85f49ccd7507882fbd123a329addca60a7c
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 7bc4a5188181f3b4b6d98b5308a5027a42bbac5e
+ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379740"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87810579"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-spring-cloud"></a>Migrar aplicativos Spring Boot para o Azure Spring Cloud
 
@@ -134,7 +134,7 @@ Agora que você concluiu a migração, confirme se o aplicativo funciona conform
 
 * Considere a possibilidade de habilitar seu aplicativo para que ele funcione com o Registro do Spring Cloud. Isso permitirá que o aplicativo seja descoberto dinamicamente por outros microsserviços e clientes implantados. Para saber mais, confira [Tutorial: Preparar um aplicativo Spring Java para implantação](/azure/spring-cloud/spring-cloud-tutorial-prepare-app-deployment). Em seguida, modifique todos os clientes do aplicativo para que eles usem o balanceador de carga do Cliente Spring. Isso permite que o cliente obtenha endereços de todas as instâncias do aplicativo em execução e localize uma instância que funcionará se outra instância for corrompida ou ficar sem resposta. Para obter mais informações, confira [Dicas do Spring: Balanceador de carga do Spring Cloud](https://spring.io/blog/2020/03/25/spring-tips-spring-cloud-loadbalancer) no blog do Spring.
 
-* Em vez de tornar seu aplicativo público, considere a possibilidade de adicionar uma instância do [Spring Cloud Gateway](https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/current/reference/html/). O Spring Cloud Gateway fornece um só ponto de extremidade para todos os aplicativos/microsserviços implantados na sua instância do Azure Spring Cloud. Se um Spring Cloud Gateway já estiver implantado, verifique se ele está configurado para rotear o tráfego para o aplicativo recém-implantado.
+* Em vez de tornar seu aplicativo público, considere a possibilidade de adicionar uma instância do [Spring Cloud Gateway](https://cloud.spring.io/spring-cloud-gateway/reference/html/). O Spring Cloud Gateway fornece um só ponto de extremidade para todos os aplicativos/microsserviços implantados na sua instância do Azure Spring Cloud. Se um Spring Cloud Gateway já estiver implantado, verifique se ele está configurado para rotear o tráfego para o aplicativo recém-implantado.
 
 * Considere a possibilidade de adicionar um Config Server do Spring Cloud para gerenciar de maneira centralizada a configuração e fazer o controle de versão dela para todos os microsserviços do Spring Cloud. Primeiro, crie um repositório Git para hospedar a configuração e configure a instância do Azure Spring Cloud para usá-la. Para saber mais, confira [Tutorial: Configurar uma instância do Servidor de Configuração do Spring Cloud para seu serviço](/azure/spring-cloud/spring-cloud-tutorial-config-server). Em seguida, migre sua configuração usando as seguintes etapas:
 

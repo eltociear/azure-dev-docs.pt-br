@@ -3,20 +3,20 @@ title: Tutorial – Criar um dispositivo de rede virtual de hub no Azure usando 
 description: Saiba como criar uma VNet (rede virtual) de hub que atue como um ponto de conexão comum entre outras redes.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 49af4bde3568185e1915edb49be3040ece89676f
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 71599c3d62ba3c3e0c6132cdf5197b87927cec91
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329304"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478556"
 ---
 # <a name="tutorial-create-a-hub-virtual-network-appliance-in-azure-using-terraform"></a>Tutorial: Criar um dispositivo de rede virtual de hub no Azure usando o Terraform
 
-Um **dispositivo VPN** é um dispositivo que fornece conectividade externa a uma rede local. O dispositivo VPN pode ser um dispositivo de hardware ou uma solução de software. Um exemplo de uma solução de software é o RRAS (serviço de roteamento e acesso remoto) no Windows Server 2012. Para obter mais informações sobre dispositivos VPN, consulte [Sobre dispositivos VPN para conexões de Gateway de VPN site a site](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
+Um *dispositivo VPN* é um dispositivo que fornece conectividade externa a uma rede local. O dispositivo VPN pode ser um dispositivo de hardware ou uma solução de software. Um exemplo de uma solução de software é o RRAS (serviço de roteamento e acesso remoto) no Windows Server 2012. Para obter mais informações sobre dispositivos VPN, consulte [Sobre dispositivos VPN para conexões de Gateway de VPN site a site](/azure/vpn-gateway/vpn-gateway-about-vpn-devices).
 
-O Azure dá suporte a uma ampla variedade de dispositivos virtuais de rede para seleção. Para este tutorial, é utilizada uma imagem do Ubuntu. Para saber mais sobre a ampla variedade de soluções de dispositivos com suporte no Azure, consulte a [home page Dispositivos de Rede](https://azure.microsoft.com/solutions/network-appliances/).
+O Azure dá suporte a uma ampla variedade de dispositivos virtuais de rede para seleção. Para este artigo, é utilizada uma imagem do Ubuntu. Para saber mais sobre a ampla variedade de soluções de dispositivos com suporte no Azure, consulte a [home page Dispositivos de Rede](https://azure.microsoft.com/solutions/network-appliances/).
 
-Este tutorial cobre as seguintes tarefas:
+Este artigo aborda as seguintes tarefas:
 
 > [!div class="checklist"]
 > * Usar HCL (HashiCorp Language) para implementar a VNet do Hub na topologia hub-spoke

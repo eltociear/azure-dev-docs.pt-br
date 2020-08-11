@@ -1,16 +1,16 @@
 ---
-title: Tutorial – Configurar a extensão Visual Studio Code do Azure Terraform
+title: Configurar a extensão do Visual Studio Code do Azure Terraform
 description: Saiba como instalar e usar a extensão do Terraform do Azure no Visual Studio Code.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 10/26/2019
-ms.openlocfilehash: 7bbddd2d455e53354829557b99c19a8fb3e3dbf7
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 6ac6cada3e7a411d940f5207fa6cfa10f4fea0de
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334481"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478546"
 ---
-# <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Tutorial: Configurar a extensão do Visual Studio Code do Azure Terraform
+# <a name="configure-the-azure-terraform-visual-studio-code-extension"></a>Configurar a extensão do Visual Studio Code do Azure Terraform
 
 A extensão Visual Studio Code do Azure Terraform permite que você trabalhe com o Terraform no editor. Com essa extensão, você pode criar, testar e executar configurações do Terraform. A extensão também dá suporte à visualização de grafo de recursos.
 
@@ -166,7 +166,7 @@ Neste exercício, você cria e executa um arquivo de configuração básico do T
 
 ### <a name="visualize-the-plan"></a>Visualizar o plano
 
-Anteriormente neste tutorial, você instalou o GraphViz. O Terraform pode usar o GraphViz para gerar uma representação visual de uma configuração ou plano de execução. A extensão do Terraform do Visual Studio Code do Azure implementa esse recurso por meio do comando *visualize*.
+Anteriormente neste artigo, você instalou o GraphViz. O Terraform pode usar o GraphViz para gerar uma representação visual de uma configuração ou plano de execução. A extensão do Terraform do Visual Studio Code do Azure implementa esse recurso por meio do comando *visualize*.
 
 - Na barra de menus, selecione **Exibir > Paleta de Comandos... > Azure Terraform: visualizar**.
 

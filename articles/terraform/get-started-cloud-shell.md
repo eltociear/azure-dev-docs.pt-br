@@ -4,12 +4,12 @@ description: Nesse início rápido, você aprende a como instalar e configurar o
 keywords: azure devops terraform install configure cloud shell init plan apply execution portal login rbac service principal automated script
 ms.topic: quickstart
 ms.date: 07/26/2020
-ms.openlocfilehash: 381313edf386ac33dca137191c9eefef48f92931
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: dbe290fbb7909d116d2ff0cec8e01a3b145ded30
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87335230"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478586"
 ---
 # <a name="quickstart-get-started-with-terraform-using-azure-cloud-shell"></a>Início Rápido: Introdução ao Terraform usando o Azure Cloud Shell
  
@@ -35,7 +35,7 @@ Este artigo descreve como começar a usar o [Terraform no Azure](https://www.ter
 
 1. Se você ainda não usou o Cloud Shell, defina as configurações de ambiente e armazenamento. Este artigo usa o ambiente de Bash.
 
-Observações:
+**Observações**:
 - O Cloud Shell tem automaticamente a versão mais recente do Terraform instalada. Além disso, o Terraform usa automaticamente as informações da assinatura atual do Azure. Como resultado, não há nenhuma instalação ou configuração necessária.
 
 ## <a name="authenticate-to-azure"></a>Autenticar-se no Azure
@@ -55,7 +55,7 @@ A chamada a `az login` sem nenhum parâmetro exibe uma URL e um código. Navegue
 az login
 ```
 
-Observações:
+**Observações**:
 
 - Após o logon bem-sucedido, `az login` exibe uma lista das assinaturas do Azure associadas à conta Microsoft conectada.
 - Uma lista de propriedades é exibida para cada assinatura do Azure disponível. A propriedade `isDefault` identifica qual assinatura do Azure você está usando. Para saber como alternar para outra assinatura do Azure, consulte a seção [Definir a assinatura do Azure atual](#set-the-current-azure-subscription).
@@ -74,7 +74,7 @@ Insira o comando a seguir, substituindo `<subscription_id>` pela ID da conta de 
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
 ```
 
-Observações:
+**Observações**:
 
 - Após a conclusão bem-sucedida, `az ad sp create-for-rbac` exibe vários valores. Os valores `name`, `password` e `tenant` são usados na próxima etapa.
 - Se for perdida, a senha não poderá ser recuperada. Por isso, você deve armazenar sua senha em um local seguro. Se você esquecer a senha, você precisará [redefinir as credenciais da entidade de serviço](/cli/azure/create-an-azure-service-principal-azure-cli#reset-credentials).
@@ -107,7 +107,7 @@ Uma conta Microsoft pode ser associada a várias assinaturas do Azure. As seguin
     az account set --subscription="<subscription_id>"
     ```
 
-    Observações:
+    **Observações**:
 
     - A chamada a `az account set` não exibe os resultados da alternância para a assinatura especificada do Azure. No entanto, você pode usar `az account show` para confirmar se a assinatura atual do Azure foi alterada.
 
@@ -154,7 +154,7 @@ Nesta seção, você aprenderá a criar um arquivo de configuração do Terrafor
     }
     ```
 
-    Observações:
+    **Observações**:
 
     - O bloco `provider` especifica que o [provedor do Azure (`azurerm`)](https://www.terraform.io/docs/providers/azurerm/index.html) é usado.
     - No bloco do provedor `azurerm`, os atributos `version` e `features` são definidos. Como o comentário diz, seu uso é específico da versão. Para obter mais informações sobre como definir esses atributos para seu ambiente, consulte [v 2.0 do provedor AzureRM](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
@@ -174,13 +174,13 @@ Depois que você criar os arquivos de configuração, esta seção explicará co
     terraform init
     ```
 
-1. O Terraform permite que você visualize as ações a serem concluídas com [terraform plan](https://www.terraform.io/docs/commands/plan.html).
+1. Execute o comando [terraform plan](https://www.terraform.io/docs/commands/plan.html) para criar um plano de execução e visualizar os resultados.
 
     ```bash
     terraform plan
     ```
 
-    Observações:
+    **Observações**:
 
     - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração.
     - O comando `terraform plan` permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
@@ -200,7 +200,7 @@ Depois que você criar os arquivos de configuração, esta seção explicará co
     az group show -n "QuickstartTerraformTest-rg"
     ```
 
-    Observações:
+    **Observações**:
 
     - Se ele for bem-sucedido, `az group show` exibirá várias propriedades do grupo de recursos recém-criado.
 
@@ -232,11 +232,11 @@ As etapas a seguir ilustram o padrão básico para usar esse recurso:
     terraform apply QuickstartTerraformTest.tfplan
     ```
 
-Observações:
-
-- Para habilitar o uso com automação, a execução de `terraform apply <filename>` não exige confirmação.
-- Se você decidir usar esse recurso, leia a [seção do aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
-
+    **Observações**:
+    
+    - Para habilitar o uso com automação, a execução de `terraform apply <filename>` não exige confirmação.
+    - Se você decidir usar esse recurso, leia a [seção do aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
+    
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
 Quando não forem mais necessários, exclua os recursos criados neste artigo.
@@ -247,7 +247,7 @@ Quando não forem mais necessários, exclua os recursos criados neste artigo.
     terraform plan -destroy -out QuickstartTerraformTest.destroy.tfplan
     ```
 
-    **Observações:**
+    **Observações**:
     - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração. Isso permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
     - O parâmetro `-destroy` gera um plano para destruir os recursos.
     - O parâmetro opcional `-out` permite que você especifique um arquivo de saída para o plano. O parâmetro `-out` sempre deve ser usado, pois ele garante que o plano que você examinou seja exatamente o que é aplicado.

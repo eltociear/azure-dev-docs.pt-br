@@ -1,20 +1,20 @@
 ---
-title: Tutorial – Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
+title: Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
 description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure de uma imagem personalizada gerada pelo Packer
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 11/07/2019
-ms.openlocfilehash: f72d8ab828259e4408ceb78528ce310a214e05ad
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 541d294a3098e2da7c76855de4db0c425b408e0e
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334391"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478466"
 ---
-# <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
+# <a name="create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Criar um conjunto de dimensionamento de máquinas virtuais do Azure com base em uma imagem personalizada do Packer usando o Terraform
 
 [Os conjuntos de dimensionamento de máquinas virtuais do Azure](/azure/virtual-machine-scale-sets) permitem configurar VMs idênticas. O número de instâncias de VM pode ser ajustado com base na demanda ou em uma agenda. Para obter mais informações, consulte [Dimensionar automaticamente um conjunto de dimensionamento de máquinas virtuais no portal do Azure](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-portal).
 
-Neste tutorial, você aprenderá como:
+Neste artigo, você aprenderá como:
 
 > [!div class="checklist"]
 > * Configurar sua implantação do Terraform.
@@ -158,14 +158,14 @@ O grupo de recursos contém os seguintes recursos:
 
 
 ## <a name="create-an-azure-image-by-using-packer"></a>Criar uma imagem do Azure usando o Packer
-Criar uma imagem Linux personalizada seguindo as etapas do tutorial [Como usar o Packer para criar imagens de máquina virtual Linux no Azure](/azure/virtual-machines/linux/build-image-with-packer).
+Criar uma imagem Linux personalizada seguindo as etapas do artigo [Como usar o Packer para criar imagens de máquina virtual Linux no Azure](/azure/virtual-machines/linux/build-image-with-packer).
  
-Siga o tutorial para criar uma imagem Ubuntu desprovisionada com o Nginx instalado.
+Siga o artigo para criar uma imagem Ubuntu desprovisionada com o Nginx instalado.
 
 ![Após criar a imagem do Packer, você terá uma imagem](./media/create-vm-scaleset-network-disks-using-packer-hcl/packerimagecreated.png)
 
 > [!NOTE]
-> Para os fins deste tutorial, na imagem do Packer, um comando é executado para instalar o Nginx. Também é possível executar seu próprio script durante a criação.
+> Para os fins deste artigo, na imagem do Packer, um comando é executado para instalar o Nginx. Também é possível executar seu próprio script durante a criação.
 
 ## <a name="edit-the-infrastructure-to-add-the-virtual-machine-scale-set"></a>Editar a infraestrutura para adicionar o conjunto de dimensionamento de máquinas virtuais
 
@@ -442,7 +442,7 @@ Depois que a implantação for concluída, o conteúdo do grupo de recursos ser�
 
 ## <a name="clean-up-the-environment"></a>Limpar o ambiente
 
-Os comandos a seguir excluem todos os recursos criados neste tutorial:
+Os seguintes comandos excluem todos os recursos criados neste artigo:
 
 ```bash
 terraform destroy

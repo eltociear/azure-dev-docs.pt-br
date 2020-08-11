@@ -1,20 +1,20 @@
 ---
-title: Tutorial - Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
+title: Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
 description: Saiba como usar o Terraform para configurar e criar uma versão de um conjunto de dimensionamento de máquinas virtuais do Azure.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 11/07/2019
-ms.openlocfilehash: 057fbec811c842b27823395735186120612bc6c5
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 75481c04038b13d81fa273e53bd1950c84fa5053
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334401"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478496"
 ---
-# <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>Tutorial: Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
+# <a name="create-an-azure-virtual-machine-scale-set-using-terraform"></a>Criar um conjunto de dimensionamento de máquinas virtuais do Azure usando o Terraform
 
 [Os conjuntos de dimensionamento de máquinas virtuais do Azure](/azure/virtual-machine-scale-sets) permitem configurar VMs idênticas. O número de instâncias de VM pode ser ajustado com base na demanda ou em uma agenda. Para obter mais informações, consulte [Dimensionar automaticamente um conjunto de dimensionamento de máquinas virtuais no portal do Azure](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-portal).
 
-Neste tutorial, você aprenderá como:
+Neste artigo, você aprenderá como:
 
 > [!div class="checklist"]
 > * Configurar uma implantação do Terraform
@@ -512,7 +512,7 @@ Depois que a implantação for concluída, o conteúdo do grupo de recursos ser�
 
 ## <a name="environment-cleanup"></a>Limpeza do ambiente
 
-Para excluir os recursos do Terraform que foram criados neste tutorial, digite o comando a seguir no Cloud Shell:
+Para excluir os recursos do Terraform que foram criados neste artigo, insira o seguinte comando no Cloud Shell:
 
 ```bash
 terraform destroy

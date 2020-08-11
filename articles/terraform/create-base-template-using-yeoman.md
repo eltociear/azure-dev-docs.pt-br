@@ -1,18 +1,18 @@
 ---
-title: Tutorial – Criar um modelo de base do Terraform no Azure usando o Yeoman
+title: Criar um modelo de base do Terraform no Azure usando o Yeoman
 description: Saiba como criar um modelo de base do Terraform no Azure usando o Yeoman.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 05/25/2020
-ms.openlocfilehash: 8e9c4444d95f052fc5872565b316ec15e033be82
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: e43c28232009f3dec274ad2c1749d9ab5d88957b
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334461"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478526"
 ---
-# <a name="tutorial-create-a-terraform-base-template-in-azure-using-yeoman"></a>Tutorial: Criar um modelo de base do Terraform no Azure usando o Yeoman
+# <a name="create-a-terraform-base-template-in-azure-using-yeoman"></a>Criar um modelo de base do Terraform no Azure usando o Yeoman
 
-Neste tutorial, você aprenderá a usar a combinação de [Terraform](/azure/terraform/) e de [Yeoman](https://yeoman.io/). Terraform é uma ferramenta para a criação de infraestrutura no Azure. O Yeoman facilita a criação de módulos do Terraform.
+Neste artigo, você aprenderá a usar a combinação de [Terraform](/azure/terraform/) e [Yeoman](https://yeoman.io/). Terraform é uma ferramenta para a criação de infraestrutura no Azure. O Yeoman facilita a criação de módulos do Terraform.
 
 Neste artigo, você aprende a realizar as seguintes tarefas:
 > [!div class="checklist"]
@@ -32,7 +32,7 @@ Neste artigo, você aprende a realizar as seguintes tarefas:
 - **Linguagem de programação Go**: [Instale o Go](https://golang.org/) como casos de teste gerados pelo Yeoman que são o código que usa a linguagem Go.
 
 >[!NOTE]
->A maioria dos procedimentos neste tutorial envolve interface de linha de comando. As etapas descritas se aplicam a todos os sistemas operacionais e as ferramentas de linha de comando. Nos exemplos, o PowerShell foi escolhido para o ambiente loca e Git Bash para o ambiente do cloud shell.
+>A maioria dos procedimentos deste artigo envolve interface de linha de comando. As etapas descritas se aplicam a todos os sistemas operacionais e as ferramentas de linha de comando. Nos exemplos, o PowerShell foi escolhido para o ambiente loca e Git Bash para o ambiente do cloud shell.
 
 ## <a name="prepare-your-environment"></a>Prepare o seu ambiente
 

@@ -1,18 +1,18 @@
 ---
-title: Tutorial – Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
+title: Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 description: Saiba como usar o Terraform para implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 04/26/2020
-ms.openlocfilehash: d0a175d3b465de640c151bd2b8ce339f0b5ade5b
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 4534de7d57b86adefee36f5f6c0f455126a033c3
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334361"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478596"
 ---
-# <a name="tutorial-deploy-an-azure-cosmos-db-to-azure-container-instances"></a>Tutorial: Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
+# <a name="deploy-an-azure-cosmos-db-to-azure-container-instances"></a>Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 
-Neste tutorial, você cria recursos do Azure usando o Terraform. As etapas neste artigo orientam você na criação dos seguintes recursos:
+Neste artigo, você cria recursos do Azure usando o Terraform. As etapas neste artigo orientam você na criação dos seguintes recursos:
 
 > [!div class="checklist"]
 > * Instância do Azure Cosmos DB
@@ -170,7 +170,7 @@ Para testar o aplicativo, navegue até o FQDN da instância de contêiner. Você
 
 Quando não forem mais necessários, exclua os recursos criados neste artigo.
 
-Execute o comando [terraform destroy](https://www.terraform.io/docs/commands/destroy.html) para remover os recursos do Azure criados neste tutorial:
+Execute o comando [terraform destroy](https://www.terraform.io/docs/commands/destroy.html) para remover os recursos do Azure criados neste artigo:
 
 ```bash
 terraform destroy -auto-approve

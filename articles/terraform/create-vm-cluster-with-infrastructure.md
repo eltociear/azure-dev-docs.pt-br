@@ -1,19 +1,19 @@
 ---
-title: Tutorial – Criar um cluster de VM do Azure com o Terraform e HCL
+title: Criar um cluster de VM do Azure com o Terraform e HCL
 description: Saiba como usar o Terraform e o HCL para criar um cluster de máquina virtual do Linux com um balanceador de carga no Azure.
 keywords: azure devops terraform vm máquina virtual cluster
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: 7f19d28270f911cac7bc96a9159f1b927ceb0235
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: f970bdd0f3d37d32cae9e556094c199cfb82df2e
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170472"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478478"
 ---
-# <a name="tutorial-create-an-azure-vm-cluster-with-terraform-and-hcl"></a>Tutorial: Criar um cluster de VM do Azure com o Terraform e HCL
+# <a name="create-an-azure-vm-cluster-with-terraform-and-hcl"></a>Criar um cluster de VM do Azure com o Terraform e HCL
 
-Neste tutorial, você vê como criar um pequeno cluster de computação usando [HCL](https://www.terraform.io/docs/configuration/syntax.html). 
+Neste artigo, você confere como criar um pequeno cluster de cálculo usando [HCL](https://www.terraform.io/docs/configuration/syntax.html). 
 
 Você aprenderá a realizar as seguintes tarefas:
 
@@ -236,7 +236,7 @@ Terraform determina as ações necessárias para atingir o estado especificado n
 
 ## <a name="4-apply-the-terraform-execution-plan"></a>4. Aplicar o plano de execução Terraform
 
-A etapa final deste tutorial é usar o [comando de aplicar terraform](https://www.terraform.io/docs/commands/apply.html) para aplicar o conjunto de ações geradas pelo comando `terraform plan`.
+A etapa final deste artigo é usar o [comando terraform apply](https://www.terraform.io/docs/commands/apply.html) para aplicar o conjunto de ações geradas pelo comando `terraform plan`.
 
 Se você deseja aplicar o plano de execução mais recente, execute o seguinte comando:
 

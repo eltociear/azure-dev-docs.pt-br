@@ -4,12 +4,13 @@ description: Saiba como usar a CLI do Azure em um pipeline de implantação e in
 keywords: jenkins, azure, devops, azure sping cloud, azure cli
 ms.topic: tutorial
 ms.date: 01/07/2020
-ms.openlocfilehash: c9341ef89e43f14111b6e656daebadcd4790322d
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.custom: devx-track-azurecli
+ms.openlocfilehash: 0135dbfa67f1de2b0602ae06b7ab970c2b560d59
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861209"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478306"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Tutorial: Implantar aplicativos no Azure Spring Cloud usando o Jenkins e a CLI do Azure
 
@@ -191,7 +192,7 @@ O pipeline de exemplo usa o Maven para build e a CLI do Az para implantação na
 ## <a name="create-a-jenkinsfile"></a>Criar um Jenkinsfile
 1. No próprio repositório (https://github.com/&lt ;sua ID do GitHub&gt; /piggymetrics), crie um **Jenkinsfile** na raiz.
 
-2. Atualize o arquivo conforme mostrado a seguir. Substitua os valores de **\<nome do grupo de recursos>** e **\<nome do serviço>** . Substitua **azure_service_principal** pela ID correta se você usar outro valor ao adicionar a credencial no Jenkins. 
+2. Atualize o arquivo conforme mostrado a seguir. Verifique se você substituiu os valores de **\<resource group name>** e **\<service name>** . Substitua **azure_service_principal** pela ID correta se você usar outro valor ao adicionar a credencial no Jenkins. 
 
    ```groovy
        node {

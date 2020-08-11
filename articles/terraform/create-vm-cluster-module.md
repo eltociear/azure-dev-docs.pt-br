@@ -1,19 +1,19 @@
 ---
-title: Tutorial – Criar um cluster de VM do Azure com o Terraform usando o Registro do módulo
+title: Criar um cluster de VM do Azure com o Terraform usando o Registro do módulo
 description: Saiba como usar os módulos do Terraform para criar um cluster de máquina virtual do Windows no Azure.
 keywords: azure devops terraform vm virtual machine cluster module registry
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: ad318237dcefd6586211c45fb79e51baa05549c4
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 771f8a1ce86aa36f7dfa9cf3f97f50e41ca23efa
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334381"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478446"
 ---
-# <a name="tutorial-create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Tutorial: Criar um cluster de VM do Azure com o Terraform usando o Registro do módulo
+# <a name="create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Criar um cluster de VM do Azure com o Terraform usando o Registro do módulo
 
-Este artigo o orienta você a criar um pequeno cluster de VM com o [módulo de computação do Azure](https://registry.terraform.io/modules/Azure/compute/azurerm/1.0.2) do Terraform. Neste tutorial, você aprenderá a: 
+Este artigo o orienta você a criar um pequeno cluster de VM com o [módulo de computação do Azure](https://registry.terraform.io/modules/Azure/compute/azurerm/1.0.2) do Terraform. Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
 > * Configurar a autenticação com o Azure
@@ -30,7 +30,7 @@ Este artigo o orienta você a criar um pequeno cluster de VM com o [módulo de c
 ## <a name="set-up-authentication-with-azure"></a>Configurar a autenticação com o Azure
 
 > [!TIP]
-> Se você [usar variáveis de ambiente do Terraform](get-started-cloud-shell.md) ou executar este tutorial no [Azure Cloud Shell](/azure/cloud-shell/overview), ignore esta etapa.
+> Se você [usar as variáveis de ambiente do Terraform](get-started-cloud-shell.md) ou executar este exemplo no [Azure Cloud Shell](/azure/cloud-shell/overview), poderá ignorar esta etapa.
 
  Examine [Install Terraform and configure access to Azure](get-started-cloud-shell.md) (Instalar o Terraform e configurar o acesso ao Azure) para criar uma entidade de serviço do Azure. Use essa entidade de serviço para popular um novo arquivo `azureProviderAndCreds.tf` em um diretório vazio com o código a seguir:
 

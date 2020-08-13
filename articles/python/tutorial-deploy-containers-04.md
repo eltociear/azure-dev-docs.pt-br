@@ -3,13 +3,13 @@ title: 'Etapa 4: Transmitir logs do Serviço de Aplicativo do Azure para um cont
 description: 'Tutorial, parte 4: exibição de logs do Serviço de Aplicativo do Azure para monitorar seu comportamento.'
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.custom: seo-python-october2019
-ms.openlocfilehash: b6c8d85ca74359863aca5b4e83cf96107e5a8e88
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: aeaaafbb271689babd03c2ccc3216703c3580ebc
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441411"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983498"
 ---
 # <a name="4-stream-logs-from-azure-app-service-for-a-container"></a>4: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner
 

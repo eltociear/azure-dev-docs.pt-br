@@ -3,13 +3,13 @@ title: 'Etapa 2: Implantar uma imagem de contêiner no Serviço de Aplicativo do
 description: Etapa 2 do tutorial, implantando a imagem real do Docker no Serviço de Aplicativo do Azure de um registro de contêiner.
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 8005ba428d99051d9b5b86ed4f5222c1cd9ba673
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 1a8afac614f930e3d26424d5d776ff5d97019324
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441341"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983528"
 ---
 # <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure
 

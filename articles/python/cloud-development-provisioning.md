@@ -3,11 +3,13 @@ title: Provisionamento, acesso e gerenciamento de recursos no Azure
 description: Uma visão geral dos métodos usados para trabalhar com recursos do Azure, incluindo o portal do Microsoft Azure, a CLI do Azure e as bibliotecas do Azure (SDK).
 ms.date: 05/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: bc2fb2138c5ea5cf5438f2d892483b094e78eb8d
-ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
+ms.custom: devx-track-python
+ms.openlocfilehash: 457970eb359be9f10c6269e1ea98efec76612009
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84942415"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983208"
 ---
 # <a name="provisioning-accessing-and-managing-resources-on-azure"></a>Provisionamento, acesso e gerenciamento de recursos no Azure
 

@@ -3,12 +3,13 @@ title: Como autenticar aplicativos Python com os serviços do Azure
 description: Como adquirir os objetos de credencial necessários para autenticar um aplicativo Python com os serviços do Azure usando as bibliotecas do Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 1694f85b2ad41a12865bb3d367b1b8498ab474bb
-ms.sourcegitcommit: 04ee2325e3efd9b7797102b4cd9d5db009c38a42
+ms.custom: devx-track-python
+ms.openlocfilehash: 08636d4a9b8b0b93b6e448b919a14cbfc3ae2a96
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86945814"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982668"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Como autenticar aplicativos Python com os serviços do Azure
 

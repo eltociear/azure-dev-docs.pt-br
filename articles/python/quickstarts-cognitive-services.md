@@ -3,12 +3,13 @@ title: Inícios rápidos para serviços cognitivos de IA para aplicativos Python
 description: Índice de materiais de introdução na documentação do Azure para serviços cognitivos de IA para aplicativos Python.
 ms.date: 05/28/2020
 ms.topic: conceptual
-ms.openlocfilehash: 7192826524f647560f502fa0d01d136c0de945d1
-ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
+ms.custom: devx-track-python
+ms.openlocfilehash: 531dfcca27b7dff29f97b6b9ee58e9d330ac9696
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202814"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983048"
 ---
 # <a name="ai-service-for-python-apps-on-azure"></a>Serviço IA para aplicativos Python no Azure
 

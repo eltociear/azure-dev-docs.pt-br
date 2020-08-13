@@ -3,13 +3,13 @@ title: 'Etapa 3: Reimplantar um contêiner no Serviço de Aplicativo do Azure ap
 description: Etapa 3 do tutorial, as etapas simples para recompilar e reimplantar uma imagem de contêiner.
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.custom: seo-python-october2019
-ms.openlocfilehash: f0e6eb808e25f3bb48eb2c849310747945e0d7f9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: c23676dd0d8b3741881f38d1a3bbee367f7d6c58
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441861"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982878"
 ---
 # <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações
 

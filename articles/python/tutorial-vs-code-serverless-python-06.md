@@ -3,13 +3,13 @@ title: 'Etapa 6: Adicionar uma segunda função do Python ao Azure Functions com
 description: Etapa 6 do tutorial, expandindo um projeto do Azure Functions adicionando uma segunda função.
 ms.topic: conceptual
 ms.date: 05/19/2020
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 9d4ce18e2a46f86b221acaee096a7abfa1674e70
-ms.sourcegitcommit: f3699ec29f821e00700c4cc27c1d6a975018d195
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 6dbdd722d1167e703119b8709ec6b44eadc3dcec
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481147"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982788"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Adicionar uma segunda função de Python ao Azure Functions
 

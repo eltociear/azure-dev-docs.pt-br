@@ -2,13 +2,14 @@
 title: Ferramentas do Azure para desenvolvedores de Python
 description: Integrações do IDE e interfaces de linha de comando para desenvolvedores de Python trabalhando no Azure.
 ms.topic: conceptual
-ms.date: 02/19/2020
-ms.openlocfilehash: 04616841d9e345a29209814f7a32576b54fc25da
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/06/2020
+ms.custom: devx-track-python
+ms.openlocfilehash: cd81a4dcceb4d13630fd5cad60162729028eb91e
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441621"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982568"
 ---
 # <a name="azure-tools-for-python-developers"></a>Ferramentas do Azure para desenvolvedores de Python
 
@@ -41,4 +42,3 @@ Assim como a CLI do Azure, o Azure PowerShell conta com comandos do PowerShell p
 O Visual Studio no Windows oferece suporte de software livre para a linguagem Python com o desenvolvimento de Python e as cargas de trabalho de Ciência de Dados (Visual Studio 2017 e posteriores) e a extensão gratuita Ferramentas Python para Visual Studio (Visual Studio 2015 e anterior). O Visual Studio é mais comumente usado por desenvolvedores que trabalham com Python e C++, pois oferece a melhor compatibilidade com o desenvolvimento e a depuração em várias linguagens.
 
 [Instalar o suporte de Python no Visual Studio](https://docs.microsoft.com/visualstudio/python/installation)
-

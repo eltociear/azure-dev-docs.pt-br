@@ -3,11 +3,13 @@ title: Obtenha as bibliotecas do Azure (SDK) para Python
 description: Visão geral dos recursos e das funcionalidades das bibliotecas do Azure para Python que ajudam os desenvolvedores a serem mais produtivos ao provisionar, usar e gerenciar recursos do Azure.
 ms.date: 05/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: ffa626db0518967e2659eeb5b89ece4bc15c1ce2
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.custom: devx-track-python
+ms.openlocfilehash: dce4485a65da75d0918805ef55fafe71d55ce0a6
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069389"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983278"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Obtenha as bibliotecas do Azure (SDK) para Python
 

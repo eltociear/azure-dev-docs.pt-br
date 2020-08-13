@@ -3,12 +3,13 @@ title: Introdução à hospedagem de aplicativos Python no Azure
 description: Índice de materiais de introdução na documentação do Azure para hospedagem de código de aplicativo Python.
 ms.date: 05/28/2020
 ms.topic: conceptual
-ms.openlocfilehash: f4e880901b057b7ad4c958c4acf3239d2ef79db5
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.custom: devx-track-python
+ms.openlocfilehash: 1fa1f47355c6dac81d94f2a10f92b65c471be432
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256241"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147347"
 ---
 # <a name="hosting-python-apps-on-azure"></a>Hospedagem de aplicativos Python no Azure
 
@@ -21,8 +22,8 @@ Os artigos a seguir ajudam você com uma introdução a várias opções de hosp
   - [Conectar o Azure Functions ao Armazenamento do Microsoft Azure usando o Visual Studio Code](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots=programming-language-python)
   
 - **Hospedagem e monitoramento de aplicativo Web**:
-  - [Criar um aplicativo Python no Serviço de Aplicativo do Azure no Linux](/azure/app-service/containers/quickstart-python)
-  - [Configurar um aplicativo Python do Linux para o Serviço de Aplicativo do Azure](/azure/app-service/containers/how-to-configure-python)
+  - [Criar um aplicativo Python no Serviço de Aplicativo do Azure no Linux](/azure/app-service/quickstart-python)
+  - [Configurar um aplicativo Python do Linux para o Serviço de Aplicativo do Azure](/azure/app-service/configure-language-python)
   - [Configurar o Azure Monitor para seu aplicativo Python](/azure/azure-monitor/app/opencensus-python)
 
 - **Hospedagem de contêiner**:

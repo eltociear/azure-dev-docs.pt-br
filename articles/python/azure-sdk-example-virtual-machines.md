@@ -3,11 +3,13 @@ title: Provisionar uma máquina virtual usando as bibliotecas do Azure para Pyth
 description: Como provisionar uma máquina virtual do Azure usando o Python e as bibliotecas de gerenciamento do SDK do Azure.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 4b11caa66eb297225b4b61000575a8a9c48edb19
-ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
+ms.custom: devx-track-python
+ms.openlocfilehash: a6595b60a70ab3b6ee36bf95b4557cb37c496188
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716084"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983488"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Exemplo: Usar as bibliotecas do Azure para provisionar uma máquina virtual
 

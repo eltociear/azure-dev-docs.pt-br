@@ -4,17 +4,17 @@ description: Provisione um aplicativo Web e um banco de dados PostgreSQL no Azur
 ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
-ms.custom: tracking-python
-ms.openlocfilehash: f3c667ab720a3e8c82b59dc439b8033697b4fc2a
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.custom: devx-track-python
+ms.openlocfilehash: 0e9785871eba8866b5d225bb9ac1339becc172a3
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810589"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147387"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Tutorial: Implantar um aplicativo Web Django com PostgreSQL usando o portal do Azure
 
-Usando o portal do Azure, é possível implantar um aplicativo Web [Django](https://www.djangoproject.com/), escrito em Python, controlado por dados no [Serviço de Aplicativo do Azure](/azure/app-service/containers/app-service-linux-intro) e conectá-lo a um [Banco de Dados do Azure para PostgreSQL](/azure/postgresql/). Você pode começar com um tipo de preço gratuito que pode ser escalado verticalmente depois.
+Usando o portal do Azure, é possível implantar um aplicativo Web [Django](https://www.djangoproject.com/), escrito em Python, controlado por dados no [Serviço de Aplicativo do Azure](/azure/app-service/overview#app-service-on-linux) e conectá-lo a um [Banco de Dados do Azure para PostgreSQL](/azure/postgresql/). Você pode começar com um tipo de preço gratuito que pode ser escalado verticalmente depois.
 
 O código do aplicativo Web, nesse caso, vem de um repositório GitHub, e você configura o aplicativo Web para implantação contínua do GitHub. Uma vez configurado, você pode fazer mais desenvolvimento no computador local e confirmar as alterações no repositório. O aplicativo Web no Azure implanta essas alterações automaticamente.
 
@@ -27,7 +27,7 @@ Neste tutorial, você usa o portal do Azure para concluir as seguintes tarefas:
 > - Exibir logs de diagnóstico
 > - Gerenciar o aplicativo Web no portal do Azure
 
-Você também pode usar a [versão baseada em CLI do Azure deste tutorial](/azure/app-service/containers/tutorial-python-postgresql-app?tabs=bash%2Cclone).
+Você também pode usar a [versão baseada em CLI do Azure deste tutorial](/azure/app-service/tutorial-python-postgresql-app).
 
 ## <a name="fork-the-sample-repository"></a>Bifurcar a amostra de repositório
 
@@ -137,7 +137,7 @@ Nesta seção, você se conecta ao servidor de banco de dados no Azure Cloud She
 
 ## <a name="connect-the-database"></a>Conectar o banco de dados
 
-Nesta seção, você cria as configurações que o aplicativo Web precisa para se conectar ao banco de dados do `pollsdb`. Essas configurações aparecem no código do aplicativo como variáveis de ambiente. (Para obter mais informações, confira [Acessar variáveis do ambiente](/azure/app-service/containers/how-to-configure-python#access-environment-variables).)
+Nesta seção, você cria as configurações que o aplicativo Web precisa para se conectar ao banco de dados do `pollsdb`. Essas configurações aparecem no código do aplicativo como variáveis de ambiente. (Para obter mais informações, confira [Acessar variáveis do ambiente](/azure/app-service/configure-language-python#access-environment-variables).)
 
 1. Alterne para a guia ou janela do navegador para o aplicativo Web que você criou em uma seção anterior.
 
@@ -182,7 +182,7 @@ Com as configurações de banco de dados e conexão em vigor, agora você pode c
 
 1. Selecione **Continuar** para selecionar o repositório e, em seguida, selecione **Concluir**. O Azure deve implantar o código em alguns segundos e iniciar o aplicativo.
 
-    O Serviço de Aplicativo detecta um projeto Django procurando um arquivo *wsgi.py* em cada subpasta. Quando o Serviço de Aplicativo encontra o arquivo, ele carrega o aplicativo Web Django. Para obter mais informações, confira [Configurar imagem interna do Python](/azure/app-service/containers/how-to-configure-python).
+    O Serviço de Aplicativo detecta um projeto Django procurando um arquivo *wsgi.py* em cada subpasta. Quando o Serviço de Aplicativo encontra o arquivo, ele carrega o aplicativo Web Django. Para obter mais informações, confira [Configurar imagem interna do Python](/azure/app-service/configure-language-python).
 
 [Está com problemas? Fale conosco.](https://aka.ms/DjangoPortalTutorialHelp)
 
@@ -279,4 +279,4 @@ Você pode deixar o aplicativo e o banco de dados em execução desde que queira
 Saiba como o Serviço de Aplicativo executa um aplicativo Python:
 
 > [!div class="nextstepaction"]
-> [Configurar um aplicativo Python](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python)
+> [Configurar um aplicativo Python](/azure/app-service/configure-language-python)

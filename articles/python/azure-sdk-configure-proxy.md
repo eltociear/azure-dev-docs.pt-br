@@ -3,11 +3,13 @@ title: Configurar proxies ao usar bibliotecas do Azure
 description: Use variáveis de ambiente HTTP[S]_PROXY para definir um proxy para um script ou aplicativo inteiro ou use argumentos nomeados opcionais para construtores de cliente ou métodos de operação.
 ms.date: 06/16/2020
 ms.topic: conceptual
-ms.openlocfilehash: c24ad2f5cd58e6cee9b9f61cb216e949ddd446ef
-ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
+ms.custom: devx-track-python
+ms.openlocfilehash: 86eaa5b8dc0ddfb529643a5c015938344582e62b
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947491"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982698"
 ---
 # <a name="how-to-configure-proxies-for-the-azure-libraries"></a>Como configurar proxies para as bibliotecas do Azure
 

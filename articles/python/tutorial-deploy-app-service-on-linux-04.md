@@ -3,13 +3,13 @@ title: 'Etapa 4: Configurar um arquivo de inicialização personalizado para apl
 description: Etapa 4 do tutorial, instruindo o Serviço de Aplicativo como iniciar o aplicativo Web, incluindo instruções específicas para Django, Flask e outras estruturas.
 ms.topic: conceptual
 ms.date: 05/19/2020
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 1e724fa7d35c1b3488dbe6738a4840e20bbfbf96
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 5de5f7f52fbf8c88bf05c7cb300952aee81a8439
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256441"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147377"
 ---
 # <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Configurar um arquivo de inicialização personalizado para aplicativos Python no Serviço de Aplicativo do Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "84256441"
 
 Este artigo mostra que você precisa configurar um arquivo de inicialização personalizado para um aplicativo Python em um Serviço de Aplicativo do Azure.
 
-Dependendo de como você estruturou seu aplicativo, talvez seja necessário criar um arquivo de comando de inicialização personalizado para ele, conforme descrito em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python) nos documentos do Azure.
+Dependendo de como você estruturou seu aplicativo, talvez seja necessário criar um arquivo de comando de inicialização personalizado para ele, conforme descrito em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](/azure/app-service/configure-language-python) nos documentos do Azure.
 
 Os casos de uso específicos de um comando de inicialização personalizado são os seguintes:
 

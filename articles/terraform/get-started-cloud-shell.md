@@ -3,19 +3,29 @@ title: Início Rápido – Introdução ao Terraform usando o Azure Cloud Shell
 description: Nesse início rápido, você aprende a como instalar e configurar o Terraform para criar recursos do Azure.
 keywords: azure devops terraform install configure cloud shell init plan apply execution portal login rbac service principal automated script
 ms.topic: quickstart
-ms.date: 07/26/2020
-ms.openlocfilehash: dbe290fbb7909d116d2ff0cec8e01a3b145ded30
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.date: 08/08/2020
+ms.openlocfilehash: 736c805b8dd8c95d1950537b754059cca9fc5712
+ms.sourcegitcommit: 6a8485d659d6239569c4e3ecee12f924c437b235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478586"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88026138"
 ---
 # <a name="quickstart-get-started-with-terraform-using-azure-cloud-shell"></a>Início Rápido: Introdução ao Terraform usando o Azure Cloud Shell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
 Este artigo descreve como começar a usar o [Terraform no Azure](https://www.terraform.io/docs/providers/azurerm/index.html).
+
+Neste artigo, você aprenderá como:
+> [!div class="checklist"]
+> * Autenticar-se no Azure usando `az login`
+> * Criar uma entidade de serviço do Azure usando a CLI do Azure
+> * Autenticar-se no Azure usando uma entidade de serviço
+> * Definir a assinatura do Azure atual – a ser usado se você tiver várias assinaturas
+> * Escrever um script Terraform para criar um grupo de recursos do Azure
+> * Criar e aplicar um plano de execução Terraform
+> * Usar o sinalizador `terraform plan -destroy` para reverter um plano de execução
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
@@ -166,7 +176,7 @@ Nesta seção, você aprenderá a criar um arquivo de configuração do Terrafor
 
 ## <a name="create-and-apply-a-terraform-execution-plan"></a>Criar e aplicar um plano de execução Terraform
 
-Depois que você criar os arquivos de configuração, esta seção explicará como criar um *plano de execução* e aplicá-lo à sua infraestrutura de nuvem.
+Nesta seção, você cria um *plano de execução* e o aplica à sua infraestrutura de nuvem.
 
 1. Inicialize a implantação do Terraform com [terraform init](https://www.terraform.io/docs/commands/init.html). Esta etapa faz o download dos módulos do Azure necessários para criar um grupo de recursos do Azure.
 
@@ -174,27 +184,24 @@ Depois que você criar os arquivos de configuração, esta seção explicará co
     terraform init
     ```
 
-1. Execute o comando [terraform plan](https://www.terraform.io/docs/commands/plan.html) para criar um plano de execução e visualizar os resultados.
+1. Execute [plano do Terraform](https://www.terraform.io/docs/commands/plan.html) para criar um plano de execução do seu arquivo de configuração do Terraform.
 
     ```bash
-    terraform plan
+    terraform plan -out QuickstartTerraformTest.tfplan
     ```
 
-    **Observações**:
+    **Observações:**
+    - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração. Esse padrão permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
+    - O parâmetro opcional `-out` permite que você especifique um arquivo de saída para o plano. Usar o parâmetro `-out` garante que o plano que você examinou seja exatamente o que é aplicado.
+    - Para ler mais sobre a persistência de planos de execução e segurança, confira a [seção de aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
 
-    - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração.
-    - O comando `terraform plan` permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
-    - O parâmetro opcional `-out` permite que você especifique um arquivo de saída para o plano. Para obter mais informações sobre como usar o parâmetro `-out`, consulte a seção [Manter planos de execução para implantação posterior](#persist-an-execution-plan-for-later-deployment).
-
-1. Aplique o plano de execução com [terraform apply](https://www.terraform.io/docs/commands/apply.html).
+1. Execute a [aplicação do Terraform](https://www.terraform.io/docs/commands/apply.html) para aplicar o plano de execução.
 
     ```bash
-    terraform apply
+    terraform apply QuickstartTerraformTest.tfplan
     ```
 
-1. O Terraform mostra o que acontecerá se você aplicar o plano de execução e exige que você confirme executá-lo. Confirme o comando inserindo `yes` e pressionando a tecla **Enter**.
-
-1. Depois de confirmar a execução do plano, teste se o grupo de recursos foi criado com êxito usando [az group show](/cli/azure/group?#az-group-show).
+1. Depois que o plano de execução for aplicado, você poderá testar se o grupo de recursos foi criado com êxito usando [az group show](/cli/azure/group?#az-group-show).
 
     ```azurecli
     az group show -n "QuickstartTerraformTest-rg"
@@ -204,39 +211,6 @@ Depois que você criar os arquivos de configuração, esta seção explicará co
 
     - Se ele for bem-sucedido, `az group show` exibirá várias propriedades do grupo de recursos recém-criado.
 
-## <a name="persist-an-execution-plan-for-later-deployment"></a>Manter um plano de execução para implantação posterior
-
-Na seção anterior, você viu como executar o [terraform plan](https://www.terraform.io/docs/commands/plan.html) para criar um plano de execução. Em seguida, você viu que usar o [terraform apply](https://www.terraform.io/docs/commands/apply.html) aplica esse plano. Esse padrão funciona bem quando as etapas são interativas e sequenciais.
-
-Para cenários mais complexos, você pode manter o plano de execução para um arquivo. Mais tarde, ou até de um computador diferente, você poderá aplicar esse plano de execução.
-
-Se você usa esse recurso, é recomendável que você leia o artigo [Executar Terraform em automação](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation).
-
-As etapas a seguir ilustram o padrão básico para usar esse recurso:
-
-1. Execute [terraform init](https://www.terraform.io/docs/commands/init.html).
-
-    ```bash
-    terraform init
-    ```
-
-1. Execute `terraform plan` com o parâmetro `-out`.
-
-    ```bash
-    terraform plan -out QuickstartTerraformTest.tfplan
-    ```
-
-1. Execute `terraform apply`, especificando o nome do arquivo da etapa anterior.
-
-    ```bash
-    terraform apply QuickstartTerraformTest.tfplan
-    ```
-
-    **Observações**:
-    
-    - Para habilitar o uso com automação, a execução de `terraform apply <filename>` não exige confirmação.
-    - Se você decidir usar esse recurso, leia a [seção do aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
-    
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
 Quando não forem mais necessários, exclua os recursos criados neste artigo.
@@ -248,9 +222,9 @@ Quando não forem mais necessários, exclua os recursos criados neste artigo.
     ```
 
     **Observações**:
-    - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração. Isso permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
+    - O comando `terraform plan` cria um plano de execução, mas não o executa. Em vez disso, ele determina quais ações são necessárias para criar a configuração especificada em seus arquivos de configuração. Esse padrão permite que você verifique se o plano de execução corresponde às suas expectativas antes de fazer qualquer alteração nos recursos reais.
     - O parâmetro `-destroy` gera um plano para destruir os recursos.
-    - O parâmetro opcional `-out` permite que você especifique um arquivo de saída para o plano. O parâmetro `-out` sempre deve ser usado, pois ele garante que o plano que você examinou seja exatamente o que é aplicado.
+    - O parâmetro opcional `-out` permite que você especifique um arquivo de saída para o plano. Usar o parâmetro `-out` garante que o plano que você examinou seja exatamente o que é aplicado.
     - Para ler mais sobre a persistência de planos de execução e segurança, confira a [seção de aviso de segurança](https://www.terraform.io/docs/commands/plan.html#security-warning).
 
 1. Execute a [aplicação do Terraform](https://www.terraform.io/docs/commands/apply.html) para aplicar o plano de execução.

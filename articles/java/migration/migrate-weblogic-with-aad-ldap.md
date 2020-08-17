@@ -3,14 +3,14 @@ title: Autorização e autenticação do usuário final com Azure Active Directo
 description: Este guia descreve como configurar o Oracle WebLogic Server para se conectar ao Azure Active Directory Domain Services via LDAP
 author: edburns
 ms.author: edburns
-ms.topic: conceptual
-ms.date: 07/09/2020
-ms.openlocfilehash: 0f3b8f7e2535bc91629f056cf59bc0d2658aba19
-ms.sourcegitcommit: 1f78e54deb85c6063b887286a13a967d1d186b50
+ms.topic: tutorial
+ms.date: 08/10/2020
+ms.openlocfilehash: b828fc2bc41b0e4e557472e7efd00498e68933db
+ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87118435"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052213"
 ---
 # <a name="end-user-authorization-and-authentication-for-migrating-java-apps-on-weblogic-server-to-azure"></a>Autorização e autenticação do usuário final para migração de aplicativos Java no WebLogic Server para o Azure
 
@@ -35,7 +35,7 @@ Este guia não ajuda você a reconfigurar uma implantação existente do Azure A
 ## <a name="prerequisites"></a>Pré-requisitos
 
 * Uma assinatura ativa do Azure.
-  * Caso não tenha uma assinatura do Azure, [crie uma conta](https://azure.microsoft.com/free/).
+  * Se você não tiver uma assinatura do Azure, [crie uma conta gratuita](https://azure.microsoft.com/free/).
 * A capacidade de implantar um dos Aplicativos Azure do WLS listados em [Aplicativos Azure do Oracle WebLogic Server](/azure/virtual-machines/workloads/oracle/oracle-weblogic).
 
 ## <a name="migration-context"></a>Contexto de migração
@@ -46,6 +46,7 @@ Aqui estão alguns itens a serem considerados sobre a migração de instalaçõe
 * Se o cenário envolver uma floresta local do Active Directory, considere implementar uma solução de identidade híbrida com o Azure AD.  Para obter mais informações, confira a [Documentação sobre identidade híbrida](/azure/active-directory/hybrid/)
 * Se você já tiver a implantação do AD DS (Active Directory Domain Services) local, explore os caminhos de migração acessando [Comparar Active Directory Domain Services autogerenciado, Azure Active Directory e Azure Active Directory Domain Services gerenciado](/azure/active-directory-domain-services/compare-identity-solutions).
 * Se você estiver otimizando para a nuvem, este guia mostrará como começar do zero com o LDAP do Azure AD DS e o WLS.
+* Para uma pesquisa abrangente da migração do WebLogic Server para máquinas virtuais do Azure, confira [Migrar aplicativos do WebLogic Server para Máquinas Virtuais do Azure](migrate-weblogic-to-virtual-machines.md).
 
 ## <a name="azure-active-directory-configuration"></a>Configuração do Azure Active Directory
 
@@ -115,6 +116,38 @@ Não execute as etapas em [Recursos de limpeza](/azure/active-directory-domain-s
 
 Sabendo das variações acima, conclua [Configurar o LDAP Seguro para um domínio gerenciado do Azure Active Directory Domain Services](/azure/active-directory-domain-services/tutorial-configure-ldaps).  Agora podemos coletar os valores necessários para fornecer à configuração do WLS.
 
+### <a name="disable-weak-tls-v1"></a>Desabilitar a criptografia TLS v1 fraca
+
+Por padrão, o Azure AD DS (Azure Active Directory Domain Services) permite o uso da TLS v1, que é considerada fraca e não é compatível com o WebLogic Server 14 e versões posteriores. 
+
+Esta seção explica como desabilitar a criptografia TLS v1.
+
+Primeiro, obtenha a ID do recurso da instância do Serviço de Domínio do Azure que habilita o LDAP. O exemplo a seguir obtém a ID de uma instância do Serviço de Domínio do Azure chamada `aaddscontoso.com` em um grupo de recursos chamado `aadds-rg`.
+
+```azurecli
+AADDS_ID=$(az resource show --resource-group aadds-rg --resource-type "Microsoft.AAD/DomainServices" --name aaddscontoso.com --query "id" --output tsv)
+```
+
+Execute o seguinte comando para desabilitar a TLS v1:
+
+```azurecli
+az resource update --ids $AADDS_ID --set properties.domainSecuritySettings.tlsV1=Disabled
+```
+
+A saída exibirá `"tlsV1": "Disabled"` para `domainSecuritySettings`, conforme mostrado no seguinte exemplo:
+
+```text
+"domainSecuritySettings": {
+      "ntlmV1": "Enabled",
+      "syncKerberosPasswords": "Enabled",
+      "syncNtlmPasswords": "Enabled",
+      "syncOnPremPasswords": "Enabled",
+      "tlsV1": "Disabled"
+}
+```
+
+Para obter mais informações, confira [Desabilitar criptografias fracas e sincronização de hash de senha para proteger um domínio gerenciado do Azure Active Directory Domain Services](/azure/active-directory-domain-services/secure-your-domain).
+
 ## <a name="wls-configuration"></a>Configuração do WLS
 
 Esta seção ajuda você a coletar os valores de parâmetro do Azure AD DS implantados anteriormente.
@@ -149,9 +182,9 @@ Depois de implantar o WLS e configurar o LDAP usando um dos dois métodos acima,
 
 1. Visite o console de administração do WLS.
 1. No navegador esquerdo, expanda a árvore para selecionar **Realms de Segurança** -> **myrealm** -> **Provedores**.
-1. Se a integração tiver sido bem-sucedida, você encontrará o provedor do AAD, por exemplo `AzureActiveDirectoryProvider`.
+1. Se a integração tiver sido bem-sucedida, você encontrará o provedor do Azure AD, por exemplo `AzureActiveDirectoryProvider`.
 1. No navegador esquerdo, expanda a árvore para selecionar **Realms de Segurança** -> **myrealm** -> **Usuários e Grupos**.
-1. Se a integração tiver sido bem-sucedida, você encontrará usuários do provedor do AAD.
+1. Se a integração tiver sido bem-sucedida, você encontrará usuários do provedor do Azure AD.
 
 ### <a name="lock-down-and-secure-ldap-access-over-the-internet"></a>Bloquear e proteger o acesso LDAP seguro na Internet
 
@@ -163,5 +196,7 @@ Agora é hora de seguir as etapas na seção [Limpar recursos](/azure/active-dir
 
 ## <a name="next-steps"></a>Próximas etapas
 
+Explore outros aspectos da migração de aplicativos do WebLogic Server para o Azure.
+
 > [!div class="nextstepaction"]
-> [Migrar seus aplicativos WebLogic para Máquinas Virtuais do Azure](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines)
+> [Migrar aplicativos do WebLogic Server para as Máquinas Virtuais do Azure](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines)

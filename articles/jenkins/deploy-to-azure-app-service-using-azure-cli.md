@@ -3,14 +3,14 @@ title: Tutorial – Implantar o Serviço de Aplicativo do Azure com o Jenkins e 
 description: Saiba como usar a CLI do Azure para implantar um aplicativo Web do Java no Azure na pipeline do Jenkins
 keywords: jenkins, azure, devops, serviço de aplicativo, cli
 ms.topic: tutorial
-ms.date: 04/25/2020
+ms.date: 08/08/2020
 ms.custom: devx-track-azurecli
-ms.openlocfilehash: 63a5097358001e0312af13053e3d7310fe413cc7
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.openlocfilehash: b26adfa3fd4639efa5de20ffcf93f1730a992a12
+ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478336"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88162065"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Tutorial: Implantar o Serviço de Aplicativo do Azure com o Jenkins e a CLI do Azure
 
@@ -26,7 +26,7 @@ Para implantar um aplicativo Web Java no Azure, você pode usar a CLI do Azure e
 
 ## <a name="create-and-configure-jenkins-instance"></a>Criar e configurar uma instância do Jenkins
 
-Se você ainda não tiver um mestre do Jenkins, instale com o [modelo de solução do Jenkins](configure-on-linux-vm.md). Por padrão, o modelo instala o plug-in [Azure Credentials](https://plugins.jenkins.io/azure-credentials) necessário. 
+Se você ainda não tiver um mestre do Jenkins, [instale o Jenkins em uma VM do Linux](configure-on-linux-vm.md).
 
 O plug-in Credencial do Azure permite que você armazene as credenciais de entidade de serviço do Microsoft Azure no Jenkins. Na versão 1.2, adicionamos suporte para que esse pipeline do Jenkins possa obter as credenciais do Azure. 
 
@@ -46,7 +46,7 @@ sudo apt-get install -y maven
 
 Uma credencial do Azure é necessária para executar a CLI do Azure.
 
-* No painel do Jenkins, clique em **Credenciais -> Sistema ->** . Clique em **Credenciais globais (irrestrito)** .
+* No painel do Jenkins, clique em **Credenciais -> Sistema ->**. Clique em **Credenciais globais (irrestrito)**.
 * Clique em **Adicionar credenciais** para adicionar uma [entidade de serviço do Microsoft Azure](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json), preenchendo a ID da assinatura, a ID do cliente, o segredo do cliente e o Ponto de Extremidade do Token OAuth 2.0. Forneça uma ID para uso na próxima etapa.
 
 ![Adicionar Credenciais](./media/deploy-to-azure-app-service-using-azure-cli/add-credentials.png)
@@ -114,7 +114,7 @@ Quando a definição do aplicativo Web tiver pronta, a CLI do Azure mostrará in
 
 Definir a configuração de runtime Java que seu aplicativo precisa com o comando [az appservice web config update](/cli/azure/webapp/config).
 
-O comando a seguir configura o aplicativo Web para ser executado em um JDK 8 Java recente e [Apache Tomcat](https://tomcat.apache.org/) 8.0.
+O comando a seguir configura o aplicativo Web para ser executado em um JDK do Java 8 e um [Apache Tomcat](https://tomcat.apache.org/) 8.0 recentes.
 
 ```azurecli
 az webapp config set \ 
@@ -167,7 +167,7 @@ Faça o seguinte para verificar se o arquivo WAR foi implantado com êxito no ap
 
 1. abra um navegador da Web:
 
-1. Navegue até `http://&lt;app_name>.azurewebsites.net/api/calculator/ping`
+1. Navegue para `http://&lt;app_name>.azurewebsites.net/api/calculator/ping`
 
 1. Você deverá ver texto similar ao seguinte:
 

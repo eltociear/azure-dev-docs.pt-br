@@ -6,16 +6,16 @@ ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 3f3f4cd3a7714b45a68abe4d92c489581d1c1d5f
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 3b6d9847cc72f246587a36b74173521736a6cc9a
+ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379720"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052245"
 ---
-# <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Migrar seus aplicativos WebLogic para Máquinas Virtuais do Azure
+# <a name="migrate-weblogic-server-applications-to-azure-virtual-machines"></a>Migrar aplicativos do WebLogic Server para as Máquinas Virtuais do Azure
 
-Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebLogic existente para ser executado em Máquinas Virtuais do Azure.
+Este guia descreve as informações das quais você deve estar ciente quando deseja migrar um aplicativo WebLogic existente para ser executado em Máquinas Virtuais do Azure.  Para obter uma visão geral das soluções do WebLogic Server disponíveis no Azure Marketplace, confira [O que é o Oracle WebLogic Server no Azure?](/azure/virtual-machines/workloads/oracle/oracle-weblogic)
 
 ## <a name="pre-migration"></a>Pré-migração
 
@@ -29,7 +29,7 @@ Este guia e as ofertas do Azure Marketplace correspondentes são um ponto de par
 
 ### <a name="determine-whether-the-pre-built-marketplace-offers-are-a-good-starting-point"></a>Determinar se as ofertas predefinidas do Marketplace são um bom ponto de partida
 
-A Oracle e a Microsoft fizeram parceria para trazer um conjunto de modelos de solução do Azure para o Azure Marketplace e fornecer um ponto de partida sólido para migrar para o Azure. Consulte a documentação do [Middleware do Oracle Fusion](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/) para ver a lista de ofertas e escolher a que mais se aproxima da sua implantação existente. Você pode ver a lista de ofertas [na documentação da Oracle](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/select-required-oracle-weblogic-server-offer-azure-marketplace.html#GUID-187739C5-EE7A-47C6-B3BA-C0A0333DC398)
+A Oracle e a Microsoft fizeram parceria para trazer um conjunto de modelos de solução do Azure para o Azure Marketplace e fornecer um ponto de partida sólido para migrar para o Azure. Consulte a documentação do [Middleware do Oracle Fusion](https://docs.oracle.com/en/middleware/standalone/weblogic-server/wlazu/) para ver a lista de ofertas e escolher a que mais se aproxima da sua implantação existente. É possível ver a lista de ofertas no artigo de visão geral [O que é o Oracle WebLogic Server no Azure?](/azure/virtual-machines/workloads/oracle/oracle-weblogic)
 
 Se nenhuma das ofertas existentes for um bom ponto de partida, será necessário reproduzir a implantação manualmente usando recursos de Máquina Virtual do Azure. Para obter mais informações, consulte [O que é IaaS?](https://azure.microsoft.com/overview/what-is-iaas/).
 
@@ -99,7 +99,7 @@ Os sistemas de arquivos de VMs funcionam da mesma forma que os sistemas de arqui
 
 As ofertas a seguir estão disponíveis para o WebLogic em Máquinas Virtuais do Azure.
 
-Durante a implantação de uma oferta, você deverá escolher o tamanho da Máquina Virtual para seus nós do WebLogic Server. É importante considerar todos os aspectos do dimensionamento (memória, processador, disco) ao escolher o tamanho da VM. Para obter mais informações, consulte [a documentação para as ofertas](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/deploy-oracle-weblogic-server-administration-server-single-node.html) e também a [documentação do Azure para o dimensionamento de máquinas virtuais](/azure/cloud-services/cloud-services-sizes-specs)
+Durante a implantação de uma oferta, você deverá escolher o tamanho da Máquina Virtual para seus nós do WebLogic Server. É importante considerar todos os aspectos do dimensionamento (memória, processador, disco) ao escolher o tamanho da VM. Para obter mais informações, confira a [Documentação do Azure para o dimensionamento de máquinas virtuais](/azure/cloud-services/cloud-services-sizes-specs)
 
 #### <a name="weblogic-server-single-node-with-no-admin-server"></a>WebLogic Server de um único nó sem servidor de administração
 
@@ -107,7 +107,7 @@ Esta oferta cria uma única VM e instala o WebLogic nela, mas não configura dom
 
 #### <a name="weblogic-server-single-node-with-admin-server"></a>WebLogic Server de um único nó com servidor de administração
 
-Esta oferta provisiona uma única VM e instala o WebLogic Server 12.1.2.3 nela. Ele cria um domínio e inicializa o servidor de administração.
+Esta oferta provisiona uma única VM e instala o WebLogic Server nela. Ele cria um domínio e inicializa o servidor de administração.
 
 #### <a name="weblogic-server-n-node-cluster"></a>Cluster de N nós do WebLogic Server
 
@@ -119,7 +119,7 @@ Esta oferta cria um cluster dinâmico altamente disponível e escalonável de VM
 
 ### <a name="provision-the-offer"></a>Provisionar a oferta
 
-Depois de selecionar a oferta inicial, siga as instruções na [documentação das ofertas](https://wls-eng.github.io/arm-oraclelinux-wls/) para provisionar essa oferta. Lembre-se de escolher o nome de domínio que corresponda ao nome de domínio existente. Você pode até mesmo corresponder a senha de domínio com sua senha de domínio existente.
+Depois de selecionar a oferta inicial, siga as instruções na [documentação das ofertas](https://docs.oracle.com/en/middleware/standalone/weblogic-server/wlazu/) para provisionar essa oferta. Lembre-se de escolher o nome de domínio que corresponda ao nome de domínio existente. Você pode até mesmo corresponder a senha de domínio com sua senha de domínio existente.
 
 ### <a name="migrate-the-domains"></a>Migrar os domínios
 
@@ -136,6 +136,8 @@ Você deve considerar a migração de todos os repositórios de chaves SSL usado
 ### <a name="connect-the-jms-sources"></a>Conectar as fontes JMS
 
 Depois de conectar os bancos de dados, você pode configurar o JMS seguindo as instruções em [Middleware do Fusion Administrando recursos JMS para o Oracle WebLogic Server](https://docs.oracle.com/middleware/12213/wls/JMSAD/toc.htm) na documentação do WebLogic.
+
+[!INCLUDE [account-for-authentication-and-authorization](includes/account-for-authentication-and-authorization.md)]
 
 ### <a name="account-for-logging"></a>Considerar o registro em log
 
@@ -158,6 +160,8 @@ Depois de atingir as metas de migração que você definiu na etapa de [pré-mig
 * Usar o Armazenamento do Microsoft Azure para fornecer conteúdo estático montado nas máquinas virtuais. Para obter mais informações, consulte [Anexar ou desanexar um disco de dados em uma máquina virtual](/azure/lab-services/devtest-lab-attach-detach-data-disk).
 
 * Implante seus aplicativos em seu cluster WebLogic migrado com o Azure DevOps. Para obter mais informações, consulte a [documentação de introdução do Azure DevOps](/azure/devops/get-started/?view=azure-devops).
+
+* Se você implantou o WebLogic Server com o Gateway de Aplicativo do Azure seguindo as etapas em [Tutorial: Migrar um cluster do WebLogic Server para o Azure com o Gateway de Aplicativo do Azure como um balanceador de carga](migrate-weblogic-with-app-gateway.md), talvez você queira fazer configurações adicionais no Gateway de Aplicativo.  Para obter mais informações, confira [Visão geral da configuração do Gateway de Aplicativo ](/azure/application-gateway/configuration-overview).
 
 * Aprimore sua topologia de rede com serviços avançados de balanceamento de carga. Para obter mais informações, consulte [Usando os serviços de balanceamento de carga no Azure](/azure/traffic-manager/traffic-manager-load-balancing-azure).
 

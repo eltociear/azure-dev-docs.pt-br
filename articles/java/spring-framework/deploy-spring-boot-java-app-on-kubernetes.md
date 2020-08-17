@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc, devx-track-java
-ms.openlocfilehash: f3757b8ca84eb9c52f9e4a94f20d54fd3a303652
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: cd7afa2e54a648c282a48d781a116032e7414e1d
+ms.sourcegitcommit: f82e9f569dce0416f4040312882d28eafab05a4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378610"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88040337"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Implantar um aplicativo Spring Boot no Serviço de Kubernetes do Azure
 
@@ -48,8 +48,8 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
    ```
    -- ou --
    ```
-   md /users/robert/SpringBoot
-   cd /users/robert/SpringBoot
+   md /users/$USER/SpringBoot
+   cd /users/$USER/SpringBoot
    ```
 
 1. Clone o exemplo de projeto [Introdução ao Spring Boot no Docker] para o diretório.
@@ -111,7 +111,12 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
    az acr login
    ```
 
-1. Navegue até o diretório do projeto completo de seu aplicativo Spring Boot (por exemplo, "*C:\SpringBoot\gs-spring-boot-docker\complete*" ou " */users/robert/SpringBoot/gs-spring-boot-docker/complete*"), e abra o arquivo *pom.xml* com um editor de texto.
+1. Abra o arquivo *pom.xml* com um editor de texto, por exemplo, o [VS Code](https://code.visualstudio.com/docs).
+
+   ```
+   code pom.xml
+   ```
+
 
 1. Atualize a coleção `<properties>` no arquivo *pom.xml* com o nome de registro do Registro de Contêiner do Azure e a versão mais recente do [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin).
 
@@ -119,7 +124,7 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
    <properties>
       <!-- Note: If your ACR name contains upper case characters, be sure to convert them to lower case characters. -->
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>2.3.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.4.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -207,7 +212,7 @@ Este tutorial implanta o aplicativo usando `kubectl` e depois permite que você 
 1. Após a implantação do aplicativo no cluster, consulte o endereço IP externo e abra-o em seu navegador da Web:
 
    ```
-   kubectl get services -o jsonpath={.items[*].status.loadBalancer.ingress[0].ip} --namespace=default
+   kubectl get services -o=jsonpath='{.items[*].status.loadBalancer.ingress[0].ip}'
    ```
 
    ![Procurar aplicativo de exemplo no Azure][SB02]

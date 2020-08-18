@@ -7,7 +7,7 @@
 - name: Inícios rápidos
   expanded: true
   items:
-    - name: Criar um servidor Jenkins
+    - name: Configurar o Jenkins usando a CLI do Azure
       href: configure-on-linux-vm.md
 - name: Tutoriais
   items:

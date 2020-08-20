@@ -4,12 +4,13 @@ description: Saiba como usar os módulos do Terraform para criar um cluster de m
 keywords: azure devops terraform vm virtual machine cluster module registry
 ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: 771f8a1ce86aa36f7dfa9cf3f97f50e41ca23efa
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 794551aea159318b37426bb5d5dd7e1a13cca3d1
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478446"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241228"
 ---
 # <a name="create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Criar um cluster de VM do Azure com o Terraform usando o Registro do módulo
 

@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 2714d4d4b8a614bcdbf951eb2a9dc4c2dc78dda2
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: f449df07048dfcc20e173bc4103995ac989e38fe
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379420"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240938"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory
 
@@ -188,7 +188,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
    # Specifies the list of Active Directory groups to use for authorization:
-   azure.activedirectory.active-directory-groups=Users
+   azure.activedirectory.user-group.allowed-groups=Users
    ```
 
    Em que:
@@ -198,7 +198,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    | `azure.activedirectory.tenant-id` | Contém a **ID de Diretório** anterior do seu Active Directory. |
    | `spring.security.oauth2.client.registration.azure.client-id` | Contém a **ID de Aplicativo** do registro de aplicativo que você preencheu anteriormente. |
    | `spring.security.oauth2.client.registration.azure.client-secret` | Contém o **Valor** da chave do registro de aplicativo que você preencheu anteriormente. |
-   | `azure.activedirectory.active-directory-groups` | Contém uma lista dos grupos do Active Directory a usar para autorização. |
+   | `azure.activedirectory.user-group.allowed-groups` | Contém uma lista dos grupos do Active Directory a usar para autorização. |
 
    > [!NOTE]
    > Para ver a lista completa dos valores disponíveis no seu arquivo *application.properties*, confira o [Exemplo de Spring Boot do Azure Active Directory][AAD Spring Boot Sample] no GitHub.
@@ -234,7 +234,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
    ```
 
    > [!NOTE]
-   > O nome do grupo que você especificar para o método `@PreAuthorize("hasRole('')")` deve conter um dos grupos que você especificou no campo `azure.activedirectory.active-directory-groups` de seu arquivo *application.properties*.
+   > O nome do grupo que você especificar para o método `@PreAuthorize("hasRole('')")` deve conter um dos grupos que você especificou no campo `azure.activedirectory.user-group.allowed-groups` de seu arquivo *application.properties*.
    >
    > Também é possível especificar configurações de autorização diferentes para mapeamentos de solicitação diferentes; por exemplo:
    >

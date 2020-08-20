@@ -4,12 +4,13 @@ description: Aprenda a implantar no Azure Functions usando o plug-in Jenkins do 
 keywords: jenkins, azure, devops, java, azure functions
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 4dbd37b9527a3c41c6f1d5b40edf974b6adda6c3
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: fa63ebf5a41a3c515f92b0c551ee63d683b665c7
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169792"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240925"
 ---
 # <a name="tutorial-deploy-to-azure-functions-using-jenkins"></a>Tutorial: Implantação no Azure Functions usando o Jenkins
 
@@ -51,7 +52,7 @@ As etapas a seguir mostram como criar uma função Java usando a CLI do Azure:
 
 As etapas a seguir explicam como preparar o servidor Jenkins:
 
-1. Implante um [servidor Jenkins](https://aka.ms/jenkins-on-azure) no Azure. Se você ainda não tiver uma instância do servidor Jenkins instalado, o artigo [Criar um servidor Jenkins no Azure](./configure-on-linux-vm.md) o orientará pelo processo.
+1. Implante um [servidor Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) no Azure. Se você ainda não tiver uma instância do servidor Jenkins instalado, o artigo [Criar um servidor Jenkins no Azure](./configure-on-linux-vm.md) o orientará pelo processo.
 
 1. Entre na instância do Jenkins com SSH.
 

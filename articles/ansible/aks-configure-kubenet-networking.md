@@ -3,14 +3,14 @@ title: Tutorial – Configurar a rede kubenet no AKS (Serviço de Kubernetes do 
 description: Saiba como usar o Ansible para configurar a rede kubenet no cluster do Serviço de Kubernetes do Azure (AKS)
 keywords: ansible, azure, devops, bash, cloudshell, guia estratégico, aks, contêiner, aks, kubernetes
 ms.topic: tutorial
-ms.custom: fasttrack-edit
 ms.date: 10/23/2019
-ms.openlocfilehash: 7d1dc7b381c02c84b2da89c5c90d822e86a3cd1b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible,fasttrack-edit
+ms.openlocfilehash: 55b3f2ec248e3163a6916c8a6067957f6a0c9ae1
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82026119"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239768"
 ---
 # <a name="tutorial-configure-kubenet-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Tutorial: Configurar a rede kubenet no Serviço de Kubernetes do Azure (AKS) usando o Ansible
 

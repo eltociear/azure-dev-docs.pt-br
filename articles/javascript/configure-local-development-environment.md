@@ -3,12 +3,13 @@ title: Configurar o ambiente do JavaScript local para desenvolvimento do Azure
 description: Como configurar um ambiente de desenvolvimento do JavaScript local para trabalhar com o Azure, incluindo um editor, as bibliotecas do SDK do Azure, ferramentas opcionais e as credenciais necessárias para a autenticação da biblioteca.
 ms.date: 07/01/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2285e79ea62d2de961fd7d4dc7647fec2312b83c
-ms.sourcegitcommit: 7be67fb768fb5e19f7de573068cc1376b3d90d1f
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 1071985de770d8c1d9e5e78a25e8556048857a3e
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85911176"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218931"
 ---
 # <a name="configure-your-local-javascript-dev-environment-for-azure"></a>Configurar o ambiente de desenvolvimento do JavaScript local para o Azure
 

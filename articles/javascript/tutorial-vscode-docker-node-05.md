@@ -3,12 +3,13 @@ title: Implantar uma imagem de contêiner para um aplicativo Node.js usando o Vi
 description: Parte 5 do tutorial, implantar a imagem no Serviço de Aplicativo do Azure
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 487110258ed3302e781cfa24a5ae9f518ebb3bda
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: f9809deacac828cac6ba4a89b5eb08968de1d012
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791294"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218440"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Implantar a imagem no Serviço de Aplicativo do Azure
 

@@ -4,12 +4,13 @@ description: Saiba como implantar consistentemente seu aplicativo para máquinas
 keywords: azure, chef, devops, máquinas virtuais, visão geral, automatizar, habitat
 ms.date: 05/15/2018
 ms.topic: article
-ms.openlocfilehash: 9a1ef0c4f59f7b973898de0f8ad4aaeb0771265f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-chef
+ms.openlocfilehash: af7a08e526a5b9109cb9662b1be5d2243af92e9d
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80892965"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240768"
 ---
 # <a name="use-habitat-to-deploy-your-application-to-azure"></a>Usar o Habitat para implantar rapidamente seu aplicativo no Azure
 

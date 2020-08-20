@@ -4,13 +4,13 @@ description: Saiba como usar a CLI do Azure para implantar um aplicativo Web do 
 keywords: jenkins, azure, devops, serviço de aplicativo, cli
 ms.topic: tutorial
 ms.date: 08/08/2020
-ms.custom: devx-track-azurecli
-ms.openlocfilehash: b26adfa3fd4639efa5de20ffcf93f1730a992a12
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.custom: devx-track-jenkins, devx-track-azurecli
+ms.openlocfilehash: 9c5f3b30507cda764dd29f0c133d4997dbc2bb53
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162065"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240948"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Tutorial: Implantar o Serviço de Aplicativo do Azure com o Jenkins e a CLI do Azure
 

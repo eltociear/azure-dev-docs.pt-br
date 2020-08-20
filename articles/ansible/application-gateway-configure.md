@@ -4,12 +4,13 @@ description: Saiba como usar o Ansible para criar e configurar um Gateway de Apl
 keywords: ansible, azure, devops, bash, guia estratégico, gateway de aplicativo, balanceador de carga, tráfego da Web
 ms.topic: tutorial
 ms.date: 06/19/2020
-ms.openlocfilehash: 935468f70f47672048284d7a93787be2e1906212
-ms.sourcegitcommit: 3b069f1f89492f7e7bc5952a14dbfdde71d1e576
+ms.custom: devx-track-ansible
+ms.openlocfilehash: cfeba71085443afb978ceb6b7c381a1e74e723fb
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107616"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240468"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>Tutorial: Gerenciar o tráfego da Web com o Gateway de Aplicativo do Azure usando o Ansible
 

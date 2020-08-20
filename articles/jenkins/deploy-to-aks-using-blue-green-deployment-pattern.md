@@ -4,12 +4,13 @@ description: Saiba como implantar no Azure Kubernetes Service (AKS) usando o Jen
 keywords: jenkins, azure, devops, kubernetes, k8s, aks, implantação azul verde, entrega contínua, cd
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 051a1531c9e973231ca56256603df63f60e21cf9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: 9a81b47d0e3828bb7c1cd809a66b2245f5a83771
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169942"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240987"
 ---
 # <a name="tutorial-deploy-to-azure-kubernetes-service-aks-using-the-bluegreen-deployment-pattern"></a>Tutorial: Implantação no AKS (Serviço de Kubernetes do Azure) usando o padrão de implantação azul/verde
 
@@ -189,7 +190,7 @@ Você pode configurar uma implantação azul / verde no AKS manualmente ou com u
 
 Nesta seção, você verá como preparar o servidor Jenkins para executar uma compilação que é boa para teste. No entanto, você deve usar um [agente de VM do Azure](https://plugins.jenkins.io/azure-vm-agents) ou um [agente do Azure Container](https://plugins.jenkins.io/azure-container-agents) para criar um agente no Azure para executar suas compilações. Para obter mais informações, consulte o artigo de Jenkins sobre o [implicações de segurança de compilação no mestre](https://wiki.jenkins.io/display/JENKINS/Security+implication+of+building+on+master).
 
-1. Implantar um [Mestre do Jenkins no Azure](https://aka.ms/jenkins-on-azure).
+1. Implantar um [Mestre do Jenkins no Azure](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins).
 
 1. Conecte ao servidor via SSH e instale as ferramentas de compilação no servidor onde você executa a compilação.
    

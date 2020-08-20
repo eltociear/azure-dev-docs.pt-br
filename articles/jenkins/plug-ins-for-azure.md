@@ -4,12 +4,13 @@ description: Saiba mais sobre os plug-ins disponíveis do Jenkins para uso com o
 keywords: jenkins, plugins, azure, devops
 ms.date: 04/25/2020
 ms.topic: article
-ms.openlocfilehash: 2ad7a0ba6968548db739c3fa25e2b2e6a8350d16
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: a8738ad8a66f85467527051f383975890fb5dcd2
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169652"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240608"
 ---
 # <a name="jenkins-plug-ins-for-azure"></a>Plug-ins do Jenkins para o Azure
 

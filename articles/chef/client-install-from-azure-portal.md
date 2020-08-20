@@ -4,12 +4,13 @@ description: Saiba como implantar e configurar o cliente do Chef no portal do Az
 keywords: azure, chef, devops, cliente, instalar, portal
 ms.date: 02/22/2020
 ms.topic: article
-ms.openlocfilehash: b5dd158bd06511bf440228d4ae0948596bca0612
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-chef
+ms.openlocfilehash: 3fb282914bad8992a5f4df76019df89824675da0
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80892895"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240818"
 ---
 # <a name="install-the-chef-client-from-the-azure-portal"></a>Instalar o cliente do Chef no portal do Azure
 Você pode adicionar a extensão cliente da Chef diretamente em computador Linux ou Windows, por meio do portal do Azure. Este artigo o orienta pelo processo usando uma nova máquina virtual Linux.

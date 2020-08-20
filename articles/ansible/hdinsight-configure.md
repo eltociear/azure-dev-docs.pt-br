@@ -4,12 +4,13 @@ description: Saiba como usar o Ansible para configurar, redimensionar e excluir 
 keywords: ansible, azure, devops, bash, guia estratégico, apache hadoop, hdinsight
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 78cb70a3346aec86d079d2667349f9bc6e0eb4b2
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 922d1a26daa7b956c2f73210a4ba372d2819d635
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743636"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240278"
 ---
 # <a name="tutorial-configure-a-cluster-in-azure-hdinsight-using-ansible"></a>Tutorial: Configurar um cluster no Azure HDInsight usando o Ansible
 

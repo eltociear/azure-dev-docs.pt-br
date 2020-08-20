@@ -3,12 +3,13 @@ title: Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 description: Saiba como usar o Terraform para implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 ms.topic: how-to
 ms.date: 04/26/2020
-ms.openlocfilehash: 4534de7d57b86adefee36f5f6c0f455126a033c3
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 376d0e3637489ddedde942812dcbf55d46da48db
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478596"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241158"
 ---
 # <a name="deploy-an-azure-cosmos-db-to-azure-container-instances"></a>Implantar um Azure Cosmos DB nas Instâncias de Contêiner do Azure
 

@@ -4,12 +4,13 @@ description: Saiba como usar o Ansible para gerenciar seus inventários dinâmic
 keywords: ansible, azure, devops, bash, cloudshell, inventário dinâmico
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 20c152c6f276aed68abf10a6f2e6ae052235a99f
-ms.sourcegitcommit: 9365b437b119eebf98e40f851bd6f66fe966be4a
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 8ada951f0c1e21de8e193d94fd7e7dcf35ae03be
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422671"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240298"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Tutorial: Configurar inventários dinâmicos de seus recursos do Azure usando o Ansible
 
@@ -92,7 +93,7 @@ O Ansible fornece um script Python chamado [azure_rm.py](https://github.com/ansi
 1. Use o comando `wget` do GNU para recuperar o script `azure_rm.py`:
 
     ```python
-    wget https://raw.githubusercontent.com/ansible-collections/community.general/master/scripts/inventory/azure_rm.py
+    wget https://raw.githubusercontent.com/ansible-collections/community.general/main/scripts/inventory/azure_rm.py
     ```
 
 1. Use o comando `chmod` para alterar as permissões de acesso para o script `azure_rm.py`. O comando a seguir usa o parâmetro `+x` para permitir a execução do arquivo especificado (`azure_rm.py`):

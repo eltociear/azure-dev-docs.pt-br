@@ -3,12 +3,13 @@ title: Tutorial – Criar uma rede spoke no Azure usando o Terraform
 description: Saiba como implementar duas VNets (redes virtuais) spoke conectadas a um hub em uma topologia hub-spoke.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 935bf66b19eeb73d1fff5d4471d2541f38d7f03a
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 236665b205a602466244a2c5d5cfee5800c51317
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329584"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241088"
 ---
 # <a name="tutorial-create-a-spoke-network-in-azure-using-terraform"></a>Tutorial: Criar uma rede spoke no Azure usando o Terraform
 

@@ -4,12 +4,13 @@ description: Saiba como usar o Ansible para criar uma VM ou um conjunto de dimen
 keywords: ansible, azure, devops, bash, playbook, virtual machine, virtual machine scale set, shared image gallery
 ms.topic: tutorial
 ms.date: 10/14/2019
-ms.openlocfilehash: cd66899b5d5f37bc056d251a68117456062c16cf
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible
+ms.openlocfilehash: c214daa3f63f88711ace9d41ffb9978d20551fc9
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743276"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240568"
 ---
 # <a name="tutorial-create-a-vm-or-virtual-machine-scale-set-from-the-azure-shared-image-gallery-using-ansible"></a>Tutorial: Criar uma VM ou um conjunto de dimensionamento de máquinas virtuais da Galeria de Imagens Compartilhadas do Azure usando o Ansible
 

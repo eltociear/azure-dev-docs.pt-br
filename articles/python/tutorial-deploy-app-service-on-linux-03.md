@@ -4,12 +4,12 @@ description: Etapa 3 do tutorial, criando o Serviço de Aplicativo na extensão 
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: de70e026398797cbbb406924ed2a3184f627de92
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b94d128360eb929b59c3c555b78b2cee4708c8d4
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501441"
 ---
 # <a name="3-create-the-app-service-from-visual-studio-code"></a>3: Criar o Serviço de Aplicativo no Visual Studio Code
 
@@ -55,4 +55,4 @@ Se tiver um arquivo de definições de variáveis de ambiente, você poderá us�
 > [!div class="nextstepaction"]
 > [Criei o Serviço de Aplicativo – prossiga para a etapa 4 >>>](tutorial-deploy-app-service-on-linux-04.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=03-create-app-service)
+[Está com problemas? Fale conosco.](https://aka.ms/FlaskVSCQuickstartHelp)

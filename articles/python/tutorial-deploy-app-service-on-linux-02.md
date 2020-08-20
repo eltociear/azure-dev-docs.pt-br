@@ -4,12 +4,12 @@ description: Etapa 2 do tutorial, configurar seu aplicativo
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 0f85ea4e7da74b67ce2a20168ae751444b63b292
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 9bb25bf6cfef2e6a93efa2ca195f27a10a6ca891
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501391"
 ---
 # <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Preparar seu aplicativo para implantação no Serviço de Aplicativo do Azure
 
@@ -89,4 +89,4 @@ A melhor opção, em qualquer caso, é usar um banco de dados separado que é im
 > [!div class="nextstepaction"]
 > [Meu aplicativo está pronto – prossiga para a etapa 3 >>>](tutorial-deploy-app-service-on-linux-03.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=02-prepare-app)
+[Está com problemas? Fale conosco.](https://aka.ms/FlaskVSCQuickstartHelp)

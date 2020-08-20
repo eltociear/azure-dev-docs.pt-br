@@ -4,12 +4,12 @@ description: Etapa 5 do tutorial, implantando o código do aplicativo Web
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: b1c6fba45520e3e327f4b15d60d28000091ad016
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: e7c600314f1535589ca15daaa3bbbd9ffdc69b9d
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501451"
 ---
 # <a name="5-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>5: Implantar o aplicativo Web Python no Serviço de Aplicativo do Azure no Linux
 
@@ -47,4 +47,4 @@ Use este procedimento para implantar o aplicativo Python em um Serviço de Aplic
 > [!div class="nextstepaction"]
 > [Implantei meu aplicativo – prossiga para a etapa 6 >>>](tutorial-deploy-app-service-on-linux-06.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=05-deploy-app)
+[Está com problemas? Fale conosco.](https://aka.ms/FlaskVSCQuickstartHelp)

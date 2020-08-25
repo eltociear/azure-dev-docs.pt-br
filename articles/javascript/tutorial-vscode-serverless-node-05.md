@@ -3,18 +3,19 @@ title: Limpar o recurso depois de implantar o aplicativo Azure Functions no Azur
 description: Parte 5 do tutorial, limpar recursos.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: ab20f86fd01aaac65c44afd0901c62f61a6ce119
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 67745cdc9ac27b6f8c1bdfbd6f4dbaff0f39ce4a
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501482"
 ---
-# <a name="clean-up-resources"></a>Limpar os recursos
+# <a name="clean-up-resources-after-deploying-an-azure-functions-app-with-visual-studio-code"></a>Limpar os recursos depois de implantar um aplicativo do Azure Functions com o Visual Studio Code
 
 [Etapa anterior: Implantar o aplicativo Functions](tutorial-vscode-serverless-node-04.md)
 
-A Aplicativo de Funções que você criou inclui recursos que podem incorrer em custos mínimos (consulte o [Preço das funções](https://azure.microsoft.com/pricing/details/functions/)). Para limpar os recursos, clique com o botão direito do mouse no Aplicativo de Funções no explorador **Azure: Funções** e selecione **Excluir Aplicativo de Funções**.
+O aplicativo de funções que você criou inclui recursos que podem gerar custos mínimos (veja [Preços do Functions](https://azure.microsoft.com/pricing/details/functions/)). Para limpar os recursos, clique com o botão direito do mouse no Aplicativo de Funções no explorador **Azure: Funções** e selecione **Excluir Aplicativo de Funções**.
 
 Você também pode visitar o [portal do Azure](https://portal.azure.com), selecionar **Grupos de recursos** no painel de navegação esquerdo, selecionar o grupo de recursos criado no processo deste tutorial e, em seguida, usar o comando **Excluir grupo de recursos**.
 

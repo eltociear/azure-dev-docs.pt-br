@@ -3,13 +3,14 @@ title: Tutorial – Dimensionar implantações do Jenkins com agentes de VM do A
 description: Saiba como adicionar capacidade adicional aos pipelines do Jenkins usando máquinas virtuais do Azure com o plug-in Azure VM Agents do Jenkins.
 keywords: jenkins, azure, devops, máquina virtual, agentes
 ms.topic: tutorial
-ms.date: 07/31/2018
-ms.openlocfilehash: c5ea0c3782414abfda47810ba68ad1092cd7b0d5
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.date: 08/19/2020
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: d081861eac98495d125a1a5eb5dd9700fb7783a8
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162045"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614547"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Tutorial: Dimensionar implantações do Jenkins com agentes de VM do Azure
 
@@ -26,6 +27,10 @@ Neste tutorial, você irá:
 > * Executar o trabalho em um agente de VM do Azure
 
 > [!VIDEO https://channel9.msdn.com/Shows/Azure-Friday/Continuous-Integration-with-Jenkins-Using-Azure-VM-Agents/player]
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+- **Instalação do Jenkins**: caso você não tenha acesso a uma instalação do Jenkins, [configure o Jenkins usando a CLI do Azure](configure-on-linux-vm.md)
 
 ## <a name="install-azure-vm-agents-plugin"></a>Instale o plug-in de agentes da VM do Azure
 
@@ -81,8 +86,6 @@ Neste tutorial, você irá:
     A entidade de serviço concluída deve usar o campo `id` para **ID da Assinatura **, o `appId` valor para **ID do Cliente**, `password` para **Segredo do Cliente** e `tenant` para **ID do Locatário**. Selecione **Adicionar** para adicionar a entidade de serviço e, em seguida, configure o plug-in para usar a credencial recém-criada.
 
     ![Configurar uma entidade de serviço do Azure](./media/scale-deployments-using-vm-agents/new-service-principal.png)
-
-    
 
 1. Na seção **Nome do Grupo de Recursos**, deixe a opção **Criar novo** marcada e insira `myJenkinsAgentGroup`.
 1. Selecione **Verificar configuração** para se conectar ao Azure para testar as configurações de perfil.

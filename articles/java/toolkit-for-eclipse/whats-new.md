@@ -1,6 +1,6 @@
 ---
 title: Novidades no Kit de Ferramentas do Azure para Eclipse
-description: Saiba mais sobre os recursos mais recentes do Kit de Ferramentas do Azure para Eclipse.
+description: Conheça as últimas atualizações do Azure Toolkit for Eclipse. Este artigo inclui aprimoramentos feitos no kit de ferramentas e links para informações adicionais.
 documentationcenter: java
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
 ms.date: 11/13/2018
@@ -8,12 +8,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 9c15441396a0475c97c3d5362f30ee19a62af648
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: e7ebd13d811a30d8b6db5c1bc8b530f9545d87fa
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379900"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241028"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Novidades no Kit de Ferramentas do Azure para Eclipse
 

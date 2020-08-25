@@ -3,14 +3,15 @@ title: Limpar recursos após implantar um aplicativo Node.js no Azure usando a C
 description: Parte 7 do tutorial, limpar recursos
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 183539b8e2f0246bd812e5fa364a885b75626819
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: fb78f369d80ff40fef1d4a21df68ea79fafa2dbc
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791076"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218527"
 ---
-# <a name="clean-up-resources"></a>Limpar os recursos
+# <a name="part-7-clean-up-resources"></a>Parte 7: Limpar os recursos
 
 [Etapa anterior: Fazer alterações e reimplantar](tutorial-vscode-docker-node-06.md)
 

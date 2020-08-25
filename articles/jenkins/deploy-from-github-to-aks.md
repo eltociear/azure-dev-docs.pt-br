@@ -4,12 +4,13 @@ description: Saiba como configurar o Jenkins para a CI (integração contínua) 
 keywords: jenkins, azure, devops, aks, azure kubernetes service, github
 ms.topic: article
 ms.date: 01/09/2019
-ms.openlocfilehash: cbde97c7796a7f89bfb8ec0cbe530e84bd750e04
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: c73e5c567f237c6f859b52230742ae74b87326f5
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861179"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240998"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Tutorial: Implantação do GitHub para o Serviço de Kubernetes do Azure usando o Jenkins
 
@@ -227,8 +228,8 @@ Clique em **OK** e retorne ao portal do Jenkins.
 Na página inicial do portal do Jenkins, selecione **Novo item** no lado esquerdo:
 
 1. Insira *azure-vote* como nome do trabalho. Escolha **Projeto Freestyle** e selecione **OK**
-1. Sob a seção **Geral**, selecione **Projeto do GitHub** e insira a URL do repositório bifurcado, como *https:\//github.com/\<your-github-account\>/azure-voting-app-redis*
-1. Sob a seção **Gerenciamento de códigos-fonte**, selecione **Git** e insira a URL do repositório bifurcado *.git*, como *https:\//github.com/\<your-github-account\>/azure-voting-app-redis.git*
+1. Na seção **Geral**, selecione **Projeto do GitHub** e insira a URL do repositório com fork, como *https:\//github.com/\<your-github-account\>/azure-voting-app-redis*
+1. Na seção **Gerenciamento de código-fonte**, selecione **Git** e insira a URL do repositório com fork *.git*, como *https:\//github.com/\<your-github-account\>/azure-voting-app-redis.git*
 
 1. Na seção **Gatilhos de Build**, selecione **Gatilho de gancho do GitHub para sondagem de GITscm**
 1. Em **Ambiente de Build**, selecione **Usar arquivos ou textos secretos**

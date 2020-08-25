@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 title: Documentação da integração do Spring no Azure
-summary: O Spring é uma estrutura de aplicativo de software livre desenvolvida pela Pivotal que fornece uma abordagem simplificada e modular para a criação de aplicativos Java. Os conteúdos deste site mostram como desenvolver e implantar aplicativos Spring na nuvem.
+summary: O Spring é uma estrutura de aplicativo de software livre desenvolvida pela VMware que oferece uma abordagem simplificada e modular para a criação de aplicativos Java. Os conteúdos deste site mostram como desenvolver e implantar aplicativos Spring na nuvem.
 metadata:
   title: Documentação da integração do Spring no Azure
-  description: O Spring é uma estrutura de aplicativo de software livre desenvolvida pela Pivotal que fornece uma abordagem simplificada e modular para a criação de aplicativos Java.
+  description: O Spring é uma estrutura de aplicativo de software livre desenvolvida pela VMware que oferece uma abordagem simplificada e modular para a criação de aplicativos Java.
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 7e4f5fc376c60a9a1eee0caf547ec5cc57ca0d7d
-  ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+  ms.openlocfilehash: bf6e9302c0c566881be4161a632409f083f29322
+  ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/14/2020
-  ms.locfileid: "88240978"
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88662947"
 landingContent:
 - title: Guias de introdução
   linkLists:

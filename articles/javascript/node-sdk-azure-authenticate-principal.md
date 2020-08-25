@@ -3,12 +3,13 @@ title: Criar uma entidade de serviço do Azure com Node.js
 description: Saiba como usar a autenticação da entidade de serviço no Azure com Node.js e JavaScript
 ms.topic: article
 ms.date: 06/17/2017
-ms.openlocfilehash: 1a85d185d6272a72b0f8029822b01174f9a043ce
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 9343d1bfaa48e5b2307c5f442107b91613663e94
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791096"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218881"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Criar uma entidade de serviço do Azure com Node.js 
 
@@ -46,7 +47,7 @@ A criação de uma entidade de serviço usando a [CLI do Azure 2.0](/cli/azure/i
 
 4. Chamar `az login` resulta em uma URL e em um código. Navegue até a URL especificada, insira o código e faça logon com sua identidade do Azure (isso poderá acontecer automaticamente se você já estiver conectado). Em seguida, você poderá acessar sua conta via CLI.
 
-5. Obter sua ID da assinatura e locatário:
+5. Obtenha sua ID da assinatura e do locatário:
 
     ```shell
     $ az account list

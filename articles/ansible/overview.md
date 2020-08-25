@@ -3,13 +3,14 @@ title: Usando Ansible com o Azure
 description: Introdução ao uso do Ansible para automatizar o provisionamento de nuvem, o gerenciamento de configurações e implantações de aplicativos.
 keywords: ansible, azure, devops, visão geral, provisionamento de nuvem, gerenciamento de configuração, implantação de aplicativo, módulos ansible, manuais do ansible
 ms.topic: overview
-ms.date: 04/30/2019
-ms.openlocfilehash: e37807ffd4d7479bccec0dc058760be2e1f1e6d5
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/13/2020
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 2bd996a93952df1f52c2a007d73f7f37e4e0f132
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80741514"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239958"
 ---
 # <a name="using-ansible-with-azure"></a>Usando Ansible com o Azure
 
@@ -56,5 +57,5 @@ O Ansible inclui um conjunto de módulos para uso no provisionamento e configura
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Início Rápido: Implantar o modelo de solução Ansible para Azure para o CentOS](./solution-template-deploy.md)
-- [Início Rápido: Configurar máquinas virtuais do Linux no Azure usando o Ansible](./install-on-linux-vm.md)
+- [Início Rápido: Configurar o Ansible usando o Azure Cloud Shell](getting-started-cloud-shell.md)
+- [Início Rápido: Configurar o Ansible usando a CLI do Azure](install-on-linux-vm.md)

@@ -4,12 +4,12 @@ description: Como conceder permissões a uma entidade de serviço ou identidade 
 ms.date: 05/12/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: 3eb81eac5ee9a7f2f85e50494efa2e04bbcbe439
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: facfa1663e6f62a7458f99ee20c86f66ee67b17d
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983128"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614483"
 ---
 # <a name="how-to-assign-role-permissions-to-an-app-identity-or-service-principal"></a>Como atribuir permissões de função a uma identidade de aplicativo ou a uma entidade de serviço
 
@@ -17,7 +17,7 @@ O sistema RBAC (controle de acesso baseado em função) do Azure gerencia permis
 
 Na prática, sempre atribua apenas as funções que uma entidade de segurança realmente precisa no escopo mais específico. Evite atribuir funções mais amplas em escopos mais amplos, mesmo que, inicialmente, isso pareça mais prático. Ao limitar as funções e os escopos, você limitará os recursos que estão em risco se a entidade de segurança for comprometida (ou seja, se as credenciais dessa entidade forem expostas em uma violação de dados ou outro incidente de segurança).
 
-Como você usa entidades de segurança diferentes em desenvolvimento e produção, repete as atribuições de função em cada ambiente. Ou seja, durante o desenvolvimento, você normalmente atribui funções à entidade de serviço local criada em sua estação de trabalho (consulte [Configurar seu ambiente de desenvolvimento Python local - Autenticação](configure-local-development-environment.md#configure-authentication)). Em produção, você atribui funções à identidade do aplicativo ou à entidade de serviço antes da implantação para garantir que o aplicativo tenha acesso na inicialização.
+Como você usa entidades de segurança diferentes em desenvolvimento e produção, repete as atribuições de função em cada ambiente. Ou seja, durante o desenvolvimento, você normalmente atribui funções à entidade de serviço local criada em sua estação de trabalho (consulte [Configurar seu ambiente de desenvolvimento Python local - Autenticação](configure-local-development-environment.md#configure-authentication)). Em produção, atribua funções à entidade de serviço ou à identidade gerenciada do aplicativo antes da implantação, a fim de garantir que o aplicativo tenha acesso na inicialização. Para obter mais informações, confira [Autenticação – identidade do aplicativo durante a execução no Azure](azure-sdk-authenticate.md#identity-when-running-the-app-on-azure).
 
 Para obter mais informações sobre o RBAC em geral, consulte [O que é controle de acesso baseado em função do Azure?](/azure/role-based-access-control/overview).
 
@@ -64,7 +64,7 @@ Para obter detalhes completos e instruções de interface do usuário, consulte 
 
 ## <a name="identify-scope-and-assign-a-role-through-the-azure-cli"></a><a name="azure-cli"></a>Identificar o escopo e atribuir uma função no portal da CLI do Azure
 
-A atribuição de função com a CLI do Azure usa o comando [`az role assignment`](/cli/azure/role/assignment?view=azure-cli-latest). Use `az role assignment create` para adicionar uma atribuição e `az role assignment delete` para remover uma atribuição. 
+A atribuição de função com a CLI do Azure usa o comando [`az role assignment`](/cli/azure/role/assignment?view=azure-cli-latest). Use `az role assignment create` para adicionar uma atribuição e `az role assignment delete` para remover uma atribuição.
 
 Embora o processo completo seja descrito em [Adicionar ou remover atribuições de função do Azure usando a CLI do Azure](/azure/role-based-access-control/role-assignments-cli), o resumo a seguir fornece exemplos específicos que são relevantes para outros artigos neste centro de desenvolvedores.
 

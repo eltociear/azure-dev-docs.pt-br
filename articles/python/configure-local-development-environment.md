@@ -4,12 +4,12 @@ description: Como configurar um ambiente de desenvolvimento Python local para tr
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 8d20960df802dc4671f6b432173a56f6dc88c38c
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: d95584758900eae2c50df5e731fd84f8bca00897
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983138"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614503"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Configurar o ambiente de desenvolvimento do Python local para o Azure
 
@@ -78,7 +78,7 @@ A CLI do Azure normalmente mantém suas credenciais entre as sessões, mas é um
 
 ## <a name="configure-authentication"></a>Configurar autenticação
 
-Conforme descrito em [Como gerenciar entidades de serviço - Noções básicas de autorização](how-to-manage-service-principals.md#basics-of-azure-authorization), cada desenvolvedor precisa de uma entidade de serviço para usar como a identidade do aplicativo ao testar o código do aplicativo localmente.
+Conforme descrito em [Como autenticar aplicativos](azure-sdk-authenticate.md#identity-when-running-the-app-locally), cada desenvolvedor precisa ter uma entidade de serviço para usá-la como a identidade do aplicativo ao testar o código do aplicativo localmente.
 
 As seções a seguir descrevem como criar uma entidade de serviço e as variáveis de ambiente que fornecem as propriedades da entidade de serviço para as bibliotecas do Azure quando necessário.
 
@@ -98,7 +98,7 @@ Cada desenvolvedor em sua organização deve executar essas etapas individualmen
 
     Se você estiver em uma organização, talvez não tenha permissão na assinatura para executar esse comando. Nesse caso, entre em contato com os proprietários da assinatura para que eles criem a entidade de serviço para você.
 
-1. Crie variáveis de ambiente que as bibliotecas do Azure exigem. (O objeto `DefaultAzureCredential` da biblioteca do azure-identity procura essas variáveis).
+1. Use os comandos a seguir para criar variáveis de ambiente necessárias para as bibliotecas do Azure. (O objeto `DefaultAzureCredential` da biblioteca do azure-identity procura essas variáveis).
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -124,7 +124,7 @@ Cada desenvolvedor em sua organização deve executar essas etapas individualmen
 
     Para recuperar sua ID de assinatura, execute o comando [`az account show`](/cli/azure/account?view=azure-cli-latest#az-account-show) e procure a propriedade `id` na saída.
 
-    Para sua conveniência, crie um arquivo *.sh* ou *.cmd* com estes comandos que podem ser executados sempre que você abrir um terminal ou um prompt de comando para testes locais. Novamente, não adicione o arquivo ao controle do código-fonte para que ele permaneça somente dentro de sua conta de usuário.
+    Para sua conveniência, crie um arquivo de script de linha de comando (como *setenv.sh* no macOS/no Linux ou *setenv.cmd* no Windows) que contenha os mesmos comandos. Em seguida, você poderá executar o script para definir as variáveis sempre que abrir um terminal ou um prompt de comando para teste local. Novamente, não adicione o arquivo de script ao controle do código-fonte para que ele permaneça somente dentro da sua conta de usuário.
 
 1. Proteja a ID do cliente e o segredo do cliente (e os arquivos que os armazenam) para que eles sempre permaneçam dentro de uma conta de usuário específica em uma estação de trabalho. Nunca salve essas propriedades no controle do código-fonte ou compartilhe-as com outros desenvolvedores. Se necessário, você pode excluir a entidade de serviço e criar uma nova.
 

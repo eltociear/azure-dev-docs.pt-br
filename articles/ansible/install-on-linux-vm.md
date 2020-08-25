@@ -1,105 +1,118 @@
 ---
-title: Início Rápido – Instalar o Ansible em máquinas virtuais Linux no Azure
+title: Guia de Início Rápido – Configurar o Ansible usando a CLI do Azure
 description: Neste Início Rápido, saiba como instalar e configurar o Ansible para gerenciar recursos do Azure no Ubuntu, no CentOS e no SLES
-keywords: ansible, azure, devops, bash, cloudshell, playbook, bash
+keywords: ansible, azure, devops, bash, cloudshell, playbook, azure cli
 ms.topic: quickstart
-ms.service: ansible
-author: tomarchermsft
-manager: gwallace
-ms.author: tarcher
-ms.date: 04/30/2019
-ms.openlocfilehash: 4f577b9841375d63bfc88249da88e554c1464bde
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/13/2020
+ms.custom: devx-track-ansible,devx-track-cli
+ms.openlocfilehash: aa1758e6b9670640c218976f6369d9935aa6381b
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743576"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240158"
 ---
-# <a name="quickstart-install-ansible-on-linux-virtual-machines-in-azure"></a>Início Rápido: Instalar o Ansible em Máquinas Virtuais do Linux no Azure
+# <a name="quickstart-configure-ansible-using-azure-cli"></a>Início Rápido: Configurar o Ansible usando a CLI do Azure
 
-O Ansible permite que você automatize a implantação e a configuração de recursos em seu ambiente. Este artigo mostra como configurar o Ansible para algumas das distribuições do Linux mais comuns. Para instalar o Ansible em outras distribuições, ajuste os pacotes instalados para sua plataforma específica. 
+Este guia de início rápido mostra como instalar o [Ansible](https://docs.ansible.com/) usando a CLI do Azure.
+
+Neste início rápido, você concluiu estas tarefas:
+
+> [!div class="checklist"]
+> * Criar um par de chaves SSH
+> * Criar um grupo de recursos
+> * Criar uma máquina virtual do CentOS 
+> * Instalar o Ansible na máquina virtual
+> * Conectar-se à máquina virtual via SSH
+> * Configurar o Ansible na máquina virtual
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 [!INCLUDE [open-source-devops-prereqs-create-sp.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
 - **Acesso ao Linux ou a uma máquina virtual do Linux** - Se você não tiver acesso a um computador do Linux, crie uma [máquina virtual do Linux](/azure/virtual-network/quick-create-cli).
 
-## <a name="install-ansible-on-an-azure-linux-virtual-machine"></a>Instalar o Ansible em uma máquina virtual do Linux do Azure
+## <a name="create-an-ssh-key-pair"></a>Criar um par de chaves SSH
 
-Entre no seu computador do Linux e selecione uma das distribuições a seguir para obter instruções sobre como instalar o Ansible:
+Ao se conectar a VMs do Linux, você pode usar a autenticação de senha ou a autenticação baseada em chave. A autenticação baseada em chave é mais segura do que o uso de senhas. Portanto, este artigo usa a autenticação baseada em chave.
 
-- [CentOS 7.4](#centos-74)
-- Ubuntu 16.04 LTS
-- [SLES 12 SP2](#sles-12-sp2)
+Com a autenticação baseada em chave, há duas chaves:
 
-### <a name="centos-74"></a>CentOS 7.4
+- **Chave pública**: a chave pública é armazenada no host, por exemplo, na sua VM (como neste artigo)
+- **Chave privada**: a chave privada permite que você se conecte com segurança ao host. Ela é efetivamente sua senha e deve ser protegida como tal.
+        
+As etapas a seguir orientarão você na criação de um par de chaves SSH.
 
-Nesta seção, você configurará o CentOS para usar o Ansible.
+1. Entre no [portal do Azure](https://portal.azure.com).
 
-1. Abra uma janela de terminal.
+1. Abra o [Azure Cloud Shell](/azure/cloud-shell/overview) e, se não tiver feito isso ainda, mude para **Bash**.
 
-1. Insira o seguinte comando para instalar os pacotes necessários para os módulos do SDK do Python do Azure:
-
-    ```bash
-    sudo yum check-update; sudo yum install -y gcc libffi-devel python-devel openssl-devel epel-release
-    sudo yum install -y python-pip python-wheel
-    ```
-
-1. Insira o seguinte comando para instalar os pacotes necessários do Ansible:
+1. Crie uma chave SSH usando [ssh-keygen](https://www.ssh.com/ssh/keygen/).
 
     ```bash
-    sudo pip install ansible[azure]
+    ssh-keygen -m PEM -t rsa -b 2048 -C "azureuser@azure" -f ~/.ssh/ansible_rsa -N ""
     ```
 
-1. [Criar as credenciais do Azure](#create-azure-credentials).
+    **Observações**:
 
-### <a name="ubuntu-1604-lts"></a>Ubuntu 16.04 LTS
+    - O comando `ssh-keygen` exibe a localização dos arquivos de chave gerados. Você precisará desse nome de diretório ao criar a máquina virtual.
+    - A chave pública é armazenada em `ansible_rsa.pub`, e a chave privada é armazenada em `ansible_rsa`.
 
-Nesta seção, você configurará o Ubuntu para usar o Ansible.
+## <a name="create-a-virtual-machine"></a>Criar uma máquina virtual
 
-1. Abra uma janela de terminal.
+1. Criar um grupo de recursos usando [az group create](/cli/azure/group#az-group-create). Talvez seja necessário substituir o parâmetro `--location` pelo valor apropriado para o seu ambiente.
 
-1. Insira o seguinte comando para instalar os pacotes necessários para os módulos do SDK do Python do Azure:
-
-    ```bash
-    sudo apt-get update && sudo apt-get install -y libssl-dev libffi-dev python-dev python-pip
+    ```azurecli
+    az group create --name QuickstartAnsible-rg --location eastus
     ```
 
-1. Insira o seguinte comando para instalar os pacotes necessários do Ansible:
+1. Crie uma máquina virtual com [az vm create](/cli/azure/vm#az-vm-create).
 
-    ```bash
-    sudo pip install ansible[azure]
+    ```azurecli
+    az vm create \
+    --resource-group QuickstartAnsible-rg \
+    --name QuickstartAnsible-vm \
+    --image OpenLogic:CentOS:7.7:latest \
+    --admin-username azureuser \
+    --ssh-key-values <ssh_public_key_filename>
     ```
 
-1. [Criar as credenciais do Azure](#create-azure-credentials).
+1. Confirme a criação (e o estado) da nova máquina virtual usando [az vm list](/cli/azure/vm#az-vm-list).
 
-### <a name="sles-12-sp2"></a>SLES 12 SP2
-
-Nesta seção, você configurará o SLES para usar o Ansible.
-
-1. Abra uma janela de terminal.
-
-1. Insira o seguinte comando para instalar os pacotes necessários para os módulos do SDK do Python do Azure:
-
-    ```bash
-    sudo zypper refresh && sudo zypper --non-interactive install gcc libffi-devel-gcc5 make \
-        python-devel libopenssl-devel libtool python-pip python-setuptools
+    ```azurecli
+    az vm list -d -o table --query "[?name=='QuickstartAnsible-vm']"
     ```
 
-1. Insira o seguinte comando para instalar os pacotes necessários do Ansible:
+    **Observações**:
 
-    ```bash
-    sudo pip install ansible[azure]
-    ```
+    - A saída do comando `az vm list` inclui o endereço IP público usado para se conectar via SSH à máquina virtual.
 
-1. Insira o seguinte comando para remover o pacote de criptografia conflitante do Python:
+## <a name="install-ansible-on-the-virtual-machine"></a>Instalar o Ansible na máquina virtual
 
-    ```bash
-    sudo pip uninstall -y cryptography
-    ```
+Execute o script de instalação do Ansible usando [az vm extension set](/cli/azure/vm/extension?#az-vm-extension-set).
 
-1. [Criar as credenciais do Azure](#create-azure-credentials).
+```azurecli
+az vm extension set \
+ --resource-group QuickstartAnsible-rg \
+ --vm-name QuickstartAnsible-vm \
+ --name customScript \
+ --publisher Microsoft.Azure.Extensions \
+ --version 2.1 \
+ --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-ansible-control-machine/master/configure-ansible-centos.sh"]}' \
+ --protected-settings '{"commandToExecute": "./configure-ansible-centos.sh"}'
+```
+
+**Observações:**
+
+- Após a conclusão, o comando `az vm extension` exibirá os resultados da execução do script de instalação.
+
+## <a name="connect-to-your-virtual-machine-via-ssh"></a>Conectar-se à sua máquina virtual via SSH
+
+Usando o comando SSH, conecte-se à sua máquina virtual.
+
+```azurecli
+ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
+```
 
 ## <a name="create-azure-credentials"></a>Criar as credenciais do Azure
 
@@ -117,7 +130,7 @@ Configure as credenciais do Ansible usando uma das seguintes técnicas:
 
 ### <a name="span-idfile-credentials-create-ansible-credentials-file"></a><span id="file-credentials"/> Criar arquivo de credenciais do Ansible
 
-Nesta seção, você criará um arquivo de credenciais local para fornecer credenciais para o Ansible. 
+Nesta seção, você criará um arquivo de credenciais local para fornecer credenciais para o Ansible.
 
 Para obter mais informações sobre como definir as credenciais do Ansible, confira [Como fornecer credenciais para os módulos do Azure](https://docs.ansible.com/ansible/guide_azure.html#providing-credentials-to-azure-modules).
 
@@ -144,7 +157,7 @@ Para obter mais informações sobre como definir as credenciais do Ansible, conf
 
 Nesta seção, você exportará os valores da entidade de serviço para configurar suas credenciais do Ansible.
 
-1. Abra uma janela de terminal.
+1. Abra uma janela do terminal.
 
 1. Exporte os valores da entidade de serviço:
 
@@ -155,13 +168,9 @@ Nesta seção, você exportará os valores da entidade de serviço para configur
     export AZURE_TENANT=<security-principal-tenant>
     ```
 
-## <a name="verify-the-configuration"></a>Verificar a configuração
-
-Para verificar a configuração bem-sucedida, use o Ansible para criar um grupo de recursos do Azure.
-
-[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
+Agora você tem uma máquina virtual com o Ansible instalado e configurado.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-> [!div class="nextstepaction"] 
-> [Início Rápido: Configurar uma máquina virtual do Linux no Azure usando o Ansible](./vm-configure.md)
+> [!div class="nextstepaction"]
+> [Ansible no Azure](/azure/developer/Ansible)

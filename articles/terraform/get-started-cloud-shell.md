@@ -1,17 +1,18 @@
 ---
-title: Início Rápido – Introdução ao Terraform usando o Azure Cloud Shell
+title: Guia de Início Rápido – Configurar o Terraform usando o Azure Cloud Shell
 description: Nesse início rápido, você aprende a como instalar e configurar o Terraform para criar recursos do Azure.
 keywords: azure devops terraform install configure cloud shell init plan apply execution portal login rbac service principal automated script
 ms.topic: quickstart
 ms.date: 08/08/2020
-ms.openlocfilehash: 736c805b8dd8c95d1950537b754059cca9fc5712
-ms.sourcegitcommit: 6a8485d659d6239569c4e3ecee12f924c437b235
+ms.custom: devx-track-terraform
+ms.openlocfilehash: d8cec2954357269b5605a7b35c96030b8e8b5fa0
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88026138"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241168"
 ---
-# <a name="quickstart-get-started-with-terraform-using-azure-cloud-shell"></a>Início Rápido: Introdução ao Terraform usando o Azure Cloud Shell
+# <a name="quickstart-configure-terraform-using-azure-cloud-shell"></a>Início Rápido: Configurar o Terraform usando o Azure Cloud Shell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 

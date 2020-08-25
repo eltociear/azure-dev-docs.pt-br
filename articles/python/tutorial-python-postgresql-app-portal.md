@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 0e9785871eba8866b5d225bb9ac1339becc172a3
-ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
+ms.openlocfilehash: 9e6794d655d420d5f6b4093aecf15b7540f34709
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147387"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614529"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Tutorial: Implantar um aplicativo Web Django com PostgreSQL usando o portal do Azure
 
@@ -190,12 +190,18 @@ Com as configurações de banco de dados e conexão em vigor, agora você pode c
 
 Com o código implantado e o banco de dados em vigor, o aplicativo está quase pronto para uso. A única parte que resta é estabelecer o esquema necessário no próprio banco de dados. Isso é feito por meio da "migração" dos modelos de dados no aplicativo Django para o banco de dados.
 
-1. Na guia ou janela do navegador do aplicativo Web, selecione **SSH** (em **Ferramentas de Implantação** no lado esquerdo). para abrir um console SSH no servidor de aplicativo Web. Pode levar um minuto para se conectar pela primeira vez, pois o contêiner do aplicativo Web precisa ser iniciado.
+1. Na janela do navegador ou na guia do aplicativo Web, selecione **SSH** (em **Ferramentas de Desenvolvimento** no lado esquerdo) e **Ir** para abrir um console do SSH no servidor de aplicativo Web. Pode levar um minuto para se conectar pela primeira vez, pois o contêiner do aplicativo Web precisa ser iniciado.
 
 1. No console, altere para a pasta do aplicativo Web:
 
     ```bash
     cd site/wwwroot
+    ```
+
+1. Ative o ambiente virtual do contêiner:
+
+    ```bash
+    source /antenv/bin/activate
     ```
 
 1. Instale os pacotes do Python:
@@ -247,6 +253,8 @@ No entanto, se você alterar os modelos de dados do aplicativo Django, deverá m
 1. Conecte-se ao aplicativo Web novamente via SSH, conforme descrito em [Executar migrações de banco de dados do Django](#run-django-database-migrations).
 
 1. Faça a alteração na pasta do aplicativo com `cd site/wwwroot`.
+
+1. Ative o ambiente virtual com `source /antenv/bin/activate`.
 
 1. Execute as migrações novamente com `python manage.py migrate`.
 

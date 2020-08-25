@@ -8,12 +8,12 @@ ms.date: 04/21/2020
 ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: 10dfdc316ba00f8a7019f0724aab231e344c1c6d
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 74262a0be1062f32f63a225521f92657334c9994
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82031308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501261"
 ---
 # <a name="azure-cli-release-notes"></a>Notas de versão da CLI do Azure
 
@@ -1279,7 +1279,7 @@ Esta versão contém um grande número de alterações da falha.
 * [ALTERAÇÃO SIGNIFICATIVA] O parâmetro `--persisted` de `hdinsight script-action list` foi removido
 * O parâmetro `hdinsight create --cluster-configurations` foi alterado para aceitar um caminho para um arquivo JSON local ou uma cadeia de caracteres JSON
 * Adicionado o comando `hdinsight script-action list-execution-history`
-* Alterado `hdinsight monitor enable --workspace` para aceitar uma ID do workspace ou nome do workspace do Log Analytics 
+* Alterado `hdinsight monitor enable --workspace` para aceitar uma ID do workspace ou nome do workspace do Log Analytics
 * O argumento `hdinsight monitor enable --primary-key`, que será necessário caso uma ID do workspace seja fornecida como o parâmetro, foi adicionado
 * Foram adicionados mais exemplos e atualização das descrições das mensagens de erro
 
@@ -1425,7 +1425,7 @@ Versão 2.0.68
 
 * Versão atualizada do ADLS (0.0.45)
 
-### <a name="feedback"></a>Comentários
+### <a name="feedback-command"></a>Comando Comentários
 
 * Ao relatar um comando de extensão com falha, agora, o `az feedback` tenta abrir o navegador na URL do projeto/repositório da extensão por meio do índice
 
@@ -1801,7 +1801,7 @@ Versão 2.0.63
 ### <a name="cdn"></a>CDN
 * Adição de suporte para `Microsoft_Standard` e `Standard_ChinaCdn`
 
-### <a name="feedback"></a>Comentários
+### <a name="feedback-command"></a>Comando Comentários
 * Alteração de `feedback` para mostrar metadados em comandos executados recentemente
 * Alteração de `feedback` para solicitar o auxílio do usuário no processo de criação de problema abrindo um navegador e usando um modelo de problema
 * Alteração do `feedback` para imprimir o corpo do problema ao executar com '--verbose'
@@ -3867,7 +3867,7 @@ Versão 2.0.27
 * Adicionado suporte para parâmetro `--pip-proxy` para comandos `az extension [add|update]`
 * Adicionado suporte para argumento `--pip-extra-index-urls` para comandos `az extension [add|update]`
 
-### <a name="feedback"></a>Comentários
+### <a name="feedback-command"></a>Comando Comentários
 
 * Adicionadas informações de extensão aos dados de telemetria
 
@@ -4606,7 +4606,7 @@ Versão 2.0.13
 * Atualizado para o Lote SDK 3.1.0 e Gerenciamento de Lote SDK 4.1.0
 * Adicionado um novo comando que mostra as contagens de tarefas de um trabalho
 * Corrigido o bug no processamento de URL de SAS do arquivo de recurso
-* Ponto de extremidade da conta de lote agora dá suporte ao prefixo opcional “https://” 
+* Ponto de extremidade da conta de lote agora dá suporte ao prefixo opcional “https://”
 * Suporte para adicionar listas de mais de 100 tarefas a um trabalho
 * Adicionado log de depuração para carregar o módulo do comando de Extensões
 

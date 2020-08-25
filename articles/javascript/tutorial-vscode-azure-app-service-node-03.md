@@ -1,19 +1,21 @@
 ---
-title: Implantar aplicativos Node.js para o Serviço de Aplicativo do Azure do Visual Studio Code
+title: Implantar aplicativos no Serviço de Aplicativo do Azure por meio do Visual Studio Code
 description: Parte 3 do tutorial, implantar o site
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 2a1089a88a27d1ae02b2ce4f0e201ef02f21c74e
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 5d812f9aa6efb308cafcb5d3e3ccb1ce852e93f1
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501501"
 ---
 # <a name="deploy-the-app-to-azure"></a>Implantar o aplicativo no Azure
 
 [Etapa anterior: Criar o aplicativo](tutorial-vscode-azure-app-service-node-02.md)
 
-Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implantação do git por meio do VS Code e a extensão do Serviço de Aplicativo do Azure. Para atingir essa meta, primeiro inicialize um repositório git local e, em seguida, crie um aplicativo Web no Azure. Depois, configure o VS Code para usar a implantação do git.
+Nesta etapa, você implantará seu aplicativo Node.js no Azure usando a implantação do Git por meio do VS Code e da extensão do Serviço de Aplicativo do Azure. Para atingir essa meta, primeiro, inicialize um repositório Git local e crie um aplicativo Web no Azure. Depois, configure o VS Code para usar a implantação do Git.
 
 1. No terminal, verifique se você está na pasta *expressApp1* e inicie o Visual Studio Code com o seguinte comando:
 
@@ -21,7 +23,7 @@ Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implan
     code .
     ```
 
-1. No VS Code, selecione o ícone do controle do código-fonte para abrir o **Source Control Explorer** e selecione **+** para inicializar um repositório git:
+1. No VS Code, selecione o ícone do controle do código-fonte para abrir o **Source Control Explorer** e escolha **+** para inicializar um repositório Git local:
 
     ![Inicializar repositório git](media/deploy-azure/git-init.png)
 
@@ -48,7 +50,7 @@ Nesta etapa, você implantará o seu aplicativo Node.js no Azure usando a implan
 
     ![Notificação sobre a conclusão da criação do aplicativo Web](media/deploy-azure/creation-complete.png)
 
-1. Com o aplicativo Web implementado, oriente o VS Code a implantar seu código por meio do repositório git local. Selecione o ícone do Azure para abrir o gerenciador do **Serviço de Aplicativo do Azure**, expanda seu nó de assinatura, clique com o botão direito do mouse no nome do aplicativo Web recém-criado e selecione **Configurar a Fonte da Implantação**.
+1. Com o aplicativo Web implementado, instrua o VS Code a implantar seu código por meio do repositório Git local. Selecione o ícone do Azure para abrir o gerenciador do **Serviço de Aplicativo do Azure**, expanda seu nó de assinatura, clique com o botão direito do mouse no nome do aplicativo Web recém-criado e selecione **Configurar a Fonte da Implantação**.
 
     ![Configurar um comando de origem de implantação em um aplicativo Web](media/deploy-azure/configure-deployment-source.png)
 

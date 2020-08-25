@@ -1,31 +1,21 @@
 ---
 title: Gerenciar entidades de serviço locais para o desenvolvimento do Azure
 description: Como gerenciar entidades de serviço criadas para o desenvolvimento local usando o portal do Azure ou a CLI do Azure.
-ms.date: 05/12/2020
+ms.date: 08/18/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: 8901a7ef9de7bbca31c5ba0352c79a4ee2c5cdf9
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b6d3ffbb7e78b7c4f2405e5363446c1906913aa9
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983098"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614512"
 ---
 # <a name="how-to-manage-service-principals"></a>Como gerenciar entidades de serviço
 
-Para fins de segurança, é sempre bom gerenciar cuidadosamente como o código do aplicativo está autorizado a acessar e modificar os recursos do Azure. Ao testar o código localmente, você sempre deve usar uma *entidade de serviço* local em vez de executar como um usuário totalmente privilegiado, conforme descrito em [Configurar seu ambiente de desenvolvimento Python local - Autenticação](configure-local-development-environment.md#configure-authentication).
+Conforme descrito em [Como autenticar um aplicativo](azure-sdk-authenticate.md), geralmente, as entidades de serviço são usadas para identificar um aplicativo com o Azure, exceto ao usar a identidade gerenciada.
 
-Ao longo do tempo, provavelmente será necessário excluir, renomear ou gerenciar de outra maneira essas entidades de serviço e, para isso, você pode usar o portal do Azure ou a CLI do Azure.
-
-## <a name="basics-of-azure-authorization"></a>Noções básicas da autorização do Azure
-
-Sempre que seu código tenta executar alguma operação nos recursos do Azure (que você faz por meio de classes nas bibliotecas do Azure), o Azure garante que o aplicativo esteja autorizado a executar essa ação. Você usa o [portal do Azure](https://portal.azure.com) ou a CLI do Azure para conceder permissões específicas com base em função ou recursos à identidade do aplicativo. (Esse procedimento evita a concessão de permissões excessivas ao aplicativo que poderiam ser exploradas se a segurança do seu aplicativo for comprometida.)
-
-Quando implantado no Azure, a identidade do aplicativo normalmente é igual ao nome que você dá ao aplicativo no serviço que o hospeda (como Serviço de Aplicativo do Azure, Azure Functions, uma máquina virtual, etc., quando a identidade gerenciada está habilitada). Porém, quando o código é executado localmente, esse serviço de hospedagem não é envolvido, portanto, você precisa apresentar um substituto adequado ao Azure.
-
-Para essa finalidade, você usa uma *entidade de serviço* local, que é outro nome para uma identidade de aplicativo, em oposição a uma identidade de usuário. A entidade de serviço tem um nome, um identificador de "locatário" (essencialmente uma ID para sua organização), um identificador de aplicativo ou "cliente" e um segredo/senha. Essas credenciais são suficientes para autenticar a identidade com o Azure, que pode então verificar se essa identidade está autorizada a acessar qualquer recurso específico.
-
-Cada desenvolvedor deve ter sua própria entidade de serviço protegida em sua conta de usuário na sua estação de trabalho. Ela nunca deve ser armazenada em um repositório de controle do código-fonte. Se uma entidade de serviço for roubada ou comprometida, você poderá excluí-la facilmente no portal do Azure para revogar todas as suas permissões e depois recriar a entidade de serviço para esse desenvolvedor.
+Ao longo do tempo, provavelmente, você precisará excluir, renomear ou, de outro modo, gerenciar essas entidades de serviço e, para isso, você poderá usar o portal do Azure ou a CLI do Azure.
 
 ## <a name="manage-service-principals-using-the-azure-portal"></a>Gerenciar entidades de serviço usando o portal do Azure
 

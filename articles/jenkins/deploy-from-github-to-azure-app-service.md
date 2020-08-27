@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, serviço de aplicativo
 ms.topic: tutorial
 ms.date: 08/10/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 6b7f1693eb02b51107e595365bc800540f98f20e
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: dea9ebe0976b45332f166034f3ff5c92ca4cfe99
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241018"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725200"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-app-service-using-jenkins"></a>Tutorial: Implantação do GitHub no Serviço de Aplicativo do Azure usando o Jenkins
 
@@ -117,7 +117,7 @@ Em seguida, crie a entidade de serviço do Azure que o Jenkins usa para autentic
 
 ## <a name="create-service-principal"></a>Criar uma entidade de serviço
 
-Em uma seção posterior, você deverá criar um trabalho de pipeline do Jenkins para compilar seu aplicativo do GitHub e implantá-lo no Serviço de Aplicativo do Azure. Para que o Jenkins acesse o Azure sem inserir suas credenciais, você precisa de uma [entidade de serviço](/active-directory/develop/app-objects-and-service-principals). Se você já tiver uma entidade de serviço que possa usar para este artigo, ignore esta seção.
+Em uma seção posterior, você deverá criar um trabalho de pipeline do Jenkins para compilar seu aplicativo do GitHub e implantá-lo no Serviço de Aplicativo do Azure. Para que o Jenkins acesse o Azure sem inserir suas credenciais, você precisa de uma [entidade de serviço](/azure/active-directory/develop/app-objects-and-service-principals). Se você já tiver uma entidade de serviço que possa usar para este artigo, ignore esta seção.
 
 Para criar uma entidade de serviço, execute o comando [az ad sp create-for-rbac](/cli/azure/ad/sp?#az-ad-sp-create-for-rbac) da CLI do Azure.
 

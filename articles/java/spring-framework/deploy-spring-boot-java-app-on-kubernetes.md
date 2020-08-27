@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc, devx-track-java
-ms.openlocfilehash: cd7afa2e54a648c282a48d781a116032e7414e1d
-ms.sourcegitcommit: f82e9f569dce0416f4040312882d28eafab05a4a
+ms.openlocfilehash: f981ba6c22de8fa985291c1a9795169c655733f6
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88040337"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725170"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Implantar um aplicativo Spring Boot no Serviço de Kubernetes do Azure
 
@@ -124,7 +124,7 @@ As etapas a seguir mostram como compilar um aplicativo Web Spring Boot e testá-
    <properties>
       <!-- Note: If your ACR name contains upper case characters, be sure to convert them to lower case characters. -->
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>2.4.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.5.2</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -320,7 +320,7 @@ Para obter mais informações sobre como executar iterativamente e depurar os co
 [Azure para desenvolvedores Java]: /azure/developer/java/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
-[Usando uma imagem personalizada do Docker para o Aplicativo Web do Azure no Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Usando uma imagem personalizada do Docker para o Aplicativo Web do Azure no Linux]: /azure/app-service/tutorial-custom-container
 [Docker]: https://www.docker.com/
 [conta gratuita do Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/

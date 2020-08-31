@@ -5,12 +5,12 @@ keywords: azure, chef, devops, máquinas virtuais, visão geral, automatizar, ha
 ms.date: 05/15/2018
 ms.topic: article
 ms.custom: devx-track-chef
-ms.openlocfilehash: af7a08e526a5b9109cb9662b1be5d2243af92e9d
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d2a834c631986b70a13c95f1403e84e82886a5f2
+ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240768"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88662937"
 ---
 # <a name="use-habitat-to-deploy-your-application-to-azure"></a>Usar o Habitat para implantar rapidamente seu aplicativo no Azure
 
@@ -28,7 +28,7 @@ Representando com precisão as dependências de runtime, o Habitat resolve a imp
 
 ## <a name="run-any-application-anywhere"></a>Execute qualquer aplicativo em qualquer lugar
 
-Com o Habitat, os aplicativos podem ser executados sem modificações em qualquer ambiente de runtime. Isso inclui tudo de bare-metal e máquinas virtuais a sistemas de PaaS (como Docker), sistemas de gerenciamento de cluster (como Mesosphere ou Kubernetes) e contêineres (como o Pivotal Cloud Foundry).
+Com o Habitat, os aplicativos podem ser executados sem modificações em qualquer ambiente de runtime. Isso inclui tudo, de bare-metal e máquinas virtuais a contêineres (como o Docker), sistemas de gerenciamento de cluster (como o Mesosphere ou o Kubernetes) e sistemas de PaaS (como o VMware Tanzu Application Service, antigo Pivotal Cloud Foundry).
 
 ## <a name="integrate-into-the-chef-devops-workflow"></a>Integrar o fluxo de trabalho do Chef DevOps
 

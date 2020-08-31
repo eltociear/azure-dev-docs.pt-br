@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 2671f861e780aad0025f881311b9bc603d72bb90
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 29e446c28cb6935ffe0eeb51fa3a4b21c93e78a4
+ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379680"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88662957"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Migrar aplicativos Tomcat para contêineres no Serviço de Kubernetes do Azure
 
@@ -36,7 +36,7 @@ Para identificar o gerenciador de persistência de sessão em uso, inspecione os
 
 As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Kubernetes. O AKS pode balancear a carga entre vários pods e reiniciar de forma transparente qualquer Pod a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
 
-Se a persistência da sessão for necessária, você precisará usar uma implementação de `PersistentManager` alternativa que será gravada em um armazenamento de dados externo, como o Gerenciador de Sessão Dinâmica com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
+Se a persistência da sessão for necessária, você precisará usar uma implementação alternativa de `PersistentManager` que será gravada em um armazenamento de dados externo, como o VMware Tanzu Session Manager com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
 ### <a name="special-cases"></a>Casos especiais
 

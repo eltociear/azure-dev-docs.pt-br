@@ -3,14 +3,14 @@ title: Guia de Início Rápido – Configurar o Jenkins usando a CLI do Azure
 description: Saiba como instalar o Jenkins em uma máquina virtual do Linux no Azure e crie um aplicativo Java de exemplo.
 keywords: jenkins, azure, devops, portal, linux, máquina virtual
 ms.topic: quickstart
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: b5be59dc1ed3fab69051a8ddd23576e27c966a7b
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 4e2250e6ca76c804f08a4f6ab4715ae4fc094570
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614564"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725210"
 ---
 # <a name="quickstart-configure-jenkins-using-azure-cli"></a>Início Rápido: Configurar o Jenkins usando a CLI do Azure
 
@@ -22,7 +22,7 @@ Neste início rápido, você concluiu estas tarefas:
 > * Criar um arquivo de instalação que baixe e instale o Jenkins
 > * Criar um grupo de recursos
 > * Criar uma máquina virtual com o arquivo de instalação
-> * Abrir a porta 8080 para que você possa conectar-se à máquina virtual via SSH
+> * Abrir a porta 8080 para acessar o Jenkins na máquina virtual
 > * Conectar-se à máquina virtual via SSH
 > * Configurar um trabalho de exemplo do Jenkins com base em um aplicativo Java de exemplo no GitHub
 > * Criar o trabalho de exemplo do Jenkins
@@ -88,7 +88,7 @@ Se você encontrar problemas ao configurar o Jenkins, consulte a [página de ins
     az vm list -d -o table --query "[?name=='QuickstartJenkins-vm']"
     ```
 
-1. Abra a porta 8080 na nova máquina virtual usando [az vm open](/cli/azure/vm#az-vm-open-port).
+1. Por padrão, o Jenkins é executado na porta 8080. Portanto, abra a porta 8080 na nova máquina virtual usando [az vm open](/cli/azure/vm#az-vm-open-port).
 
     ```azurecli
     az vm open-port \

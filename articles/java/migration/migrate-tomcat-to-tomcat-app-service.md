@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 1b22dfa4269cc0c51450ca307bb96b787278625b
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 227908087ffdbdc3ce27a3da721464ff91b6b085
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379700"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725190"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Migrar aplicativos Tomcat para o Tomcat no Serviço de Aplicativo do Azure
 
@@ -53,7 +53,7 @@ Para obter a versão atual usada pelo Serviço de Aplicativo do Azure, baixe o [
 <!-- App-Service-specific addendum to inventory-persistence-usage -->
 #### <a name="dynamic-or-internal-content"></a>Conteúdo dinâmico ou interno
 
-Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como arquivos de dados temporários) ou arquivos estáticos que são visíveis somente para o aplicativo, você pode montar o Armazenamento do Azure no sistema de arquivos do Serviço de Aplicativo. Para obter mais informações, confira [Servir conteúdo do Armazenamento do Microsoft Azure no Serviço de Aplicativo no Linux](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
+Para arquivos que são frequentemente escritos e lidos pelo o aplicativo (como arquivos de dados temporários) ou arquivos estáticos que são visíveis somente para o aplicativo, você pode montar o Armazenamento do Azure no sistema de arquivos do Serviço de Aplicativo. Para obter mais informações, confira [Servir conteúdo do Armazenamento do Microsoft Azure no Serviço de Aplicativo no Linux](/azure/app-service/configure-connect-to-azure-storage).
 
 ### <a name="identify-session-persistence-mechanism"></a>Identificar o mecanismo de persistência da sessão
 
@@ -61,7 +61,7 @@ Para identificar o gerenciador de persistência de sessão em uso, inspecione os
 
 As implementações internas de [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) do Tomcat, como [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) ou [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), não são projetadas para uso com uma plataforma distribuída e dimensionada como o Serviço de Aplicativo. Já que o Serviço de Aplicativo pode balancear a carga entre várias instâncias e reiniciar qualquer instância de maneira transparente a qualquer momento, então a persistência de um estado mutável para um sistema de arquivos não é recomendada.
 
-Se a persistência da sessão for necessária, você precisará usar uma implementação de `PersistentManager` alternativa que será gravada em um armazenamento de dados externo, como o Gerenciador de Sessão Dinâmica com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
+Se a persistência da sessão for necessária, você precisará usar uma implementação alternativa de `PersistentManager` que será gravada em um armazenamento de dados externo, como o VMware Tanzu Session Manager com o Cache Redis. Para obter mais informações, confira [Usar o Redis como um cache de sessão com o Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
 ### <a name="special-cases"></a>Casos especiais
 
@@ -212,7 +212,7 @@ Agora que você migrou seu aplicativo para o Serviço de Aplicativo do Azure, vo
 
 ### <a name="recommendations"></a>Recomendações
 
-* Se você optou por usar o diretório */home* para armazenamento de arquivos, considere [substituí-lo pelo Armazenamento do Azure](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
+* Se você optou por usar o diretório */home* para armazenamento de arquivos, considere [substituí-lo pelo Armazenamento do Azure](/azure/app-service/configure-connect-to-azure-storage).
 
 * Se você tiver uma configuração no diretório */home* que contém cadeias de conexão, chaves SSL e outras informações de segredo, considere usar uma combinação do [Azure Key Vault](/azure/app-service/app-service-key-vault-references) e/ou uma [injeção de parâmetro com configurações de aplicativo](/azure/app-service/configure-common#configure-app-settings) sempre que possível.
 

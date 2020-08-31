@@ -7,11 +7,12 @@ ms.service: mobile-services
 ms.topic: article
 ms.date: 06/08/2020
 ms.author: masoucou
-ms.openlocfilehash: 782123b4b567010a43ce72c622f7db5a65679db9
-ms.sourcegitcommit: f02ff55cef47581303a217cf1d310879cd722237
+ms.openlocfilehash: 2afdf7c4194052aff1fe7c7f915540b270ce588e
+ms.sourcegitcommit: c012db9b6e369813c56f35a0ddbb1d3a73db5c4d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84632578"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88889230"
 ---
 # <a name="add-authentication-and-manage-user-identities-in-your-mobile-apps"></a>Adicionar autenticação e gerenciar identidades de usuário em seus aplicativos móveis
 
@@ -44,14 +45,14 @@ Use os seguintes serviços para habilitar a autenticação de usuário nos seus 
 
 O [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) é o serviço de gerenciamento de identidade e de acesso baseado em nuvem da Microsoft, que ajuda seus funcionários a entrarem e obter acesso a:
 
-- Recursos externos, como o Microsoft Office 365, o portal do Azure e milhares de outros aplicativos de software como serviço (SaaS).
+- Recursos externos, como o Microsoft 365, o portal do Azure e milhares de outros aplicativos SaaS (software como serviço).
 - Recursos internos, como aplicativos em sua rede corporativa e intranet, juntamente com outros aplicativos de nuvem desenvolvidos por sua organização.
 
 ### <a name="azure-active-directory-features"></a>Recursos do Azure Active Directory
 
 - Acesso contínuo e altamente seguro ao conectar os usuários aos aplicativos que eles precisam.
 - Proteção de identidade abrangente e segurança aprimorada para identidades e acesso, com base no usuário, no local, no dispositivo, nos dados e no contexto do aplicativo.
-- Milhares de aplicativos previamente integrados para aplicativos comerciais e personalizados, como Office 365, Salesforce.com e Box.
+- Milhares de aplicativos previamente integrados para aplicativos comerciais e personalizados, como o Microsoft 365, o Salesforce.com e o Box.
 - Capacidade de gerenciar o acesso em escala.
 
 ### <a name="azure-active-directory-references"></a>Referências do Azure Active Directory

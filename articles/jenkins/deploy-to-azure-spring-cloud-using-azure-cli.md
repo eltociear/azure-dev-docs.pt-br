@@ -3,14 +3,14 @@ title: Implantar aplicativos no Azure Spring Cloud usando o Jenkins e a CLI do A
 description: Saiba como usar a CLI do Azure em um pipeline de implantação e integração contínua para implantar microsserviços no serviço Azure Spring Cloud
 keywords: jenkins, azure, devops, azure spring cloud, cli do azure
 ms.topic: tutorial
-ms.date: 08/10/2020
+ms.date: 09/01/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: 707af403bf789ccd85e52f7bb5880389f61e8f15
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: 7c6b9d526b2fe42a0210daf70ec8ba919641ced9
+ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725160"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89374557"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Tutorial: Implantar aplicativos no Azure Spring Cloud usando o Jenkins e a CLI do Azure
 
@@ -23,16 +23,13 @@ Neste tutorial, você concluirá estas tarefas:
 > * Preparar seu servidor Jenkins
 > * Usar a CLI do Azure em um pipeline do Jenkins para compilar e implantar os aplicativos de microsserviço 
 
->[!Note]
-> Atualmente, o Azure Spring Cloud é oferecido como visualização pública. As ofertas de visualização pública permitem que os clientes experimentem os novos recursos antes do lançamento oficial.  Os serviços e recursos de visualização pública não são destinados ao uso em produção.  Para saber mais sobre o suporte durante as visualizações, confira as [Perguntas frequentes](https://azure.microsoft.com/support/faq/) ou envie uma [Solicitação de suporte](/azure/azure-portal/supportability/how-to-create-azure-support-request) para saber mais.
-
 ## <a name="prerequisites"></a>Pré-requisitos
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-**Jenkins**: [Instalar o Jenkins em uma VM do Linux](configure-on-linux-vm.md)
+- **Jenkins**: [Instalar o Jenkins em uma VM do Linux](configure-on-linux-vm.md)
 
-**Conta do GitHub**: Se você ainda não tem uma conta do GitHub, crie uma [conta gratuita](https://github.com/) antes de começar.
+- **Conta do GitHub**: Se você ainda não tem uma conta do GitHub, crie uma [conta gratuita](https://github.com/) antes de começar.
 
 ## <a name="provision-a-service-instance-and-launch-a-java-spring-application"></a>Provisionar uma instância de serviço e iniciar um aplicativo Java Spring
 

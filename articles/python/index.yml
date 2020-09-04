@@ -14,28 +14,28 @@ metadata:
   ms.service: multiple
   ms.devlang: python
   ms.custom: devx-track-python
-  ms.openlocfilehash: 1a89da5a7ce092de4d8194db2136d390fec22928
-  ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
+  ms.openlocfilehash: 2dbd633555e7841eb28f58813a9ba292da989dd6
+  ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/12/2020
-  ms.locfileid: "88147247"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89374537"
 landingContent:
-- title: Implantar funções sem servidor
+- title: Funções sem servidor
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Usar o Visual Studio Code
+    - text: Implantar usando o Visual Studio Code
       url: tutorial-vs-code-serverless-python-01.md
-    - text: Usando a linha de comando
+    - text: Implantar usando a linha de comando
       url: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
     - text: Conectar ao armazenamento usando o Visual Studio Code
       url: /azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots=programming-language-python
     - text: Conectar ao armazenamento usando a linha de comando
       url: /azure/azure-functions/functions-add-output-binding-storage-queue-cli?tabs=bash%2Cbrowser&pivots=programming-language-python
-- title: Implantar aplicativos Web
+- title: Aplicativos Web
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: deploy
     links:
     - text: Flask usando o Visual Studio Code
       url: tutorial-deploy-app-service-on-linux-01.md
@@ -47,9 +47,9 @@ landingContent:
       url: /azure/app-service/tutorial-python-postgresql-app
     - text: Contêineres usando o Visual Studio Code
       url: tutorial-deploy-containers-01.md
-    - text: Criar um pipeline de CI/CD
+    - text: Pipeline de CI/CD
       url: /azure/devops/pipelines/ecosystems/python-webapp
-- title: Implantar modelos de machine learning
+- title: Aprendizado de máquina
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -63,9 +63,9 @@ landingContent:
       url: quickstarts-cognitive-services.md
     - text: Mais...
       url: quickstarts-machine-learning.md
-- title: Implantar dados e armazenamento
+- title: Dados e armazenamento
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: deploy
     links:
     - text: Bancos de dados SQL
       url: quickstarts-data-solutions.md#sql-databases
@@ -73,7 +73,7 @@ landingContent:
       url: quickstarts-data-solutions.md#tables-blobs-files-nosql
     - text: Big Data e análise
       url: quickstarts-data-solutions.md#big-data-and-analytics
-- title: Usar bibliotecas do Azure (SDK)
+- title: Bibliotecas do Azure (SDK)
   linkLists:
   - linkListType: get-started
     links:
@@ -85,7 +85,9 @@ landingContent:
       url: azure-sdk-overview.md
     - text: Conheça os padrões de uso das bibliotecas
       url: azure-sdk-library-usage-patterns.md
-- title: Explore as ferramentas para desenvolvedores
+    - text: Autenticar com os serviços do Azure
+      url: walkthrough-tutorial-authentication-01.md
+- title: Ferramentas de desenvolvedor
   linkLists:
   - linkListType: get-started
     links:

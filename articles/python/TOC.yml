@@ -112,6 +112,22 @@
           href: how-to-assign-role-permissions.md
         - name: Gerenciar entidades de serviço
           href: how-to-manage-service-principals.md
+        - name: Tutorial explicativo
+          items:
+            - name: 1 Introdução e contexto
+              href: walkthrough-tutorial-authentication-01.md
+            - name: 2 Requisitos de autenticação
+              href: walkthrough-tutorial-authentication-02.md
+            - name: 3 Implementação da API de terceiros
+              href: walkthrough-tutorial-authentication-03.md
+            - name: 4 Implementação do aplicativo principal
+              href: walkthrough-tutorial-authentication-04.md
+            - name: 5 Dependências e variáveis de ambiente
+              href: walkthrough-tutorial-authentication-05.md
+            - name: 6 Código de inicialização do aplicativo principal
+              href: walkthrough-tutorial-authentication-06.md
+            - name: 7 Ponto de extremidade do aplicativo principal
+              href: walkthrough-tutorial-authentication-07.md
     - name: Instalar Pacotes
       href: azure-sdk-install.md
     - name: Índice de pacotes

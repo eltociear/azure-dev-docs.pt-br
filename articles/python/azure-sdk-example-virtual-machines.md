@@ -4,16 +4,16 @@ description: Como provisionar uma máquina virtual do Azure usando o Python e as
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: a6595b60a70ab3b6ee36bf95b4557cb37c496188
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 08e055e282016db1c3cbf57b956a51f17b7a854a
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983488"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275190"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Exemplo: Usar as bibliotecas do Azure para provisionar uma máquina virtual
 
-Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para criar um grupo de recursos que contém uma máquina virtual Linux. ([Comandos de CLI do Azure equivalentes](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo.)
+Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para criar um grupo de recursos que contém uma máquina virtual Linux. ([Comandos equivalentes da CLI do Azure](#for-reference-equivalent-azure-cli-commands) serão fornecidos posteriormente neste artigo. Se preferir usar o portal do Azure, confira [Criar uma VM do Linux](/azure/virtual-machines/linux/quick-create-portal) e [Criar uma VM do Windows](/azure/virtual-machines/windows/quick-create-portal).)
 
 Todos os comandos neste artigo funcionam da mesma forma no bash do Linux/Mac OS e nos shells de comando do Windows, a menos que haja uma observação.
 

@@ -4,16 +4,16 @@ description: Use as bibliotecas de gerenciamento nas bibliotecas do SDK do Azure
 ms.date: 06/02/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 04e80a2b5ab6e6a1dc0adbe546132cf861667995
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: e9a08761fb9af300b5d3f2c4a9704bc7f10e1158
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982648"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275118"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-database"></a>Exemplo: Usar as bibliotecas do Azure para provisionar um banco de dados
 
-Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um banco de dados MySQL do Azure. ([Comandos de CLI do Azure equivalentes](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo.) Ele também fornece um script simples para consultar o banco de dados usando a biblioteca do mysql-conector (não é parte do SDK do Azure).
+Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um banco de dados MySQL do Azure. Ele também fornece um script simples para consultar o banco de dados usando a biblioteca do mysql-conector (não é parte do SDK do Azure). ([Comandos equivalentes da CLI do Azure](#for-reference-equivalent-azure-cli-commands) serão fornecidos posteriormente neste artigo. Se preferir usar o portal do Azure, confira [Criar um servidor PostgreSQL](/azure/postgresql/quickstart-create-server-database-portal) ou [Criar um servidor MariaDB](/azure/mariadb/quickstart-create-mariadb-server-database-using-azure-portal).)
 
 Você pode usar um código semelhante para provisionar um banco de dados PostgreSQL ou MariaDB.
 
@@ -60,9 +60,6 @@ from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.rdbms.mysql import MySQLManagementClient
 
 from azure.mgmt.rdbms.mysql.models import ServerForCreate, ServerPropertiesForDefaultCreate, ServerVersion
-
-# Retrieve subscription ID from environment variable
-subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
 
 # Constants we need in multiple places: the resource group name and the region
 # in which we provision resources. You can change these values however you want.

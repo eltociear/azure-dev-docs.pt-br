@@ -8,12 +8,12 @@ ms.date: 04/21/2020
 ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: 74262a0be1062f32f63a225521f92657334c9994
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: 4dcc1bcfb6e42089e221a1ebd7eb5abc0d37a4e3
+ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501261"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89374547"
 ---
 # <a name="azure-cli-release-notes"></a>Notas de versão da CLI do Azure
 
@@ -4571,7 +4571,7 @@ Versão 2.0.15
 
 * Corrigido o problema em que informações incorretas extras eram exibidas para `vmss get-instance-view` ao usar `--instance-id *`
 * Adicionado suporte ao `--lb-sku` para `vmss create`:
-* Removidos nomes humanos da lista de bloqueio de nome de administrador para `[vm|vmss] create`
+* Removidos nomes humanos da lista de bloqueio de nomes de administrador para `[vm|vmss] create`
 * Corrigido o problema onde `[vm|vmss] create` geraria um erro se não for possível extrair informações do plano de uma imagem
 * Corrigida uma falha ao criar um conjunto de dimensionamento de máquinas virtuais com um balanceamento de carga interno
 * Corrigido o problema onde o argumento `--no-wait` não funcionava com `vm availability-set create`

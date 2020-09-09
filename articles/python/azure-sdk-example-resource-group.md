@@ -4,16 +4,16 @@ description: Use a biblioteca de gerenciamento de recursos no SDK do Azure para 
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 1a87e53253eff5679245ac5528fac3bb10e2bc8d
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 459311e76f70e10a5da62c4205a9843427f76cec
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982608"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275110"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Exemplo: Usar as bibliotecas do Azure para provisionar um grupo de recursos
 
-Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um grupo de recursos. (O [comando de CLI do Azure equivalente](#for-reference-equivalent-azure-cli-commands) é apresentado posteriormente neste artigo.)
+Este exemplo demonstra como usar as bibliotecas de gerenciamento do SDK do Azure em um script Python para provisionar um grupo de recursos. (O [comando equivalente da CLI do Azure](#for-reference-equivalent-azure-cli-commands) será apresentado posteriormente neste artigo. Se preferir usar o portal do Azure, confira [Criar grupos de recursos](/azure/azure-resource-manager/management/manage-resource-groups-portal).)
 
 Todos os comandos neste artigo funcionam da mesma forma no bash do Linux/Mac OS e nos shells de comando do Windows, a menos que haja uma observação.
 

@@ -4,12 +4,12 @@ description: Use o SDK do Azure para bibliotecas do Python para acessar um cont�
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: bcb8d680950e2c42d3d7f092478c4d6096454b12
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 8bbbb03a4bbbdb24e2c45692a0a982341fbcd7a5
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982688"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275130"
 ---
 # <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Acessar o Armazenamento do Micrsoft Azure com as bibliotecas do Azure para Python
 
@@ -21,7 +21,16 @@ Todos os comandos neste artigo funcionam da mesma forma no bash do Linux/Mac OS 
 
 Se ele ainda não foi configurado, siga todas as instruções em [Configurar o ambiente de desenvolvimento do Python local para o Azure](configure-local-development-environment.md).
 
-Não se esqueça de criar uma entidade de serviço para o desenvolvimento local e de criar e ativar um ambiente virtual para este projeto.
+Não se esqueça de criar uma entidade de serviço para o desenvolvimento local, de definir variáveis de ambiente para a entidade de serviço (confira abaixo) e de criar e ativar um ambiente virtual para este projeto.
+
+Este exemplo pressupõe que você já definiu as seguintes variáveis de ambiente:
+
+| Nome da variável | Valor esperado |
+| --- | --- |
+| AZURE_SUBSCRIPTION_ID | O GUID da assinatura do Azure. |
+| AZURE_CLIENT_ID | A ID do cliente da entidade de serviço local. |
+| AZURE_CLIENT_SECRET | O segredo do cliente da entidade de serviço. |
+| AZURE_TENANT_ID | A ID do locatário da entidade de serviço. |
 
 ## <a name="2-install-library-packages"></a>2: Instalar pacotes de biblioteca
 

@@ -4,16 +4,16 @@ description: Use o SDK do Azure para bibliotecas do Python para provisionar um c
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 6a956cf0f4f4689e653307f95d5f0900c8d01589
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b774d986b886aae528c97c4583511a8d6c0ba0a5
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983428"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275200"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Provisionar o Armazenamento do Azure usando as bibliotecas do Azure para Python
 
-Neste artigo, você aprenderá a usar as bibliotecas de gerenciamento do Azure em um script do Python para provisionar um grupo de recursos que contém a conta de Armazenamento do Microsoft Azure e um contêiner de armazenamento de Blobs. ([Comandos de CLI do Azure equivalentes](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo.)
+Neste artigo, você aprenderá a usar as bibliotecas de gerenciamento do Azure em um script do Python para provisionar um grupo de recursos que contém a conta de Armazenamento do Microsoft Azure e um contêiner de armazenamento de Blobs. ([Comandos equivalentes da CLI do Azure](#for-reference-equivalent-azure-cli-commands) são fornecidos posteriormente neste artigo. Se preferir usar o portal do Azure, confira [Criar uma conta de Armazenamento do Microsoft Azure](/azure/storage/common/storage-account-create?tabs=azure-portal) e [Criar um contêiner de blobs](/azure/storage/blobs/storage-quickstart-blobs-portal).)
 
 Depois de provisionar os recursos, consulte [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md) para usar as bibliotecas de clientes do Azure no código do aplicativo Python para carregar um arquivo nesse contêiner de armazenamento de Blobs.
 

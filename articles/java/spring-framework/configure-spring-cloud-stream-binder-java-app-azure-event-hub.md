@@ -8,12 +8,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: ff068c48a36aa746de1dac23861d453e0c6ff512
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 50b6046e8b4435d8e75af1bb8df360be018eb8ec
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379190"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614301"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Como criar um aplicativo Spring Cloud Stream Binder com os Hubs de Eventos do Azure
 
@@ -136,7 +136,7 @@ O procedimento a seguir cria um aplicativo Spring Boot.
    <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
-      <version>1.1.0.RC2</version>
+      <version>1.2.7</version>
    </dependency>
    ```
 
@@ -253,7 +253,6 @@ O procedimento a seguir cria um aplicativo Spring Boot.
    |       `spring.cloud.stream.bindings.input.group `        | Especifica um Grupo de Consumidores do Hub de Eventos do Azure, que pode ser definido para “$Default” para usar o grupo de consumidores básico gerado quando você criou seu Hub de Eventos do Azure. |
    |    `spring.cloud.stream.bindings.output.destination`     |                               Especifica o destino de saída do Hub de Eventos do Azure que, para este tutorial, será igual ao destino de entrada.                               |
 
-
 3. Salve e feche o arquivo *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Adicionar código de exemplo para implementar a funcionalidade básica do hub de eventos
@@ -342,13 +341,13 @@ Nesta seção, você criará as classes Java necessárias para enviar eventos ao
 
       @StreamListener(Sink.INPUT)
       public void handleMessage(String message, @Header(AzureHeaders.CHECKPOINTER) Checkpointer checkpointer) {
-         LOGGER.info("New message received: '{}'", message);
-         checkpointer.success().handle((r, ex) -> {
-            if (ex == null) {
-               LOGGER.info("Message '{}' successfully checkpointed", message);
-            }
-            return null;
-         });
+        LOGGER.info("New message received: '{}'", message);
+        checkpointer.success()
+                .doOnSuccess(s -> LOGGER.info("Message '{}' successfully checkpointed", message))
+                .doOnError((msg) -> {
+                    LOGGER.error(String.valueOf(msg));
+                })
+                .subscribe();
       }
    }
    ```

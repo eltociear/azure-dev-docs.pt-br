@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 5: implantação do código de função do Python 
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 950dda297f131f9ae9e2029f79cecae7455e0c07
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: e4108ff7b705be96f62c06a02e301bce9247c048
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982848"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473591"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Implantar o Azure Functions no Python
 
@@ -75,4 +75,4 @@ Para aplicar as alterações feitas por meio do portal ou do **Azure Explorer** 
 > [!div class="nextstepaction"]
 > [Implantei as funções – prossiga para a etapa 6 >>>](tutorial-vs-code-serverless-python-06.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=05-deploy)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

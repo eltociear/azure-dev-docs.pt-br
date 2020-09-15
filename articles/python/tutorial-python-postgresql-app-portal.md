@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 9e6794d655d420d5f6b4093aecf15b7540f34709
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 4ad5086e0bc0500a7b7a117142a153e56ee4b481
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614529"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614292"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Tutorial: Implantar um aplicativo Web Django com PostgreSQL usando o portal do Azure
 
@@ -27,7 +27,7 @@ Neste tutorial, você usa o portal do Azure para concluir as seguintes tarefas:
 > - Exibir logs de diagnóstico
 > - Gerenciar o aplicativo Web no portal do Azure
 
-Você também pode usar a [versão baseada em CLI do Azure deste tutorial](/azure/app-service/tutorial-python-postgresql-app).
+Você também pode usar a **[versão deste tutorial baseada na CLI do Azure](/azure/app-service/tutorial-python-postgresql-app)** .
 
 ## <a name="fork-the-sample-repository"></a>Bifurcar a amostra de repositório
 

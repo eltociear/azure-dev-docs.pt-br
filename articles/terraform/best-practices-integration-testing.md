@@ -4,12 +4,12 @@ description: Saiba mais sobre os testes de integração e como usar o Azure DevO
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 3d305fb63deffb8f56ebd2cb1503bac543c5b84b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ced6dc9a3ff40ceee3ac37daea3ab6300a529e0e
+ms.sourcegitcommit: 62f78d529c02c7d7895d32ec8ed415bf0946d056
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241298"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89557549"
 ---
 # <a name="tutorial-configure-integration-tests-for-terraform-projects-in-azure"></a>Tutorial: Configurar testes de integração para projetos do Terraform no Azure
 
@@ -36,7 +36,7 @@ Neste artigo, você aprende a realizar as seguintes tarefas:
 - **Instalar o Terraform**: Com base em seu ambiente, [baixar e instalar o Terraform](https://www.terraform.io/downloads.html).
 - **Bifurcar os exemplos de teste**: Bifurcar o [projeto de exemplo do Terraform no GitHub](https://github.com/Azure/terraform) e cloná-lo em seu computador de desenvolvimento/teste.
 
-## <a name="validate-alocal-terraform-configuration"></a>Validar uma configuração local do Terraform
+## <a name="validate-a-local-terraform-configuration"></a>Validar uma configuração local do Terraform
 
 O comando [terraform validate](https://www.terraform.io/docs/commands/validate.html) é executado na linha de comando, no diretório que contém os arquivos do Terraform. A meta principal desse comando é validar a sintaxe.
 

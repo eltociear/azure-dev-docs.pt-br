@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Criar e implantar o Azure Functions sem servidor no Python com o VS Code'
-description: Etapa 1 do tutorial, introdução e pré-requisitos.
+description: Etapa 1 do tutorial, trabalhar com o Azure Functions, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 25ae33cef961b35747ee614a52ff80ebf1e96d62
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 740a64785c57694be34f37ef6aa6571b0b3304b7
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982978"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473601"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Tutorial: Criar e implantar o Azure Functions sem servidor em Python com o Visual Studio Code
 
@@ -71,4 +71,4 @@ O comando `func` funciona por meio do arquivo *func.cmd* que está instalado na 
 > [!div class="nextstepaction"]
 > [Entrei no Azure – prossiga para a etapa 2 >>>](tutorial-vs-code-serverless-python-02.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=01-verify-prerequisites)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

@@ -4,12 +4,12 @@ description: Etapa 6 do tutorial, expandindo um projeto do Azure Functions adici
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 6dbdd722d1167e703119b8709ec6b44eadc3dcec
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 29d625d40868ab761037c1a4a049f7e95e63df26
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982788"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473571"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Adicionar uma segunda função de Python ao Azure Functions
 
@@ -119,4 +119,4 @@ Após sua primeira implantação, você poderá fazer alterações em seu códig
 > [!div class="nextstepaction"]
 > [Adicionei uma segunda função – prossiga para a etapa 7 >>>](tutorial-vs-code-serverless-python-07.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=06-second-function)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

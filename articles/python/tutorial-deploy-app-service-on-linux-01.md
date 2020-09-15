@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code'
-description: 'Tutorial, etapa 1: introdução, pré-requisitos e entrada no Azure.'
+description: Etapa 1 do tutorial, trabalhar com aplicativos Web, introdução, pré-requisitos
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 255e94d863f0c144ff4de402a2d775a21645b95a
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: d4544c6e013f20b606303e56ff2169e87383d88c
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501371"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614318"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Tutorial: Implantar aplicativos Python no Serviço de Aplicativo do Azure no Linux usando o Visual Studio Code
 
@@ -18,6 +18,9 @@ Este artigo explica passo-a-passo como usar o Visual Studio Code para implantar 
 Se você encontrar problemas com alguma das etapas deste tutorial, adoraríamos ouvir os detalhes. Use o link **Encontrei um problema** no final de cada artigo para enviar comentários.
 
 Para assistir a um vídeo de demonstração, confira <a href="https://www.youtube.com/watch?v=dNVvFttc-sA&feature=youtu.be&ocid=AID3006292" target="_blank">Criar WebApps com o VS Code e o Serviço de Aplicativo do Azure</a> (youtube.com) do PyCon 2020 virtual.
+
+> [!NOTE]
+> Se preferir implantar aplicativos usando a CLI, confira **[Início Rápido: Criar um aplicativo Python no Serviço de Aplicativo do Azure no Linux](/azure/app-service/quickstart-python)** .
 
 > [!TIP]
 > O [Serviço de Aplicativo do Azure no Linux](/azure/app-service/overview#app-service-on-linux) executa o código-fonte em um contêiner predefinido do Docker. Esse contêiner executa aplicativos com o Python 3.7, usando o servidor Web [Gunicorn](https://gunicorn.org). As características desse contêiner são descritas em [Configurar aplicativos Python para o Serviço de Aplicativo no Linux](/azure/app-service/configure-language-python). A própria definição de contêiner está no [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).

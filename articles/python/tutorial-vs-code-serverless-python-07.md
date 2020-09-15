@@ -4,12 +4,12 @@ description: 'Tutorial, etapa 7: adição de uma associação no Python para gra
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 211d1534d617b649b574f9f3d23e8c5ffd5ac414
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: a8e320b42221b1f1d30859d41b8e56f52c18072a
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982804"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473611"
 ---
 # <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
@@ -99,4 +99,4 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 > [!div class="nextstepaction"]
 > [Adicionei uma associação de armazenamento – prossiga para a etapa 8 >>>](tutorial-vs-code-serverless-python-08.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=python-functions-extension&step=07-storage-binding)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

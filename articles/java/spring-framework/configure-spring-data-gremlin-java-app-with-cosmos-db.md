@@ -1,20 +1,20 @@
 ---
 title: Como usar o Iniciador do Spring Data Gremlin com a API SQL do Azure Cosmos DB
-description: Saiba como configurar um aplicativo criado com o Inicializador do Spring Boot com a API SQL do Azure Cosmos DB.
+description: Saiba como configurar um aplicativo criado com o Spring Boot Initializr com a API SQL do Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-ms.date: 01/10/2020
+ms.date: 08/03/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: 81a80d14e4cf371801cf75af1618048dda8775d7
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.openlocfilehash: 4a19b6dff945cb04d2b726b546e362c261a00595
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810619"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614329"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Como usar o Iniciador do Spring Data Gremlin com a API SQL do Azure Cosmos DB
 
@@ -33,16 +33,16 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
 * [Apache Maven](http://maven.apache.org/) versão 3.0 ou posterior.
 
 
-## <a name="create-resource"></a>Criar recurso
+## <a name="create-an-azure-cosmos-db-account"></a>Criar uma conta do Azure Cosmos DB
 
-### <a name="create-azure-cosmos-db"></a>Criar Azure Cosmos DB
+### <a name="create-a-cosmos-db-account-using-the-azure-portal"></a>Criar uma conta do Cosmos DB usando o portal do Azure
 
-1. Navegue até o portal do Azure em <https://portal.azure.com/> e clique em `+Create a resource`.
+1. Navegue até o portal do Azure em <https://portal.azure.com/> e selecione `+Create a resource`.
 
    >[!div class="mx-imgBorder"]
    >![create-a-resource][create-a-resource-01]
 
-1. Clique em `Databases` e em `Azure Cosmos DB`.
+1. Selecione `Databases`e, em seguida, selecione`Azure Cosmos DB`.
 
    >[!div class="mx-imgBorder"]
    >![create-azure-cosmos-db][create-a-resource-02]
@@ -55,16 +55,20 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    * Escolha `Gremlin (Graph)` para a API.
    * Especifique o `Location` para seu banco de dados.
    
-1. Após especificar essas opções, clique em `Review + create`.
+1. Após especificar essas opções, selecione `Review + create`.
 
    >[!div class="mx-imgBorder"]
    >![create-azure-cosmos-db-account][create-a-resource-03]
 
-1. Examine a especificação e clique em `Create` para criar seu banco de dados.
+1. Revise a especificação e selecione `Create` para criar o banco de dados.
+
+1. Quando o banco de dados tiver sido criado, selecione **Ir para o recurso**. Ele também está listado no **Painel** do Azure, bem como nas páginas **Todos os Recursos** e **Azure Cosmos DB**. Você pode selecionar o banco de dados em qualquer um desses locais para abrir a página de propriedades de seu cache.
+
+1. Quando a página de propriedades do banco de dados for exibida, selecione **Chaves** e copie o URI e as chaves de acesso do banco de dados. Você usará esses valores no aplicativo Spring Boot.
 
 ### <a name="add-a-graph-to-your-azure-cosmos-database"></a>Adicionar um grafo ao seu Azure Cosmos DB
 
-1. Na página Cosmos DB, clique em `Data Explorer` e em `New Graph`.
+1. Na página do Cosmos DB, selecione `Data Explorer` e escolha `New Graph`.
 
    >[!div class="mx-imgBorder"]
    >![new-graph][create-a-graph-01]
@@ -74,10 +78,9 @@ Os seguintes pré-requisitos são obrigatórios para que você siga as etapas ne
    * Especifique uma `Database id` exclusiva para o seu banco de dados.
    * Você pode optar por especificar sua `Storage capacity` ou pode aceitar o padrão.
    * Especifique uma `Graph id` exclusiva para o seu grafo.
-   * Especifique um `Partition key`. Para obter mais informações, confira a [partição do grafo].
-Clique em `OK`.
+   * Especifique um `Partition key`. Para obter mais informações, confira a [partição do grafo]. Selecione `OK`.
    
-   Quando você tiver especificado essas opções, clique em `OK` para criar o grafo.
+   Após especificar essas opções, selecione `OK` para criar o grafo.
 
    >[!div class="mx-imgBorder"]
    >![add-graph][create-a-graph-02]
@@ -89,44 +92,64 @@ Clique em `OK`.
    
    
 
-## <a name="create-simple-spring-boot-application-with-the-spring-initializr"></a>Criar um aplicativo Spring Boot simples com o Spring Initializr
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Criar um aplicativo Spring Boot simples com o Spring Initializr
 
 1. Navegue até <https://start.spring.io/>.
 
-1. Preencha os metadados do projeto e clique em `GENERATE`:
+1. Especifique que você deseja gerar um projeto **Maven** com **Java**, insira os nomes de **Grupo** e **Artefato** para o aplicativo, especifique a versão do **Spring Boot** como 2.3.1 e selecione **GERAR**.
+
+> [!NOTE]
+>
+> O Spring Initializr usa os nomes de **Grupo** e **Artefato** para criar o nome do pacote; por exemplo: `com.example.wintiptoysdata`.
+
 
    >[!div class="mx-imgBorder"]
    >![spring-initializr][spring-initializr-01]
 
-1. Descompacte o arquivo e importe-o para o IDE.
+1. Quando solicitado, baixe o projeto para um caminho no computador local.
+
+1. Depois de extrair os arquivos para o sistema local, importe-os para o IDE.
 
 
-## <a name="update-code-according-to-the-sample-project"></a>Atualizar o código de acordo com o projeto de exemplo
+## <a name="configure-your-spring-boot-app-to-use-the-spring-data-gremlin-starter"></a>Configure seu aplicativo Spring Boot para usar o Iniciador do Spring Data Gremlin
 
-Modifique o projeto como o projeto de exemplo: [azure-spring-data-sample-gremlin].
+Replicaremos as configurações do [exemplo do Azure Spring Data Gremlin](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-data-sample-gremlin) existente. Navegue até o exemplo e siga as etapas nesta seção para configurar o aplicativo Spring Boot.
 
-1. Adicionar dependência de `azure-spring-data-gremlin`
+1. Localize o arquivo *pom.xml* no diretório do seu aplicativo; por exemplo:
 
-1. Excluir todos os conteúdos em `src/test/`
+   *C:\SpringBoot\wingtiptoysdata\pom.xml*
 
-1. Adicione todos os arquivos Java em `src/main/java`, assim como faz esse exemplo.
+   - ou -
 
-1. Atualize a configuração em `src/main/resorces/application.properties`, em que:
+   */users/example/home/wingtiptoysdata/pom.xml*
+
+1. Abra o arquivo *pom.xml* e adicione o Iniciador do Spring Data Gremlin à lista de `<dependencies>`:
+
+   ```xml
+   <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-spring-data-gremlin</artifactId>
+      <version>2.3.1-beta.1</version> <!-- {x-version-update;com.azure:azure-spring-data-gremlin;current} -->
+    </dependency>
+   ```
+
+1. Salve e feche o arquivo *pom.xml*.
+
+1. Navegue até a pasta *src/test/* e exclua todo o conteúdo.
+
+1. Navegue até a pasta *src/main/java* no aplicativo de exemplo e copie e substitua esse mesmo diretório em seu aplicativo Spring Boot local.
+
+1. No arquivo *src/main/resources/application.properties*, atualize as configurações de maneira a incluir:
 
    | Campo              | Descrição                                                                                                                                                                                                             |
    |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | `endpoint`         | Especifica o URI do Gremlin para o seu banco de dados, que é derivado da **ID** exclusiva que você especificou ao criar seu Azure Cosmos DB anteriormente no tutorial.                                                 |
+   | `endpoint`         | Especifica o URI do Gremlin para seu banco de dados, que é derivado da **ID** exclusiva que você especificou ao criar o Azure Cosmos DB anteriormente no início rápido.                                                 |
    | `port`             | Especifica a porta TCP/IP, que deve ser **443** para HTTPS.                                                                                                                                                           |
-   | `username`         | Especifica a **ID de banco de dados** e a **ID do Graph** exclusivas usadas ao adicionar o grafo anteriormente. Essa opção deve ser inserida usando a seguinte sintaxe: “/dbs/**{ID do banco de dados}**/colls/**{Id do Graph}**”. |
-   | `password`         | Especifica a **Chave de acesso** primária ou secundária copiada anteriormente neste tutorial.                                                                                                                      |
+   | `username`         | Especifica a **ID de banco de dados** e a **ID do Graph** exclusivas usadas ao adicionar o grafo anteriormente neste início rápido. Essa opção deve ser inserida usando a seguinte sintaxe: “/dbs/ **{ID do banco de dados}** /colls/ **{ID do Graph}** ”. |
+   | `password`         | Especifica a **Chave de acesso** primária ou secundária copiada anteriormente neste início rápido.                                                                                                                      |
    | `sslEnabled`       | Especifica se deseja habilitar SSL.                                                                                                                                                                                           |
    | `telemetryAllowed` | Especifique **true** se você quiser habilitar a telemetria; caso contrário, **false**.
    | `maxContentLength` | Especifica o tamanho máximo do conteúdo.                                                                                                                                                                                           |
-
-1. Sobre como obter a senha:
-
-   >[!div class="mx-imgBorder"]
-   >![get-password][get-password-01]
 
 ## <a name="build-and-run-the-project"></a>Compilar e executar o projeto
 
@@ -145,7 +168,7 @@ Modifique o projeto como o projeto de exemplo: [azure-spring-data-sample-gremlin
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
+Para saber mais sobre o Spring no Azure, acesse a documentação sobre o Spring no Azure.
 
 > [!div class="nextstepaction"]
 > [Spring no Azure](/azure/developer/java/spring-framework)

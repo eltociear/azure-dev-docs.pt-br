@@ -4,12 +4,12 @@ description: 'Tutorial, parte 4: exibição de logs do Serviço de Aplicativo do
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: aeaaafbb271689babd03c2ccc3216703c3580ebc
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 92af617452aa8892f61e110a69be53a9208f3883
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983498"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473499"
 ---
 # <a name="4-stream-logs-from-azure-app-service-for-a-container"></a>4: Transmitir logs do Serviço de Aplicativo do Azure para um contêiner
 
@@ -41,4 +41,4 @@ De dentro do VS Code, você pode exibir (ou "acompanhar") os logs do site em exe
 > [!div class="nextstepaction"]
 > [Vejo os logs – prossiga para a etapa 5 >>>](tutorial-deploy-containers-05.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=04-stream-logs)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

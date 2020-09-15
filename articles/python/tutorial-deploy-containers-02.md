@@ -4,12 +4,12 @@ description: Etapa 2 do tutorial, implantando a imagem real do Docker no Serviç
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 1a8afac614f930e3d26424d5d776ff5d97019324
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 080f3f5aa82d9944b5f26d3a54fb6f10bfe914cb
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983528"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473541"
 ---
 # <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Implantar uma imagem de contêiner no Serviço de Aplicativo do Azure
 
@@ -48,4 +48,4 @@ Com uma imagem de contêiner em um registro, você pode usar a extensão do Dock
 > [!div class="nextstepaction"]
 > [Implantei a imagem – prossiga para a etapa 3 >>>](tutorial-deploy-containers-03.md)
 
-[Encontrei um problema](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=02-deploy-container)
+Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

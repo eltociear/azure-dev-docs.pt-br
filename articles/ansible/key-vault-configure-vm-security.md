@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, cofre de chaves, segurança, credenciais, segr
 ms.topic: tutorial
 ms.date: 04/20/2020
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 935361b62c30a34d3a2916abba79a2c2c99d1214
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 4891b277f8c1f9fcd7fe4c1d54ed13b39f19d2e4
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239998"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682018"
 ---
 # <a name="tutorial-use-azure-key-vault-with-a-linux-virtual-machine-in-ansible"></a>Tutorial: Usar o Azure Key Vault com uma máquina virtual do Linux no Ansible
 
@@ -40,13 +40,13 @@ Este tutorial mostra como usar a coleção do Ansible para módulos do Azure usa
 
 Use a CLI do Azure para obter as informações de assinatura necessárias do Azure exigidas ao usar os módulos do Ansible para o Azure. 
 
-1. Obtenha a ID da assinatura do Azure e a ID de locatário da assinatura do Azure usando o comando `az account show`. Para o espaço reservado `<Subscription>`, especifique o nome da assinatura do Azure ou a ID da assinatura do Azure. O comando exibirá muitos dos valores de chave associados à assinatura padrão do Azure. Se você tiver várias assinaturas, talvez seja necessário definir a assinatura atual por meio do comando [az account set](/cli/azure/account?view=azure-cli-latest#az-account-set). Na saída do comando, anote os valores **ID** e **tenantID**.
+1. Obtenha a ID da assinatura do Azure e a ID de locatário da assinatura do Azure usando o comando `az account show`. Para o espaço reservado `<Subscription>`, especifique o nome da assinatura do Azure ou a ID da assinatura do Azure. O comando exibirá muitos dos valores de chave associados à assinatura padrão do Azure. Se você tiver várias assinaturas, talvez seja necessário definir a assinatura atual por meio do comando [az account set](/cli/azure/account#az-account-set). Na saída do comando, anote os valores **ID** e **tenantID**.
 
     ```azurecli
     az account show --subscription "<Subscription>" --query tenantId
     ```
 
-1. Se você não tiver uma entidade de serviço para a assinatura do Azure. [crie uma entidade de serviço do Azure com a CLI do Azure](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Na saída do comando, anote o valor **appId**.
+1. Se você não tiver uma entidade de serviço para a assinatura do Azure. [crie uma entidade de serviço do Azure com a CLI do Azure](/cli/azure/create-an-azure-service-principal-azure-cli). Na saída do comando, anote o valor **appId**.
 
 1. Obtenha a ID de objeto da entidade de serviço usando o comando `az ad sp show`. Para o espaço reservado `<ApplicationID>`, especifique a appId de entidade de serviço. O parâmetro `--query` indica qual valor imprimir em *stdout*. Nesse caso, é a ID de objeto da entidade de serviço.
 
@@ -441,23 +441,23 @@ Quando você tiver o cofre de chaves e o segredo dele estabelecidos, poderá usa
     
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. Substitua o espaço reservado `<kv_rg>` pelo grupo de recursos usado para manter o cofre de chaves de demonstração.
+Quando não forem mais necessários, exclua os recursos criados neste artigo. Substitua o espaço reservado `<kv_rg>` pelo grupo de recursos usado para manter o cofre de chaves de demonstração. 
 
-```yml
-- hosts: localhost
-  vars:
-    kv_rg: <kv_rg>
-    test_vm_rg: kv_test_vm_rg
-  tasks:
-    - name: Delete the key vault resource group
-      azure_rm_resourcegroup:
-        name: "{{ kv_rg }}"
-        force_delete_nonempty: yes
-        state: absent
-    - name: Delete the test vm resource group
-      azure_rm_resourcegroup:
-        name: "{{ test_vm_rg }}"
-        force_delete_nonempty: yes
+```yml  
+- hosts: localhost  
+  vars: 
+    kv_rg: <kv_rg>  
+    test_vm_rg: kv_test_vm_rg   
+  tasks:    
+    - name: Delete the key vault resource group 
+      azure_rm_resourcegroup:   
+        name: "{{ kv_rg }}" 
+        force_delete_nonempty: yes  
+        state: absent   
+    - name: Delete the test vm resource group   
+      azure_rm_resourcegroup:   
+        name: "{{ test_vm_rg }}"    
+        force_delete_nonempty: yes  
         state: absent
 ```
 

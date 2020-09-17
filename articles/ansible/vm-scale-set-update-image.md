@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, máquina virtual, con
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 5e94d26ac4dc0b8aee2dfcf495e010702c4c79f5
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 85fe3ec53b0a32a06ded0bbe0da47c62e15fcf41
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240868"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681835"
 ---
 # <a name="tutorial-update-the-custom-image-of-azure-virtual-machine-scale-sets-using-ansible"></a>Tutorial: Atualizar a imagem personalizada dos conjuntos de dimensionamento de máquinas virtuais do Azure usando o Ansible
 
@@ -406,27 +406,7 @@ Você verá que a imagem personalizada subjacente da máquina virtual é atualiz
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
-
-Salve o seguinte código como `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: myrg
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
-```
-
-Execute o guia estratégico usando o comando `ansible-playbook`:
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

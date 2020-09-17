@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 4ad5086e0bc0500a7b7a117142a153e56ee4b481
-ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
+ms.openlocfilehash: 19c0dda48b0fb7b5b0c3af75a1d94d3c9b9e4080
+ms.sourcegitcommit: 4824cea71195b188b4e8036746f58bf8b70dc224
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614292"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89753763"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Tutorial: Implantar um aplicativo Web Django com PostgreSQL usando o portal do Azure
 
@@ -230,15 +230,15 @@ Com o código implantado e o banco de dados em vigor, o aplicativo está quase p
 
 Agora você está pronto para executar um teste rápido do aplicativo para demonstrar que ele está funcionando com o banco de dados PostgreSQL.
 
-1. Na guia ou janela do navegador do aplicativo Web, volte à página **Visão geral** e, em seguida, selecione a **URL** para o aplicativo Web (do formulário `http:\//\<app-name>.azurewebsites.net`).
+1. Na guia ou janela do navegador do aplicativo Web, volte à página **Visão geral** e, em seguida, selecione a **URL** para o aplicativo Web (do formulário `http://<app-name>.azurewebsites.net`).
 
 1. O aplicativo deve exibir a mensagem "Não há enquetes disponíveis" porque ainda não há enquetes específicas no banco de dados.
 
-1. Navegue até `http:\//\<app-name>.azurewebsites.net/admin` (a página "Administração do Django") e entre usando as credenciais de superusuário da seção anterior (`root` e `Pollsdb1`).
+1. Navegue até `http://<app-name>.azurewebsites.net/admin` (a página "Administração do Django") e entre usando as credenciais de superusuário da seção anterior (`root` e `Pollsdb1`).
 
 1. Em **Enquetes**, selecione **Adicionar** ao lado de **Perguntas** e crie uma enquete com algumas opções.
 
-1. Navegue novamente para `http:\//\<app-name>.azurewebsites.net/` para confirmar que as perguntas agora são apresentadas ao usuário. Responda às perguntas como desejar para gerar dados no banco de dados.
+1. Navegue novamente para `http://<app-name>.azurewebsites.net/` para confirmar que as perguntas agora são apresentadas ao usuário. Responda às perguntas como desejar para gerar dados no banco de dados.
 
 **Parabéns!** Você está executando um aplicativo Web Django, escrito em Python, no Serviço de Aplicativo do Azure para Linux, com um banco de dados PostgreSQL ativo.
 

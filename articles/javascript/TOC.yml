@@ -10,7 +10,9 @@
       items:
         - name: Hospedagem de aplicativo
           items:
-            - name: Sites estáticos
+            - name: Aplicativos Web estáticos do Azure
+              href: /azure/static-web-apps/getting-started
+            - name: Sites estáticos do Armazenamento
               href: tutorial-vscode-static-website-node-01.md
             - name: Aplicativos Web e APIs do Node.js
               href: tutorial-vscode-azure-app-service-node-01.md

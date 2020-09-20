@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, máquina virtual
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: c9f6d9a954b8bdbd05ede42cc69a0078eae3cea2
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 6ef5b2799218e3edb008d19102985d38ca6646d6
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240428"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681947"
 ---
 # <a name="quickstart-configure-linux-virtual-machines-in-azure-using-ansible"></a>Início Rápido: Configurar máquinas virtuais do Linux no Azure usando o Ansible
 
@@ -58,10 +58,6 @@ A seção a seguir do guia estratégico de exemplo do Ansible cria uma sub-rede 
 ```
 
 ## <a name="create-a-public-ip-address"></a>Criar um endereço IP público
-
-
-
-
 
 [Endereços IP públicos](/azure/virtual-network/virtual-network-ip-addresses-overview-arm) permitem recursos de Internet para comunicar a entrada para recursos do Azure. Endereços IP públicos também habilitam recursos do Azure para comunicar a saída a serviços do Azure voltados ao público. Nos dois cenários, um endereço IP atribuído ao recurso que está sendo acessado. O endereço é dedicado ao recurso até que você cancele a atribuição. Se um endereço IP público não está atribuído a um recurso, o recurso ainda pode se comunicar externamente com a Internet. A conexão é feita pelo Azure, atribuindo dinamicamente um endereço IP disponível. O endereço atribuído dinamicamente não é dedicado ao recurso.
 
@@ -282,6 +278,10 @@ Esta seção orienta você na execução do guia estratégico de exemplo do Ansi
     ```bash
     ssh azureuser@<ip-address>
     ```
+
+## <a name="clean-up-resources"></a>Limpar os recursos
+
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

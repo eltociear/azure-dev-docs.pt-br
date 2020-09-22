@@ -6,12 +6,12 @@ metadata:
   description: O Spring é uma estrutura de aplicativo de software livre desenvolvida pela VMware que oferece uma abordagem simplificada e modular para a criação de aplicativos Java.
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: bf6e9302c0c566881be4161a632409f083f29322
-  ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+  ms.openlocfilehash: 8260997ed17f456b2307a4e2d4092104847ceb6e
+  ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/20/2020
-  ms.locfileid: "88662947"
+  ms.lasthandoff: 09/21/2020
+  ms.locfileid: "90831552"
 landingContent:
 - title: Guias de introdução
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: Usar a API do SQL do Azure Cosmos DB
       url: configure-spring-boot-starter-java-app-with-cosmos-db.md
     - text: Implantar um aplicativo Spring Boot
-      url: deploy-spring-boot-java-app-with-maven-plugin.md
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
     - text: Implantar um aplicativo em um cluster no AKS
       url: deploy-spring-boot-java-app-on-kubernetes.md
     - text: Implantar um aplicativo nos Aplicativos Web para Contêineres

@@ -1,9 +1,9 @@
 - name: Guias de início rápido do Azure para Java
-  href: /azure/developer/java/quickstarts
+  href: ./index.yml
   items:
     - name: Serviços de computação
       href: compute.md
-    - name: data
+    - name: Dados
       href: data.md
     - name: Armazenamento
       href: storage.md

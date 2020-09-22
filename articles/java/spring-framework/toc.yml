@@ -70,7 +70,7 @@
     - name: Tutoriais
       items:
         - name: Implantar o Serviço de Aplicativo com Maven
-          href: deploy-spring-boot-java-app-with-maven-plugin.md
+          href: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
         - name: Implantar para o Kubernetes
           href: deploy-spring-boot-java-app-on-kubernetes.md
         - name: Implantar o aplicativo Web para contêineres

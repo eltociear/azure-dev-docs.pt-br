@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: 5bd1611418cca94c5f580b085a067df35d7a1248
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: a8e9f883e76f3c79a9b5470c18907276d9262d03
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725230"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682159"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-app-service"></a>Migrar aplicativos Spring Boot para o Serviço de Aplicativo do Azure
 
@@ -113,7 +113,7 @@ Você precisará criar um aplicativo Web em seu Plano do Serviço de Aplicativo 
 
 #### <a name="maven-applications"></a>Aplicativos Maven
 
-Se o seu aplicativo for criado com base em um arquivo POM do Maven, [use o plug-in do Aplicativo Web para Maven](/azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin#configure-maven-plugin-for-azure-app-service) para criar o aplicativo Web e implantar seu aplicativo.
+Se o seu aplicativo for criado com base em um arquivo POM do Maven, use o plug-in do Aplicativo Web para Maven para criar o aplicativo Web e implantar seu aplicativo. Para saber mais, confira [Início Rápido: Criar um aplicativo Java no Serviço de Aplicativo do Azure](/azure/app-service/quickstart-java?tabs=javase&pivots=platform-linux).
 
 #### <a name="non-maven-applications"></a>Aplicativos não Maven
 

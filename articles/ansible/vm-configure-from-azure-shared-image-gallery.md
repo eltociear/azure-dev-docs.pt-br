@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, virtual machine, virtual machi
 ms.topic: tutorial
 ms.date: 10/14/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: c214daa3f63f88711ace9d41ffb9978d20551fc9
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ad8bfca4030583e67423144dbc650eecb22e5060
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240568"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681965"
 ---
 # <a name="tutorial-create-a-vm-or-virtual-machine-scale-set-from-the-azure-shared-image-gallery-using-ansible"></a>Tutorial: Criar uma VM ou um conjunto de dimensionamento de máquinas virtuais da Galeria de Imagens Compartilhadas do Azure usando o Ansible
 
@@ -101,7 +101,7 @@ O primeiro guia estratégico de exemplo `00-prerequisites.yml` cria o que é nec
           version: latest
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 00-prerequisites.yml
@@ -133,7 +133,7 @@ O próximo guia estratégico, `01a-create-generalized-image.yml`, generaliza a V
         source: "{{ source_vm_name }}"
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 01a-create-generalized-image.yml
@@ -160,7 +160,7 @@ A galeria de imagens é o repositório para compartilhar e gerenciar imagens. O 
         description: This is the gallery description.
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 02-create-shared-image-gallery.yml
@@ -222,7 +222,7 @@ As definições de imagem incluem o tipo de imagem (Windows ou Linux), notas sob
         var: output
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 03a-create-shared-image-generalized.yml
@@ -253,7 +253,7 @@ Por fim, execute `04a-create-vm-using-generalized-image.yml` para criar uma VM c
         id: "/subscriptions/{{ lookup('env', 'AZURE_SUBSCRIPTION_ID') }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Compute/galleries/{{ shared_gallery_name }}/images/{{ shared_image_name }}/versions/{{ shared_image_version }}"
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 04a-create-vm-using-generalized-image.yml
@@ -286,7 +286,7 @@ Você também pode criar um conjunto de dimensionamento de máquinas virtuais co
         id: "/subscriptions/{{ lookup('env', 'AZURE_SUBSCRIPTION_ID') }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Compute/galleries/{{ shared_gallery_name }}/images/{{ shared_image_name }}/versions/{{ shared_image_version }}"
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 05a-create-vmss-using-generalized-image.yml
@@ -320,7 +320,7 @@ Você pode obter informações sobre a galeria, a definição de imagem e a vers
       name: "{{ shared_image_version }}"
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 06-get-info.yml
@@ -359,7 +359,7 @@ Para excluir os recursos da galeria, veja o guia estratégico de exemplo `07-del
       state: absent
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook 07-delete-gallery.yml
@@ -367,36 +367,7 @@ ansible-playbook 07-delete-gallery.yml
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
-
-O código do guia estratégico de exemplo nesta seção é usado para:
-
-- Excluir os dois grupos de recursos criados anteriormente
-
-Salve o guia estratégico a seguir como `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: "{{ resource_group_name }}"
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
-```
-
-Há algumas observações importantes a serem consideradas ao trabalhar com o guia estratégico de exemplo:
-
-- Substitua o espaço reservado `{{ resource_group_name }}` pelo nome do grupo de recursos.
-- Todos os recursos dentro dos dois grupos de recursos especificados serão excluídos.
-
-Execute o guia estratégico usando o comando `ansible-playbook`:
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

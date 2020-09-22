@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, service bus, queue
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 438c5787469a31403285f8884452d5293f1460f4
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 2f58dac776de66d0d4f449bf4fe34a7c9d30c8fe
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239988"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681982"
 ---
 # <a name="tutorial-configure-queues-in-azure-service-bus-using-ansible"></a>Tutorial: Configurar as filas no Barramento de Serviço do Azure usando o Ansible
 
@@ -69,7 +69,7 @@ Salve o guia estratégico a seguir como `servicebus_queue.yml`:
           var: queue
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook servicebus_queue.yml
@@ -106,7 +106,7 @@ Salve o guia estratégico a seguir como `servicebus_queue_policy.yml`:
 Antes de executar o guia estratégico, confira as observações a seguir:
 - O valor `rights` representa o privilégio que um usuário tem com a fila. Especifique um dos seguintes valores: `manage`, `listen`, `send` ou `listen_send`.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook servicebus_queue_policy.yml
@@ -139,7 +139,7 @@ Salve o guia estratégico a seguir como `servicebus_namespace_info.yml`:
 Antes de executar o guia estratégico, confira as observações a seguir:
 - O valor `show_sas_policies` indica se é necessário mostrar as políticas de SAS no namespace especificado. Por padrão, o valor é `False` para evitar sobrecarga de rede adicional.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook servicebus_namespace_info.yml
@@ -174,7 +174,7 @@ Salve o guia estratégico a seguir como `servicebus_queue_info.yml`:
 Antes de executar o guia estratégico, confira as observações a seguir:
 - O valor `show_sas_policies` indica se é necessário mostrar as políticas de SAS na fila especificada. Por padrão, o valor é definido como `False` para evitar sobrecarga de rede adicional.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook servicebus_queue_info.yml
@@ -203,7 +203,7 @@ Salve o guia estratégico a seguir como `servicebus_queue_policy_delete.yml`:
           state: absent
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook servicebus_queue_policy_delete.yml
@@ -241,7 +241,7 @@ Salve o seguinte código como `cleanup.yml`:
           force_delete_nonempty: yes
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook cleanup.yml

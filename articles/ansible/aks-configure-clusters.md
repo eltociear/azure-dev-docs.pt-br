@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, guia estratégico, aks, cont
 ms.topic: tutorial
 ms.date: 06/17/2020
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 0e7b42776c0405acf335dc75508ef2759838da21
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d54febc3e2d4a82b8986f0c64b200a4aaff7ab55
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240038"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682142"
 ---
 # <a name="tutorial-configure-azure-kubernetes-service-aks-clusters-in-azure-using-ansible"></a>Tutorial: Configurar clusters do Serviço de Kubernetes do Azure (AKS) no Azure usando o Ansible
 
@@ -83,9 +83,9 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 - A primeira seção dentro de `tasks` define um grupo de recursos chamado `myResourceGroup` dentro no local `eastus`.
 - A segunda seção dentro de `tasks` define um cluster do AKS chamado `myAKSCluster` dentro do grupo de recursos `myResourceGroup`.
 - Para o espaço reservado `your_ssh_key`, insira a chave pública RSA no formato de linha única – começando com "ssh-rsa" (sem as aspas).
-- Para o espaço reservado `aks_version`, use o comando [az aks get-versions](/cli/azure/aks?view=azure-cli-latest#az-aks-get-versions).
+- Para o espaço reservado `aks_version`, use o comando [az aks get-versions](/cli/azure/aks#az-aks-get-versions).
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook azure_create_aks.yml
@@ -150,7 +150,7 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 
 - Para o espaço reservado `your_ssh_key`, insira a chave pública RSA no formato de linha única – começando com "ssh-rsa" (sem as aspas).
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook azure_configure_aks.yml
@@ -193,7 +193,7 @@ Salve o guia estratégico a seguir como `azure_delete_aks.yml`:
       state: absent
   ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook azure_delete_aks.yml

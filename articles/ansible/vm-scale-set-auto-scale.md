@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, dimensionar, dimensio
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 32e7f8029a361f9559a61a32bb078b2bd3a3ecd5
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 62b2eb84ba7328e87896f9da448717856cb75c80
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240678"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681883"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>Tutorial: Dimensionar automaticamente conjuntos de dimensionamento de máquinas virtuais no Azure usando o Ansible
 
@@ -78,7 +78,7 @@ Salve o guia estratégico a seguir como `vmss-auto-scale.yml`:
               - '10'
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook vmss-auto-scale.yml
@@ -172,7 +172,7 @@ Salve o guia estratégico a seguir como `vmss-auto-scale-metrics.yml`:
             value: '1'
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook vmss-auto-scale-metrics.yml
@@ -200,7 +200,7 @@ Salve o guia estratégico a seguir como `vmss-auto-scale-get-settings.yml`:
         var: autoscale_query.autoscales[0]
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook vmss-auto-scale-get-settings.yml
@@ -227,7 +227,7 @@ Salve o guia estratégico a seguir como `vmss-auto-scale-delete-setting.yml`:
          state: absent
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 vmss-auto-scale-delete-setting.yml

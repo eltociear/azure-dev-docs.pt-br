@@ -1,16 +1,16 @@
 ---
 title: Tutorial – Configurar a rede CNI do Azure no AKS (Serviço de Kubernetes do Azure) usando o Ansible
-description: Saiba como usar o Ansible para configurar a rede kubenet no cluster do Serviço de Kubernetes do Azure (AKS)
+description: Saiba como usar o Ansible para configurar a rede da CNI do Azure no cluster do AKS (Serviço de Kubernetes do Azure)
 keywords: ansible, azure, devops, bash, cloudshell, guia estratégico, aks, contêiner, aks, kubernetes
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: f3892b9c25b952d2d8c71e4e44857557c0a1813b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 1f58c8c5964a6e015de9cb1e3990274791037599
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239948"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682120"
 ---
 # <a name="tutorial-configure-azure-cni-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Tutorial: Configurar a rede CNI do Azure no AKS (Serviço de Kubernetes do Azure) usando o Ansible
 
@@ -245,37 +245,7 @@ localhost                  : ok=9    changed=4    unreachable=0    failed=0    s
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
-
-O código do guia estratégico de exemplo nesta seção é usado para:
-
-- Excluir um grupo de recursos mencionado na seção `vars`.
-
-Salve o guia estratégico a seguir como `cleanup.yml`:
-
-```yml
----
-- hosts: localhost
-  vars:
-      resource_group: {{ resource_group_name }}
-  tasks:
-      - name: Clean up resource group
-        azure_rm_resourcegroup:
-            name: "{{ resource_group }}"
-            state: absent
-            force: yes
-```
-
-Há algumas observações importantes a serem consideradas ao trabalhar com o guia estratégico de exemplo:
-
-- Substitua o espaço reservado `{{ resource_group_name }}` pelo nome do grupo de recursos.
-- Todos os recursos dentro dos grupos de recursos especificados serão excluídos.
-
-Execute o guia estratégico usando o comando ansible-playbook:
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

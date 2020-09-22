@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, cosmo db, banco de da
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 7c09f0dd28dbcbdf62219a62295b05758b4c8372
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 7d6c7aed7c1401600fca14cefbb77d86588e485b
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240338"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681659"
 ---
 # <a name="tutorial-configure-azure-cosmos-db-accounts-using-ansible"></a>Tutorial: Configurar contas do Azure Cosmos DB usando o Ansible
 
@@ -142,7 +142,7 @@ Por fim, o último snippet mostra como excluir uma conta do Azure Cosmos DB.
 
 Há duas maneiras de obter o guia estratégico de exemplo completo:
 - [Baixe o guia estratégico](https://github.com/Azure-Samples/ansible-playbooks/blob/master/cosmosdb_create.yml) e salve-o em `cosmosdb.yml`.
-- Crie um novo arquivo chamado `cosmosdb.yml` e copie-o para o conteúdo a seguir:
+- Crie um novo arquivo chamado `cosmosdb.yml` e copie os seguintes conteúdos para ele:
 
 ```yml
 ---
@@ -234,7 +234,7 @@ Antes de executar o guia estratégico, faça as seguintes alterações:
 - Na seção `vars`, substitua o espaço reservado `{{ resource_group_name }}` pelo nome do grupo de recursos.
 - Assegure-se de que o `nome_da_contadocosmosdb contenha apenas caracteres em minúsculas e seja globalmente exclusivo.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook cosmosdb.yml
@@ -242,27 +242,7 @@ ansible-playbook cosmosdb.yml
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
-
-Salve o seguinte código como `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: myResourceGroup
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
-```
-
-Execute o guia estratégico usando o comando `ansible-playbook`:
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

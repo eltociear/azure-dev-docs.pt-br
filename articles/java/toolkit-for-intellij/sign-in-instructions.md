@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: c5830ab871b78e586b502e0c6e2331700fa0149d
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 2891b0c09c43b652fd7dd41e354290c2821bad46
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379950"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534547"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a>Instruções de entrada para o Kit de ferramentas do Azure para IntelliJ
 
@@ -31,25 +31,22 @@ Para entrar no Azure por logon no dispositivo, faça o seguinte:
 
 1. Abra seu projeto com o IntelliJ IDEA.
 
-2. Abra a barra lateral **Azure Explorer** e, em seguida, clique no ícone **Entrar no Azure** na barra na parte superior (ou no menu do IDEA **Ferramentas/Azure/Entrada no Azure**).
+1. Abra a barra lateral **Azure Explorer** e, em seguida, clique no ícone **Entrar no Azure** na barra na parte superior (ou, no menu do IntelliJ, navegue para **Ferramentas > Azure > Entrar no Azure**).
 
    ![O comando de Entrada do IntelliJ Azure][I01]
 
-3. Na caixa de diálogo **Entrar no Azure**, selecione **Logon no Dispositivo** e clique em **Entrar**.
+1. Na caixa de diálogo **Entrar no Azure**, selecione **Logon no Dispositivo** e clique em **Entrar**.
 
    ![A janela Entrar no Azure com o logon no dispositivo selecionado][I02]
 
-4. Clique em **Copiar e Abrir** na caixa de diálogo **Logon no Dispositivo do Azure**.
+1. Clique em **Copiar e Abrir** na caixa de diálogo **Logon no Dispositivo do Azure**.
 
-   ![A janela da caixa de diálogo Logon no Azure][I03]
+1. No navegador, cole o código de dispositivo (que foi copiado quando você clicou em **Copiar e Abrir** na última etapa) e, em seguida, clique em **Avançar**.
 
-5. No navegador, cole o código de dispositivo (que foi copiado quando você clicou em **Copiar e Abrir** na última etapa) e, em seguida, clique em **Avançar**.
+1. Selecione sua conta do Azure e conclua os procedimentos de autenticação necessários para entrar.
 
-   ![O navegador de logon do dispositivo][I04]
+1. Na caixa de diálogo **Selecionar Assinaturas**, selecione as assinaturas que deseja usar e, em seguida, clique em **OK**.
 
-6. Na caixa de diálogo **Selecionar Assinaturas**, selecione as assinaturas que deseja usar e, em seguida, clique em **OK**.
-
-   ![A caixa de diálogo Selecionar Assinaturas][I05]
 
 ## <a name="sign-in-to-your-azure-account-by-service-principal"></a>Entre em sua conta do Azure com a Entidade de Serviço
 
@@ -57,8 +54,9 @@ Esta seção fornece uma orientarão pela criação de um arquivo de credenciais
 
 1. Abra seu projeto com o IntelliJ IDEA.
 
-1. Abra a barra lateral **Azure Explorer** e, em seguida, clique no ícone **Entrar no Azure** na barra na parte superior (ou no menu do IDEA **Ferramentas/Azure/Entrada no Azure**).
-   ![O comando de Entrada do IntelliJ no Azure][A01]
+1. Abra a barra lateral **Azure Explorer** e, em seguida, clique no ícone **Entrar no Azure** na barra na parte superior (ou, no menu do IntelliJ, navegue para **Ferramentas > Azure > Entrar no Azure**).
+
+   ![O comando de Entrada do IntelliJ Azure][I01]
 
 1. Na janela **Entrada no Azure**, selecione **Entidade de Serviço** e, em seguida, clique em **Novo**.
 
@@ -66,37 +64,27 @@ Esta seção fornece uma orientarão pela criação de um arquivo de credenciais
 
 1. Clique em **Copiar e Abrir** na caixa de diálogo **Logon no Dispositivo do Azure**.
 
-   ![A janela da caixa de diálogo Logon no Azure][A03]
-
 1. No navegador, cole o código de dispositivo (que foi copiado quando você clicou em **Copiar e Abrir** na última etapa) e, em seguida, clique em **Avançar**.
 
-   ![O navegador de logon do dispositivo][A04]
+1. Selecione sua conta do Azure e conclua os procedimentos de autenticação necessários para entrar. Após a autenticação, feche o navegador e volte para o IntelliJ.
 
 1. Na janela **Criar Arquivos de Autenticação**, selecione as assinaturas que quer usar, escolha o diretório de destino e clique em **Iniciar**.
 
-   ![A janela Criar Arquivos de Autenticação][A05]
-
 1. Na caixa de diálogo **Status de Criação da Entidade de Serviço**, clique em **OK** após a criação bem-sucedida dos arquivos.
-
-   ![A caixa de diálogo Status de Criação da Entidade de Serviço][A06]
 
 1. Na janela **Entrar no Azure**, clique em **Entrar**. 
 
-   ![Caixa de Diálogo de Logon do Azure][A07]
-
 1. Na caixa de diálogo **Selecionar Assinaturas**, selecione as assinaturas que deseja usar e, em seguida, clique em **OK**.
 
-   ![A caixa de diálogo Selecionar Assinaturas][A08]
-
-> Depois de criar o arquivo de autenticação da entidade de serviço, você pode começar pela etapa 8, escolher o arquivo de autenticação e entrar.
+   > [!TIP]
+   > Depois de criar o arquivo de autenticação da entidade de serviço, você pode começar pela etapa 3, escolher o arquivo de autenticação e entrar.
 
 ## <a name="sign-out-of-your-azure-account"></a>Sair de sua conta do Azure
 
-Após ter configurado sua conta seguindo as etapas anteriores, você será conectado automaticamente sempre que iniciar IntelliJ IDEA. No entanto, se desejar sair de sua conta do Azure, faça o seguinte.
+Após ter configurado sua conta seguindo as etapas anteriores, você será conectado automaticamente sempre que iniciar IntelliJ IDEA. 
 
-* No IntelliJ IDEA, abra a barra lateral do Azure Explorer, clique no ícone de **Saída do Azure** e confirme (ou, no menu do IDEA, **Ferramentas/Azure/Saída do Azure**).
+No entanto, se você quiser sair de sua conta do Azure, navegue até a barra lateral do Azure Explorer, clique no ícone **Sair do Azure** (ou, no menu do IntelliJ, navegue até **Ferramentas > Azure > Sair do Azure**).
 
-   ![O comando de Saída do IntelliJ Azure][L01]
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -108,20 +96,6 @@ Após ter configurado sua conta seguindo as etapas anteriores, você será conec
 
 [I01]: media/sign-in-instructions/I01.png
 [I02]: media/sign-in-instructions/I02.png
-[I03]: media/sign-in-instructions/I03.png
-[I04]: media/sign-in-instructions/I04.png
-[I05]: media/sign-in-instructions/I05.png
 
-[A01]: media/sign-in-instructions/A01.png
 [A02]: media/sign-in-instructions/A02.png
-[A03]: media/sign-in-instructions/A03.png
-[A04]: media/sign-in-instructions/A04.png
-[A05]: media/sign-in-instructions/A05.png
-[A06]: media/sign-in-instructions/A06.png
-[A07]: media/sign-in-instructions/A07.png
-[A08]: media/sign-in-instructions/A08.png
-[A09]: media/sign-in-instructions/A09.png
 
-[L01]: media/sign-in-instructions/L01.png
-[L02]: media/sign-in-instructions/L02.png
-[L03]: media/sign-in-instructions/L03.png

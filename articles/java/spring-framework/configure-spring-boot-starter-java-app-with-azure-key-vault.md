@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 17a154fe7f41e4079fd9c6dcf1358c2acd50367b
-ms.sourcegitcommit: 035f485f182405fdf3e274ec4f70abfcf5fc9641
+ms.openlocfilehash: efe17eba034b92d771d979a896585d4d5362a11d
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511049"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534394"
 ---
 # <a name="tutorial-reading-a-secret-from-azure-key-vault-in-a-spring-boot-application"></a>Tutorial: Ler um segredo do Azure Key Vault em um aplicativo Spring Boot
 
@@ -34,7 +34,7 @@ Este tutorial descreve como criar um aplicativo Spring Boot que lê um valor do 
 
 * Uma assinatura ativa do Azure.
   * Se você não tiver uma assinatura do Azure, [crie uma conta gratuita](https://azure.microsoft.com/free/).
-* [Instale a CLI do Azure versão 2.0.67 ou superior](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) e a extensão do Azure Spring Cloud com o comando: `az extension add --name spring-cloud`
+* [Instale a CLI do Azure versão 2.0.67 ou superior](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) e a extensão do Azure Spring Cloud com o comando: `az extension add --name spring-cloud`
 * Um JDK (Java Development Kit) com suporte. Para obter mais informações sobre os JDKs disponíveis para usar durante o desenvolvimento no Azure, confira <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) versão 3.0 ou posterior.
 * O comando `curl`.  A maioria dos sistemas operacionais semelhantes ao UNIX tem esse comando pré-instalado.  Clientes específicos dos SOs estão disponíveis no [site oficial do curl](https://curl.haxx.se/).
@@ -185,6 +185,9 @@ O procedimento a seguir cria e inicializa o Key Vault.
    | name | O nome do Key Vault. |
    | spn | O `name` da saída do comando `az ad sp create-for-rbac` acima. |
    | secret-permissions | A lista de operações permitidas para a entidade de segurança nomeada. |
+
+    > [!NOTE]
+    > Embora o princípio de privilégios mínimos recomende conceder o menor conjunto possível de privilégios a um recurso, o design da integração do Key Vault requer pelo menos `get` e `list`.
 
 1. Armazene um segredo em seu novo Key Vault.  Um caso de uso comum é armazenar uma cadeia de conexão JDBC.  Por exemplo:
 

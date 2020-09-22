@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, mysql, banco de dados
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 6264ca6158017fc919e64fa2e33852076c523fc6
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 1fb753658486a0a1c8f5c44c01f6c4c33c8ecaf0
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239978"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682009"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>Tutorial: Configurar bancos de dados no Banco de Dados do Azure para MySQL usando o Ansible
 
@@ -57,7 +57,7 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 * Um grupo de recursos chamado `myResourceGroup` é criado.
 * O grupo de recursos é criado na localização `eastus`:
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook rg.yml
@@ -106,7 +106,7 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 * Na seção `vars`, o valor de `mysqlserver_name` deve ser exclusivo.
 * Na seção `vars`, substitua `<server_admin_password>` por uma senha.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook mysql_create.yml
@@ -148,7 +148,7 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 * As conexões ao Banco de Dados do Azure para MySQL se comunicam pela porta 3306. Se estiver tentando se conectar em uma rede corporativa, talvez o tráfego de saída pela porta 3306 não seja permitido. Nesse caso, só será possível se conectar a seu servidor se seu departamento de TI abrir a porta 3306.
 * O guia estratégico usa o módulo `azure_rm_resource` que permite o uso direto da API REST.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook mysql_firewall.yml
@@ -248,7 +248,7 @@ Salve o guia estratégico a seguir como `mysql_query.yml`:
         var: mysqldatabasefacts
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook mysql_query.yml
@@ -316,26 +316,7 @@ Você também verá o seguinte resultado para o banco de dados do MySQL:
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
-
-Salve o guia estratégico a seguir como `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: myResourceGroup
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        state: absent
-```
-
-Execute o guia estratégico usando o comando `ansible-playbook`:
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

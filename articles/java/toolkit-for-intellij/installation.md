@@ -3,17 +3,17 @@ title: Instalação do Kit de Ferramentas do Azure para IntelliJ
 description: Saiba como instalar o Kit de Ferramentas do Azure para o plug-in IntelliJ para criar e implantar aplicativos de nuvem no Azure.
 documentationcenter: java
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
-ms.date: 02/01/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 15e3bdc3f001b3fe93a96b27bf7fc44c7aaa8f3a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: fe8b07257ff3a9fc5523d13dd13e19982103ab05
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379920"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534438"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Instalação do Kit de Ferramentas do Azure para IntelliJ
 
@@ -53,80 +53,39 @@ O Azure Toolkit for IntelliJ requer os seguintes componentes de software:
 -->
 
 
-## <a name="to-install-the-azure-toolkit-for-intellij-from-the-settings-dialog-box"></a>Para instalar o Kit de Ferramentas do Azure para IntelliJ na caixa de diálogo de configurações
+## <a name="from-the-settings-dialog-box"></a>Na caixa de diálogo Configurações
 
-1. Inicie o IDEA do IntelliJ.
+1. Na barra de ferramentas do IntelliJ, clique em **Arquivo** e em **Configurações**.
 
-1. Quando o IDEA do IntelliJ é aberto, clique em **Arquivo**, em seguida, clique em **Configurações**.
-   
-   ![Abra a caixa de diálogo Configurações do IDEA do IntelliJ][01a]
+1. No menu de navegação à esquerda da caixa de diálogo Configurações, clique em **Plug-ins**.
 
-1. Na caixa de diálogo Configurações, clique em **Plug-ins** e, em seguida, clique em **Procurar repositórios**.
-   
-   ![Caixa de diálogo Configurações do IDEA do IntelliJ][02a]
+1. Na barra de pesquisa **Marketplace**, digite "Azure" para filtrar a lista de plug-ins. Selecione **Azure Toolkit for IntelliJ** e clique em **Instalar**. Leia a *Observação de Privacidade de Plug-ins de Terceiros* do IntelliJ e clique em **Aceitar**.
 
-1. Na caixa de diálogo **Procurar repositórios** , digite "Azure" na caixa de pesquisa. Realce **Kit de Ferramentas do Azure para IntelliJ** e, em seguida, clique em **Instalar**.
-   
-   ![Procure o Kit de Ferramentas do Azure para IntelliJ][03]
-   
-   O IDEA do IntelliJ exibe o progresso da instalação em uma caixa de diálogo.
-   
-   ![Progresso da instalação][04]
+   :::image type="content" source="media/installation/03-intellij-search-plugin.png" alt-text="Pesquise o plug-in Azure Toolkit for IntelliJ."::: 
 
-1. Quando a instalação for concluída, clique em **Reiniciar IDEA do IntelliJ**.
-   
-   ![Reiniciar IDEA do IntelliJ][05]
+1. Quando a instalação for concluída, clique em **Reiniciar IDE**.
 
-1. Clique em **OK** para fechar a caixa de diálogo Configurações.
+1. Quando for solicitado a reiniciar o IDEA do IntelliJ, clique em **Reiniciar**.
    
-   ![Feche a caixa de diálogo Configurações do IDEA do IntelliJ][06]
+   :::image type="content" source="media/installation/07-restart-intellij.png" alt-text="Reinicie o IDEA do IntelliJ."::: 
 
-1. Quando for solicitado a reiniciar o IDEA do IntelliJ ou adiar, clique em **Reiniciar**.
-   
-1   ![Reiniciar IDEA do IntelliJ][07]
+## <a name="from-the-start-screen"></a>Na tela Inicial
 
-## <a name="to-install-the-azure-toolkit-for-intellij-from-the-start-screen"></a>Para instalar o Kit de Ferramentas do Azure para IntelliJ a partir da tela inicial
+1. Na tela inicial do IDEA do IntelliJ, clique em **Configurar** e em **Plug-ins**.
 
-1. Inicie o IDEA do IntelliJ.
+   :::image type="content" source="media/installation/01-intellij-configure-dropdown.png" alt-text="Plug-ins da tela inicial."::: 
 
-1. Quando for exibida a tela inicial do IDEA do IntelliJ, clique em **Configurar**, em seguida, clique em **Plug-ins**.
-   
-   ![Instale os plug-ins do IDEA do IntelliJ][01b]
+1. Na barra de pesquisa **Marketplace**, digite "Azure" para filtrar a lista de plug-ins. Selecione **Azure Toolkit for IntelliJ** e clique em **Instalar**. Leia a *Observação de Privacidade de Plug-ins de Terceiros* do IntelliJ e clique em **Aceitar**.
 
-1. Na caixa de diálogo **Plug-ins**, clique em **Procurar repositórios**.
-   
-   ![Procure os repositórios de plug-in do IDEA do IntelliJ][02b]
+   :::image type="content" source="media/installation/01-intellij-start-screen-marketplace.png" alt-text="Marketplace de plug-ins na tela inicial.":::
 
-1. Na caixa de diálogo **Procurar repositórios** , digite "Azure" na caixa de pesquisa. Realce **Kit de Ferramentas do Azure para IntelliJ** e, em seguida, clique em **Instalar**.
-   
-   ![Procure o Kit de Ferramentas do Azure para IntelliJ][03]
-   
-   O IDEA do IntelliJ exibirá o progresso da instalação em uma caixa de diálogo.
-   
-   ![Progresso da instalação][04]
+1. Quando a instalação for concluída, clique em **Reiniciar IDE**.
 
-1. Quando a instalação for concluída, clique em **Reiniciar IDEA do IntelliJ**.
+1. Quando for solicitado a reiniciar o IDEA do IntelliJ, clique em **Reiniciar**.
    
-   ![Reiniciar IDEA do IntelliJ][05]
-
-1. Quando for solicitado a reiniciar o IDEA do IntelliJ ou adiar, clique em **Reiniciar**.
-   
-   ![Reiniciar IDEA do IntelliJ][07]
+   :::image type="content" source="media/installation/01-intellij-start-screen-marketplace-restart.png" alt-text="Reinicie para instalar da tela inicial.":::
 
 ## <a name="next-steps"></a>Próximas etapas
 
 [!INCLUDE [additional-resources](includes/additional-resources.md)]
 
-<!-- URL List -->
-
-<!-- IMG List -->
-
-[01a]: media/installation/01-intellij-file-settings.png
-[01b]: media/installation/01-intellij-configure-dropdown.png
-[02a]: media/installation/02-intellij-settings-dialog.png
-[02b]: media/installation/02-intellij-plugins-dialog.png
-[03]: media/installation/03-intellij-browse-repositories.png
-[04]: media/installation/04-install-progress.png
-[05]: media/installation/05-restart-intellij.png
-[06]: media/installation/06-intellij-settings-dialog.png
-[07]: media/installation/07-restart-intellij.png

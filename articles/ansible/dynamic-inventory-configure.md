@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, inventário dinâmico
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 8ada951f0c1e21de8e193d94fd7e7dcf35ae03be
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 53cf2e25a89081b314826cda4322e2556fc38c39
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240298"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682067"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Tutorial: Configurar inventários dinâmicos de seus recursos do Azure usando o Ansible
 
@@ -20,7 +20,7 @@ O Ansible pode ser usado para extrair informações de inventário de várias fo
 
 > [!div class="checklist"]
 >
-> * Configurar duas máquinas virtuais de teste 
+> * Configurar duas máquinas virtuais de teste
 > * Marcar uma das máquinas virtuais
 > * Instalar o Nginx nas máquinas virtuais marcadas
 > * Configurar um inventário dinâmico que inclua os recursos configurados do Azure
@@ -39,7 +39,7 @@ O Ansible pode ser usado para extrair informações de inventário de várias fo
 
 1. Crie um grupo de recursos do Azure para manter as máquinas virtuais para este tutorial.
 
-    > [!IMPORTANT]    
+    > [!IMPORTANT]
     > O grupo de recursos do Azure criado nesta etapa deve ter um nome inteiramente em minúsculo. Caso contrário, a geração do inventário dinâmico falhará.
 
     ```azurecli-interactive
@@ -66,17 +66,17 @@ O Ansible pode ser usado para extrair informações de inventário de várias fo
 
 ## <a name="tag-a-vm"></a>Marcar uma VM
 
-Você pode [usar marcas para organizar os recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#azure-cli) por categorias definidas pelo usuário. 
+Você pode [usar marcas para organizar os recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#azure-cli) por categorias definidas pelo usuário.
 
 ### <a name="using-ansible-version--28"></a>Usar o Ansible versão < 2.8
-Insira o seguinte comando [az resource tag](/cli/azure/resource?view=azure-cli-latest.md#az-resource-tag) para marcar a máquina virtual `ansible-inventory-test-vm1` com a chave `nginx`:
+Insira o seguinte comando [az resource tag](/cli/azure/resource#az-resource-tag) para marcar a máquina virtual `ansible-inventory-test-vm1` com a chave `nginx`:
 
 ```azurecli-interactive
 az resource tag --tags nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
 ```
 
 ### <a name="using-ansible-version--28"></a>Usar o Ansible versão >= 2.8
-Insira o seguinte comando [az resource tag](/cli/azure/resource?view=azure-cli-latest.md#az-resource-tag) para marcar a máquina virtual `ansible-inventory-test-vm1` com a chave `Ansible=nginx`:
+Insira o seguinte comando [az resource tag](/cli/azure/resource#az-resource-tag) para marcar a máquina virtual `ansible-inventory-test-vm1` com a chave `Ansible=nginx`:
 
 ```azurecli-interactive
 az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
@@ -240,7 +240,7 @@ A finalidade das marcas é habilitar a capacidade de trabalhar de forma rápida 
 
 1. Salve o arquivo e saia do editor.
 
-1. Execute o guia estratégico usando o comando `ansible-playbook`:
+1. Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
    - Ansible < 2.8:
 
@@ -276,7 +276,7 @@ A finalidade das marcas é habilitar a capacidade de trabalhar de forma rápida 
 
 Esta seção ilustra uma técnica para testar se o Nginx está instalado em sua máquina virtual.
 
-1. Use o comando [az vm list-ip-addresses](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-list-ip-addresses) para recuperar o endereço IP da máquina virtual `ansible-inventory-test-vm1`. O valor retornado (endereço IP da máquina virtual) é usado como o parâmetro para o comando SSH para se conectar à máquina virtual.
+1. Use o comando [az vm list-ip-addresses](https://docs.microsoft.com/cli/azure/vm#az-vm-list-ip-addresses) para recuperar o endereço IP da máquina virtual `ansible-inventory-test-vm1`. O valor retornado (endereço IP da máquina virtual) é usado como o parâmetro para o comando SSH para se conectar à máquina virtual.
 
     ```azurecli-interactive
     ssh `az vm list-ip-addresses \
@@ -313,6 +313,10 @@ Esta seção ilustra uma técnica para testar se o Nginx está instalado em sua 
     * nginx-lightTry: sudo apt install <selected package>
     tom@ansible-inventory-test-vm2:~$
     ```
+
+## <a name="clean-up-resources"></a>Limpar os recursos
+
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

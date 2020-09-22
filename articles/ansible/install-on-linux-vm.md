@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, playbook, azure cli
 ms.topic: quickstart
 ms.date: 08/13/2020
 ms.custom: devx-track-ansible,devx-track-cli
-ms.openlocfilehash: aa1758e6b9670640c218976f6369d9935aa6381b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 50fbcb4d086679265d728f14061a5c4c649fa48d
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240158"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682022"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cli"></a>Início Rápido: Configurar o Ansible usando a CLI do Azure
 
@@ -34,7 +34,7 @@ Neste início rápido, você concluiu estas tarefas:
 
 ## <a name="create-an-ssh-key-pair"></a>Criar um par de chaves SSH
 
-Ao se conectar a VMs do Linux, você pode usar a autenticação de senha ou a autenticação baseada em chave. A autenticação baseada em chave é mais segura do que o uso de senhas. Portanto, este artigo usa a autenticação baseada em chave.
+Ao se conectar a VMs do Linux, você pode usar a autenticação de senha ou a autenticação baseada em chave. A autenticação baseada em chave é mais segura do que o uso de senhas. Assim, este artigo usa a autenticação baseada em chave.
 
 Com a autenticação baseada em chave, há duas chaves:
 
@@ -118,7 +118,7 @@ ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
 
 Para configurar as credenciais do Ansible, você precisará ter as seguintes informações:
 
-* ID da assinatura do Azure 
+* ID da assinatura do Azure
 * Os valores da entidade de serviço
 
 Se você estiver usando o Ansible Tower ou o Jenkins, declare os valores da entidade de serviço como variáveis de ambiente.
@@ -168,7 +168,11 @@ Nesta seção, você exportará os valores da entidade de serviço para configur
     export AZURE_TENANT=<security-principal-tenant>
     ```
 
+## <a name="test-ansible-installation"></a>Testar a instalação do Ansible
+
 Agora você tem uma máquina virtual com o Ansible instalado e configurado.
+
+[!INCLUDE [ansible-test-configuration.md](includes/ansible-test-configuration.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -11,12 +11,12 @@ ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
 ms.custom: devx-track-java
-ms.openlocfilehash: 6aa930bb4ee5c6a5019e33b3d8075765b92f0bfc
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 2f7a7777551aadc5ef970d071e93974f1dea17b9
+ms.sourcegitcommit: 4824cea71195b188b4e8036746f58bf8b70dc224
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379780"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89753758"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Transição do Java 8 para o Java 11
 
@@ -126,7 +126,7 @@ Se um problema precisar ser corrigido no código, corrija-o mas continue compila
 ### <a name="check-command-line-options"></a>Verificar as opções de linha de comando
 
 Antes de executar no Java 11, faça uma rápida verificação das opções de linha de comando. 
-As [opções que foram removidas](#unrecognized-options) farão a JVM (Máquina Virtual Java) ser encerrada. Essa verificação é especialmente importante se você usa opções de registro em log de GC, pois elas mudaram drasticamente após o Java 8. A ferramenta [JaCoLine](https://jacoline.dev/about) é boa para ser usada para detectar problemas com opções de linha de comando. 
+As [opções que foram removidas](#unrecognized-options) farão a JVM (Máquina Virtual Java) ser encerrada. Essa verificação é especialmente importante se você usa opções de registro em log de GC, pois elas mudaram drasticamente após o Java 8. A ferramenta JaCoLine é boa para detectar problemas com opções de linha de comando. 
 
 ### <a name="check-third-party-libraries"></a>Verificar bibliotecas de terceiros
 

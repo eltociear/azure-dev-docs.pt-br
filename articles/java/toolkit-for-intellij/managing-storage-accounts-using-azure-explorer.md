@@ -2,19 +2,22 @@
 title: Gerenciar contas de armazenamento com o Azure Explorer para IntelliJ
 description: Saiba como gerenciar suas contas de armazenamento do Azure usando o Azure Explorer para IntelliJ.
 documentationcenter: java
-ms.date: 02/01/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: a692081032781a530d80c8fa2ff77792611e2673
-ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
+ms.openlocfilehash: 5152b1bfedd02c821d2a9138fa3e20325b5ea086
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438462"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534314"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gerenciar contas de armazenamento usando o Azure Explorer para IntelliJ
+
+> [!NOTE]
+> O recurso de Contas de Armazenamento no Azure Explorer foi preterido. Você pode utilizar o portal do Azure para criar e gerenciar contas de armazenamento e contêineres. Confira a documentação do [Armazenamento do Azure](/azure/storage/blobs/storage-quickstart-blobs-portal) para obter guias de início rápido sobre como gerenciar contas de armazenamento.
 
 O Azure Explorer, que faz parte do Kit de ferramentas do Azure para IntelliJ, fornece aos desenvolvedores de Java com uma solução fácil de usar para gerenciar contas de armazenamento em sua conta do Azure de dentro do IDE (ambiente de desenvolvimento integrado) IntelliJ.
 
@@ -22,7 +25,7 @@ O Azure Explorer, que faz parte do Kit de ferramentas do Azure para IntelliJ, fo
 
 [!INCLUDE [show-azure-explorer](includes/show-azure-explorer.md)]
 
-## <a name="create-a-storage-account-in-intellij"></a>Criar uma conta de armazenamento no IntelliJ
+## <a name="create-a-storage-account"></a>Criar uma conta de armazenamento
 
 Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
@@ -30,11 +33,7 @@ Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
 2. Na exibição do **Azure Explorer**, expanda o nó **Azure**, clique com o botão direito do mouse em **Contas de Armazenamento** e, em seguida, clique em **Criar Conta de Armazenamento**.
 
-   ![Comando para Criar Conta de Armazenamento][CS01]
-
 3. Na caixa de diálogo **Criar Conta de Armazenamento**, especifique as opções a seguir:
-
-   ![Caixa de diálogo Criar Nova Conta de Armazenamento][CS02]
 
    * **Name**: especifica o nome que você deseja usar para a nova conta de armazenamento.
 
@@ -54,17 +53,14 @@ Para criar uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
 4. Quando você tiver especificado todas as opções anteriores, clique em **OK**.
 
-## <a name="delete-a-storage-account-in-intellij"></a>Excluir uma conta de armazenamento no IntelliJ
+## <a name="delete-a-storage-account"></a>Excluir uma conta de armazenamento
 
 Para excluir uma conta de armazenamento usando o Azure Explorer, faça o seguinte:
 
 1. Na exibição do **Azure Explorer**, clique com o botão direito do mouse na conta de armazenamento e selecione **Excluir**.
 
-   ![Menu Excluir Conta de Armazenamento][DS01]
-
 2. Na janela de confirmação, clique em **Sim**.
 
-   ![Janela de confirmação de Excluir conta de armazenamento][DS02]
 
 ## <a name="next-steps"></a>Próximas etapas
 

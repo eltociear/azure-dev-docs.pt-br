@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, rede, emparelhamento
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 25ca319c735605e6597d4a4717c58f41b69e66c0
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 747b11c9727e0844ac9d9c7b07a8355e8163c75e
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240048"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681955"
 ---
 # <a name="tutorial-configure-azure-virtual-network-peering-using-ansible"></a>Tutorial: Configurar o emparelhamento de rede virtual do Azure usando o Ansible
 
@@ -145,7 +145,7 @@ O código do guia estratégico de exemplo nesta seção é usado para:
 Há duas maneiras de obter o guia estratégico de exemplo completo:
 
 - [Baixe o guia estratégico](https://github.com/Azure-Samples/ansible-playbooks/blob/master/vnet_peering.yml) e salve-o em `vnet_peering.yml`.
-- Crie um novo arquivo chamado `vnet_peering.yml` e copie-o para o conteúdo a seguir:
+- Crie um novo arquivo chamado `vnet_peering.yml` e copie os seguintes conteúdos para ele:
 
 ```yml
 - hosts: localhost
@@ -289,43 +289,42 @@ localhost                  : ok=12   changed=9    unreachable=0    failed=0    s
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Quando não forem mais necessários, exclua os recursos criados neste artigo. 
+Quando não forem mais necessários, exclua os recursos criados neste artigo.    
 
-O código do guia estratégico de exemplo nesta seção é usado para:
+O código do guia estratégico de exemplo nesta seção é usado para:    
 
-- Excluir os dois grupos de recursos criados anteriormente
+- Excluir os dois grupos de recursos criados anteriormente   
 
-Salve o guia estratégico a seguir como `cleanup.yml`:
+Salve o guia estratégico a seguir como `cleanup.yml`:   
 
-```bash
-- hosts: localhost
-  vars:
-    resource_group: "{{ resource_group_name-1 }}"
-    resource_group_secondary: "{{ resource_group_name-2 }}"
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
+```bash 
+- hosts: localhost  
+  vars: 
+    resource_group: "{{ resource_group_name-1 }}"   
+    resource_group_secondary: "{{ resource_group_name-2 }}" 
+  tasks:    
+    - name: Delete a resource group 
+      azure_rm_resourcegroup:   
+        name: "{{ resource_group }}"    
+        force_delete_nonempty: yes  
+        state: absent   
+    - name: Delete a resource group 
+      azure_rm_resourcegroup:   
+        name: "{{ resource_group_secondary }}"  
+        force_delete_nonempty: yes  
+        state: absent   
+``` 
 
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group_secondary }}"
-        force_delete_nonempty: yes
-        state: absent
-```
+Há algumas observações importantes a serem consideradas ao trabalhar com o guia estratégico de exemplo:  
 
-Há algumas observações importantes a serem consideradas ao trabalhar com o guia estratégico de exemplo:
+- Substitua o espaço reservado `{{ resource_group_name-1 }}` pelo nome do primeiro grupo de recursos criado.  
+- Substitua o espaço reservado `{{ resource_group_name-2 }}` pelo nome do segundo grupo de recursos criado. 
+- Todos os recursos dentro dos dois grupos de recursos especificados serão excluídos.   
 
-- Substitua o espaço reservado `{{ resource_group_name-1 }}` pelo nome do primeiro grupo de recursos criado.
-- Substitua o espaço reservado `{{ resource_group_name-2 }}` pelo nome do segundo grupo de recursos criado.
-- Todos os recursos dentro dos dois grupos de recursos especificados serão excluídos.
+Execute o guia estratégico usando o comando ansible-playbook:    
 
-Execute o guia estratégico usando o comando ansible-playbook:
-
-```bash
-ansible-playbook cleanup.yml
+```bash 
+ansible-playbook cleanup.yml    
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

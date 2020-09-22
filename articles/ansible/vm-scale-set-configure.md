@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, guia estratégico, máquina virtual, con
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: e9ac4604b10f73e85290162eaf47803f4c4021c0
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 357de61099b8b3673022857a933a18632cff7e40
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240648"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681862"
 ---
 # <a name="tutorial-configure-virtual-machine-scale-sets-in-azure-using-ansible"></a>Tutorial: Configurar conjuntos de dimensionamento de máquinas virtuais no Azure usando o Ansible
 
@@ -146,7 +146,7 @@ Antes de executar o guia estratégico, confira as observações a seguir:
 
 * Na seção `vars`, substitua o espaço reservado `{{ admin_password }}` pela sua própria senha.
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook vmss-create.yml
@@ -244,7 +244,7 @@ Há duas maneiras de obter o guia estratégico de exemplo:
       azure_rm_virtualmachinescaleset: "{{ body }}"
 ```
 
-Execute o guia estratégico usando o comando `ansible-playbook`:
+Executar o guia estratégico usando [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html)
 
 ```bash
 ansible-playbook vmss-scale-out.yml

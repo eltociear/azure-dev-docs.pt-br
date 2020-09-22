@@ -3,14 +3,14 @@ title: Guia de Início Rápido – Configurar o Ansible usando o Azure Cloud She
 description: Neste Início Rápido, saiba como realizar várias tarefas do Ansible com o Bash no Azure Cloud Shell
 keywords: ansible, azure, devops, bash, cloudshell, playbook, bash
 ms.topic: quickstart
-ms.date: 08/31/2020
+ms.date: 09/14/2020
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 42d7b57d9890bce3a432fba3c6fdcf3080ddb63c
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: 0a03794bdcbd810444f42db045650cdad813724c
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275150"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682056"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cloud-shell"></a>Início Rápido: Configurar o Ansible usando o Azure Cloud Shell
 
@@ -27,9 +27,9 @@ Este artigo descreve a introdução ao Ansible do ambiente do [Azure Cloud Shell
 
 ## <a name="automatic-credential-configuration"></a>Configuração automática de credencial
 
-Quando conectado ao Cloud Shell, o Ansible autentica com o Azure para gerenciar a infraestrutura sem qualquer configuração adicional. 
+Quando conectado ao Cloud Shell, o Ansible autentica com o Azure para gerenciar a infraestrutura sem qualquer configuração adicional.
 
-Ao trabalhar com várias assinaturas, especifique a assinatura usada pelo Ansible exportando a variável de ambiente `AZURE_SUBSCRIPTION_ID`. 
+Ao trabalhar com várias assinaturas, especifique a assinatura usada pelo Ansible exportando a variável de ambiente `AZURE_SUBSCRIPTION_ID`.
 
 Para listar todas as suas assinaturas do Azure, execute o seguinte comando:
 
@@ -43,10 +43,11 @@ Usando sua ID da assinatura do Azure, defina a `AZURE_SUBSCRIPTION_ID` da seguin
 export AZURE_SUBSCRIPTION_ID=<your-subscription-id>
 ```
 
-## <a name="verify-the-configuration"></a>Verificar a configuração
-Para verificar a configuração bem-sucedida, use o Ansible para criar um grupo de recursos do Azure.
+## <a name="test-ansible-installation"></a>Testar a instalação do Ansible
 
-[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
+Agora você configurou o Ansible para uso no Cloud Shell!
+
+[!INCLUDE [ansible-test-configuration.md](includes/ansible-test-configuration.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 

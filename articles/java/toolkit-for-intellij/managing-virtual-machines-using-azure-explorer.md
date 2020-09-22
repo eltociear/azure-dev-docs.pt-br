@@ -2,40 +2,39 @@
 title: Gerenciar máquinas virtuais com o Azure Explorer para IntelliJ
 description: Saiba como gerenciar suas máquinas virtuais do Azure usando o Azure Explorer para IntelliJ.
 documentationcenter: java
-ms.date: 11/13/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 65f0c827fec68bc6a11d7dcaf380738967e16a92
-ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
+ms.openlocfilehash: 058842e8f7d50d885d2a5d28c56ee144072e637a
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438477"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534339"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gerenciar máquinas virtuais usando o Azure Explorer para IntelliJ
 
 O Azure Explorer, que faz parte do Kit de ferramentas do Azure para IntelliJ, fornece aos desenvolvedores de Java com uma solução fácil de usar para gerenciar máquinas virtuais em sua conta do Azure de dentro do IDE (ambiente de desenvolvimento integrado) IntelliJ.
 
+Este artigo demonstra como criar e gerenciar máquinas virtuais usando o Azure Explorer em IntelliJ.
+
 [!INCLUDE [prerequisites](includes/prerequisites.md)]
 
 [!INCLUDE [show-azure-explorer](includes/show-azure-explorer.md)]
 
-## <a name="create-a-virtual-machine-in-intellij"></a>Criar uma máquina virtual no IntelliJ
+## <a name="create-a-virtual-machine"></a>Criar uma máquina virtual
 
 Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte: 
 
 1. Entre em sua conta do Azure usando as etapas no artigo [Instruções de conexão para o Kit de ferramentas do Azure para IntelliJ].
 
 2. Na exibição do **Azure Explorer**, expanda o nó **Azure**, clique com o botão direito do mouse em **Máquinas Virtuais** e, em seguida, clique em **Criar VM**. 
-
-   ![O comando Criar VM][CR01]  
-    O assistente para **Criar uma nova Máquina Virtual** é aberto.
+ 
+   :::image type="content" source="media/managing-virtual-machines-using-azure-explorer/CR01.png" alt-text="Opção Criar VM no Azure Explorer.":::
 
 3. Na caixa de diálogo **Escolha uma Assinatura**, selecione sua assinatura e clique em **Avançar**. 
-
-   ![A janela Escolha uma Assinatura][CR02]
 
 4. Na janela **Selecionar uma Imagem de Máquina Virtual**, insira as seguintes informações:
 
@@ -53,8 +52,6 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
       * **No. da versão**: especifica qual versão do SKU selecionado será usada.
 
-   ![A janela Selecionar uma Imagem de Máquina Virtual][CR03]
-
 5. Clique em **Próximo**. 
 
 6. Na janela **Configurações Básicas de Máquina Virtual**, insira as seguintes informações:
@@ -65,9 +62,7 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
    * **Nome de Usuário**: especifica a conta de administrador a ser criada para gerenciar sua máquina virtual.
 
-   * **Senha** e **Confirmar**: especifica a senha para sua conta de administrador.
-
-   ![A janela Configurações Básicas de Máquina Virtual][CR04]
+   * **Senha**: especifica a senha para sua conta de administrador. Reinsira a senha na caixa **Confirmar** para validar a credencial.
 
 7. Clique em **Próximo**. 
 
@@ -77,15 +72,9 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
       * **Criar novo**: especifica que você deseja criar um novo grupo de recursos.
       * **Usar existente**: especifica que você quer selecionar em uma lista de grupos de recursos associados à sua conta do Azure.
 
-       ![A janela Recursos Associados][CR07]
-
    * **Conta de armazenamento**: especifica a conta de armazenamento que será usada para armazenar a máquina virtual. Escolha uma conta de armazenamento existente ou crie uma nova. Se você escolher **Criar Nova**, a caixa de diálogo a seguir será exibida:
 
-      ![A caixa de diálogo Criar Conta de Armazenamento][CR05]
-
    * **Rede virtual** e **Subrede**: especifica a rede virtual e a sub-rede às quais sua máquina virtual se conectará. Use uma rede e sub-rede existentes ou crie uma nova rede e sub-rede. Se você selecionar **Criar novo**, a caixa de diálogo a seguir será exibida:
-
-      ![A caixa de diálogo Criar Rede Virtual][CR06]
 
    * **Endereço IP público**: especifica um endereço IP externo para sua máquina virtual. Você pode optar por criar um novo endereço IP ou, se sua máquina virtual não tiver um endereço IP público, selecione **(Nenhum)** . 
 
@@ -93,42 +82,33 @@ Para criar uma máquina virtual usando o Azure Explorer, faça o seguinte:
 
    * **Conjunto de disponibilidade**: especifica um conjunto de disponibilidade opcional ao qual sua máquina virtual pode pertencer. Selecione um conjunto de disponibilidade existente, crie um novo conjunto de disponibilidade ou, se sua máquina virtual não for pertencer a um conjunto de disponibilidade, selecione **(Nenhum)** .
 
-9. Clique em **Concluir**.  
-    Sua nova máquina virtual aparece na janela de ferramentas do Azure Explorer. 
+9. Clique em **Concluir**. Sua nova máquina virtual aparece na janela de ferramentas do Azure Explorer. 
 
-   ![Nova máquina virtual na exibição do Azure Explorer][CR08]
-
-## <a name="restart-a-virtual-machine-in-intellij"></a>Reiniciar uma máquina virtual no IntelliJ
+## <a name="restart-a-virtual-machine"></a>Reiniciar uma máquina virtual
 
 Para reiniciar uma máquina virtual usando o Azure Explorer no IntelliJ, faça o seguinte:
 
 1. Na exibição do **Azure Explorer**, clique com o botão direito do mouse na máquina virtual e selecione **Reiniciar**.
 
-   ![O comando Reiniciar da máquina virtual][RE01]
-
 2. Na janela de confirmação, clique em **Sim**. 
 
    ![A janela de confirmação de reinicialização da máquina virtual][RE02]
 
-## <a name="shut-down-a-virtual-machine-in-intellij"></a>Desligar uma máquina virtual no IntelliJ
+## <a name="shut-down-a-virtual-machine"></a>Desligar uma máquina virtual
 
 Para desligar uma máquina virtual em execução usando o Azure Explorer no IntelliJ, faça o seguinte:
 
 1. Na exibição do **Azure Explorer**, clique com o botão direito do mouse na máquina virtual e selecione **Desligar**.
 
-   ![O comando Desligar da máquina virtual][SH01]
-
 2. Na janela de confirmação, clique em **Sim**. 
 
    ![A janela de confirmação de desligamento da máquina virtual][SH02]
 
-## <a name="delete-a-virtual-machine-in-intellij"></a>Excluir uma máquina virtual no IntelliJ
+## <a name="delete-a-virtual-machine"></a>Excluir uma máquina virtual
 
 Para excluir uma máquina virtual usando o Azure Explorer no IntelliJ, faça o seguinte:
 
 1. Na exibição do **Azure Explorer**, clique com o botão direito do mouse na máquina virtual e selecione **Excluir**.
-
-   ![O comando Excluir da máquina virtual][DE01]
 
 2. Na janela de confirmação, clique em **Sim**. 
 

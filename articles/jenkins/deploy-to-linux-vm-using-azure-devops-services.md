@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, virtual machine, cicd, azure devops services
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 458acc31d4cb56215dff036bd3952090052eb5a1
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 3eedcc72a7c272f1cacf97b9071e750aab5a446e
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241068"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831322"
 ---
 # <a name="tutorial-deploy-to-linux-virtual-machine-using-jenkins-and-azure-devops-services"></a>Tutorial: Implantação na máquina virtual do Linux usando o Jenkins e o Azure DevOps Services
 
@@ -18,7 +18,7 @@ A CI (integração contínua) e a CD (implantação contínua) forma um pipeline
 
 Neste tutorial, você usa o Jenkins para criar um aplicativo Web Node.js. Em seguida, você usa o Azure DevOps para implantá-lo
 
-em um [grupo de implantação](https://docs.microsoft.com/azure/devops/pipelines/release/deployment-groups/index?view=vsts) que contém máquinas virtuais (VMs) Linux. Você aprenderá como:
+em um [grupo de implantação](/azure/devops/pipelines/release/deployment-groups/index?view=vsts) que contém máquinas virtuais (VMs) Linux. Você aprenderá como:
 
 > [!div class="checklist"]
 > * Obter o aplicativo de exemplo.
@@ -32,17 +32,17 @@ em um [grupo de implantação](https://docs.microsoft.com/azure/devops/pipelines
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-* Você precisa ter acesso a um servidor Jenkins. Se você ainda não tiver criado um servidor Jenkins, consulte [Criar um mestre Jenkins em uma máquina virtual do Azure](https://docs.microsoft.com/azure/jenkins/install-jenkins-solution-template). 
+* Você precisa ter acesso a um servidor Jenkins. Se você ainda não tiver criado um servidor Jenkins, consulte [Criar um mestre Jenkins em uma máquina virtual do Azure](/azure/jenkins/install-jenkins-solution-template). 
 
 * Entrar em sua organização do Azure DevOps Services (**https://{suaorganização}.visualstudio.com**). 
   Você precisa obter uma [organização do Azure DevOps Services gratuita](https://go.microsoft.com/fwlink/?LinkId=307137&clcid=0x409&wt.mc_id=o~msft~vscom~home-vsts-hero~27308&campaign=o~msft~vscom~home-vsts-hero~27308).
 
   > [!NOTE]
-  > Para saber mais, confira [Conectar-se ao Azure DevOps Services](https://docs.microsoft.com/azure/devops/organizations/projects/connect-to-projects?view=vsts).
+  > Para saber mais, confira [Conectar-se ao Azure DevOps Services](/azure/devops/organizations/projects/connect-to-projects?view=vsts).
 
-*  É necessária uma máquina virtual Linux para um destino de implantação.  Para obter mais informações, consulte [Criar e gerenciar VMs Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+*  É necessária uma máquina virtual Linux para um destino de implantação.  Para obter mais informações, consulte [Criar e gerenciar VMs Linux com a CLI do Azure](/azure/virtual-machines/linux/tutorial-manage-vm).
 
-*  Abra a porta de entrada 80 para sua máquina virtual. Para obter mais informações, consulte [Criar grupos de segurança de rede usando o Portal do Azure](https://docs.microsoft.com/azure/virtual-network/tutorial-filter-network-traffic).
+*  Abra a porta de entrada 80 para sua máquina virtual. Para obter mais informações, consulte [Criar grupos de segurança de rede usando o Portal do Azure](/azure/virtual-network/tutorial-filter-network-traffic).
 
 ## <a name="get-the-sample-app"></a>Obter o aplicativo de exemplo
 
@@ -90,7 +90,7 @@ Primeiro, você precisa configurar dois plug-ins do Jenkins: **NodeJS** e **Impl
  
 1.  Crie um PAT em sua organização do Azure DevOps Services se você ainda não tiver um. O Jenkins exige essas informações para acessar sua conta da organização do Azure DevOps Services. Armazene as informações de token para as próximas etapas desta seção.
   
-    Para saber como gerar um token, leia [Como fazer para criar um token de acesso pessoal para o Azure DevOps Services?](https://docs.microsoft.com/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts).
+    Para saber como gerar um token, leia [Como fazer para criar um token de acesso pessoal para o Azure DevOps Services?](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts).
 2. Na guia **Ações de Pós-build**, selecione **Adicionar ação de pós-build**. Selecione **Arquivar os artefatos**.
 3. Em **Arquivos para arquivar**, insira `**/*` para incluir todos os arquivos.
 4. Para criar outra ação, selecione **Adicionar ação de pós-build**.
@@ -177,7 +177,7 @@ Neste tutorial, você automatizou a implantação de um aplicativo no Azure usan
 > * Crie um grupo de implantação para as máquinas virtuais do Azure.
 > * Criar um pipeline do Azure que configura as VMs e implanta o aplicativo.
 
-Para saber mais sobre como usar o Azure Pipelines para as etapas de build e versão, veja [isto](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-linuxvm-deploygroups).
+Para saber mais sobre como usar o Azure Pipelines para as etapas de build e versão, veja [isto](/azure/devops/pipelines/apps/cd/deploy-linuxvm-deploygroups).
 
 Para saber mais sobre como criar um pipeline da CI/CD baseado em YAML para implantação em VMs, prossiga para o próximo tutorial.
 

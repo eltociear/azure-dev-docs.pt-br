@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: c867f52063d657d93637ea1010e47c27e8101cb7
-ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
+ms.openlocfilehash: 762e40aa656ddff76f3bc8e1b38b8845e8f20cdd
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614339"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830092"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Tutorial: Proteger um aplicativo Web do Java usando o iniciador do Spring Boot para o Azure Active Directory
 
@@ -362,14 +362,14 @@ Neste tutorial, você criou um novo aplicativo Web do Java usando o iniciador do
 Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
 
    >[!div class="nextstepaction"]
-   >[Spring no Azure](/azure/developer/java/spring-framework)
+   >[Spring no Azure](./index.yml)
 
 <!-- URL List -->
 
 [Azure Active Directory Documentation]: /azure/active-directory/
 [AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[Azure for Java Developers]: /azure/developer/java/
+[Azure for Java Developers]: ../index.yml
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Working with Azure DevOps and Java]: /azure/devops/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
@@ -408,5 +408,3 @@ Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Docume
 [build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png
 [update-password]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/update-password.png
-
-

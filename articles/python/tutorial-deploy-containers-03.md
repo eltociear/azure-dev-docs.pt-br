@@ -4,12 +4,12 @@ description: Etapa 3 do tutorial, as etapas simples para recompilar e reimplanta
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 6a2c09e861da9fedaa90f1229f212f02f95a349e
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 79498685492d57a22884b30c551c3a28b6e0fe15
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473482"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772629"
 ---
 # <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Reimplantar um contêiner no Serviço de Aplicativo do Azure após fazer alterações
 
@@ -31,5 +31,3 @@ Como inevitavelmente você faz alterações em seu aplicativo, você acaba recom
 
 > [!div class="nextstepaction"]
 > [Fiz alterações e reimplantei – prossiga para a etapa 4 >>>](tutorial-deploy-containers-04.md)
-
-Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

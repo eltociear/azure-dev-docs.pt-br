@@ -8,16 +8,16 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 17487e2440d42bc048a7058183e924febe0a0d33
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 3a17e09f257bb4d06320fea8aaa6b423c4f2027b
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378860"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830952"
 ---
 # <a name="use-spring-data-jpa-with-azure-database-for-postgresql"></a>Usar o Spring Data JPA com o Banco de Dados do Azure para PostgreSQL
 
-Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data JPA](https://spring.io/projects/spring-data-jpa) para armazenar e recuperar informações no [Banco de Dados do Azure para PostgreSQL](https://docs.microsoft.com/azure/postgresql/).
+Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data JPA](https://spring.io/projects/spring-data-jpa) para armazenar e recuperar informações no [Banco de Dados do Azure para PostgreSQL](/azure/postgresql/).
 
 [A JPA (API de Persistência Java)](https://en.wikipedia.org/wiki/Java_Persistence_API) é a API Java padrão para o mapeamento relacional de objeto.
 
@@ -83,4 +83,4 @@ Parabéns! Você criou um aplicativo Spring Boot que usa o JPA para armazenar e 
 
 Para obter mais informações sobre o Spring Data JPA, confira a [documentação de referência](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference) do Spring.
 
-Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](/azure/developer/java/) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).
+Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](../index.yml) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).

@@ -6,12 +6,12 @@ ms.author: kuthapar
 ms.topic: conceptual
 ms.date: 1/9/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: 119a2b3ff761778e111500a9fe0cf33d2dc6b080
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: f2fb9a1af0634e0cecb3b6d990ae423b31da6210
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378440"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90829982"
 ---
 # <a name="spring-data-azure-cosmos-db-developers-guide"></a>Guia do desenvolvedor do Azure Cosmos DB do Spring Data
 
@@ -19,9 +19,9 @@ Este tópico descreve os recursos do [Cosmos DB do Spring Data](https://github.c
 
 O [Azure Cosmos DB](/azure/cosmos-db/introduction) é um serviço de banco de dados distribuído globalmente que permite aos desenvolvedores trabalhar com os dados usando uma variedade de APIs padrão. O SDK do Cosmos DB do Spring Data é baseado na estrutura [Spring Data](https://spring.io/projects/spring-data) e oferece integração ao Azure Cosmos DB usando a API do SQL. Você pode encontrar informações sobre o suporte para outras APIs nos seguintes tópicos:
 
-- [Como usar a API do MongoDB do Spring Data com o Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-mongodb-with-cosmos-db)
-- [Como usar a API do Apache Cassandra do Spring Data com o Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-apache-cassandra-with-cosmos-db)
-- [Como usar o Iniciador do Spring Data Gremlin com a API do SQL do Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-gremlin-java-app-with-cosmos-db)
+- [Como usar a API do MongoDB do Spring Data com o Azure Cosmos DB](./configure-spring-data-mongodb-with-cosmos-db.md)
+- [Como usar a API do Apache Cassandra do Spring Data com o Azure Cosmos DB](./configure-spring-data-apache-cassandra-with-cosmos-db.md)
+- [Como usar o Iniciador do Spring Data Gremlin com a API do SQL do Azure Cosmos DB](./configure-spring-data-gremlin-java-app-with-cosmos-db.md)
 
 O SDK do Cosmos DB do Spring Data está disponível como software livre no GitHub no repositório [spring-data-cosmosdb](https://github.com/microsoft/spring-data-cosmosdb). Esse repositório tem uma lista [Problemas](https://github.com/microsoft/spring-data-cosmosdb/issues) ativa em que você pode arquivar bugs ou verificar se há soluções sobre problemas que já foram arquivados. Você também pode verificar a lista [Versões](https://github.com/microsoft/spring-data-cosmosdb/releases) para ver se um problema foi corrigido em uma versão mais recente. A versão de treinamento do SDK do Cosmos DB do Spring Data versão 2.2.x dá suporte à versão 2.2.0.RELEASE de spring-data-commons, enquanto a versão de treinamento da versão 2.1.x do SDK dá suporte à versão 2.1.0.RELEASE de spring-data-common.
 

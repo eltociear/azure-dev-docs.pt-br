@@ -5,12 +5,12 @@ keywords: azure devops terraform install configure windows init plan apply execu
 ms.topic: quickstart
 ms.date: 08/18/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: e58c53876ed05416f16a40d0ee23344bcde43b39
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 401a6c4cc8827e48858a936a10c9c7f62af15aab
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614523"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830052"
 ---
 # <a name="quickstart-configure-terraform-using-azure-powershell"></a>Início Rápido: Configurar o Terraform usando o Azure PowerShell
  
@@ -39,13 +39,13 @@ Neste artigo, você aprenderá como:
 
 ## <a name="configure-your-environment"></a>Configurar seu ambiente
 
-1. O último módulo do PowerShell que permite a interação com os recursos do Azure é chamado de [módulo Az do Azure PowerShell](https://docs.microsoft.com/powershell/azure/new-azureps-module-az). Ao usar o módulo Az do Azure PowerShell, o PowerShell 7 (ou posterior) é a versão recomendada em todas as plataformas. Se você tiver o PowerShell instalado, poderá verificar a versão inserindo o comando a seguir em um prompt do PowerShell.
+1. O último módulo do PowerShell que permite a interação com os recursos do Azure é chamado de [módulo Az do Azure PowerShell](/powershell/azure/new-azureps-module-az). Ao usar o módulo Az do Azure PowerShell, o PowerShell 7 (ou posterior) é a versão recomendada em todas as plataformas. Se você tiver o PowerShell instalado, poderá verificar a versão inserindo o comando a seguir em um prompt do PowerShell.
 
     ```powershell
     $PSVersionTable.PSVersion
     ```
 
-1. [Instalar o PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7). Esta demonstração foi testada usando o PowerShell 7.0.2 no Windows 10.
+1. [Instalar o PowerShell](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7). Esta demonstração foi testada usando o PowerShell 7.0.2 no Windows 10.
 
 1. Para o [Terraform se autenticar no Azure](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html), você precisa [instalar a CLI do Azure](/cli/azure/install-azure-cli-windows?view=azure-cli-latest). Esta demonstração foi testada usando a CLI do Azure versão 2.9.1.
 
@@ -70,9 +70,9 @@ Ao usar o PowerShell e o Terraform, você deverá fazer logon usando uma entidad
 
 para fazer logon em uma assinatura do Azure usando uma entidade de serviço, primeiro você precisará ter acesso a uma entidade de serviço. Se você já tiver uma entidade de serviço, ignore esta seção.
 
-Há muitas opções ao [criar uma entidade de serviço com o PowerShell](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps). Para este artigo, criaremos uma entidade de serviço com uma função **Colaborador**. A função **Colaborador** (a função padrão) tem permissões completas de leitura e gravação em uma conta do Azure. Para obter mais informações sobre o Controle de Acesso Baseado em Função (RBAC) e funções, confira [RBAC: funções internas](/azure/active-directory/role-based-access-built-in-roles).
+Há muitas opções ao [criar uma entidade de serviço com o PowerShell](/powershell/azure/create-azure-service-principal-azureps). Para este artigo, criaremos uma entidade de serviço com uma função **Colaborador**. A função **Colaborador** (a função padrão) tem permissões completas de leitura e gravação em uma conta do Azure. Para obter mais informações sobre o Controle de Acesso Baseado em Função (RBAC) e funções, confira [RBAC: funções internas](/azure/active-directory/role-based-access-built-in-roles).
 
-Chamar [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/Az.Resources/New-AzADServicePrincipal) cria uma entidade de serviço para a assinatura especificada. Após a conclusão bem-sucedida, as informações da entidade de serviço, como os nomes de entidade de serviço e o nome de exibição, são exibidas. Quando você chama `New-AzADServicePrincipal` sem especificar credenciais de autenticação, uma senha é gerada automaticamente. No entanto, essa senha não é exibida, pois ela é retornada em um tipo `SecureString`. Assim, você precisa chamar `New-AzADServicePrincipal` com os resultados indo para uma variável. Em seguida, você pode converter a variável em texto sem formatação para exibi-la.
+Chamar [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) cria uma entidade de serviço para a assinatura especificada. Após a conclusão bem-sucedida, as informações da entidade de serviço, como os nomes de entidade de serviço e o nome de exibição, são exibidas. Quando você chama `New-AzADServicePrincipal` sem especificar credenciais de autenticação, uma senha é gerada automaticamente. No entanto, essa senha não é exibida, pois ela é retornada em um tipo `SecureString`. Assim, você precisa chamar `New-AzADServicePrincipal` com os resultados indo para uma variável. Em seguida, você pode converter a variável em texto sem formatação para exibi-la.
 
 1. Obtenha a ID da assinatura do Azure que você deseja usar. Se você não souber a ID da assinatura, poderá obter o valor no [portal do Azure](https://portal.azure.com/).
 
@@ -82,7 +82,7 @@ Chamar [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/A
 
 1. Inicie o PowerShell.
 
-1. Criar uma entidade de serviço usando [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/az.resources/new-azadserviceprincipal). Substitua `<azure_subscription_id>` pela ID da assinatura do Azure que deseja usar.
+1. Criar uma entidade de serviço usando [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal). Substitua `<azure_subscription_id>` pela ID da assinatura do Azure que deseja usar.
 
     ```powershell
     $sp = New-AzADServicePrincipal -Scope /subscriptions/<azure_subscription_id>
@@ -94,7 +94,7 @@ Chamar [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/A
     $sp.ServicePrincipalNames
     ```
 
-1. Exiba a senha gerada automaticamente como texto, [ConvertFrom-SecureString](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/convertfrom-securestring).
+1. Exiba a senha gerada automaticamente como texto, [ConvertFrom-SecureString](/powershell/module/microsoft.powershell.security/convertfrom-securestring).
 
     ```powershell
     $UnsecureSecret = ConvertFrom-SecureString -SecureString $sp.Secret -AsPlainText
@@ -103,17 +103,17 @@ Chamar [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/A
 **Observações**:
 
 - Os valores de senha e nomes da entidade de serviço são necessários para fazer logon na assinatura usando sua entidade de serviço.
-- Se for perdida, a senha não poderá ser recuperada. Por isso, você deve armazenar sua senha em um local seguro. Se você esquecer a senha, você precisará [redefinir as credenciais da entidade de serviço](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps#reset-credentials).
+- Se for perdida, a senha não poderá ser recuperada. Por isso, você deve armazenar sua senha em um local seguro. Se você esquecer a senha, você precisará [redefinir as credenciais da entidade de serviço](/powershell/azure/create-azure-service-principal-azureps#reset-credentials).
 
 ## <a name="log-in-to-azure-using-a-service-principal"></a>Fazer logon no Azure usando uma entidade de serviço
 
-Para fazer logon em uma assinatura do Azure usando uma entidade de serviço, chame [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/Connect-AzAccount), especificando um objeto do tipo [PsCredential](https://docs.microsoft.com/dotnet/api/system.management.automation.pscredential).
+Para fazer logon em uma assinatura do Azure usando uma entidade de serviço, chame [Connect-AzAccount](/powershell/module/az.accounts/Connect-AzAccount), especificando um objeto do tipo [PsCredential](/dotnet/api/system.management.automation.pscredential).
 
 1. Inicie o PowerShell.
 
-1. Obtenha um objeto [PsCredential](https://docs.microsoft.com/dotnet/api/system.management.automation.pscredential) usando uma das técnicas a seguir.
+1. Obtenha um objeto [PsCredential](/dotnet/api/system.management.automation.pscredential) usando uma das técnicas a seguir.
 
-    1. Chame [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) e insira um nome da entidade de serviço e uma senha quando solicitado:
+    1. Chame [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) e insira um nome da entidade de serviço e uma senha quando solicitado:
 
         ```powershell
         $spCredential = Get-Credential
@@ -213,7 +213,7 @@ Nesta seção, você cria um *plano de execução* e o aplica à sua infraestrut
     terraform apply QuickstartTerraformTest.tfplan
     ```
 
-1. Depois que o plano de execução for aplicado, você poderá testar se o grupo de recursos foi criado com êxito usando [Get-AzResourceGroup](https://docs.microsoft.com/powershell/module/az.resources/Get-AzResourceGroup).
+1. Depois que o plano de execução for aplicado, você poderá testar se o grupo de recursos foi criado com êxito usando [Get-AzResourceGroup](/powershell/module/az.resources/Get-AzResourceGroup).
 
     ```powershell
     Get-AzResourceGroup -Name QuickstartTerraformTest-rg
@@ -245,7 +245,7 @@ Quando não forem mais necessários, exclua os recursos criados neste artigo.
     terraform apply QuickstartTerraformTest.destroy.tfplan
     ```
 
-1. Verifique se o grupo de recursos foi excluído usando [Get-AzResourceGroup](https://docs.microsoft.com/powershell/module/az.resources/Get-AzResourceGroup).
+1. Verifique se o grupo de recursos foi excluído usando [Get-AzResourceGroup](/powershell/module/az.resources/Get-AzResourceGroup).
 
     ```powershell
     Get-AzResourceGroup -Name QuickstartTerraformTest-rg

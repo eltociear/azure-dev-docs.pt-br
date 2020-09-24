@@ -3,12 +3,12 @@ title: Ferramentas para desenvolvedores usando o SDK do Azure para linguagem Go
 description: Ferramentas para trabalhar com o SDK do Azure para linguagem Go e serviços do Azure
 ms.date: 09/05/2018
 ms.topic: conceptual
-ms.openlocfilehash: b08a578c3e5ceb7381cc1643b2967405b292376e
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: e52845218de7d874e045a11c004360b7a35baa03
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80319433"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831302"
 ---
 # <a name="tools-for-developers-using-the-azure-sdk-for-go"></a>Ferramentas para desenvolvedores usando o SDK do Azure para linguagem Go
 
@@ -16,7 +16,7 @@ Para escrever código Go de forma eficaz e fazer com que ele funcione perfeitame
 
 ## <a name="azure-cli"></a>CLI do Azure
 
-A CLI do Azure fornece uma interface de linha de comando para criar e configurar os recursos do Azure em suas assinaturas. A CLI pode ajudá-lo a começar a criar recursos do Azure comuns e compartilhados rapidamente, para que você possa se concentrar no uso de serviços mais complexos. A CLI tem recursos de filtragem e de consulta para que você possa direcionar a saída diretamente para suas ferramentas favoritas de linha de comando. A CLI está disponível para instalação em seu sistema local, como uma imagem do Docker ou por meio do [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
+A CLI do Azure fornece uma interface de linha de comando para criar e configurar os recursos do Azure em suas assinaturas. A CLI pode ajudá-lo a começar a criar recursos do Azure comuns e compartilhados rapidamente, para que você possa se concentrar no uso de serviços mais complexos. A CLI tem recursos de filtragem e de consulta para que você possa direcionar a saída diretamente para suas ferramentas favoritas de linha de comando. A CLI está disponível para instalação em seu sistema local, como uma imagem do Docker ou por meio do [Azure Cloud Shell](/azure/cloud-shell/overview).
 
 > [!div class="nextstepaction"]
 > [Instalar a CLI do Azure](/cli/azure/install-azure-cli)

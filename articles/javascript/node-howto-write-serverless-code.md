@@ -4,12 +4,12 @@ description: Diretrizes sobre como usar o Azure Functions para criar e implantar
 ms.topic: article
 ms.date: 08/19/2019
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
-ms.openlocfilehash: 8b0fa5aac45d95780da4327d72cea6b6533c971e
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: 5f69fa073647527516452e7a5cdf77d6b5a8caa8
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218611"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772949"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Usar o Azure Functions para gravar código do Node.js sem servidor no Azure
 
@@ -31,7 +31,7 @@ Em seguida, amplie seu conhecimento do que o Azure Functions pode fazer, lendo o
 
 Depois disso, você poderá usar diversos outros recursos que ajudam a explorar ainda mais o código sem servidor:
 
-- Módulo do Microsoft Learn: [Habilitar atualizações automáticas em um aplicativo Web usando o Azure Functions e o Serviço do SignalR](https://docs.microsoft.com/learn/modules/automatic-update-of-a-webapp-using-azure-functions-and-signalr/)
+- Módulo do Microsoft Learn: [Habilitar atualizações automáticas em um aplicativo Web usando o Azure Functions e o Serviço do SignalR](/learn/modules/automatic-update-of-a-webapp-using-azure-functions-and-signalr/)
 
 - Saiba mais sobre como usar vários gatilhos para executar código sem servidor:
 

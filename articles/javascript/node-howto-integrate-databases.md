@@ -4,12 +4,12 @@ description: O Azure oferece diversos bancos de dados diferentes para usar com a
 ms.topic: article
 ms.date: 08/20/2019
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 3e38e3edca5022eb87f090cb8f951d65f36dcb60
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: efee87ce711616de35979a696539e47784c1868c
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218620"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772959"
 ---
 # <a name="how-to-integrate-azure-databases-in-nodejs-apps"></a>Como integrar bancos de dados do Azure aos aplicativos do Node.js
 
@@ -17,10 +17,10 @@ A tabela a seguir tem links para vários artigos para se conectar e usar os banc
 
 | Serviço | Guia de Início Rápido | Exemplos |
 | --- | --- | --- |
-| **Cosmos DB** | [Criar um aplicativo Web do Azure Cosmos DB em Node.js](/azure/cosmos-db/create-sql-api-nodejs) | [Amostras](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-cosmos-db) |
-| **MongoDB** | [Criar um aplicativo web Node.js e MongoDB](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [Amostras](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&term=Mongo%20DB) |
+| **Cosmos DB** | [Criar um aplicativo Web do Azure Cosmos DB em Node.js](/azure/cosmos-db/create-sql-api-nodejs) | [Amostras](/samples/browse/?languages=javascript%252cnodejs&products=azure-cosmos-db) |
+| **MongoDB** | [Criar um aplicativo web Node.js e MongoDB](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [Amostras](/samples/browse/?languages=javascript%252cnodejs&term=Mongo%2bDB) |
 | **Cache Redis** | [Criar e consumir um cache Redis](/azure/redis-cache/cache-nodejs-get-started) | |
-| **Banco de Dados SQL do Azure** | [Usar o Node.js para consultar um banco de dados SQL do Azure](/azure/sql-database/sql-database-connect-query-nodejs) | [Amostras](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-sql-database) | |
+| **Banco de Dados SQL do Azure** | [Usar o Node.js para consultar um banco de dados SQL do Azure](/azure/sql-database/sql-database-connect-query-nodejs) | [Amostras](/samples/browse/?languages=javascript%252cnodejs&products=azure-sql-database) | |
 | **MySQL** | [Usar Node.js para se conectar e consultar dados](/azure/mysql/connect-nodejs) | |
 | **PostgreSQL** | [Usar Node.js para se conectar e consultar dados](/azure/postgresql/connect-nodejs) | |
 

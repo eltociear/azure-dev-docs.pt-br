@@ -2,14 +2,14 @@
 title: 'Etapa 5: Implantar o Azure Functions no Python com o VS Code'
 description: 'Tutorial, etapa 5: implantação do código de função do Python no Azure e aprendizado sobre como transmitir logs e sincronizar configurações entre um projeto local e o Azure.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: e4108ff7b705be96f62c06a02e301bce9247c048
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 8acf168ecc858410677b8f55b7b84ed14416c005
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473591"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772859"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Implantar o Azure Functions no Python
 
@@ -23,7 +23,9 @@ Um aplicativo de funções requer uma Conta de Armazenamento do Azure para os da
 
     ![Implantar sua função do Python em um Aplicativo de Funções do Azure](media/tutorial-vs-code-serverless-python/deploy-a-python-fuction-to-azure-function-app.png)
 
-1. Quando solicitado, selecione **Criar Aplicativo de Funções no Azure** e forneça um nome que seja exclusivo em todo o Azure (por exemplo, usando seu nome ou o nome da empresa, juntamente com outros identificadores exclusivos; você pode usar letras, números e hifens). Se você já criou um Aplicativo de Funções anteriormente, o nome dele aparecerá nessa lista de opções.
+1. Quando solicitado, selecione **Criar Aplicativo de Funções no Azure** e forneça um nome que seja exclusivo em todo o Azure (por exemplo, usando seu nome ou o nome da empresa, juntamente com outros identificadores exclusivos; você pode usar letras, números e hifens).
+
+    Se você já criou um Aplicativo de Funções anteriormente, o nome dele aparecerá nessa lista de opções.
 
 1. Quando solicitado, selecione uma versão do Python e o local do Azure.
 
@@ -75,4 +77,3 @@ Para aplicar as alterações feitas por meio do portal ou do **Azure Explorer** 
 > [!div class="nextstepaction"]
 > [Implantei as funções – prossiga para a etapa 6 >>>](tutorial-vs-code-serverless-python-06.md)
 
-Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

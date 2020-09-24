@@ -5,12 +5,12 @@ keywords: azure, chef, devops, cliente, instalar, portal
 ms.date: 02/22/2020
 ms.topic: article
 ms.custom: devx-track-chef
-ms.openlocfilehash: 3fb282914bad8992a5f4df76019df89824675da0
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: c84804628be0904deb1781006b7a66c7c402deb8
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240818"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831462"
 ---
 # <a name="install-the-chef-client-from-the-azure-portal"></a>Instalar o cliente do Chef no portal do Azure
 Você pode adicionar a extensão cliente da Chef diretamente em computador Linux ou Windows, por meio do portal do Azure. Este artigo o orienta pelo processo usando uma nova máquina virtual Linux.
@@ -51,7 +51,7 @@ Nesta seção, primeiro você usará o portal do Azure para criar uma máquina L
 1. Na guia **Básico**, especifique os valores a seguir, e em seguida, selecione **OK**.
 
    - **Nome** - Insira um nome para a nova máquina virtual.
-   - **Tipo de disco VM** - especifique o **SSD** ou **HDD** para o tipo de disco de armazenamento. Para saber mais sobre tipos de disco de máquina virtual no Azure, confira o artigo [Selecionar um tipo de disco](https://docs.microsoft.com/azure/virtual-machines/windows/disks-types).
+   - **Tipo de disco VM** - especifique o **SSD** ou **HDD** para o tipo de disco de armazenamento. Para saber mais sobre tipos de disco de máquina virtual no Azure, confira o artigo [Selecionar um tipo de disco](/azure/virtual-machines/windows/disks-types).
    - **Nome de Usuário** - Insira um nome de usuário que receberá privilégios de administrador na máquina virtual.
    - **Tipo de Autenticação**, Selecione **Senha**. Você também pode selecionar **chave pública SSH**e forneça um valor de chave pública SSH. Para fins desta demonstração (e nas capturas de tela), **Senha** é selecionada.
    - **Senha** e **Confirmar senha** - digite uma senha para o usuário.

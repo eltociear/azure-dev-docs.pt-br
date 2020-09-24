@@ -4,12 +4,12 @@ description: Crie e publique uma função disparada por HTTP simples no Azure us
 ms.topic: quickstart
 ms.date: 03/26/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 1260d5cbaec821149468ef524af35e081c06ec52
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: b27655657d763e295a1817acf200a67c090ff67d
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379960"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831402"
 ---
 # <a name="quickstart-create-an-azure-functions-project-using-intellij-idea"></a>Início Rápido: Criar um projeto do Azure Functions usando o IntelliJ IDEA
 
@@ -20,7 +20,7 @@ Neste artigo, você usará o IntelliJ IDEA para criar uma função que responde 
 Antes de começar, verifique se você tem os seguintes requisitos implementados:
 
 + Uma conta do Azure com uma assinatura ativa. [Crie uma conta gratuitamente](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
-+ Um [JDK (Kit de desenvolvimento Java) compatível com o Azure](https://aka.ms/azure-jdks) para Java 8
++ Um [JDK (Kit de desenvolvimento Java) compatível com o Azure](../fundamentals/java-jdk-long-term-support.md) para Java 8
 + Um [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition ou Community Edition instalado
 + [Maven 3.5.0+](https://maven.apache.org/download.cgi)
 + Versão mais recente do [Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)

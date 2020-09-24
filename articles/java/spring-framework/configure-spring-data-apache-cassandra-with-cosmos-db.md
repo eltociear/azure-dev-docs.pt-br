@@ -8,12 +8,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: c39fffef8f743f89d6d448b86606463527c8e06a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 52fbaa611f0c9367eede649dac644fd478f8855e
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379050"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831252"
 ---
 # <a name="how-to-use-spring-data-apache-cassandra-api-with-azure-cosmos-db"></a>Como usar a API do Apache Cassandra do Spring Data com o Azure Cosmos DB
 
@@ -167,7 +167,7 @@ Neste tutorial, você criou um aplicativo Java de exemplo que usa o Spring Data 
 Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
 
 > [!div class="nextstepaction"]
-> [Spring no Azure](/azure/developer/java/spring-framework)
+> [Spring no Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -175,7 +175,7 @@ Para obter mais informações sobre como usar o Azure com Java, confira [Azure p
 
 <!-- URL List -->
 
-[Azure para desenvolvedores Java]: /azure/developer/java/
+[Azure para desenvolvedores Java]: ../index.yml
 [conta gratuita do Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Como trabalhar com o Java e o Azure DevOps]: /azure/devops/
 [benefício de assinante do MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

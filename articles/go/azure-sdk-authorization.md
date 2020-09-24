@@ -3,12 +3,12 @@ title: Autenticação com o SDK do Azure para Go
 description: Saiba mais sobre os métodos de autenticação disponíveis no SDK do Azure para Go e como usá-los.
 ms.date: 09/05/2018
 ms.topic: conceptual
-ms.openlocfilehash: b4bf09dbb3f59c77c2914ae9c9091dc0af31b093
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 61353f2b7f2c13764f4e736105b15127d1355e29
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80319673"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831312"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Métodos de autenticação no SDK do Azure para Go
 
@@ -111,7 +111,7 @@ O `ResourceManagerURL` varia de acordo com o nome da região, nome do computador
 | Kit de desenvolvimento | `https://management.local.azurestack.external/` |
 | Sistemas Integrados | `https://management.(region).ext-(machine-name).(FQDN)` |
 
-Para ter mais informações sobre como usar o SDK do Azure para linguagem Go no Azure Stack, confira [Usar perfis de versão de API com a linguagem Go no Azure Stack](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-version-profiles-go)
+Para ter mais informações sobre como usar o SDK do Azure para linguagem Go no Azure Stack, confira [Usar perfis de versão de API com a linguagem Go no Azure Stack](/azure/azure-stack/user/azure-stack-version-profiles-go)
 
 ## <a name="use-file-based-authentication"></a>Usar a autenticação baseada em arquivo
 

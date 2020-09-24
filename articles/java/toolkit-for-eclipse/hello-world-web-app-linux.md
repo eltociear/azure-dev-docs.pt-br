@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 51037098f05d985bcb8c35580688d37db0cbe363
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: b12888cde3a80583d95ccd39bfcd34615842913c
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534734"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90829994"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-eclipse"></a>Implantar um aplicativo Web Olá, Mundo em um contêiner do Linux na nuvem usando o Azure Toolkit for Eclipse
 
@@ -34,7 +34,7 @@ Este artigo demonstra as etapas que são necessárias para criar um aplicativo W
 
 ## <a name="create-a-new-web-app-project"></a>Criar um novo projeto do aplicativo Web
 
-1. Inicie o Eclipse e entre em sua conta do Azure usando as etapas no artigo [Instruções de entrada para o Azure Toolkit for Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
+1. Inicie o Eclipse e entre em sua conta do Azure usando as etapas no artigo [Instruções de entrada para o Azure Toolkit for Eclipse](./sign-in-instructions.md).
 
 1. Clique em **Arquivo**, **Novo** e clique em **Projeto Web dinâmico**.
    
@@ -111,7 +111,7 @@ Para obter recursos adicionais para o Docker, consulte o [site do Docker][Docker
 
 [Azure portal]: https://portal.azure.com/
 [Criar um registro de contêiner privado do Docker usando o portal do Azure]: /azure/container-registry/container-registry-get-started-portal
-[Azure for Java Developers]: /azure/developer/java/
+[Azure for Java Developers]: ../index.yml
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Create Docker Registry using Azure CLI]: /azure/container-registry/container-registry-get-started-azure-cli
 

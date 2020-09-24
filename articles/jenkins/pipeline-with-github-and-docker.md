@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, pipeline, cicd, docker
 ms.topic: tutorial
 ms.date: 03/27/2017
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 2a9bc23852a04b42b72628adda116585d354f860
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 8a29533b8589d91d095a3d591e6346f87dde4e52
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240698"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831212"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>Tutorial: Criar um pipeline do Jenkins usando o GitHub e o Docker
 
@@ -24,12 +24,12 @@ Para automatizar as fases de build e teste do desenvolvimento de aplicativos, vo
 > * Criar uma imagem de Docker para o aplicativo
 > * Verificar se as confirmações do GitHub compilam a nova imagem do Docker e atualizam o aplicativo em execução
 
-Este tutorial usa a CLI dentro do [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview), que é constantemente atualizada para a versão mais recente. Para abrir o Cloud Shell, selecione **Experimentar** na parte superior de um bloco de código qualquer.
+Este tutorial usa a CLI dentro do [Azure Cloud Shell](/azure/cloud-shell/overview), que é constantemente atualizada para a versão mais recente. Para abrir o Cloud Shell, selecione **Experimentar** na parte superior de um bloco de código qualquer.
 
 Se você optar por instalar e usar a CLI localmente, este tutorial exigirá que você execute a CLI do Azure versão 2.0.30 ou posterior. Execute `az --version` para encontrar a versão. Se você precisa instalar ou atualizar, consulte [Instalar a CLI do Azure]( /cli/azure/install-azure-cli).
 
 ## <a name="create-jenkins-instance"></a>Criar instância do Jenkins
-Em um tutorial anterior sobre [Como personalizar uma máquina virtual do Linux na primeira inicialização](/azure/virtual-machines/linux/tutorial-automate-vm-deployment), você aprendeu a automatizar a personalização de VM com a inicialização de nuvem. Este tutorial usa um arquivo de inicialização de nuvem para instalar o Jenkins e o Docker em uma VM. Jenkins é um conhecido servidor de automação de código aberto que se integra perfeitamente com o Azure para habilitar a integração contínua (CI) e fornecimento contínuo (CD). Para ver mais tutoriais sobre como usar o Jenkins, consulte [Jenkins no hub do Azure](https://docs.microsoft.com/azure/jenkins/).
+Em um tutorial anterior sobre [Como personalizar uma máquina virtual do Linux na primeira inicialização](/azure/virtual-machines/linux/tutorial-automate-vm-deployment), você aprendeu a automatizar a personalização de VM com a inicialização de nuvem. Este tutorial usa um arquivo de inicialização de nuvem para instalar o Jenkins e o Docker em uma VM. Jenkins é um conhecido servidor de automação de código aberto que se integra perfeitamente com o Azure para habilitar a integração contínua (CI) e fornecimento contínuo (CD). Para ver mais tutoriais sobre como usar o Jenkins, consulte [Jenkins no hub do Azure](/azure/jenkins/).
 
 No shell atual, crie um arquivo chamado *cloud-init-jenkins.txt* e cole a configuração a seguir. Por exemplo, crie o arquivo no Cloud Shell e não em seu computador local. Insira `sensible-editor cloud-init-jenkins.txt` para criar o arquivo e ver uma lista de editores disponíveis. Certifique-se de que o arquivo de inicialização de nuvem inteiro seja copiado corretamente, especialmente a primeira linha:
 

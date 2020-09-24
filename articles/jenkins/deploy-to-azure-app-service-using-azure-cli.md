@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, serviço de aplicativo, cli
 ms.topic: tutorial
 ms.date: 08/08/2020
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 9c5f3b30507cda764dd29f0c133d4997dbc2bb53
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 4a6fde1eb8830c897c438fa89e7da6fe93b5a3a8
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240948"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831332"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Tutorial: Implantar o Serviço de Aplicativo do Azure com o Jenkins e a CLI do Azure
 
@@ -47,7 +47,7 @@ sudo apt-get install -y maven
 Uma credencial do Azure é necessária para executar a CLI do Azure.
 
 * No painel do Jenkins, clique em **Credenciais -> Sistema ->**. Clique em **Credenciais globais (irrestrito)**.
-* Clique em **Adicionar credenciais** para adicionar uma [entidade de serviço do Microsoft Azure](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json), preenchendo a ID da assinatura, a ID do cliente, o segredo do cliente e o Ponto de Extremidade do Token OAuth 2.0. Forneça uma ID para uso na próxima etapa.
+* Clique em **Adicionar credenciais** para adicionar uma [entidade de serviço do Microsoft Azure](/cli/azure/create-an-azure-service-principal-azure-cli?toc=%252fazure%252fazure-resource-manager%252ftoc.json), preenchendo a ID da assinatura, a ID do cliente, o segredo do cliente e o Ponto de Extremidade do Token OAuth 2.0. Forneça uma ID para uso na próxima etapa.
 
 ![Adicionar Credenciais](./media/deploy-to-azure-app-service-using-azure-cli/add-credentials.png)
 

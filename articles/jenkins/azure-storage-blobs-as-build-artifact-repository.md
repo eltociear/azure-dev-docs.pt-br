@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, storage, cicd, build artifacts
 ms.topic: article
 ms.date: 08/13/2019
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 783d6870eff461ccf4936aff9bfd76577816e5bf
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: e3e290b7135f1207ffa91e8a228e2af91e91f878
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240968"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831352"
 ---
 # <a name="tutorial-use-azure-storage-for-build-artifacts"></a>Tutorial: Usar o Armazenamento do Azure para artefatos de compilação
 
@@ -135,7 +135,7 @@ Esta seção fornece uma visão geral dos componentes do serviço Blob.
 
 * **Conta de Armazenamento**: Todo o acesso ao Armazenamento do Azure ocorre por meio de uma conta de armazenamento. Uma conta de armazenamento é o nível mais alto do namespace para acessar blobs. Uma conta pode conter um número ilimitado de contêineres, desde que seu tamanho total seja inferior a 100 TB.
 * **Contêiner**: Um contêiner fornece um agrupamento de conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Um contêiner pode armazenar um número ilimitado de blobs.
-* **Blob**: Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no Armazenamento do Azure: blobs de blocos e de páginas. A maioria dos arquivos são blobs de bloco. Um único blob de blocos pode ter até 200 GB de tamanho. Este tutorial usa blobs de bloco. Os blobs de página, um outro tipo de blob, podem ter até 1 TB de tamanho e são mais eficientes quando os intervalos de bytes em um arquivo são modificados com frequência. Para obter mais informações sobre os blobs, consulte [Compreendendo os Blobs de Bloco, Blobs de Anexo e Blobs de Página](https://msdn.microsoft.com/library/azure/ee691964.aspx).
+* **Blob**: Um arquivo de qualquer tipo e tamanho. Há dois tipos de blobs que podem ser armazenados no Armazenamento do Azure: blobs de blocos e de páginas. A maioria dos arquivos são blobs de bloco. Um único blob de blocos pode ter até 200 GB de tamanho. Este tutorial usa blobs de bloco. Os blobs de página, um outro tipo de blob, podem ter até 1 TB de tamanho e são mais eficientes quando os intervalos de bytes em um arquivo são modificados com frequência. Para obter mais informações sobre os blobs, consulte [Compreendendo os Blobs de Bloco, Blobs de Anexo e Blobs de Página](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs).
 * **Formato de URL**: Os blobs são endereçáveis usando o seguinte formato de URL:
   
     `http://storageaccount.blob.core.windows.net/container_name/blob_name`

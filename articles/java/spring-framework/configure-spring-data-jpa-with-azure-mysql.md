@@ -8,16 +8,16 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: c76dd7a91340c603bdb4ce921457013229a26c4c
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 6e4371e4d375c663f61f59707c553ac0e2d6e237
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378870"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831222"
 ---
 # <a name="use-spring-data-jpa-with-azure-database-for-mysql"></a>Usar o Spring Data JPA com o Banco de Dados do Azure para MySQL
 
-Este tópico demonstra como criar um aplicativo de exemplo que usa o [Spring Data JPA](https://spring.io/projects/spring-data-jpa) para armazenar e recuperar informações no [Banco de Dados do Azure para MySQL](https://docs.microsoft.com/azure/mysql/).
+Este tópico demonstra como criar um aplicativo de exemplo que usa o [Spring Data JPA](https://spring.io/projects/spring-data-jpa) para armazenar e recuperar informações no [Banco de Dados do Azure para MySQL](/azure/mysql/).
 
 [A JPA (API de Persistência Java)](https://en.wikipedia.org/wiki/Java_Persistence_API) é a API Java padrão para o mapeamento relacional de objeto.
 
@@ -86,4 +86,4 @@ Parabéns! Você criou um aplicativo Spring Boot que usa o JPA para armazenar e 
 
 Para obter mais informações sobre o Spring Data JPA, confira a [documentação de referência](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference) do Spring.
 
-Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](/azure/developer/java/) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).
+Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](../index.yml) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).

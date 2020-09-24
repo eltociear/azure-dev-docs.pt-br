@@ -2,14 +2,14 @@
 title: 'Etapa 7: Adicionar uma associação de armazenamento para o Azure Functions no Python com o VS Code'
 description: 'Tutorial, etapa 7: adição de uma associação no Python para gravar mensagens no armazenamento do Azure.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: a8e320b42221b1f1d30859d41b8e56f52c18072a
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: ad242e5c9c2258e438846a7d393163871d14db9e
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473611"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772849"
 ---
 # <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Adicionar uma associação de armazenamento para o Azure Functions no Python
 
@@ -21,7 +21,9 @@ Uma associação é definida no arquivo *function.json* e pode representar tanto
 
 Nesta seção, você adicionará uma associação de armazenamento à função HttpExample criada anteriormente neste tutorial. A função usa essa associação para gravar mensagens no armazenamento com cada solicitação. O armazenamento em questão usa a mesma conta de armazenamento padrão empregada pelo aplicativo de funções. No entanto, se você planeja fazer uso intenso do armazenamento, considere a possibilidade de criar uma conta separada.
 
-1. Sincronize as configurações remotas para seu projeto do Azure Functions no arquivo *local.settings.json*, abrindo a Paleta de Comandos e selecionando **Azure Functions: Baixar Configurações Remotas**. Abra o *local.settings.json* e verifique se ele contém um valor para `AzureWebJobsStorage`. O valor é a cadeia de conexão para a conta de armazenamento.
+1. Sincronize as configurações remotas para seu projeto do Azure Functions no arquivo *local.settings.json*, abrindo a Paleta de Comandos e selecionando **Azure Functions: Baixar Configurações Remotas**.
+ 
+    Abra o *local.settings.json* e verifique se ele contém um valor para `AzureWebJobsStorage`. O valor é a cadeia de conexão para a conta de armazenamento.
 
 1. Na pasta `HttpExample`, clique com o botão direito do mouse em *function.json* e selecione **Adicionar associação**:
 
@@ -49,7 +51,9 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
         }
     ```
 
-1. Agora que a associação está configurada, você pode usá-la no código da função. Novamente, a associação recém-definida aparece no código como um argumento para a função `main` no *\_\_init\_\_.py*. Por exemplo, você pode modificar o arquivo *\_\_init\_\_.py*, no HttpExample, para corresponder ao seguinte, que mostra o uso do argumento `msg` para gravar uma mensagem com carimbo de data/hora com o nome usado na solicitação. Os comentários explicam as alterações específicas:
+1. Agora que a associação está configurada, você pode usá-la no código da função. Novamente, a associação recém-definida aparece no código como um argumento para a função `main` no *\_\_init\_\_.py*.
+
+    Por exemplo, você pode modificar o arquivo *\_\_init\_\_.py*, no HttpExample, para corresponder ao seguinte, que mostra o uso do argumento `msg` para gravar uma mensagem com carimbo de data/hora com o nome usado na solicitação. Os comentários explicam as alterações específicas:
 
     ```python
     import logging
@@ -82,7 +86,9 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
             )
     ```
 
-1. Para testar essas alterações localmente, inicie o depurador novamente no Visual Studio Code pressionando F5 ou selecionando o comando de menu **Depurar** > **Iniciar Depuração**. Como antes, agora a janela **Saída** deve mostrar os dois pontos de extremidade do seu projeto.
+1. Para testar essas alterações localmente, inicie o depurador novamente no Visual Studio Code pressionando F5 ou selecionando o comando de menu **Depurar** > **Iniciar Depuração**.
+
+    Como antes, agora a janela **Saída** deve mostrar os dois pontos de extremidade do seu projeto.
 
 1. Em um navegador, visite a URL `http://localhost:7071/api/HttpExample?name=VS%20Code` para criar uma solicitação ao ponto de extremidade HttpExample, que também deve gravar uma mensagem na fila.
 
@@ -99,4 +105,3 @@ Nesta seção, você adicionará uma associação de armazenamento à função H
 > [!div class="nextstepaction"]
 > [Adicionei uma associação de armazenamento – prossiga para a etapa 8 >>>](tutorial-vs-code-serverless-python-08.md)
 
-Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

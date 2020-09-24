@@ -3,16 +3,17 @@ title: Implantar um site do Node.js estático no Azure usando o Visual Studio Co
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: c63ff76f3572a7815b385b08b05e223eb681fbbe
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: d2c66383e654624cf7edce542461340cc248ba62
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791252"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90773080"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Implantar um site estático no Azure usando o Visual Studio Code
 
-Neste tutorial, você vai criar e implantar um site estático no Azure usando o [Armazenamento do Azure](https://docs.microsoft.com/azure/storage). Um site estático é composto por HTML, CSS, JavaScript e outros arquivos estáticos, como imagens ou fontes. Um site estático normalmente é um SPA (ou [aplicativo de página única](https://en.wikipedia.org/wiki/Single-page_application)) escrito com Angular, React ou Vue. No entanto, você cria o aplicativo, hospeda e serve esses arquivos diretamente do _armazenamento_, em vez de usando um servidor Web. Hospedar no armazenamento é mais simples e mais barato do que manter um servidor Web.
+Neste tutorial, você vai criar e implantar um site estático no Azure usando o [Armazenamento do Azure](/azure/storage). Um site estático é composto por HTML, CSS, JavaScript e outros arquivos estáticos, como imagens ou fontes. Um site estático normalmente é um SPA (ou [aplicativo de página única](https://en.wikipedia.org/wiki/Single-page_application)) escrito com Angular, React ou Vue. No entanto, você cria o aplicativo, hospeda e serve esses arquivos diretamente do _armazenamento_, em vez de usando um servidor Web. Hospedar no armazenamento é mais simples e mais barato do que manter um servidor Web.
 
 ## <a name="walkthrough-video"></a>Vídeo explicativo
 

@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, playbook, azure cli
 ms.topic: quickstart
 ms.date: 08/13/2020
 ms.custom: devx-track-ansible,devx-track-cli
-ms.openlocfilehash: 50fbcb4d086679265d728f14061a5c4c649fa48d
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: bdda836789e9230cffdc14a6ee4bd87ddb2ce5ef
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682022"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831163"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cli"></a>Início Rápido: Configurar o Ansible usando a CLI do Azure
 
@@ -177,4 +177,4 @@ Agora você tem uma máquina virtual com o Ansible instalado e configurado.
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Ansible no Azure](/azure/developer/Ansible)
+> [Ansible no Azure](./index.yml)

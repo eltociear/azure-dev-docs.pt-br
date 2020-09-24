@@ -4,18 +4,18 @@ description: Parte 2 do tutorial, criar o aplicativo Azure Functions
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 2aca9c53e254eca7c8a070cc50a88426d3886cdd
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: 7ea1b39086a6cd824084e9bbb3839ab41a24eaad
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218391"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772619"
 ---
 # <a name="create-the-local-functions-app"></a>Criar o aplicativo Functions local
 
 [Etapa anterior: Introdução e pré-requisitos](tutorial-vscode-serverless-node-01.md)
 
-Nesta etapa, você cria um aplicativo Azure Functions local com uma função que usa um [gatilho HTTP](https://docs.microsoft.com/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Um aplicativo Azure Functions pode conter muitas Funções com [diferentes gatilhos](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings). O gatilho HTTP processa especificamente o tráfego HTTP de entrada.
+Nesta etapa, você cria um aplicativo Azure Functions local com uma função que usa um [gatilho HTTP](/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Um aplicativo Azure Functions pode conter muitas Funções com [diferentes gatilhos](/azure/azure-functions/functions-triggers-bindings). O gatilho HTTP processa especificamente o tráfego HTTP de entrada.
 
 1. Em um terminal ou prompt de comando, execute o Visual Studio Code de dentro de uma pasta adequada para o projeto:
 

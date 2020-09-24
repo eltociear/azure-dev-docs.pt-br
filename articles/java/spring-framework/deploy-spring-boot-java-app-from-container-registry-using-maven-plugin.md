@@ -10,12 +10,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019, devx-track-java
-ms.openlocfilehash: 3bd3eab54fa231fc06805cd44b61fcb121a4ad31
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: ab1b538a71fc1937e60616dd91567064ed8fd945
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90681766"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830082"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Usar o Maven para Aplicativos Web do Azure para implantar um aplicativo Spring Boot no Registro de Contêiner do Azure no Serviço de Aplicativo do Azure
 
@@ -374,7 +374,7 @@ Após a implantação de sua Web, você poderá gerenciá-la usando o [Azure por
 Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
 
 > [!div class="nextstepaction"]
-> [Spring no Azure](/azure/developer/java/spring-framework)
+> [Spring no Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -396,7 +396,7 @@ Para obter mais informações sobre como usar o Azure com Java, confira [Azure p
 
 [CLI (interface de linha de comando) do Azure]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure para desenvolvedores Java]: /azure/developer/java/
+[Azure para desenvolvedores Java]: ../index.yml
 [Azure portal]: https://portal.azure.com/
 [Plug-in do Maven para aplicativos Web do Azure]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -412,7 +412,7 @@ Para obter mais informações sobre como usar o Azure com Java, confira [Azure p
 [Introdução ao Spring Boot no Docker]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
-[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+[Java Development Kit (JDK)]: ../fundamentals/java-jdk-long-term-support.md
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->

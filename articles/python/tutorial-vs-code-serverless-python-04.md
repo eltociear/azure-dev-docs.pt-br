@@ -2,14 +2,14 @@
 title: 'Etapa 4: Depurar localmente o código Python do Azure Functions com o VS Code'
 description: 'Tutorial, etapa 4: execução do depurador do VS Code localmente para verificar seu código do Python.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: f96e2065f4864423470c1eda9ad48cad086e0fe6
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 4a5cb6bb8eedca93ce1e7675d3e7e1959ca066f6
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473581"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90773019"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Depurar localmente o código Python do Azure Functions
 
@@ -29,7 +29,9 @@ ms.locfileid: "89473581"
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
     </pre>
 
-1. Use **Ctrl+clique** ou **cmd+clique** sobre a URL na janela **Saída** do Visual Studio Code para abrir um navegador com esse endereço ou inicie um navegador e cole essa URL na barra de navegação. Em ambos os casos, o ponto de extremidade é `api/<function_name>`, nesse caso `api/HttpExample`. No entanto, como essa URL não inclui um parâmetro de nome, a janela do navegador deve mostrar apenas "Passe um nome na cadeia de caracteres de consulta ou no corpo da solicitação", conforme apropriado para esse caminho no código.
+1. Use **Ctrl+clique** ou **cmd+clique** sobre a URL na janela **Saída** do Visual Studio Code para abrir um navegador com esse endereço ou inicie um navegador e cole essa URL na barra de navegação.
+
+    Em ambos os casos, o ponto de extremidade é `api/<function_name>`, nesse caso `api/HttpExample`. No entanto, como essa URL não inclui um parâmetro de nome, a janela do navegador deve mostrar apenas "Passe um nome na cadeia de caracteres de consulta ou no corpo da solicitação", conforme apropriado para esse caminho no código.
 
     > [!TIP]
     > Se você não conseguir acessar a URL e estiver em execução por trás de um proxy corporativo (e, provavelmente, tiver as variáveis de ambiente `HTTP_PROXY` e `HTTPS_PROXY` definidas), defina uma variável de ambiente chamada `NO_PROXY` como `localhost,127.0.0.1` e tente novamente.
@@ -47,7 +49,7 @@ ms.locfileid: "89473581"
         --data {"""name""":"""Visual Studio Code"""} http://localhost:7071/api/HttpExample
     ```
 
-    No PowerShell, você também pode usar o [cmdlet Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+    No PowerShell, você também pode usar o [cmdlet Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest).
 
     # <a name="bash"></a>[Bash](#tab/bash)
 
@@ -61,7 +63,11 @@ ms.locfileid: "89473581"
 
     Como alternativa, crie um arquivo como *data.json* que contenha `{"name":"Visual Studio Code"}` e use o comando `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample`.
 
-1. Para testar a depuração da função, defina um ponto de interrupção na linha que lê `name = req.params.get('name')` e faça uma solicitação para a URL novamente. O depurador do Visual Studio Code deve parar nessa linha, permitindo que você examine as variáveis e percorra o código. (Para obter uma breve explicação sobre depuração básica, confira [Tutorial do Visual Studio Code tutorial – Configurar e executar o depurador](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
+1. Para testar a depuração da função, defina um ponto de interrupção na linha que lê `name = req.params.get('name')` e faça uma solicitação para a URL novamente.
+
+    O depurador do Visual Studio Code deve parar nessa linha, permitindo que você examine as variáveis e percorra o código.
+
+    (Para obter uma breve explicação sobre depuração básica, confira [Tutorial do Visual Studio Code tutorial – Configurar e executar o depurador](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
 
 1. Quando você estiver satisfeito por ter testado por completo a função localmente, pare o **depurador (com o comando de menu Depurar** > **Parar Depuração** ou com o comando **Desconectar**, na barra de ferramentas de depuração).
 
@@ -73,4 +79,3 @@ ms.locfileid: "89473581"
 > [!div class="nextstepaction"]
 > [Executei o depurador localmente – prossiga para a etapa 5>>>](tutorial-vs-code-serverless-python-05.md)
 
-Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.

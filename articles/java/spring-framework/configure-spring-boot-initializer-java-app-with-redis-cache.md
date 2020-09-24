@@ -8,12 +8,12 @@ ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: e72a56b90d5c2bb1234fcf969ba3d2e713304b34
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 330f0b3b1cfa5e92a4e876121b966c3a0b174f02
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379410"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830202"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurar um aplicativo Inicializador do Spring Boot para usar o Redis na nuvem com o Cache Redis do Azure
 
@@ -192,7 +192,7 @@ Os seguintes pré-requisitos são obrigatórios para você concluir as etapas ne
 Para saber mais sobre o Spring e o Azure, continue no Spring no Centro de Documentação do Azure.
 
 > [!div class="nextstepaction"]
-> [Spring no Azure](/azure/developer/java/spring-framework)
+> [Spring no Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -210,7 +210,7 @@ O **[Spring Framework]** é uma solução de software livre que ajuda os desenvo
 
 <!-- URL List -->
 
-[Azure para desenvolvedores Java]: /azure/developer/java/
+[Azure para desenvolvedores Java]: ../index.yml
 [conta gratuita do Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Como trabalhar com o Java e o Azure DevOps]: /azure/devops/java/
 [benefício de assinante do MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

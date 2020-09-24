@@ -4,12 +4,12 @@ description: Como provisionar uma máquina virtual do Azure usando o Python e as
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 08e055e282016db1c3cbf57b956a51f17b7a854a
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: f51bb154106a50c708d8d37a024144d7d53aec0e
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275190"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110471"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Exemplo: Usar as bibliotecas do Azure para provisionar uma máquina virtual
 
@@ -293,7 +293,7 @@ az vm create -g PythonAzureExample-VM-rg -n ExampleVM -l "centralus" \
 ## <a name="6-clean-up-resources"></a>6: Limpar os recursos
 
 ```azurecli
-az group delete -n PythonAzureExample-VM-rg
+az group delete -n PythonAzureExample-VM-rg  --no-wait
 ```
 
 Execute esse comando se você não precisar manter os recursos criados neste exemplo e quiser evitar encargos contínuos na sua assinatura.

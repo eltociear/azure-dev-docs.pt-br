@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 28b0e304ee64cb24f098908e83a92d230657741f
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: e457d4fe152f9fa5fa64bafaa4f49311e8ff4475
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534584"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831882"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Gerenciar máquinas virtuais usando o Azure Explorer para Eclipse
 
@@ -24,7 +24,7 @@ O Azure Explorer, que faz parte do Kit de ferramentas do Azure para Eclipse, for
 
 ## <a name="create-a-virtual-machine"></a>Criar uma máquina virtual
 
-1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
+1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](./sign-in-instructions.md).
 
 1. Na exibição do **Azure Explorer**, expanda o nó **Azure**, clique com o botão direito do mouse em **Máquinas Virtuais** e, em seguida, clique em **Criar VM**.
 
@@ -122,8 +122,8 @@ Para saber mais sobre os tamanhos e preços das máquinas virtuais do Azure, vej
 
 <!-- URL List -->
 
-[Tamanhos das máquinas virtuais do Windows no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Tamanhos das máquinas virtuais do Linux no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Tamanhos das máquinas virtuais do Windows no Azure]: /azure/virtual-machines/sizes
+[Tamanhos das máquinas virtuais do Linux no Azure]: /azure/virtual-machines/sizes
 [Preços de máquinas virtuais do Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Preços de máquinas virtuais do Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

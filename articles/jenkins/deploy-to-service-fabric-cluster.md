@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, cicd, linux, service fabric, cluster
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 6ce3714220a5c1cdff3a40cb8590a36356167616
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: cc42d33b68b0c8e8417d5eb0245b33d12bb53b52
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240858"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831542"
 ---
 # <a name="tutorial-deploy-to-a-service-fabric-cluster"></a>Tutorial: Implantação em um cluster do Service Fabric
 
@@ -280,12 +280,12 @@ Para ambientes de produção, é recomendado configurar uma credencial do Azure 
 
 Para ambientes de desenvolvimento e teste, você pode configurar as credenciais do Azure ou o ponto de extremidade de gerenciamento do cluster para implantar seu aplicativo. Para obter detalhes sobre como configurar um ponto de extremidade de gerenciamento do cluster, confira [Configurar a implantação usando o ponto de extremidade de gerenciamento do cluster](#configure-deployment-using-cluster-management-endpoint).   
 
-1. Para criar uma entidade de serviço do Azure Active Directory e atribuir a ela permissões em sua assinatura do Azure, siga as etapas em [Usar o portal para criar um aplicativo e uma entidade de serviço do Azure Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal). Preste atenção ao seguinte:
+1. Para criar uma entidade de serviço do Azure Active Directory e atribuir a ela permissões em sua assinatura do Azure, siga as etapas em [Usar o portal para criar um aplicativo e uma entidade de serviço do Azure Active Directory](/azure/azure-resource-manager/resource-group-create-service-principal-portal). Preste atenção ao seguinte:
 
    * Ao seguir as etapas no tópico, certifique-se de copiar e salvar os valores a seguir: *ID do aplicativo*, *Chave do aplicativo*, *ID do diretório (ID do locatário)* e *ID da assinatura*. Necessário para configurar as credenciais do Azure no Jenkins.
-   * Se você não tiver as [permissões necessárias](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) em seu diretório, precisará pedir ao administrador para conceder as permissões ou criar a entidade de serviço, ou precisará configurar o ponto de extremidade de gerenciamento para o cluster nas **Ações de Pós-Compilação** relativo ao seu trabalho no Jenkins.
-   * Na seção [Criar um aplicativo do Azure Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#create-an-azure-active-directory-application), você pode inserir qualquer URL adequada em **URL de logon**.
-   * Na seção [Atribuir aplicativo a uma Função](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal), você pode atribuir ao aplicativo a função de *Leitor* no grupo de recursos para o cluster.
+   * Se você não tiver as [permissões necessárias](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) em seu diretório, precisará pedir ao administrador para conceder as permissões ou criar a entidade de serviço, ou precisará configurar o ponto de extremidade de gerenciamento para o cluster nas **Ações de Pós-Compilação** relativo ao seu trabalho no Jenkins.
+   * Na seção [Criar um aplicativo do Azure Active Directory](/azure/azure-resource-manager/resource-group-create-service-principal-portal#create-an-azure-active-directory-application), você pode inserir qualquer URL adequada em **URL de logon**.
+   * Na seção [Atribuir aplicativo a uma Função](/azure/azure-resource-manager/resource-group-create-service-principal-portal), você pode atribuir ao aplicativo a função de *Leitor* no grupo de recursos para o cluster.
 
 1. De volta ao trabalho do Jenkins, clique na guia **Ações de Pós-compilação**.
 1. No menu suspenso **Ações Pós-Compilação**, selecione **Implantar Projeto do Service Fabric**. 

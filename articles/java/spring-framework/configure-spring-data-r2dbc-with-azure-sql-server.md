@@ -8,16 +8,16 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: b0f1b594d45dce98b990aec1209b550e08065bc8
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 16945c094d9e6ecb8b837f7fa7c00482fe8a735a
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378710"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831802"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-sql-database"></a>Usar o Spring Data R2DBC com o Banco de Dados SQL do Azure
 
-Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc) para armazenar e recuperar informações no [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/) usando a implementação do R2DBC para Microsoft SQL Server do [repositório do GitHub r2dbc-mssql](https://github.com/r2dbc/r2dbc-mssql).
+Este tópico demonstra a criação de um aplicativo de exemplo que usa o [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc) para armazenar e recuperar informações no [Banco de Dados SQL do Azure](/azure/sql-database/) usando a implementação do R2DBC para Microsoft SQL Server do [repositório do GitHub r2dbc-mssql](https://github.com/r2dbc/r2dbc-mssql).
 
 O [R2DBC](https://r2dbc.io/) traz APIs reativas para bancos de dados relacionais tradicionais. Você pode usá-lo com o Spring WebFlux para criar aplicativos Spring Boot totalmente reativos que usam APIs sem bloqueio. Ele fornece melhor escalabilidade do que a abordagem clássica "um thread por conexão".
 
@@ -117,4 +117,4 @@ Parabéns! Você criou um aplicativo Spring Boot totalmente reativo que usa o R2
 
 Para obter mais informações sobre o Spring Data R2DBC, confira a [documentação de referência](https://docs.spring.io/spring-data/r2dbc/docs/current/reference/html/#reference) do Spring.
 
-Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](/azure/developer/java/) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).
+Para obter mais informações sobre como usar o Azure com o Java, confira [Azure para desenvolvedores Java](../index.yml) e [Trabalhar com o Azure DevOps e com o Java](/azure/devops/).

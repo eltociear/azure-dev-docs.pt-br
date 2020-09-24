@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: a839da7cf596c356541ee69d341f1b73ca278a44
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 23a16188b7f24265ca4045f684c9e08304788ea1
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672302"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831593"
 ---
 ## <a name="prerequisites"></a>Prerequisites
 
 Para concluir as etapas neste artigo, você precisará instalar o Kit de Ferramentas do Azure para IntelliJ, que requer os seguintes componentes de software:
 
-* Um [JDK (Kit de desenvolvimento Java) com suporte do Azure](https://aka.ms/azure-jdks)
+* Um [JDK (Kit de desenvolvimento Java) com suporte do Azure](../../fundamentals/java-jdk-long-term-support.md)
 * Um [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition ou Community Edition instalado
 
 > [!NOTE]

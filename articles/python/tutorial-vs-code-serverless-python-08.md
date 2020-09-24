@@ -2,14 +2,14 @@
 title: 'Etapa 8: Limpar os recursos usados com o código Python no Azure Functions'
 description: Etapa 8 do tutorial, limpando os recursos do Azure para evitar incorrer em encargos contínuos.
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: fe4f9b0ef5789b307cbeb3c680dfde2eb46a0046
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 885ff8b79ac219d4adaf4760e31fe439d010f9d5
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473511"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832002"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Limpar recursos do Azure para o Azure Functions
 
@@ -31,7 +31,7 @@ Conforme observado anteriormente, você pode aprender mais sobre a extensão do 
 
 Leia a [Visão geral do Azure Functions](/azure/azure-functions/functions-overview) para explorar os diferentes gatilhos que você pode usar.
 
-Para saber mais sobre os serviços do Azure que você pode usar no Python, incluindo armazenamento de dados com IA e os serviços do Machine Learning, visite o [Centro de Desenvolvedores de Python do Azure](/azure/python/?view=azure-python).
+Para saber mais sobre os serviços do Azure que você pode usar no Python, incluindo armazenamento de dados com IA e os serviços do Machine Learning, visite o [Centro de Desenvolvedores de Python do Azure](./index.yml).
 
 Também há outras extensões do Azure para Visual Studio Code que podem ser úteis. Basta pesquisar "Azure" no explorador de Extensões:
 
@@ -45,6 +45,4 @@ Algumas extensões populares são:
 - [Ferramentas do Azure Resource Manager](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Terminei!](https://docs.microsoft.com/python/azure/?view=azure-python)
-
-Algum problema? Envie um problema do GitHub usando a seção de comentários "Esta página" na parte inferior da página.
+> [Terminei!](/python/azure/?preserve-view=true&view=azure-python)

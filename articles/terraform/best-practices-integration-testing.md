@@ -4,12 +4,12 @@ description: Saiba mais sobre os testes de integração e como usar o Azure DevO
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: ced6dc9a3ff40ceee3ac37daea3ab6300a529e0e
-ms.sourcegitcommit: 62f78d529c02c7d7895d32ec8ed415bf0946d056
+ms.openlocfilehash: d6c8f9c419070d734c3c848163c52e6255d5512a
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557549"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831992"
 ---
 # <a name="tutorial-configure-integration-tests-for-terraform-projects-in-azure"></a>Tutorial: Configurar testes de integração para projetos do Terraform no Azure
 
@@ -30,9 +30,9 @@ Neste artigo, você aprende a realizar as seguintes tarefas:
 ## <a name="prerequisites"></a>Pré-requisitos
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Organização e projeto do Azure DevOps**: Se você não tiver uma, [crie uma organização do Azure DevOps](https://docs.microsoft.com/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=preview-page).
+- **Organização e projeto do Azure DevOps**: Se você não tiver uma, [crie uma organização do Azure DevOps](/azure/devops/organizations/projects/create-project?tabs=preview-page&view=azure-devops).
 - **Extensão das Tarefas de Compilação e Versão do Terraform**: [Instale a extensão das tarefas de compilação/versão do Terraform](https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-tasks-terraform) na organização do Azure DevOps.
-- **Conceda ao Azure DevOps acesso à sua Assinatura do Azure**: Criar uma [conexão de serviço do Azure](https://docs.microsoft.com/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) chamada `terraform-basic-testing-azure-connection` para permitir que o Azure Pipelines se conecte às suas assinaturas do Azure
+- **Conceda ao Azure DevOps acesso à sua Assinatura do Azure**: Criar uma [conexão de serviço do Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) chamada `terraform-basic-testing-azure-connection` para permitir que o Azure Pipelines se conecte às suas assinaturas do Azure
 - **Instalar o Terraform**: Com base em seu ambiente, [baixar e instalar o Terraform](https://www.terraform.io/downloads.html).
 - **Bifurcar os exemplos de teste**: Bifurcar o [projeto de exemplo do Terraform no GitHub](https://github.com/Azure/terraform) e cloná-lo em seu computador de desenvolvimento/teste.
 

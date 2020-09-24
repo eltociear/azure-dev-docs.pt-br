@@ -4,12 +4,12 @@ description: Lista de materiais de introdução na documentação do Azure para 
 ms.date: 04/09/2020
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: ea6c6ad85c40f5924b321e9edfa2d5db599685a6
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: b3a2144e256ad6572d1cd982e85806ffa77f61f2
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379620"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831722"
 ---
 # <a name="data-for-java-apps-on-azure"></a>Dados para aplicativos Java no Azure
 
@@ -23,13 +23,13 @@ Os seguintes artigos ajudam você com uma introdução a várias opções de dad
 - [Cosmos DB – Cassandra](/azure/cosmos-db/create-cassandra-java)
 - [Cosmos DB – Gremlin](/azure/cosmos-db/create-graph-java)
 - [Cosmos DB – Tabela](/azure/cosmos-db/create-table-java)
-- [MySQL – JDBC do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql)
-- [MySQL – JPA do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-jpa-with-azure-mysql)
-- [PostgreSQL – JDBC do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-postgresql)
-- [PostgreSQL – JPA do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-jpa-with-azure-postgresql)
-- [Banco de Dados SQL – JDBC do Spring data](/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-sql-server)
-- [Banco de Dados SQL – JPA do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-jpa-with-azure-sql-server)
-- [Cosmos DB – Cosmos DB do Spring Data](/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db)
-- [Cosmos DB – Mongo DB do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-mongodb-with-cosmos-db)
-- [Cosmos DB – Cassandra do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-apache-cassandra-with-cosmos-db)
-- [Cosmos DB – Gremlin do Spring Data](/azure/developer/java/spring-framework/configure-spring-data-gremlin-java-app-with-cosmos-db)
+- [MySQL – JDBC do Spring Data](../spring-framework/configure-spring-data-jdbc-with-azure-mysql.md)
+- [MySQL – JPA do Spring Data](../spring-framework/configure-spring-data-jpa-with-azure-mysql.md)
+- [PostgreSQL – JDBC do Spring Data](../spring-framework/configure-spring-data-jdbc-with-azure-postgresql.md)
+- [PostgreSQL – JPA do Spring Data](../spring-framework/configure-spring-data-jpa-with-azure-postgresql.md)
+- [Banco de Dados SQL – JDBC do Spring data](../spring-framework/configure-spring-data-jdbc-with-azure-sql-server.md)
+- [Banco de Dados SQL – JPA do Spring Data](../spring-framework/configure-spring-data-jpa-with-azure-sql-server.md)
+- [Cosmos DB – Cosmos DB do Spring Data](../spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db.md)
+- [Cosmos DB – Mongo DB do Spring Data](../spring-framework/configure-spring-data-mongodb-with-cosmos-db.md)
+- [Cosmos DB – Cassandra do Spring Data](../spring-framework/configure-spring-data-apache-cassandra-with-cosmos-db.md)
+- [Cosmos DB – Gremlin do Spring Data](../spring-framework/configure-spring-data-gremlin-java-app-with-cosmos-db.md)

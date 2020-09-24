@@ -4,12 +4,12 @@ description: Use o SDK do Azure para bibliotecas do Python para provisionar um c
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: b774d986b886aae528c97c4583511a8d6c0ba0a5
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: ff2064d7113e78cda69d240ca526db569c9d14e0
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275200"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110484"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Provisionar o Armazenamento do Azure usando as bibliotecas do Azure para Python
 
@@ -157,7 +157,7 @@ O script levará alguns minutos para ser concluído.
 
 1. Se você quiser tentar usar esses recursos provisionados do código do aplicativo, continue com [Exemplo: Usar o Armazenamento do Microsoft Azure](azure-sdk-example-storage-use.md).
 
-Para obter mais um exemplo que usa a biblioteca de gerenciamento do Armazenamento do Microsoft Azure, consulte [Gerenciar amostra de Armazenamento do Python](https://docs.microsoft.com/samples/azure-samples/storage-python-manage/storage-python-manage/).
+Para obter mais um exemplo que usa a biblioteca de gerenciamento do Armazenamento do Microsoft Azure, consulte [Gerenciar amostra de Armazenamento do Python](/samples/azure-samples/storage-python-manage/storage-python-manage/).
 
 ### <a name="for-reference-equivalent-azure-cli-commands"></a>Para referência: comandos equivalentes da CLI do Azure
 
@@ -220,7 +220,7 @@ Deixe os recursos no lugar se desejar seguir o artigo [Exemplo: Use o Armazename
 Caso contrário, execute o comando a seguir para evitar cobranças contínuas em sua assinatura.
 
 ```azurecli
-az group delete -n PythonAzureExample-Storage-rg
+az group delete -n PythonAzureExample-Storage-rg  --no-wait
 ```
 
 Você também pode usar o método [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-) para excluir um grupo de recursos do código.

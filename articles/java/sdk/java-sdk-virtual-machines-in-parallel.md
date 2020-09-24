@@ -7,23 +7,23 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
 ms.custom: devx-track-java
-ms.openlocfilehash: a0e93cd355560c62c91cee61df843564e738dd25
-ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
+ms.openlocfilehash: 53810dcfc0dc03152ba640a9e9d0bcdd27dc763c
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438358"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831842"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Criar máquinas virtuais em várias regiões a partir de seus aplicativos Java
 
 [Este exemplo](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel) cria máquinas virtuais em paralelo em diferentes regiões do Azure usando as [bibliotecas de gerenciamento do Azure para Java](https://github.com/Azure/azure-sdk-for-java).
 
 > [!IMPORTANT]
-> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](https://docs.microsoft.com/azure/virtual-machines/sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
+> O exemplo cria um total de 48 VMs executando Ubuntu 16.04 LTS de [tamanho STANDARD_DS3_V2](/azure/virtual-machines/sizes) em quatro regiões. O exemplo de código exclui essas máquinas virtuais antes de sair. Certifique-se de [verificar seus limites de serviço e cota](/azure/azure-subscription-service-limits) antes de executar esse exemplo com o número padrão de máquinas virtuais.
 
 ## <a name="run-the-sample"></a>Execute o exemplo
 
-Criar um [arquivo de autenticação](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
+Criar um [arquivo de autenticação](/azure/java/java-sdk-azure-authenticate#mgmt-file) e definir uma variável de ambiente `AZURE_AUTH_LOCATION` com o caminho completo para o arquivo em seu computador. Em seguida, execute:
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel.git

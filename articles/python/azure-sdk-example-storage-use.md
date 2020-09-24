@@ -4,12 +4,12 @@ description: Use o SDK do Azure para bibliotecas do Python para acessar um cont�
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 8bbbb03a4bbbdb24e2c45692a0a982341fbcd7a5
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: 161e27f1323053b45c687e60ade90e863ce71c64
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275130"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110497"
 ---
 # <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Acessar o Armazenamento do Micrsoft Azure com as bibliotecas do Azure para Python
 
@@ -197,7 +197,7 @@ Depois de executar o código usando qualquer um dos métodos, vá para o [portal
 ## <a name="6-clean-up-resources"></a>6: Limpar os recursos
 
 ```azurecli
-az group delete -n PythonAzureExample-Storage-rg
+az group delete -n PythonAzureExample-Storage-rg  --no-wait
 ```
 
 Execute esse comando se você não precisar manter os recursos provisionados neste exemplo e quiser evitar encargos contínuos na sua assinatura.

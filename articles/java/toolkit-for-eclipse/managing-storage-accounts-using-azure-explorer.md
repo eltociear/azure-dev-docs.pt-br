@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 8c7c39fa80568efa3040d5cbfa18c3b0cfcd43bc
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: e5b5c946b5ed4d2480b1040d0925507453cc2408
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534634"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831742"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gerenciar contas de armazenamento usando o Azure Explorer para Eclipse
 
@@ -27,7 +27,7 @@ O Azure Explorer, que faz parte do Azure Toolkit for Eclipse, fornece aos desenv
 
 ## <a name="create-a-storage-account"></a>Criar uma conta de armazenamento
 
-1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
+1. Entre em sua conta do Azure usando as [Instruções de conexão para o Kit de ferramentas do Azure para Eclipse](./sign-in-instructions.md).
 
 1. Na exibição do **Azure Explorer**, expanda o nó **Azure**, clique com o botão direito do mouse em **Contas de Armazenamento** e, em seguida, clique em **Criar Conta de Armazenamento**.
 
@@ -87,8 +87,8 @@ Para saber mais sobre os tamanhos, preços e contas de armazenamento do Azure, v
 [Metas de desempenho e escalabilidade do Armazenamento do Azure]: /azure/storage/storage-scalability-targets
 [Naming and referencing containers, blobs, and metadata]: https://go.microsoft.com/fwlink/?LinkId=255555
 
-[Tamanhos das contas de armazenamento do Windows no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Tamanhos das contas de armazenamento do Linux no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Tamanhos das contas de armazenamento do Windows no Azure]: /azure/virtual-machines/sizes
+[Tamanhos das contas de armazenamento do Linux no Azure]: /azure/virtual-machines/sizes
 [Preços da conta de armazenamento do Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Preços da conta de armazenamento do Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

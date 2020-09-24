@@ -4,18 +4,18 @@ description: Criar, redimensionar e atualizar um disco gerenciado.
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.custom: devx-track-python
-ms.openlocfilehash: 0e319d56f1391d193979c79750025a99b565134a
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b1973276f6cf080006f61ddc3a2805c345591e89
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983238"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831522"
 ---
 # <a name="managed-disks"></a>Managed Disks
 
 O Azure Managed Disks oferece gerenciamento de discos simplificado, escalabilidade avançada, bem como segurança e escala aprimoradas. Ele retira a noção de conta de armazenamento para discos, permitindo que os clientes façam o dimensionamento sem se preocupar com as limitações associadas às contas de armazenamento. Esta postagem fornece uma breve introdução e referência sobre o consumo do serviço do Python.
 
-Da perspectiva de um desenvolvedor, a experiência do Managed Disks na CLI do Azure é única em relação à linguagem quando comparada com a CLI em outras ferramentas multiplataforma. Você pode usar o SDK do [Azure Python](https://azure.microsoft.com/develop/python/) e o [pacote do azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) para administrar Managed Disks. Você pode criar um cliente de computação usando este [tutorial](https://docs.microsoft.com/python/api/overview/azure/virtualmachines?view=azure-python).
+Da perspectiva de um desenvolvedor, a experiência do Managed Disks na CLI do Azure é única em relação à linguagem quando comparada com a CLI em outras ferramentas multiplataforma. Você pode usar o SDK do [Azure Python](https://azure.microsoft.com/develop/python/) e o [pacote do azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) para administrar Managed Disks. Você pode criar um cliente de computação usando este [tutorial](/python/api/overview/azure/virtualmachines?view=azure-python).
 
 ## <a name="standalone-managed-disks"></a>Managed Disks Autônomos
 

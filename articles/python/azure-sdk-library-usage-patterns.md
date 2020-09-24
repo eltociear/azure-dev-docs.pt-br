@@ -1,15 +1,15 @@
 ---
 title: Padrões de uso com as bibliotecas do Azure para Python
 description: Uma visão geral dos padrões de uso comum com as bibliotecas do SDK do Azure para Python
-ms.date: 06/09/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: cf44dc4458014972b6c6e16a28acab164d8f0f89
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 63cd6c85e15fa0ffb44a4da01ffcc27d4ae08f17
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983311"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831792"
 ---
 # <a name="azure-libraries-for-python-usage-patterns"></a>Bibliotecas do Azure para padrões de uso do Python
 
@@ -138,7 +138,7 @@ Ao usar o JSON, as bibliotecas do Azure convertem automaticamente o JSON embutid
 
 Os objetos também podem ter argumentos de objeto aninhados. Nesse caso, você também pode usar o JSON aninhado.
 
-Por exemplo, vamos supor que você tenha uma instância de objeto [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) e chama seu método [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). Nesse caso, o terceiro argumento é do tipo [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), que por sua vez contém um argumento do tipo [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). `VaultProperties`, por sua vez, contém argumentos de objeto do tipo [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) e [`list[AccessPolicyEntry`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). Uma `Sku` contém um objeto [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python) e cada `AccessPolicyEntry` contém um objeto [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
+Por exemplo, vamos supor que você tenha uma instância de objeto [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) e chama seu método [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). Nesse caso, o terceiro argumento é do tipo [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), que por sua vez contém um argumento do tipo [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). `VaultProperties`, por sua vez, contém argumentos de objeto do tipo [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) e [`list[AccessPolicyEntry]`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). Uma `Sku` contém um objeto [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python) e cada `AccessPolicyEntry` contém um objeto [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
 
 Para chamar `create_or_update` com objetos inseridos, use um código como o a seguir (supondo que `tenant_id` e `object_id` já estejam definidos). Você também pode criar os objetos necessários antes da chamada de função.
 

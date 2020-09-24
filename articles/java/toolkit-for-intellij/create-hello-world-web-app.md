@@ -13,12 +13,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java
-ms.openlocfilehash: 3a096ac0cb533fda11f2b2f3a652dfae628298d4
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: b340802d861ad1dbe1b4f118734e527cdefeec21
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682139"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831594"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>Criar um aplicativo Web Olá, Mundo para o Serviço de Aplicativo do Azure usando o IntelliJ
 
@@ -139,8 +139,8 @@ Para obter mais informações sobre como criar aplicativos Web do Azure, confira
 
 <!-- URL List -->
 
-[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
-[Azure Toolkit for Eclipse]: ../toolkit-for-eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: /azure/developer/java/tookit-for-intellij
+[Azure Toolkit for Eclipse]: /azure/developer/java/tookit-for-eclipse
 [eclipse-hello-world]: ../toolkit-for-eclipse/create-hello-world-web-app.md
 [Visão geral de Aplicativos Web]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

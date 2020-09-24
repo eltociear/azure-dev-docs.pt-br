@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 2/12/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: e07bc23a7316352017e1ea99dd87253f0639a559
-ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+ms.openlocfilehash: e4be32594940d2c207610e7d709ccb328c38ecf6
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88662977"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831692"
 ---
 # <a name="migrate-spring-cloud-applications-to-azure-spring-cloud"></a>Migrar aplicativos Spring Cloud para o Azure Spring Cloud
 
@@ -158,7 +158,7 @@ Configure o servidor de configuração na instância do Azure Spring Cloud. Para
 
 ### <a name="migrate-spring-cloud-vault-secrets-to-azure-keyvault"></a>Migrar segredos do Spring Cloud Vault para o Azure Key Vault
 
-Você pode injetar segredos diretamente em aplicativos por meio do Spring usando o iniciador do Spring Boot para o Azure Key Vault. Para obter mais informações, confira [Como usar o iniciador do Spring Boot para o Azure Key Vault](/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault).
+Você pode injetar segredos diretamente em aplicativos por meio do Spring usando o iniciador do Spring Boot para o Azure Key Vault. Para obter mais informações, confira [Como usar o iniciador do Spring Boot para o Azure Key Vault](../spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault.md).
 
 > [!NOTE]
 > A migração pode requerer que você renomeie alguns segredos. Atualize o código de aplicativo de acordo.

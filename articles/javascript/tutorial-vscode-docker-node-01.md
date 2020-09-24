@@ -3,12 +3,13 @@ title: Implantar contêineres do Docker no Serviço de Aplicativo do Azure usand
 description: Parte 1 do tutorial, introdução e pré-requisitos.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 816228d73ac6b21c2c3e144c3f7783de0377e73e
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: df92b27e88b750956b7e46cc944cf627e077f1dd
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791079"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "91110502"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Implantar contêineres no Serviço de Aplicativo do Azure
 

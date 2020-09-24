@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019, devx-track-java
-ms.openlocfilehash: d8f173fca56af289fb83012a101bc5cb99e4ed12
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 9ae476b38768789eb8ecef915d3c68d93302bdc6
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379510"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831782"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Introdução ao desenvolvimento em nuvem usando Java no Azure
 
@@ -144,7 +144,7 @@ Adicionar uma entrada `build` sob o elemento `project` de nível superior para u
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Instalar o Kit de Ferramentas do Azure para IntelliJ
 
-O [Kit de ferramentas do Azure](/azure/developer/java/toolkit-for-intellij/installation) é necessário caso você vá implantar aplicativos Web ou APIs de forma programática, mas não está sendo usado para outros tipos de desenvolvimento. A seguir há um resumo dos processos de instalação. Para obter um início rápido, acesse o [Início rápido do Azure Toolkit for IntelliJ](/azure/developer/java/toolkit-for-intellij/create-hello-world-web-app).
+O [Kit de ferramentas do Azure](../toolkit-for-intellij/installation.md) é necessário caso você vá implantar aplicativos Web ou APIs de forma programática, mas não está sendo usado para outros tipos de desenvolvimento. A seguir há um resumo dos processos de instalação. Para obter um início rápido, acesse o [Início rápido do Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
 
 - Selecione o menu **Arquivo** e depois **Configurações...** .
 
@@ -154,7 +154,7 @@ O [Kit de ferramentas do Azure](/azure/developer/java/toolkit-for-intellij/insta
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Instalar o Kit de Ferramentas do Azure para Eclipse
 
-O [Kit de ferramentas do Azure](/azure/developer/java/toolkit-for-eclipse) é necessário caso você vá implantar aplicativos Web ou APIs de forma programática, mas não está sendo usado para outros tipos de desenvolvimento. A seguir há um resumo dos processos de instalação. Para obter um início rápido, acesse o [Início rápido do Azure Toolkit for Eclipse](/azure/developer/java/toolkit-for-eclipse/create-hello-world-web-app).
+O [Kit de ferramentas do Azure](../toolkit-for-eclipse/index.yml) é necessário caso você vá implantar aplicativos Web ou APIs de forma programática, mas não está sendo usado para outros tipos de desenvolvimento. A seguir há um resumo dos processos de instalação. Para obter um início rápido, acesse o [Início rápido do Azure Toolkit for Eclipse](../toolkit-for-eclipse/create-hello-world-web-app.md).
 
 - Selecione o menu **Ajuda** e depois **Instalar novo software**.
 

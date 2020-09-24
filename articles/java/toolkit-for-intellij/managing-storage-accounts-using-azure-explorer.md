@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 5152b1bfedd02c821d2a9138fa3e20325b5ea086
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: a209f532069741e9c6302bca97dc8c72cde0e396
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534314"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831942"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gerenciar contas de armazenamento usando o Azure Explorer para IntelliJ
 
@@ -86,8 +86,8 @@ Para saber mais sobre os tamanhos, preços e contas de armazenamento do Azure, v
 [Metas de desempenho e escalabilidade do Armazenamento do Azure]: /azure/storage/storage-scalability-targets
 [Naming and referencing containers, blobs, and metadata]: https://go.microsoft.com/fwlink/?LinkId=255555
 
-[Tamanhos das contas de armazenamento do Windows no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Tamanhos das contas de armazenamento do Linux no Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Tamanhos das contas de armazenamento do Windows no Azure]: /azure/virtual-machines/sizes
+[Tamanhos das contas de armazenamento do Linux no Azure]: /azure/virtual-machines/sizes
 [Preços da conta de armazenamento do Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Preços da conta de armazenamento do Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

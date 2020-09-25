@@ -232,7 +232,7 @@
           href: /samples/browse/?languages=javascript%252cnodejs&products=azure-search
         - name: Todos os exemplos
           href: /samples/browse/?languages=javascript%252cnodejs
-    - name: Pacotes NPM
+    - name: Pacotes npm
       href: azure-sdk-library-package-index.md
-    - name: Documentação do pacote NPM
+    - name: Documentação do pacote npm
       href: /javascript/api/overview/azure/?view=azure-node-latest

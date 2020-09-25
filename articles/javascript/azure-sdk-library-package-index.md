@@ -3,13 +3,13 @@ title: Bibliotecas do SDK do Azure para JavaScript
 description: Listagem dos nomes de pacotes, links do NPM, links de documentos e links de códigos-fonte para todas as bibliotecas no SDK do Azure para JavaScript.
 ms.date: 09/16/2020
 ms.topic: reference
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 9e018160e8b3d244cdfe5b487da8b2bc01ffe0e4
-ms.sourcegitcommit: 53972873f4976a050b67c26eccab9bbe14293743
+ms.custom: devx-track-js
+ms.openlocfilehash: 24e73206552161f5a020b53f8df64d975a955814
+ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91208737"
 ---
 # <a name="azure-libraries-packages-for-javascript"></a>Pacotes de bibliotecas do Azure para JavaScript
 

@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2020
 ms.locfileid: "91110497"
 ---
-# <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Acessar o Armazenamento do Micrsoft Azure com as bibliotecas do Azure para Python
+# <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Exemplo: Acessar o Armazenamento do Microsoft Azure com as bibliotecas do Azure para Python
 
 Esse exemplo demonstrou como usar as bibliotecas de cliente do Azure no código do aplicativo Python para carregar um arquivo nesse contêiner de armazenamento de Blobs. O exemplo supõe que você tenha provisionado os recursos mostrados no [Exemplo: Provisione o Armazenamento do Microsoft Azure](azure-sdk-example-storage.md).
 
